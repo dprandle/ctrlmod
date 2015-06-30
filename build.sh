@@ -1,4 +1,9 @@
 #! /bin/bash
+cd ~/Documents/code/ctrlmod
+if [ $2 = "-c" ]; then
+	rm -r build
+	mkdir build
+fi
 BV="debug"
 cd build
 if [ $1 = "-d" ]; then
@@ -8,4 +13,3 @@ else
 	BV="release"
 fi
 make
-mv /home/dprandle/Documents/code/ctrlmod/build/ctrlmod /home/dprandle/Documents/code/ctrlmod/bin/$BV/ctrlmod

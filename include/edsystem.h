@@ -1,17 +1,19 @@
 #ifndef EDSYSTEM_H
 #define EDSYSTEM_H
+#include <string>
 
 struct edmessage;
 
 class edsystem
 {
   public:
-    edsystem();
-    virtual ~edsystem();
-    
-    virtual void process(edmessage * msg);
+    edsystem() {}
+    virtual ~edsystem() {}
+
+    virtual void init() = 0;
+    virtual void process(edmessage * msg)=0;
     virtual void update() = 0;
-    virtual void typstr() = 0;
+    virtual std::string typestr() = 0;
   private:	
 };
 

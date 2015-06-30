@@ -1,6 +1,7 @@
-(( nil . ((compile-command ."make -C /home/dprandle/Documents/code/ctrlmod/build")
-		  (eval . (global-ede-mode 1))
-		  (eval . (add-to-list 'achead:include-directories '"~/Documents/code/ctrmod/include"))
-		  (eval . (ede-cpp-root-project "ctrlmod" :file "/home/dprandle/Documents/code/ctrlmod/CMakeLists.txt"
-										:include-path '( "/include")))
-		  (eval . (message "File loaded with EDE")))))
+;;; Directory Local Variables
+;;; See Info node `(emacs) Directory Variables' for more information.
+
+((c++-mode
+  (compile-command . "/home/dprandle/Documents/code/ctrlmod/build.sh -d -c")
+  (eval . (add-to-list 'company-c-headers-path-user "../include/"))))
+

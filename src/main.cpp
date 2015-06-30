@@ -1,7 +1,19 @@
 #include <iostream>
+#include <stdio.h>
+#include <edxv11system.h>
+#include <edutility.h>
+#include <exception>
+#include <edmctrl.h>
 
 int main()
 {
-	std::cout << "Hello World" << std::endl;
-	return 0;
+    edm.add_sys<edxv11_system>();
+    edm.start();
+	int x;
+	std::cin >> x;
+    while (edm.running())
+    {
+        //edm.update();
+    }
+    return 0;
 }
