@@ -9,11 +9,9 @@ int main()
 {
     edm.add_sys<edxv11_system>();
     edm.start();
-	int x;
-	std::cin >> x;
     while (edm.running())
     {
-        //edm.update();
+        edm.update();
     }
     return 0;
 }

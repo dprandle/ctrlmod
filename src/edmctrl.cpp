@@ -15,12 +15,11 @@ edmctrl::~edmctrl()
 
 void edmctrl::start()
 {
-	std::cout << "Called start";
     sysmap::iterator sysiter = m_systems.begin();
     while (sysiter != m_systems.end())
     {
-		std::cout << "Initializing system " << sysiter->first;
-        //sysiter->second->init();
+		std::cout << "Initializing system " << sysiter->first << std::endl;
+        sysiter->second->init();
         ++sysiter;
     }
     m_running = true;
