@@ -65,6 +65,8 @@ class edxv11_system : public edsystem
 	
     void update();
 
+	void readByte(char byte);
+
     std::string typestr() {return TypeString();}
 
 	static std::string TypeString() {return "edxc11_system";}

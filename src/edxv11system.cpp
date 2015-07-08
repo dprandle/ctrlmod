@@ -91,67 +91,63 @@ void edxv11_system::init()
 }
 
 
+void edxv11_system::readByte(char byte)
+{
+	
+	if (m_rec_index == 255)
+	{
+		std::string hexscan = "";
+
+		for (uint i = 0; i < 256; ++i)
+			hexscan += to_hex(m_rcvdbuf[i]) + " ";
+
+		log_message(hexscan + "\n\n\n");
+	}
+	m_rcvdbuf[m_rec_index] = byte;
+		
+	// if (m_rec_pckt)
+	// {
+	// 	std::ostringstream ss;
+
+	// 	if (m_current_data_ind == 1)
+	// 	{
+	// 		ss << "Packet index: " << uint(uchar(byte)) << "\n";
+	// 		log_message(ss.str(), "status.log", false);
+	// 	}
+
+	// 	++m_current_data_ind;
+	// 	if (m_current_data_ind == 22)
+	// 	{
+	// 		m_current_data_ind = 0;
+	// 		m_rec_pckt = false;
+	// 	}
+	// }
+	// else if (byte == char(PACKET_START))
+	// {
+	// 	m_rec_pckt = true;
+	// 	++m_current_data_ind;
+	// }
+		
+	++m_rec_index;
+	
+}
+
 void edxv11_system::update()
 {
 	if (m_uart->dataAvailable()) // Check if data is available - return immediately 
 	{
-		char byte;
-		uint cnt = m_uart->read(&byte,1);
+		char buffer[64];
+		zero_buf(buffer, 64);
+		int cnt = m_uart->read(buffer, 64);
 
 		if (cnt == -1)
 		{
 			std::cout << "Error reading uart" << std::endl;
 			return;
 		}
-
-		m_rcvdbuf[m_rec_index] = byte;
-
-		// If we are in scan
-		if (m_rec_pckt)
-		{
-			xv11packet * pckt = &m_scans[m_current_scan_ind]->packets[m_current_packet_ind];
-			pckt->mem[m_current_data_ind] = byte;
-			++m_current_data_ind;
-			if (m_current_data_ind == 22)
-			{
-				m_current_data_ind = 0;
-				m_rec_pckt = false;
-				
-				++m_current_packet_ind;
-				if (m_current_packet_ind == char(PACKET_COUNT)) // Recieved entire scan !
-				{
-					std::cout << "Recieved Scan!" << std::endl;
-					m_scans[m_current_scan_ind]->timestamp = timestamp(); // Timestamp finished scan
-					
-					m_current_packet_ind = 0;
-					
-					std::ostringstream ss;
-					ss << "Received scan " << m_scans[m_current_scan_ind]->timestamp << std::endl;
-					ss << "start: " << to_hex(pckt->start) << std::endl;
-					ss << "packet index: " << to_hex(pckt->packet_index) << std::endl;
-					ss << "packet speed: " << to_hex(pckt->mem[2]) << " " << to_hex(pckt->mem[3]) << std::endl;
-					ss << "packe data: ";
-					for (uchar i = 4; i < 22; ++i)
-						ss << to_hex(pckt->mem[i]) << " ";
-					ss << std::endl;
-					log_message(ss.str(),"status.log",false);
-					++m_current_scan_ind;
-					if (m_current_scan_ind == MAX_SCANS)
-						m_current_scan_ind = 0;
-				}
-			}
-		}
-		else
-		{
-			if (byte == char(PACKET_START))
-			{
-				m_rec_pckt = true;
-				m_scans[m_current_scan_ind]->packets[m_current_packet_ind].mem[m_current_data_ind] = byte;
-				++m_current_data_ind;
-			}
-		}
-		
-		++m_rec_index;
+		std::cout << "Read " << cnt << " bytes\n";
+		for (int i = 0; i < cnt; ++i)
+			readByte(buffer[i]);
 	}
 }
 
