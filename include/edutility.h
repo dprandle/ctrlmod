@@ -2,7 +2,9 @@
 #define UTILITY_H
 
 #include <edglobal.h>
+#include <iostream>
 #include <string>
+#include <sstream>
 
 uint hash_id(const std::string & to_hash);
 
@@ -11,6 +13,16 @@ void log_message(const std::string & msg, const std::string & fname="status.log"
 std::string timestamp();
 
 std::string to_hex(char byte);
+
+std::string to_hex(uchar byte);
+
+std::string to_hex(short int two_bytes);
+
+std::string to_hex(unsigned short int two_bytes);
+
+std::string to_hex(int four_bytes);
+
+std::string to_hex(uint four_bytes);
 
 void zero_buf(char * buf, uint size);
 

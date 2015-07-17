@@ -1,11 +1,25 @@
+/*!
+  \file   edmctrl.h
+  \author Daniel <dprandle@dprandle-CZ-17>
+  \date   Fri Jul 10 09:20:01 2015
+  
+  \brief  Header file for master controller
+  
+  
+*/
+
+
 #ifndef MCTRL_H
 #define MCTRL_H
+
 #include <string>
 #include <map>
 
 #define edm edmctrl::inst()
 
 class edsystem;
+class edtimer;
+class edmessage_handler;
 
 typedef std::map<std::string,edsystem*> sysmap;
 
@@ -32,9 +46,17 @@ class edmctrl
 
     bool running();
 
-    void shutdown();
+	void init();
+	
+    void release();
+
+	edmessage_handler * messages();
 
     void start();
+
+	void stop();
+
+	edtimer * sys_timer();
 
     void update();
     
@@ -53,10 +75,14 @@ class edmctrl
     }
 
     edsystem * sys(const std::string & sysname);
+
+	static void quit(void);
     
   private:
     bool m_running;
     sysmap m_systems;
+	edtimer * m_systimer;
+	edmessage_handler * m_msghandler;
 };
 
 

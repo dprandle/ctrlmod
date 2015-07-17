@@ -34,3 +34,4 @@ set_target_properties(ctrlmod PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 # link mraa
 target_link_libraries(ctrlmod mraa)
+target_link_libraries(ctrlmod ~/Documents/code/ctrlmod/lib/librplidar_sdk.a)

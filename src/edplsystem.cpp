@@ -14,86 +14,146 @@
 #include <mraa.hpp>
 #include <iostream>
 #include <edtimer.h>
+#include <vector>
+#include <edmsghandler.h>
+#include <edmessage.h>
+#include <edmctrl.h>
 
-edpl_system::edpl_system():
-	m_gpio0(NULL),
-	m_gpio1(NULL),
-	m_gpio2(NULL),
-	m_gpio3(NULL),
-	m_timer(new edtimer())
+edpl_system::edpl_system()
 {
-	lt = 0x00;
-	val = 0x00;
 }
 
 edpl_system::~edpl_system()
 {
-	m_gpio0->write(0);
-	delete m_gpio0;
-	delete m_gpio1;
-	delete m_gpio2;
-	delete m_gpio3;
-	delete m_timer;
 }
 
 void edpl_system::init()
 {
-	m_gpio0 = new mraa::Gpio(GPIO_14);
-	if (m_gpio0 == NULL)
-		log_message("Unable to initialize gpio pin 0");
+	std::vector<uint> gpio_pins;
+	gpio_pins.push_back(GPIO_14);
+	gpio_pins.push_back(GPIO_15);
+	gpio_pins.push_back(GPIO_48);
+	gpio_pins.push_back(GPIO_49);
 
-	m_gpio1 = new mraa::Gpio(GPIO_15);
-	if (m_gpio1 == NULL)
-		log_message("Unable to initialize gpio pin 1");
+	for (uint i = 0; i < gpio_pins.size(); ++i)
+		pl_gpio * pnt = add_pl(gpio_pins[i],-20.0);
 
-	m_gpio2 = new mraa::Gpio(GPIO_48);
-	if (m_gpio2 == NULL)
-		log_message("Unable to initialize gpio pin 2");
- 
-	m_gpio3 = new mraa::Gpio(GPIO_49);
-	if (m_gpio3 == NULL)
-		log_message("Unable to initialize gpio pin 3");
-
-	mraa_result_t res;
-	
-	res = m_gpio0->dir(mraa::DIR_OUT);
-	if (res != MRAA_SUCCESS)
-		mraa::printError(res);
-	res = m_gpio1->dir(mraa::DIR_IN);
-	if (res != MRAA_SUCCESS)
-		mraa::printError(res);
-
-	m_gpio1->isr(mraa::EDGE_RISING,gpio14_isr,this);
-	m_gpio0->write(val);
-	// res = m_gpio2->dir(mraa::DIR_OUT);
-	// if (res != MRAA_SUCCESS)
-	// 	mraa::printError(res);
-	// res = m_gpio3->dir(mraa::DIR_OUT);
-	// if (res != MRAA_SUCCESS)
-	// 	mraa::printError(res);
-	m_timer->start();
+	edmessage_handler * mh = edm.messages();
 }
 
-void edpl_system::process(edmessage * msg)
+edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
 {
-	
+	if (pl_pin_taken(mraa_pin))
+	{
+		std::ostringstream oss;
+		oss << "Cannot initialize pin " << mraa_pin << " as its already initialized";
+		log_message(oss.str());
+		return NULL;
+	}
+
+	pl_gpio * pl = new pl_gpio(mraa_pin, c_offset, pos_offset, orient_offset);
+	if (pl->pin == NULL)
+	{
+		std::ostringstream oss;
+		oss << "Unable to initialize mraa pin " << mraa_pin;
+		log_message(oss.str());
+		delete pl;
+		return NULL;
+	}
+
+	mraa_result_t res = pl->pin->dir(mraa::DIR_IN);
+	if (res != MRAA_SUCCESS)
+	{
+		mraa::printError(res);
+		delete pl;
+		return NULL;
+	}
+	pl->pin->isr(mraa::EDGE_BOTH,edpl_system::pl_gpio::isr, pl);
+	m_pl_sensors[mraa_pin] = pl;
+	std::ostringstream ss;
+	ss << "Successfully initialized pin " << mraa_pin;
+	log_message(ss.str());
+	return pl;
+}
+
+edpl_system::pl_gpio * edpl_system::get_pl(uint mraa_pin)
+{
+	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	if (fiter != m_pl_sensors.end())
+		return fiter->second;
+	return NULL;
+}
+
+void edpl_system::pl_set_cal_offset(uint mraa_pin, double offset)
+{
+	pl_gpio * pl = get_pl(mraa_pin);
+	if (pl !=NULL)
+		pl->cal_offset = offset;
+}
+
+bool edpl_system::pl_pin_taken(uint mraa_pin)
+{
+	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	return (fiter != m_pl_sensors.end());	
+}
+
+void edpl_system::rm_pl(uint mraa_pin)
+{
+	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	if (fiter != m_pl_sensors.end())
+	{
+		delete fiter->second;
+		m_pl_sensors.erase(fiter);
+	}
+}
+
+void edpl_system::pl_set_pos(uint mraa_pin, const vec3 & pos_)
+{
+	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	if (fiter != m_pl_sensors.end())
+		fiter->second->pos = pos_;
+}
+
+void edpl_system::pl_set_orientation(uint mraa_pin, const quat & orient_)
+{
+	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	if (fiter != m_pl_sensors.end())
+		fiter->second->orient = orient_;
+}
+
+void edpl_system::release()
+{
+	plmap::iterator fiter = m_pl_sensors.begin();
+	while (fiter != m_pl_sensors.end())
+	{
+		delete fiter->second;
+		++fiter;
+	}
+	m_pl_sensors.clear();
+}
+
+bool edpl_system::process(edmessage * msg)
+{
+	return true;
 }
 
 void edpl_system::update()
 {
-	m_timer->update();
-	if (lt == 0x01)
+	plmap::iterator iter = m_pl_sensors.begin();
+	while (iter != m_pl_sensors.end())
 	{
-		if (m_timer->running())
+		if (iter->second->meas_ready)
 		{
-			m_timer->stop();
-			std::cout << "Elapsed time: " << m_timer->elapsed() << " ms" << std::endl;
+			edmessage_handler * mh = edm.messages();
+			pulsed_light_message * msg = mh->push<pulsed_light_message>();
+			
+			msg->distance = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
+			msg->mraa_pin = iter->first;
+			msg->orientation = iter->second->orient;
+			msg->pos = iter->second->pos;
+			iter->second->meas_ready = false;
 		}
-		else
-		{
-			m_timer->start();
-			std::cout << "Starting timer";
-		}
+		++iter;
 	}
 }
 
@@ -102,8 +162,36 @@ std::string edpl_system::typestr()
 	return TypeString();
 }
 
-void gpio14_isr(void * edplsys)
+
+edpl_system::pl_gpio::pl_gpio(uint mraa_pin,double calibrate_offset, const vec3 & poffset, const quat & orient_):
+	pin(new mraa::Gpio(mraa_pin)),
+	timer(new edtimer()),
+	cal_offset(calibrate_offset),
+	pos(poffset),
+	orient(orient_),
+	meas_ready(false)
+{}
+
+edpl_system::pl_gpio::~pl_gpio()
 {
-	edpl_system * sys = static_cast<edpl_system*>(edplsys);
-	sys->lt = 0x01;
+	delete pin;
+	delete timer;
+}
+
+
+void edpl_system::pl_gpio::isr(void * pl)
+{
+	edpl_system::pl_gpio * pl_cast = static_cast<edpl_system::pl_gpio*>(pl);
+	if (!pl_cast->pin->read() == 0)
+	{
+		pl_cast->timer->start();
+	}
+	else
+	{
+		if (pl_cast->timer->running())
+		{
+			pl_cast->timer->stop();
+			pl_cast->meas_ready = true;
+		}
+	}
 }
