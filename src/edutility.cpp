@@ -14,7 +14,7 @@ uint hash_id(const std::string & strng)
 	uint hash = 5381;
 	int c;
 	const char * str = strng.c_str();
-	while (c = *str++)
+    while ((c = *str++))
 		hash = ((hash << 5) + hash) + c;
 
 	return hash;
@@ -71,7 +71,7 @@ std::string to_hex(unsigned short int two_bytes)
 std::string to_hex(int four_bytes)
 {
 	std::ostringstream ostr;
-	ostr << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << four_bytes;
+	ostr << std::hex << std::uppercase << std::setw(4) << std::setfill('0') << four_bytes;
 	return ostr.str();	
 }
 
@@ -87,9 +87,9 @@ void zero_buf(char * buf, uint size)
 	}
 }
 
-void copy_buf(char * src, char * dest, uint size, uint src_offset, uint dest_offset)
+void copy_buf(const char * src, char * dest, uint size, uint src_offset, uint dest_offset)
 {
-	char * src_with_offset = src  + src_offset;
+	const char * src_with_offset = src  + src_offset;
 	char * dest_with_offset = dest + dest_offset;
 	for (uint i = 0; i < size; ++i)
 		dest_with_offset[i] = src_with_offset[i];

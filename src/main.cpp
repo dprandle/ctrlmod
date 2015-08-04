@@ -5,7 +5,11 @@
 #include <signal.h>
 #include <ednavsystem.h>
 #include <edmsghandler.h>
+#include <edlogging_system.h>
 #include <edmessage.h>
+#include <edtimer.h>
+#include <edcallback.h>
+#include <edcomm_system.h>
 
 void handle_ctrlc(int sig)
 {
@@ -24,19 +28,13 @@ int main()
     edm.add_sys<edrplidar_system>();
 	edm.add_sys<edpl_system>();
 	edm.add_sys<ednav_system>();
-    edm.init();
+	edm.add_sys<edlogging_system>();
+	edm.add_sys<edcomm_system>();
 	edm.start();
-
-	rplidar_request * msg1 = edm.messages()->push<rplidar_request>();
-	msg1->r_type = rplidar_request::Reset;
-
-	rplidar_request * msg = edm.messages()->push<rplidar_request>();
-	msg->r_type = rplidar_request::InfoReq;
+    edm.init();
 
     while (edm.running())
-    {
 		edm.update();
-    }
 	
     return 0;
 }

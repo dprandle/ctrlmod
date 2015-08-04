@@ -65,7 +65,7 @@ class edtimer
 	timeval t;
 	edtimer_callback * m_cb;
 	cb_mode m_cmode;
-	double last_exec;
+        double last_exec;
 };
 
 

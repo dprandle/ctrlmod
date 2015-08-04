@@ -1,37 +1,38 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(ctrlmod)
+# Include toolchain file
+include(${CMAKE_SOURCE_DIR}/Edison.cmake)
+
+project(ctrlmod C CXX)
+
+# Executable name
+set(exe_name ctrlmod)
 
 # Set the source directory
-set(PROJECT_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
+set(CTRLMOD_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 
 # Set the include directory
-set(PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set(CTRLMOD_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 
-# Set the static lib directory
-set(PROJECT_STATIC_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
-
+set(PLATFORM "x86" CACHE STRING "Platform for which to run cmake (run for each build type)")
 set(CMAKE_DEBUG_POSTFIX d)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/bin)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${PLATFORM})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${PLATFORM})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${PLATFORM})
 
-# Set the library output path
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
+SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0")
 
 # Set the src files for the project
-file(GLOB SRC_FILES "${PROJECT_SRC_DIR}/*.c*")
+file(GLOB SRC_FILES "${CTRLMOD_SRC_DIR}/*.c*")
+file(GLOB HEADER_FILES "${CTRLMOD_INCLUDE_DIR}/*.h*")
 
 # Set project includes dir
-include_directories("${PROJECT_INCLUDE_DIR}")
+include_directories("${CTRLMOD_INCLUDE_DIR}")
 
 # Adding executable
-add_executable(ctrlmod ${SRC_FILES})
-set_target_properties(ctrlmod PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
+add_executable(${exe_name} ${SRC_FILES} ${HEADER_FILES})
+set_target_properties(${exe_name} PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 # link mraa
-target_link_libraries(ctrlmod mraa)
-target_link_libraries(ctrlmod ~/Documents/code/ctrlmod/lib/librplidar_sdk.a)
+target_link_libraries(${exe_name} -lmraa)

@@ -97,6 +97,28 @@ public:
 		return msg;
 	}
 
+	template<class MessageType>
+	MessageType * push_front()
+	{
+		std::string id = MessageType::Type();
+		
+		listener_map::iterator fiter = m_listeners.find(id);
+		if (fiter == m_listeners.end())
+			return NULL;
+
+		MessageType * msg = new MessageType();
+		std::set<edsystem*>::iterator sys_iter = fiter->second.begin();
+		while (sys_iter != fiter->second.end())
+		{
+			m_lmessages[*sys_iter].push_front(msg);
+			++msg->ref_count; // increase reference count
+			++sys_iter;
+		}
+		
+		return msg;
+	}
+
+
 	edmessage * next(edsystem * sys);
 
 	void pop(edsystem * sys);

@@ -36,12 +36,11 @@ bool ednav_system::process(edmessage * msg)
 {
 	if (msg->type() == pulsed_light_message::Type())
 		return _process_pulse_light(static_cast<pulsed_light_message*>(msg));
+    return false;
 }
 
 void ednav_system::update()
 {
-	edmessage_handler * mh = edm.messages();
-	mh->process_all(this);
 }
 
 bool ednav_system::_process_pulse_light(pulsed_light_message * msg)

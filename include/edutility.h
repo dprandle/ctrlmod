@@ -35,7 +35,7 @@ void zero_buf(char * buf, uint size);
   \param src_offset Offset in to the source buffer (defaults to 0)
   \param dest_offset Offset in to the destination buffer (defaults to 0)
 */
-void copy_buf(char * src, char * dest, uint size, uint src_offset=0, uint dest_offset=0);
+void copy_buf(const char * src, char * dest, uint size, uint src_offset=0, uint dest_offset=0);
 
 
 #endif

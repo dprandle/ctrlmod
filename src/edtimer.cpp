@@ -5,14 +5,14 @@
 #include <edcallback.h>
 
 edtimer::edtimer():
-	m_running(false),
+    m_running(false),
 	prev_time(0),
-	ms_last(0),
+    ms_last(0),
 	ms(0),
 	m_cbdelay(0),
 	m_cb(NULL),
-	last_exec(0),
-	m_cmode(no_shot)
+    m_cmode(no_shot),
+    last_exec(0)
 {}
 
 edtimer::~edtimer()
@@ -100,7 +100,6 @@ void edtimer::update()
 			return;
 		}
 		last_exec = ms;
-		std::cout << "ms: " << ms << "last_exec: " << last_exec << std::endl;
 		m_cb->exec(); // This must come after - stop calls update()
 	}
 }

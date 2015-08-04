@@ -1,7 +1,0 @@
-
-| Sensor              | Weight | Qty | Interface | Total Weight |
-| Lidar Lite          | 28 g   |   4 | ADC/I2C   | 112 g        |
-| XV-11 Laser Scanner | 185 g  |   1 | UART      | 185 g        |
-| Edison Stack        | 30 g   |   1 | -         | 30 g         |
-|---------------------+--------+-----+-----------+--------------|
-| Total               |        |     |           | 327 g        |

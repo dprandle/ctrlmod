@@ -3,16 +3,33 @@
 #include <eduart.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <termios.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
 
 eduart::eduart():
-	m_fd(-1)
+	m_fd(-1),
+	m_df(),
+	m_baud(b9600)
 {}
 
 eduart::~eduart()
 {}
 
-void eduart::init()
+void eduart::init(SerialPort uart_num)
 {
+	switch(uart_num)
+	{
+	  case (Uart1):
+		  m_devpath = "/dev/ttyMFD1";
+		  break;
+	  case (Uart2):
+		  m_devpath = "/dev/ttyMFD2";
+		  _detach_console();
+		  break;
+	}
+	
 	m_fd = open(m_devpath.c_str(), O_RDWR | O_NOCTTY | O_SYNC);
 	if (m_fd < 0)
 	{
@@ -41,20 +58,10 @@ const std::string & eduart::device_path()
 	return m_devpath;
 }
 
-void eduart::set_device_path(const std::string & path)
-{
-	m_devpath = path;
-	if (m_fd == -1)
-	{
-		release();
-		init();
-	}
-}
-
 void eduart::set_baud(BaudRate baud)
 {
 	m_baud = baud;
-	if (m_fd == -1)
+	if (m_fd != -1)
 		_set_attribs();
 }
 
@@ -88,6 +95,8 @@ const eduart::DataFormat & eduart::format()
 void eduart::release()
 {
 	close(m_fd);
+	if (m_devpath == "/dev/ttyMFD2")
+		_reattach_console();
 	m_fd = -1;
 }
 
@@ -97,7 +106,10 @@ void eduart::_set_attribs()
 	memset(&tty, 0, sizeof(tty));
 	if (tcgetattr(m_fd, &tty) != 0)
 	{
-		log_message("_set_attribs: Error setting termios");
+		if (errno == EBADF)
+			log_message("_set_attribs: Error getting termios - m_fd is not valid file descriptor");
+		else if (errno == ENOTTY)
+			log_message("_set_attribs: Error getting termios - the file associated with fildes is not a terminal");
 		return;
 	}
 	
@@ -108,14 +120,25 @@ void eduart::_set_attribs()
 	
 	tty.c_cflag |= (CLOCAL | CREAD | m_df.db | m_df.p | m_df.sb);
 
-	 // Set baud rates
+	// Set baud rates
 	cfsetospeed (&tty, m_baud);
 	cfsetispeed (&tty, m_baud);
 
 	tty.c_cc[VMIN]  = 0;            // read doesn't block
-	tty.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
+	tty.c_cc[VTIME] = 1;            // 0.1 seconds read timeout
 
 
 	if (tcsetattr(m_fd, TCSANOW, &tty) != 0)
 		log_message("_set_attribs: Error - could not set tty");
+}
+
+
+void eduart::_detach_console()
+{
+	// Need to write these as soon as intel tells me how
+}
+
+void eduart::_reattach_console()
+{
+	// Same thing here
 }

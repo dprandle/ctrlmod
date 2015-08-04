@@ -14,4 +14,9 @@ struct edtimer_callback : public edcallback
 	edtimer * timer;
 };
 
+struct wait_ready_callback : public edtimer_callback
+{
+	void exec();
+};
+
 #endif

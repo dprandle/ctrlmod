@@ -9,6 +9,12 @@ class eduart
 {
   public:
 
+	enum SerialPort
+	{
+		Uart1,
+		Uart2
+	};
+	
 	enum BaudRate
 	{
 		b50=B50,
@@ -80,14 +86,13 @@ class eduart
 	eduart();
 	~eduart();
 
-	void init();
+	void init(SerialPort uart_num);
 
 	uint read(char * buf, uint max_bytes);
 
 	void write(char * buf, uint to_write);
 	
 	const std::string & device_path();
-	void set_device_path(const std::string & path);
 
 	void set_baud(BaudRate baud);
 	BaudRate baud();
@@ -99,7 +104,8 @@ class eduart
 	void release();
 	
   private:
-	int _convert_baud();
+	void _detach_console();
+	void _reattach_console();
 	void _set_attribs();
 	
 	int m_fd;

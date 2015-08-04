@@ -36,9 +36,16 @@ void edpl_system::init()
 	gpio_pins.push_back(GPIO_49);
 
 	for (uint i = 0; i < gpio_pins.size(); ++i)
+    {
 		pl_gpio * pnt = add_pl(gpio_pins[i],-20.0);
+        if (pnt == NULL)
+        {
+            std::ostringstream ss;
+            ss << "Error initializing GPIO pin " << gpio_pins[i];
+            log_message(ss.str());
+        }
+    }
 
-	edmessage_handler * mh = edm.messages();
 }
 
 edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
@@ -166,9 +173,9 @@ std::string edpl_system::typestr()
 edpl_system::pl_gpio::pl_gpio(uint mraa_pin,double calibrate_offset, const vec3 & poffset, const quat & orient_):
 	pin(new mraa::Gpio(mraa_pin)),
 	timer(new edtimer()),
-	cal_offset(calibrate_offset),
 	pos(poffset),
 	orient(orient_),
+    cal_offset(calibrate_offset),
 	meas_ready(false)
 {}
 

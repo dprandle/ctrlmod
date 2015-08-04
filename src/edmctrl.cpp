@@ -1,4 +1,3 @@
-
 /*!
   \file   edmctrl.cpp
   \author Daniel <dprandle@dprandle-CZ-17>
@@ -24,8 +23,7 @@ edmctrl::edmctrl():
 	m_systimer(new edtimer()),
 	m_msghandler(new edmessage_handler())
 {
-	std::string ls;
-	std::vector<int> s;
+	
 }
 
 edmctrl::~edmctrl()
@@ -86,6 +84,7 @@ void edmctrl::update()
     while (sysiter != m_systems.end())
     {
         sysiter->second->update();
+		m_msghandler->process_all(sysiter->second);
         ++sysiter;
     }
 }
@@ -127,6 +126,7 @@ void edmctrl::start()
 
 void edmctrl::stop()
 {
+	
 	m_systimer->stop();
 	std::ostringstream oss;
 	oss << "Stopping edison control engine\nExecution time: " << m_systimer->elapsed() << " ms";
