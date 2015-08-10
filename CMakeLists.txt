@@ -36,3 +36,4 @@ set_target_properties(${exe_name} PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX
 
 # link mraa
 target_link_libraries(${exe_name} -lmraa)
+target_link_libraries(${exe_name} -lpthread)

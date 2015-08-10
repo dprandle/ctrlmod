@@ -19,12 +19,15 @@
 #include <edmessage.h>
 #include <edmctrl.h>
 
-edpl_system::edpl_system()
+edpl_system::edpl_system():
+	edsystem(),
+	msgTimer(new edtimer)
 {
 }
 
 edpl_system::~edpl_system()
 {
+	delete msgTimer;
 }
 
 void edpl_system::init()
@@ -32,12 +35,10 @@ void edpl_system::init()
 	std::vector<uint> gpio_pins;
 	gpio_pins.push_back(GPIO_14);
 	gpio_pins.push_back(GPIO_15);
-	gpio_pins.push_back(GPIO_48);
-	gpio_pins.push_back(GPIO_49);
 
 	for (uint i = 0; i < gpio_pins.size(); ++i)
     {
-		pl_gpio * pnt = add_pl(gpio_pins[i],-20.0);
+		pl_gpio * pnt = add_pl(gpio_pins[i],-30);
         if (pnt == NULL)
         {
             std::ostringstream ss;
@@ -45,7 +46,10 @@ void edpl_system::init()
             log_message(ss.str());
         }
     }
-
+	msgTimer->set_callback(new edpl_callback(get_pl(GPIO_14), get_pl(GPIO_15)));
+	msgTimer->set_callback_delay(100);
+	msgTimer->set_callback_mode(edtimer::continous_shot);
+	msgTimer->start();
 }
 
 edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
@@ -76,6 +80,7 @@ edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const 
 		return NULL;
 	}
 	pl->pin->isr(mraa::EDGE_BOTH,edpl_system::pl_gpio::isr, pl);
+	pl->mraa_pin_num = mraa_pin;
 	m_pl_sensors[mraa_pin] = pl;
 	std::ostringstream ss;
 	ss << "Successfully initialized pin " << mraa_pin;
@@ -146,18 +151,18 @@ bool edpl_system::process(edmessage * msg)
 
 void edpl_system::update()
 {
+	msgTimer->update();
 	plmap::iterator iter = m_pl_sensors.begin();
 	while (iter != m_pl_sensors.end())
 	{
 		if (iter->second->meas_ready)
 		{
-			edmessage_handler * mh = edm.messages();
-			pulsed_light_message * msg = mh->push<pulsed_light_message>();
-			
-			msg->distance = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
-			msg->mraa_pin = iter->first;
-			msg->orientation = iter->second->orient;
-			msg->pos = iter->second->pos;
+			double meas = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
+			if (meas != 0 && meas < 5000)
+			{
+				iter->second->sum_dist += meas;
+				++iter->second->meas_count;
+			}
 			iter->second->meas_ready = false;
 		}
 		++iter;
@@ -176,7 +181,10 @@ edpl_system::pl_gpio::pl_gpio(uint mraa_pin,double calibrate_offset, const vec3 
 	pos(poffset),
 	orient(orient_),
     cal_offset(calibrate_offset),
-	meas_ready(false)
+	meas_ready(false),
+	sum_dist(0.0),
+	mraa_pin_num(0),
+	meas_count(0)
 {}
 
 edpl_system::pl_gpio::~pl_gpio()
@@ -189,7 +197,7 @@ edpl_system::pl_gpio::~pl_gpio()
 void edpl_system::pl_gpio::isr(void * pl)
 {
 	edpl_system::pl_gpio * pl_cast = static_cast<edpl_system::pl_gpio*>(pl);
-	if (!pl_cast->pin->read() == 0)
+	if (pl_cast->pin->read() != 0)
 	{
 		pl_cast->timer->start();
 	}
@@ -201,4 +209,23 @@ void edpl_system::pl_gpio::isr(void * pl)
 			pl_cast->meas_ready = true;
 		}
 	}
+}
+
+void edpl_callback::exec()
+{
+	pulsed_light_message * msg = edm.messages()->push<pulsed_light_message>();
+	if (pl_ceil->meas_count > 0)
+		msg->distance1 = pl_ceil->sum_dist/pl_ceil->meas_count;
+	if (pl_floor->meas_count > 0)
+		msg->distance2 = pl_floor->sum_dist/pl_floor->meas_count;
+	pl_ceil->sum_dist = 0;
+	pl_ceil->meas_count = 0;
+	pl_floor->sum_dist = 0;
+	pl_floor->meas_count = 0;
+	msg->mraa_pin1 = pl_ceil->mraa_pin_num;
+	msg->mraa_pin2 = pl_floor->mraa_pin_num;
+	copy_buf((char*)pl_ceil->pos.data, (char*)msg->pos1, 4);
+	copy_buf((char*)pl_floor->pos.data, (char*)msg->pos2, 4);
+	copy_buf((char*)pl_ceil->orient.data, (char*)msg->orientation1, 4);
+	copy_buf((char*)pl_floor->orient.data, (char*)msg->orientation2, 4);
 }

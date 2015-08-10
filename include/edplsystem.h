@@ -24,8 +24,16 @@
 #include <nsmath.h>
 #include <map>
 
+/*
+  Assign mraa pin num
+  Set up callback timer
+  Update callback timer
+ */
+
 class edpl_system : public edsystem
 {
+  public:
+	
 	struct pl_gpio
 	{
 		pl_gpio(uint mraa_pin,double calibrate_offset=0.0, const vec3 & poffset=vec3(), const quat & orient_=quat());
@@ -37,12 +45,14 @@ class edpl_system : public edsystem
 		quat orient;
 		double cal_offset;
 		bool meas_ready;
+		double sum_dist;
+		uint mraa_pin_num;
+		uint meas_count;
 		static void isr(void *);
 	};
 
 	typedef std::map<uint, pl_gpio*> plmap;
 	
-  public:
     edpl_system();
     virtual ~edpl_system();
 
@@ -65,6 +75,19 @@ class edpl_system : public edsystem
   private:
 	
 	plmap m_pl_sensors;
+	edtimer * msgTimer;
+};
+
+struct edpl_callback : public edtimer_callback
+{
+	edpl_callback(edpl_system::pl_gpio * ceil, edpl_system::pl_gpio * floor):
+		pl_ceil(ceil),
+		pl_floor(floor)
+	{}
+	
+	void exec();
+	edpl_system::pl_gpio * pl_ceil;
+	edpl_system::pl_gpio * pl_floor;
 };
 
 #endif

@@ -14,12 +14,24 @@ struct edmessage
 
 struct pulsed_light_message : public edmessage
 {
-	double distance;
-	uint mraa_pin;
-	vec3 pos;
-	quat orientation;
+	union
+	{
+		struct
+		{
+			double distance1;
+			double distance2;
+			uint mraa_pin1;
+			uint mraa_pin2;
+			double pos1[3];
+			double pos2[3];
+			double orientation1[4];
+			double orientation2[4];
+		};
+		char data[136];
+	};
 
-	virtual std::string type() {return Type();}
+	uint size() {return 136;}
+	std::string type() {return Type();}
 	static std::string Type() {return "pulsed_light_message";}
 };
 

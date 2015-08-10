@@ -57,19 +57,20 @@ void edrplidar_system::init()
     edm.messages()->register_listener<rplidar_request>(this);
     m_uart->set_format(eduart::d8, eduart::None, eduart::One);
     m_uart->set_baud(eduart::b115200);
-    m_uart->init(eduart::Uart1);
 
+	if (!m_uart->start(eduart::Uart1))
+		std::cout << "Error starting uart" << std::endl;
+	
     m_wait_timer->set_callback(new wait_ready_callback());
     m_wait_timer->set_callback_mode(edtimer::single_shot);
     m_error_timer->set_callback(new wait_ready_callback());
     m_error_timer->set_callback_mode(edtimer::single_shot);
     m_error_timer->set_callback_delay(5000);
-    stopScan();
+//    stopScan();
 }
 
 void edrplidar_system::release()
 {
-    m_uart->release();
 }
 
 void edrplidar_system::update()
@@ -134,10 +135,7 @@ bool edrplidar_system::startScan()
     if (m_current_type != None)
         return false;
 
-    std::cout << "Start scan command issued" << std::endl;
-    start_scan_request sr;
-    m_uart->write((char*)(&sr), sizeof(start_scan_request));
-
+    std::cout << "Start scan command issued" << std::endl;	
     // set descriptor to scan response
     m_current_type = Scan;
 
@@ -145,6 +143,8 @@ bool edrplidar_system::startScan()
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
+    start_scan_request sr;
+	m_uart->write(sr.data,2);
     return true;
 }
 
@@ -154,9 +154,6 @@ bool edrplidar_system::forceScan()
         return false;
 
     std::cout << "Force scan command issued" << std::endl;
-    force_scan_request sr;
-    m_uart->write((char*)(&sr), sizeof(force_scan_request));
-
     // set descriptor to scan response
     m_current_type = Scan;
 
@@ -164,6 +161,8 @@ bool edrplidar_system::forceScan()
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
+	force_scan_request sr;
+	m_uart->write(sr.data,2);
     return true;
 }
 
@@ -171,10 +170,10 @@ bool edrplidar_system::stopScan()
 {
     std::cout << "Stop scan command issued" << std::endl;
     _reset_state();
-    stop_scan_request sr;
-    m_uart->write((char*)(&sr), sizeof(stop_scan_request));
     m_wait_timer->set_callback_delay(50.0);
     m_wait_timer->start();
+    stop_scan_request sr;
+	m_uart->write(sr.data,2);
     return true;
 }
 
@@ -188,7 +187,7 @@ bool edrplidar_system::reset()
     m_wait_timer->start();
     m_current_type = Reset;
     m_rec_descript = true; // No descriptor for reset
-    m_uart->write((char*)(&rr), sizeof(reset_request));
+	m_uart->write(rr.data,2);
     m_error_timer->start();
     return true;
 }
@@ -205,9 +204,8 @@ bool edrplidar_system::requestInfo()
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
-
     device_info_request sr;
-    m_uart->write((char*)(&sr), sizeof(device_info_request));
+	m_uart->write(sr.data,2);
     return true;
 }
 
@@ -223,9 +221,8 @@ bool edrplidar_system::requestHealth()
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
-
     device_health_request sr;
-    m_uart->write((char*)&sr, sizeof(device_health_request));
+	m_uart->write(sr.data,2);
     return true;
 }
 
