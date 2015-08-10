@@ -4,6 +4,11 @@
 #include <edglobal.h>
 #include <termios.h>
 #include <string>
+#include <pthread.h>
+
+#define UART_WRITE_BUF_MAX_SIZE 256
+#define UART_READ_BUF_MAX_SIZE 5096
+#define UART_TMP_BUF_SIZE 1024
 
 class eduart
 {
@@ -86,11 +91,9 @@ class eduart
 	eduart();
 	~eduart();
 
-	void init(SerialPort uart_num);
-
 	uint read(char * buf, uint max_bytes);
 
-	void write(char * buf, uint to_write);
+	uint write(char * buf, uint to_write);
 	
 	const std::string & device_path();
 
@@ -101,17 +104,39 @@ class eduart
 	void set_format(const DataFormat & data_format);
 	const DataFormat & format();
 
-	void release();
+	bool start(SerialPort uart_num);
+	void stop();
+	bool running();
 	
   private:
+
 	void _detach_console();
 	void _reattach_console();
 	void _set_attribs();
+
+	void _exec();
+	static void * thread_exec(void * e_uart);
 	
 	int m_fd;
 	DataFormat m_df;
 	BaudRate m_baud;
 	std::string m_devpath;
+
+	char m_write_buffer[UART_WRITE_BUF_MAX_SIZE];
+	uint m_write_cur_index;
+	uint m_write_raw_index;
+	
+	char m_read_buffer[UART_READ_BUF_MAX_SIZE];
+	uint m_read_cur_index;
+	uint m_read_raw_index;
+
+	bool m_running;
+
+	pthread_mutex_t m_read_lock;
+	pthread_mutex_t m_write_lock;
+	pthread_mutex_t m_running_lock;
+
+	pthread_t m_thread;
 };
 
 #endif

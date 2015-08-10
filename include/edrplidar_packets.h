@@ -134,8 +134,15 @@ struct request_packet
         msB(MSB),
         lsB(LSB) {}
     virtual ~request_packet() {}
-    char msB;
-    char lsB;
+	union
+	{
+		struct
+		{
+            char msB;
+            char lsB;
+		};
+        char data[2];
+	};
 };
 
 
