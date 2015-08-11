@@ -47,7 +47,7 @@ void edpl_system::init()
         }
     }
 	msgTimer->set_callback(new edpl_callback(get_pl(GPIO_14), get_pl(GPIO_15)));
-	msgTimer->set_callback_delay(100);
+    msgTimer->set_callback_delay(100);
 	msgTimer->set_callback_mode(edtimer::continous_shot);
 	msgTimer->start();
 }
@@ -158,7 +158,7 @@ void edpl_system::update()
 		if (iter->second->meas_ready)
 		{
 			double meas = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
-			if (meas != 0 && meas < 5000)
+            if (meas > 0 && meas < 5000)
 			{
 				iter->second->sum_dist += meas;
 				++iter->second->meas_count;

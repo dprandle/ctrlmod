@@ -1,16 +1,11 @@
 #ifndef EDUART_H
 #define EDUART_H
 
-#include <edglobal.h>
 #include <termios.h>
+#include <edthreaded_fd.h>
 #include <string>
-#include <pthread.h>
 
-#define UART_WRITE_BUF_MAX_SIZE 256
-#define UART_READ_BUF_MAX_SIZE 5096
-#define UART_TMP_BUF_SIZE 1024
-
-class eduart
+class eduart : public edthreaded_fd
 {
   public:
 
@@ -88,55 +83,32 @@ class eduart
 		StopBits sb;
 	};
 
-	eduart();
+	eduart(SerialPort uart_num);
 	~eduart();
 
-	uint read(char * buf, uint max_bytes);
-
-	uint write(char * buf, uint to_write);
-	
 	const std::string & device_path();
 
 	void set_baud(BaudRate baud);
 	BaudRate baud();
 
+	bool start();
+
 	void set_format(DataBits db, Parity p, StopBits sb);
 	void set_format(const DataFormat & data_format);
 	const DataFormat & format();
 
-	bool start(SerialPort uart_num);
-	void stop();
-	bool running();
-	
   private:
+
+	int _raw_read(char * buffer, uint max_size);
+	int _raw_write(char * buffer, uint max_size);
 
 	void _detach_console();
 	void _reattach_console();
 	void _set_attribs();
 
-	void _exec();
-	static void * thread_exec(void * e_uart);
-	
-	int m_fd;
 	DataFormat m_df;
 	BaudRate m_baud;
 	std::string m_devpath;
-
-	char m_write_buffer[UART_WRITE_BUF_MAX_SIZE];
-	uint m_write_cur_index;
-	uint m_write_raw_index;
-	
-	char m_read_buffer[UART_READ_BUF_MAX_SIZE];
-	uint m_read_cur_index;
-	uint m_read_raw_index;
-
-	bool m_running;
-
-	pthread_mutex_t m_read_lock;
-	pthread_mutex_t m_write_lock;
-	pthread_mutex_t m_running_lock;
-
-	pthread_t m_thread;
 };
 
 #endif

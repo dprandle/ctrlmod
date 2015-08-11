@@ -9,6 +9,19 @@
 #include <iomanip>
 #include <edglobal.h>
 
+// Allow timestamp to be mutlithreaded
+static pthread_mutex_t timestamp_lock = PTHREAD_MUTEX_INITIALIZER;
+
+// Allow safe multithreaded use of cout
+static pthread_mutex_t cout_lock = PTHREAD_MUTEX_INITIALIZER;
+
+void cprint(const std::string & str)
+{
+    pthread_mutex_lock(&cout_lock);
+	std::cout << str << std::endl;
+    pthread_mutex_unlock(&cout_lock);
+}
+
 uint hash_id(const std::string & strng)
 {
 	uint hash = 5381;
@@ -20,28 +33,30 @@ uint hash_id(const std::string & strng)
 	return hash;
 }
 
-void log_message(const std::string & msg, const std::string & fname, bool tmstmp)
+bool log_message(const std::string & msg, const std::string & fname, bool tmstmp)
 {
     std::ofstream fout(fname.c_str(), std::ios_base::app);
     if (!fout.is_open())
-        throw std::exception();
+		return false;
 	
 	if (tmstmp)
 		fout << timestamp();
 
     fout << msg << "\n\n";
-	
 #ifdef CONSOLE_OUT
-	std::cout << msg << std::endl;
+	cprint(msg);
 #endif
-	
     fout.close();
+	return true;
 }
 
 std::string timestamp()
-{	
+{
+    pthread_mutex_lock(&timestamp_lock);
     time_t ltime = std::time(NULL); /* calendar time */
-	return std::string(std::asctime(std::localtime(&ltime)));
+    std::string ret(std::asctime(std::localtime(&ltime)));
+    pthread_mutex_unlock(&timestamp_lock);
+    return ret;
 }
 
 std::string to_hex(uchar byte)

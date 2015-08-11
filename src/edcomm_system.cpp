@@ -10,7 +10,7 @@
 #include <edglobal.h>
 #include <string.h>
 #include <errno.h>
-#include <edthreaded_socket.h>
+#include <edsocket.h>
 #include <sstream>
 
 Command::Command()
@@ -19,6 +19,7 @@ Command::Command()
 }
 edcomm_system::edcomm_system():
     m_server_fd(0),
+	m_port(0),
     m_cur_cmd(),
     m_cur_index(0)
 {}
@@ -41,13 +42,23 @@ void edcomm_system::init()
 
     server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_family = AF_INET;
-    server.sin_port = htons(2345);
+    server.sin_port = htons(m_port);
 
 	if (bind(m_server_fd, (struct sockaddr *) &server, sizeof(server)) < 0) 
 		log_message("Could not bind server");
 
 	listen(m_server_fd, 5);
-    log_message("Listening on port 2345");
+    log_message("Listening on port " + std::to_string(m_port));
+}
+
+usint edcomm_system::port()
+{
+	return m_port;
+}
+
+void edcomm_system::set_port(usint port_)
+{
+	m_port = port_;
 }
 
 void edcomm_system::release()
@@ -135,8 +146,10 @@ void edcomm_system::update()
 	int sockfd = accept(m_server_fd, (struct sockaddr *) &client_addr, &client_len);
 	if (sockfd != -1)
 	{
-		m_clients.push_back(new edthreaded_socket(sockfd));
-		log_message("Recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)));
+		edsocket * new_client = new edsocket(sockfd);
+		new_client->start();
+		m_clients.push_back(new_client);
+		log_message("Recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)) + ":" + std::to_string(ntohs(client_addr.sin_port)));
 	}
 
 	// Check for closed connections and remove them if there are any
@@ -158,27 +171,27 @@ void edcomm_system::_clean_closed_connections()
 		{
 			sockaddr_in cl_addr;
 			socklen_t cl_len = sizeof(cl_addr);
-			
-			edthreaded_socket::Error er = (*iter)->error();
-			std::string errno_message = strerror(er._errno);
-			getsockname((*iter)->fd(), (sockaddr *)&cl_addr, &cl_len);
-			std::string client_ip(inet_ntoa(cl_addr.sin_addr));
-			
+			getpeername((*iter)->fd(), (sockaddr *)&cl_addr, &cl_len);
+            std::string client_ip = std::string(inet_ntoa(cl_addr.sin_addr)) + ":" + std::to_string(ntohs(cl_addr.sin_port));
+
+            edthreaded_fd::Error er = (*iter)->error();
+            std::string errno_message = strerror(er._errno);
+
 			switch(er.err_val)
 			{
-			  case(edthreaded_socket::ConnectionClosed):
-				  log_message("Connection closed with " + client_ip);
+			  case(edthreaded_fd::ConnectionClosed):
+                  log_message("Connection closed with " + client_ip);
 				  break;
-			  case (edthreaded_socket::DataOverwrite):
+			  case (edthreaded_fd::DataOverwrite):
 				  log_message("Socket internal buffer overwritten with new data before previous data was sent" + client_ip + "\nError: " + errno_message);
 				  break;
-			  case (edthreaded_socket::InvalidRead):
+			  case (edthreaded_fd::InvalidRead):
 				  log_message("Socket invalid read from " + client_ip + "\nError: " + errno_message);
 				  break;
-			  case (edthreaded_socket::InvalidWrite):
+			  case (edthreaded_fd::InvalidWrite):
 				  log_message("Socket invalid write to " + client_ip + "\nError: " + errno_message);
 				  break;
-			  case (edthreaded_socket::ThreadCreation):
+			  case (edthreaded_fd::ThreadCreation):
 				  log_message("Error in thread creation for connection with " + client_ip);
 				  break;
 			  default:

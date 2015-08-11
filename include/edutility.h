@@ -5,10 +5,14 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <pthread.h>
+
 
 uint hash_id(const std::string & to_hash);
 
-void log_message(const std::string & msg, const std::string & fname="status.log", bool timestamp=true);
+bool log_message(const std::string & msg, const std::string & fname="status.log", bool timestamp=true);
+
+void cprint(const std::string & str);
 
 std::string timestamp();
 

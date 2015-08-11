@@ -9,7 +9,7 @@
 
 struct rplidar_scan_message;
 struct pulsed_light_message;
-class edthreaded_socket;
+class edsocket;
 
 struct Command
 {
@@ -40,6 +40,10 @@ class edcomm_system : public edsystem
 
 	virtual bool process(edmessage * msg);
 
+	usint port();
+
+	void set_port(usint port_);
+
 	virtual void update();
 
 	uint recvFromClients(char * data, uint max_size);
@@ -51,7 +55,7 @@ class edcomm_system : public edsystem
 	static std::string TypeString() {return "edcomm_system";}
 
   private:
-	typedef std::vector<edthreaded_socket*> ClientArray;
+	typedef std::vector<edsocket*> ClientArray;
 	
     void _handle_byte(char byte);
 	void _sendScan(rplidar_scan_message * scanmessage);
@@ -61,6 +65,7 @@ class edcomm_system : public edsystem
 	ClientArray m_clients;
 	
 	int m_server_fd;
+	usint m_port;
     Command m_cur_cmd;
     uint m_cur_index;
 };

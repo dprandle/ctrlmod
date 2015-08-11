@@ -17,8 +17,16 @@ void handle_ctrlc(int sig)
 	exit(1);
 }
 
-int main()
+int main(int argc, char * argv[])
 {
+	int port = 0;
+	for (int i = 0; i < argc; ++i)
+	{
+		std::string curarg(argv[i]);
+		if (curarg.find("-port:") == 0)
+			port = std::stoi(curarg.substr(6));
+	}
+	
 	struct sigaction sigIntHandler;
 	sigIntHandler.sa_handler = handle_ctrlc;
 	sigemptyset(&sigIntHandler.sa_mask);
@@ -26,10 +34,10 @@ int main()
 	sigaction(SIGINT, &sigIntHandler, NULL);
 	
     edm.add_sys<edrplidar_system>();
-	edm.add_sys<edpl_system>();
+    edm.add_sys<edpl_system>();
 	edm.add_sys<ednav_system>();
 	edm.add_sys<edlogging_system>();
-	edm.add_sys<edcomm_system>();
+	edm.add_sys<edcomm_system>()->set_port(port);
 	edm.start();
     edm.init();
 

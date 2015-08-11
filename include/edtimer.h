@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
-
+#include <chrono>
 
 struct edtimer_callback;
 
@@ -57,15 +57,22 @@ class edtimer
 	double elapsed();
 
   private:
+	typedef std::chrono::high_resolution_clock HighResClock;
+
+	HighResClock m_clk;
 	bool m_running;
-	double prev_time;
-	double ms_last;
-	double ms;
-	double m_cbdelay;
-	timeval t;
+	
+	HighResClock::time_point m_start_time;
+	HighResClock::time_point m_previous_frame_time;
+	HighResClock::time_point m_last_cbexec_time;
+
+	double m_elapsed_ms;
+	double m_dt_ms;
+	double m_cumilitive_time_ms;
+	double m_cbdelay_ms;
+
 	edtimer_callback * m_cb;
 	cb_mode m_cmode;
-        double last_exec;
 };
 
 

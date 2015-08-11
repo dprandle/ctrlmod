@@ -11,7 +11,7 @@
 #include <mraa/mraa_internal_types.h>
 
 edrplidar_system::edrplidar_system():
-    m_uart(new eduart()),
+    m_uart(new eduart(eduart::Uart1)),
     m_wait_timer(new edtimer()),
     m_timeout_timer(new edtimer()),
     m_error_timer(new edtimer()),
@@ -58,7 +58,7 @@ void edrplidar_system::init()
     m_uart->set_format(eduart::d8, eduart::None, eduart::One);
     m_uart->set_baud(eduart::b115200);
 
-	if (!m_uart->start(eduart::Uart1))
+	if (!m_uart->start())
 		std::cout << "Error starting uart" << std::endl;
 	
     m_wait_timer->set_callback(new wait_ready_callback());
@@ -66,7 +66,6 @@ void edrplidar_system::init()
     m_error_timer->set_callback(new wait_ready_callback());
     m_error_timer->set_callback_mode(edtimer::single_shot);
     m_error_timer->set_callback_delay(5000);
-//    stopScan();
 }
 
 void edrplidar_system::release()

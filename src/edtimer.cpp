@@ -6,13 +6,12 @@
 
 edtimer::edtimer():
     m_running(false),
-	prev_time(0),
-    ms_last(0),
-	ms(0),
-	m_cbdelay(0),
+	m_elapsed_ms(0),
+	m_dt_ms(0),
+	m_cumilitive_time_ms(0),
+	m_cbdelay_ms(0),
 	m_cb(NULL),
-    m_cmode(no_shot),
-    last_exec(0)
+    m_cmode(no_shot)
 {}
 
 edtimer::~edtimer()
@@ -23,21 +22,26 @@ edtimer::~edtimer()
 
 void edtimer::start()
 {
-	gettimeofday(&t, NULL);
 	m_running = true;
-	ms = 0;
-	ms_last = 0;
-	last_exec = 0;
-	prev_time = 0;
+	m_start_time = HighResClock::now();
+	m_previous_frame_time = m_start_time;
+	m_last_cbexec_time = m_start_time;
+	
+	m_elapsed_ms = 0;
+	m_dt_ms = 0;
+	m_cumilitive_time_ms = 0;
 }
 
 void edtimer::cont()
 {
-	prev_time += ms;
-	ms = 0;
-	ms_last = 0;
-	gettimeofday(&t, NULL);
 	m_running = true;
+	m_start_time = HighResClock::now();
+	m_previous_frame_time = m_start_time;
+	m_last_cbexec_time = m_start_time;
+	
+	m_cumilitive_time_ms += m_elapsed_ms;
+	m_elapsed_ms = 0;
+	m_dt_ms = 0;
 }
 
 edtimer_callback * edtimer::callback()
@@ -61,47 +65,41 @@ void edtimer::set_callback(edtimer_callback * cb)
 
 double edtimer::callback_delay()
 {
-	return m_cbdelay;
+	return m_cbdelay_ms;
 }
 
 void edtimer::set_callback_mode(cb_mode mode)
 {
 	m_cmode = mode;
-	last_exec = ms;
+	m_last_cbexec_time = m_previous_frame_time;
 }
 
 void edtimer::set_callback_delay(double ms)
 {
-	m_cbdelay = ms;
+	m_cbdelay_ms = ms;
 }
 
 void edtimer::update()
 {
 	if (!m_running)
 		return;
-	
-	timeval e_tm;
-	long s, us;
-	
-	gettimeofday(&e_tm, NULL);
 
-	s = e_tm.tv_sec - t.tv_sec;
-	us = e_tm.tv_usec - t.tv_usec;
+	HighResClock::time_point current = HighResClock::now();
+	m_dt_ms = double((current - m_previous_frame_time).count()) / 1000000.0;
+	m_elapsed_ms = double((current - m_start_time).count()) / 1000000.0;
 
-	ms_last = ms;
-	ms = s*1000 + double(us)/1000.0;
-	if (((m_cmode == single_shot) && (last_exec == 0.0) && (ms >= m_cbdelay)) ||
-		((m_cmode == continous_shot) && (ms - last_exec >= m_cbdelay)))
+	double cb_elapsed_ms = double((current - m_last_cbexec_time).count()) / 1000000.0;
+	if (((m_cmode == single_shot) && (m_last_cbexec_time == m_start_time) && (m_elapsed_ms >= m_cbdelay_ms)) ||
+		((m_cmode == continous_shot) && (cb_elapsed_ms >= m_cbdelay_ms)))
 	{
+		m_last_cbexec_time = current;
+
 		if (m_cb == NULL)
-		{
-			std::string message = "No callback set for timer yet callback mode is enabled";
-			log_message(message);
-			return;
-		}
-		last_exec = ms;
-		m_cb->exec(); // This must come after - stop calls update()
+			log_message("No callback set for timer yet callback mode is enabled");
+		else
+			m_cb->exec(); // This must come after - stop calls update()
 	}
+	m_previous_frame_time = current;
 }
 
 void edtimer::stop()
@@ -117,10 +115,10 @@ bool edtimer::running()
 
 double edtimer::dt()
 {
-	return ms - ms_last;
+	return m_dt_ms;
 }
 
 double edtimer::elapsed()
 {
-	return prev_time + ms;
+	return m_elapsed_ms;	
 }
