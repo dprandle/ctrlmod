@@ -75,6 +75,23 @@ bool edi2c::start()
 	return edthreaded_fd::start();
 }
 
+void edi2c::readBytes(char reg, char * buffer, uint size)
+{
+	uint cnt = 0;
+	
+	commandRead(reg, size);
+	while (cnt != size)
+	{
+		cnt += read(buffer+cnt, size - cnt);
+		Error err = error();
+		if (err.err_val != NoError)
+		{
+			log_message("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
+			break;
+		}
+	}
+}
+
 bool edi2c::commandRead(char reg, uint bytes_to_read)
 {
 	return (write(&reg, 1, bytes_to_read) == 1);
@@ -83,38 +100,14 @@ bool edi2c::commandRead(char reg, uint bytes_to_read)
 char edi2c::readByte(char reg)
 {
 	char ret = 0x00;
-	uint cnt = 0;
-	
-	commandRead(reg, 1);
-	while (cnt != 1)
-	{
-		cnt += read(&ret, 1);
-		Error err = error();
-		if (err.err_val != NoError)
-		{
-			log_message("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
-			break;
-		}
-	}
+	readBytes(reg, (char*)&ret, 1);
 	return ret;
 }
 
 sint edi2c::readWord(char reg)
 {
 	sint ret = 0x0000;
-	uint cnt = 0;
-	
-	commandRead(reg, 2);
-	while (cnt != 2)
-	{
-		cnt = read((char*)&ret, 2);
-		Error err = error();
-		if (err.err_val != NoError)
-		{
-			log_message("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
-			break;
-		}
-	}
+	readBytes(reg, (char*)&ret, 2);
 	return ret;
 }
 
@@ -138,6 +131,13 @@ bool edi2c::writeWord(char reg, sint word)
 	buf[1] = char(word);
 	buf[2] = char(word >> 8);
 	return (write(buf, 3));
+}
+
+bool edi2c::writeBytes(char reg, char * bytes, uint size)
+{
+	if (write(&reg,1) != 1)
+		return false;
+	return (write(bytes, size) == size);
 }
 
 int edi2c::_raw_read(char * buffer, uint size)

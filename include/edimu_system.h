@@ -1,6 +1,10 @@
 #ifndef EDIMU_SYSTEM_H
 #define EDIMU_SYSTEM_H
 
+
+#define LSM9DS0_XM_ADDR  0x1D // Would be 0x1E if SDO_XM is LOW
+#define LSM9DS0_G_ADDR   0x6B // Would be 0x6A if SDO_G is LOW
+
 /*!
   Gyro Registers
 */
@@ -91,6 +95,7 @@
 #define ACT_DUR				0x3F
 
 #include <edsystem.h>
+#include <nsmath.h>
 
 class edi2c;
 
@@ -191,6 +196,8 @@ class edimu_system : public edsystem
 	a_scale accel_scale();
 
 	a_odr accel_datarate();
+
+	void calibrate();
 	
 	g_scale gyro_scale();
 
@@ -238,6 +245,8 @@ class edimu_system : public edsystem
 	a_scale m_accel_scale;
 
 	float m_gres, m_mres, m_ares;
+
+	fvec3 m_abias, m_gbias;
 	
 	m_odr m_mag_odr;
 	g_odr m_gyro_odr;

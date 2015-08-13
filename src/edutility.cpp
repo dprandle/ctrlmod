@@ -8,12 +8,21 @@
 #include <sstream>
 #include <iomanip>
 #include <edglobal.h>
+#include <edtimer.h>
 
 // Allow timestamp to be mutlithreaded
 static pthread_mutex_t timestamp_lock = PTHREAD_MUTEX_INITIALIZER;
 
 // Allow safe multithreaded use of cout
 static pthread_mutex_t cout_lock = PTHREAD_MUTEX_INITIALIZER;
+
+void delay(double ms)
+{
+	edtimer t;
+	t.start();
+	while (t.elapsed() < ms)
+		t.update();
+}
 
 void cprint(const std::string & str)
 {

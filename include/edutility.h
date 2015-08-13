@@ -16,6 +16,8 @@ void cprint(const std::string & str);
 
 std::string timestamp();
 
+void delay(double ms);
+
 std::string to_hex(char byte);
 
 std::string to_hex(uchar byte);

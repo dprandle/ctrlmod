@@ -19,6 +19,8 @@ class edi2c : public edthreaded_fd
 
 	char readByte(char reg);
 
+	void readBytes(char reg, char * buffer, uint size);
+
 	sint readWord(char reg);
 
 	void set_target_address(int addr);
@@ -32,7 +34,8 @@ class edi2c : public edthreaded_fd
 	bool writeByte(char reg, char byte);
 
 	bool writeWord(char reg, sint word);
-	
+
+	bool writeBytes(char reg, char * bytes, uint size);
 	
   private:
 
