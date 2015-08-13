@@ -8,46 +8,46 @@ class edi2c : public edthreaded_fd
 {
   public:
 
-	edi2c(uint adapterNum);
+	edi2c(uint32_t adapterNum);
 	~edi2c();
 
-	bool command(char reg);
+	bool command(uint8_t reg);
 
-	bool commandRead(char reg, uint bytes_to_read);
+	bool commandRead(uint8_t reg, uint32_t bytes_to_read);
 
 	void enable_smbus(bool enable);
 
-	char readByte(char reg);
+	uint8_t readByte(uint8_t reg);
 
-	void readBytes(char reg, char * buffer, uint size);
+	void readBytes(uint8_t reg, uint8_t * buffer, uint32_t size);
 
-	sint readWord(char reg);
+	int16_t readWord(uint8_t reg);
 
-	void set_target_address(int addr);
+	void set_target_address(int32_t addr);
 
 	bool smbus_enabled();
 
 	bool start();	
 
-	int target_address();
+	int32_t target_address();
 
-	bool writeByte(char reg, char byte);
+	bool writeByte(uint8_t reg, uint8_t byte);
 
-	bool writeWord(char reg, sint word);
+	bool writeWord(uint8_t reg, int16_t word);
 
-	bool writeBytes(char reg, char * bytes, uint size);
+	bool writeBytes(uint8_t reg, uint8_t * bytes, uint32_t size);
 	
   private:
 
-	int _raw_read(char * buffer, uint size);
+	int32_t _raw_read(uint8_t * buffer, uint32_t size);
 
-	int _raw_write(char * buffer, uint size);
+	int32_t _raw_write(uint8_t * buffer, uint32_t size);
 
 	bool m_use_smbus;
 
 	pthread_mutex_t m_smbus_lock;
 
-	int m_address;
+	int32_t m_address;
 
 	std::string m_adapter_name;
 };

@@ -51,12 +51,12 @@ void edcomm_system::init()
     log_message("Listening on port " + std::to_string(m_port));
 }
 
-usint edcomm_system::port()
+uint16_t edcomm_system::port()
 {
 	return m_port;
 }
 
-void edcomm_system::set_port(usint port_)
+void edcomm_system::set_port(uint16_t port_)
 {
 	m_port = port_;
 }
@@ -79,7 +79,7 @@ bool edcomm_system::process(edmessage * msg)
     rplidar_firmware_message * fmsg = NULL;
     rplidar_scan_message * smsg = NULL;
 	pulsed_light_message * plmsg = NULL;
-    uint hashid;
+    uint32_t hashid;
     data_packet * dp = NULL;
 
     if ( (smsg = dynamic_cast<rplidar_scan_message*>(msg)) )
@@ -87,7 +87,7 @@ bool edcomm_system::process(edmessage * msg)
 		// special case - sending variable amount of data for each scan so handle that
 		// in other function
         hashid = hash_id(complete_scan_data_packet::Type());
-        sendToClients((char*)&hashid, sizeof(uint)); // send the hash id first though
+        sendToClients((uint8_t*)&hashid, sizeof(uint32_t)); // send the hash id first though
 		_sendScan(smsg);
 		return true;
     }
@@ -113,29 +113,29 @@ bool edcomm_system::process(edmessage * msg)
     else if ( (plmsg = dynamic_cast<pulsed_light_message*>(msg)))
 	{
 		hashid = hash_id(pulsed_light_message::Type());
-		sendToClients((char*)&hashid, sizeof(uint));
+		sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
 		sendToClients(plmsg->data, plmsg->size());
 		return true;
 	}
 	else
         return false;
 
-    sendToClients((char*)&hashid, sizeof(uint));
+    sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
     sendToClients(dp->dataptr(), dp->size());
     return true;
 }
 
-uint edcomm_system::recvFromClients(char * data, uint max_size)
+uint32_t edcomm_system::recvFromClients(uint8_t * data, uint32_t max_size)
 {
-	uint total = 0;
-	for (uint i = 0; i < m_clients.size(); ++i)
+	uint32_t total = 0;
+	for (uint32_t i = 0; i < m_clients.size(); ++i)
 		total += m_clients[i]->read(data+total, max_size-total);
 	return total;
 }
 
-void edcomm_system::sendToClients(char * data, uint size)
+void edcomm_system::sendToClients(uint8_t * data, uint32_t size)
 {
-	for (uint i = 0; i < m_clients.size(); ++i)
+	for (uint32_t i = 0; i < m_clients.size(); ++i)
 		m_clients[i]->write(data, size);
 }
 
@@ -143,7 +143,7 @@ void edcomm_system::update()
 {
 	sockaddr_in client_addr;
 	socklen_t client_len = sizeof(client_addr);
-	int sockfd = accept(m_server_fd, (struct sockaddr *) &client_addr, &client_len);
+	int32_t sockfd = accept(m_server_fd, (struct sockaddr *) &client_addr, &client_len);
 	if (sockfd != -1)
 	{
 		edsocket * new_client = new edsocket(sockfd);
@@ -156,9 +156,9 @@ void edcomm_system::update()
 	_clean_closed_connections();
 	
 	
-    static char buf[256];
-    int cnt = recvFromClients(buf, 256);
-    for (int i = 0; i < cnt; ++i)
+    static uint8_t buf[256];
+    int32_t cnt = recvFromClients(buf, 256);
+    for (int32_t i = 0; i < cnt; ++i)
         _handle_byte(buf[i]);
 }
 
@@ -206,7 +206,7 @@ void edcomm_system::_clean_closed_connections()
 	}
 }
 
-void edcomm_system::_handle_byte(char byte)
+void edcomm_system::_handle_byte(uint8_t byte)
 {
     m_cur_cmd.data[m_cur_index] = byte;
     ++m_cur_index;
@@ -220,7 +220,7 @@ void edcomm_system::_handle_byte(char byte)
 
 void edcomm_system::_do_command()
 {
-    uint rphash = hash_id(rplidar_request::Type());
+    uint32_t rphash = hash_id(rplidar_request::Type());
     if (m_cur_cmd.hash_id == rphash)
     {
         rplidar_request::req_type rt = static_cast<rplidar_request::req_type>(m_cur_cmd.cmd_data);
@@ -232,10 +232,10 @@ void edcomm_system::_do_command()
 
 void edcomm_system::_sendScan(rplidar_scan_message * scanmessage)
 {
-	static uint scanid = 0;
+	static uint32_t scanid = 0;
 	std::vector<uint32_t> tosend;
 	tosend.reserve(720);
-	for (uint i = 0; i < 360; ++i)
+	for (uint32_t i = 0; i < 360; ++i)
 	{
 		scan_data_packet * curpacket = &scanmessage->scan_data.data[i];
 
@@ -243,7 +243,7 @@ void edcomm_system::_sendScan(rplidar_scan_message * scanmessage)
 		angle |= ((uint32_t)(curpacket->angle14to7) << 7) & 0x7F80;
 
 		uint32_t distance = (uint32_t)(curpacket->distance7to0) & 0xFF;
-		distance |= ((unsigned int)(curpacket->distance15to8) << 8) & 0xFF00;
+		distance |= ((uint32_t)(curpacket->distance15to8) << 8) & 0xFF00;
 
         if (distance != 0)
         {
@@ -252,7 +252,7 @@ void edcomm_system::_sendScan(rplidar_scan_message * scanmessage)
         }
 	}
 	uint32_t packetsize = tosend.size();
-    sendToClients((char*)&packetsize, sizeof(uint32_t));
-    sendToClients((char*)&tosend[0], tosend.size()*sizeof(uint32_t));
+    sendToClients((uint8_t*)&packetsize, sizeof(uint32_t));
+    sendToClients((uint8_t*)&tosend[0], tosend.size()*sizeof(uint32_t));
 	++scanid;
 }

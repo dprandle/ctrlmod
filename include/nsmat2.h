@@ -4,7 +4,7 @@
 #include "nsquat.h"
 
 template <class T>
-NSMat2<T> operator*(const int & pLHS, const NSMat2<T> & pRHS);
+NSMat2<T> operator*(const int32_t & pLHS, const NSMat2<T> & pRHS);
 
 template <class T>
 NSMat2<T> operator*(const float & pLHS, const NSMat2<T> & pRHS);
@@ -13,7 +13,7 @@ template <class T>
 NSMat2<T> operator*(const double & pLHS, const NSMat2<T> & pRHS);
 
 template<class T>
-NSMat2<T> operator/(const int & pLHS, const NSMat2<T> & pRHS);
+NSMat2<T> operator/(const int32_t & pLHS, const NSMat2<T> & pRHS);
 
 template <class T>
 NSMat2<T> operator/(const float & pLHS, const NSMat2<T> & pRHS);
@@ -171,13 +171,13 @@ struct NSMat2
 		return *this;
 	}
 
-	NSMat2<T> & setColumn(const uint & i, const T & x, const T & y)
+	NSMat2<T> & setColumn(const uint32_t & i, const T & x, const T & y)
 	{
 		(*this)[0][i] = x; (*this)[1][i] = y;
 		return *this;
 	}
 
-	NSMat2<T> & setColumn(const uint & i, const NSVec2<T> & col)
+	NSMat2<T> & setColumn(const uint32_t & i, const NSVec2<T> & col)
 	{
 		(*this)[i][0] = col.x; (*this)[i][1] = col.y;
 		return *this;
@@ -346,14 +346,14 @@ struct NSMat2
 		return *this;
 	}
 
-	NSMat2<T> operator++(int)
+	NSMat2<T> operator++(int32_t)
 	{
 		NSMat2<T> ret(*this);
 		++(*this);
 		return ret;
 	}
 
-	NSMat2<T> operator--(int)
+	NSMat2<T> operator--(int32_t)
 	{
 		NSMat2<T> ret(*this);
 		--(*this);
@@ -384,21 +384,21 @@ struct NSMat2
 		return *this;
 	}
 
-	const NSVec2<T> & operator[](const uint & pVal) const
+	const NSVec2<T> & operator[](const uint32_t & pVal) const
 	{
 		if (pVal > 1)
 			throw(std::out_of_range("mat2 index out of range"));
 		return data[pVal];
 	}
 
-	NSVec2<T> & operator[](const uint & pVal)
+	NSVec2<T> & operator[](const uint32_t & pVal)
 	{
 		if (pVal > 1)
 			throw(std::out_of_range("mat2 index out of range"));
 		return data[pVal];
 	}
 
-	NSVec2<T> operator()(const uint & pVal)
+	NSVec2<T> operator()(const uint32_t & pVal)
 	{
 		return NSVec2<T>(data[0][pVal], data[1][pVal]);
 	}
@@ -408,7 +408,7 @@ private:
 };
 
 template <class T>
-NSMat2<T> operator*(const int & pLHS, const NSMat2<T> & pRHS)
+NSMat2<T> operator*(const int32_t & pLHS, const NSMat2<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
@@ -426,7 +426,7 @@ NSMat2<T> operator*(const double & pLHS, const NSMat2<T> & pRHS)
 }
 
 template<class T>
-NSMat2<T> operator/(const int & pLHS, const NSMat2<T> & pRHS)
+NSMat2<T> operator/(const int32_t & pLHS, const NSMat2<T> & pRHS)
 {
 	return NSMat2<T>(pLHS / pRHS[0], pLHS / pRHS[1]);
 }

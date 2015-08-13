@@ -125,12 +125,12 @@ void eduart::_reattach_console()
 	// Same thing here
 }
 
-int eduart::_raw_read(char * buffer, uint max_size)
+int32_t eduart::_raw_read(uint8_t * buffer, uint32_t max_size)
 {
     return ::read(m_fd, buffer, max_size);
 }
 
-int eduart::_raw_write(char * buffer, uint max_size)
+int32_t eduart::_raw_write(uint8_t * buffer, uint32_t max_size)
 {
 	return ::write(m_fd, buffer, max_size);
 }

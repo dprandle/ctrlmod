@@ -39,28 +39,28 @@ class edthreaded_fd
 		{}
 		
 		ErrorVal err_val;
-		int _errno;
+		int32_t _errno;
 	};
 
 	struct WriteVal
 	{
-		WriteVal(char byte_=0x00, int response_size_= 0):
+		WriteVal(uint8_t byte_=0x00, int32_t response_size_= 0):
 			byte(byte_),
 			response_size(response_size_)
 		{}
-		char byte;
-		uint response_size;
+		uint8_t byte;
+		uint32_t response_size;
 	};
 	
 	edthreaded_fd(
-		uint readbuf_size = DEFAULT_FD_READ_BUFFER_SIZE,
-		uint writebuf_size = DEFAULT_FD_WRITE_BUFFER_SIZE);
+		uint32_t readbuf_size = DEFAULT_FD_READ_BUFFER_SIZE,
+		uint32_t writebuf_size = DEFAULT_FD_WRITE_BUFFER_SIZE);
 	
 	virtual ~edthreaded_fd();
 
-    virtual uint read(char * buffer, uint max_size);
+    virtual uint32_t read(uint8_t * buffer, uint32_t max_size);
 
-    virtual uint write(char * buffer, uint size, int response_size = 0);
+    virtual uint32_t write(uint8_t * buffer, uint32_t size, int32_t response_size = 0);
 
 	virtual Error error();
 
@@ -68,9 +68,9 @@ class edthreaded_fd
 
 	virtual bool start();
 
-	int fd();
+	int32_t fd();
 
-	bool set_fd(int fd_);
+	bool set_fd(int32_t fd_);
 	
 	virtual void stop();
 	
@@ -78,30 +78,30 @@ class edthreaded_fd
 
 	friend struct command_wait_callback;
 	
-	virtual int _raw_read(char * buffer, uint max_size) = 0;
-	virtual int _raw_write(char * buffer, uint max_size) = 0;
+	virtual int32_t _raw_read(uint8_t * buffer, uint32_t max_size) = 0;
+	virtual int32_t _raw_write(uint8_t * buffer, uint32_t max_size) = 0;
 
 	virtual void _do_read();
 	virtual void _do_write();
 	
 	virtual void _exec();
-	void _setError(ErrorVal err_val, int _errno);
+	void _setError(ErrorVal err_val, int32_t _errno);
 
 	static void * thread_exec(void *);
 	
-	int m_fd;
-	uint m_read_rawindex;
-	uint m_read_curindex;
-	uint m_write_rawindex;
-	uint m_write_curindex;
+	int32_t m_fd;
+	uint32_t m_read_rawindex;
+	uint32_t m_read_curindex;
+	uint32_t m_write_rawindex;
+	uint32_t m_write_curindex;
 	
 	std::vector<WriteVal> m_write_buffer;
-	std::vector<char> m_read_buffer;
+	std::vector<uint8_t> m_read_buffer;
 
 	Error m_err;
 	bool m_running;
 
-	uint m_current_wait_for_byte_count;
+	uint32_t m_current_wait_for_byte_count;
 	edtimer * m_wait_timer;
 	
 	pthread_mutex_t m_send_lock;

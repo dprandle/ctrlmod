@@ -23,7 +23,7 @@ template <class T>
 struct NSVec2;
 
 template <class T>
-NSVec2<T> operator*(const int & pLHS, const NSVec2<T> & pRHS);
+NSVec2<T> operator*(const int32_t & pLHS, const NSVec2<T> & pRHS);
 
 template <class T>
 NSVec2<T> operator*(const float & pLHS, const NSVec2<T> & pRHS);
@@ -32,7 +32,7 @@ template <class T>
 NSVec2<T> operator*(const double & pLHS, const NSVec2<T> & pRHS);
 
 template <class T>
-NSVec2<T> operator/(const int & pLHS, const NSVec2<T> & pRHS);
+NSVec2<T> operator/(const int32_t & pLHS, const NSVec2<T> & pRHS);
 
 template <class T>
 NSVec2<T> operator/(const float & pLHS, const NSVec2<T> & pRHS);
@@ -416,14 +416,14 @@ struct NSVec2
 		return *this;
 	}
 
-	NSVec2<T> operator++(int)
+	NSVec2<T> operator++(int32_t)
 	{
 		NSVec2<T> ret(*this);
 		++(*this);
 		return ret;
 	}
 
-	NSVec2<T> operator--(int)
+	NSVec2<T> operator--(int32_t)
 	{
 		NSVec2<T> ret(*this);
 		--(*this);
@@ -498,14 +498,14 @@ struct NSVec2
 		return !(*this == pRHS);
 	}
 
-	const T & operator[](const uint & pVal) const
+	const T & operator[](const uint32_t & pVal) const
 	{
 		if (pVal > 1)
 			throw(std::out_of_range("vec2 index out of range"));
 		return data[pVal];
 	}
 
-	T & operator[](const uint & pVal)
+	T & operator[](const uint32_t & pVal)
 	{
 		if (pVal > 1)
 			throw(std::out_of_range("vec2 index out of range"));
@@ -561,7 +561,7 @@ struct NSVec2
 };
 
 template <class T>
-NSVec2<T> operator*(const int & pLHS, const NSVec2<T> & pRHS)
+NSVec2<T> operator*(const int32_t & pLHS, const NSVec2<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
@@ -579,7 +579,7 @@ NSVec2<T> operator*(const double & pLHS, const NSVec2<T> & pRHS)
 }
 
 template <class T>
-NSVec2<T> operator/(const int & pLHS, const NSVec2<T> & pRHS)
+NSVec2<T> operator/(const int32_t & pLHS, const NSVec2<T> & pRHS)
 {
 	return NSVec2<T>(pLHS / pRHS.x, pLHS / pRHS.y);
 }

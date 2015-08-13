@@ -19,10 +19,10 @@ struct Command
     {
         struct
         {
-            uint hash_id;
-            uint cmd_data;
+            uint32_t hash_id;
+            uint32_t cmd_data;
         };
-        char data[8];
+        uint8_t data[8];
     };
 };
 
@@ -40,15 +40,15 @@ class edcomm_system : public edsystem
 
 	virtual bool process(edmessage * msg);
 
-	usint port();
+	uint16_t port();
 
-	void set_port(usint port_);
+	void set_port(uint16_t port_);
 
 	virtual void update();
 
-	uint recvFromClients(char * data, uint max_size);
+	uint32_t recvFromClients(uint8_t * data, uint32_t max_size);
 
-	void sendToClients(char * data, uint size);
+	void sendToClients(uint8_t * data, uint32_t size);
 
 	virtual std::string typestr() {return TypeString();}
 	
@@ -57,17 +57,17 @@ class edcomm_system : public edsystem
   private:
 	typedef std::vector<edsocket*> ClientArray;
 	
-    void _handle_byte(char byte);
+    void _handle_byte(uint8_t byte);
 	void _sendScan(rplidar_scan_message * scanmessage);
     void _do_command();
 	void _clean_closed_connections();
 
 	ClientArray m_clients;
 	
-	int m_server_fd;
-	usint m_port;
+	int32_t m_server_fd;
+	uint16_t m_port;
     Command m_cur_cmd;
-    uint m_cur_index;
+    uint32_t m_cur_index;
 };
 
 

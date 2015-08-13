@@ -13,7 +13,7 @@ template <class T>
 NSMat3<T> operator%(const NSVec3<T> & lhs, const NSMat3<T> & rhs);
 
 template <class T>
-NSMat3<T> operator*(const int & pLHS, const NSMat3<T> & pRHS);
+NSMat3<T> operator*(const int32_t & pLHS, const NSMat3<T> & pRHS);
 
 template <class T>
 NSMat3<T> operator*(const float & pLHS, const NSMat3<T> & pRHS);
@@ -22,7 +22,7 @@ template <class T>
 NSMat3<T> operator*(const double & pLHS, const NSMat3<T> & pRHS);
 
 template<class T>
-NSMat3<T> operator/(const int & pLHS, const NSMat3<T> & pRHS);
+NSMat3<T> operator/(const int32_t & pLHS, const NSMat3<T> & pRHS);
 
 template <class T>
 NSMat3<T> operator/(const float & pLHS, const NSMat3<T> & pRHS);
@@ -508,13 +508,13 @@ struct NSMat3
 		return *this;
 	}
 
-	NSMat3<T> & setColumn(const uint & i, const T & x, const T & y,const T & z)
+	NSMat3<T> & setColumn(const uint32_t & i, const T & x, const T & y,const T & z)
 	{
 		(*this)[0][i] = x; (*this)[1][i] = y; (*this)[2][i] = z;
 		return *this;
 	}
 
-	NSMat3<T> & setColumn(const uint & i, const NSVec3<T> & col)
+	NSMat3<T> & setColumn(const uint32_t & i, const NSVec3<T> & col)
 	{
 		(*this)[0][i] = col.x; (*this)[1][i] = col.y; (*this)[2][i] = col.z;
 		return *this;
@@ -725,14 +725,14 @@ struct NSMat3
 		return *this;
 	}
 
-	NSMat3<T> operator++(int)
+	NSMat3<T> operator++(int32_t)
 	{
 		NSMat3<T> ret(*this);
 		++(*this);
 		return ret;
 	}
 
-	NSMat3<T> operator--(int)
+	NSMat3<T> operator--(int32_t)
 	{
 		NSMat3<T> ret(*this);
 		--(*this);
@@ -763,21 +763,21 @@ struct NSMat3
 		return *this;
 	}
 
-	const NSVec3<T> & operator[](const uint & pVal) const
+	const NSVec3<T> & operator[](const uint32_t & pVal) const
 	{
 		if (pVal > 2)
 			throw(std::out_of_range("mat3 index out of range"));
 		return data[pVal];
 	}
 
-	NSVec3<T> & operator[](const uint & pVal)
+	NSVec3<T> & operator[](const uint32_t & pVal)
 	{
 		if (pVal > 2)
 			throw(std::out_of_range("mat3 index out of range"));
 		return data[pVal];
 	}
 
-	NSVec3<T> operator()(uint pVal) const
+	NSVec3<T> operator()(uint32_t pVal) const
 	{
 		return NSVec3<T>(data[0][pVal], data[1][pVal], data[2][pVal]);
 	}
@@ -787,7 +787,7 @@ private:
 };
 
 template <class T>
-NSMat3<T> operator*(const int & pLHS, const NSMat3<T> & pRHS)
+NSMat3<T> operator*(const int32_t & pLHS, const NSMat3<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
@@ -805,7 +805,7 @@ NSMat3<T> operator*(const double & pLHS, const NSMat3<T> & pRHS)
 }
 
 template<class T>
-NSMat3<T> operator/(const int & pLHS, const NSMat3<T> & pRHS)
+NSMat3<T> operator/(const int32_t & pLHS, const NSMat3<T> & pRHS)
 {
 	return NSMat3<T>(pLHS / pRHS[0], pLHS / pRHS[1], pLHS / pRHS[2]);
 }

@@ -6,7 +6,7 @@
 #include <sys/ioctl.h>
 #include <edutility.h>
 
-edi2c::edi2c(uint adapterNum):
+edi2c::edi2c(uint32_t adapterNum):
 	m_use_smbus(false),
 	m_address(0)
 {
@@ -19,7 +19,7 @@ edi2c::~edi2c()
 	pthread_mutex_destroy(&m_smbus_lock);
 }
 
-void edi2c::set_target_address(int addr)
+void edi2c::set_target_address(int32_t addr)
 {
 	m_address = addr;
 	if (m_fd != -1)
@@ -32,7 +32,7 @@ void edi2c::set_target_address(int addr)
 	}
 }
 
-int edi2c::target_address()
+int32_t edi2c::target_address()
 {
 	return m_address;
 }
@@ -75,9 +75,9 @@ bool edi2c::start()
 	return edthreaded_fd::start();
 }
 
-void edi2c::readBytes(char reg, char * buffer, uint size)
+void edi2c::readBytes(uint8_t reg, uint8_t * buffer, uint32_t size)
 {
-	uint cnt = 0;
+	uint32_t cnt = 0;
 	
 	commandRead(reg, size);
 	while (cnt != size)
@@ -92,55 +92,55 @@ void edi2c::readBytes(char reg, char * buffer, uint size)
 	}
 }
 
-bool edi2c::commandRead(char reg, uint bytes_to_read)
+bool edi2c::commandRead(uint8_t reg, uint32_t bytes_to_read)
 {
 	return (write(&reg, 1, bytes_to_read) == 1);
 }
 
-char edi2c::readByte(char reg)
+uint8_t edi2c::readByte(uint8_t reg)
 {
-	char ret = 0x00;
-	readBytes(reg, (char*)&ret, 1);
+	uint8_t ret = 0x00;
+	readBytes(reg, (uint8_t*)&ret, 1);
 	return ret;
 }
 
-sint edi2c::readWord(char reg)
+int16_t edi2c::readWord(uint8_t reg)
 {
-	sint ret = 0x0000;
-	readBytes(reg, (char*)&ret, 2);
+	int16_t ret = 0x0000;
+	readBytes(reg, (uint8_t*)&ret, 2);
 	return ret;
 }
 
-bool edi2c::command(char reg)
+bool edi2c::command(uint8_t reg)
 {
 	return (write(&reg,1) == 1);
 }
 
-bool edi2c::writeByte(char reg, char byte)
+bool edi2c::writeByte(uint8_t reg, uint8_t byte)
 {
-	static char buf[2];
+	static uint8_t buf[2];
 	buf[0] = reg;
 	buf[1] = byte;
 	return (write(buf,2) == 2);
 }
 
-bool edi2c::writeWord(char reg, sint word)
+bool edi2c::writeWord(uint8_t reg, int16_t word)
 {
-	static char buf[3];
+	static uint8_t buf[3];
 	buf[0] = reg;
-	buf[1] = char(word);
-	buf[2] = char(word >> 8);
+	buf[1] = uint8_t(word);
+	buf[2] = uint8_t(word >> 8);
 	return (write(buf, 3));
 }
 
-bool edi2c::writeBytes(char reg, char * bytes, uint size)
+bool edi2c::writeBytes(uint8_t reg, uint8_t * bytes, uint32_t size)
 {
 	if (write(&reg,1) != 1)
 		return false;
 	return (write(bytes, size) == size);
 }
 
-int edi2c::_raw_read(char * buffer, uint size)
+int32_t edi2c::_raw_read(uint8_t * buffer, uint32_t size)
 {
 	bool use_smbus = smbus_enabled();
 	if (use_smbus)
@@ -152,7 +152,7 @@ int edi2c::_raw_read(char * buffer, uint size)
     return 0;
 }
 
-int edi2c::_raw_write(char * buffer, uint size)
+int32_t edi2c::_raw_write(uint8_t * buffer, uint32_t size)
 {
 	bool use_smbus = smbus_enabled();
 	if (use_smbus)

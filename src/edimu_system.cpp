@@ -39,11 +39,11 @@ void edimu_system::calibrate()
 {
 	uint8_t data[6] = {0, 0, 0, 0, 0, 0};
 	int16_t gyro_bias[3] = {0, 0, 0}, accel_bias[3] = {0, 0, 0};
-	int samples, ii;
+	int32_t samples, ii;
   
 	// Calibrate gyroscope
 	m_i2c->set_target_address(LSM9DS0_G_ADDR);
-	char c = m_i2c->readByte(CTRL_REG5_G);
+	uint8_t c = m_i2c->readByte(CTRL_REG5_G);
 	m_i2c->writeByte(CTRL_REG5_G, c | 0x40);
 	delay(20);
 	m_i2c->writeByte(FIFO_CTRL_REG_G, 0x20 | 0x1F);
@@ -143,7 +143,7 @@ void edimu_system::set_accel_scale(a_scale scale)
 	m_accel_scale = scale;
 
 	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	char temp = m_i2c->readByte(CTRL_REG2_XM);
+	uint8_t temp = m_i2c->readByte(CTRL_REG2_XM);
 
 	temp &= 0xFF^(0x3 << 3);
 	temp |= m_accel_scale << 3;
@@ -170,7 +170,7 @@ void edimu_system::set_gyro_scale(g_scale scale)
 	m_gyro_scale = scale;
 
 	m_i2c->set_target_address(LSM9DS0_G_ADDR);
-	char temp = m_i2c->readByte(CTRL_REG4_G);
+	uint8_t temp = m_i2c->readByte(CTRL_REG4_G);
 
 	temp &= 0xFF^(0x3 << 4);
 	temp |= m_gyro_scale << 4;
@@ -184,7 +184,7 @@ void edimu_system::set_gyro_datarate(g_odr datarate)
 	m_gyro_odr = datarate;
 
 	m_i2c->set_target_address(LSM9DS0_G_ADDR);
-	char temp = m_i2c->readByte(CTRL_REG1_G);
+	uint8_t temp = m_i2c->readByte(CTRL_REG1_G);
 	
 	temp &= 0xFF^(0xF << 4);
 	temp |= (m_gyro_odr << 4);
@@ -211,7 +211,7 @@ void edimu_system::set_mag_datarate(m_odr datarate)
 	m_mag_odr = datarate;
 
 	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	char temp = m_i2c->readByte(CTRL_REG5_XM);
+	uint8_t temp = m_i2c->readByte(CTRL_REG5_XM);
 	
 	temp &= 0xFF^(0x7 << 2);
 	temp |= (m_mag_odr << 2);

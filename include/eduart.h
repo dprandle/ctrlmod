@@ -99,8 +99,8 @@ class eduart : public edthreaded_fd
 
   private:
 
-	int _raw_read(char * buffer, uint max_size);
-	int _raw_write(char * buffer, uint max_size);
+	int32_t _raw_read(uint8_t * buffer, uint32_t max_size);
+	int32_t _raw_write(uint8_t * buffer, uint32_t max_size);
 
 	void _detach_console();
 	void _reattach_console();

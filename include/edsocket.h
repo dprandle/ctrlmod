@@ -7,14 +7,14 @@ class edsocket : public edthreaded_fd
 {
   public:
 
-	edsocket(uint socket_fd);
+	edsocket(uint32_t socket_fd);
 	
 	~edsocket();
 
   private:
 
-	int _raw_read(char * buffer, uint max_size);
-	int _raw_write(char * buffer, uint max_size);
+	int32_t _raw_read(uint8_t * buffer, uint32_t max_size);
+	int32_t _raw_write(uint8_t * buffer, uint32_t max_size);
 
 };
 

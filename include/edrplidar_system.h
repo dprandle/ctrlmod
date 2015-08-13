@@ -59,7 +59,7 @@ protected:
 
 private:
 
-    void _handle_byte(char byte);
+    void _handle_byte(uint8_t byte);
     void _reset_state();
     bool _check_packet_for_scan_start();
 
@@ -68,8 +68,8 @@ private:
     edtimer * m_timeout_timer;
     edtimer * m_error_timer;
 
-    uint m_rec_index;
-    uint m_scan_index;
+    uint32_t m_rec_index;
+    uint32_t m_scan_index;
     bool m_rec_descript;
     bool m_rec_start_scan;
 

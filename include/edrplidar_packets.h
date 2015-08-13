@@ -9,9 +9,9 @@ struct data_packet
     virtual ~data_packet() {}
     virtual std::string toString()=0;
     virtual std::string type()=0;
-    virtual unsigned int size()=0;
-    virtual char & operator[](unsigned int index)=0;
-    virtual char * dataptr()=0;
+    virtual uint32_t size()=0;
+    virtual uint8_t & operator[](uint32_t index)=0;
+    virtual uint8_t * dataptr()=0;
 };
 
 struct scan_data_packet : public data_packet
@@ -20,23 +20,23 @@ struct scan_data_packet : public data_packet
 
     virtual std::string toString();
     std::string type(){return Type();}
-    virtual unsigned int size() {return Size();}
-    virtual char & operator[](unsigned int index) {return data[index];}
-    virtual char * dataptr(){return data;}
+    virtual uint32_t size() {return Size();}
+    virtual uint8_t & operator[](uint32_t index) {return data[index];}
+    virtual uint8_t * dataptr(){return data;}
     static std::string Type() {return "scan";}
-	static unsigned int Size() {return 5;}
+	static uint32_t Size() {return 5;}
     union
     {
         struct
         {
-            char qual_s_sn;
-            char angle6to0_C;
-            char angle14to7;
-            char distance7to0;
-            char distance15to8;
+            uint8_t qual_s_sn;
+            uint8_t angle6to0_C;
+            uint8_t angle14to7;
+            uint8_t distance7to0;
+            uint8_t distance15to8;
         };
 
-        char data[5];
+        uint8_t data[5];
     };
 };
 
@@ -46,16 +46,16 @@ struct complete_scan_data_packet : public data_packet
 
     virtual std::string toString();
     std::string type(){return Type();}
-    virtual unsigned int size() {return Size();}
-    virtual char & operator[](unsigned int index)
+    virtual uint32_t size() {return Size();}
+    virtual uint8_t & operator[](uint32_t index)
     {
-        unsigned int data_ind = index % 5;
-        unsigned int packet_ind = index / 5;
+        uint32_t data_ind = index % 5;
+        uint32_t packet_ind = index / 5;
         return data[packet_ind][data_ind];
     }
-    virtual char * dataptr(){return data[0].data;}
+    virtual uint8_t * dataptr(){return data[0].data;}
     static std::string Type() {return "complete_scan";}
-	static unsigned int Size() {return 5 * 360;}
+	static uint32_t Size() {return 5 * 360;}
     scan_data_packet data[360];
 };
 
@@ -65,20 +65,20 @@ struct health_data_packet : public data_packet
 
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return Size();}
-    virtual char & operator[](unsigned int index) {return data[index];}
-    virtual char * dataptr(){return data;}
+    virtual uint32_t size() {return Size();}
+    virtual uint8_t & operator[](uint32_t index) {return data[index];}
+    virtual uint8_t * dataptr(){return data;}
     static std::string Type() {return "health";}
-	static unsigned int Size() {return 3;}
+	static uint32_t Size() {return 3;}
     union
     {
         struct
         {
-            char status;
-            char error_code7to0;
-            char error_code15to8;
+            uint8_t status;
+            uint8_t error_code7to0;
+            uint8_t error_code15to8;
         };
-        char data[3];
+        uint8_t data[3];
     };
 };
 
@@ -89,22 +89,22 @@ struct info_data_packet : public data_packet
 
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return Size();}
-    virtual char & operator[](unsigned int index) {return data[index];}
-    virtual char * dataptr(){return data;}
+    virtual uint32_t size() {return Size();}
+    virtual uint8_t & operator[](uint32_t index) {return data[index];}
+    virtual uint8_t * dataptr(){return data;}
     static std::string Type() {return "info";}
-	static unsigned int Size() {return 20;}
+	static uint32_t Size() {return 20;}
     union
     {
         struct
         {
-            char model;
-            char firmware_minor;
-            char firmware_major;
-            char hardware;
-            char serialnumber[16];
+            uint8_t model;
+            uint8_t firmware_minor;
+            uint8_t firmware_major;
+            uint8_t hardware;
+            uint8_t serialnumber[16];
         };
-        char data[20];
+        uint8_t data[20];
     };
 };
 
@@ -113,26 +113,26 @@ struct firmware_data_packet : public data_packet
     firmware_data_packet();
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return Size();}
-    virtual char & operator[](unsigned int index) {return data[index];}
-    virtual char * dataptr(){return data;}
+    virtual uint32_t size() {return Size();}
+    virtual uint8_t & operator[](uint32_t index) {return data[index];}
+    virtual uint8_t * dataptr(){return data;}
     static std::string Type() {return "firmware";}
-	static unsigned int Size() {return 56;}
+	static uint32_t Size() {return 56;}
     union
     {
         struct
         {
-            char line1[18];
-            char line2[29];
-            char line3[9];
+            uint8_t line1[18];
+            uint8_t line2[29];
+            uint8_t line3[9];
         };
-        char data[56];
+        uint8_t data[56];
     };
 };
 
 struct request_packet
 {
-    request_packet(char MSB, char LSB):
+    request_packet(uint8_t MSB, uint8_t LSB):
         msB(MSB),
         lsB(LSB) {}
     virtual ~request_packet() {}
@@ -140,10 +140,10 @@ struct request_packet
 	{
 		struct
 		{
-            char msB;
-            char lsB;
+            uint8_t msB;
+            uint8_t lsB;
 		};
-        char data[2];
+        uint8_t data[2];
 	};
 };
 
@@ -180,7 +180,7 @@ struct device_health_request : public request_packet
 
 struct descriptor_packet
 {
-    descriptor_packet(char drlen0_=0x00, char drlen1_=0x00, char drlen2_=0x00, char drlen3_smode_=0x00, char datatype_=0x00):
+    descriptor_packet(uint8_t drlen0_=0x00, uint8_t drlen1_=0x00, uint8_t drlen2_=0x00, uint8_t drlen3_smode_=0x00, uint8_t datatype_=0x00):
         s1(0xA5),
         s2(0x5A),
         drlen0(drlen0_),
@@ -192,21 +192,21 @@ struct descriptor_packet
     virtual ~descriptor_packet() {}
 
     virtual std::string type()=0;
-    unsigned int size() {return Size();}
-    char & operator[](unsigned int index) {return data[index];}
-	static unsigned int Size() {return 7;}
+    uint32_t size() {return Size();}
+    uint8_t & operator[](uint32_t index) {return data[index];}
+	static uint32_t Size() {return 7;}
     union
     {
         struct {
-            char s1;
-            char s2;
-            char drlen0;
-            char drlen1;
-            char drlen2;
-            char drlen3_smode;
-            char datatype;
+            uint8_t s1;
+            uint8_t s2;
+            uint8_t drlen0;
+            uint8_t drlen1;
+            uint8_t drlen2;
+            uint8_t drlen3_smode;
+            uint8_t datatype;
         };
-        char data[7];
+        uint8_t data[7];
     };
 };
 

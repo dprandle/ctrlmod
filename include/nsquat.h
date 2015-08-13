@@ -4,7 +4,7 @@
 #include "nsvec4.h"
 
 template <class T>
-NSQuat<T> operator*(const int & pLHS, const NSQuat<T> & pRHS);
+NSQuat<T> operator*(const int32_t & pLHS, const NSQuat<T> & pRHS);
 
 template <class T>
 NSQuat<T> operator*(const float & pLHS, const NSQuat<T> & pRHS);
@@ -13,7 +13,7 @@ template <class T>
 NSQuat<T> operator*(const double & pLHS, const NSQuat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator/(const int & pLHS, const NSQuat<T> & pRHS);
+NSQuat<T> operator/(const int32_t & pLHS, const NSQuat<T> & pRHS);
 
 template <class T>
 NSQuat<T> operator/(const float & pLHS, const NSQuat<T> & pRHS);
@@ -398,14 +398,14 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> operator++(int)
+	NSQuat<T> operator++(int32_t)
 	{
 		NSQuat<T> ret(*this);
 		++(*this);
 		return ret;
 	}
 
-	NSQuat<T> operator--(int)
+	NSQuat<T> operator--(int32_t)
 	{
 		NSQuat<T> ret(*this);
 		--(*this);
@@ -484,14 +484,14 @@ struct NSQuat
 		return !(*this == rhs);
 	}
 
-	const T & operator[](const uint & pVal) const
+	const T & operator[](const uint32_t & pVal) const
 	{
 		if (pVal > 3)
 			throw(std::out_of_range("quat index out of range"));
 		return data[pVal];
 	}
 
-	T & operator[](const uint & pVal)
+	T & operator[](const uint32_t & pVal)
 	{
 		if (pVal > 3)
 			throw(std::out_of_range("quat index out of range"));
@@ -521,7 +521,7 @@ struct NSQuat
 };
 
 template <class T>
-NSQuat<T> operator*(const int & pLHS, const NSQuat<T> & pRHS)
+NSQuat<T> operator*(const int32_t & pLHS, const NSQuat<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
@@ -539,7 +539,7 @@ NSQuat<T> operator*(const double & pLHS, const NSQuat<T> & pRHS)
 }
 
 template <class T>
-NSQuat<T> operator/(const int & pLHS, const NSQuat<T> & pRHS)
+NSQuat<T> operator/(const int32_t & pLHS, const NSQuat<T> & pRHS)
 {
 	return NSQuat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
 }

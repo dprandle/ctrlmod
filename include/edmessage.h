@@ -9,7 +9,7 @@ struct edmessage
 {
 	virtual ~edmessage() {}
 	virtual std::string type()=0;
-	uint ref_count;
+	uint32_t ref_count;
 };
 
 struct pulsed_light_message : public edmessage
@@ -20,17 +20,17 @@ struct pulsed_light_message : public edmessage
 		{
 			double distance1;
 			double distance2;
-			uint mraa_pin1;
-			uint mraa_pin2;
+			uint32_t mraa_pin1;
+			uint32_t mraa_pin2;
 			double pos1[3];
 			double pos2[3];
 			double orientation1[4];
 			double orientation2[4];
 		};
-		char data[136];
+		uint8_t data[136];
 	};
 
-	uint size() {return 136;}
+	uint32_t size() {return 136;}
 	std::string type() {return Type();}
 	static std::string Type() {return "pulsed_light_message";}
 };
@@ -55,7 +55,7 @@ struct rplidar_request : public edmessage
 struct rplidar_scan_message : public edmessage
 {
     complete_scan_data_packet scan_data;
-	uint millis_timestamp;
+	uint32_t millis_timestamp;
 	virtual std::string type() {return Type();}
 	static std::string Type() {return "lplidar_scan_message";}		
 };
@@ -63,7 +63,7 @@ struct rplidar_scan_message : public edmessage
 struct rplidar_error_message : public edmessage
 {
     rplidar_error_message();
-	char message[100];
+	uint8_t message[100];
 	virtual std::string type() {return Type();}
 	static std::string Type() {return "rplidar_error_message";}	
 };

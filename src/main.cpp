@@ -11,16 +11,16 @@
 #include <edcallback.h>
 #include <edcomm_system.h>
 
-void handle_ctrlc(int sig)
+void handle_ctrlc(int32_t sig)
 {
 	edmctrl::quit();
 	exit(1);
 }
 
-int main(int argc, char * argv[])
+int32_t main(int32_t argc, char * argv[])
 {
-	int port = 0;
-	for (int i = 0; i < argc; ++i)
+	int32_t port = 0;
+	for (int32_t i = 0; i < argc; ++i)
 	{
 		std::string curarg(argv[i]);
 		if (curarg.find("-port:") == 0)

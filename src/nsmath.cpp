@@ -41,12 +41,12 @@ double lerp(double low, double high, double middle)
 	return (middle - low) / (high - low);
 }
 
-float lerp(int low, int high, int middle)
-{
+float lerp(int32_t low, int32_t high, int32_t middle)
+{	
 	return float(middle - low) / float(high - low);
 }
 
-float lerp(uint low, uint high, uint middle)
+float lerp(uint32_t low, uint32_t high, uint32_t middle)
 {
 	return float(middle - low) / float(high - low);
 }
@@ -116,7 +116,7 @@ void NSBoundingBox::clear()
 {
 	mMin = fvec3();
 	mMax = fvec3();
-	for (uint i = 0; i < 8; ++i)
+	for (uint32_t i = 0; i < 8; ++i)
 		mVerts[i] = fvec3();
 }
 
@@ -149,7 +149,7 @@ void NSBoundingBox::extend(
 	const fmat4 & pTransform
 	)
 {
-	for (uint i = 0; i < pVertices.size(); ++i)
+	for (uint32_t i = 0; i < pVertices.size(); ++i)
 	{
 		fvec3 tVert = (pTransform * fvec4(pVertices[i], 1.0f)).xyz();
 		// Find maximum of each dimension

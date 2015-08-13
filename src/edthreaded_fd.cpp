@@ -7,7 +7,7 @@
 #include <edtimer.h>
 #include <edcallback.h>
 
-edthreaded_fd::edthreaded_fd(uint readbuf_, uint writebuf_):
+edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_fd(-1),
 	m_read_rawindex(0),
 	m_read_curindex(0),
@@ -42,9 +42,9 @@ edthreaded_fd::~edthreaded_fd()
 	close(m_fd);
 }
 
-uint edthreaded_fd::read(char * buffer, uint max_size)
+uint32_t edthreaded_fd::read(uint8_t * buffer, uint32_t max_size)
 {
-	uint count = 0;
+	uint32_t count = 0;
 	pthread_mutex_lock(&m_recv_lock);
 	while (m_read_curindex != m_read_rawindex)
 	{
@@ -60,13 +60,13 @@ uint edthreaded_fd::read(char * buffer, uint max_size)
 	return count;
 }
 
-uint edthreaded_fd::write(char * buffer, uint size, int response_size)
+uint32_t edthreaded_fd::write(uint8_t * buffer, uint32_t size, int32_t response_size)
 {
-	int resp = 0;
+	int32_t resp = 0;
 	pthread_mutex_lock(&m_send_lock);
 	if (size > m_write_buffer.size())
 		size = m_write_buffer.size();
-    for (uint i = 0; i < size; ++i)
+    for (uint32_t i = 0; i < size; ++i)
 	{
 		if (i == size-1)
 			resp = response_size;
@@ -89,10 +89,10 @@ bool edthreaded_fd::running()
 	return ret;
 }
 
-int edthreaded_fd::fd()
+int32_t edthreaded_fd::fd()
 {
 //	pthread_mutex_lock(&m_fd_lock);
-//	int ret = m_fd;
+//	int32_t ret = m_fd;
 //	pthread_mutex_lock(&m_fd_lock);
 	return m_fd;
 }
@@ -107,7 +107,7 @@ edthreaded_fd::Error edthreaded_fd::error()
 	return ret;
 }
 
-void edthreaded_fd::_setError(ErrorVal err_val, int _errno)
+void edthreaded_fd::_setError(ErrorVal err_val, int32_t _errno)
 {
 	pthread_mutex_lock(&m_error_lock);
 	m_err.err_val = err_val;
@@ -138,7 +138,7 @@ bool edthreaded_fd::start()
 	// thread created
 }
 
-bool edthreaded_fd::set_fd(int fd_)
+bool edthreaded_fd::set_fd(int32_t fd_)
 {
 	if (running())
 	{
@@ -161,12 +161,12 @@ void edthreaded_fd::stop()
 
 void edthreaded_fd::_do_read()
 {
-	static char buf[FD_TMP_BUFFER_SIZE];
+	static uint8_t buf[FD_TMP_BUFFER_SIZE];
 	
-	int cnt = _raw_read(buf, FD_TMP_BUFFER_SIZE);
+	int32_t cnt = _raw_read(buf, FD_TMP_BUFFER_SIZE);
 	if (cnt < 0)
 	{
-		int err_no = errno;
+		int32_t err_no = errno;
 		if (err_no != EAGAIN && err_no != EWOULDBLOCK)
 		{
 			_setError(InvalidRead, err_no);
@@ -174,7 +174,7 @@ void edthreaded_fd::_do_read()
 		}
 	}
 	pthread_mutex_lock(&m_recv_lock);
-	for (int i = 0; i < cnt; ++i)
+	for (int32_t i = 0; i < cnt; ++i)
 	{
 		m_read_buffer[m_read_rawindex] = buf[i];
 		++m_read_rawindex;
@@ -205,10 +205,10 @@ void edthreaded_fd::_do_read()
 
 void edthreaded_fd::_do_write()
 {
-		static char buf[FD_TMP_BUFFER_SIZE];		
-        int tosend = 0;
-        int retval = 0;
-        int sent = 0;
+		static uint8_t buf[FD_TMP_BUFFER_SIZE];		
+        int32_t tosend = 0;
+        int32_t retval = 0;
+        int32_t sent = 0;
 		
         pthread_mutex_lock(&m_send_lock);
 		while (m_write_rawindex != m_write_curindex)

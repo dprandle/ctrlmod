@@ -6,10 +6,4 @@
 
 #define CONSOLE_OUT
 
-
-typedef unsigned int uint;
-typedef short int sint;
-typedef unsigned short int usint;
-typedef unsigned char uchar;
-
 #endif

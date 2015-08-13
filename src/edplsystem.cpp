@@ -32,11 +32,11 @@ edpl_system::~edpl_system()
 
 void edpl_system::init()
 {
-	std::vector<uint> gpio_pins;
+	std::vector<uint32_t> gpio_pins;
 	gpio_pins.push_back(GPIO_14);
 	gpio_pins.push_back(GPIO_15);
 
-	for (uint i = 0; i < gpio_pins.size(); ++i)
+	for (uint32_t i = 0; i < gpio_pins.size(); ++i)
     {
 		pl_gpio * pnt = add_pl(gpio_pins[i],-30);
         if (pnt == NULL)
@@ -52,7 +52,7 @@ void edpl_system::init()
 	msgTimer->start();
 }
 
-edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
+edpl_system::pl_gpio * edpl_system::add_pl(uint32_t mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
 {
 	if (pl_pin_taken(mraa_pin))
 	{
@@ -88,7 +88,7 @@ edpl_system::pl_gpio * edpl_system::add_pl(uint mraa_pin,double c_offset, const 
 	return pl;
 }
 
-edpl_system::pl_gpio * edpl_system::get_pl(uint mraa_pin)
+edpl_system::pl_gpio * edpl_system::get_pl(uint32_t mraa_pin)
 {
 	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
 	if (fiter != m_pl_sensors.end())
@@ -96,20 +96,20 @@ edpl_system::pl_gpio * edpl_system::get_pl(uint mraa_pin)
 	return NULL;
 }
 
-void edpl_system::pl_set_cal_offset(uint mraa_pin, double offset)
+void edpl_system::pl_set_cal_offset(uint32_t mraa_pin, double offset)
 {
 	pl_gpio * pl = get_pl(mraa_pin);
 	if (pl !=NULL)
 		pl->cal_offset = offset;
 }
 
-bool edpl_system::pl_pin_taken(uint mraa_pin)
+bool edpl_system::pl_pin_taken(uint32_t mraa_pin)
 {
 	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
 	return (fiter != m_pl_sensors.end());	
 }
 
-void edpl_system::rm_pl(uint mraa_pin)
+void edpl_system::rm_pl(uint32_t mraa_pin)
 {
 	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
 	if (fiter != m_pl_sensors.end())
@@ -119,14 +119,14 @@ void edpl_system::rm_pl(uint mraa_pin)
 	}
 }
 
-void edpl_system::pl_set_pos(uint mraa_pin, const vec3 & pos_)
+void edpl_system::pl_set_pos(uint32_t mraa_pin, const vec3 & pos_)
 {
 	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
 	if (fiter != m_pl_sensors.end())
 		fiter->second->pos = pos_;
 }
 
-void edpl_system::pl_set_orientation(uint mraa_pin, const quat & orient_)
+void edpl_system::pl_set_orientation(uint32_t mraa_pin, const quat & orient_)
 {
 	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
 	if (fiter != m_pl_sensors.end())
@@ -175,7 +175,7 @@ std::string edpl_system::typestr()
 }
 
 
-edpl_system::pl_gpio::pl_gpio(uint mraa_pin,double calibrate_offset, const vec3 & poffset, const quat & orient_):
+edpl_system::pl_gpio::pl_gpio(uint32_t mraa_pin,double calibrate_offset, const vec3 & poffset, const quat & orient_):
 	pin(new mraa::Gpio(mraa_pin)),
 	timer(new edtimer()),
 	pos(poffset),
@@ -224,8 +224,8 @@ void edpl_callback::exec()
 	pl_floor->meas_count = 0;
 	msg->mraa_pin1 = pl_ceil->mraa_pin_num;
 	msg->mraa_pin2 = pl_floor->mraa_pin_num;
-	copy_buf((char*)pl_ceil->pos.data, (char*)msg->pos1, 4);
-	copy_buf((char*)pl_floor->pos.data, (char*)msg->pos2, 4);
-	copy_buf((char*)pl_ceil->orient.data, (char*)msg->orientation1, 4);
-	copy_buf((char*)pl_floor->orient.data, (char*)msg->orientation2, 4);
+	copy_buf((uint8_t*)pl_ceil->pos.data, (uint8_t*)msg->pos1, 4);
+	copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
+	copy_buf((uint8_t*)pl_ceil->orient.data, (uint8_t*)msg->orientation1, 4);
+	copy_buf((uint8_t*)pl_floor->orient.data, (uint8_t*)msg->orientation2, 4);
 }

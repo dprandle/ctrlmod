@@ -74,7 +74,7 @@ void edrplidar_system::release()
 
 void edrplidar_system::update()
 {
-    static char readBuf[256];
+    static uint8_t readBuf[256];
     m_timeout_timer->update();
     m_wait_timer->update();
     m_error_timer->update();
@@ -92,11 +92,11 @@ void edrplidar_system::update()
         _reset_state();
     }
 
-    int size = m_uart->read(readBuf, 256);
+    int32_t size = m_uart->read(readBuf, 256);
     if (size > 0)
     {
         m_timeout_timer->stop();
-        for (int i = 0; i < size; ++i)
+        for (int32_t i = 0; i < size; ++i)
             _handle_byte(readBuf[i]);
     }
 }
@@ -225,7 +225,7 @@ bool edrplidar_system::requestHealth()
     return true;
 }
 
-void edrplidar_system::_handle_byte(char byte)
+void edrplidar_system::_handle_byte(uint8_t byte)
 {	
     if (m_current_type == None)
         return;
@@ -240,7 +240,7 @@ void edrplidar_system::_handle_byte(char byte)
                 rplidar_error_message * msg = edm.messages()->push<rplidar_error_message>();
                 std::string message = "Error in communicating with rplidar - packet descriptor not received";
                 if (msg != NULL)
-                    copy_buf(message.c_str(), msg->message, message.size());
+                    copy_buf((uint8_t*)message.c_str(), msg->message, message.size());
                 _reset_state();
             }
         }
@@ -266,7 +266,7 @@ void edrplidar_system::_handle_byte(char byte)
                 rplidar_error_message * msg = edm.messages()->push<rplidar_error_message>();
                 std::string message = "Error in communicating with rplidar - firmware packet not found after reset";
                 if (msg != NULL)
-                    copy_buf(message.c_str(), msg->message, message.size());
+                    copy_buf((uint8_t*)message.c_str(), msg->message, message.size());
                 _reset_state();
             }
         }
@@ -332,7 +332,7 @@ void edrplidar_system::_handle_byte(char byte)
                         if (msg != NULL)
                         {
                             msg->millis_timestamp = edm.sys_timer()->elapsed();
-                            for(uint i = 0; i < 360; ++i)
+                            for(uint32_t i = 0; i < 360; ++i)
                             {
                                 copy_buf(m_current_scan[i].data,
                                          msg->scan_data.data[i].data,
@@ -379,6 +379,6 @@ void edrplidar_system::_reset_state()
 
 bool edrplidar_system::_check_packet_for_scan_start()
 {
-    char first_byte = (*m_data_packets[m_current_type])[0];
+    uint8_t first_byte = (*m_data_packets[m_current_type])[0];
     return ( (first_byte & 0x01) == 0x01);
 }

@@ -31,10 +31,10 @@ void cprint(const std::string & str)
     pthread_mutex_unlock(&cout_lock);
 }
 
-uint hash_id(const std::string & strng)
+uint32_t hash_id(const std::string & strng)
 {
-	uint hash = 5381;
-	int c;
+	uint32_t hash = 5381;
+	int32_t c;
 	const char * str = strng.c_str();
     while ((c = *str++))
 		hash = ((hash << 5) + hash) + c;
@@ -68,53 +68,48 @@ std::string timestamp()
     return ret;
 }
 
-std::string to_hex(uchar byte)
+std::string to_hex(uint8_t byte)
 {
 	std::ostringstream ostr;
-	ostr << std::hex << std::uppercase << std::setw(2) << std::setfill('0') << static_cast<int>(byte);
+	ostr << std::hex << std::uppercase << std::setw(2) << std::setfill('0') << static_cast<int32_t>(byte);
 	return ostr.str();
 }
 
-std::string to_hex(char byte)
-{
-	return to_hex(static_cast<unsigned char>(byte));
-}
-
-std::string to_hex(short int two_bytes)
+std::string to_hex(int16_t two_bytes)
 {
 	std::ostringstream ostr;
-	ostr << std::hex << std::uppercase << std::setw(4) << std::setfill('0') << static_cast<int>(two_bytes);
+	ostr << std::hex << std::uppercase << std::setw(4) << std::setfill('0') << static_cast<int32_t>(two_bytes);
 	return ostr.str();
 }
 
-std::string to_hex(unsigned short int two_bytes)
+std::string to_hex(uint16_t two_bytes)
 {
-	return to_hex(static_cast<short int>(two_bytes));
+	return to_hex(static_cast<int16_t>(two_bytes));
 }
 
-std::string to_hex(int four_bytes)
+std::string to_hex(int32_t four_bytes)
 {
 	std::ostringstream ostr;
 	ostr << std::hex << std::uppercase << std::setw(4) << std::setfill('0') << four_bytes;
 	return ostr.str();	
 }
 
-std::string to_hex(uint four_bytes)
+std::string to_hex(uint32_t four_bytes)
 {
-	return to_hex(static_cast<int>(four_bytes));
+	return to_hex(static_cast<int32_t>(four_bytes));
 }
 
-void zero_buf(char * buf, uint size)
+void zero_buf(uint8_t * buf, uint32_t size)
 {
-	for (uint i = 0; i < size; ++i) {
+	for (uint32_t i = 0; i < size; ++i) {
 		buf[i] = 0;
 	}
 }
 
-void copy_buf(const char * src, char * dest, uint size, uint src_offset, uint dest_offset)
+void copy_buf(const uint8_t * src, uint8_t * dest, uint32_t size, uint32_t src_offset, uint32_t dest_offset)
 {
-	const char * src_with_offset = src  + src_offset;
-	char * dest_with_offset = dest + dest_offset;
-	for (uint i = 0; i < size; ++i)
+	const uint8_t * src_with_offset = src  + src_offset;
+	uint8_t * dest_with_offset = dest + dest_offset;
+	for (uint32_t i = 0; i < size; ++i)
 		dest_with_offset[i] = src_with_offset[i];
 }
