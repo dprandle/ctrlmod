@@ -20,11 +20,11 @@ struct scan_data_packet : public data_packet
 
     virtual std::string toString();
     std::string type(){return Type();}
-    virtual unsigned int size() {return 5;}
+    virtual unsigned int size() {return Size();}
     virtual char & operator[](unsigned int index) {return data[index];}
     virtual char * dataptr(){return data;}
     static std::string Type() {return "scan";}
-
+	static unsigned int Size() {return 5;}
     union
     {
         struct
@@ -46,7 +46,7 @@ struct complete_scan_data_packet : public data_packet
 
     virtual std::string toString();
     std::string type(){return Type();}
-    virtual unsigned int size() {return 5*360;}
+    virtual unsigned int size() {return Size();}
     virtual char & operator[](unsigned int index)
     {
         unsigned int data_ind = index % 5;
@@ -55,6 +55,7 @@ struct complete_scan_data_packet : public data_packet
     }
     virtual char * dataptr(){return data[0].data;}
     static std::string Type() {return "complete_scan";}
+	static unsigned int Size() {return 5 * 360;}
     scan_data_packet data[360];
 };
 
@@ -64,11 +65,11 @@ struct health_data_packet : public data_packet
 
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return 3;}
+    virtual unsigned int size() {return Size();}
     virtual char & operator[](unsigned int index) {return data[index];}
     virtual char * dataptr(){return data;}
     static std::string Type() {return "health";}
-
+	static unsigned int Size() {return 3;}
     union
     {
         struct
@@ -88,11 +89,11 @@ struct info_data_packet : public data_packet
 
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return 20;}
+    virtual unsigned int size() {return Size();}
     virtual char & operator[](unsigned int index) {return data[index];}
     virtual char * dataptr(){return data;}
     static std::string Type() {return "info";}
-
+	static unsigned int Size() {return 20;}
     union
     {
         struct
@@ -112,10 +113,11 @@ struct firmware_data_packet : public data_packet
     firmware_data_packet();
     virtual std::string toString();
     virtual std::string type(){return Type();}
-    virtual unsigned int size() {return 56;}
+    virtual unsigned int size() {return Size();}
     virtual char & operator[](unsigned int index) {return data[index];}
     virtual char * dataptr(){return data;}
     static std::string Type() {return "firmware";}
+	static unsigned int Size() {return 56;}
     union
     {
         struct
@@ -190,9 +192,9 @@ struct descriptor_packet
     virtual ~descriptor_packet() {}
 
     virtual std::string type()=0;
-    unsigned int size() {return 7;}
+    unsigned int size() {return Size();}
     char & operator[](unsigned int index) {return data[index];}
-
+	static unsigned int Size() {return 7;}
     union
     {
         struct {

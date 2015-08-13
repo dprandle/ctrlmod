@@ -143,7 +143,7 @@ bool edrplidar_system::startScan()
     m_timeout_timer->start();
     m_error_timer->start();
     start_scan_request sr;
-	m_uart->write(sr.data,2);
+	m_uart->write(sr.data,2, scan_descriptor::Size());
     return true;
 }
 
@@ -161,7 +161,7 @@ bool edrplidar_system::forceScan()
     m_timeout_timer->start();
     m_error_timer->start();
 	force_scan_request sr;
-	m_uart->write(sr.data,2);
+	m_uart->write(sr.data, 2, scan_descriptor::Size());
     return true;
 }
 
@@ -186,7 +186,7 @@ bool edrplidar_system::reset()
     m_wait_timer->start();
     m_current_type = Reset;
     m_rec_descript = true; // No descriptor for reset
-	m_uart->write(rr.data,2);
+	m_uart->write(rr.data, 2, firmware_data_packet::Size());
     m_error_timer->start();
     return true;
 }
@@ -194,7 +194,7 @@ bool edrplidar_system::reset()
 bool edrplidar_system::requestInfo()
 {
     if (m_current_type != None)
-        return false;
+        return true;
 
     std::cout << "Request device information command issued" << std::endl;
     // set descriptor to info response
@@ -204,14 +204,14 @@ bool edrplidar_system::requestInfo()
     m_timeout_timer->start();
     m_error_timer->start();
     device_info_request sr;
-	m_uart->write(sr.data,2);
+	m_uart->write(sr.data,2, device_info_descriptor::Size() + info_data_packet::Size());
     return true;
 }
 
 bool edrplidar_system::requestHealth()
 {
     if (m_current_type != None)
-        return false;
+        return true;
 
     std::cout << "Request device health command issued" << std::endl;
     // set descriptor to info response
@@ -221,7 +221,7 @@ bool edrplidar_system::requestHealth()
     m_timeout_timer->start();
     m_error_timer->start();
     device_health_request sr;
-	m_uart->write(sr.data,2);
+	m_uart->write(sr.data,2, device_health_descriptor::Size() + health_data_packet::Size());
     return true;
 }
 

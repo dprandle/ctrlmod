@@ -16,7 +16,7 @@ struct edtimer_callback : public edcallback
 
 struct wait_ready_callback : public edtimer_callback
 {
-	void exec();
+	virtual void exec();
 };
 
 #endif
