@@ -19,7 +19,7 @@
 
 class edsystem;
 class edtimer;
-class edmessage_handler;
+class edmessage_dispatch;
 
 typedef std::map<std::string,edsystem*> sysmap;
 
@@ -50,7 +50,7 @@ class edmctrl
 	
     void release();
 
-	edmessage_handler * messages();
+	edmessage_dispatch * message_dispatch();
 
     void start();
 
@@ -82,7 +82,7 @@ class edmctrl
     bool m_running;
     sysmap m_systems;
 	edtimer * m_systimer;
-	edmessage_handler * m_msghandler;
+	edmessage_dispatch * m_msghandler;
 };
 
 

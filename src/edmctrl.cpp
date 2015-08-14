@@ -16,12 +16,12 @@
 #include <string>
 #include <vector>
 #include <edtimer.h>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 
 edmctrl::edmctrl():
 	m_running(false),
 	m_systimer(new edtimer()),
-	m_msghandler(new edmessage_handler())
+	m_msghandler(new edmessage_dispatch())
 {
 	
 }
@@ -89,7 +89,7 @@ void edmctrl::update()
     }
 }
 
-edmessage_handler * edmctrl::messages()
+edmessage_dispatch * edmctrl::message_dispatch()
 {
 	return m_msghandler;
 }

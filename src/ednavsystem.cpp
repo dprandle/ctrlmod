@@ -9,7 +9,7 @@
 #include <edutility.h>
 #include <ednavsystem.h>
 #include <edmctrl.h>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edmessage.h>
 
 ednav_system::ednav_system()
@@ -24,7 +24,7 @@ ednav_system::~ednav_system()
 
 void ednav_system::init()
 {
-	edmessage_handler * mh = edm.messages();
+	edmessage_dispatch * mh = edm.message_dispatch();
 	mh->register_listener<pulsed_light_message>(this);
 }
 

@@ -12,11 +12,7 @@ edimu_system::edimu_system():
 	m_gyro_odr(G_ODR_95_BW_125),
 	m_accel_odr(A_ODR_50),
 	m_accel_abw(A_ABW_50)
-{
-	// _update_ares();
-	// _update_gres();
-	// _update_mres();
-}
+{}
 
 edimu_system::~edimu_system()
 {}
@@ -292,6 +288,27 @@ bool edimu_system::process(edmessage * msg)
 
 void edimu_system::update()
 {
+	static bool waiting_for_reply = false;
+	static uint8_t buf[6];
+	static int32_t cnt = 0;
+	
+	if (!waiting_for_reply)
+	{
+		m_i2c->commandRead(OUT_X_L_G, 6);
+		waiting_for_reply = true;
+	}
+
+	if (cnt != 6)
+	{
+		cnt += m_i2c->read(buf+cnt, 6-cnt);
+		if (cnt == 6)
+		{
+			waiting_for_reply = false;
+			m_gyro_raw.x = (buf[1] << 8) | buf[0];
+			m_gyro_raw.y = (buf[3] << 8) | buf[2];
+			m_gyro_raw.z = (buf[5] << 8) | buf[4];
+		}
+	}
 }
 
 void edimu_system::_update_gres()
@@ -349,4 +366,25 @@ bool edimu_system::_init_gyro()
 			m_i2c->writeByte(CTRL_REG3_G, 0x88) && 
 			m_i2c->writeByte(CTRL_REG4_G, 0x00) &&
 			m_i2c->writeByte(CTRL_REG5_G, 0x00));
+}
+
+void edimu_system::_createMessage()
+{
+	log_message("Received gyro reading: " + _calc_gyro().toString());
+}
+
+
+fvec3 edimu_system::_calc_gyro()
+{
+	return fvec3(m_gyro_raw.x, m_gyro_raw.y, m_gyro_raw.z) * m_gres;
+}
+
+fvec3 edimu_system::_calc_mag()
+{
+	return fvec3(m_magno_raw.x, m_magno_raw.y, m_magno_raw.z) * m_mres;
+}
+
+fvec3 edimu_system::_calc_accel()
+{
+	return fvec3(m_accel_raw.x, m_accel_raw.y, m_accel_raw.z) * m_ares;
 }

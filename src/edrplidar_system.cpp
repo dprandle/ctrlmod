@@ -1,6 +1,6 @@
 #include <eduart.h>
 #include <iostream>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edrplidar_system.h>
 #include <edutility.h>
 #include <edmctrl.h>
@@ -54,7 +54,7 @@ edrplidar_system::~edrplidar_system()
 
 void edrplidar_system::init()
 {
-    edm.messages()->register_listener<rplidar_request>(this);
+    edm.message_dispatch()->register_listener<rplidar_request>(this);
     m_uart->set_format(eduart::d8, eduart::None, eduart::One);
     m_uart->set_baud(eduart::b115200);
 
@@ -237,7 +237,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
             m_rec_index = 0;
             if (!m_error_timer->running())
             {
-                rplidar_error_message * msg = edm.messages()->push<rplidar_error_message>();
+                rplidar_error_message * msg = edm.message_dispatch()->push<rplidar_error_message>();
                 std::string message = "Error in communicating with rplidar - packet descriptor not received";
                 if (msg != NULL)
                     copy_buf((uint8_t*)message.c_str(), msg->message, message.size());
@@ -263,7 +263,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
                 m_rec_index = 0; // start over
             if (!m_error_timer->running())
             {
-                rplidar_error_message * msg = edm.messages()->push<rplidar_error_message>();
+                rplidar_error_message * msg = edm.message_dispatch()->push<rplidar_error_message>();
                 std::string message = "Error in communicating with rplidar - firmware packet not found after reset";
                 if (msg != NULL)
                     copy_buf((uint8_t*)message.c_str(), msg->message, message.size());
@@ -282,7 +282,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
             {
             case (Health):
             {
-                rplidar_health_message * msg = edm.messages()->push<rplidar_health_message>();
+                rplidar_health_message * msg = edm.message_dispatch()->push<rplidar_health_message>();
                 if (msg != NULL)
                 {
                     copy_buf(m_data_packets[m_current_type]->dataptr(),
@@ -294,7 +294,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
             }
             case (Info):
             {
-                rplidar_info_message * msg = edm.messages()->push<rplidar_info_message>();
+                rplidar_info_message * msg = edm.message_dispatch()->push<rplidar_info_message>();
                 if (msg != NULL)
                 {
                     copy_buf(m_data_packets[m_current_type]->dataptr(),
@@ -328,7 +328,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
 
                     if (m_scan_index == 360)
                     {
-                        rplidar_scan_message * msg = edm.messages()->push<rplidar_scan_message>();
+                        rplidar_scan_message * msg = edm.message_dispatch()->push<rplidar_scan_message>();
                         if (msg != NULL)
                         {
                             msg->millis_timestamp = edm.sys_timer()->elapsed();
@@ -347,7 +347,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
             }
             case (Reset):
             {
-                rplidar_firmware_message * msg = edm.messages()->push<rplidar_firmware_message>();
+                rplidar_firmware_message * msg = edm.message_dispatch()->push<rplidar_firmware_message>();
                 if (msg != NULL)
                 {
                     copy_buf(m_data_packets[m_current_type]->dataptr(),

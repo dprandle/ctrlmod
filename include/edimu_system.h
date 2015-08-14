@@ -242,7 +242,11 @@ class edimu_system : public edsystem
 	bool _init_accel();
 	bool _init_gyro();
 
-	fvec3 _createMessage
+	void _createMessage();
+
+	fvec3 _calc_gyro();
+	fvec3 _calc_mag();
+	fvec3 _calc_accel();
 	
 	edi2c * m_i2c;
 

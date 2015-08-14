@@ -1,17 +1,17 @@
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edmessage.h>
 
-edmessage_handler::edmessage_handler()
+edmessage_dispatch::edmessage_dispatch()
 {
 	
 }
 
-edmessage_handler::~edmessage_handler()
+edmessage_dispatch::~edmessage_dispatch()
 {
 	
 }
 
-void edmessage_handler::process_all(edsystem * sys)
+void edmessage_dispatch::process_all(edsystem * sys)
 {
 	edmessage * msg = next(sys);
 	while (msg != NULL)
@@ -26,7 +26,7 @@ void edmessage_handler::process_all(edsystem * sys)
 	}
 }
 
-edmessage * edmessage_handler::next(edsystem * sys)
+edmessage * edmessage_dispatch::next(edsystem * sys)
 {
 	listener_queue::iterator fiter = m_lmessages.find(sys);
 	if (fiter != m_lmessages.end())
@@ -37,7 +37,7 @@ edmessage * edmessage_handler::next(edsystem * sys)
 	return NULL;
 }
 
-void edmessage_handler::pop(edsystem * sys)
+void edmessage_dispatch::pop(edsystem * sys)
 {
 	listener_queue::iterator fiter = m_lmessages.find(sys);
 	if (fiter != m_lmessages.end())

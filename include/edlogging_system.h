@@ -24,8 +24,7 @@ class edlogging_system : public edsystem
 	void log_device_info(info_data_packet * data);
 	void log_device_health(health_data_packet * data);
 	void log_device_firware(firmware_data_packet * data);
-    void log_scan(complete_scan_data_packet * scand);
-	
+    void log_scan(complete_scan_data_packet * scand);	
 };
 
 

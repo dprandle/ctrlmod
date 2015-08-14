@@ -1,7 +1,7 @@
 #include <edtimer.h>
 #include <unistd.h>
 #include <edmessage.h>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edmctrl.h>
 #include <edcomm_system.h>
 #include <sys/socket.h>
@@ -30,11 +30,11 @@ edcomm_system::~edcomm_system()
 void edcomm_system::init()
 {
 	sockaddr_in server;
-    edm.messages()->register_listener<rplidar_health_message>(this);
-    edm.messages()->register_listener<rplidar_info_message>(this);
-    edm.messages()->register_listener<rplidar_firmware_message>(this);
-    edm.messages()->register_listener<rplidar_scan_message>(this);
-	edm.messages()->register_listener<pulsed_light_message>(this);
+    edm.message_dispatch()->register_listener<rplidar_health_message>(this);
+    edm.message_dispatch()->register_listener<rplidar_info_message>(this);
+    edm.message_dispatch()->register_listener<rplidar_firmware_message>(this);
+    edm.message_dispatch()->register_listener<rplidar_scan_message>(this);
+	edm.message_dispatch()->register_listener<pulsed_light_message>(this);
 
     m_server_fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);//
 	if (m_server_fd < 0)
@@ -224,7 +224,7 @@ void edcomm_system::_do_command()
     if (m_cur_cmd.hash_id == rphash)
     {
         rplidar_request::req_type rt = static_cast<rplidar_request::req_type>(m_cur_cmd.cmd_data);
-        rplidar_request * req = edm.messages()->push<rplidar_request>();
+        rplidar_request * req = edm.message_dispatch()->push<rplidar_request>();
         if (req != NULL)
             req->r_type = rt;
     }

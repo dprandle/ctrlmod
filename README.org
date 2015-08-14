@@ -1,0 +1,189 @@
+* ctrlmod
+
+This stands for control module. This is the main class for accessing things throughout the program. A single static instance is created of this object at startup, and access is given through a macro.
+  
+#+BEGIN_SRC c++
+#define edm ctrlmod::inst()
+#+END_SRC
+
+All of the functions in ctrlmod are callable through "edm". For example, to get the system timer:
+
+#+BEGIN_SRC c++
+edtimer * systimer = edm.sys_timer();
+#+END_SRC
+
+** edsystem
+
+The main unit of interest in the control module is called the "system". The control module consists of several systems which each update and do work every frame. The base class for a system is shown below.
+
+#+BEGIN_SRC c++
+class edsystem
+{
+  public:
+
+    edsystem() {}
+
+    virtual ~edsystem() {}
+
+    virtual void init() = 0;
+
+    virtual void release() = 0;
+
+    virtual bool process(edmessage * msg)=0;
+
+    virtual void update() = 0;
+
+    virtual std::string typestr() = 0;
+};
+#+END_SRC
+
+The functions shown above each serve a purpose.
+
+*** init()
+
+At startup, the module goes through each registered system and calls the init function. This function can be thought of as the "setup" function for those are are used to arduino environment.
+
+As an aside note - this is also where you would register interest in certain messages that the system wants to receive. This will be talked about more in the message handler discussion, but just as an example: If the system was interested in a message of type "complete_scan_message", the following would be added to the init() function.
+
+#+BEGIN_SRC c++
+edm->message_dispatch()->register_listener<complete_scan_message>(this);
+#+END_SRC
+
+Now, any messages of type "complete_scan_message" would be sent to this system for processing (via the "process" function).
+
+*** update()
+
+Every frame the update function is called. This would be equivalent to the arduino "loop" function. It is usually a good idea to avoid blocking calls here as it may mess up other systems.
+   
+*** release()
+
+When using a microprocessor with an operating system, it is necessary to release some types of resources before shutdown. Also, if a system is to be added/removed dynamically (for example sensor hotswap), then there needs to be a function that is called when the system is removed to free the resources.
+
+In this function you would free all resources allocated with init. The most important example - if you created separate threads to do work then these should be stopped here. The operating system will kill threads automatically on program shutdown except for the case when main is exited with pthread_exit(). In that case the threads will continue running until they reach their stop point (could be never) or until edison shuts down.
+
+*** process(edmessage * msg)
+
+Each system receives messages that they have registered interest in here. The type "edmessage" is a struct which can be subclassed to create a custom message type. To get to the message type of interest, it is neccessary to cast the pointer. You can do this with dynamic cast and it is not neccessary to check the type string (more on type string later), or you can use the type string to know which message type has arravied and cast accordingly. For example - if "complete_scan_message" is a message of interest, the following could be used.
+
+**** Using dynamic cast
+
+#+BEGIN_SRC c++
+complete_scan_message * casted_msg = dynamic_cast<complete_scan_message*>(msg);
+if (casted_msg != NULL)
+{
+    // this means the message was of type "complete_scan_message"
+    // we can now use data contained in casted_msg and do useful stuff
+}
+#+END_SRC
+
+**** Using type string and static cast
+
+#+BEGIN_SRC c++
+if (msg->type() == "complete_scan_message")
+{
+    complete_scan_message * casted_msg = static_cast<complete_scan_message*>(msg);
+    // We can use static cast because we know the type has to be correct as the type string matches
+}
+#+END_SRC
+
+Dynamic casts require some overhead (where as static casts require none) but then again, no string comparison is necessary using the dynamic cast method.
+
+This function should almost always return true - if false is returned the message is not removed from the system's message buffer. This can be used to an advantage - for example if there is some condition that must be satisfied before a message can be handled, false can be returned when handling the message until that condition is met, and then true can be returned and the message will be removed from the buffer. No other messages will be processed during this time however.
+
+*** typestr()
+
+Any time a new system is created it must return a typestring to identify the system - preferably a string that is the exact same as the system name. A static function must be created with the name TypeString() to return the string also. The best way to do it is to make TypeString() return the string, and then typestr() should just call TypeString(). The edmctrl object uses this string to store and retreive systems.
+
+Messages also need to implement a type string function. The message function is called type() and the static function is Type() - this is an unfortunate difference that could possibly be fixed later, but for now this is the way it is.
+
+Any example of a complete system subclass declaration is shown. This system receives various messages and logs them to file.
+
+#+BEGIN_SRC c++
+class edlogging_system : public edsystem
+{
+  public:
+    edlogging_system() {}
+    virtual ~edlogging_system() {}
+
+    virtual void init();
+    virtual void release();
+    virtual bool process(edmessage * msg);
+    virtual void update();
+	
+    virtual std::string typestr() {return TypeString();}
+    static std::string TypeString() {return "edlogging_system";}
+	
+  private:
+
+    void log_device_info(info_data_packet * data);
+    void log_device_health(health_data_packet * data);
+    void log_device_firware(firmware_data_packet * data);
+    void log_scan(complete_scan_data_packet * scand);	
+};
+#+END_SRC
+
+** edmessage_dispatch
+
+The message dispatch object allows systems to register interest in messages and allows messages to be pushed to all interested systems. If a certain message has no registered interested systems then a NULL pointer will be returned on pushing the message.
+
+Each system has its own FIFO buffer - messages will be delivered to systems in the order they are pushed. A message will stay in a system's buffer until the system returns true when the message is passed to the system's process function (as previously mentioned). It is possible to push a message to the front of any interested system's buffer however by using push_front instead of push. This may be useful in the case where a message should be of utmost importance (such as a reset command for a sensor for example).
+
+The class definition is the following.
+
+#+BEGIN_SRC c++
+class edmessage_dispatch
+{
+public:	
+    
+    typedef std::map< std::string, std::set<edsystem*> > listener_map;
+    typedef std::map<edsystem*, std::deque<edmessage*> > listener_queue;
+	
+    edmessage_dispatch();
+    virtual ~edmessage_dispatch();
+
+    template<class MessageType>
+    void register_listener(edsystem * sys);
+
+    template<class MessageType>
+    void unregister_listener(edsystem * sys);
+
+    template<class MessageType>
+    MessageType * push();
+
+    template<class MessageType>
+    MessageType * push_front();
+
+    edmessage * next(edsystem * sy    s);
+
+    void pop(edsystem * sys);
+
+    void pop_front(edsystem * sys);
+
+    void process_all(edsystem * sys);
+	
+private:
+	listener_map m_listeners;
+	listener_queue m_lmessages;
+};
+#+END_SRC
+
+The register_listener and unregister_listener functions allow systems to register interest in message types. Their use is the following:
+
+#+BEGIN_SRC c++
+
+// get custom system
+custom_system_type * custom_system_pointer = edm.system<custom_system_type>();
+
+// to register interest in custom_message_type
+edm.message_dispatch()->register_listener<custom_message_type>(custom_system_pointer);
+
+// and now unregister interest (will also remove any unprocessed messages)
+edm.message_dispatch()->unregister_listener<custom_message_type>(custom_system_pointer);
+#+END_SRC
+
+These functions are usually called in whatever system's init function which means the "this" pointer can be used.
+
+#+BEGIN_SRC c++
+edm.message_dispatch()->register_listener<custom_message_type>(this);
+#+END_SRC
+

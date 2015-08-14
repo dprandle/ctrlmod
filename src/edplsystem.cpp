@@ -15,7 +15,7 @@
 #include <iostream>
 #include <edtimer.h>
 #include <vector>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edmessage.h>
 #include <edmctrl.h>
 
@@ -213,7 +213,7 @@ void edpl_system::pl_gpio::isr(void * pl)
 
 void edpl_callback::exec()
 {
-	pulsed_light_message * msg = edm.messages()->push<pulsed_light_message>();
+	pulsed_light_message * msg = edm.message_dispatch()->push<pulsed_light_message>();
 	if (pl_ceil->meas_count > 0)
 		msg->distance1 = pl_ceil->sum_dist/pl_ceil->meas_count;
 	if (pl_floor->meas_count > 0)

@@ -1,15 +1,15 @@
 #include <edlogging_system.h>
 #include <edmctrl.h>
-#include <edmsghandler.h>
+#include <edmessage_dispatch.h>
 #include <edmessage.h>
 #include <bitset>
 void edlogging_system::init()
 {
-	edm.messages()->register_listener<rplidar_scan_message>(this);
-	edm.messages()->register_listener<rplidar_health_message>(this);
-	edm.messages()->register_listener<rplidar_info_message>(this);
-	edm.messages()->register_listener<rplidar_firmware_message>(this);
-	edm.messages()->register_listener<rplidar_error_message>(this);
+	edm.message_dispatch()->register_listener<rplidar_scan_message>(this);
+	edm.message_dispatch()->register_listener<rplidar_health_message>(this);
+	edm.message_dispatch()->register_listener<rplidar_info_message>(this);
+	edm.message_dispatch()->register_listener<rplidar_firmware_message>(this);
+	edm.message_dispatch()->register_listener<rplidar_error_message>(this);
 }
 
 void edlogging_system::release()

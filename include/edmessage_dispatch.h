@@ -1,5 +1,5 @@
-#ifndef MSGANDLER_H
-#define MSGANDLER_H
+#ifndef EDMESSAGE_DISPATCH_H
+#define EDMESSAGE_DISPATCH_H
 
 #include <edutility.h>
 #include <edglobal.h>
@@ -12,7 +12,7 @@
 
 struct edmessage;
 
-//! Class edmessage_handler
+//! Class edmessage_dispatch
 /*! 
   A system can register its interest in certain message types, and any time a message of that type is created
   it will be added to that system's message queue. This queue is FIFO, and messages will not be deleted until
@@ -28,7 +28,7 @@ struct edmessage;
   that message.
  */
 
-class edmessage_handler
+class edmessage_dispatch
 {
 public:
 
@@ -46,8 +46,8 @@ public:
  */
 	typedef std::map<edsystem*, std::deque<edmessage*> > listener_queue;
 	
-    edmessage_handler();
-    virtual ~edmessage_handler();
+    edmessage_dispatch();
+    virtual ~edmessage_dispatch();
 
 	template<class MessageType>
 	void register_listener(edsystem * sys)
