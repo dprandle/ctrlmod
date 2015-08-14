@@ -1,18 +1,108 @@
-* ctrlmod
+* Edison Control Module
 
-This stands for control module. This is the main class for accessing things throughout the program. A single static instance is created of this object at startup, and access is given through a macro.
+The edison control module is a program that runs on the edison and integrates the rplidar scanner, pulsed light lasers, and LSM9DS0 together to create a navigation control scheme. Eventually this system will be capable of full SLAM but for now the focus is obstacle avoidance. All data is sent to any listening sockets over an available wifi network.
+
+Software is also being developed for opening a socket with the edison and visualizing the received data. The software is called "scanview" and is available for source download at https://github.com/dprandle/scanview.
+
+Though the software is set up for this particular application, it is written in such a way that allows for many other applications as well. This document will give an overview of the main software framework features.
+
+** Main Control
+
+The main edison control point is a class called edmctrl - this stands for edison main control. To access the functions of this class the following macro is defined.
   
 #+BEGIN_SRC c++
-#define edm ctrlmod::inst()
+#define edm edmctrl::inst()
 #+END_SRC
 
-All of the functions in ctrlmod are callable through "edm". For example, to get the system timer:
+All of the functions in edmctrl are callable through "edm". For example, to get the system timer:
 
 #+BEGIN_SRC c++
 edtimer * systimer = edm.sys_timer();
 #+END_SRC
 
-** edsystem
+The edmctrl public interface is shown below.
+
+#+BEGIN_SRC c++
+class edmctrl
+{
+  public:
+
+    edmctrl();
+    virtual ~edmctrl();
+    
+    template<class T>
+    T * add_sys();
+
+    static edmctrl & inst();
+
+    bool running();
+
+    virtual void init();
+	
+    virtual void release();
+
+    edmessage_dispatch * message_dispatch();
+
+    void start();
+
+    void stop();
+
+    edtimer * sys_timer();
+
+    virtual void update();
+    
+    template<class T>
+    void rm_sys();
+
+    void rm_sys(const std::string & sysname);
+
+    template<class T>
+    T * sys();
+
+    edsystem * sys(const std::string & sysname);
+
+    static void quit(void);
+};
+#+END_SRC
+
+The main logic comes in the form of systems. The details of systems will be discussed later, but just observe that systems are added and removed through the edmctrl interface. The message dispatcher and system timer are available through this interface as well.
+
+To add a system to the edison control module simply call add_sys with the system type as the template arguement. Systems are removed in the same way.
+
+The start() function should be called at the beginning of the main entry point, and then a loop checking the running() function which calls update every frame should be established. The stop function should be called at the end of the program. The start() function starts the sys_timer and then calls init(), while the stop function stops the sys_timer and calls release(). It is possible to create a subclass of edmctrl and override the init(), release(), and update() functions to do something different.
+
+The static quit function allows the user to give a callback function for system exit calls. It does nothing other than call stop() on the global static edmctrl instance.
+
+An example of a main entry point with several custom system types added is shown below.
+
+#+BEGIN_SRC c++
+#include <edmctrl.h>
+#include <edrplidar_system.h>
+#include <edplsystem.h>
+#include <ednavsystem.h>
+#include <edlogging_system.h>
+#include <edcomm_system.h>
+#include <edimu_system.h>
+
+int main(int argc, char * argv[])
+{
+    edm.add_sys<edrplidar_system>();
+    edm.add_sys<edpl_system>();
+    edm.add_sys<ednav_system>();
+    edm.add_sys<edlogging_system>();
+    edm.add_sys<edcomm_system>()->set_port(port);
+    edm.add_sys<edimu_system>();
+	
+    edm.start();
+    while (edm.running())
+		edm.update();
+    edm.stop();
+    return 0;
+}
+#+END_SRC
+
+
+** Systems
 
 The main unit of interest in the control module is called the "system". The control module consists of several systems which each update and do work every frame. The base class for a system is shown below.
 
@@ -122,7 +212,11 @@ class edlogging_system : public edsystem
 };
 #+END_SRC
 
-** edmessage_dispatch
+** Messages
+
+The messaging implementation involves custom message types which are dispatched to systems of interest.
+
+*** Message dispatch
 
 The message dispatch object allows systems to register interest in messages and allows messages to be pushed to all interested systems. If a certain message has no registered interested systems then a NULL pointer will be returned on pushing the message.
 
@@ -157,7 +251,7 @@ public:
 
     void pop(edsystem * sys);
 
-    void pop_front(edsystem * sys);
+    void pop_back(edsystem * sys);
 
     void process_all(edsystem * sys);
 	
@@ -172,7 +266,7 @@ The register_listener and unregister_listener functions allow systems to registe
 #+BEGIN_SRC c++
 
 // get custom system
-custom_system_type * custom_system_pointer = edm.system<custom_system_type>();
+custom_system_type * custom_system_pointer = edm.sys<custom_system_type>();
 
 // to register interest in custom_message_type
 edm.message_dispatch()->register_listener<custom_message_type>(custom_system_pointer);
@@ -187,3 +281,257 @@ These functions are usually called in whatever system's init function which mean
 edm.message_dispatch()->register_listener<custom_message_type>(this);
 #+END_SRC
 
+Pushing a message has the same format except that register_listener is replaced with push or push_front. All messages are sent to systems automatically so there is no need to call process_all, pop, pop_front, or next functions usually. However, there may be specific cases where this could be useful so they are left as public functions. That is, it is possible to explicitly get a system's next message by calling next(system_pointer), and it is possible to remove the next message with pop (or remove the last message in the buffer with pop_back).
+
+One thing to realize is that "push" pushes messages to the back of the buffer, and "pop" pops messages from the front of the buffer (ie the next message). Accordingly, "push_front" pushes messages to the front of the buffer and "pop_back" pops messages from the back of the buffer.
+
+The function process_all will immediately call process on a system for all messages in the system's message buffer (unless the system returns false in its process function - then processing messages will end there).
+
+*** Custom Messages
+
+It is possible to create any custom type of message by subclassing the edmessage structure. The class declaration is shown below.
+
+#+BEGIN_SRC c++
+struct edmessage
+{
+    virtual ~edmessage() {}
+    virtual std::string type()=0;
+
+    uint32_t ref_count;
+};
+#+END_SRC
+
+The only function that must be implemented is type, and as with system a static function called Type() should also be made. An example of a custom message type is shown below.
+
+#+BEGIN_SRC c++
+struct rplidar_error_message : public edmessage
+{
+    rplidar_error_message();
+    uint8_t message[100];
+	
+    std::string type() {return Type();}
+    static std::string Type() {return "rplidar_error_message";}	
+};
+#+END_SRC
+
+This message can now be registered by interested systems and can be pushed to the message dispatcher.
+
+#+BEGIN_SRC c++
+void mysystem::init()
+{
+    // register interest
+    edm.message_dispatch()->register_listener<rplidar_error_message>(this);
+}
+
+void mysystem::process(edmessage * msg)
+{
+    rplidar_error_message * casted_msg = dynamic_cast<rplidar_error_message*>(msg);
+    if (casted_msg != NULL)
+    {
+        m_received_error = true; // set error flag
+        copy_buf(casted_msg->message, 100, m_error_message, 100); // copy error message
+    }
+}
+
+void mysystem::update()
+{
+    // m_error_message and m_received_error are class variables
+    if (m_received_error)
+    {
+        display(m_error_message); // call some display function or do something else
+        m_received_error = false; // reset flag
+    }
+}
+#+END_SRC
+
+And now, any system or any other code can push an "rplidar_error_message" and "mysystem" will receive it. Be careful to not create another message of interest in response to a message which can again push the original message as it can create an infinite message loop. The code will not crash - it would just keep pushing messages and responding to them infinitely. This seems like common sense, but with many systems there can be some gotchas. This psuedocode illusrates.
+
+In system 1
+If received message type A
+Create message type B in response
+
+If received message type B
+Create message type C in response
+
+In system 2
+If received message type C
+Create message type A in response
+
+When pushing messages that contain data fields, the message should always be checked for NULL before filling in the data. For example, pushing the rplidar_error_message:
+
+#+BEGIN_SRC c++
+rplidar_error_message * msg = edm->message_dispatch()->push<rplidar_error_message>(); // push message
+
+// now check to make sure not NULL before filling message
+if (msg != NULL)
+{
+    std::string err_msg("There was some terrible error");
+    copy_buf(err_msg.c_str(), err_msg.size(), msg->message, err_msg.size()); // fill in message
+}
+#+END_SRC
+
+It is necessary to check for NULL because if no systems have registered interest then a message will not be created and NULL will be returned.
+
+** Timers and Callbacks
+
+It is possible to use timers and callbacks to make something happen in a certain amount of time. A callback can be made by subclassing edcallback and reimplementing the exec() function. The edtimer_callback class is used with timers - this has a member pointer to the timer allowing modifications to be made to the timer from within the callback (for example the callback can stop the timer).
+
+In order for timers to be useful with callback functions, the timer update function must be called once every frame. This calculates how much time has passed since the last frame and makes it available with the dt() function, and it also will determine if a callback should be executed.
+
+Timers can be used without calling update as well if the callback functionality is not needed. For example, if you want to measure the time it takes to execute a loop you can do the following:
+
+#+BEGIN_SRC c++
+edtimer t;
+t.start();
+for (int i = 0; i < 1000; ++i) {}
+t.stop();
+double elapsed_time = t.elapsed();
+#+END_SRC
+
+The elapsed time it took to go through this loop in milliseconds will be stored in elapsed_time.
+
+If a callback needs to be assigned to a timer, then the timer must be updated. The more frequently the timer is updated, the closer the callback will be executed to the specified timer. The timer public interface is shown below.
+
+#+BEGIN_SRC c++
+class edtimer
+{
+  public:
+	
+	enum cb_mode {
+		single_shot,
+		continous_shot
+	};
+	
+	edtimer();
+	~edtimer();
+	
+	void start();
+
+	void update();
+
+	edtimer_callback * callback();
+
+	cb_mode callback_mode();
+
+	double callback_delay();
+
+	void cont();
+
+	void stop();
+
+	void set_callback(edtimer_callback * cb);
+
+	void set_callback_mode(cb_mode mode);
+
+	void set_callback_delay(double ms);
+	
+	double dt();
+
+	bool running();
+
+	double elapsed();
+};
+#+END_SRC
+
+The callback modes specify whether a callback should be executed once or repeatedly. When using callbacks with timers like this, usually the callback would be assigned and the timer started in a system init function, and the timer would be updated in the system update function. The following shows a simple example to push an rplidar_error_message every 200 ms. An example system called custom_system will be used to illustrate the typical use with systems. Assume that "m_timer" is a class variable.
+
+#+BEGIN_SRC c++
+// This is our custom callback struct - just inherit from
+// edtimer callback and reimplement exec to do what is needed
+struct my_custom_callback : public edtimer_callback
+{
+    void exec()
+    {
+        rplidar_error_message * msg = edm->message_dispatch()->push<rplidar_error_message>(); // push message
+        if (msg != NULL)
+        {
+            std::string err_msg("There was some terrible error");
+            copy_buf(err_msg.c_str(), err_msg.size(), msg->message, err_msg.size()); // fill in message
+        }
+    }
+};
+
+// Other system functions (relase, process, etc)
+
+void custom_system::init()
+{
+    // do other system initialization/setup code
+
+    // Set the callback to the above defined struct
+    m_timer.set_callback(new my_custom_callback());
+
+    // Set the callback to be continously executed (in this case every 200 ms)
+    m_timer.set_callback_mode(edtimer::continous_shot);
+
+    // Set the delay to 200 ms
+    m_timer.set_callback_delay(200.0);
+}
+
+void custom_system::update()
+{
+    m_timer.update(); // update the timer
+    // Do all the other needed stuff for the system
+}
+#+END_SRC
+
+
+
+
+It is also possible to pause and continue timers - this will make it so that elapsed time will not reset to zero but callbacks and dt and everything else will work normally.
+
+** Threaded File Descriptors
+
+In linux, everything is a file. This includes i2c, uart, gpio, and socket devices. To make it easier to use these devices, a threaded file descriptor class is in place. This allows the user to read and write from these devices freely without having to worry about blocking issues, or if non-blocking is set then without needing to keep a buffer to store data that needs to be written (this would be necessary because in non-blocking mode writing can fail if the device is not ready for more data).
+
+The specifics aren't really important, but a subclass is available for uart, sockets, and i2c to make use of asynchronous reading and writing.
+
+Using uart as an example, a thread is created to talk to the uart device. This thread can use blocking write calls because it does not interfere with the main thread's execution. Anytime data is read, it is stored in an internal buffer and and anytime data is available to write, it will issue a blocking write call.
+
+It is also possible to tell the uart to wait for a certain number of bytes before writing anything else. This is useful to issue a chain of commands to a uart device where each command should receive a response. 
+
+For example: lets say a device has three commands - 0x0A, 0x0B, and 0x0C. In response to 0x0A the device should reply with two bytes, in reponse to 0x0B the device should reply with 7 bytes, and in response to 0x0C the device should reply with 32 bytes (these are picked at random). To issue these commands without worrying about waiting for each response before continuing to the next command we could do the following:
+
+#+BEGIN_SRC c++
+int8_t com1 = 0x0A, com2 = 0x0B, com3 = 0x0C;
+m_uart->write(&com1, 1, 2);
+m_uart->write(&com2, 1, 7);
+m_uart->write(&com3, 1, 32);
+#+END_SRC
+
+
+Here com2 will not be sent until 2 bytes has been received after com1, and com3 wont be sent until 7 bytes has been received after com2. Then 32 bytes must be received before any other data will be sent.
+
+To send more then one byte just create an array of the bytes. For example, to send 0x04, 0x05, 0x0B, 0x0C just use..
+
+#+BEGIN_SRC c++
+int8_t buf[4];
+buf[0] = 0x04;
+buf[1] = 0x05;
+buf[2] = 0x0B;
+buf[3] = 0x0C;
+write(buf, 4);
+// or if we need a reply of say.. 5 bytes
+// write(buf, 4, 5);
+#+END_SRC
+
+Receiving data from file descriptor devices is similar to sending it.
+
+#+BEGIN_SRC c++
+// try to receive a single byte and do something with it
+int8_t byte;
+uint32_t cnt = read(&byte, 1);
+if (cnt == 1)
+    do_something(byte);
+
+// or try to receive 4 bytes and do something with them
+int8_t buf[4];
+uint32_t cnt = read(buf, 4);
+for (int32_t i = 0; i < cnt; ++i)
+    do_something(buf[i]);
+#+END_SRC
+
+Calls to read will return how many bytes were actually read. If it returns 0 then it means no bytes were are available.
+
+Each file descriptor device has a class written for it, and each one is a little bit different and offers more or less functions to communicate with the device. See the documentation for sepecifics on how to use a particular device type.
+
+In any case - the communication with the devices is asynchronous to the main thread unless a blocking call is specified. For example, i2c offers a blocking call readByte because it may be necessary to get a byte from a i2c device's register before continuing initialization. It is not a good idea to use blocking calls in any of the update functions. It is always possible to come up with a way to do the same in a non blocking fashion.
