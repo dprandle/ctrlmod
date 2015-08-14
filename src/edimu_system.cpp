@@ -3,8 +3,20 @@
 #include <edutility.h>
 
 edimu_system::edimu_system():
-	m_i2c(NULL)
-{}
+	m_i2c(NULL),
+	m_temp(0),
+	m_mag_scale(M_SCALE_2GS),
+	m_gyro_scale(G_SCALE_245DPS),
+	m_accel_scale(A_SCALE_2G),
+	m_mag_odr(M_ODR_50),
+	m_gyro_odr(G_ODR_95_BW_125),
+	m_accel_odr(A_ODR_50),
+	m_accel_abw(A_ABW_50)
+{
+	// _update_ares();
+	// _update_gres();
+	// _update_mres();
+}
 
 edimu_system::~edimu_system()
 {}
@@ -12,7 +24,36 @@ edimu_system::~edimu_system()
 void edimu_system::init()
 {
 	m_i2c = new edi2c(1);
-	m_i2c->set_target_address(0x56);
+
+	if (!m_i2c->start())
+	{
+		log_message("edimu_system::init Error initializing i2c");
+		return;
+	}
+
+	m_i2c->set_target_address(LSM9DS0_G_ADDR);
+	uint8_t gTest = m_i2c->readByte(WHO_AM_I_G);
+	
+	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+	uint8_t xmTest = m_i2c->readByte(WHO_AM_I_XM);
+	
+	if (!_init_gyro())
+		log_message("edimu_system::init Coult not initialize gyroscope");
+	set_gyro_datarate(m_gyro_odr);
+	set_gyro_scale(m_gyro_scale);
+	
+	if (!_init_accel())
+		log_message("edimu_system::init Coult not initialize accelerometer");
+	set_accel_datarate(m_accel_odr);
+	set_accel_scale(m_accel_scale);
+	
+	if (!_init_mag())
+		log_message("edimu_system::init Coult not initialize magnometer");
+	set_mag_datarate(m_mag_odr);
+	set_mag_scale(m_mag_scale);
+	
+	if((xmTest != WHO_AM_I_XM) || (gTest != WHO_AM_I_G))
+		log_message("edimu_system::init IMU did not return correct who am i bytes");
 }
 
 void edimu_system::release()
@@ -37,6 +78,12 @@ edimu_system::a_odr edimu_system::accel_datarate()
 
 void edimu_system::calibrate()
 {
+	if (!m_i2c->running())
+	{
+		log_message("edimu_system::calibrate Can not run calibration because i2c thread not active");
+		return;
+	}
+	
 	uint8_t data[6] = {0, 0, 0, 0, 0, 0};
 	int16_t gyro_bias[3] = {0, 0, 0}, accel_bias[3] = {0, 0, 0};
 	int32_t samples, ii;
@@ -53,7 +100,7 @@ void edimu_system::calibrate()
 
 	for(ii = 0; ii < samples ; ii++)
 	{
-		//m_i2c->readBytes(OUT_X_L_G,  &data[0], 6);
+		m_i2c->readBytes(OUT_X_L_G,  &data[0], 6);
 		gyro_bias[0] += (((int16_t)data[1] << 8) | data[0]);
 		gyro_bias[1] += (((int16_t)data[3] << 8) | data[2]);
 		gyro_bias[2] += (((int16_t)data[5] << 8) | data[4]);
@@ -85,7 +132,7 @@ void edimu_system::calibrate()
 
 	for(ii = 0; ii < samples ; ii++)
 	{
-		//m_i2c->readBytes(OUT_X_L_A, &data[0], 6);
+		m_i2c->readBytes(OUT_X_L_A, &data[0], 6);
 		accel_bias[0] += (((int16_t)data[1] << 8) | data[0]);
 		accel_bias[1] += (((int16_t)data[3] << 8) | data[2]);
 		accel_bias[2] += (((int16_t)data[5] << 8) | data[4]) - (int16_t)(1./m_ares);
@@ -128,14 +175,17 @@ edimu_system::m_odr edimu_system::mag_datarate()
 void edimu_system::set_accel_aa(a_abw antialiasing)
 {
 	m_accel_abw = antialiasing;
-	
-	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG2_XM);
 
-	temp &= 0xFF^(0x3 << 6);
-	temp |= (m_accel_abw << 6);
+	if (m_i2c->running())
+	{
+		m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG2_XM);
+		
+		temp &= 0xFF^(0x3 << 6);
+		temp |= (m_accel_abw << 6);
 
-	m_i2c->writeByte(CTRL_REG2_XM, temp);
+		m_i2c->writeByte(CTRL_REG2_XM, temp);
+	}
 }
 	
 void edimu_system::set_accel_scale(a_scale scale)
@@ -156,68 +206,84 @@ void edimu_system::set_accel_datarate(a_odr datarate)
 {
 	m_accel_odr = datarate;
 
-	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG1_XM);
+	if (m_i2c->running())
+	{		
+		m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG1_XM);
 
-	temp &= 0xFF^(0xF << 4);
-	temp |= (m_accel_odr << 4);
+		temp &= 0xFF^(0xF << 4);
+		temp |= (m_accel_odr << 4);
 
-	m_i2c->writeByte(CTRL_REG1_XM, temp);
+		m_i2c->writeByte(CTRL_REG1_XM, temp);
+	}
 }
 
 void edimu_system::set_gyro_scale(g_scale scale)
 {
 	m_gyro_scale = scale;
 
-	m_i2c->set_target_address(LSM9DS0_G_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG4_G);
+	if (m_i2c->running())
+	{		
+		m_i2c->set_target_address(LSM9DS0_G_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG4_G);
 
-	temp &= 0xFF^(0x3 << 4);
-	temp |= m_gyro_scale << 4;
+		temp &= 0xFF^(0x3 << 4);
+		temp |= m_gyro_scale << 4;
 
-	m_i2c->writeByte(CTRL_REG4_G, temp);
-	_update_gres();
+		m_i2c->writeByte(CTRL_REG4_G, temp);
+		_update_gres();
+	}
 }
 
 void edimu_system::set_gyro_datarate(g_odr datarate)
 {
 	m_gyro_odr = datarate;
 
-	m_i2c->set_target_address(LSM9DS0_G_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG1_G);
+	if (m_i2c->running())
+	{		
+		m_i2c->set_target_address(LSM9DS0_G_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG1_G);
 	
-	temp &= 0xFF^(0xF << 4);
-	temp |= (m_gyro_odr << 4);
+		temp &= 0xFF^(0xF << 4);
+		temp |= (m_gyro_odr << 4);
 
-	m_i2c->writeByte(CTRL_REG1_G, temp);
+		m_i2c->writeByte(CTRL_REG1_G, temp);
+	}
 }
 	
 void edimu_system::set_mag_scale(m_scale scale)
 {
 	m_mag_scale = scale;
 
-	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG6_XM);
+	if (m_i2c->running())
+	{		
+		m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG6_XM);
 	
-	temp &= 0xFF^(0x3 << 5);
-	temp |= m_mag_scale << 5;
+		temp &= 0xFF^(0x3 << 5);
+		temp |= m_mag_scale << 5;
 
-	m_i2c->writeByte(CTRL_REG6_XM, temp);
-	_update_mres();
+		m_i2c->writeByte(CTRL_REG6_XM, temp);
+		_update_mres();
+	}
 }
 
 void edimu_system::set_mag_datarate(m_odr datarate)
 {
 	m_mag_odr = datarate;
 
-	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
-	uint8_t temp = m_i2c->readByte(CTRL_REG5_XM);
+	if (m_i2c->running())
+	{
+		m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+		uint8_t temp = m_i2c->readByte(CTRL_REG5_XM);
 	
-	temp &= 0xFF^(0x7 << 2);
-	temp |= (m_mag_odr << 2);
+		temp &= 0xFF^(0x7 << 2);
+		temp |= (m_mag_odr << 2);
 
-	m_i2c->writeByte(CTRL_REG5_XM, temp);
+		m_i2c->writeByte(CTRL_REG5_XM, temp);
+	}
 }
+
 
 bool edimu_system::process(edmessage * msg)
 {
@@ -254,4 +320,33 @@ void edimu_system::_update_ares()
 {
 	m_ares = m_accel_scale == A_SCALE_16G ? 16.0 / 32768.0 : 
 		   (((float) m_accel_scale + 1.0) * 2.0) / 32768.0;
+}
+
+bool edimu_system::_init_mag()
+{
+	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+	return (m_i2c->writeByte(CTRL_REG5_XM, 0x94) &&
+			m_i2c->writeByte(CTRL_REG6_XM, 0x00) &&
+			m_i2c->writeByte(CTRL_REG7_XM, 0x00) &&
+			m_i2c->writeByte(CTRL_REG4_XM, 0x04) &&
+			m_i2c->writeByte(INT_CTRL_REG_M, 0x09));
+}
+
+bool edimu_system::_init_accel()
+{
+	m_i2c->set_target_address(LSM9DS0_XM_ADDR);
+	return ( m_i2c->writeByte(CTRL_REG0_XM, 0x00) &&
+			 m_i2c->writeByte(CTRL_REG1_XM, 0x57) &&
+			 m_i2c->writeByte(CTRL_REG2_XM, 0x00) &&
+			 m_i2c->writeByte(CTRL_REG3_XM, 0x04));		
+}
+
+bool edimu_system::_init_gyro()
+{
+	m_i2c->set_target_address(LSM9DS0_G_ADDR);
+	return (m_i2c->writeByte(CTRL_REG1_G, 0x0F) &&
+			m_i2c->writeByte(CTRL_REG2_G, 0x00) &&
+			m_i2c->writeByte(CTRL_REG3_G, 0x88) && 
+			m_i2c->writeByte(CTRL_REG4_G, 0x00) &&
+			m_i2c->writeByte(CTRL_REG5_G, 0x00));
 }

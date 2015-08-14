@@ -237,8 +237,18 @@ class edimu_system : public edsystem
 	void _update_gres();
 	void _update_mres();
 	void _update_ares();
+
+	bool _init_mag();
+	bool _init_accel();
+	bool _init_gyro();
+
+	fvec3 _createMessage
 	
 	edi2c * m_i2c;
+
+	NSVec3<int16_t> m_gyro_raw, m_accel_raw, m_magno_raw;
+	int16_t m_temp;
+
 
 	m_scale m_mag_scale;
 	g_scale m_gyro_scale;
