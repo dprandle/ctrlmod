@@ -90,7 +90,7 @@ int main(int argc, char * argv[])
     edm.add_sys<edpl_system>();
     edm.add_sys<ednav_system>();
     edm.add_sys<edlogging_system>();
-    edm.add_sys<edcomm_system>()->set_port(port);
+    edm.add_sys<edcomm_system>();
     edm.add_sys<edimu_system>();
 	
     edm.start();
