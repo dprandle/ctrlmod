@@ -94,7 +94,7 @@ void edrplidar_system::update()
 
     int32_t size = m_uart->read(readBuf, 256);
     if (size > 0)
-    {
+    {		
         m_timeout_timer->stop();
         for (int32_t i = 0; i < size; ++i)
             _handle_byte(readBuf[i]);
@@ -311,8 +311,6 @@ void edrplidar_system::_handle_byte(uint8_t byte)
                     m_rec_start_scan = _check_packet_for_scan_start();
                     if (m_rec_start_scan)
                     {
-                        //std::cout << "Copying first packet..." << std::endl;
-
                         copy_buf(m_data_packets[m_current_type]->dataptr(),
                                  m_current_scan[m_scan_index].data,
                                  m_current_scan[m_scan_index].size());

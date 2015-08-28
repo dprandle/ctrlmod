@@ -26,19 +26,19 @@ template <class T>
 NSVec4<T> abs(const NSVec4<T> & pVec);
 
 template <class T>
-NSVec4<T> axisAngle(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool rads = false);
+NSVec4<T> axis_angle(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool rads = false);
 
 template <class T>
-NSVec4<T> axisAngle(const NSQuat<T> & orientation, bool rads = false);
+NSVec4<T> axis_angle(const nsquat<T> & orientation, bool rads = false);
 
 template <class T>
-NSVec4<T> axisAngle(const NSMat3<T> & rotationMat3, bool rads = false);
+NSVec4<T> axis_angle(const nsmat3<T> & rotationMat3, bool rads = false);
 
 template <class T>
-NSVec4<T> axisAngle(const NSMat4<T> & transform, bool rads = false);
+NSVec4<T> axis_angle(const nsmat4<T> & transform, bool rads = false);
 
 template <class T>
-NSVec4<T> axisAngle(const NSVec3<T> & vec, const NSVec3<T> & toVec, bool rads = false);
+NSVec4<T> axis_angle(const NSVec3<T> & vec, const NSVec3<T> & toVec, bool rads = false);
 
 template <class T>
 NSVec4<T> ceil(const NSVec4<T> & pVec);
@@ -102,10 +102,10 @@ struct NSVec4
 
 	NSVec4<T> & axisAngleFrom(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool rads = false)
 	{
-		return axisAngleFrom(NSQuat<T>().from(euler, order, rads), rads);
+		return axisAngleFrom(nsquat<T>().from(euler, order, rads), rads);
 	}
 
-	NSVec4<T> & axisAngleFrom(const NSQuat<T> & orientation, bool rads = false)
+	NSVec4<T> & axisAngleFrom(const nsquat<T> & orientation, bool rads = false)
 	{
 		// http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
 		w = static_cast<T>(2 * std::acos(orientation.w));
@@ -129,19 +129,19 @@ struct NSVec4
 		return *this;
 	}
 
-	NSVec4<T> & axisAngleFrom(const NSMat3<T> & rotationMat3, bool rads = false)
+	NSVec4<T> & axisAngleFrom(const nsmat3<T> & rotationMat3, bool rads = false)
 	{
-		return axisAngleFrom(NSQuat<T>().from(rotationMat3), rads);
+		return axisAngleFrom(nsquat<T>().from(rotationMat3), rads);
 	}
 
-	NSVec4<T> & axisAngleFrom(const NSMat4<T> & transform, bool rads = false)
+	NSVec4<T> & axisAngleFrom(const nsmat4<T> & transform, bool rads = false)
 	{
-		return axisAngleFrom(NSQuat<T>().from(transform), rads);
+		return axisAngleFrom(nsquat<T>().from(transform), rads);
 	}
 
 	NSVec4<T> & axisAngleFrom(const NSVec3<T> & vec, const NSVec3<T> & toVec, bool rads = false)
 	{
-		return axisAngleFrom(NSQuat<T>().from(vec, toVec), rads);
+		return axisAngleFrom(nsquat<T>().from(vec, toVec), rads);
 	}
 
 	NSVec4<T> & ceil()
@@ -289,7 +289,7 @@ struct NSVec4
 		return *this;
 	}
 
-	NSVec3<T> & scalingFrom(const NSMat3<T> & transform)
+	NSVec3<T> & scalingFrom(const nsmat3<T> & transform)
 	{
 		x = transform[0].length();
 		y = transform[1].length();
@@ -298,7 +298,7 @@ struct NSVec4
 		return *this;
 	}
 
-	NSVec3<T> & scalingFrom(const NSMat4<T> & transform)
+	NSVec3<T> & scalingFrom(const nsmat4<T> & transform)
 	{
 		x = sqrt(transform[0][0] * transform[0][0] + transform[0][1] * transform[0][1] + transform[0][2] * transform[0][2]);
 		y = sqrt(transform[1][0] * transform[1][0] + transform[1][1] * transform[1][1] + transform[1][2] * transform[1][2]);
@@ -368,7 +368,7 @@ struct NSVec4
 		return ss.str();
 	}
 
-	NSVec4<T> & translationFrom(const NSMat4<T> & transform)
+	NSVec4<T> & translationFrom(const nsmat4<T> & transform)
 	{
 		*this = transform(3);
 		w = static_cast<T>(1);
@@ -391,9 +391,9 @@ struct NSVec4
 		return x*rhs.x + y*rhs.y + z*rhs.z + w*rhs.w;
 	}
 
-	NSMat4<T> operator^(const NSVec4<T> & pRHS) const
+	nsmat4<T> operator^(const NSVec4<T> & pRHS) const
 	{
-		NSMat4<T> ret;
+		nsmat4<T> ret;
 		ret[0] = x * pRHS;
 		ret[1] = y * pRHS;
 		ret[2] = z * pRHS;
@@ -499,6 +499,26 @@ struct NSVec4
 		return ((x == rhs.x) && (y == rhs.y) && (z == rhs.z) && (w == rhs.w));
 	}
 
+	bool operator<(const NSVec4<T> & rhs) const
+	{
+		return ((x < rhs.x) && (y < rhs.y) && (z < rhs.z) && (w < rhs.w));
+	}
+
+	bool operator>(const NSVec4<T> & rhs) const
+	{
+		return !((*this) <= rhs);
+	}
+
+	bool operator>=(const NSVec4<T> & rhs) const
+	{
+		return !((*this) < rhs);
+	}
+
+	bool operator<=(const NSVec4<T> & rhs) const
+	{
+		return ((*this) < rhs || (*this) == rhs);
+	}
+	
 	bool operator!=(const NSVec4<T> & rhs) const
 	{
 		return !(*this == rhs);
@@ -1615,33 +1635,33 @@ NSVec4<T> abs(const NSVec4<T> & pVec)
 }
 
 template <class T>
-NSVec4<T> axisAngle(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool rads)
+NSVec4<T> axis_angle(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool rads)
 {
-	return NSVec4<T>().axisAngleFrom(NSQuat<T>().from(euler, order, rads), rads);
+	return NSVec4<T>().axisAngleFrom(nsquat<T>().from(euler, order, rads), rads);
 }
 
 template <class T>
-NSVec4<T> axisAngle(const NSQuat<T> & orientation, bool rads)
+NSVec4<T> axis_angle(const nsquat<T> & orientation, bool rads)
 {
 	return NSVec4<T>().axisAngleFrom(orientation, rads);
 }
 
 template <class T>
-NSVec4<T> axisAngle(const NSMat3<T> & rotationMat3, bool rads)
+NSVec4<T> axis_angle(const nsmat3<T> & rotationMat3, bool rads)
 {
-	return NSVec4<T>().axisAngleFrom(NSQuat<T>().from(rotationMat3), rads);
+	return NSVec4<T>().axisAngleFrom(nsquat<T>().from(rotationMat3), rads);
 }
 
 template <class T>
-NSVec4<T> axisAngle(const NSMat4<T> & transform, bool rads)
+NSVec4<T> axis_angle(const nsmat4<T> & transform, bool rads)
 {
-	return NSVec4<T>().axisAngleFrom(NSQuat<T>().from(transform), rads);
+	return NSVec4<T>().axisAngleFrom(nsquat<T>().from(transform), rads);
 }
 
 template <class T>
-NSVec4<T> axisAngle(const NSVec3<T> & vec, const NSVec3<T> & toVec, bool rads)
+NSVec4<T> axis_angle(const NSVec3<T> & vec, const NSVec3<T> & toVec, bool rads)
 {
-	return NSVec4<T>().axisAngleFrom(NSQuat<T>().from(vec, toVec), rads);
+	return NSVec4<T>().axisAngleFrom(nsquat<T>().from(vec, toVec), rads);
 }
 
 template <class T>

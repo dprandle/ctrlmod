@@ -34,12 +34,12 @@ int32_t main(int32_t argc, char * argv[])
 	sigIntHandler.sa_flags = 0;
 	sigaction(SIGINT, &sigIntHandler, NULL);
 	
-    //edm.add_sys<edrplidar_system>();
-    //edm.add_sys<edpl_system>();
-    //edm.add_sys<ednav_system>();
-    //edm.add_sys<edlogging_system>();
-    //edm.add_sys<edcomm_system>()->set_port(port);
-	edm.add_sys<edimu_system>();
+    edm.add_sys<edrplidar_system>();
+    edm.add_sys<edpl_system>();
+    edm.add_sys<ednav_system>();
+    edm.add_sys<edlogging_system>();
+	edm.add_sys<edcomm_system>()->set_port(port);
+	//edm.add_sys<edimu_system>();
 	
 	edm.start();
     edm.init();

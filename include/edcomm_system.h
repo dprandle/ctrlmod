@@ -6,9 +6,11 @@
 #include <vector>
 
 #define SOCKET_BUFF_SIZE 
+#define COMMAND_BYTE_SIZE 72
 
 struct rplidar_scan_message;
 struct pulsed_light_message;
+struct nav_message;
 class edsocket;
 
 struct Command
@@ -21,8 +23,16 @@ struct Command
         {
             uint32_t hash_id;
             uint32_t cmd_data;
+			double cmd_data_d;
+			double cmd_data_d2;
+			double cmd_data_d3;
+			double cmd_data_d4;
+			double cmd_data_d5;
+			double cmd_data_d6;
+			double cmd_data_d7;
+			double cmd_data_d8;
         };
-        uint8_t data[8];
+        uint8_t data[COMMAND_BYTE_SIZE];
     };
 };
 

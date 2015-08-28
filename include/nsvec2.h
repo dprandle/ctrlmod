@@ -1,6 +1,8 @@
 #ifndef NSVEC2_H
 #define NSVEC2_H
 
+#include <cmath>
+
 template <class T>
 struct NSVec3;
 
@@ -8,16 +10,16 @@ template <class T>
 struct NSVec4;
 
 template <class T>
-struct NSQuat;
+struct nsquat;
 
 template <class T>
-struct NSMat2;
+struct nsmat2;
 
 template <class T>
-struct NSMat3;
+struct nsmat3;
 
 template <class T>
-struct NSMat4;
+struct nsmat4;
 
 template <class T>
 struct NSVec2;
@@ -80,7 +82,7 @@ template <class T>
 NSVec2<T> project(const NSVec2<T> & a, const NSVec2<T> & b);
 
 template <class T>
-NSVec2<T> projectPlane(const NSVec2<T> & a, const NSVec2<T> & normal);
+NSVec2<T> project_plane(const NSVec2<T> & a, const NSVec2<T> & normal);
 
 template <class T>
 NSVec2<T> reflect(const NSVec2<T> & incident, const NSVec2<T> & normal);
@@ -89,13 +91,13 @@ template <class T>
 NSVec2<T> round(const NSVec2<T> & pVec);
 
 template <class T>
-NSVec2<T> scaling2dVec(const NSMat2<T> & transform2d);
+NSVec2<T> scaling2d_vec(const nsmat2<T> & transform2d);
 
 template <class T>
-NSVec2<T> scaling2dVec(const NSMat3<T> & transform2d);
+NSVec2<T> scaling2d_vec(const nsmat3<T> & transform2d);
 
 template <class T>
-NSVec2<T> translation2dVec(const NSMat3<T> & transform2d);
+NSVec2<T> translation2d_vec(const nsmat3<T> & transform2d);
 
 template<class PUPer, class T>
 void pup(PUPer & p, NSVec2<T> & v2);
@@ -265,11 +267,11 @@ struct NSVec2
 	}
 
 	template<class T2>
-	NSVec2<T> & rotate(const T2 & pAngle)
+	NSVec2<T> & rotate(const T2 & angle_)
 	{
-		T2 newangle = pAngle + static_cast<T2>(angle());
-		x = length()*static_cast<T>(std::cos(pAngle + angle()));
-		y = length()*static_cast<T>(std::sin(pAngle + angle()));
+		T2 newangle = angle_ + static_cast<T2>(angle());
+		x = length()*static_cast<T>(std::cos(angle_ + angle()));
+		y = length()*static_cast<T>(std::sin(angle_ + angle()));
 		return *this;
 	}
 
@@ -289,14 +291,14 @@ struct NSVec2
 		return *this;
 	}
 
-	NSVec2<T> & scalingFrom(const NSMat2<T> & transform2d)
+	NSVec2<T> & scalingFrom(const nsmat2<T> & transform2d)
 	{
 		x = transform2d[0].length();
 		y = transform2d[1].length();
 		return *this;
 	}
 
-	NSVec2<T> & scalingFrom(const NSMat3<T> & transform2d)
+	NSVec2<T> & scalingFrom(const nsmat3<T> & transform2d)
 	{
 		x = sqrt(transform2d[0][0] * transform2d[0][0] + transform2d[0][1] * transform2d[0][1]);
 		y = sqrt(transform2d[1][0] * transform2d[1][0] + transform2d[1][1] * transform2d[1][1]);
@@ -315,13 +317,13 @@ struct NSVec2
 		return *this;
 	}
 
-	NSVec2<T> & setFromPolar(const T & pMag, const T & pAngle, bool pRads = false)
+	NSVec2<T> & setFromPolar(const T & pMag, T angle_, bool pRads = false)
 	{
 		if (!pRads)
-			pAngle = radians(pAngle);
+			angle_ = radians(angle_);
 
-		x = static_cast<T>(pMag*std::cos(pAngle));
-		y = static_cast<T>(pMag*std::sin(pAngle));
+		x = static_cast<T>(pMag*std::cos(angle_));
+		y = static_cast<T>(pMag*std::sin(angle_));
 		return *this;
 	}
 
@@ -349,7 +351,7 @@ struct NSVec2
 		return *this;
 	}
 
-	NSVec2<T> & translationFrom(const NSMat3<T> & transform2d)
+	NSVec2<T> & translationFrom(const nsmat3<T> & transform2d)
 	{
 		return *this = transform2d(2).xy();
 	}
@@ -379,9 +381,9 @@ struct NSVec2
 		return x*pRHS.x + y*pRHS.y;
 	}
 
-	NSMat2<T> operator^(const NSVec2<T> & pRHS) const
+	nsmat2<T> operator^(const NSVec2<T> & pRHS) const
 	{
-		NSMat2<T> ret;
+		nsmat2<T> ret;
 		ret[0] = x * pRHS;
 		ret[1] = y * pRHS;
 		return ret;
@@ -691,7 +693,7 @@ NSVec2<T> project(const NSVec2<T> & a, const NSVec2<T> & b)
 }
 
 template <class T>
-NSVec2<T> projectPlane(const NSVec2<T> & a, const NSVec2<T> & normal)
+NSVec2<T> project_plane(const NSVec2<T> & a, const NSVec2<T> & normal)
 {
 	NSVec2<T> ret(a);
 	a.projectOnPlane(normal);
@@ -715,19 +717,19 @@ NSVec2<T> round(const NSVec2<T> & pVec)
 }
 
 template <class T>
-NSVec2<T> scaling2dVec(const NSMat2<T> & transform2d)
+NSVec2<T> scaling2d_vec(const nsmat2<T> & transform2d)
 {
 	return NSVec2<T>().scalingFrom(transform2d);
 }
 
 template <class T>
-NSVec2<T> scaling2dVec(const NSMat3<T> & transform2d)
+NSVec2<T> scaling2d_vec(const nsmat3<T> & transform2d)
 {
 	return NSVec2<T>().scalingFrom(transform2d);
 }
 
 template <class T>
-NSVec2<T> translation2dVec(const NSMat3<T> & transform2d)
+NSVec2<T> translation2d_vec(const nsmat3<T> & transform2d)
 {
 	return NSVec2<T>().translationFrom(transform2d);
 }

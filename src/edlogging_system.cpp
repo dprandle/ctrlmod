@@ -10,6 +10,7 @@ void edlogging_system::init()
 	edm.message_dispatch()->register_listener<rplidar_info_message>(this);
 	edm.message_dispatch()->register_listener<rplidar_firmware_message>(this);
 	edm.message_dispatch()->register_listener<rplidar_error_message>(this);
+	edm.message_dispatch()->register_listener<nav_message>(this);
 }
 
 void edlogging_system::release()
@@ -24,6 +25,7 @@ bool edlogging_system::process(edmessage * msg)
 	rplidar_health_message * hmsg;
 	rplidar_firmware_message * fmsg;
 	rplidar_scan_message * smsg;
+	nav_message * nmsg;
 	
     if ( (smsg = dynamic_cast<rplidar_scan_message*>(msg)) )
 	{
@@ -48,6 +50,11 @@ bool edlogging_system::process(edmessage * msg)
     else if ( (fmsg = dynamic_cast<rplidar_firmware_message*>(msg)) )
 	{
 		log_device_firware(&fmsg->device_firmware);
+		return true;		
+	}
+    else if ( (nmsg = dynamic_cast<nav_message*>(msg)) )
+	{
+		log_nav_message(nmsg);
 		return true;		
 	}
 	else
@@ -79,4 +86,12 @@ void edlogging_system::log_device_firware(firmware_data_packet * data)
 void edlogging_system::log_scan(complete_scan_data_packet * data)
 {
 	//log_message(data->toString());
+}
+
+void edlogging_system::log_nav_message(nav_message * nmsg)
+{
+	// log_message("\nPitch: " + std::to_string(nmsg->pitch));
+	// log_message("\nRoll: " + std::to_string(nmsg->roll));
+	// log_message("\nYaw: " + std::to_string(nmsg->yaw));
+	// log_message("\nThrottle: " + std::to_string(nmsg->throttle));
 }

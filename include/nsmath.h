@@ -39,7 +39,7 @@ T degrees(const T & val);
 template<class T>
 T radians(const T & val);
 
-float RandomFloat(float pHigh = 1.0f, float pLow = 0.0f);
+float random_float(float pHigh = 1.0f, float pLow = 0.0f);
 
 #include "nsmat4.h"
 
@@ -65,33 +65,33 @@ typedef NSVec4<uint32_t> uivec4;
 typedef NSVec4<float> fvec4;
 typedef NSVec4<double> vec4;
 
-typedef NSQuat<uint8_t> cquat;
-typedef NSQuat<int32_t> iquat;
-typedef NSQuat<uint8_t> ucquat;
-typedef NSQuat<uint32_t> uiquat;
-typedef NSQuat<float> fquat;
-typedef NSQuat<double> quat;
+typedef nsquat<uint8_t> cquat;
+typedef nsquat<int32_t> iquat;
+typedef nsquat<uint8_t> ucquat;
+typedef nsquat<uint32_t> uiquat;
+typedef nsquat<float> fquat;
+typedef nsquat<double> quat;
 
-typedef NSMat2<uint8_t> cmat2;
-typedef NSMat2<int32_t> imat2;
-typedef NSMat2<uint8_t> ucmat2;
-typedef NSMat2<uint32_t> uimat2;
-typedef NSMat2<float> fmat2;
-typedef NSMat2<double> mat2;
+typedef nsmat2<uint8_t> cmat2;
+typedef nsmat2<int32_t> imat2;
+typedef nsmat2<uint8_t> ucmat2;
+typedef nsmat2<uint32_t> uimat2;
+typedef nsmat2<float> fmat2;
+typedef nsmat2<double> mat2;
 
-typedef NSMat3<uint8_t> cmat3;
-typedef NSMat3<int32_t> imat3;
-typedef NSMat3<uint8_t> ucmat3;
-typedef NSMat3<uint32_t> uimat3;
-typedef NSMat3<float> fmat3;
-typedef NSMat3<double> mat3;
+typedef nsmat3<uint8_t> cmat3;
+typedef nsmat3<int32_t> imat3;
+typedef nsmat3<uint8_t> ucmat3;
+typedef nsmat3<uint32_t> uimat3;
+typedef nsmat3<float> fmat3;
+typedef nsmat3<double> mat3;
 
-typedef NSMat4<uint8_t> cmat4;
-typedef NSMat4<uint8_t> ucmat4;
-typedef NSMat4<int32_t> imat4;
-typedef NSMat4<uint32_t> uimat4;
-typedef NSMat4<float> fmat4;
-typedef NSMat4<double> mat4;
+typedef nsmat4<uint8_t> cmat4;
+typedef nsmat4<uint8_t> ucmat4;
+typedef nsmat4<int32_t> imat4;
+typedef nsmat4<uint32_t> uimat4;
+typedef nsmat4<float> fmat4;
+typedef nsmat4<double> mat4;
 
 template<class T>
 T degrees(const T & val)

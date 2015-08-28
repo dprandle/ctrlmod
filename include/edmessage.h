@@ -35,6 +35,27 @@ struct pulsed_light_message : public edmessage
 	static std::string Type() {return "pulsed_light_message";}
 };
 
+struct nav_message : public edmessage
+{
+	union
+	{
+		struct
+		{
+			int16_t throttle;
+			int16_t pitch;
+			int16_t roll;
+			int16_t yaw;
+			double rvec_raw[2];
+			double rvec_corrected[2];
+		};
+		uint8_t data[40];
+	};
+
+	uint32_t size() {return 40;}
+	std::string type() {return Type();}
+	static std::string Type() {return "nav_message";}   
+};
+
 struct rplidar_request : public edmessage
 {
 	enum req_type
@@ -50,6 +71,21 @@ struct rplidar_request : public edmessage
 	req_type r_type;
 	virtual std::string type() {return Type();}
     static std::string Type() {return "rplidar_request";}
+};
+
+struct nav_system_request : public edmessage
+{
+	vec3 pid;
+	double ramp_limit;
+	vec2 bias_vec;
+	double g_factor;
+	double bias_threshold_dist;
+	bool complex_der;
+	bool anti_reset_winding;
+	bool threshold_dropout;
+	
+	virtual std::string type() {return Type();}
+    static std::string Type() {return "nav_system_request";}
 };
 
 struct rplidar_scan_message : public edmessage

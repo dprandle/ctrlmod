@@ -43,13 +43,13 @@ template <class T>
 NSVec3<T> euler(const NSVec4<T> & axisAngle, typename NSVec3<T>::EulerOrder order , bool pRads = false);
 
 template <class T>
-NSVec3<T> euler(const NSQuat<T> & orientation, typename NSVec3<T>::EulerOrder order , bool rads = false);
+NSVec3<T> euler(const nsquat<T> & orientation, typename NSVec3<T>::EulerOrder order , bool rads = false);
 
 template <class T>
-NSVec3<T> euler(const NSMat3<T> & rotationMat3, typename NSVec3<T>::EulerOrder order , bool pRads = false);
+NSVec3<T> euler(const nsmat3<T> & rotationMat3, typename NSVec3<T>::EulerOrder order , bool pRads = false);
 
 template <class T>
-NSVec3<T> euler(const NSMat4<T> & transform, typename NSVec3<T>::EulerOrder order , bool pRads = false);
+NSVec3<T> euler(const nsmat4<T> & transform, typename NSVec3<T>::EulerOrder order , bool pRads = false);
 
 template <class T>
 NSVec3<T> euler(const NSVec3<T> & vec, const NSVec3<T> & toVec, typename NSVec3<T>::EulerOrder order , bool pRads = false);
@@ -88,13 +88,13 @@ template <class T>
 NSVec3<T> round(const NSVec3<T> & pVec);
 
 template <class T>
-NSVec3<T> scalingVec(const NSMat3<T> & transform);
+NSVec3<T> scaling_vec(const nsmat3<T> & transform);
 
 template <class T>
-NSVec3<T> scalingVec(const NSMat4<T> & transform);
+NSVec3<T> scaling_vec(const nsmat4<T> & transform);
 
 template <class T>
-NSVec3<T> translationVec(const NSMat4<T> & transform);
+NSVec3<T> translation_vec(const nsmat4<T> & transform);
 
 template<class PUPer, class T>
 void pup(PUPer & p, NSVec3<T> & v3);
@@ -212,15 +212,15 @@ struct NSVec3
 
 	NSVec3<T> & eulerFrom(const NSVec4<T> & axisAngle, EulerOrder order = XYZ, bool pRads = false)
 	{
-		return eulerFrom(NSQuat<T>().from(axisAngle, pRads), order, pRads);
+		return eulerFrom(nsquat<T>().from(axisAngle, pRads), order, pRads);
 	}
 
-	NSVec3<T> & eulerFrom(const NSQuat<T> & orientation, EulerOrder order, bool rads)
+	NSVec3<T> & eulerFrom(const nsquat<T> & orientation, EulerOrder order, bool rads)
 	{
-		return eulerFrom(NSMat3<T>().rotationFrom(orientation), order, rads);
+		return eulerFrom(nsmat3<T>().rotationFrom(orientation), order, rads);
 	}
 
-	NSVec3<T> & eulerFrom(const NSMat3<T> & rotationMat3, EulerOrder order = XYZ, bool pRads = false)
+	NSVec3<T> & eulerFrom(const nsmat3<T> & rotationMat3, EulerOrder order = XYZ, bool pRads = false)
 	{
 		// https://github.com/mrdoob/three.js/blob/master/src/math/Euler.js
 		T ep = static_cast<T>(1) - EPS;
@@ -310,14 +310,14 @@ struct NSVec3
 		return *this;
 	}
 
-	NSVec3<T> & eulerFrom(const NSMat4<T> & transform, EulerOrder order = XYZ, bool pRads = false)
+	NSVec3<T> & eulerFrom(const nsmat4<T> & transform, EulerOrder order = XYZ, bool pRads = false)
 	{
 		return eulerFrom(rotationMat3(transform), order, pRads);
 	}
 
 	NSVec3<T> & eulerFrom(const NSVec3<T> & vec, const NSVec3<T> & toVec, EulerOrder order = XYZ, bool pRads = false)
 	{
-		return eulerFrom(NSQuat<T>().from(vec, toVec), order, pRads);
+		return eulerFrom(nsquat<T>().from(vec, toVec), order, pRads);
 	}
 
 	NSVec3<T> & floor()
@@ -497,7 +497,7 @@ struct NSVec3
 		return *this;
 	}
 
-	NSVec3<T> & scalingFrom(const NSMat3<T> & transform)
+	NSVec3<T> & scalingFrom(const nsmat3<T> & transform)
 	{
 		x = transform[0].length();
 		y = transform[1].length();
@@ -505,7 +505,7 @@ struct NSVec3
 		return *this;
 	}
 
-	NSVec3<T> & scalingFrom(const NSMat4<T> & transform)
+	NSVec3<T> & scalingFrom(const nsmat4<T> & transform)
 	{
 		x = sqrt(transform[0][0] * transform[0][0] + transform[0][1] * transform[0][1] + transform[0][2] * transform[0][2]);
 		y = sqrt(transform[1][0] * transform[1][0] + transform[1][1] * transform[1][1] + transform[1][2] * transform[1][2]);
@@ -513,7 +513,7 @@ struct NSVec3
 		return *this;
 	}
 
-	NSVec3<T> & translationFrom(const NSMat4<T> & transform)
+	NSVec3<T> & translationFrom(const nsmat4<T> & transform)
 	{
 		return *this = transform(3).xyz();
 	}
@@ -616,9 +616,9 @@ struct NSVec3
 		return x*rhs.x + y*rhs.y + z*rhs.z;
 	}
 
-	NSMat3<T> operator^(const NSVec3<T> & pRHS) const
+	nsmat3<T> operator^(const NSVec3<T> & pRHS) const
 	{
-		NSMat3<T> ret;
+		nsmat3<T> ret;
 		ret[0] = x * pRHS;
 		ret[1] = y * pRHS;
 		ret[2] = z * pRHS;
@@ -898,6 +898,13 @@ struct NSVec3
 			T t;
 			T p;
 		};
+
+		struct
+		{
+			T P;
+			T I;
+			T D;
+		};
 	};
 };
 
@@ -984,23 +991,23 @@ T dot(const NSVec3<T> & pLeft, const NSVec3<T> & pRight)
 template <class T>
 NSVec3<T> euler(const NSVec4<T> & axisAngle, typename NSVec3<T>::EulerOrder order, bool pRads)
 {
-	return NSVec3<T>().eulerFrom(NSQuat<T>().from(axisAngle, pRads), order, pRads);
+	return NSVec3<T>().eulerFrom(nsquat<T>().from(axisAngle, pRads), order, pRads);
 }
 
 template <class T>
-NSVec3<T> euler(const NSQuat<T> & orientation, typename NSVec3<T>::EulerOrder order, bool rads)
+NSVec3<T> euler(const nsquat<T> & orientation, typename NSVec3<T>::EulerOrder order, bool rads)
 {
-	return NSVec3<T>().eulerFrom(NSMat3<T>().rotationFrom(orientation), order, rads);
+	return NSVec3<T>().eulerFrom(nsmat3<T>().rotationFrom(orientation), order, rads);
 }
 
 template <class T>
-NSVec3<T> euler(const NSMat3<T> & rotationMat3, typename NSVec3<T>::EulerOrder order, bool pRads)
+NSVec3<T> euler(const nsmat3<T> & rotationMat3, typename NSVec3<T>::EulerOrder order, bool pRads)
 {
 	return NSVec3<T>().eulerFrom(rotationMat3, order, pRads);
 }
 
 template <class T>
-NSVec3<T> euler(const NSMat4<T> & transform, typename NSVec3<T>::EulerOrder order, bool pRads)
+NSVec3<T> euler(const nsmat4<T> & transform, typename NSVec3<T>::EulerOrder order, bool pRads)
 {
 	return NSVec3<T>().eulerFrom(transform, order, pRads);
 }
@@ -1008,7 +1015,7 @@ NSVec3<T> euler(const NSMat4<T> & transform, typename NSVec3<T>::EulerOrder orde
 template <class T>
 NSVec3<T> euler(const NSVec3<T> & vec, const NSVec3<T> & toVec, typename NSVec3<T>::EulerOrder order, bool pRads)
 {
-	return NSVec3<T>().eulerFrom(NSQuat<T>().from(vec, toVec), order, pRads);
+	return NSVec3<T>().eulerFrom(nsquat<T>().from(vec, toVec), order, pRads);
 }
 
 template <class T>
@@ -1096,19 +1103,19 @@ NSVec3<T> round(const NSVec3<T> & pVec)
 }
 
 template <class T>
-NSVec3<T> scalingVec(const NSMat3<T> & transform)
+NSVec3<T> scaling_vec(const nsmat3<T> & transform)
 {
 	return NSVec3<T>().scalingFrom(transform);
 }
 
 template <class T>
-NSVec3<T> scalingVec(const NSMat4<T> & transform)
+NSVec3<T> scaling_vec(const nsmat4<T> & transform)
 {
 	return NSVec3<T>().scalingFrom(transform);
 }
 
 template <class T>
-NSVec3<T> translationVec(const NSMat4<T> & transform)
+NSVec3<T> translation_vec(const nsmat4<T> & transform)
 {
 	return NSVec3<T>().translationFrom(transform);
 }

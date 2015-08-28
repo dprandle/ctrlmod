@@ -205,7 +205,7 @@ void NSBoundingBox::_updateVerts()
 	mVerts[7] = mMax;
 }
 
-float RandomFloat(float pHigh, float pLow)
+float random_float(float pHigh, float pLow)
 {
 	return pLow + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (pHigh - pLow)));
 }

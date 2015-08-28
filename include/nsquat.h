@@ -4,64 +4,64 @@
 #include "nsvec4.h"
 
 template <class T>
-NSQuat<T> operator*(const int32_t & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator*(const int32_t & pLHS, const nsquat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator*(const float & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator*(const float & pLHS, const nsquat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator*(const double & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator*(const double & pLHS, const nsquat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator/(const int32_t & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator/(const int32_t & pLHS, const nsquat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator/(const float & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator/(const float & pLHS, const nsquat<T> & pRHS);
 
 template <class T>
-NSQuat<T> operator/(const double & pLHS, const NSQuat<T> & pRHS);
+nsquat<T> operator/(const double & pLHS, const nsquat<T> & pRHS);
 
 template<class T>
-NSQuat<T> orientation(const NSMat3<T> & rotationMat3);
+nsquat<T> orientation(const nsmat3<T> & rotationMat3);
 
 template<class T>
-NSQuat<T> orientation(const NSVec4<T> & axisAngle, bool pRads = false);
+nsquat<T> orientation(const NSVec4<T> & axisAngle, bool pRads = false);
 
 template<class T>
-NSQuat<T> orientation(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order , bool pRads = false);
+nsquat<T> orientation(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order , bool pRads = false);
 
 template<class T>
-NSQuat<T> orientation(const NSVec3<T> & vec, const NSVec3<T> & toVec);
+nsquat<T> orientation(const NSVec3<T> & vec, const NSVec3<T> & toVec);
 
 template<class T>
-NSQuat<T> orientation(const NSMat4<T> & transform);
+nsquat<T> orientation(const nsmat4<T> & transform);
 
 template<class T>
-NSQuat<T> conjugate(const NSQuat<T> & quat);
+nsquat<T> conjugate(const nsquat<T> & quat);
 
 template <class T>
-T dot(const NSQuat<T> & pLeft, const NSQuat<T> & pRight);
+T dot(const nsquat<T> & pLeft, const nsquat<T> & pRight);
 
 template<class T>
-NSQuat<T> inverse(const NSQuat<T> & quat);
+nsquat<T> inverse(const nsquat<T> & quat);
 
 template <class T>
-NSQuat<T> normalize(const NSQuat<T> & quat);
+nsquat<T> normalize(const nsquat<T> & quat);
 
 template <class T>
-NSQuat<T> slerp(const NSQuat<T> & lhs, const NSQuat<T> & rhs, const T & scalingFactor);
+nsquat<T> slerp(const nsquat<T> & lhs, const nsquat<T> & rhs, const T & scalingFactor);
 
 template<class PUPer, class T>
-void pup(PUPer & p, NSQuat<T> & q4);
+void pup(PUPer & p, nsquat<T> & q4);
 
 template <class T>
-struct NSQuat
+struct nsquat
 {
-	NSQuat(const NSQuat<T> & copy) : x(copy.x), y(copy.y), z(copy.z), w(copy.w) {}
-	NSQuat() : x(static_cast<T>(0)), y(static_cast<T>(0)), z(static_cast<T>(0)), w(static_cast<T>(1)) {}
-	NSQuat(const T & pX, const T & pY, const T & pZ, const T & pW) : x(pX), y(pY), z(pZ), w(pW) {}
+	nsquat(const nsquat<T> & copy) : x(copy.x), y(copy.y), z(copy.z), w(copy.w) {}
+	nsquat() : x(static_cast<T>(0)), y(static_cast<T>(0)), z(static_cast<T>(0)), w(static_cast<T>(1)) {}
+	nsquat(const T & pX, const T & pY, const T & pZ, const T & pW) : x(pX), y(pY), z(pZ), w(pW) {}
 
-	NSQuat<T> & conjugate()
+	nsquat<T> & conjugate()
 	{
 		x *= static_cast<T>(-1);
 		y *= static_cast<T>(-1);
@@ -69,7 +69,7 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> & from(const NSVec4<T> & axisAngle, bool pRads = false)
+	nsquat<T> & from(const NSVec4<T> & axisAngle, bool pRads = false)
 	{
 		T ang = axisAngle.w;
 		ang /= static_cast<T>(2);
@@ -85,7 +85,7 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> & from(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool pRads = false)
+	nsquat<T> & from(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool pRads = false)
 	{
 		T c1, c2, c3, s1, s2, s3;
 		if (!pRads)
@@ -162,7 +162,7 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> & from(const NSMat3<T> & rotationMat3)
+	nsquat<T> & from(const nsmat3<T> & rotationMat3)
 	{
 		// http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/index.htm
 
@@ -203,12 +203,12 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> & from(const NSMat4<T> & transform)
+	nsquat<T> & from(const nsmat4<T> & transform)
 	{
 		return *this;
 	}
 
-	NSQuat<T> & from(const NSVec3<T> & vec, const NSVec3<T> & toVec)
+	nsquat<T> & from(const NSVec3<T> & vec, const NSVec3<T> & toVec)
 	{
 		/* http://www.euclideanspace.com/maths/algebra/vectors/angleBetween/index.htm */
 		T real = static_cast<T>(1) + vec * toVec;
@@ -222,7 +222,7 @@ struct NSQuat
 		return (*this).normalize();
 	}
 
-	NSQuat<T> & invert()
+	nsquat<T> & invert()
 	{
 		return conjugate().normalize();
 	}
@@ -237,7 +237,7 @@ struct NSQuat
 		return x*x + y*y + z*z + w*w;
 	}
 
-	NSQuat<T> & normalize()
+	nsquat<T> & normalize()
 	{
 		T l = length();
 		if (l == static_cast<T>(0))
@@ -247,12 +247,12 @@ struct NSQuat
 
 	NSVec3<T> right() const
 	{
-		NSMat3<T> rot = rotationMat3(*this);
+		nsmat3<T> rot = rotationMat3(*this);
 		return rot.transpose().right();
 		//return NSVec3<T>(1.0f - 2.0f*y*y - 2.0f*z*z, 2.0f*x*y - 2.0f*w*z, 2.0f*x*z + 2.0f*w*y);
 	}
 
-	NSQuat<T> & roundToZero()
+	nsquat<T> & roundToZero()
 	{
 		if (abs(x) < EPS)
 			x = 0;
@@ -265,19 +265,19 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> & set(const T & pX, const T & pY, const T & pZ, const T & pW)
+	nsquat<T> & set(const T & pX, const T & pY, const T & pZ, const T & pW)
 	{
 		x = pX; y = pY; z = pZ; w = pW;
 		return *this;
 	}
 
-	NSQuat<T> & setIdentity()
+	nsquat<T> & setIdentity()
 	{
 		x = static_cast<T>(0); y = static_cast<T>(0); z = static_cast<T>(0); z = static_cast<T>(1);
 		return *this;
 	}
 
-	NSQuat<T> & slerp(const NSQuat<T> & second, const T & scalingFactor)
+	nsquat<T> & slerp(const nsquat<T> & second, const T & scalingFactor)
 	{
 		T cosHalfTheta = dot(*this, second);
 
@@ -312,7 +312,7 @@ struct NSQuat
 
 	NSVec3<T> target() const
 	{
-		NSMat3<T> rot = rotationMat3(*this);
+		nsmat3<T> rot = rotationMat3(*this);
 		return rot.transpose().target();
 		//return NSVec3<T>(2.0f*x*z - 2.0f*w*y, 2.0f*y*z + 2.0f*w*x, 1.0f - 2.0f*x*x - 2.0f*y*y);
 	}
@@ -326,25 +326,25 @@ struct NSQuat
 
 	NSVec3<T> up() const
 	{
-		NSMat3<T> rot = rotationMat3(*this);
+		nsmat3<T> rot = rotationMat3(*this);
 		return rot.transpose().up();
 		//return NSVec3<T>(2.0f*x*y + 2.0f*w*z, 1.0f - 2.0f*x*x - 2.0f*z*z, 2.0f*y*z - 2.0f*w*x);
 	}
 
 	// overloaded operators
-	NSQuat<T> operator+(const NSQuat<T> & rhs) const
+	nsquat<T> operator+(const nsquat<T> & rhs) const
 	{
-		return NSQuat<T>(x + rhs.x, y + rhs.y, z + rhs.z, w + rhs.w);
+		return nsquat<T>(x + rhs.x, y + rhs.y, z + rhs.z, w + rhs.w);
 	}
 
-	NSQuat<T> operator-(const NSQuat<T> & rhs) const
+	nsquat<T> operator-(const nsquat<T> & rhs) const
 	{
-		return NSQuat<T>(x - rhs.x, y - rhs.y, z - rhs.z, w - rhs.w);
+		return nsquat<T>(x - rhs.x, y - rhs.y, z - rhs.z, w - rhs.w);
 	}
 
-	NSQuat<T> operator*(const NSQuat<T> & rhs) const
+	nsquat<T> operator*(const nsquat<T> & rhs) const
 	{
-		NSQuat<T> ret;
+		nsquat<T> ret;
 		ret.x = w*rhs.x + x*rhs.w + y*rhs.z - z*rhs.y;
 		ret.y = w*rhs.y - x*rhs.z + y*rhs.w + z*rhs.x;
 		ret.z = w*rhs.z + x*rhs.y - y*rhs.x + z*rhs.w;
@@ -352,14 +352,14 @@ struct NSQuat
 		return ret;
 	}
 
-	NSQuat<T> operator/(const NSQuat<T> & rhs) const
+	nsquat<T> operator/(const nsquat<T> & rhs) const
 	{
 		return *this * inverse(rhs);
 	}
 
-	NSQuat<T> operator%(const NSQuat<T> & rhs) const // component wise scalar product
+	nsquat<T> operator%(const nsquat<T> & rhs) const // component wise scalar product
 	{
-		return NSQuat<T>(x*rhs.x, y*rhs.y, z*rhs.z, w*rhs.w);
+		return nsquat<T>(x*rhs.x, y*rhs.y, z*rhs.z, w*rhs.w);
 	}
 
 	NSVec3<T> operator*(const NSVec3<T> & rhs) const
@@ -377,17 +377,17 @@ struct NSQuat
 		return ret;
 	}
 
-	NSQuat<T> operator*(const T & rhs) const
+	nsquat<T> operator*(const T & rhs) const
 	{
-		return NSQuat<T>(x * rhs, y * rhs, z * rhs, w * rhs);
+		return nsquat<T>(x * rhs, y * rhs, z * rhs, w * rhs);
 	}
 
-	NSQuat<T> operator/(const T & rhs) const
+	nsquat<T> operator/(const T & rhs) const
 	{
-		return NSQuat<T>(x / rhs, y / rhs, z / rhs, w / rhs);
+		return nsquat<T>(x / rhs, y / rhs, z / rhs, w / rhs);
 	}
 
-	NSQuat<T> & operator=(const NSQuat<T> & rhs)
+	nsquat<T> & operator=(const nsquat<T> & rhs)
 	{
 		if (this == &rhs)
 			return *this;
@@ -398,78 +398,78 @@ struct NSQuat
 		return *this;
 	}
 
-	NSQuat<T> operator++(int32_t)
+	nsquat<T> operator++(int32_t)
 	{
-		NSQuat<T> ret(*this);
+		nsquat<T> ret(*this);
 		++(*this);
 		return ret;
 	}
 
-	NSQuat<T> operator--(int32_t)
+	nsquat<T> operator--(int32_t)
 	{
-		NSQuat<T> ret(*this);
+		nsquat<T> ret(*this);
 		--(*this);
 		return ret;
 	}
 
-	NSQuat<T> & operator++()
+	nsquat<T> & operator++()
 	{
 		++x; ++y; ++z; ++w;
 		return *this;
 	}
 
-	NSQuat<T> & operator--()
+	nsquat<T> & operator--()
 	{
 		--x; --y; --z; --w;
 		return *this;
 	}
 
-	NSQuat<T> & operator+=(const NSQuat<T> & rhs)
+	nsquat<T> & operator+=(const nsquat<T> & rhs)
 	{
 		x += rhs.x; y += rhs.y; z += rhs.z; w += rhs.w;
 		return *this;
 	}
 
-	NSQuat<T> & operator-=(const NSQuat<T> & rhs)
+	nsquat<T> & operator-=(const nsquat<T> & rhs)
 	{
 		x -= rhs.x; y -= rhs.y; z -= rhs.z; w -= rhs.w;
 		return *this;
 	}
 
-	NSQuat<T> & operator*=(const NSQuat<T> & rhs)
+	nsquat<T> & operator*=(const nsquat<T> & rhs)
 	{
 		return *this = *this * rhs;
 	}
 
-	NSQuat<T> & operator/=(const NSQuat<T> & rhs)
+	nsquat<T> & operator/=(const nsquat<T> & rhs)
 	{
 		return *this = *this * inverse(rhs);
 	}
 
-	NSQuat<T> & operator%=(const NSQuat<T> & rhs)
+	nsquat<T> & operator%=(const nsquat<T> & rhs)
 	{
 		x *= rhs.x; y *= rhs.y; z *= rhs.z; w *= rhs.w;
 		return *this;
 	}
 
-	NSQuat<T> & operator*=(const T & rhs)
+	nsquat<T> & operator*=(const T & rhs)
 	{
 		x *= rhs; y *= rhs; z *= rhs; w *= rhs;
 		return *this;
 	}
 
-	NSQuat<T> & operator/=(const T & rhs)
+	nsquat<T> & operator/=(const T & rhs)
 	{
 		x /= rhs; y /= rhs; z /= rhs; w /= rhs;
 		return *this;
 	}
 
-	bool operator==(const NSQuat<T> & rhs) const
+	bool operator==(const nsquat<T> & rhs) const
 	{
 		return ((x == rhs.x) && (y == rhs.y) && (z == rhs.z) && (w == rhs.w));
 	}
 
-	bool operator!=(const NSQuat<T> & rhs) const
+	bool operator!=(const nsquat<T> & rhs) const
 	{
 		return !(*this == rhs);
 	}
@@ -521,103 +521,103 @@ struct NSQuat
 };
 
 template <class T>
-NSQuat<T> operator*(const int32_t & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator*(const int32_t & pLHS, const nsquat<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
 
 template <class T>
-NSQuat<T> operator*(const float & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator*(const float & pLHS, const nsquat<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
 
 template <class T>
-NSQuat<T> operator*(const double & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator*(const double & pLHS, const nsquat<T> & pRHS)
 {
 	return pRHS * static_cast<T>(pLHS);
 }
 
 template <class T>
-NSQuat<T> operator/(const int32_t & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator/(const int32_t & pLHS, const nsquat<T> & pRHS)
 {
-	return NSQuat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
+	return nsquat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
 }
 
 template <class T>
-NSQuat<T> operator/(const float & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator/(const float & pLHS, const nsquat<T> & pRHS)
 {
-	return NSQuat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
+	return nsquat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
 }
 
 template <class T>
-NSQuat<T> operator/(const double & pLHS, const NSQuat<T> & pRHS)
+nsquat<T> operator/(const double & pLHS, const nsquat<T> & pRHS)
 {
-	return NSQuat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
+	return nsquat<T>(pLHS / pRHS.x, pLHS / pRHS.y, pLHS / pRHS.z, pLHS / pRHS.w);
 }
 
 template <class T>
-T dot(const NSQuat<T> & left, const NSQuat<T> & right)
+T dot(const nsquat<T> & left, const nsquat<T> & right)
 {
 	return left.a*right.a + left.b*right.b + left.c*right.c + left.d*right.d;
 }
 
 template<class T>
-NSQuat<T> conjugate(const NSQuat<T> & quat)
+nsquat<T> conjugate(const nsquat<T> & quat)
 {
-	return NSQuat<T>(quat).conjugate();
+	return nsquat<T>(quat).conjugate();
 }
 
 template<class T>
-NSQuat<T> inverse(const NSQuat<T> & quat)
+nsquat<T> inverse(const nsquat<T> & quat)
 {
-	return NSQuat<T>(quat).invert();
+	return nsquat<T>(quat).invert();
 }
 
 template <class T>
-NSQuat<T> normalize(const NSQuat<T> & quat)
+nsquat<T> normalize(const nsquat<T> & quat)
 {
-	return NSQuat<T>(quat).normalize();
+	return nsquat<T>(quat).normalize();
 }
 
 template<class T>
-NSQuat<T> orientation(const NSMat3<T> & rotationMat3)
+nsquat<T> orientation(const nsmat3<T> & rotationMat3)
 {
-	return NSQuat<T>().from(rotationMat3);
+	return nsquat<T>().from(rotationMat3);
 }
 
 template<class T>
-NSQuat<T> orientation(const NSVec4<T> & axisAngle, bool pRads)
+nsquat<T> orientation(const NSVec4<T> & axisAngle, bool pRads)
 {
-	return NSQuat<T>().from(axisAngle, pRads);
+	return nsquat<T>().from(axisAngle, pRads);
 }
 
 template<class T>
-NSQuat<T> orientation(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool pRads)
+nsquat<T> orientation(const NSVec3<T> & euler, typename NSVec3<T>::EulerOrder order, bool pRads)
 {
-	return NSQuat<T>().from(euler,order,pRads);
+	return nsquat<T>().from(euler,order,pRads);
 }
 
 template<class T>
-NSQuat<T> orientation(const NSVec3<T> & vec, const NSVec3<T> & toVec)
+nsquat<T> orientation(const NSVec3<T> & vec, const NSVec3<T> & toVec)
 {
-	return NSQuat<T>().from(vec, toVec);
+	return nsquat<T>().from(vec, toVec);
 }
 
 template<class T>
-NSQuat<T> orientation(const NSMat4<T> & transform)
+nsquat<T> orientation(const nsmat4<T> & transform)
 {
-	return NSQuat<T>().from(transform);
+	return nsquat<T>().from(transform);
 }
 
 template <class T>
-NSQuat<T> slerp(const NSQuat<T> & lhs, const NSQuat<T> & rhs, const T & scalingFactor)
+nsquat<T> slerp(const nsquat<T> & lhs, const nsquat<T> & rhs, const T & scalingFactor)
 {
-	return NSQuat<T>(lhs).slerp(rhs, scalingFactor);
+	return nsquat<T>(lhs).slerp(rhs, scalingFactor);
 }
 
 template<class PUPer, class T>
-void pup(PUPer & p, NSQuat<T> & q4, const std::string & varName)
+void pup(PUPer & p, nsquat<T> & q4, const std::string & varName)
 {
 	pup(p, q4.x, varName + ".x"); pup(p, q4.y, varName + ".y"); pup(p, q4.z, varName + ".z"); pup(p, q4.w, varName + ".w");
 }

@@ -5,6 +5,8 @@
 #include <edglobal.h>
 #include <edrplidar_packets.h>
 
+struct nav_message;
+
 class edlogging_system : public edsystem
 {
   public:
@@ -24,7 +26,8 @@ class edlogging_system : public edsystem
 	void log_device_info(info_data_packet * data);
 	void log_device_health(health_data_packet * data);
 	void log_device_firware(firmware_data_packet * data);
-    void log_scan(complete_scan_data_packet * scand);	
+    void log_scan(complete_scan_data_packet * scand);
+	void log_nav_message(nav_message * nmsg);	
 };
 
 

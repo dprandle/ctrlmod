@@ -91,9 +91,6 @@ bool edthreaded_fd::running()
 
 int32_t edthreaded_fd::fd()
 {
-//	pthread_mutex_lock(&m_fd_lock);
-//	int32_t ret = m_fd;
-//	pthread_mutex_lock(&m_fd_lock);
 	return m_fd;
 }
 

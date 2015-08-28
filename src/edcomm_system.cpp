@@ -15,8 +15,9 @@
 
 Command::Command()
 {
-    zero_buf(data,8);
+    zero_buf(data,COMMAND_BYTE_SIZE);
 }
+
 edcomm_system::edcomm_system():
     m_server_fd(0),
 	m_port(0),
@@ -35,6 +36,7 @@ void edcomm_system::init()
     edm.message_dispatch()->register_listener<rplidar_firmware_message>(this);
     edm.message_dispatch()->register_listener<rplidar_scan_message>(this);
 	edm.message_dispatch()->register_listener<pulsed_light_message>(this);
+	edm.message_dispatch()->register_listener<nav_message>(this);
 
     m_server_fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);//
 	if (m_server_fd < 0)
@@ -79,6 +81,7 @@ bool edcomm_system::process(edmessage * msg)
     rplidar_firmware_message * fmsg = NULL;
     rplidar_scan_message * smsg = NULL;
 	pulsed_light_message * plmsg = NULL;
+	nav_message * navmsg = NULL;
     uint32_t hashid;
     data_packet * dp = NULL;
 
@@ -115,6 +118,13 @@ bool edcomm_system::process(edmessage * msg)
 		hashid = hash_id(pulsed_light_message::Type());
 		sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
 		sendToClients(plmsg->data, plmsg->size());
+		return true;
+	}
+    else if ( (navmsg = dynamic_cast<nav_message*>(msg)))
+	{
+		hashid = hash_id(nav_message::Type());
+		sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
+		sendToClients(navmsg->data, navmsg->size());
 		return true;
 	}
 	else
@@ -210,7 +220,7 @@ void edcomm_system::_handle_byte(uint8_t byte)
 {
     m_cur_cmd.data[m_cur_index] = byte;
     ++m_cur_index;
-    if (m_cur_index == 8)
+    if (m_cur_index == COMMAND_BYTE_SIZE)
     {
         _do_command();
         m_cur_index = 0;
@@ -221,13 +231,31 @@ void edcomm_system::_handle_byte(uint8_t byte)
 void edcomm_system::_do_command()
 {
     uint32_t rphash = hash_id(rplidar_request::Type());
+	uint32_t nav_sys_command = hash_id(nav_system_request::Type());
+	
     if (m_cur_cmd.hash_id == rphash)
     {
         rplidar_request::req_type rt = static_cast<rplidar_request::req_type>(m_cur_cmd.cmd_data);
+		std::cout << "Sending rplidar request type: " << rt << std::endl;
         rplidar_request * req = edm.message_dispatch()->push<rplidar_request>();
         if (req != NULL)
             req->r_type = rt;
     }
+	else if (m_cur_cmd.hash_id == nav_sys_command)
+	{
+		nav_system_request * rmsg = edm.message_dispatch()->push<nav_system_request>();
+		if (rmsg != NULL)
+		{
+			rmsg->pid.set(m_cur_cmd.cmd_data_d,m_cur_cmd.cmd_data_d2, m_cur_cmd.cmd_data_d3);
+			rmsg->ramp_limit = m_cur_cmd.cmd_data_d4;
+			rmsg->complex_der = ((m_cur_cmd.cmd_data & 0x01) == 0x01);
+			rmsg->anti_reset_winding = ((m_cur_cmd.cmd_data & 0x10) == 0x10);
+			rmsg->threshold_dropout = ((m_cur_cmd.cmd_data & 0x0100) == 0x0100);
+			rmsg->bias_vec.set(m_cur_cmd.cmd_data_d6, m_cur_cmd.cmd_data_d5);
+			rmsg->g_factor = m_cur_cmd.cmd_data_d7;
+			rmsg->bias_threshold_dist = m_cur_cmd.cmd_data_d8;
+		}
+	}
 }
 
 void edcomm_system::_sendScan(rplidar_scan_message * scanmessage)

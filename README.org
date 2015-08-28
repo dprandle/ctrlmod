@@ -4,9 +4,44 @@ The edison control module is a program that runs on the edison and integrates th
 
 Software is also being developed for opening a socket with the edison and visualizing the received data. The software is called "scanview" and is available for source download at https://github.com/dprandle/scanview.
 
-Though the software is set up for this particular application, it is written in such a way that allows for many other applications as well. This document will give an overview of the main software framework features.
+Though the software is set up for this particular application, it is written in such a way that allows for many other applications as well. This document will give an overview of the main software framework features. Before going in to the software, the hardware neccessary is shown.
 
-** Main Control
+** Harware Hookup Guide
+
+A list of required components is given below.
+
+#+CAPTION: Parts necessary for edison control system
+#+NAME:   fig:HOOKUP
+| Part            | Price    | Qty | Website                                                    |
+|-----------------+----------+-----+------------------------------------------------------------|
+| Intel Edison    | $49.95   |   1 | https://www.adafruit.com/products/2112                     |
+| I2C Block       | $14.95   |   1 | https://www.sparkfun.com/products/13034                    |
+| UART Block      | $24.95   |   1 | https://www.sparkfun.com/products/13040                    |
+| 9DOF IMU Block  | $34.95   |   1 | https://www.sparkfun.com/products/13033                    |
+| GPIO Block      | $14.95   |   1 | https://www.sparkfun.com/products/13038                    |
+| RPLidar Scanner | $398.90  |   1 | http://www.robotshop.com/en/rplidar-360-laser-scanner.html |
+| LIDAR Light     | $114.95  |   2 | https://www.sparkfun.com/products/13680                    |
+|-----------------+----------+-----+------------------------------------------------------------|
+| TOTAL           | $768.55  |
+
+#+TBLFM: $2={49.95+14.95+24.95+34.95+14.95+398.90+2*114.95}
+
+With these components, the system can be setup according to the following hookup diagram:
+
+#+CAPTION: Pin diagram for edison, stacks, range finders, and lidar
+#+NAME:   fig:HOOKUP
+[[./doc/hookup/schemeit-project.png]]
+
+Keep in mind that the edison needs to have Yocto linux flashed to it before ctrlmod will work at all. Its also a good idea to update the mraa library to the latest version hosted on github. The instructions of how to do this are available on the github page.
+https://github.com/intel-iot-devkit/mraa
+
+This may not be necessary though - the only thing currently that uses mraa is the gpio pins connected to the range finders. I beleive that the stock version of mraa included with the latest Yocto distro will work just fine for this.
+
+** Software Documentation
+
+Following, some of the most important software features are described. Documentation is currently being developed for the code itself, and when finished will be available under the doc folder. The file "annotated.html" is the entry point for the html documentation, and the file "annotated.tex" is the entry point for the latex documentation. Also, a hyperlinked pdf file should be made available soon.
+
+*** Main Control
 
 The main edison control point is a class called edmctrl - this stands for edison main control. To access the functions of this class the following macro is defined.
   
@@ -101,8 +136,7 @@ int main(int argc, char * argv[])
 }
 #+END_SRC
 
-
-** Systems
+*** Systems
 
 The main unit of interest in the control module is called the "system". The control module consists of several systems which each update and do work every frame. The base class for a system is shown below.
 
@@ -129,7 +163,7 @@ class edsystem
 
 The functions shown above each serve a purpose.
 
-*** init()
+**** init()
 
 At startup, the module goes through each registered system and calls the init function. This function can be thought of as the "setup" function for those are are used to arduino environment.
 
@@ -141,21 +175,21 @@ edm->message_dispatch()->register_listener<complete_scan_message>(this);
 
 Now, any messages of type "complete_scan_message" would be sent to this system for processing (via the "process" function).
 
-*** update()
+**** update()
 
 Every frame the update function is called. This would be equivalent to the arduino "loop" function. It is usually a good idea to avoid blocking calls here as it may mess up other systems.
    
-*** release()
+**** release()
 
 When using a microprocessor with an operating system, it is necessary to release some types of resources before shutdown. Also, if a system is to be added/removed dynamically (for example sensor hotswap), then there needs to be a function that is called when the system is removed to free the resources.
 
 In this function you would free all resources allocated with init. The most important example - if you created separate threads to do work then these should be stopped here. The operating system will kill threads automatically on program shutdown except for the case when main is exited with pthread_exit(). In that case the threads will continue running until they reach their stop point (could be never) or until edison shuts down.
 
-*** process(edmessage * msg)
+**** process(edmessage * msg)
 
 Each system receives messages that they have registered interest in here. The type "edmessage" is a struct which can be subclassed to create a custom message type. To get to the message type of interest, it is neccessary to cast the pointer. You can do this with dynamic cast and it is not neccessary to check the type string (more on type string later), or you can use the type string to know which message type has arravied and cast accordingly. For example - if "complete_scan_message" is a message of interest, the following could be used.
 
-**** Using dynamic cast
+***** Using dynamic cast
 
 #+BEGIN_SRC c++
 complete_scan_message * casted_msg = dynamic_cast<complete_scan_message*>(msg);
@@ -166,7 +200,7 @@ if (casted_msg != NULL)
 }
 #+END_SRC
 
-**** Using type string and static cast
+***** Using type string and static cast
 
 #+BEGIN_SRC c++
 if (msg->type() == "complete_scan_message")
@@ -180,7 +214,7 @@ Dynamic casts require some overhead (where as static casts require none) but the
 
 This function should almost always return true - if false is returned the message is not removed from the system's message buffer. This can be used to an advantage - for example if there is some condition that must be satisfied before a message can be handled, false can be returned when handling the message until that condition is met, and then true can be returned and the message will be removed from the buffer. No other messages will be processed during this time however.
 
-*** typestr()
+**** typestr()
 
 Any time a new system is created it must return a typestring to identify the system - preferably a string that is the exact same as the system name. A static function must be created with the name TypeString() to return the string also. The best way to do it is to make TypeString() return the string, and then typestr() should just call TypeString(). The edmctrl object uses this string to store and retreive systems.
 
@@ -212,11 +246,11 @@ class edlogging_system : public edsystem
 };
 #+END_SRC
 
-** Messages
+*** Messages
 
 The messaging implementation involves custom message types which are dispatched to systems of interest.
 
-*** Message dispatch
+**** Message dispatch
 
 The message dispatch object allows systems to register interest in messages and allows messages to be pushed to all interested systems. If a certain message has no registered interested systems then a NULL pointer will be returned on pushing the message.
 
@@ -287,7 +321,7 @@ One thing to realize is that "push" pushes messages to the back of the buffer, a
 
 The function process_all will immediately call process on a system for all messages in the system's message buffer (unless the system returns false in its process function - then processing messages will end there).
 
-*** Custom Messages
+**** Custom Messages
 
 It is possible to create any custom type of message by subclassing the edmessage structure. The class declaration is shown below.
 
@@ -372,7 +406,7 @@ if (msg != NULL)
 
 It is necessary to check for NULL because if no systems have registered interest then a message will not be created and NULL will be returned.
 
-** Timers and Callbacks
+*** Timers and Callbacks
 
 It is possible to use timers and callbacks to make something happen in a certain amount of time. A callback can be made by subclassing edcallback and reimplementing the exec() function. The edtimer_callback class is used with timers - this has a member pointer to the timer allowing modifications to be made to the timer from within the callback (for example the callback can stop the timer).
 
@@ -479,7 +513,7 @@ void custom_system::update()
 
 It is also possible to pause and continue timers - this will make it so that elapsed time will not reset to zero but callbacks and dt and everything else will work normally.
 
-** Threaded File Descriptors
+*** Threaded File Descriptors
 
 In linux, everything is a file. This includes i2c, uart, gpio, and socket devices. To make it easier to use these devices, a threaded file descriptor class is in place. This allows the user to read and write from these devices freely without having to worry about blocking issues, or if non-blocking is set then without needing to keep a buffer to store data that needs to be written (this would be necessary because in non-blocking mode writing can fail if the device is not ready for more data).
 
@@ -534,7 +568,7 @@ Calls to read will return how many bytes were actually read. If it returns 0 the
 
 Each file descriptor device has a class written for it, and each one is a little bit different and offers more or less functions to communicate with the device. See the documentation for sepecifics on how to use a particular device type.
 
-In any case - the communication with the devices is asynchronous to the main thread unless a blocking call is specified. For example, i2c offers a blocking call readByte because it may be necessary to get a byte from a i2c device's register before continuing initialization. It is not a good idea to use blocking calls in any of the update functions. It is always possible to come up with a way to do the same in a non blocking fashion.
+In any case - the communication with the devices is asynchronous to the main thread unless a blocking call is specified. For example, i2c offers a blocking call read_byte because it may be necessary to get a byte from a i2c device's register before continuing initialization. It is not a good idea to use blocking calls in any of the update functions. It is always possible to come up with a way to do the same in a non blocking fashion.
 
 ** Building
 
@@ -585,3 +619,7 @@ Qt Creator offers a great way to build, deploy, and debug the program running on
 http://www.samontab.com/web/2015/02/cross-platform-development-for-intel-edison-using-cmake-and-qt-creator32-and-64-bits/
 
 Do not worry about the Edison.cmake, QtCreatorDeployment.txt, or CMakeLists.txt files portion of the guide as these have already been set up and should be downloaded when cloning the project. However, if devloping on windows the Edison.cmake file will need to be edited to reference the windows directories rather than the linux directories.
+** Known Issues
+   -Need gaurd bands on all PID controlled values. Instead of the altitude PID trying to correct throttle until the altitude is exactly in the middle of the room for example, it should try to correct it to being within some distance.
+   --The likely place to fix this would be in the file edpid_controller. A class member could be added to contain some threshold value that the input error value must be greater than in order for the PID to do anything. By default the value could be zero which would be the same as no threshold value.
+   -- Another option for fixing the problem would be to filter the scaled values on the arduino board. Since all values from the edison are scaled values between -500 and 500, the arduino could simply ignore values between +/- 50 for example.
