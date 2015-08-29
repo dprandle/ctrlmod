@@ -50,7 +50,7 @@ void ednav_system::init()
 	
 	// Set up timer for 20 Hz transmission
 	m_nav_timer->set_callback_mode(edtimer::continous_shot);
-	m_nav_timer->set_callback_delay(100.0); // 50 ms = 20 Hz
+	m_nav_timer->set_callback_delay(50.0); // 50 ms = 20 Hz
 	m_nav_timer->set_callback(new instruction_callback(this));
 	m_nav_timer->start();
 }

@@ -30,7 +30,7 @@ With these components, the system can be setup according to the following hookup
 
 #+CAPTION: Pin diagram for edison, stacks, range finders, and lidar
 #+NAME:   fig:HOOKUP
-[[./doc/hookup/schemeit-project.png]]
+[[file:./doc/hookup/schemeit-project.png]]
 
 Keep in mind that the edison needs to have Yocto linux flashed to it before ctrlmod will work at all. Its also a good idea to update the mraa library to the latest version hosted on github. The instructions of how to do this are available on the github page.
 https://github.com/intel-iot-devkit/mraa
@@ -40,6 +40,129 @@ This may not be necessary though - the only thing currently that uses mraa is th
 ** Software Documentation
 
 Following, some of the most important software features are described. Documentation is currently being developed for the code itself, and when finished will be available under the doc folder. The file "annotated.html" is the entry point for the html documentation, and the file "annotated.tex" is the entry point for the latex documentation. Also, a hyperlinked pdf file should be made available soon.
+
+*** Overview
+
+A software flow chart for the edison control module is shown below.
+
+#+CAPTION: Basic flow diagram for software
+#+NAME:   fig:SOFTWARE_BLOCK
+[[file:./doc/software_block.png]]
+
+The edison software is dependent on systems to do work. Each system has an init function, release function, process function, and update function which are called according to the above block diagram (process not shown but it is called immediately following update for each system). See the System section for more details about how to implement a custom system.
+
+The systems currently developed for the edison control module are listed below.
+
+**** edrplidar_system
+
+This system reads in data from the rplidar scanner and creates a scan message whenever a complete scan has been received. This scan message has the raw scan data which can be used by any interested system (such as the navigation system) to do work. This system also responds to all rplidar commands and creates message responses for those commands requiring a response. For example, a firware message is created in response to the rplidar_reset_request message. The firware message contains an ascii string with firware information.
+
+**** edpl_system
+
+This system reads in both laser range finders and creates a message every 100 ms with the averaged distance for each sensor. The average is taken every 100 ms - the same rate as which messages are created. This interval can be changed by changing the value of msgTimer->set_callback_delay(100) in edrpl_system::init to whatever interval (in milliseconds) is neccessary. The message with both laser range finder's distances will be generated in that same interval. The laser range finder pointed at the ceiling is GPIO_14 while the range finder pointed at the floor is GPIO_15.
+
+**** edlogging_system
+
+This system is set up to log significant messages to file. Currently it logs all of the rplidar response messages (ie the device firware, health, and info messages). It is setup to log scans and navigation messages but currently these are both disabled as testing was being done with these messages and I wanted to make sure that logging them to file wasn't messing anything up. The scan message's "toString" method can be used to log the scan message (ie log_message(scanmsg->toString())).
+
+**** edimu_system
+
+The 9dof sensor communicates with the edison over i2c - and supplies 3 dimensional accelerometer, gyrometer, and magnometer readings. Currently this system is unfinished because it depends on i2c which is still being worked on. The line edm.add_sys<edimu_system>() is commented out for this reason. Once complete, this system should generate imu messages with these 9 values. These values could then be used by all of the other systems.
+
+**** ednav_system
+
+This system responds to pulsed light messages, scan messages, and eventually imu messages in order to issue command messages to the attached board. The attached board currently is the arduino mega, and i2c is used with the arduino mega being the slave and the edison being the master: The arduino is given an address of 0x04. The message sent to the arduino contains 4 16 bit values which are pitch, roll, yaw, and throttle respectively. The format is shown below.
+
+| Variable | Type              | Range       |
+|----------+-------------------+-------------|
+| Pitch    | 16 bit signed int | -500 to 500 |
+| Roll     | 16 bit signed int | -500 to 500 |
+| Yaw      | 16 bit signed int | -500 to 500 |
+| Throttle | 16 bit signed int | -500 to 500 |
+
+The throttle is determined by taking the difference between the ceiling and floor distances and inputting this value as an error in to the altitude PID.
+
+The pitch and roll values are determined by summing all scan vectors in a gravitational force fashion. That is, each unit vector from the origin (scanner location is considered origin) to the scan point is multiplied by a g constant and divided by the distance squared before being summed with the next scan point vector. The resultant vector is considered to be the error value which is input in to the PID because the goal is to have no resultant vector (equally far away from everything).
+
+The G constant is given by the class variable m_G_mult, and can be set using the scanview Qt application.
+
+The Yaw value is determined by looking at the angle between this frame and last frame resultant vectors. Yaw is set so that it would decrease this angle - we want the UAV to try and face the direction in which it should travel. This should be improved once IMU data is available. Rather than taking the angle between this frame's and last frame's resultant vectors, it should take the difference between this frame's resultant and the IMU gyro data.
+
+This data packet is generated and sent to the arduino once every 50 ms. This value can be changed in the ednav_system::init function (the line "m_nav_timer->set_callback_delay(50)").
+
+In addition to sending out this data packet to the arduino over i2c in response to scan and pulsed light messages, this system also responds to the "nav_system_request" message. This message contains desired values for all PID values, the bias_vector, and the bias threshold distance.
+
+The bias vector is a vector that is added to each scan - the idea is to add a goal direction. For instance, if there is nothing very close by then the resultant vector will be very small due to the r^2 relationship - this bias vector would then determine the direction of travel.
+
+The threshold distance is a useful parameter to allow the edison to react to things nearby without influence from the bias vector. That is, if there is any point within the threshold distance the bias vector will not be added to the scan.
+
+If threshold dropout is enabled then non zero navigation commands will only be issued if there is a scan point within the threshold distance. In essence, navigation is disabled completely unless something gets close (within the threshold distance) and then it will kick in, allowing the control module to act as virtual bumper gaurds.
+
+The navigation PID is essentially 4 PIDs combined in to one. A four element vector is used as the PID value type - x component is the pitch, y component is the roll, z component is the yaw, and w component is the throttle.
+
+**** edcomm_system
+
+This system is completely responsible for all socket communication. It takes any messages that may be of interest to observers and transmits them to all connected clients. On startup the comm system creates a server. The port for this server is specified on the command line when starting ctrlmod - for example to start the server on port 3366:
+
+#+BEGIN_SRC python
+~ $ ./ctrlmod -port:3366
+#+END_SRC
+
+If no port is specified then port 2345 is used. Any number of clients can connect to the edison. The client can send rplidar commands to control the scanner and it can send navigation commands to customize the navigation system. The following structure is used to send a command.
+
+#+BEGIN_SRC c++
+struct Command
+{
+    Command();
+
+    union
+    {
+        struct
+        {
+            uint32_t hash_id;
+            uint32_t cmd_data;
+			double cmd_data_d;
+			double cmd_data_d2;
+			double cmd_data_d3;
+			double cmd_data_d4;
+			double cmd_data_d5;
+			double cmd_data_d6;
+			double cmd_data_d7;
+			double cmd_data_d8;
+        };
+        uint8_t data[COMMAND_BYTE_SIZE];
+    };
+};
+#+END_SRC
+
+The hash_id determines the message type and should be filled out by taking the hash of the command name. For example, the following code shows how to send a navigation command - it is used in scanview with Qt socket.
+
+#+BEGIN_SRC c++
+    command_t com_to_send;
+    command_type cmd = static_cast<command_type>(m_ui->m_command_cbox->currentIndex());
+    com_to_send.hash_id = _hash_id("rplidar_request");
+    com_to_send.cmd_data = cmd;
+    m_sckt->write((char*)com_to_send.data, COMMAND_BYTE_SIZE);
+#+END_SRC
+
+The static cast here simply casts a combo box index in to a command type. A command type determines which rplidar command - for example 0 is health request and 5 is reset. See rplidar_request message for the exact enum values. COMMAND_BYTE_SIZE is the size in bytes of the command structure - which is 72. If the structure is extended make sure to extend this value also.
+
+If you want to hash strings that match correctly you can either use the hash_id function in edutility, or you will need to copy paste this function to create the same hash id in other programs that may be communicating with the edison through sockets. I would also suggest just copy pasting the Command structure.
+
+The double data fields can be used to store anything of interest. It is kind of an obtuse and inflexible way to do it but for now that was the quickest way to set it up.
+
+The comm system sends the following messages:
+- rplidar_scan_message
+- rplidar_health_message
+- rplidar_info_message
+- rplidar_error_message
+- rplidar_firmware_message
+- pulsed_light_message
+- nav_message
+
+All of these messages are send exactly as the message structure except for the scan message. The scan message is sent as an array of unsigned 32 bit integers that is twice as large as the number of scan points taken. The first unsigned int is the angle multiplied by 64, and the second unsigned int is the distance multiplied by four. The size of the array is sent right before the vector itself.
+
+For all outgoing messages, the hashed id (which is an 32 bit unsigned integer) is sent before the message itself. This allows the message type to be identified before decoding the message. For the scan message, the first value sent is the 32 bit hashed id, then the 32 bit size of the scan array, and then the array itself.
 
 *** Main Control
 
@@ -619,7 +742,15 @@ Qt Creator offers a great way to build, deploy, and debug the program running on
 http://www.samontab.com/web/2015/02/cross-platform-development-for-intel-edison-using-cmake-and-qt-creator32-and-64-bits/
 
 Do not worry about the Edison.cmake, QtCreatorDeployment.txt, or CMakeLists.txt files portion of the guide as these have already been set up and should be downloaded when cloning the project. However, if devloping on windows the Edison.cmake file will need to be edited to reference the windows directories rather than the linux directories.
+
 ** Known Issues
-- Need gaurd bands on all PID controlled values. Instead of the altitude PID trying to correct throttle until the altitude is exactly in the middle of the room for example, it should try to correct it to being within some distance.
-  The likely place to fix this would be in the file edpid_controller. A class member could be added to contain some threshold value that the input error value must be greater than in order for the PID to do anything. By default the value could be zero which would be the same as no threshold value.
-  Another option for fixing the problem would be to filter the scaled values on the arduino board. Since all values from the edison are scaled values between -500 and 500, the arduino could simply ignore values between +/- 50 for example.
+
+- Need gaurd bands on all PID controlled values :: Instead of the altitude PID trying to correct throttle until the altitude is exactly in the middle of the room for example, it should try to correct it to being within some distance. The likely place to fix this would be in the file edpid_controller. A class member could be added to contain some threshold value that the input error value must be greater than in order for the PID to do anything. By default the value could be zero which would be the same as no threshold value. Another option for fixing the problem would be to filter the scaled values on the arduino board. Since all values from the edison are scaled values between -500 and 500, the arduino could simply ignore values between +/- 50 for example.
+
+- Electrical issues cause rplidar to send nonsense :: I'm not actually sure what causes this, but sometimes (usually when using Arduino as power supply) the rplidar will send sort of garbage scans. Resetting a few times usually fixes the problem and normal scans start to come in. Once normal scans have started I can only get the garbage scans to occur again if I physically disconnect and reconnect power to the system.
+
+- Other grounding issues :: When I was first connecting the system together I was having all sorts of strange issues where sometimes everything would work perfectly and other times 0xFF would be spammed on the TX of either the edison or the rplidar. If I observed this with the arduino (by connecting a wire to listen to edison or rplidar TX) the problem would go away. Eventually I found that there was a loose ground wire. I reconnected using different wires and I removed the intermediate connector that came with the rplidar and everything worked.
+
+- Incomplete Error Checking :: Though I tried to be as throrough as possible, some scenerios are not accounted for by error checking. If strange results are occuring, it may be neccessary to step through the code running on the edison using the qt creator debugger.
+
+- Uart 2 Console :: Currently it is impossible to make use of Uart 2 (the console switch when using Uart block) because the linux console program is attached to the port on edison startup. An edison was ruined when trying to disable this behavior - I changed a startup file to not enable the console and restarted the edison. This caused the edison startup procedure to fail and the edison restarts indefinitely - without any ability to SSH in to it or even re-flash linux. I did find a way to disable and re-enable the console without the need to change any startup files, but I am afraid to do it as I don't want to ruin another edison.

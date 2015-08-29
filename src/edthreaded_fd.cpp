@@ -24,7 +24,7 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_read_buffer.resize(readbuf_, 0);
 	m_write_buffer.resize(writebuf_);
 	
-	m_wait_timer->set_callback_delay(1000);
+	m_wait_timer->set_callback_delay(COMMAND_WAIT_DELAY);
 	m_wait_timer->set_callback_mode(edtimer::single_shot);
 	m_wait_timer->set_callback(new command_wait_callback(this));
 }
