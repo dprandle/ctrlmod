@@ -1,0 +1,135 @@
+\hypertarget{classedmessage__dispatch}{\section{edmessage\-\_\-dispatch Class Reference}
+\label{classedmessage__dispatch}\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}}
+}
+
+
+Class \hyperlink{classedmessage__dispatch}{edmessage\-\_\-dispatch}.  
+
+
+
+
+{\ttfamily \#include $<$edmessage\-\_\-dispatch.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ std\-::string, \\*
+std\-::set$<$ \hyperlink{classedsystem}{edsystem} $\ast$ $>$ $>$ \hyperlink{classedmessage__dispatch_a6fca76f17817a3296ed712c8a2cc52d1}{listener\-\_\-map}
+\item 
+typedef std\-::map$<$ \hyperlink{classedsystem}{edsystem} \\*
+$\ast$, std\-::deque$<$ \hyperlink{structedmessage}{edmessage} $\ast$ $>$ $>$ \hyperlink{classedmessage__dispatch_a4e1b44916d32280f02e952e0e41774bc}{listener\-\_\-queue}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedmessage__dispatch_a8eef1480309ce6b3439b649ed5e94fdc}{edmessage\-\_\-dispatch} ()
+\item 
+virtual \hyperlink{classedmessage__dispatch_ad00ef6c590f2d0aa56ce4ba0c42d8a20}{$\sim$edmessage\-\_\-dispatch} ()
+\item 
+{\footnotesize template$<$class Message\-Type $>$ }\\void \hyperlink{classedmessage__dispatch_a72e810fc8be900d420c5bc4e4e7ed0fb}{register\-\_\-listener} (\hyperlink{classedsystem}{edsystem} $\ast$sys)
+\item 
+{\footnotesize template$<$class Message\-Type $>$ }\\void \hyperlink{classedmessage__dispatch_af2e13b40c33728a19f189bc8dd222d3b}{unregister\-\_\-listener} (\hyperlink{classedsystem}{edsystem} $\ast$sys)
+\item 
+{\footnotesize template$<$class Message\-Type $>$ }\\Message\-Type $\ast$ \hyperlink{classedmessage__dispatch_ab0a4b47e7c90abea073511dc6d72e338}{push} ()
+\item 
+{\footnotesize template$<$class Message\-Type $>$ }\\Message\-Type $\ast$ \hyperlink{classedmessage__dispatch_acc783ed63b9f2dfe3ddb278d4e7518de}{push\-\_\-front} ()
+\item 
+\hyperlink{structedmessage}{edmessage} $\ast$ \hyperlink{classedmessage__dispatch_a62ce8628df9d3bc4b62831514ce586b6}{next} (\hyperlink{classedsystem}{edsystem} $\ast$sys)
+\item 
+void \hyperlink{classedmessage__dispatch_a498a009d4903b42a080ad002021992c3}{pop} (\hyperlink{classedsystem}{edsystem} $\ast$sys)
+\item 
+void \hyperlink{classedmessage__dispatch_aae298910744e7f59cbf0d1e87b9d7fc2}{process\-\_\-all} (\hyperlink{classedsystem}{edsystem} $\ast$sys)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classedmessage__dispatch}{edmessage\-\_\-dispatch}. 
+
+A system can register its interest in certain message types, and any time a message of that type is created it will be added to that system's message queue. This queue is F\-I\-F\-O, and messages will not be deleted until they have been removed from every system's message queue.
+
+Systems can process all messages in their queue by calling process\-\_\-all(system$\ast$) where system$\ast$ is a pointer to whatever system messages should be processed for (likely \char`\"{}this\char`\"{} pointer). Messages are processed by calling the respective system's process function over and over until all messages in the system's message que are gone. If process returns false at any point, no more messages will be processed and process\-\_\-all will return.
+
+You can also process one message at a time by calling next to get the oldest message, and pop to remove that message. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classedmessage__dispatch_a6fca76f17817a3296ed712c8a2cc52d1}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!listener\-\_\-map@{listener\-\_\-map}}
+\index{listener\-\_\-map@{listener\-\_\-map}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{listener\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$ std\-::string, std\-::set$<${\bf edsystem}$\ast$$>$ $>$ {\bf edmessage\-\_\-dispatch\-::listener\-\_\-map}}}\label{classedmessage__dispatch_a6fca76f17817a3296ed712c8a2cc52d1}
+This maps message type names to sets of systems. Any system that registers with a message type will be added to the system set corresponding to that message type. \hypertarget{classedmessage__dispatch_a4e1b44916d32280f02e952e0e41774bc}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!listener\-\_\-queue@{listener\-\_\-queue}}
+\index{listener\-\_\-queue@{listener\-\_\-queue}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{listener\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf edsystem}$\ast$, std\-::deque$<${\bf edmessage}$\ast$$>$ $>$ {\bf edmessage\-\_\-dispatch\-::listener\-\_\-queue}}}\label{classedmessage__dispatch_a4e1b44916d32280f02e952e0e41774bc}
+Listener queue holds a map of system pointers to deques of messages. This is F\-I\-F\-O setup -\/ when a message is added to the queue it is appended to the back and when one is taken, it is taken from the front. This does not actually actually delete the message -\/ the message is not deleted until it is no longer in any of the queues. A reference count is kept within the message itself. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedmessage__dispatch_a8eef1480309ce6b3439b649ed5e94fdc}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}}
+\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{edmessage\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}edmessage\-\_\-dispatch\-::edmessage\-\_\-dispatch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedmessage__dispatch_a8eef1480309ce6b3439b649ed5e94fdc}
+\hypertarget{classedmessage__dispatch_ad00ef6c590f2d0aa56ce4ba0c42d8a20}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!$\sim$edmessage\-\_\-dispatch@{$\sim$edmessage\-\_\-dispatch}}
+\index{$\sim$edmessage\-\_\-dispatch@{$\sim$edmessage\-\_\-dispatch}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{$\sim$edmessage\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}edmessage\-\_\-dispatch\-::$\sim$edmessage\-\_\-dispatch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedmessage__dispatch_ad00ef6c590f2d0aa56ce4ba0c42d8a20}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedmessage__dispatch_a62ce8628df9d3bc4b62831514ce586b6}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!next@{next}}
+\index{next@{next}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edmessage} $\ast$ edmessage\-\_\-dispatch\-::next (
+\begin{DoxyParamCaption}
+\item[{{\bf edsystem} $\ast$}]{sys}
+\end{DoxyParamCaption}
+)}}\label{classedmessage__dispatch_a62ce8628df9d3bc4b62831514ce586b6}
+\hypertarget{classedmessage__dispatch_a498a009d4903b42a080ad002021992c3}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!pop@{pop}}
+\index{pop@{pop}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}void edmessage\-\_\-dispatch\-::pop (
+\begin{DoxyParamCaption}
+\item[{{\bf edsystem} $\ast$}]{sys}
+\end{DoxyParamCaption}
+)}}\label{classedmessage__dispatch_a498a009d4903b42a080ad002021992c3}
+\hypertarget{classedmessage__dispatch_aae298910744e7f59cbf0d1e87b9d7fc2}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!process\-\_\-all@{process\-\_\-all}}
+\index{process\-\_\-all@{process\-\_\-all}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{process\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void edmessage\-\_\-dispatch\-::process\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf edsystem} $\ast$}]{sys}
+\end{DoxyParamCaption}
+)}}\label{classedmessage__dispatch_aae298910744e7f59cbf0d1e87b9d7fc2}
+\hypertarget{classedmessage__dispatch_ab0a4b47e7c90abea073511dc6d72e338}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!push@{push}}
+\index{push@{push}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Message\-Type $>$ Message\-Type$\ast$ edmessage\-\_\-dispatch\-::push (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classedmessage__dispatch_ab0a4b47e7c90abea073511dc6d72e338}
+\hypertarget{classedmessage__dispatch_acc783ed63b9f2dfe3ddb278d4e7518de}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!push\-\_\-front@{push\-\_\-front}}
+\index{push\-\_\-front@{push\-\_\-front}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{push\-\_\-front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Message\-Type $>$ Message\-Type$\ast$ edmessage\-\_\-dispatch\-::push\-\_\-front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classedmessage__dispatch_acc783ed63b9f2dfe3ddb278d4e7518de}
+\hypertarget{classedmessage__dispatch_a72e810fc8be900d420c5bc4e4e7ed0fb}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!register\-\_\-listener@{register\-\_\-listener}}
+\index{register\-\_\-listener@{register\-\_\-listener}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{register\-\_\-listener}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Message\-Type $>$ void edmessage\-\_\-dispatch\-::register\-\_\-listener (
+\begin{DoxyParamCaption}
+\item[{{\bf edsystem} $\ast$}]{sys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classedmessage__dispatch_a72e810fc8be900d420c5bc4e4e7ed0fb}
+\hypertarget{classedmessage__dispatch_af2e13b40c33728a19f189bc8dd222d3b}{\index{edmessage\-\_\-dispatch@{edmessage\-\_\-dispatch}!unregister\-\_\-listener@{unregister\-\_\-listener}}
+\index{unregister\-\_\-listener@{unregister\-\_\-listener}!edmessage_dispatch@{edmessage\-\_\-dispatch}}
+\subsubsection[{unregister\-\_\-listener}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Message\-Type $>$ void edmessage\-\_\-dispatch\-::unregister\-\_\-listener (
+\begin{DoxyParamCaption}
+\item[{{\bf edsystem} $\ast$}]{sys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classedmessage__dispatch_af2e13b40c33728a19f189bc8dd222d3b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edmessage__dispatch_8h}{edmessage\-\_\-dispatch.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edmessage__dispatch_8cpp}{edmessage\-\_\-dispatch.\-cpp}\end{DoxyCompactItemize}

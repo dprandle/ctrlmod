@@ -1,0 +1,194 @@
+\hypertarget{classedtimer}{\section{edtimer Class Reference}
+\label{classedtimer}\index{edtimer@{edtimer}}
+}
+
+
+class edtimer  
+
+
+
+
+{\ttfamily \#include $<$edtimer.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09}{cb\-\_\-mode} \{ \hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a6401fc860ee0413f08594b95216cbd93}{no\-\_\-shot}, 
+\hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a0d89310ad0b56d46e996c74eecaa4fa4}{single\-\_\-shot}, 
+\hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09ab949e0f48e271fc30ddac9e033fa2f69}{continous\-\_\-shot}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedtimer_af3afa47f363c1e707703ad10c4fc2829}{edtimer} ()
+\item 
+\hyperlink{classedtimer_aa0dd7c212ac5a84387d19aef703aa444}{$\sim$edtimer} ()
+\item 
+void \hyperlink{classedtimer_aca8d2329a885239a766ac05fb8be0e9e}{start} ()
+\item 
+void \hyperlink{classedtimer_a03ef77e7fa8f3a78103911a57e7a853b}{update} ()
+\item 
+\hyperlink{structedtimer__callback}{edtimer\-\_\-callback} $\ast$ \hyperlink{classedtimer_a47940c8f28c543ab714e2f8e2fcfb891}{callback} ()
+\item 
+\hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09}{cb\-\_\-mode} \hyperlink{classedtimer_ac17a1a5a49cea8d1bf1d651507f6fa80}{callback\-\_\-mode} ()
+\item 
+double \hyperlink{classedtimer_a5f624b575aca211c1eae1269803e925e}{callback\-\_\-delay} ()
+\item 
+void \hyperlink{classedtimer_afe07b61f497a6f29eab5ac9e501b030c}{cont} ()
+\item 
+void \hyperlink{classedtimer_aa4f6c4cd295e52ec0ed21a4a9040c02b}{stop} ()
+\item 
+void \hyperlink{classedtimer_aeb2c60b9e85b4566cc05523427218267}{set\-\_\-callback} (\hyperlink{structedtimer__callback}{edtimer\-\_\-callback} $\ast$cb)
+\item 
+void \hyperlink{classedtimer_a83f11a6711feb8d0c9896acffeba348b}{set\-\_\-callback\-\_\-mode} (\hyperlink{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09}{cb\-\_\-mode} mode)
+\item 
+void \hyperlink{classedtimer_a01833c50e6c87aae1dd5b5bd002f4dd4}{set\-\_\-callback\-\_\-delay} (double ms)
+\item 
+double \hyperlink{classedtimer_a85b9765fd91c0000da27073676547646}{dt} ()
+\item 
+bool \hyperlink{classedtimer_afa251e84882c066b2335be2f45339bcf}{running} ()
+\item 
+double \hyperlink{classedtimer_adabe667da00fa3dbf0ca25c16c83333e}{elapsed} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class edtimer 
+
+This class keeps track of time allowing you to start, stop, and continue the timer. It also has a \char`\"{}dt\char`\"{} functionality to allow you to see how much time has elapsed since the last update call. This could be useful for various things.
+
+You can also set up the timer to execute a callback every so often (every so many milliseconds) or you can set it to execute once after some delay. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09}{\index{edtimer@{edtimer}!cb\-\_\-mode@{cb\-\_\-mode}}
+\index{cb\-\_\-mode@{cb\-\_\-mode}!edtimer@{edtimer}}
+\subsubsection[{cb\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edtimer\-::cb\-\_\-mode}}}\label{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{no\-\_\-shot@{no\-\_\-shot}!edtimer@{edtimer}}\index{edtimer@{edtimer}!no\-\_\-shot@{no\-\_\-shot}}\item[{\em 
+\hypertarget{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a6401fc860ee0413f08594b95216cbd93}{no\-\_\-shot}\label{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a6401fc860ee0413f08594b95216cbd93}
+}]\index{single\-\_\-shot@{single\-\_\-shot}!edtimer@{edtimer}}\index{edtimer@{edtimer}!single\-\_\-shot@{single\-\_\-shot}}\item[{\em 
+\hypertarget{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a0d89310ad0b56d46e996c74eecaa4fa4}{single\-\_\-shot}\label{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09a0d89310ad0b56d46e996c74eecaa4fa4}
+}]\index{continous\-\_\-shot@{continous\-\_\-shot}!edtimer@{edtimer}}\index{edtimer@{edtimer}!continous\-\_\-shot@{continous\-\_\-shot}}\item[{\em 
+\hypertarget{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09ab949e0f48e271fc30ddac9e033fa2f69}{continous\-\_\-shot}\label{classedtimer_adf4b2a0dcb914d94b59f8dd4a0ae4f09ab949e0f48e271fc30ddac9e033fa2f69}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedtimer_af3afa47f363c1e707703ad10c4fc2829}{\index{edtimer@{edtimer}!edtimer@{edtimer}}
+\index{edtimer@{edtimer}!edtimer@{edtimer}}
+\subsubsection[{edtimer}]{\setlength{\rightskip}{0pt plus 5cm}edtimer\-::edtimer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_af3afa47f363c1e707703ad10c4fc2829}
+\hypertarget{classedtimer_aa0dd7c212ac5a84387d19aef703aa444}{\index{edtimer@{edtimer}!$\sim$edtimer@{$\sim$edtimer}}
+\index{$\sim$edtimer@{$\sim$edtimer}!edtimer@{edtimer}}
+\subsubsection[{$\sim$edtimer}]{\setlength{\rightskip}{0pt plus 5cm}edtimer\-::$\sim$edtimer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_aa0dd7c212ac5a84387d19aef703aa444}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedtimer_a47940c8f28c543ab714e2f8e2fcfb891}{\index{edtimer@{edtimer}!callback@{callback}}
+\index{callback@{callback}!edtimer@{edtimer}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edtimer\-\_\-callback} $\ast$ edtimer\-::callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a47940c8f28c543ab714e2f8e2fcfb891}
+\hypertarget{classedtimer_a5f624b575aca211c1eae1269803e925e}{\index{edtimer@{edtimer}!callback\-\_\-delay@{callback\-\_\-delay}}
+\index{callback\-\_\-delay@{callback\-\_\-delay}!edtimer@{edtimer}}
+\subsubsection[{callback\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}double edtimer\-::callback\-\_\-delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a5f624b575aca211c1eae1269803e925e}
+\hypertarget{classedtimer_ac17a1a5a49cea8d1bf1d651507f6fa80}{\index{edtimer@{edtimer}!callback\-\_\-mode@{callback\-\_\-mode}}
+\index{callback\-\_\-mode@{callback\-\_\-mode}!edtimer@{edtimer}}
+\subsubsection[{callback\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edtimer\-::cb\-\_\-mode} edtimer\-::callback\-\_\-mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_ac17a1a5a49cea8d1bf1d651507f6fa80}
+\hypertarget{classedtimer_afe07b61f497a6f29eab5ac9e501b030c}{\index{edtimer@{edtimer}!cont@{cont}}
+\index{cont@{cont}!edtimer@{edtimer}}
+\subsubsection[{cont}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::cont (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_afe07b61f497a6f29eab5ac9e501b030c}
+\hypertarget{classedtimer_a85b9765fd91c0000da27073676547646}{\index{edtimer@{edtimer}!dt@{dt}}
+\index{dt@{dt}!edtimer@{edtimer}}
+\subsubsection[{dt}]{\setlength{\rightskip}{0pt plus 5cm}double edtimer\-::dt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a85b9765fd91c0000da27073676547646}
+\hypertarget{classedtimer_adabe667da00fa3dbf0ca25c16c83333e}{\index{edtimer@{edtimer}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!edtimer@{edtimer}}
+\subsubsection[{elapsed}]{\setlength{\rightskip}{0pt plus 5cm}double edtimer\-::elapsed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_adabe667da00fa3dbf0ca25c16c83333e}
+\hypertarget{classedtimer_afa251e84882c066b2335be2f45339bcf}{\index{edtimer@{edtimer}!running@{running}}
+\index{running@{running}!edtimer@{edtimer}}
+\subsubsection[{running}]{\setlength{\rightskip}{0pt plus 5cm}bool edtimer\-::running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_afa251e84882c066b2335be2f45339bcf}
+\hypertarget{classedtimer_aeb2c60b9e85b4566cc05523427218267}{\index{edtimer@{edtimer}!set\-\_\-callback@{set\-\_\-callback}}
+\index{set\-\_\-callback@{set\-\_\-callback}!edtimer@{edtimer}}
+\subsubsection[{set\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::set\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{{\bf edtimer\-\_\-callback} $\ast$}]{cb}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_aeb2c60b9e85b4566cc05523427218267}
+\hypertarget{classedtimer_a01833c50e6c87aae1dd5b5bd002f4dd4}{\index{edtimer@{edtimer}!set\-\_\-callback\-\_\-delay@{set\-\_\-callback\-\_\-delay}}
+\index{set\-\_\-callback\-\_\-delay@{set\-\_\-callback\-\_\-delay}!edtimer@{edtimer}}
+\subsubsection[{set\-\_\-callback\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::set\-\_\-callback\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{double}]{ms}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a01833c50e6c87aae1dd5b5bd002f4dd4}
+\hypertarget{classedtimer_a83f11a6711feb8d0c9896acffeba348b}{\index{edtimer@{edtimer}!set\-\_\-callback\-\_\-mode@{set\-\_\-callback\-\_\-mode}}
+\index{set\-\_\-callback\-\_\-mode@{set\-\_\-callback\-\_\-mode}!edtimer@{edtimer}}
+\subsubsection[{set\-\_\-callback\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::set\-\_\-callback\-\_\-mode (
+\begin{DoxyParamCaption}
+\item[{{\bf cb\-\_\-mode}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a83f11a6711feb8d0c9896acffeba348b}
+\hypertarget{classedtimer_aca8d2329a885239a766ac05fb8be0e9e}{\index{edtimer@{edtimer}!start@{start}}
+\index{start@{start}!edtimer@{edtimer}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_aca8d2329a885239a766ac05fb8be0e9e}
+\hypertarget{classedtimer_aa4f6c4cd295e52ec0ed21a4a9040c02b}{\index{edtimer@{edtimer}!stop@{stop}}
+\index{stop@{stop}!edtimer@{edtimer}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_aa4f6c4cd295e52ec0ed21a4a9040c02b}
+\hypertarget{classedtimer_a03ef77e7fa8f3a78103911a57e7a853b}{\index{edtimer@{edtimer}!update@{update}}
+\index{update@{update}!edtimer@{edtimer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void edtimer\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedtimer_a03ef77e7fa8f3a78103911a57e7a853b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edtimer_8h}{edtimer.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edtimer_8cpp}{edtimer.\-cpp}\end{DoxyCompactItemize}

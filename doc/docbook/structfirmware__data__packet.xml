@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structfirmware__data__packet">
+<title>firmware_data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t line1[18]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t line2[29]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t line3[9]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[56]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union firmware_data_packet::@24 @25</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structfirmware__data__packet_1a084123acea6482ea08949203f5ed9f40">firmware_data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structfirmware__data__packet_1a1ff72c5345b4325fd955bb20c9860d89">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structfirmware__data__packet_1a84cd6f60b9d5ef46ab5c4695d6de3d48">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structfirmware__data__packet_1a3231148228aee555265b90ab30fea9ec">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structfirmware__data__packet_1a16d28be180847cb45fc4dbf0417756b9">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structfirmware__data__packet_1ab080f05c847592a2578ee307d5af31fc">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structfirmware__data__packet_1a6b386640d9fa172bfa44c55d63add943">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structfirmware__data__packet_1a91ec8c2d5f0f7f642027b0ed566417d0">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structfirmware__data__packet_1a084123acea6482ea08949203f5ed9f40">
+                <title>firmware_data_packet::firmware_data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a1ff72c5345b4325fd955bb20c9860d89">
+                <title>std::string firmware_data_packet::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a84cd6f60b9d5ef46ab5c4695d6de3d48">
+                <title>virtual std::string firmware_data_packet::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a3231148228aee555265b90ab30fea9ec">
+                <title>virtual uint32_t firmware_data_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a16d28be180847cb45fc4dbf0417756b9">
+                <title>virtual uint8_t&amp; firmware_data_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1ab080f05c847592a2578ee307d5af31fc">
+                <title>virtual uint8_t* firmware_data_packet::dataptr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a6b386640d9fa172bfa44c55d63add943">
+                <title>static std::string firmware_data_packet::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structfirmware__data__packet_1a91ec8c2d5f0f7f642027b0ed566417d0">
+                <title>static uint32_t firmware_data_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

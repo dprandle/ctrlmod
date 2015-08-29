@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="nsmath_8cpp">
+    <title>nsmath.cpp File Reference</title>
+    <programlisting>#include &lt;nsmath.h&gt;</programlisting>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="nsmath_8cpp_1a1c645040f39653d8ed49157cda21617e">FLOAT_EPS</link> 0.00001</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1ac0037ad634637c44e8176c770334f107">clampf</link> (
+float pVal, const float &amp; pMin, const float &amp; pMax)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="nsmath_8cpp_1a9cbea82539a20531ec7f32bab366f5d0">clamp</link> (
+double pVal, const double &amp; pMin, const double &amp; pMax)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1ad427fb54fe66168958cc3158e8709564">fractf</link> (
+const float &amp; num)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="nsmath_8cpp_1a65f775743c6ef3ad0c9a000ccfb7c7f1">fract</link> (
+const double &amp; num)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1a64fd8d2ea96abdd5b3d6907989004389">lerp</link> (
+float low, float high, float middle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="nsmath_8cpp_1a1fa5e1bca75ab08f05566ee710d8154d">lerp</link> (
+double low, double high, double middle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1aa38ffe68436ae4ea5a11c9133885c7b4">lerp</link> (
+int32_t low, int32_t high, int32_t middle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1ac775571e8c509d2b8587986890f25468">lerp</link> (
+uint32_t low, uint32_t high, uint32_t middle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="nsmath_8cpp_1a1ff606849574004511561485222a9df6">random_float</link> (
+float pHigh, float pLow)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/nsmath.cpp</para>
+    </simplesect>
+</section>

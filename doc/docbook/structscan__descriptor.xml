@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structscan__descriptor">
+<title>scan_descriptor struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structscan__descriptor_1a87b90f4822193f3cbaf176109093b709">scan_descriptor</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structscan__descriptor_1a3020edbf9b9ff7e8c50a150050e0ec6f">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structscan__descriptor_1a87b90f4822193f3cbaf176109093b709">
+                <title>scan_descriptor::scan_descriptor ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__descriptor_1a3020edbf9b9ff7e8c50a150050e0ec6f">
+                <title>virtual std::string scan_descriptor::type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

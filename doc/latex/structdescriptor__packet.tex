@@ -1,0 +1,139 @@
+\hypertarget{structdescriptor__packet}{\section{descriptor\-\_\-packet Struct Reference}
+\label{structdescriptor__packet}\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-packets.\-h$>$}
+
+Inheritance diagram for descriptor\-\_\-packet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structdescriptor__packet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdescriptor__packet_acb50c5d7e23d6b85a2310672d9f17e95}{descriptor\-\_\-packet} (uint8\-\_\-t drlen0\-\_\-=0x00, uint8\-\_\-t drlen1\-\_\-=0x00, uint8\-\_\-t drlen2\-\_\-=0x00, uint8\-\_\-t drlen3\-\_\-smode\-\_\-=0x00, uint8\-\_\-t datatype\-\_\-=0x00)
+\item 
+virtual \hyperlink{structdescriptor__packet_acd7f79e7aefbdf4f6b0638ab75df6d46}{$\sim$descriptor\-\_\-packet} ()
+\item 
+virtual std\-::string \hyperlink{structdescriptor__packet_ad08369aae987f91544cee5e8f2267f2f}{type} ()=0
+\item 
+uint32\-\_\-t \hyperlink{structdescriptor__packet_a3b14c4024796ba8b45f582b0bd7d1f50}{size} ()
+\item 
+uint8\-\_\-t \& \hyperlink{structdescriptor__packet_a92b50972015f1bb1b4a99d0f0910c3e3}{operator\mbox{[}$\,$\mbox{]}} (uint32\-\_\-t index)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\-\_\-t \hyperlink{structdescriptor__packet_ab197e4207edc6c708dca8d0b0bbfc098}{Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_a3187e2d5d736ad8ad2e5bfa39832851e}{s1}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_aecf654bc09c8021678564ef2938e9190}{s2}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_afaa19b5c2d3324b188e5f1b24a07c3fb}{drlen0}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_a3f182b48556355988a8f983fb9dc434b}{drlen1}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_ab3437c0152e4a97a832ce80da0075da6}{drlen2}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_afc7b12b3c81172ec5ebf5fe28413dcfd}{drlen3\_smode}\\
+\>\>uint8\_t \hyperlink{structdescriptor__packet_ad1bea15d0f3741d718d82689884c787d}{datatype}\\
+\>\} \\
+\>uint8\_t \hyperlink{structdescriptor__packet_ad0ac7e3aa5ab78a411f748ae0baed2f3}{data} \mbox{[}7\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structdescriptor__packet_acb50c5d7e23d6b85a2310672d9f17e95}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!descriptor\-\_\-packet@{descriptor\-\_\-packet}}
+\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{descriptor\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}descriptor\-\_\-packet\-::descriptor\-\_\-packet (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{drlen0\-\_\- = {\ttfamily 0x00}, }
+\item[{uint8\-\_\-t}]{drlen1\-\_\- = {\ttfamily 0x00}, }
+\item[{uint8\-\_\-t}]{drlen2\-\_\- = {\ttfamily 0x00}, }
+\item[{uint8\-\_\-t}]{drlen3\-\_\-smode\-\_\- = {\ttfamily 0x00}, }
+\item[{uint8\-\_\-t}]{datatype\-\_\- = {\ttfamily 0x00}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structdescriptor__packet_acb50c5d7e23d6b85a2310672d9f17e95}
+\hypertarget{structdescriptor__packet_acd7f79e7aefbdf4f6b0638ab75df6d46}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!$\sim$descriptor\-\_\-packet@{$\sim$descriptor\-\_\-packet}}
+\index{$\sim$descriptor\-\_\-packet@{$\sim$descriptor\-\_\-packet}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{$\sim$descriptor\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}virtual descriptor\-\_\-packet\-::$\sim$descriptor\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structdescriptor__packet_acd7f79e7aefbdf4f6b0638ab75df6d46}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structdescriptor__packet_a92b50972015f1bb1b4a99d0f0910c3e3}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t\& descriptor\-\_\-packet\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structdescriptor__packet_a92b50972015f1bb1b4a99d0f0910c3e3}
+\hypertarget{structdescriptor__packet_a3b14c4024796ba8b45f582b0bd7d1f50}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!size@{size}}
+\index{size@{size}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t descriptor\-\_\-packet\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structdescriptor__packet_a3b14c4024796ba8b45f582b0bd7d1f50}
+\hypertarget{structdescriptor__packet_ab197e4207edc6c708dca8d0b0bbfc098}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!Size@{Size}}
+\index{Size@{Size}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t descriptor\-\_\-packet\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structdescriptor__packet_ab197e4207edc6c708dca8d0b0bbfc098}
+\hypertarget{structdescriptor__packet_ad08369aae987f91544cee5e8f2267f2f}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!type@{type}}
+\index{type@{type}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string descriptor\-\_\-packet\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdescriptor__packet_ad08369aae987f91544cee5e8f2267f2f}
+
+
+Implemented in \hyperlink{structdevice__health__descriptor_a54b8725863d9ca6c640a8eb5e557109f}{device\-\_\-health\-\_\-descriptor}, \hyperlink{structdevice__info__descriptor_a52fb00aa7ddd64fb130622f1cae6f4e2}{device\-\_\-info\-\_\-descriptor}, and \hyperlink{structscan__descriptor_a3020edbf9b9ff7e8c50a150050e0ec6f}{scan\-\_\-descriptor}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structdescriptor__packet_a9d52a25c1b5dbc1aa92301cfbb10db97}{\subsubsection[{"@33}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structdescriptor__packet_a9d52a25c1b5dbc1aa92301cfbb10db97}
+\hypertarget{structdescriptor__packet_ad0ac7e3aa5ab78a411f748ae0baed2f3}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!data@{data}}
+\index{data@{data}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::data\mbox{[}7\mbox{]}}}\label{structdescriptor__packet_ad0ac7e3aa5ab78a411f748ae0baed2f3}
+\hypertarget{structdescriptor__packet_ad1bea15d0f3741d718d82689884c787d}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!datatype@{datatype}}
+\index{datatype@{datatype}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{datatype}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::datatype}}\label{structdescriptor__packet_ad1bea15d0f3741d718d82689884c787d}
+\hypertarget{structdescriptor__packet_afaa19b5c2d3324b188e5f1b24a07c3fb}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!drlen0@{drlen0}}
+\index{drlen0@{drlen0}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{drlen0}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::drlen0}}\label{structdescriptor__packet_afaa19b5c2d3324b188e5f1b24a07c3fb}
+\hypertarget{structdescriptor__packet_a3f182b48556355988a8f983fb9dc434b}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!drlen1@{drlen1}}
+\index{drlen1@{drlen1}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{drlen1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::drlen1}}\label{structdescriptor__packet_a3f182b48556355988a8f983fb9dc434b}
+\hypertarget{structdescriptor__packet_ab3437c0152e4a97a832ce80da0075da6}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!drlen2@{drlen2}}
+\index{drlen2@{drlen2}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{drlen2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::drlen2}}\label{structdescriptor__packet_ab3437c0152e4a97a832ce80da0075da6}
+\hypertarget{structdescriptor__packet_afc7b12b3c81172ec5ebf5fe28413dcfd}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!drlen3\-\_\-smode@{drlen3\-\_\-smode}}
+\index{drlen3\-\_\-smode@{drlen3\-\_\-smode}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{drlen3\-\_\-smode}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::drlen3\-\_\-smode}}\label{structdescriptor__packet_afc7b12b3c81172ec5ebf5fe28413dcfd}
+\hypertarget{structdescriptor__packet_a3187e2d5d736ad8ad2e5bfa39832851e}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!s1@{s1}}
+\index{s1@{s1}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{s1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::s1}}\label{structdescriptor__packet_a3187e2d5d736ad8ad2e5bfa39832851e}
+\hypertarget{structdescriptor__packet_aecf654bc09c8021678564ef2938e9190}{\index{descriptor\-\_\-packet@{descriptor\-\_\-packet}!s2@{s2}}
+\index{s2@{s2}!descriptor_packet@{descriptor\-\_\-packet}}
+\subsubsection[{s2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t descriptor\-\_\-packet\-::s2}}\label{structdescriptor__packet_aecf654bc09c8021678564ef2938e9190}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__packets_8h}{edrplidar\-\_\-packets.\-h}\end{DoxyCompactItemize}

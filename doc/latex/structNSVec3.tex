@@ -1,0 +1,1731 @@
+\hypertarget{structNSVec3}{\section{N\-S\-Vec3$<$ T $>$ Struct Template Reference}
+\label{structNSVec3}\index{N\-S\-Vec3$<$ T $>$@{N\-S\-Vec3$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$nsvec2.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2}{Coord\-Sys} \{ \hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2ab7be2cd66aaa6bee02585772e2db1f8d}{Cartesian}, 
+\hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2aa64b3bd7041029c4900ac1364881dc28}{Cylindrical}, 
+\hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2a44ae9edc1ff970062a71280b815ac03b}{Spherical}
+ \}
+\item 
+enum \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} \{ \\*
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}, 
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaabd66dcf41a62c69c68d38b331b17ff7}{X\-Z\-Y}, 
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7beab5df2d8286736736b5da5a0d6573429c}{Y\-X\-Z}, 
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaf187eb5f360ef2e52da3452c61edf7ef}{Y\-Z\-X}, 
+\\*
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea5448056baeadf50fe6461d68bb796a3e}{Z\-X\-Y}, 
+\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea708f75b377b3475f98fbf11b93dca4ed}{Z\-Y\-X}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structNSVec3_afa2852c9c17d1de1ab37ed323a54cedb}{N\-S\-Vec3} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&copy)
+\item 
+\hyperlink{structNSVec3_ad362b1e55972d16a1752adb532b90678}{N\-S\-Vec3} (const T \&val=static\-\_\-cast$<$ T $>$(0))
+\item 
+\hyperlink{structNSVec3_a1672ba90e50ea33772e1677b43bcda99}{N\-S\-Vec3} (const \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \&\hyperlink{structNSVec3_ad8219932251db48672b0b2e751712da3}{xy}, const T \&z\-\_\-)
+\item 
+\hyperlink{structNSVec3_ae5cc1961e5246a9c51963e2192d71bf5}{N\-S\-Vec3} (const T \&x\-\_\-, const \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \&\hyperlink{structNSVec3_ad9006cfc08381fb525d43715059f7c15}{yz})
+\item 
+\hyperlink{structNSVec3_a3a57d1b05f16261d62cbc2a3f1d5b0fa}{N\-S\-Vec3} (const T \&x\-\_\-, const T \&y\-\_\-, const T \&z\-\_\-=static\-\_\-cast$<$ T $>$(0))
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a38ab45cd8abd559d6928ad8ad340c62f}{abs} ()
+\item 
+T \hyperlink{structNSVec3_a823e2f3b0452a0cc95c9d509abb2aa43}{angle\-To} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ p\-Vec, bool p\-Rads=false) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_aa318fd9abf141791c07175be64c9f4f1}{ceil} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ab366e3e98af0c4a50837d60ed83bd7c3}{clamp} (const T \&\hyperlink{structNSVec3_a4abde3a564d1c15252ac74b1dd6efe6e}{min}=static\-\_\-cast$<$ T $>$(0), const T \&\hyperlink{structNSVec3_a63b923b7af3dd11e4b7f0d027f35d076}{max}=static\-\_\-cast$<$ T $>$(0))
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a7f61959a4ea0c32199b26c99d0f681ea}{cross} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&cross\-With)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a44c54ea99d144d02fa8015b3dfb8e6ab}{cylindrical} (bool p\-Rads=false) const 
+\item 
+T \hyperlink{structNSVec3_a7b43f0923dca2a47166ea57d250c732c}{distance\-To} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&p\-Vec) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a7a83b4473a7ec81cd6d8c8221a40f32d}{euler\-From} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&axis\-Angle, \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} order=\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}, bool p\-Rads=false)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a9c4a90377342729b7074f311c96e8fa0}{euler\-From} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&\hyperlink{nsquat_8h_af20bc5e18c379261a387ab197e9b971f}{orientation}, \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} order, bool rads)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ac68de2d8c327ca3e8a6778df9e901518}{euler\-From} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&\hyperlink{nsmat3_8h_ad4de391de75c02e722b41b139734200b}{rotation\-Mat3}, \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} order=\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}, bool p\-Rads=false)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ad8c1221c4b5f9ac7efe31df9a8497b95}{euler\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform, \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} order=\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}, bool p\-Rads=false)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a8a5999155b19d814a2e96dd07de16252}{euler\-From} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec, const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&to\-Vec, \hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{Euler\-Order} order=\hyperlink{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}, bool p\-Rads=false)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a9335b212992cb6b308ed3a0cb9618a13}{floor} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a78cb72f720acab6b05408a33c91db361}{fract} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a171aab63ff0fcc32a8a183d3bb7f97c7}{from} (\hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2}{Coord\-Sys} coord\-Sys, const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec, bool p\-Rads=false)
+\item 
+T \hyperlink{structNSVec3_ad23e85d71c370185ca0ad24a4b7beed8}{length} () const 
+\item 
+T \hyperlink{structNSVec3_aefef957f4dd64bc35afc915815c783c8}{length\-Sq} () const 
+\item 
+{\footnotesize template$<$class T2 $>$ }\\\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a462c042d881fb7e998866b757e881751}{lerp} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec, const T2 \&scaling\-Factor)
+\item 
+T \hyperlink{structNSVec3_a4abde3a564d1c15252ac74b1dd6efe6e}{min} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a2cc9ce9d14e42f8b9024397fae580d0f}{minimize} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+T \hyperlink{structNSVec3_a63b923b7af3dd11e4b7f0d027f35d076}{max} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ae4fd977258addfb7e51716a3f299e5fd}{maximize} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_acbdd599458d75c3fd9b1767882b165cd}{normalize} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a020433517144faf15e557934a9ca3caa}{project\-On} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ad45d75f9f9226ab7a30c7d80d2e01417}{project\-On\-Plane} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&plane\-Normal)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a8bdadfb020e252f5f317ec530120dc68}{reflect} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&normal)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a7329e4221f8353f97132f91e89e121f2}{round} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a3fc2bdf3c1a2d1b0da31008dacad42ba}{round\-To\-Zero} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ae3bd201e31be3f7142e5bdab05d92699}{scaling\-From} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a3df7eb4c0a8a8e21122f30d4020bcfa7}{scaling\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a5f22f2819615c6759ff768b13068510a}{translation\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a6b1bfdfc23d4605784997cf8d88bb971}{set} (const T \&p\-Val)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a7c3e8061e64dbf62159b62e74068dd5b}{set} (const T \&p\-X, const T \&p\-Y, const T \&p\-Z)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_aa92fcc44ccfb9518091eb9aec29c9fde}{set} (const \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \&\hyperlink{structNSVec3_ad8219932251db48672b0b2e751712da3}{xy}, const T \&p\-Z)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_ab505c9b5d384ac4cb258f10aacfa439c}{set} (const T \&p\-X, const \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \&\hyperlink{structNSVec3_ad9006cfc08381fb525d43715059f7c15}{yz})
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a638a0d35c0f648eb89b01ee9c6a4a965}{set\-Length} (const T \&len)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_af8d5d57f01d33e38b736c107c469dcdb}{spherical} (bool p\-Rads=false) const 
+\item 
+std\-::string \hyperlink{structNSVec3_a2ed3a0330719348f27be5ae498593645}{to\-String} (\hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2}{Coord\-Sys} disp=\hyperlink{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2ab7be2cd66aaa6bee02585772e2db1f8d}{Cartesian}) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ae6c4218470faa3e3b2349d16e95f6fbe}{operator+} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7e4cb5f5a5bf946d00f87c4de96d673c}{operator-\/} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+T \hyperlink{structNSVec3_abe685cda075026472781d52f4e264c5b}{operator$\ast$} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \hyperlink{structNSVec3_ab6f6259ee7b0b99e833e36fdc77b1ab7}{operator$^\wedge$} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&p\-R\-H\-S) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a8a2ab855ec4ab2ddee05e14c28cb7fde}{operator\%} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a5170ffb9370512a26b86d22ffd108324}{operator/} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a52ee9411a21ca500281529411bce3613}{operator$\ast$} (const T \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_afe28c2f0197f70d1ac5596f695000b9b}{operator/} (const T \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a95dec9ce9895bba303f53a240543db05}{operator=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a47ecc5cf064696c8b3555bcb30a795e5}{operator++} (int32\-\_\-t)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_adcf6e712683a242e2ca023de4f8e0dbe}{operator-\/-\/} (int32\-\_\-t)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a64980ad9e464b23e321849ada4f2990b}{operator++} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a024783363f9a5abea8a8620a3d2c4218}{operator-\/-\/} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a7801453cffc29ba1d7adad1e687e4081}{operator+=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_aa8e9f7634bebf2a3da8da05543281d0a}{operator-\/=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_aff114e4cfc996ccb57964ffd3bcf9360}{operator\%=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a79d6275c13fed12feafd8ee3455f0f19}{operator/=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_a18bca74b1c42818f7ab356acc2d0ea2e}{operator$\ast$=} (const T \&rhs)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \& \hyperlink{structNSVec3_abf77bc7f851b583868850ce58784fad2}{operator/=} (const T \&rhs)
+\item 
+bool \hyperlink{structNSVec3_a343df04d296d9e647a0974a6ca7a95de}{operator==} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structNSVec3_acba1e7cea7a802a05da51ca10aa20741}{operator!=} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structNSVec3_aa6c1766a9454a42b33bc3c9d113d84a9}{operator==} (const T \&rhs) const 
+\item 
+bool \hyperlink{structNSVec3_af597374c34da0cc19eb9d532e42f0f62}{operator!=} (const T \&rhs) const 
+\item 
+const T \& \hyperlink{structNSVec3_a61d4c32aa1d7ad965345d38d38695b00}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val) const 
+\item 
+T \& \hyperlink{structNSVec3_a29be3a6728a1951c1c5a9d933eeaabb1}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a0e592c13b85d0c7c98bfa839b2cb873d}{xxx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a448470ffffaee0ecfa1f01f002847032}{xxy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a03ac0590a40a5bddd29232cf0b065d66}{xxz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7b0c11a0066fdce6a3c39f4b0d800a80}{xyx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ab77eb8f1158cd035f5fce39ffde565ea}{xyy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ac55c7c928604c03e8c173d2c18c1968a}{xzx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a20ba81352401e56c4e42e0a7cb131a71}{xzy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_af567ebe11d835ad34cf5c2f760e7cc7a}{xzz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ad78741922485528895d53d67ab47487b}{yxx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_af176d21dd70cec9f873301a07b90f2b4}{yxy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a4b1a91b84971d1c066594bc6570da4a5}{yxz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ad843b15db76b5414a1e4e0c9c2a3ee0a}{yyx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a9113462f4942faf5dec6e3946e1a6945}{yyy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a665667f62ed35325ff6c9adf8dbb3f3d}{yyz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7adae94134532f1e8636fc8b4e122bf1}{yzx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a58b9842d9c68967b488001e5b92bc451}{yzy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a07b97eff9e3ab8da136a650e0bd33440}{yzz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a4998e5cf89c5a7318cd7545f34985a5d}{zxx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a019d00f31e59cc959279c00956613d5d}{zxy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a8e4472d55a89d659fcb8d39500cc8c8a}{zxz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_addaa05acc5906dac5029c55c6ba2113b}{zyx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7499ad1201489ceedb540f2eb1b10fb0}{zyy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a69345d0593bed6157946deb660ece026}{zyz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ae769202a58f5066d50fb96fd106a048a}{zzx} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_af0fc423f7ddaa69a5327737fa5852800}{zzy} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a27acce84e85fb42b15d7ddb19372636c}{zzz} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a1f451a25ae47030a546446a83306be00}{rrr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aeb93c43c46493433bb97acb0c3482b44}{rrg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aefce99196d8cd62301c029573223b8aa}{rrb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a092c2fa5af08275a6a799d7b088aec5d}{rgr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7c316ea0542653590bb9f6c42faa2067}{rgg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aa977e64934960e51b76a0411c6bf7e9e}{rbr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a0abcf1fa3d21c33218c0fe5d4cc6597b}{rbg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a35e03b1d298a90b658fe165bed589bf2}{rbb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_addbc52814a2aef9949cc2ff4ddc6ba97}{grr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aea835c378065a68c2279c1ec5879f0b4}{grg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a9a398119dc7c29f05c1844c232353f1d}{grb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a94b3cd4633e9a3a47e2d1785446600b8}{ggr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a790c174c59095fb40fd02d9382e29a25}{ggg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_add295dbe56bda5a4d633661183238b16}{ggb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a5159f1ccd1faad4bad757819a5b29930}{gbr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ae72e9d997d90ff3cdec0a55c97fa2745}{gbg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aca3f87e3640573d7ace488c4b1bd4c27}{gbb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a439db831b4883541748c3af1acf286e9}{brr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aca534d8f65704a1e8df53e8f9ab48aff}{brg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ade69823278092a1a55b7b64ac9e97b5b}{brb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ae7bd2e1f4490f4991cfc222f70450828}{bgr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aac661fa406ab8a160ff79baaa13036e6}{bgg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a60c863aadd4d87ff4dc21eb001a80bda}{bgb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a360f680f94dba6a93a1777edad5a5041}{bbr} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_abc9234ad9b3b8ae95fcff246f95a2916}{bbg} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7b7f3cf0e2f486fa968fd5bf856082d7}{bbb} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aa8d8bb0186c557c09a99783a1de39b17}{sss} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a10e6ba89601042d96928720462fe979f}{sst} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aeec2d01006d3e2579c09ca1d6c4e7c06}{ssp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a3294f31d1a0035f1546bec513da827a7}{sts} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a67b8f7eae1737a961b410ba95a7737b7}{stt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a67127158fb51c8ce231d1097dcb8ff97}{sps} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a738299bcd3fca3669564976a04e5225d}{spt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7c380c5369f89818cde793cc0721e94c}{spp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a37401a42fd53e387c354c28c085dfeca}{tss} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_abe97141c34ef70a2dee655b95eff4b83}{tst} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ab51c066e51f84cd005f970168455e883}{tsp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a10b361243d15166429f9210501da3afc}{tts} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_af2e4fd3bbdb2cb4f57b85129eef689d4}{ttt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ace1acc2030a5b55ab39f588ddaab664a}{ttp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aad065d289de297c7b016fd7f56cfb2d6}{tps} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_adc16be5f44fe24cf674257f932c7d298}{tpt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ad88e60ffae377c655236a2b832aaf9ce}{tpp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a44c9abbfbcca7eec34b76a0bf49cdea6}{pss} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a1fce23411b1792cb17c92a482b6ada9f}{pst} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_adf7ee26d42218ca8626c2e7a799dd217}{psp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_ac8dc44c21c32cf3a6e9f57f21c13fff0}{pts} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_aed79279dd88f4c4c9b10b8e60efc4437}{ptt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a7c29133a4a24873628f61a0099cd66c3}{ptp} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_acfe6747ac6c7d02b60947292f619064d}{pps} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a9cb171e5d4e1d439cab977f5a6fbfab3}{ppt} () const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structNSVec3_a5421dd2f487caac597742682f924d312}{ppp} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a8cb7e99b94a64e2304fb3124fde91762}{xx} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_ad8219932251db48672b0b2e751712da3}{xy} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a7f6be918d972415bba590a617049d285}{xz} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a661a0323a7cc81829109cc8080ae1704}{yx} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_ab8ba1f068fe7c956c84a90c8dc3aa1ee}{yy} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_ad9006cfc08381fb525d43715059f7c15}{yz} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_aa535678eef6a077d24ce6ec4fd234af3}{zx} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_aa9ff23a9a0536a8be1067d10a1973784}{zy} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a444a1ab8b01941d5621a05f4c3feb466}{zz} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a61d59755412ebfcc9567f3cd1d0f8d66}{rr} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a5815f56f7307f10498a47ffad1661695}{rg} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a4a35d75bd878b237405b84736e7ebcd4}{rb} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a6a9da9c3158c49b0cd867d1bed79918f}{gr} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_aacda1e9e49f26255e4db0eb4ee65012c}{gg} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_af0c314a46ce429beca617d7beddba4c6}{gb} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a93c5209ffe941fbc5250f8fae6f198fe}{br} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a3fb23ce80064bae66231a9ac99b6f65f}{bg} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_ab90837dc443f2128d2f9b9db23ad07e2}{bb} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a07c973c8f7c4525bc3b7ea31e53541f6}{ss} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a81e5dcefea4744a1ead5d46d2c7634de}{st} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a48cf8f3b52f92cd404091afb3f224614}{sp} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_af5f7aaebcbafd62fbce6c238b0314694}{ts} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a4e4137be0b747c99671a0e15cf63c382}{tt} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a0247b88d663cd19ed53666f334e64421}{tp} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a59f2b5d81a010457659786e1a6d0456e}{ps} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a3694fd686ccd5837fdf11b97a9739ebd}{pt} () const 
+\item 
+\hyperlink{structNSVec2}{N\-S\-Vec2}$<$ T $>$ \hyperlink{structNSVec3_a26cfb322d80fabe9b3d26ad57ee48e3c}{pp} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>T \hyperlink{structNSVec3_a82314c4b8d4619ba32b4b3f9c58f5a2c}{data} \mbox{[}3\mbox{]}\\
+\>struct \{\\
+\>\>T \hyperlink{structNSVec3_abc4e7ffce298313829ad938a5af61818}{x}\\
+\>\>T \hyperlink{structNSVec3_a5498f3161922dedec454c81ab4e54ae3}{y}\\
+\>\>T \hyperlink{structNSVec3_a6731c5158baf48408a4311b6b13aafb3}{z}\\
+\>\} \\
+\>struct \{\\
+\>\>T \hyperlink{structNSVec3_a7d4a1f0856df05844ec136f59033e32a}{r}\\
+\>\>T \hyperlink{structNSVec3_af4da81fc8e3a7ce2c16481ca7ac01021}{g}\\
+\>\>T \hyperlink{structNSVec3_aadd7462fb6f7d7df83cb8ffd1645eb8b}{b}\\
+\>\} \\
+\>struct \{\\
+\>\>T \hyperlink{structNSVec3_a5f429613450844e0b8a8fbb502ee6342}{s}\\
+\>\>T \hyperlink{structNSVec3_a3df97592d42f0f53d8b48fbb5c95b506}{t}\\
+\>\>T \hyperlink{structNSVec3_a8d244562d8e23e387b9e8102dfd3a14d}{p}\\
+\>\} \\
+\>struct \{\\
+\>\>T \hyperlink{structNSVec3_ad4f0cefc81041963c730f9d60093442e}{P}\\
+\>\>T \hyperlink{structNSVec3_a2b2d6da3c41bfa78589cd09b79b09de6}{I}\\
+\>\>T \hyperlink{structNSVec3_abb8768d33c0752160bd78e978d6625b9}{D}\\
+\>\} \\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2}{\index{N\-S\-Vec3@{N\-S\-Vec3}!Coord\-Sys@{Coord\-Sys}}
+\index{Coord\-Sys@{Coord\-Sys}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{Coord\-Sys}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ enum {\bf N\-S\-Vec3\-::\-Coord\-Sys}}}\label{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Cartesian@{Cartesian}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Cartesian@{Cartesian}}\item[{\em 
+\hypertarget{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2ab7be2cd66aaa6bee02585772e2db1f8d}{Cartesian}\label{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2ab7be2cd66aaa6bee02585772e2db1f8d}
+}]\index{Cylindrical@{Cylindrical}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Cylindrical@{Cylindrical}}\item[{\em 
+\hypertarget{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2aa64b3bd7041029c4900ac1364881dc28}{Cylindrical}\label{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2aa64b3bd7041029c4900ac1364881dc28}
+}]\index{Spherical@{Spherical}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Spherical@{Spherical}}\item[{\em 
+\hypertarget{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2a44ae9edc1ff970062a71280b815ac03b}{Spherical}\label{structNSVec3_a79e942f48c6360d21b4e167c1ea890e2a44ae9edc1ff970062a71280b815ac03b}
+}]\end{description}
+\end{Desc}
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}{\index{N\-S\-Vec3@{N\-S\-Vec3}!Euler\-Order@{Euler\-Order}}
+\index{Euler\-Order@{Euler\-Order}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{Euler\-Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ enum {\bf N\-S\-Vec3\-::\-Euler\-Order}}}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7be}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{X\-Y\-Z@{X\-Y\-Z}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!X\-Y\-Z@{X\-Y\-Z}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}{X\-Y\-Z}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea7d78982d25e830ab70c31e8125c2363f}
+}]\index{X\-Z\-Y@{X\-Z\-Y}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!X\-Z\-Y@{X\-Z\-Y}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaabd66dcf41a62c69c68d38b331b17ff7}{X\-Z\-Y}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaabd66dcf41a62c69c68d38b331b17ff7}
+}]\index{Y\-X\-Z@{Y\-X\-Z}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Y\-X\-Z@{Y\-X\-Z}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7beab5df2d8286736736b5da5a0d6573429c}{Y\-X\-Z}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7beab5df2d8286736736b5da5a0d6573429c}
+}]\index{Y\-Z\-X@{Y\-Z\-X}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Y\-Z\-X@{Y\-Z\-X}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaf187eb5f360ef2e52da3452c61edf7ef}{Y\-Z\-X}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7beaf187eb5f360ef2e52da3452c61edf7ef}
+}]\index{Z\-X\-Y@{Z\-X\-Y}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Z\-X\-Y@{Z\-X\-Y}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea5448056baeadf50fe6461d68bb796a3e}{Z\-X\-Y}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea5448056baeadf50fe6461d68bb796a3e}
+}]\index{Z\-Y\-X@{Z\-Y\-X}!N\-S\-Vec3@{N\-S\-Vec3}}\index{N\-S\-Vec3@{N\-S\-Vec3}!Z\-Y\-X@{Z\-Y\-X}}\item[{\em 
+\hypertarget{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea708f75b377b3475f98fbf11b93dca4ed}{Z\-Y\-X}\label{structNSVec3_a1d9e373d933930ba26c0206912bbd7bea708f75b377b3475f98fbf11b93dca4ed}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structNSVec3_afa2852c9c17d1de1ab37ed323a54cedb}{\index{N\-S\-Vec3@{N\-S\-Vec3}!N\-S\-Vec3@{N\-S\-Vec3}}
+\index{N\-S\-Vec3@{N\-S\-Vec3}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{N\-S\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::{\bf N\-S\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_afa2852c9c17d1de1ab37ed323a54cedb}
+\hypertarget{structNSVec3_ad362b1e55972d16a1752adb532b90678}{\index{N\-S\-Vec3@{N\-S\-Vec3}!N\-S\-Vec3@{N\-S\-Vec3}}
+\index{N\-S\-Vec3@{N\-S\-Vec3}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{N\-S\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::{\bf N\-S\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val = {\ttfamily static\-\_\-cast$<$T$>$(0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad362b1e55972d16a1752adb532b90678}
+\hypertarget{structNSVec3_a1672ba90e50ea33772e1677b43bcda99}{\index{N\-S\-Vec3@{N\-S\-Vec3}!N\-S\-Vec3@{N\-S\-Vec3}}
+\index{N\-S\-Vec3@{N\-S\-Vec3}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{N\-S\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::{\bf N\-S\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec2}$<$ T $>$ \&}]{xy, }
+\item[{const T \&}]{z\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a1672ba90e50ea33772e1677b43bcda99}
+\hypertarget{structNSVec3_ae5cc1961e5246a9c51963e2192d71bf5}{\index{N\-S\-Vec3@{N\-S\-Vec3}!N\-S\-Vec3@{N\-S\-Vec3}}
+\index{N\-S\-Vec3@{N\-S\-Vec3}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{N\-S\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::{\bf N\-S\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x\-\_\-, }
+\item[{const {\bf N\-S\-Vec2}$<$ T $>$ \&}]{yz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae5cc1961e5246a9c51963e2192d71bf5}
+\hypertarget{structNSVec3_a3a57d1b05f16261d62cbc2a3f1d5b0fa}{\index{N\-S\-Vec3@{N\-S\-Vec3}!N\-S\-Vec3@{N\-S\-Vec3}}
+\index{N\-S\-Vec3@{N\-S\-Vec3}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{N\-S\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::{\bf N\-S\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x\-\_\-, }
+\item[{const T \&}]{y\-\_\-, }
+\item[{const T \&}]{z\-\_\- = {\ttfamily static\-\_\-cast$<$T$>$(0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3a57d1b05f16261d62cbc2a3f1d5b0fa}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structNSVec3_a38ab45cd8abd559d6928ad8ad340c62f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!abs@{abs}}
+\index{abs@{abs}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::abs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a38ab45cd8abd559d6928ad8ad340c62f}
+\hypertarget{structNSVec3_a823e2f3b0452a0cc95c9d509abb2aa43}{\index{N\-S\-Vec3@{N\-S\-Vec3}!angle\-To@{angle\-To}}
+\index{angle\-To@{angle\-To}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{angle\-To}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::angle\-To (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$}]{p\-Vec, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a823e2f3b0452a0cc95c9d509abb2aa43}
+\hypertarget{structNSVec3_ab90837dc443f2128d2f9b9db23ad07e2}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bb@{bb}}
+\index{bb@{bb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab90837dc443f2128d2f9b9db23ad07e2}
+\hypertarget{structNSVec3_a7b7f3cf0e2f486fa968fd5bf856082d7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bbb@{bbb}}
+\index{bbb@{bbb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bbb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bbb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7b7f3cf0e2f486fa968fd5bf856082d7}
+\hypertarget{structNSVec3_abc9234ad9b3b8ae95fcff246f95a2916}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bbg@{bbg}}
+\index{bbg@{bbg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bbg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bbg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_abc9234ad9b3b8ae95fcff246f95a2916}
+\hypertarget{structNSVec3_a360f680f94dba6a93a1777edad5a5041}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bbr@{bbr}}
+\index{bbr@{bbr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bbr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bbr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a360f680f94dba6a93a1777edad5a5041}
+\hypertarget{structNSVec3_a3fb23ce80064bae66231a9ac99b6f65f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bg@{bg}}
+\index{bg@{bg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3fb23ce80064bae66231a9ac99b6f65f}
+\hypertarget{structNSVec3_a60c863aadd4d87ff4dc21eb001a80bda}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bgb@{bgb}}
+\index{bgb@{bgb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bgb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bgb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a60c863aadd4d87ff4dc21eb001a80bda}
+\hypertarget{structNSVec3_aac661fa406ab8a160ff79baaa13036e6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bgg@{bgg}}
+\index{bgg@{bgg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bgg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bgg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aac661fa406ab8a160ff79baaa13036e6}
+\hypertarget{structNSVec3_ae7bd2e1f4490f4991cfc222f70450828}{\index{N\-S\-Vec3@{N\-S\-Vec3}!bgr@{bgr}}
+\index{bgr@{bgr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{bgr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::bgr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae7bd2e1f4490f4991cfc222f70450828}
+\hypertarget{structNSVec3_a93c5209ffe941fbc5250f8fae6f198fe}{\index{N\-S\-Vec3@{N\-S\-Vec3}!br@{br}}
+\index{br@{br}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{br}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::br (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a93c5209ffe941fbc5250f8fae6f198fe}
+\hypertarget{structNSVec3_ade69823278092a1a55b7b64ac9e97b5b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!brb@{brb}}
+\index{brb@{brb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{brb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::brb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ade69823278092a1a55b7b64ac9e97b5b}
+\hypertarget{structNSVec3_aca534d8f65704a1e8df53e8f9ab48aff}{\index{N\-S\-Vec3@{N\-S\-Vec3}!brg@{brg}}
+\index{brg@{brg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{brg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::brg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aca534d8f65704a1e8df53e8f9ab48aff}
+\hypertarget{structNSVec3_a439db831b4883541748c3af1acf286e9}{\index{N\-S\-Vec3@{N\-S\-Vec3}!brr@{brr}}
+\index{brr@{brr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{brr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::brr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a439db831b4883541748c3af1acf286e9}
+\hypertarget{structNSVec3_aa318fd9abf141791c07175be64c9f4f1}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ceil@{ceil}}
+\index{ceil@{ceil}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ceil}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::ceil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa318fd9abf141791c07175be64c9f4f1}
+\hypertarget{structNSVec3_ab366e3e98af0c4a50837d60ed83bd7c3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!clamp@{clamp}}
+\index{clamp@{clamp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::clamp (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{min = {\ttfamily static\-\_\-cast$<$T$>$(0)}, }
+\item[{const T \&}]{max = {\ttfamily static\-\_\-cast$<$T$>$(0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab366e3e98af0c4a50837d60ed83bd7c3}
+\hypertarget{structNSVec3_a7f61959a4ea0c32199b26c99d0f681ea}{\index{N\-S\-Vec3@{N\-S\-Vec3}!cross@{cross}}
+\index{cross@{cross}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{cross\-With}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7f61959a4ea0c32199b26c99d0f681ea}
+\hypertarget{structNSVec3_a44c54ea99d144d02fa8015b3dfb8e6ab}{\index{N\-S\-Vec3@{N\-S\-Vec3}!cylindrical@{cylindrical}}
+\index{cylindrical@{cylindrical}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{cylindrical}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::cylindrical (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a44c54ea99d144d02fa8015b3dfb8e6ab}
+\hypertarget{structNSVec3_a7b43f0923dca2a47166ea57d250c732c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!distance\-To@{distance\-To}}
+\index{distance\-To@{distance\-To}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{distance\-To}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::distance\-To (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{p\-Vec}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7b43f0923dca2a47166ea57d250c732c}
+\hypertarget{structNSVec3_a7a83b4473a7ec81cd6d8c8221a40f32d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!euler\-From@{euler\-From}}
+\index{euler\-From@{euler\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{euler\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::euler\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{axis\-Angle, }
+\item[{{\bf Euler\-Order}}]{order = {\ttfamily {\bf X\-Y\-Z}}, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7a83b4473a7ec81cd6d8c8221a40f32d}
+\hypertarget{structNSVec3_a9c4a90377342729b7074f311c96e8fa0}{\index{N\-S\-Vec3@{N\-S\-Vec3}!euler\-From@{euler\-From}}
+\index{euler\-From@{euler\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{euler\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::euler\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{orientation, }
+\item[{{\bf Euler\-Order}}]{order, }
+\item[{bool}]{rads}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a9c4a90377342729b7074f311c96e8fa0}
+\hypertarget{structNSVec3_ac68de2d8c327ca3e8a6778df9e901518}{\index{N\-S\-Vec3@{N\-S\-Vec3}!euler\-From@{euler\-From}}
+\index{euler\-From@{euler\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{euler\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::euler\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{rotation\-Mat3, }
+\item[{{\bf Euler\-Order}}]{order = {\ttfamily {\bf X\-Y\-Z}}, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ac68de2d8c327ca3e8a6778df9e901518}
+\hypertarget{structNSVec3_ad8c1221c4b5f9ac7efe31df9a8497b95}{\index{N\-S\-Vec3@{N\-S\-Vec3}!euler\-From@{euler\-From}}
+\index{euler\-From@{euler\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{euler\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::euler\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform, }
+\item[{{\bf Euler\-Order}}]{order = {\ttfamily {\bf X\-Y\-Z}}, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad8c1221c4b5f9ac7efe31df9a8497b95}
+\hypertarget{structNSVec3_a8a5999155b19d814a2e96dd07de16252}{\index{N\-S\-Vec3@{N\-S\-Vec3}!euler\-From@{euler\-From}}
+\index{euler\-From@{euler\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{euler\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::euler\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec, }
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{to\-Vec, }
+\item[{{\bf Euler\-Order}}]{order = {\ttfamily {\bf X\-Y\-Z}}, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a8a5999155b19d814a2e96dd07de16252}
+\hypertarget{structNSVec3_a9335b212992cb6b308ed3a0cb9618a13}{\index{N\-S\-Vec3@{N\-S\-Vec3}!floor@{floor}}
+\index{floor@{floor}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{floor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::floor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a9335b212992cb6b308ed3a0cb9618a13}
+\hypertarget{structNSVec3_a78cb72f720acab6b05408a33c91db361}{\index{N\-S\-Vec3@{N\-S\-Vec3}!fract@{fract}}
+\index{fract@{fract}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{fract}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::fract (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a78cb72f720acab6b05408a33c91db361}
+\hypertarget{structNSVec3_a171aab63ff0fcc32a8a183d3bb7f97c7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!from@{from}}
+\index{from@{from}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord\-Sys}}]{coord\-Sys, }
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a171aab63ff0fcc32a8a183d3bb7f97c7}
+\hypertarget{structNSVec3_af0c314a46ce429beca617d7beddba4c6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gb@{gb}}
+\index{gb@{gb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af0c314a46ce429beca617d7beddba4c6}
+\hypertarget{structNSVec3_aca3f87e3640573d7ace488c4b1bd4c27}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gbb@{gbb}}
+\index{gbb@{gbb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gbb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gbb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aca3f87e3640573d7ace488c4b1bd4c27}
+\hypertarget{structNSVec3_ae72e9d997d90ff3cdec0a55c97fa2745}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gbg@{gbg}}
+\index{gbg@{gbg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gbg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gbg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae72e9d997d90ff3cdec0a55c97fa2745}
+\hypertarget{structNSVec3_a5159f1ccd1faad4bad757819a5b29930}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gbr@{gbr}}
+\index{gbr@{gbr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gbr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gbr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a5159f1ccd1faad4bad757819a5b29930}
+\hypertarget{structNSVec3_aacda1e9e49f26255e4db0eb4ee65012c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gg@{gg}}
+\index{gg@{gg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aacda1e9e49f26255e4db0eb4ee65012c}
+\hypertarget{structNSVec3_add295dbe56bda5a4d633661183238b16}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ggb@{ggb}}
+\index{ggb@{ggb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ggb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ggb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_add295dbe56bda5a4d633661183238b16}
+\hypertarget{structNSVec3_a790c174c59095fb40fd02d9382e29a25}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ggg@{ggg}}
+\index{ggg@{ggg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ggg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ggg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a790c174c59095fb40fd02d9382e29a25}
+\hypertarget{structNSVec3_a94b3cd4633e9a3a47e2d1785446600b8}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ggr@{ggr}}
+\index{ggr@{ggr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ggr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ggr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a94b3cd4633e9a3a47e2d1785446600b8}
+\hypertarget{structNSVec3_a6a9da9c3158c49b0cd867d1bed79918f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!gr@{gr}}
+\index{gr@{gr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{gr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::gr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a6a9da9c3158c49b0cd867d1bed79918f}
+\hypertarget{structNSVec3_a9a398119dc7c29f05c1844c232353f1d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!grb@{grb}}
+\index{grb@{grb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{grb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::grb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a9a398119dc7c29f05c1844c232353f1d}
+\hypertarget{structNSVec3_aea835c378065a68c2279c1ec5879f0b4}{\index{N\-S\-Vec3@{N\-S\-Vec3}!grg@{grg}}
+\index{grg@{grg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{grg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::grg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aea835c378065a68c2279c1ec5879f0b4}
+\hypertarget{structNSVec3_addbc52814a2aef9949cc2ff4ddc6ba97}{\index{N\-S\-Vec3@{N\-S\-Vec3}!grr@{grr}}
+\index{grr@{grr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{grr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::grr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_addbc52814a2aef9949cc2ff4ddc6ba97}
+\hypertarget{structNSVec3_ad23e85d71c370185ca0ad24a4b7beed8}{\index{N\-S\-Vec3@{N\-S\-Vec3}!length@{length}}
+\index{length@{length}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad23e85d71c370185ca0ad24a4b7beed8}
+\hypertarget{structNSVec3_aefef957f4dd64bc35afc915815c783c8}{\index{N\-S\-Vec3@{N\-S\-Vec3}!length\-Sq@{length\-Sq}}
+\index{length\-Sq@{length\-Sq}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{length\-Sq}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::length\-Sq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aefef957f4dd64bc35afc915815c783c8}
+\hypertarget{structNSVec3_a462c042d881fb7e998866b757e881751}{\index{N\-S\-Vec3@{N\-S\-Vec3}!lerp@{lerp}}
+\index{lerp@{lerp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class T2 $>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::lerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec, }
+\item[{const T2 \&}]{scaling\-Factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a462c042d881fb7e998866b757e881751}
+\hypertarget{structNSVec3_a63b923b7af3dd11e4b7f0d027f35d076}{\index{N\-S\-Vec3@{N\-S\-Vec3}!max@{max}}
+\index{max@{max}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a63b923b7af3dd11e4b7f0d027f35d076}
+\hypertarget{structNSVec3_ae4fd977258addfb7e51716a3f299e5fd}{\index{N\-S\-Vec3@{N\-S\-Vec3}!maximize@{maximize}}
+\index{maximize@{maximize}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{maximize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::maximize (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae4fd977258addfb7e51716a3f299e5fd}
+\hypertarget{structNSVec3_a4abde3a564d1c15252ac74b1dd6efe6e}{\index{N\-S\-Vec3@{N\-S\-Vec3}!min@{min}}
+\index{min@{min}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a4abde3a564d1c15252ac74b1dd6efe6e}
+\hypertarget{structNSVec3_a2cc9ce9d14e42f8b9024397fae580d0f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!minimize@{minimize}}
+\index{minimize@{minimize}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{minimize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::minimize (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a2cc9ce9d14e42f8b9024397fae580d0f}
+\hypertarget{structNSVec3_acbdd599458d75c3fd9b1767882b165cd}{\index{N\-S\-Vec3@{N\-S\-Vec3}!normalize@{normalize}}
+\index{normalize@{normalize}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_acbdd599458d75c3fd9b1767882b165cd}
+\hypertarget{structNSVec3_acba1e7cea7a802a05da51ca10aa20741}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf N\-S\-Vec3}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_acba1e7cea7a802a05da51ca10aa20741}
+\hypertarget{structNSVec3_af597374c34da0cc19eb9d532e42f0f62}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf N\-S\-Vec3}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af597374c34da0cc19eb9d532e42f0f62}
+\hypertarget{structNSVec3_a8a2ab855ec4ab2ddee05e14c28cb7fde}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a8a2ab855ec4ab2ddee05e14c28cb7fde}
+\hypertarget{structNSVec3_aff114e4cfc996ccb57964ffd3bcf9360}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aff114e4cfc996ccb57964ffd3bcf9360}
+\hypertarget{structNSVec3_abe685cda075026472781d52f4e264c5b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_abe685cda075026472781d52f4e264c5b}
+\hypertarget{structNSVec3_a52ee9411a21ca500281529411bce3613}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a52ee9411a21ca500281529411bce3613}
+\hypertarget{structNSVec3_a18bca74b1c42818f7ab356acc2d0ea2e}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a18bca74b1c42818f7ab356acc2d0ea2e}
+\hypertarget{structNSVec3_ae6c4218470faa3e3b2349d16e95f6fbe}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator+@{operator+}}
+\index{operator+@{operator+}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae6c4218470faa3e3b2349d16e95f6fbe}
+\hypertarget{structNSVec3_a47ecc5cf064696c8b3555bcb30a795e5}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator++@{operator++}}
+\index{operator++@{operator++}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a47ecc5cf064696c8b3555bcb30a795e5}
+\hypertarget{structNSVec3_a64980ad9e464b23e321849ada4f2990b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator++@{operator++}}
+\index{operator++@{operator++}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a64980ad9e464b23e321849ada4f2990b}
+\hypertarget{structNSVec3_a7801453cffc29ba1d7adad1e687e4081}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7801453cffc29ba1d7adad1e687e4081}
+\hypertarget{structNSVec3_a7e4cb5f5a5bf946d00f87c4de96d673c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7e4cb5f5a5bf946d00f87c4de96d673c}
+\hypertarget{structNSVec3_adcf6e712683a242e2ca023de4f8e0dbe}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_adcf6e712683a242e2ca023de4f8e0dbe}
+\hypertarget{structNSVec3_a024783363f9a5abea8a8620a3d2c4218}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a024783363f9a5abea8a8620a3d2c4218}
+\hypertarget{structNSVec3_aa8e9f7634bebf2a3da8da05543281d0a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa8e9f7634bebf2a3da8da05543281d0a}
+\hypertarget{structNSVec3_a5170ffb9370512a26b86d22ffd108324}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator/@{operator/}}
+\index{operator/@{operator/}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a5170ffb9370512a26b86d22ffd108324}
+\hypertarget{structNSVec3_afe28c2f0197f70d1ac5596f695000b9b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator/@{operator/}}
+\index{operator/@{operator/}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_afe28c2f0197f70d1ac5596f695000b9b}
+\hypertarget{structNSVec3_a79d6275c13fed12feafd8ee3455f0f19}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a79d6275c13fed12feafd8ee3455f0f19}
+\hypertarget{structNSVec3_abf77bc7f851b583868850ce58784fad2}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_abf77bc7f851b583868850ce58784fad2}
+\hypertarget{structNSVec3_a95dec9ce9895bba303f53a240543db05}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator=@{operator=}}
+\index{operator=@{operator=}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a95dec9ce9895bba303f53a240543db05}
+\hypertarget{structNSVec3_a343df04d296d9e647a0974a6ca7a95de}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator==@{operator==}}
+\index{operator==@{operator==}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf N\-S\-Vec3}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a343df04d296d9e647a0974a6ca7a95de}
+\hypertarget{structNSVec3_aa6c1766a9454a42b33bc3c9d113d84a9}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator==@{operator==}}
+\index{operator==@{operator==}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf N\-S\-Vec3}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa6c1766a9454a42b33bc3c9d113d84a9}
+\hypertarget{structNSVec3_a61d4c32aa1d7ad965345d38d38695b00}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a61d4c32aa1d7ad965345d38d38695b00}
+\hypertarget{structNSVec3_a29be3a6728a1951c1c5a9d933eeaabb1}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf N\-S\-Vec3}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a29be3a6728a1951c1c5a9d933eeaabb1}
+\hypertarget{structNSVec3_ab6f6259ee7b0b99e833e36fdc77b1ab7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{operator$^\wedge$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::operator$^\wedge$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{p\-R\-H\-S}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab6f6259ee7b0b99e833e36fdc77b1ab7}
+\hypertarget{structNSVec3_a26cfb322d80fabe9b3d26ad57ee48e3c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pp@{pp}}
+\index{pp@{pp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a26cfb322d80fabe9b3d26ad57ee48e3c}
+\hypertarget{structNSVec3_a5421dd2f487caac597742682f924d312}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ppp@{ppp}}
+\index{ppp@{ppp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ppp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ppp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a5421dd2f487caac597742682f924d312}
+\hypertarget{structNSVec3_acfe6747ac6c7d02b60947292f619064d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pps@{pps}}
+\index{pps@{pps}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_acfe6747ac6c7d02b60947292f619064d}
+\hypertarget{structNSVec3_a9cb171e5d4e1d439cab977f5a6fbfab3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ppt@{ppt}}
+\index{ppt@{ppt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ppt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ppt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a9cb171e5d4e1d439cab977f5a6fbfab3}
+\hypertarget{structNSVec3_a020433517144faf15e557934a9ca3caa}{\index{N\-S\-Vec3@{N\-S\-Vec3}!project\-On@{project\-On}}
+\index{project\-On@{project\-On}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{project\-On}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::project\-On (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a020433517144faf15e557934a9ca3caa}
+\hypertarget{structNSVec3_ad45d75f9f9226ab7a30c7d80d2e01417}{\index{N\-S\-Vec3@{N\-S\-Vec3}!project\-On\-Plane@{project\-On\-Plane}}
+\index{project\-On\-Plane@{project\-On\-Plane}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{project\-On\-Plane}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::project\-On\-Plane (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{plane\-Normal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad45d75f9f9226ab7a30c7d80d2e01417}
+\hypertarget{structNSVec3_a59f2b5d81a010457659786e1a6d0456e}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ps@{ps}}
+\index{ps@{ps}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a59f2b5d81a010457659786e1a6d0456e}
+\hypertarget{structNSVec3_adf7ee26d42218ca8626c2e7a799dd217}{\index{N\-S\-Vec3@{N\-S\-Vec3}!psp@{psp}}
+\index{psp@{psp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{psp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::psp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_adf7ee26d42218ca8626c2e7a799dd217}
+\hypertarget{structNSVec3_a44c9abbfbcca7eec34b76a0bf49cdea6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pss@{pss}}
+\index{pss@{pss}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pss}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a44c9abbfbcca7eec34b76a0bf49cdea6}
+\hypertarget{structNSVec3_a1fce23411b1792cb17c92a482b6ada9f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pst@{pst}}
+\index{pst@{pst}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pst (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a1fce23411b1792cb17c92a482b6ada9f}
+\hypertarget{structNSVec3_a3694fd686ccd5837fdf11b97a9739ebd}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pt@{pt}}
+\index{pt@{pt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3694fd686ccd5837fdf11b97a9739ebd}
+\hypertarget{structNSVec3_a7c29133a4a24873628f61a0099cd66c3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ptp@{ptp}}
+\index{ptp@{ptp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ptp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ptp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7c29133a4a24873628f61a0099cd66c3}
+\hypertarget{structNSVec3_ac8dc44c21c32cf3a6e9f57f21c13fff0}{\index{N\-S\-Vec3@{N\-S\-Vec3}!pts@{pts}}
+\index{pts@{pts}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{pts}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::pts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ac8dc44c21c32cf3a6e9f57f21c13fff0}
+\hypertarget{structNSVec3_aed79279dd88f4c4c9b10b8e60efc4437}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ptt@{ptt}}
+\index{ptt@{ptt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ptt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ptt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aed79279dd88f4c4c9b10b8e60efc4437}
+\hypertarget{structNSVec3_a4a35d75bd878b237405b84736e7ebcd4}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rb@{rb}}
+\index{rb@{rb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a4a35d75bd878b237405b84736e7ebcd4}
+\hypertarget{structNSVec3_a35e03b1d298a90b658fe165bed589bf2}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rbb@{rbb}}
+\index{rbb@{rbb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rbb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rbb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a35e03b1d298a90b658fe165bed589bf2}
+\hypertarget{structNSVec3_a0abcf1fa3d21c33218c0fe5d4cc6597b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rbg@{rbg}}
+\index{rbg@{rbg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rbg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rbg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a0abcf1fa3d21c33218c0fe5d4cc6597b}
+\hypertarget{structNSVec3_aa977e64934960e51b76a0411c6bf7e9e}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rbr@{rbr}}
+\index{rbr@{rbr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rbr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rbr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa977e64934960e51b76a0411c6bf7e9e}
+\hypertarget{structNSVec3_a8bdadfb020e252f5f317ec530120dc68}{\index{N\-S\-Vec3@{N\-S\-Vec3}!reflect@{reflect}}
+\index{reflect@{reflect}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{reflect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::reflect (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{normal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a8bdadfb020e252f5f317ec530120dc68}
+\hypertarget{structNSVec3_a5815f56f7307f10498a47ffad1661695}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rg@{rg}}
+\index{rg@{rg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a5815f56f7307f10498a47ffad1661695}
+\hypertarget{structNSVec3_a7c316ea0542653590bb9f6c42faa2067}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rgg@{rgg}}
+\index{rgg@{rgg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rgg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rgg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7c316ea0542653590bb9f6c42faa2067}
+\hypertarget{structNSVec3_a092c2fa5af08275a6a799d7b088aec5d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rgr@{rgr}}
+\index{rgr@{rgr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rgr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rgr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a092c2fa5af08275a6a799d7b088aec5d}
+\hypertarget{structNSVec3_a7329e4221f8353f97132f91e89e121f2}{\index{N\-S\-Vec3@{N\-S\-Vec3}!round@{round}}
+\index{round@{round}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{round}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::round (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7329e4221f8353f97132f91e89e121f2}
+\hypertarget{structNSVec3_a3fc2bdf3c1a2d1b0da31008dacad42ba}{\index{N\-S\-Vec3@{N\-S\-Vec3}!round\-To\-Zero@{round\-To\-Zero}}
+\index{round\-To\-Zero@{round\-To\-Zero}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{round\-To\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::round\-To\-Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3fc2bdf3c1a2d1b0da31008dacad42ba}
+\hypertarget{structNSVec3_a61d59755412ebfcc9567f3cd1d0f8d66}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rr@{rr}}
+\index{rr@{rr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a61d59755412ebfcc9567f3cd1d0f8d66}
+\hypertarget{structNSVec3_aefce99196d8cd62301c029573223b8aa}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rrb@{rrb}}
+\index{rrb@{rrb}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rrb}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rrb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aefce99196d8cd62301c029573223b8aa}
+\hypertarget{structNSVec3_aeb93c43c46493433bb97acb0c3482b44}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rrg@{rrg}}
+\index{rrg@{rrg}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rrg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rrg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aeb93c43c46493433bb97acb0c3482b44}
+\hypertarget{structNSVec3_a1f451a25ae47030a546446a83306be00}{\index{N\-S\-Vec3@{N\-S\-Vec3}!rrr@{rrr}}
+\index{rrr@{rrr}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{rrr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::rrr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a1f451a25ae47030a546446a83306be00}
+\hypertarget{structNSVec3_ae3bd201e31be3f7142e5bdab05d92699}{\index{N\-S\-Vec3@{N\-S\-Vec3}!scaling\-From@{scaling\-From}}
+\index{scaling\-From@{scaling\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{scaling\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::scaling\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae3bd201e31be3f7142e5bdab05d92699}
+\hypertarget{structNSVec3_a3df7eb4c0a8a8e21122f30d4020bcfa7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!scaling\-From@{scaling\-From}}
+\index{scaling\-From@{scaling\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{scaling\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::scaling\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3df7eb4c0a8a8e21122f30d4020bcfa7}
+\hypertarget{structNSVec3_a6b1bfdfc23d4605784997cf8d88bb971}{\index{N\-S\-Vec3@{N\-S\-Vec3}!set@{set}}
+\index{set@{set}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{p\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a6b1bfdfc23d4605784997cf8d88bb971}
+\hypertarget{structNSVec3_a7c3e8061e64dbf62159b62e74068dd5b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!set@{set}}
+\index{set@{set}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{p\-X, }
+\item[{const T \&}]{p\-Y, }
+\item[{const T \&}]{p\-Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7c3e8061e64dbf62159b62e74068dd5b}
+\hypertarget{structNSVec3_aa92fcc44ccfb9518091eb9aec29c9fde}{\index{N\-S\-Vec3@{N\-S\-Vec3}!set@{set}}
+\index{set@{set}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec2}$<$ T $>$ \&}]{xy, }
+\item[{const T \&}]{p\-Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa92fcc44ccfb9518091eb9aec29c9fde}
+\hypertarget{structNSVec3_ab505c9b5d384ac4cb258f10aacfa439c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!set@{set}}
+\index{set@{set}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{p\-X, }
+\item[{const {\bf N\-S\-Vec2}$<$ T $>$ \&}]{yz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab505c9b5d384ac4cb258f10aacfa439c}
+\hypertarget{structNSVec3_a638a0d35c0f648eb89b01ee9c6a4a965}{\index{N\-S\-Vec3@{N\-S\-Vec3}!set\-Length@{set\-Length}}
+\index{set\-Length@{set\-Length}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{set\-Length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::set\-Length (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a638a0d35c0f648eb89b01ee9c6a4a965}
+\hypertarget{structNSVec3_a48cf8f3b52f92cd404091afb3f224614}{\index{N\-S\-Vec3@{N\-S\-Vec3}!sp@{sp}}
+\index{sp@{sp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{sp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::sp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a48cf8f3b52f92cd404091afb3f224614}
+\hypertarget{structNSVec3_af8d5d57f01d33e38b736c107c469dcdb}{\index{N\-S\-Vec3@{N\-S\-Vec3}!spherical@{spherical}}
+\index{spherical@{spherical}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{spherical}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::spherical (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af8d5d57f01d33e38b736c107c469dcdb}
+\hypertarget{structNSVec3_a7c380c5369f89818cde793cc0721e94c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!spp@{spp}}
+\index{spp@{spp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{spp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::spp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7c380c5369f89818cde793cc0721e94c}
+\hypertarget{structNSVec3_a67127158fb51c8ce231d1097dcb8ff97}{\index{N\-S\-Vec3@{N\-S\-Vec3}!sps@{sps}}
+\index{sps@{sps}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{sps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::sps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a67127158fb51c8ce231d1097dcb8ff97}
+\hypertarget{structNSVec3_a738299bcd3fca3669564976a04e5225d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!spt@{spt}}
+\index{spt@{spt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{spt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::spt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a738299bcd3fca3669564976a04e5225d}
+\hypertarget{structNSVec3_a07c973c8f7c4525bc3b7ea31e53541f6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ss@{ss}}
+\index{ss@{ss}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ss}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a07c973c8f7c4525bc3b7ea31e53541f6}
+\hypertarget{structNSVec3_aeec2d01006d3e2579c09ca1d6c4e7c06}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ssp@{ssp}}
+\index{ssp@{ssp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ssp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ssp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aeec2d01006d3e2579c09ca1d6c4e7c06}
+\hypertarget{structNSVec3_aa8d8bb0186c557c09a99783a1de39b17}{\index{N\-S\-Vec3@{N\-S\-Vec3}!sss@{sss}}
+\index{sss@{sss}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{sss}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::sss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa8d8bb0186c557c09a99783a1de39b17}
+\hypertarget{structNSVec3_a10e6ba89601042d96928720462fe979f}{\index{N\-S\-Vec3@{N\-S\-Vec3}!sst@{sst}}
+\index{sst@{sst}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{sst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::sst (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a10e6ba89601042d96928720462fe979f}
+\hypertarget{structNSVec3_a81e5dcefea4744a1ead5d46d2c7634de}{\index{N\-S\-Vec3@{N\-S\-Vec3}!st@{st}}
+\index{st@{st}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{st}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::st (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a81e5dcefea4744a1ead5d46d2c7634de}
+\hypertarget{structNSVec3_a3294f31d1a0035f1546bec513da827a7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!sts@{sts}}
+\index{sts@{sts}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{sts}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::sts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a3294f31d1a0035f1546bec513da827a7}
+\hypertarget{structNSVec3_a67b8f7eae1737a961b410ba95a7737b7}{\index{N\-S\-Vec3@{N\-S\-Vec3}!stt@{stt}}
+\index{stt@{stt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{stt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::stt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a67b8f7eae1737a961b410ba95a7737b7}
+\hypertarget{structNSVec3_a2ed3a0330719348f27be5ae498593645}{\index{N\-S\-Vec3@{N\-S\-Vec3}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\-::string {\bf N\-S\-Vec3}$<$ T $>$\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf Coord\-Sys}}]{disp = {\ttfamily {\bf Cartesian}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a2ed3a0330719348f27be5ae498593645}
+\hypertarget{structNSVec3_a0247b88d663cd19ed53666f334e64421}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tp@{tp}}
+\index{tp@{tp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a0247b88d663cd19ed53666f334e64421}
+\hypertarget{structNSVec3_ad88e60ffae377c655236a2b832aaf9ce}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tpp@{tpp}}
+\index{tpp@{tpp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tpp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tpp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad88e60ffae377c655236a2b832aaf9ce}
+\hypertarget{structNSVec3_aad065d289de297c7b016fd7f56cfb2d6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tps@{tps}}
+\index{tps@{tps}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aad065d289de297c7b016fd7f56cfb2d6}
+\hypertarget{structNSVec3_adc16be5f44fe24cf674257f932c7d298}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tpt@{tpt}}
+\index{tpt@{tpt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tpt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tpt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_adc16be5f44fe24cf674257f932c7d298}
+\hypertarget{structNSVec3_a5f22f2819615c6759ff768b13068510a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!translation\-From@{translation\-From}}
+\index{translation\-From@{translation\-From}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{translation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$\& {\bf N\-S\-Vec3}$<$ T $>$\-::translation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a5f22f2819615c6759ff768b13068510a}
+\hypertarget{structNSVec3_af5f7aaebcbafd62fbce6c238b0314694}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ts@{ts}}
+\index{ts@{ts}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ts}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af5f7aaebcbafd62fbce6c238b0314694}
+\hypertarget{structNSVec3_ab51c066e51f84cd005f970168455e883}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tsp@{tsp}}
+\index{tsp@{tsp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tsp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tsp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab51c066e51f84cd005f970168455e883}
+\hypertarget{structNSVec3_a37401a42fd53e387c354c28c085dfeca}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tss@{tss}}
+\index{tss@{tss}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tss}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a37401a42fd53e387c354c28c085dfeca}
+\hypertarget{structNSVec3_abe97141c34ef70a2dee655b95eff4b83}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tst@{tst}}
+\index{tst@{tst}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tst (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_abe97141c34ef70a2dee655b95eff4b83}
+\hypertarget{structNSVec3_a4e4137be0b747c99671a0e15cf63c382}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tt@{tt}}
+\index{tt@{tt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a4e4137be0b747c99671a0e15cf63c382}
+\hypertarget{structNSVec3_ace1acc2030a5b55ab39f588ddaab664a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ttp@{ttp}}
+\index{ttp@{ttp}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ttp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ttp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ace1acc2030a5b55ab39f588ddaab664a}
+\hypertarget{structNSVec3_a10b361243d15166429f9210501da3afc}{\index{N\-S\-Vec3@{N\-S\-Vec3}!tts@{tts}}
+\index{tts@{tts}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{tts}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::tts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a10b361243d15166429f9210501da3afc}
+\hypertarget{structNSVec3_af2e4fd3bbdb2cb4f57b85129eef689d4}{\index{N\-S\-Vec3@{N\-S\-Vec3}!ttt@{ttt}}
+\index{ttt@{ttt}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{ttt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::ttt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af2e4fd3bbdb2cb4f57b85129eef689d4}
+\hypertarget{structNSVec3_a8cb7e99b94a64e2304fb3124fde91762}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xx@{xx}}
+\index{xx@{xx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a8cb7e99b94a64e2304fb3124fde91762}
+\hypertarget{structNSVec3_a0e592c13b85d0c7c98bfa839b2cb873d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xxx@{xxx}}
+\index{xxx@{xxx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xxx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xxx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a0e592c13b85d0c7c98bfa839b2cb873d}
+\hypertarget{structNSVec3_a448470ffffaee0ecfa1f01f002847032}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xxy@{xxy}}
+\index{xxy@{xxy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xxy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a448470ffffaee0ecfa1f01f002847032}
+\hypertarget{structNSVec3_a03ac0590a40a5bddd29232cf0b065d66}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xxz@{xxz}}
+\index{xxz@{xxz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xxz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xxz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a03ac0590a40a5bddd29232cf0b065d66}
+\hypertarget{structNSVec3_ad8219932251db48672b0b2e751712da3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xy@{xy}}
+\index{xy@{xy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad8219932251db48672b0b2e751712da3}
+\hypertarget{structNSVec3_a7b0c11a0066fdce6a3c39f4b0d800a80}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xyx@{xyx}}
+\index{xyx@{xyx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xyx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xyx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7b0c11a0066fdce6a3c39f4b0d800a80}
+\hypertarget{structNSVec3_ab77eb8f1158cd035f5fce39ffde565ea}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xyy@{xyy}}
+\index{xyy@{xyy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xyy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xyy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab77eb8f1158cd035f5fce39ffde565ea}
+\hypertarget{structNSVec3_a7f6be918d972415bba590a617049d285}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xz@{xz}}
+\index{xz@{xz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7f6be918d972415bba590a617049d285}
+\hypertarget{structNSVec3_ac55c7c928604c03e8c173d2c18c1968a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xzx@{xzx}}
+\index{xzx@{xzx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xzx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xzx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ac55c7c928604c03e8c173d2c18c1968a}
+\hypertarget{structNSVec3_a20ba81352401e56c4e42e0a7cb131a71}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xzy@{xzy}}
+\index{xzy@{xzy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xzy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xzy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a20ba81352401e56c4e42e0a7cb131a71}
+\hypertarget{structNSVec3_af567ebe11d835ad34cf5c2f760e7cc7a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!xzz@{xzz}}
+\index{xzz@{xzz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{xzz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::xzz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af567ebe11d835ad34cf5c2f760e7cc7a}
+\hypertarget{structNSVec3_a661a0323a7cc81829109cc8080ae1704}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yx@{yx}}
+\index{yx@{yx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a661a0323a7cc81829109cc8080ae1704}
+\hypertarget{structNSVec3_ad78741922485528895d53d67ab47487b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yxx@{yxx}}
+\index{yxx@{yxx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yxx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yxx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad78741922485528895d53d67ab47487b}
+\hypertarget{structNSVec3_af176d21dd70cec9f873301a07b90f2b4}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yxy@{yxy}}
+\index{yxy@{yxy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yxy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af176d21dd70cec9f873301a07b90f2b4}
+\hypertarget{structNSVec3_a4b1a91b84971d1c066594bc6570da4a5}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yxz@{yxz}}
+\index{yxz@{yxz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yxz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yxz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a4b1a91b84971d1c066594bc6570da4a5}
+\hypertarget{structNSVec3_ab8ba1f068fe7c956c84a90c8dc3aa1ee}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yy@{yy}}
+\index{yy@{yy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ab8ba1f068fe7c956c84a90c8dc3aa1ee}
+\hypertarget{structNSVec3_ad843b15db76b5414a1e4e0c9c2a3ee0a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yyx@{yyx}}
+\index{yyx@{yyx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yyx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yyx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad843b15db76b5414a1e4e0c9c2a3ee0a}
+\hypertarget{structNSVec3_a9113462f4942faf5dec6e3946e1a6945}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yyy@{yyy}}
+\index{yyy@{yyy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yyy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yyy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a9113462f4942faf5dec6e3946e1a6945}
+\hypertarget{structNSVec3_a665667f62ed35325ff6c9adf8dbb3f3d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yyz@{yyz}}
+\index{yyz@{yyz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yyz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yyz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a665667f62ed35325ff6c9adf8dbb3f3d}
+\hypertarget{structNSVec3_ad9006cfc08381fb525d43715059f7c15}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yz@{yz}}
+\index{yz@{yz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ad9006cfc08381fb525d43715059f7c15}
+\hypertarget{structNSVec3_a7adae94134532f1e8636fc8b4e122bf1}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yzx@{yzx}}
+\index{yzx@{yzx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yzx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yzx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7adae94134532f1e8636fc8b4e122bf1}
+\hypertarget{structNSVec3_a58b9842d9c68967b488001e5b92bc451}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yzy@{yzy}}
+\index{yzy@{yzy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yzy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yzy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a58b9842d9c68967b488001e5b92bc451}
+\hypertarget{structNSVec3_a07b97eff9e3ab8da136a650e0bd33440}{\index{N\-S\-Vec3@{N\-S\-Vec3}!yzz@{yzz}}
+\index{yzz@{yzz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{yzz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::yzz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a07b97eff9e3ab8da136a650e0bd33440}
+\hypertarget{structNSVec3_aa535678eef6a077d24ce6ec4fd234af3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zx@{zx}}
+\index{zx@{zx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa535678eef6a077d24ce6ec4fd234af3}
+\hypertarget{structNSVec3_a4998e5cf89c5a7318cd7545f34985a5d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zxx@{zxx}}
+\index{zxx@{zxx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zxx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zxx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a4998e5cf89c5a7318cd7545f34985a5d}
+\hypertarget{structNSVec3_a019d00f31e59cc959279c00956613d5d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zxy@{zxy}}
+\index{zxy@{zxy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zxy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a019d00f31e59cc959279c00956613d5d}
+\hypertarget{structNSVec3_a8e4472d55a89d659fcb8d39500cc8c8a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zxz@{zxz}}
+\index{zxz@{zxz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zxz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zxz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a8e4472d55a89d659fcb8d39500cc8c8a}
+\hypertarget{structNSVec3_aa9ff23a9a0536a8be1067d10a1973784}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zy@{zy}}
+\index{zy@{zy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_aa9ff23a9a0536a8be1067d10a1973784}
+\hypertarget{structNSVec3_addaa05acc5906dac5029c55c6ba2113b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zyx@{zyx}}
+\index{zyx@{zyx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zyx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zyx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_addaa05acc5906dac5029c55c6ba2113b}
+\hypertarget{structNSVec3_a7499ad1201489ceedb540f2eb1b10fb0}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zyy@{zyy}}
+\index{zyy@{zyy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zyy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zyy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a7499ad1201489ceedb540f2eb1b10fb0}
+\hypertarget{structNSVec3_a69345d0593bed6157946deb660ece026}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zyz@{zyz}}
+\index{zyz@{zyz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zyz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zyz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a69345d0593bed6157946deb660ece026}
+\hypertarget{structNSVec3_a444a1ab8b01941d5621a05f4c3feb466}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zz@{zz}}
+\index{zz@{zz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec2}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a444a1ab8b01941d5621a05f4c3feb466}
+\hypertarget{structNSVec3_ae769202a58f5066d50fb96fd106a048a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zzx@{zzx}}
+\index{zzx@{zzx}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zzx}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zzx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_ae769202a58f5066d50fb96fd106a048a}
+\hypertarget{structNSVec3_af0fc423f7ddaa69a5327737fa5852800}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zzy@{zzy}}
+\index{zzy@{zzy}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zzy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zzy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_af0fc423f7ddaa69a5327737fa5852800}
+\hypertarget{structNSVec3_a27acce84e85fb42b15d7ddb19372636c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!zzz@{zzz}}
+\index{zzz@{zzz}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{zzz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf N\-S\-Vec3}$<$ T $>$\-::zzz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structNSVec3_a27acce84e85fb42b15d7ddb19372636c}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structNSVec3_a03e28ca6d54600478013ce033113af94}{\subsubsection[{"@53}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structNSVec3_a03e28ca6d54600478013ce033113af94}
+\hypertarget{structNSVec3_aadd7462fb6f7d7df83cb8ffd1645eb8b}{\index{N\-S\-Vec3@{N\-S\-Vec3}!b@{b}}
+\index{b@{b}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::b}}\label{structNSVec3_aadd7462fb6f7d7df83cb8ffd1645eb8b}
+\hypertarget{structNSVec3_abb8768d33c0752160bd78e978d6625b9}{\index{N\-S\-Vec3@{N\-S\-Vec3}!D@{D}}
+\index{D@{D}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::D}}\label{structNSVec3_abb8768d33c0752160bd78e978d6625b9}
+\hypertarget{structNSVec3_a82314c4b8d4619ba32b4b3f9c58f5a2c}{\index{N\-S\-Vec3@{N\-S\-Vec3}!data@{data}}
+\index{data@{data}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::data\mbox{[}3\mbox{]}}}\label{structNSVec3_a82314c4b8d4619ba32b4b3f9c58f5a2c}
+\hypertarget{structNSVec3_af4da81fc8e3a7ce2c16481ca7ac01021}{\index{N\-S\-Vec3@{N\-S\-Vec3}!g@{g}}
+\index{g@{g}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::g}}\label{structNSVec3_af4da81fc8e3a7ce2c16481ca7ac01021}
+\hypertarget{structNSVec3_a2b2d6da3c41bfa78589cd09b79b09de6}{\index{N\-S\-Vec3@{N\-S\-Vec3}!I@{I}}
+\index{I@{I}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::I}}\label{structNSVec3_a2b2d6da3c41bfa78589cd09b79b09de6}
+\hypertarget{structNSVec3_a8d244562d8e23e387b9e8102dfd3a14d}{\index{N\-S\-Vec3@{N\-S\-Vec3}!p@{p}}
+\index{p@{p}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::p}}\label{structNSVec3_a8d244562d8e23e387b9e8102dfd3a14d}
+\hypertarget{structNSVec3_ad4f0cefc81041963c730f9d60093442e}{\index{N\-S\-Vec3@{N\-S\-Vec3}!P@{P}}
+\index{P@{P}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::P}}\label{structNSVec3_ad4f0cefc81041963c730f9d60093442e}
+\hypertarget{structNSVec3_a7d4a1f0856df05844ec136f59033e32a}{\index{N\-S\-Vec3@{N\-S\-Vec3}!r@{r}}
+\index{r@{r}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::r}}\label{structNSVec3_a7d4a1f0856df05844ec136f59033e32a}
+\hypertarget{structNSVec3_a5f429613450844e0b8a8fbb502ee6342}{\index{N\-S\-Vec3@{N\-S\-Vec3}!s@{s}}
+\index{s@{s}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::s}}\label{structNSVec3_a5f429613450844e0b8a8fbb502ee6342}
+\hypertarget{structNSVec3_a3df97592d42f0f53d8b48fbb5c95b506}{\index{N\-S\-Vec3@{N\-S\-Vec3}!t@{t}}
+\index{t@{t}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::t}}\label{structNSVec3_a3df97592d42f0f53d8b48fbb5c95b506}
+\hypertarget{structNSVec3_abc4e7ffce298313829ad938a5af61818}{\index{N\-S\-Vec3@{N\-S\-Vec3}!x@{x}}
+\index{x@{x}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::x}}\label{structNSVec3_abc4e7ffce298313829ad938a5af61818}
+\hypertarget{structNSVec3_a5498f3161922dedec454c81ab4e54ae3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!y@{y}}
+\index{y@{y}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::y}}\label{structNSVec3_a5498f3161922dedec454c81ab4e54ae3}
+\hypertarget{structNSVec3_a6731c5158baf48408a4311b6b13aafb3}{\index{N\-S\-Vec3@{N\-S\-Vec3}!z@{z}}
+\index{z@{z}!NSVec3@{N\-S\-Vec3}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf N\-S\-Vec3}$<$ T $>$\-::z}}\label{structNSVec3_a6731c5158baf48408a4311b6b13aafb3}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{nsvec2_8h}{nsvec2.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{nsvec3_8h}{nsvec3.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{ednavsystem_8h}{\section{/home/dprandle/\-Documents/code/ctrlmod/include/ednavsystem.h File Reference}
+\label{ednavsystem_8h}\index{/home/dprandle/\-Documents/code/ctrlmod/include/ednavsystem.\-h@{/home/dprandle/\-Documents/code/ctrlmod/include/ednavsystem.\-h}}
+}
+
+
+Navigation system header file.  
+
+
+{\ttfamily \#include $<$edsystem.\-h$>$}\\*
+{\ttfamily \#include $<$nsmath.\-h$>$}\\*
+{\ttfamily \#include $<$edpid\-\_\-controller.\-h$>$}\\*
+{\ttfamily \#include $<$edcallback.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classednav__system}{ednav\-\_\-system}
+\item 
+struct \hyperlink{structinstruction__callback}{instruction\-\_\-callback}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemraa}{mraa}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ednavsystem_8h_ae444d6d92b052418cc04e74919e34b8c}{A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x04
+\item 
+\#define \hyperlink{ednavsystem_8h_a9a71c95c238660dd302fecbb30c56ff2}{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N}~-\/100
+\item 
+\#define \hyperlink{ednavsystem_8h_afa2f4daed6848d659b67ff69265a209d}{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X}~100
+\item 
+\#define \hyperlink{ednavsystem_8h_a34a3318289c8406550219d402a687a34}{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}~-\/5000
+\item 
+\#define \hyperlink{ednavsystem_8h_a18d6cf3e94a36a8b635d86689e3c111a}{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}~5000
+\item 
+\#define \hyperlink{ednavsystem_8h_aabe35076c44671c711625cd15a5191d6}{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}~-\/45
+\item 
+\#define \hyperlink{ednavsystem_8h_ad571479ea6d7c4330821f6d2cf86fd55}{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}~45
+\item 
+\#define \hyperlink{ednavsystem_8h_a7b8365fa8a42356872d9647aabda1665}{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N}~-\/500
+\item 
+\#define \hyperlink{ednavsystem_8h_a150f0a256648d7b97768a47534f62a01}{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X}~500
+\item 
+\#define \hyperlink{ednavsystem_8h_ad5caf396f559126e411b8cd9d9ca125f}{P\-I\-T\-C\-H\-\_\-\-M\-I\-N}~-\/500
+\item 
+\#define \hyperlink{ednavsystem_8h_a6967aad3ff7fb77777abb6aa064c6d9c}{P\-I\-T\-C\-H\-\_\-\-M\-A\-X}~500
+\item 
+\#define \hyperlink{ednavsystem_8h_aa0dc2400afe66fbca27b20b77dd55c69}{R\-O\-L\-L\-\_\-\-M\-I\-N}~-\/500
+\item 
+\#define \hyperlink{ednavsystem_8h_a4797f77f3061e9b3e3a727b19b34cef7}{R\-O\-L\-L\-\_\-\-M\-A\-X}~500
+\item 
+\#define \hyperlink{ednavsystem_8h_adf66c4c3c57b98c93ae79012df83f23d}{Y\-A\-W\-\_\-\-M\-I\-N}~-\/500
+\item 
+\#define \hyperlink{ednavsystem_8h_a4293798f6345765ea0ce2258c68e68a5}{Y\-A\-W\-\_\-\-M\-A\-X}~500
+\item 
+\#define \hyperlink{ednavsystem_8h_ac4c50d2ec5229af74ea12911980e265a}{G\-\_\-\-C\-O\-N\-S\-T}~5000000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Navigation system header file. \begin{DoxyAuthor}{Author}
+Daniel $<$dprandle-\/\-C\-Z-\/17$>$ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Fri Jul 10 10\-:34\-:08 2015 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ednavsystem_8h_afa2f4daed6848d659b67ff69265a209d}{\index{ednavsystem.\-h@{ednavsystem.\-h}!A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X@{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X}}
+\index{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X@{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-A\-X~100}}\label{ednavsystem_8h_afa2f4daed6848d659b67ff69265a209d}
+cm \hypertarget{ednavsystem_8h_a9a71c95c238660dd302fecbb30c56ff2}{\index{ednavsystem.\-h@{ednavsystem.\-h}!A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N@{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N}}
+\index{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N@{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-T\-\_\-\-D\-I\-F\-\_\-\-M\-I\-N~-\/100}}\label{ednavsystem_8h_a9a71c95c238660dd302fecbb30c56ff2}
+cm \hypertarget{ednavsystem_8h_ae444d6d92b052418cc04e74919e34b8c}{\index{ednavsystem.\-h@{ednavsystem.\-h}!A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S@{A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S@{A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-R\-D\-U\-I\-N\-O\-\_\-\-A\-D\-D\-R\-E\-S\-S~0x04}}\label{ednavsystem_8h_ae444d6d92b052418cc04e74919e34b8c}
+\hypertarget{ednavsystem_8h_ac4c50d2ec5229af74ea12911980e265a}{\index{ednavsystem.\-h@{ednavsystem.\-h}!G\-\_\-\-C\-O\-N\-S\-T@{G\-\_\-\-C\-O\-N\-S\-T}}
+\index{G\-\_\-\-C\-O\-N\-S\-T@{G\-\_\-\-C\-O\-N\-S\-T}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{G\-\_\-\-C\-O\-N\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-\_\-\-C\-O\-N\-S\-T~5000000}}\label{ednavsystem_8h_ac4c50d2ec5229af74ea12911980e265a}
+\hypertarget{ednavsystem_8h_a18d6cf3e94a36a8b635d86689e3c111a}{\index{ednavsystem.\-h@{ednavsystem.\-h}!L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X@{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}}
+\index{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X@{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X~5000}}\label{ednavsystem_8h_a18d6cf3e94a36a8b635d86689e3c111a}
+cm \hypertarget{ednavsystem_8h_a34a3318289c8406550219d402a687a34}{\index{ednavsystem.\-h@{ednavsystem.\-h}!L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N@{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}}
+\index{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N@{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-D\-A\-R\-\_\-\-D\-I\-S\-T\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N~-\/5000}}\label{ednavsystem_8h_a34a3318289c8406550219d402a687a34}
+cm \hypertarget{ednavsystem_8h_a6967aad3ff7fb77777abb6aa064c6d9c}{\index{ednavsystem.\-h@{ednavsystem.\-h}!P\-I\-T\-C\-H\-\_\-\-M\-A\-X@{P\-I\-T\-C\-H\-\_\-\-M\-A\-X}}
+\index{P\-I\-T\-C\-H\-\_\-\-M\-A\-X@{P\-I\-T\-C\-H\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{P\-I\-T\-C\-H\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-T\-C\-H\-\_\-\-M\-A\-X~500}}\label{ednavsystem_8h_a6967aad3ff7fb77777abb6aa064c6d9c}
+\hypertarget{ednavsystem_8h_ad5caf396f559126e411b8cd9d9ca125f}{\index{ednavsystem.\-h@{ednavsystem.\-h}!P\-I\-T\-C\-H\-\_\-\-M\-I\-N@{P\-I\-T\-C\-H\-\_\-\-M\-I\-N}}
+\index{P\-I\-T\-C\-H\-\_\-\-M\-I\-N@{P\-I\-T\-C\-H\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{P\-I\-T\-C\-H\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-T\-C\-H\-\_\-\-M\-I\-N~-\/500}}\label{ednavsystem_8h_ad5caf396f559126e411b8cd9d9ca125f}
+\hypertarget{ednavsystem_8h_a4797f77f3061e9b3e3a727b19b34cef7}{\index{ednavsystem.\-h@{ednavsystem.\-h}!R\-O\-L\-L\-\_\-\-M\-A\-X@{R\-O\-L\-L\-\_\-\-M\-A\-X}}
+\index{R\-O\-L\-L\-\_\-\-M\-A\-X@{R\-O\-L\-L\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{R\-O\-L\-L\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-O\-L\-L\-\_\-\-M\-A\-X~500}}\label{ednavsystem_8h_a4797f77f3061e9b3e3a727b19b34cef7}
+\hypertarget{ednavsystem_8h_aa0dc2400afe66fbca27b20b77dd55c69}{\index{ednavsystem.\-h@{ednavsystem.\-h}!R\-O\-L\-L\-\_\-\-M\-I\-N@{R\-O\-L\-L\-\_\-\-M\-I\-N}}
+\index{R\-O\-L\-L\-\_\-\-M\-I\-N@{R\-O\-L\-L\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{R\-O\-L\-L\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-O\-L\-L\-\_\-\-M\-I\-N~-\/500}}\label{ednavsystem_8h_aa0dc2400afe66fbca27b20b77dd55c69}
+\hypertarget{ednavsystem_8h_a150f0a256648d7b97768a47534f62a01}{\index{ednavsystem.\-h@{ednavsystem.\-h}!T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X@{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X}}
+\index{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X@{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-A\-X~500}}\label{ednavsystem_8h_a150f0a256648d7b97768a47534f62a01}
+\hypertarget{ednavsystem_8h_a7b8365fa8a42356872d9647aabda1665}{\index{ednavsystem.\-h@{ednavsystem.\-h}!T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N@{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N}}
+\index{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N@{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-R\-O\-T\-T\-L\-E\-\_\-\-M\-I\-N~-\/500}}\label{ednavsystem_8h_a7b8365fa8a42356872d9647aabda1665}
+scaled min \hypertarget{ednavsystem_8h_ad571479ea6d7c4330821f6d2cf86fd55}{\index{ednavsystem.\-h@{ednavsystem.\-h}!Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X@{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}}
+\index{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X@{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-A\-X~45}}\label{ednavsystem_8h_ad571479ea6d7c4330821f6d2cf86fd55}
+\hypertarget{ednavsystem_8h_aabe35076c44671c711625cd15a5191d6}{\index{ednavsystem.\-h@{ednavsystem.\-h}!Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N@{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}}
+\index{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N@{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-A\-W\-\_\-\-A\-N\-G\-L\-E\-\_\-\-D\-I\-F\-F\-\_\-\-M\-I\-N~-\/45}}\label{ednavsystem_8h_aabe35076c44671c711625cd15a5191d6}
+\hypertarget{ednavsystem_8h_a4293798f6345765ea0ce2258c68e68a5}{\index{ednavsystem.\-h@{ednavsystem.\-h}!Y\-A\-W\-\_\-\-M\-A\-X@{Y\-A\-W\-\_\-\-M\-A\-X}}
+\index{Y\-A\-W\-\_\-\-M\-A\-X@{Y\-A\-W\-\_\-\-M\-A\-X}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{Y\-A\-W\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-A\-W\-\_\-\-M\-A\-X~500}}\label{ednavsystem_8h_a4293798f6345765ea0ce2258c68e68a5}
+\hypertarget{ednavsystem_8h_adf66c4c3c57b98c93ae79012df83f23d}{\index{ednavsystem.\-h@{ednavsystem.\-h}!Y\-A\-W\-\_\-\-M\-I\-N@{Y\-A\-W\-\_\-\-M\-I\-N}}
+\index{Y\-A\-W\-\_\-\-M\-I\-N@{Y\-A\-W\-\_\-\-M\-I\-N}!ednavsystem.h@{ednavsystem.\-h}}
+\subsubsection[{Y\-A\-W\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-A\-W\-\_\-\-M\-I\-N~-\/500}}\label{ednavsystem_8h_adf66c4c3c57b98c93ae79012df83f23d}

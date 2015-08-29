@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edmctrl_8cpp">
+    <title>edmctrl.cpp File Reference</title>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <programlisting>#include &lt;edsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Master control file for the edison. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Fri Jul 10 09:19:32 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edmctrl.cpp</para>
+    </simplesect>
+</section>

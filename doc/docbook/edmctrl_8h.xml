@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edmctrl_8h">
+    <title>edmctrl.h File Reference</title>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classedmctrl">edmctrl</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edmctrl_8h_1aad930ef02a7b022187621e173b6069a6">edm</link> <link linkend="classedmctrl_1a5977247f3379a9e39709a07303ffef90">edmctrl::inst</link>()</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; std::string, <link linkend="classedsystem">edsystem</link> * &gt;  <link linkend="edmctrl_8h_1a805abecdc1a0ce4782273212e8193186">sysmap</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Header file for master controller. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Fri Jul 10 09:20:01 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/edmctrl.h</para>
+    </simplesect>
+</section>

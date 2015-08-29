@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edcomm__system_8cpp">
+    <title>edcomm_system.cpp File Reference</title>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <programlisting>#include &lt;edcomm_system.h&gt;</programlisting>
+    <programlisting>#include &lt;sys/socket.h&gt;</programlisting>
+    <programlisting>#include &lt;arpa/inet.h&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;edglobal.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;errno.h&gt;</programlisting>
+    <programlisting>#include &lt;edsocket.h&gt;</programlisting>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edcomm_system.cpp</para>
+    </simplesect>
+</section>

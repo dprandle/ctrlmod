@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structNSBoundingBox">
+<title>NSBoundingBox struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="nsmath_8h">&lt;nsmath.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3">Face</link>{<link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a">None</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aaad0448696f53765901c258077228bbd">Bottom</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a7f46147c511698a1073663c686687fa6">Top</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a9803c369ffa46e5be767f351b1eac244">Left</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3ad6fa2c54fe36df795e203490cb5d33cd">Right</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aa3210f70f334d5ee24a72182b94999cd">Back</link>, <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aac9f5dea31ead073b4675ee3978b0c5f">Front</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fvec3 mMin</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fvec3 mMax</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fvec3 mVerts[8]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structNSBoundingBox_1a6392f91e736e33674a7b17ee3a003da5">NSBoundingBox</link> (
+const std::vector&lt; <link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> &gt; &amp; pVertices)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structNSBoundingBox_1a63001de3b290ef19ed63e46f7e949d65">calculate</link> (
+const std::vector&lt; <link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> &gt; &amp; pVertices, const <link linkend="nsmath_8h_1ae867bb2ea15fd3e2c452911a1c929538">fmat4</link> &amp; pTransform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> <link linkend="structNSBoundingBox_1aafdeb08087bb7c3aeeaae668edc16f94">center</link> (
+const <link linkend="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3">Face</link> &amp; pFace)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structNSBoundingBox_1a7de92ab5607c0be1dccc26103512b382">clear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="structNSBoundingBox_1a88cc0a3d49be3e1492b0a262a89ac12f">dx</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="structNSBoundingBox_1a5d625d3195e80d5620ad89357297607e">dy</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="structNSBoundingBox_1a804419300fa56b28aa635a5e7d115e53">dz</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structNSBoundingBox_1a5a2bf193567c0d374968aba39f6b7127">extend</link> (
+const std::vector&lt; <link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> &gt; &amp; pVertices, const <link linkend="nsmath_8h_1ae867bb2ea15fd3e2c452911a1c929538">fmat4</link> &amp; pTransform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structNSBoundingBox_1afc5af6303097994df1c468099538da97">set</link> (
+const <link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> &amp; pMin, const <link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> pMax)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="structNSBoundingBox_1a18e09e658dc5aa1e93106143eb4c1a10">volume</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structNSBoundingBox_1a3462b7197f14225bfe0d5f6f3a7f7131">_updateVerts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3">
+               <title>enum Face </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a">
+                            <term>None</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aaad0448696f53765901c258077228bbd">
+                            <term>Bottom</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a7f46147c511698a1073663c686687fa6">
+                            <term>Top</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3a9803c369ffa46e5be767f351b1eac244">
+                            <term>Left</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3ad6fa2c54fe36df795e203490cb5d33cd">
+                            <term>Right</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aa3210f70f334d5ee24a72182b94999cd">
+                            <term>Back</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structNSBoundingBox_1a6cc652314d1c87dcedda3eaa21f1d3e3aac9f5dea31ead073b4675ee3978b0c5f">
+                            <term>Front</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 114 of file nsmath.h
+                    <programlisting>
+{
+None, 
+Bottom, 
+Top, 
+Left, 
+Right, 
+Back, 
+Front, 
+}Face;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="structNSBoundingBox_1a6392f91e736e33674a7b17ee3a003da5">
+                <title>NSBoundingBox::NSBoundingBox (const std::vector&lt; fvec3 &gt; &amp;pVertices=std::vector&lt; fvec3 &gt;())</title> <emphasis></emphasis>
+                
+<para>Calculates the box given a set of vertices.. if no vertices are given then will set everything to zero. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a63001de3b290ef19ed63e46f7e949d65">
+                <title>void NSBoundingBox::calculate (const std::vector&lt; fvec3 &gt; &amp;pVertices, const fmat4 &amp;pTransform=fmat4())</title> <emphasis></emphasis>
+                
+<para>Find the min and max of a set of vertices and use that to make the bounding box. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1aafdeb08087bb7c3aeeaae668edc16f94">
+                <title>fvec3 NSBoundingBox::center (const Face &amp;pFace=None)</title> <emphasis></emphasis>
+                
+<para>Returns the center of the box or the center of a face of the box if pFace is specified as something other than None. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a7de92ab5607c0be1dccc26103512b382">
+                <title>void NSBoundingBox::clear ()</title> <emphasis></emphasis>
+                
+<para>Clears the verts and the min/max to 0. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a88cc0a3d49be3e1492b0a262a89ac12f">
+                <title>float NSBoundingBox::dx ()</title> <emphasis></emphasis>
+                
+<para>Length of box in x direction. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a5d625d3195e80d5620ad89357297607e">
+                <title>float NSBoundingBox::dy ()</title> <emphasis></emphasis>
+                
+<para>Length of box in y direction. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a804419300fa56b28aa635a5e7d115e53">
+                <title>float NSBoundingBox::dz ()</title> <emphasis></emphasis>
+                
+<para>Length of box in z direction. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a5a2bf193567c0d374968aba39f6b7127">
+                <title>void NSBoundingBox::extend (const std::vector&lt; fvec3 &gt; &amp;pVertices, const fmat4 &amp;pTransform=fmat4())</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSBoundingBox_1afc5af6303097994df1c468099538da97">
+                <title>void NSBoundingBox::set (const fvec3 &amp;pMin, const fvec3 pMax)</title> <emphasis></emphasis>
+                
+<para>Set the min and max - will update the verts based on this new min and max. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a18e09e658dc5aa1e93106143eb4c1a10">
+                <title>float NSBoundingBox::volume ()</title> <emphasis></emphasis>
+                
+<para>The volume in whatever units the world is represented in. The cartesian coordinate x = 1, y = 1, z = 1 would represent a point that is 1 unit away from each axis and 1.41 units away from the origin. </para>
+
+            </section>
+            <section xml:id="structNSBoundingBox_1a3462b7197f14225bfe0d5f6f3a7f7131">
+                <title>void NSBoundingBox::_updateVerts ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

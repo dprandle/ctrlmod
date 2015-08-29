@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedcomm__system">
+<title>edcomm_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edcomm__system_8h">&lt;edcomm_system.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::vector&lt; <link linkend="classedsocket">edsocket</link> * &gt;  <link linkend="classedcomm__system_1ae335eb51c2821d76abd55a3cea8a4df9">ClientArray</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ClientArray m_clients</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t m_server_fd</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16_t m_port</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Command m_cur_cmd</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_cur_index</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedcomm__system_1af0ff75511346286c460c8032f55b07ae">edcomm_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedcomm__system_1a15e21d845f4491cd2f8d82fb0924b580">~edcomm_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedcomm__system_1a07f81f18aeca00b88928a8aec7b3129e">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedcomm__system_1ad9bdfd2845a3156f5d010e99f8fbed07">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classedcomm__system_1ad3b79f16dd77b5ae458cc360550e99cd">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16_t <link linkend="classedcomm__system_1ac7f39247c0f1ae2023adf9562dbc7c81">port</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1a36087648658a44860a8905d4b979c8fe">set_port</link> (
+uint16_t port_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedcomm__system_1adc9ffc8199070ad0d836a447005a4e1e">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t <link linkend="classedcomm__system_1ae9196f8b00b7e5d5a26075c4311b058c">recvFromClients</link> (
+uint8_t * data, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1a91aa83b31bc197b2f0ec1c5600f4ec9f">sendToClients</link> (
+uint8_t * data, uint32_t size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="classedcomm__system_1a61e1243fba536c8263ba93367cd5a2a7">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classedcomm__system_1a0e58236d155e30df3cc55de56023cdd5">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1ae747a53a8a7d3706d738f154e8b4637b">_handle_byte</link> (
+uint8_t byte)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1a74947c7631e9eddf93610f46fb4d3d29">_sendScan</link> (
+<link linkend="structrplidar__scan__message">rplidar_scan_message</link> * scanmessage)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1a378784eaaa4e1cbef726839fc4fc4b12">_do_command</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedcomm__system_1a6074e8896f78e72dbd28d131550db849">_clean_closed_connections</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedcomm__system_1ae335eb51c2821d76abd55a3cea8a4df9">
+                <title>typedef std::vector&lt;edsocket*&gt; edcomm_system::ClientArray</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1af0ff75511346286c460c8032f55b07ae">
+                <title>edcomm_system::edcomm_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a15e21d845f4491cd2f8d82fb0924b580">
+                <title>edcomm_system::~edcomm_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a07f81f18aeca00b88928a8aec7b3129e">
+                <title>void edcomm_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1ad9bdfd2845a3156f5d010e99f8fbed07">
+                <title>void edcomm_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1ad3b79f16dd77b5ae458cc360550e99cd">
+                <title>bool edcomm_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1ac7f39247c0f1ae2023adf9562dbc7c81">
+                <title>uint16_t edcomm_system::port ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a36087648658a44860a8905d4b979c8fe">
+                <title>void edcomm_system::set_port (uint16_t port_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1adc9ffc8199070ad0d836a447005a4e1e">
+                <title>void edcomm_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1ae9196f8b00b7e5d5a26075c4311b058c">
+                <title>uint32_t edcomm_system::recvFromClients (uint8_t *data, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a91aa83b31bc197b2f0ec1c5600f4ec9f">
+                <title>void edcomm_system::sendToClients (uint8_t *data, uint32_t size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a61e1243fba536c8263ba93367cd5a2a7">
+                <title>virtual std::string edcomm_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a0e58236d155e30df3cc55de56023cdd5">
+                <title>static std::string edcomm_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1ae747a53a8a7d3706d738f154e8b4637b">
+                <title>void edcomm_system::_handle_byte (uint8_t byte)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a74947c7631e9eddf93610f46fb4d3d29">
+                <title>void edcomm_system::_sendScan (rplidar_scan_message *scanmessage)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a378784eaaa4e1cbef726839fc4fc4b12">
+                <title>void edcomm_system::_do_command ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedcomm__system_1a6074e8896f78e72dbd28d131550db849">
+                <title>void edcomm_system::_clean_closed_connections ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,39 @@
+\hypertarget{edthreaded__fd_8h}{\section{/home/dprandle/\-Documents/code/ctrlmod/include/edthreaded\-\_\-fd.h File Reference}
+\label{edthreaded__fd_8h}\index{/home/dprandle/\-Documents/code/ctrlmod/include/edthreaded\-\_\-fd.\-h@{/home/dprandle/\-Documents/code/ctrlmod/include/edthreaded\-\_\-fd.\-h}}
+}
+{\ttfamily \#include $<$edglobal.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$edcallback.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classedthreaded__fd}{edthreaded\-\_\-fd}
+\item 
+struct \hyperlink{structedthreaded__fd_1_1Error}{edthreaded\-\_\-fd\-::\-Error}
+\item 
+struct \hyperlink{structedthreaded__fd_1_1WriteVal}{edthreaded\-\_\-fd\-::\-Write\-Val}
+\item 
+struct \hyperlink{structcommand__wait__callback}{command\-\_\-wait\-\_\-callback}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{edthreaded__fd_8h_a342873b4069f62ee07236e149ab6471b}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~5120
+\item 
+\#define \hyperlink{edthreaded__fd_8h_a645b973029e4897854f96c850e30eaa3}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~5120
+\item 
+\#define \hyperlink{edthreaded__fd_8h_a23180b3704624449dba84bb69cbf00e9}{F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~1024
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{edthreaded__fd_8h_a645b973029e4897854f96c850e30eaa3}{\index{edthreaded\-\_\-fd.\-h@{edthreaded\-\_\-fd.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!edthreaded_fd.h@{edthreaded\-\_\-fd.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~5120}}\label{edthreaded__fd_8h_a645b973029e4897854f96c850e30eaa3}
+\hypertarget{edthreaded__fd_8h_a342873b4069f62ee07236e149ab6471b}{\index{edthreaded\-\_\-fd.\-h@{edthreaded\-\_\-fd.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!edthreaded_fd.h@{edthreaded\-\_\-fd.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~5120}}\label{edthreaded__fd_8h_a342873b4069f62ee07236e149ab6471b}
+\hypertarget{edthreaded__fd_8h_a23180b3704624449dba84bb69cbf00e9}{\index{edthreaded\-\_\-fd.\-h@{edthreaded\-\_\-fd.\-h}!F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!edthreaded_fd.h@{edthreaded\-\_\-fd.\-h}}
+\subsubsection[{F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-D\-\_\-\-T\-M\-P\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~1024}}\label{edthreaded__fd_8h_a23180b3704624449dba84bb69cbf00e9}

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edutility_8cpp">
+    <title>edutility.cpp File Reference</title>
+    <programlisting>#include &lt;fstream&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;exception&gt;</programlisting>
+    <programlisting>#include &lt;stdexcept&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;ctime&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <programlisting>#include &lt;iomanip&gt;</programlisting>
+    <programlisting>#include &lt;edglobal.h&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static pthread_mutex_t <link linkend="edutility_8cpp_1a0a0fd347bcbf6fe43f54b153d87563ec">timestamp_lock</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static pthread_mutex_t <link linkend="edutility_8cpp_1a20f9629384b5fa4376cbae84bc711355">cout_lock</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="edutility_8cpp_1a9277dedbdaa8ed78894c6bb8133d6793">delay</link> (
+double ms)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="edutility_8cpp_1a0a7091e51d354cee3b71b3b883590e84">cprint</link> (
+const std::string &amp; str)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t <link linkend="edutility_8cpp_1a87f61bec53163fdb56b17ea38c0b3800">hash_id</link> (
+const std::string &amp; strng)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="edutility_8cpp_1a9da5805a666cf665601fdd430b75a017">log_message</link> (
+const std::string &amp; msg, const std::string &amp; fname, bool tmstmp)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1a836c32ccbd0aa9cbb0094c120c62e4d8">timestamp</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1aa0e2d86c6b854e7b23af61b22b98fd5f">to_hex</link> (
+uint8_t byte)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1aca1ee116d8e448c90389d9425c4e9615">to_hex</link> (
+int16_t two_bytes)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1ae0b03fb1468a25d30b19e98ca5e9e080">to_hex</link> (
+uint16_t two_bytes)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1a567ff20d29b9511a724e8d222e9179de">to_hex</link> (
+int32_t four_bytes)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="edutility_8cpp_1a3b6326de6f7c085df29023c28e6395fd">to_hex</link> (
+uint32_t four_bytes)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="edutility_8cpp_1a3223656bda66f73b0378600ff4d630dd">zero_buf</link> (
+uint8_t * buf, uint32_t size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="edutility_8cpp_1a52c9e0ee8939e45665242ec56731a2e7">copy_buf</link> (
+const uint8_t * src, uint8_t * dest, uint32_t size, uint32_t src_offset, uint32_t dest_offset)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edutility.cpp</para>
+    </simplesect>
+</section>

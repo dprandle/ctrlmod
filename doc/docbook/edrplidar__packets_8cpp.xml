@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edrplidar__packets_8cpp">
+    <title>edrplidar_packets.cpp File Reference</title>
+    <programlisting>#include &lt;edrplidar_packets.h&gt;</programlisting>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <programlisting>#include &lt;iomanip&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edrplidar_packets.cpp</para>
+    </simplesect>
+</section>

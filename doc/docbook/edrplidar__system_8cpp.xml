@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edrplidar__system_8cpp">
+    <title>edrplidar_system.cpp File Reference</title>
+    <programlisting>#include &lt;eduart.h&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <programlisting>#include &lt;edrplidar_system.h&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <programlisting>#include &lt;mraa/uart.hpp&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;termios.h&gt;</programlisting>
+    <programlisting>#include &lt;mraa/mraa_internal_types.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edrplidar_system.cpp</para>
+    </simplesect>
+</section>

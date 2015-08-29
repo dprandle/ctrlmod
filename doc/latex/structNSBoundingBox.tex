@@ -1,0 +1,175 @@
+\hypertarget{structNSBoundingBox}{\section{N\-S\-Bounding\-Box Struct Reference}
+\label{structNSBoundingBox}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}
+}
+
+
+{\ttfamily \#include $<$nsmath.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3}{Face} \{ \\*
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a}{None}, 
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aaad0448696f53765901c258077228bbd}{Bottom}, 
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a7f46147c511698a1073663c686687fa6}{Top}, 
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a9803c369ffa46e5be767f351b1eac244}{Left}, 
+\\*
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3ad6fa2c54fe36df795e203490cb5d33cd}{Right}, 
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aa3210f70f334d5ee24a72182b94999cd}{Back}, 
+\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aac9f5dea31ead073b4675ee3978b0c5f}{Front}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structNSBoundingBox_a6392f91e736e33674a7b17ee3a003da5}{N\-S\-Bounding\-Box} (const std\-::vector$<$ \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} $>$ \&p\-Vertices=std\-::vector$<$ \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} $>$())
+\item 
+void \hyperlink{structNSBoundingBox_a63001de3b290ef19ed63e46f7e949d65}{calculate} (const std\-::vector$<$ \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} $>$ \&p\-Vertices, const \hyperlink{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{fmat4} \&p\-Transform=\hyperlink{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{fmat4}())
+\item 
+\hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} \hyperlink{structNSBoundingBox_aafdeb08087bb7c3aeeaae668edc16f94}{center} (const \hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3}{Face} \&p\-Face=\hyperlink{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a}{None})
+\item 
+void \hyperlink{structNSBoundingBox_a7de92ab5607c0be1dccc26103512b382}{clear} ()
+\item 
+float \hyperlink{structNSBoundingBox_a88cc0a3d49be3e1492b0a262a89ac12f}{dx} ()
+\item 
+float \hyperlink{structNSBoundingBox_a5d625d3195e80d5620ad89357297607e}{dy} ()
+\item 
+float \hyperlink{structNSBoundingBox_a804419300fa56b28aa635a5e7d115e53}{dz} ()
+\item 
+void \hyperlink{structNSBoundingBox_a5a2bf193567c0d374968aba39f6b7127}{extend} (const std\-::vector$<$ \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} $>$ \&p\-Vertices, const \hyperlink{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{fmat4} \&p\-Transform=\hyperlink{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{fmat4}())
+\item 
+void \hyperlink{structNSBoundingBox_afc5af6303097994df1c468099538da97}{set} (const \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} \&p\-Min, const \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} p\-Max)
+\item 
+float \hyperlink{structNSBoundingBox_a18e09e658dc5aa1e93106143eb4c1a10}{volume} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} \hyperlink{structNSBoundingBox_ad23e224abed3b35fe44447404eff6021}{m\-Min}
+\item 
+\hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} \hyperlink{structNSBoundingBox_a88e4cabc207b0d661f9b86070914b62e}{m\-Max}
+\item 
+\hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3} \hyperlink{structNSBoundingBox_a997316efc636f9f346c1ecbc1bf9288a}{m\-Verts} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Face@{Face}}
+\index{Face@{Face}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{Face}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf N\-S\-Bounding\-Box\-::\-Face}}}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!None@{None}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a}{None}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a745378f1b978fbeb020a885e0b12282a}
+}]\index{Bottom@{Bottom}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Bottom@{Bottom}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aaad0448696f53765901c258077228bbd}{Bottom}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aaad0448696f53765901c258077228bbd}
+}]\index{Top@{Top}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Top@{Top}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a7f46147c511698a1073663c686687fa6}{Top}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a7f46147c511698a1073663c686687fa6}
+}]\index{Left@{Left}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Left@{Left}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a9803c369ffa46e5be767f351b1eac244}{Left}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3a9803c369ffa46e5be767f351b1eac244}
+}]\index{Right@{Right}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Right@{Right}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3ad6fa2c54fe36df795e203490cb5d33cd}{Right}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3ad6fa2c54fe36df795e203490cb5d33cd}
+}]\index{Back@{Back}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Back@{Back}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aa3210f70f334d5ee24a72182b94999cd}{Back}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aa3210f70f334d5ee24a72182b94999cd}
+}]\index{Front@{Front}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!Front@{Front}}\item[{\em 
+\hypertarget{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aac9f5dea31ead073b4675ee3978b0c5f}{Front}\label{structNSBoundingBox_a6cc652314d1c87dcedda3eaa21f1d3e3aac9f5dea31ead073b4675ee3978b0c5f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structNSBoundingBox_a6392f91e736e33674a7b17ee3a003da5}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}}
+\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{N\-S\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-Bounding\-Box\-::\-N\-S\-Bounding\-Box (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf fvec3} $>$ \&}]{p\-Vertices = {\ttfamily std\-:\-:vector$<${\bf fvec3}$>$()}}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a6392f91e736e33674a7b17ee3a003da5}
+Calculates the box given a set of vertices.. if no vertices are given then will set everything to zero. 
+
+\subsection{Member Function Documentation}
+\hypertarget{structNSBoundingBox_a63001de3b290ef19ed63e46f7e949d65}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!calculate@{calculate}}
+\index{calculate@{calculate}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{calculate}]{\setlength{\rightskip}{0pt plus 5cm}void N\-S\-Bounding\-Box\-::calculate (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf fvec3} $>$ \&}]{p\-Vertices, }
+\item[{const {\bf fmat4} \&}]{p\-Transform = {\ttfamily {\bf fmat4}()}}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a63001de3b290ef19ed63e46f7e949d65}
+Find the min and max of a set of vertices and use that to make the bounding box. \hypertarget{structNSBoundingBox_aafdeb08087bb7c3aeeaae668edc16f94}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!center@{center}}
+\index{center@{center}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fvec3} N\-S\-Bounding\-Box\-::center (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{p\-Face = {\ttfamily {\bf None}}}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_aafdeb08087bb7c3aeeaae668edc16f94}
+Returns the center of the box or the center of a face of the box if p\-Face is specified as something other than None. \hypertarget{structNSBoundingBox_a7de92ab5607c0be1dccc26103512b382}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!clear@{clear}}
+\index{clear@{clear}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void N\-S\-Bounding\-Box\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a7de92ab5607c0be1dccc26103512b382}
+Clears the verts and the min/max to 0. \hypertarget{structNSBoundingBox_a88cc0a3d49be3e1492b0a262a89ac12f}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!dx@{dx}}
+\index{dx@{dx}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}float N\-S\-Bounding\-Box\-::dx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a88cc0a3d49be3e1492b0a262a89ac12f}
+Length of box in x direction. \hypertarget{structNSBoundingBox_a5d625d3195e80d5620ad89357297607e}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!dy@{dy}}
+\index{dy@{dy}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{dy}]{\setlength{\rightskip}{0pt plus 5cm}float N\-S\-Bounding\-Box\-::dy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a5d625d3195e80d5620ad89357297607e}
+Length of box in y direction. \hypertarget{structNSBoundingBox_a804419300fa56b28aa635a5e7d115e53}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!dz@{dz}}
+\index{dz@{dz}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{dz}]{\setlength{\rightskip}{0pt plus 5cm}float N\-S\-Bounding\-Box\-::dz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a804419300fa56b28aa635a5e7d115e53}
+Length of box in z direction. \hypertarget{structNSBoundingBox_a5a2bf193567c0d374968aba39f6b7127}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!extend@{extend}}
+\index{extend@{extend}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{extend}]{\setlength{\rightskip}{0pt plus 5cm}void N\-S\-Bounding\-Box\-::extend (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf fvec3} $>$ \&}]{p\-Vertices, }
+\item[{const {\bf fmat4} \&}]{p\-Transform = {\ttfamily {\bf fmat4}()}}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a5a2bf193567c0d374968aba39f6b7127}
+\hypertarget{structNSBoundingBox_afc5af6303097994df1c468099538da97}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!set@{set}}
+\index{set@{set}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void N\-S\-Bounding\-Box\-::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf fvec3} \&}]{p\-Min, }
+\item[{const {\bf fvec3}}]{p\-Max}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_afc5af6303097994df1c468099538da97}
+Set the min and max -\/ will update the verts based on this new min and max. \hypertarget{structNSBoundingBox_a18e09e658dc5aa1e93106143eb4c1a10}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!volume@{volume}}
+\index{volume@{volume}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}float N\-S\-Bounding\-Box\-::volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structNSBoundingBox_a18e09e658dc5aa1e93106143eb4c1a10}
+The volume in whatever units the world is represented in. The cartesian coordinate x = 1, y = 1, z = 1 would represent a point that is 1 unit away from each axis and 1.\-41 units away from the origin. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structNSBoundingBox_a88e4cabc207b0d661f9b86070914b62e}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!m\-Max@{m\-Max}}
+\index{m\-Max@{m\-Max}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{m\-Max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fvec3} N\-S\-Bounding\-Box\-::m\-Max}}\label{structNSBoundingBox_a88e4cabc207b0d661f9b86070914b62e}
+\hypertarget{structNSBoundingBox_ad23e224abed3b35fe44447404eff6021}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!m\-Min@{m\-Min}}
+\index{m\-Min@{m\-Min}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{m\-Min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fvec3} N\-S\-Bounding\-Box\-::m\-Min}}\label{structNSBoundingBox_ad23e224abed3b35fe44447404eff6021}
+\hypertarget{structNSBoundingBox_a997316efc636f9f346c1ecbc1bf9288a}{\index{N\-S\-Bounding\-Box@{N\-S\-Bounding\-Box}!m\-Verts@{m\-Verts}}
+\index{m\-Verts@{m\-Verts}!NSBoundingBox@{N\-S\-Bounding\-Box}}
+\subsubsection[{m\-Verts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fvec3} N\-S\-Bounding\-Box\-::m\-Verts\mbox{[}8\mbox{]}}}\label{structNSBoundingBox_a997316efc636f9f346c1ecbc1bf9288a}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{nsmath_8h}{nsmath.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{nsmath_8cpp}{nsmath.\-cpp}\end{DoxyCompactItemize}

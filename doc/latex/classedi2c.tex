@@ -1,0 +1,387 @@
+\hypertarget{classedi2c}{\section{edi2c Class Reference}
+\label{classedi2c}\index{edi2c@{edi2c}}
+}
+
+
+\hyperlink{classedi2c}{edi2c}  
+
+
+
+
+{\ttfamily \#include $<$edi2c.\-h$>$}
+
+Inheritance diagram for edi2c\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedi2c}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedi2c_a1af1282b3a5c22f8690a2758bf3720bb}{edi2c} (uint32\-\_\-t adapter\-Num=1)
+\item 
+\hyperlink{classedi2c_a35e32414433c5b66109ade0da6f98079}{$\sim$edi2c} ()
+\item 
+bool \hyperlink{classedi2c_a24e263124eb80f5c841f8b804b69e943}{command\-\_\-read} (uint8\-\_\-t reg, uint32\-\_\-t bytes\-\_\-to\-\_\-read)
+\begin{DoxyCompactList}\small\item\em command\-\_\-read \end{DoxyCompactList}\item 
+void \hyperlink{classedi2c_a9c9e5492ab0aa7361e3871616dc1ee5e}{enable\-\_\-smbus} (bool enable)
+\begin{DoxyCompactList}\small\item\em enaable\-\_\-smbus \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classedi2c_a53cd636c8a9fd4ca54e5b0473cc8cb84}{read\-\_\-byte} ()
+\begin{DoxyCompactList}\small\item\em read\-\_\-byte \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classedi2c_a2b727b09d18b70cfd0466ce4d85a858b}{read\-\_\-word} ()
+\begin{DoxyCompactList}\small\item\em read\-\_\-word \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{classedi2c_af72f531db5a7112e6da2d9e626932519}{read\-\_\-reg\-\_\-byte} (uint8\-\_\-t reg)
+\begin{DoxyCompactList}\small\item\em read\-\_\-reg\-\_\-byte \end{DoxyCompactList}\item 
+int16\-\_\-t \hyperlink{classedi2c_a0f5ed693ef1a4ecf95552d5fa459d839}{read\-\_\-reg\-\_\-word} (uint8\-\_\-t reg)
+\begin{DoxyCompactList}\small\item\em read\-\_\-reg\-\_\-word \end{DoxyCompactList}\item 
+void \hyperlink{classedi2c_acd7b0631883fca709e2d65d184c29826}{read\-\_\-reg\-\_\-bytes} (uint8\-\_\-t reg, uint8\-\_\-t $\ast$buffer, uint32\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em read\-\_\-reg\-\_\-bytes \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classedi2c_a6e9e5641194e8cd076e6cedfc6673ed3}{read\-\_\-delay} ()
+\begin{DoxyCompactList}\small\item\em read\-\_\-delay \end{DoxyCompactList}\item 
+uint16\-\_\-t \hyperlink{classedi2c_ac72e569257fb740b0431d8ce5fa5a3d5}{write\-\_\-delay} ()
+\begin{DoxyCompactList}\small\item\em write\-\_\-delay \end{DoxyCompactList}\item 
+void \hyperlink{classedi2c_af56980b466616331c3a953f6b5c034ed}{set\-\_\-read\-\_\-delay} (uint16\-\_\-t ms)
+\begin{DoxyCompactList}\small\item\em set\-\_\-read\-\_\-delay \end{DoxyCompactList}\item 
+void \hyperlink{classedi2c_a2e9079f183b0f087b55398c55b38b97f}{set\-\_\-write\-\_\-delay} (uint16\-\_\-t ms)
+\item 
+void \hyperlink{classedi2c_a938ee09d908469548b31f6561d906528}{set\-\_\-target\-\_\-address} (int32\-\_\-t addr)
+\begin{DoxyCompactList}\small\item\em set\-\_\-target\-\_\-address \end{DoxyCompactList}\item 
+bool \hyperlink{classedi2c_a6888361fe70d4c9110113e4a45912f7c}{smbus\-\_\-enabled} ()
+\begin{DoxyCompactList}\small\item\em smbus\-\_\-enables \end{DoxyCompactList}\item 
+bool \hyperlink{classedi2c_ad0e06417e0b488df02b1864d316d72c1}{start} ()
+\begin{DoxyCompactList}\small\item\em start \end{DoxyCompactList}\item 
+int32\-\_\-t \hyperlink{classedi2c_aba709407bd42c5dcee257726dff12526}{target\-\_\-address} ()
+\item 
+bool \hyperlink{classedi2c_a245ebdd9ac48c5671de79bebccf29e97}{write\-\_\-byte} (uint8\-\_\-t byte)
+\item 
+bool \hyperlink{classedi2c_a31d8723f4c2678c2709fdff8e0b36f67}{write\-\_\-word} (uint16\-\_\-t word)
+\item 
+bool \hyperlink{classedi2c_ad54e95daa301895c7be525768ce0512a}{write\-\_\-reg\-\_\-byte} (uint8\-\_\-t reg, uint8\-\_\-t byte)
+\item 
+bool \hyperlink{classedi2c_a220239a9eb19a4e0cb760e81259a25a4}{write\-\_\-reg\-\_\-word} (uint8\-\_\-t reg, int16\-\_\-t word)
+\item 
+bool \hyperlink{classedi2c_a19785c35d613e72285234d194a294a09}{write\-\_\-reg\-\_\-bytes} (uint8\-\_\-t reg, uint8\-\_\-t $\ast$bytes, uint32\-\_\-t size)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classedi2c}{edi2c} 
+
+Creates a new thread to run all communication transactions using i2c protocol. The way to use this class is just like any other \char`\"{}edthreaded\-\_\-fd\char`\"{} subclass -\/ with a main exception\-: The read\-\_\-$\ast$ functions are all blocking. The read function itself is not blocking. If you want to read a value from a register in a non blocking fashion then you must use command\-\_\-read instead of read\-\_\-$\ast$ functions. The command\-\_\-read function takes how many bytes to read as a parameter -\/ and you can access theses bytes with \char`\"{}read\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedi2c_a1af1282b3a5c22f8690a2758bf3720bb}{\index{edi2c@{edi2c}!edi2c@{edi2c}}
+\index{edi2c@{edi2c}!edi2c@{edi2c}}
+\subsubsection[{edi2c}]{\setlength{\rightskip}{0pt plus 5cm}edi2c\-::edi2c (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{adapter\-Num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a1af1282b3a5c22f8690a2758bf3720bb}
+\hypertarget{classedi2c_a35e32414433c5b66109ade0da6f98079}{\index{edi2c@{edi2c}!$\sim$edi2c@{$\sim$edi2c}}
+\index{$\sim$edi2c@{$\sim$edi2c}!edi2c@{edi2c}}
+\subsubsection[{$\sim$edi2c}]{\setlength{\rightskip}{0pt plus 5cm}edi2c\-::$\sim$edi2c (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a35e32414433c5b66109ade0da6f98079}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedi2c_a24e263124eb80f5c841f8b804b69e943}{\index{edi2c@{edi2c}!command\-\_\-read@{command\-\_\-read}}
+\index{command\-\_\-read@{command\-\_\-read}!edi2c@{edi2c}}
+\subsubsection[{command\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::command\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint32\-\_\-t}]{bytes\-\_\-to\-\_\-read}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a24e263124eb80f5c841f8b804b69e943}
+
+
+command\-\_\-read 
+
+Read from a register in a non-\/blocking fashion -\/ once the bytes have been read they will be available through read function. Nothing more will be written to the i2c device until bytes\-\_\-to\-\_\-read bytes have been read or the timeout period of time has been reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & register to read bytes from \\
+\hline
+{\em bytes\-\_\-to\-\_\-read} & amount of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the command was successful or not. Will not be, for example, if no device is connected. 
+\end{DoxyReturn}
+\hypertarget{classedi2c_a9c9e5492ab0aa7361e3871616dc1ee5e}{\index{edi2c@{edi2c}!enable\-\_\-smbus@{enable\-\_\-smbus}}
+\index{enable\-\_\-smbus@{enable\-\_\-smbus}!edi2c@{edi2c}}
+\subsubsection[{enable\-\_\-smbus}]{\setlength{\rightskip}{0pt plus 5cm}void edi2c\-::enable\-\_\-smbus (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a9c9e5492ab0aa7361e3871616dc1ee5e}
+
+
+enaable\-\_\-smbus 
+
+Disabled by default, this will enable the smbus functions. Smbus supports more advanced styles of messaging between devices but not all devices support the smbus protocol.
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & Enable (true) or disable (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classedi2c_a53cd636c8a9fd4ca54e5b0473cc8cb84}{\index{edi2c@{edi2c}!read\-\_\-byte@{read\-\_\-byte}}
+\index{read\-\_\-byte@{read\-\_\-byte}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t edi2c\-::read\-\_\-byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a53cd636c8a9fd4ca54e5b0473cc8cb84}
+
+
+read\-\_\-byte 
+
+Blocks until one byte has been read or the maximum wait timeout has been reached.
+
+\begin{DoxyReturn}{Returns}
+byte that has been read 
+\end{DoxyReturn}
+\hypertarget{classedi2c_a6e9e5641194e8cd076e6cedfc6673ed3}{\index{edi2c@{edi2c}!read\-\_\-delay@{read\-\_\-delay}}
+\index{read\-\_\-delay@{read\-\_\-delay}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t edi2c\-::read\-\_\-delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a6e9e5641194e8cd076e6cedfc6673ed3}
+
+
+read\-\_\-delay 
+
+\begin{DoxyReturn}{Returns}
+number of milliseconds to delay the thread after each read command. 
+\end{DoxyReturn}
+\hypertarget{classedi2c_af72f531db5a7112e6da2d9e626932519}{\index{edi2c@{edi2c}!read\-\_\-reg\-\_\-byte@{read\-\_\-reg\-\_\-byte}}
+\index{read\-\_\-reg\-\_\-byte@{read\-\_\-reg\-\_\-byte}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-reg\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t edi2c\-::read\-\_\-reg\-\_\-byte (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_af72f531db5a7112e6da2d9e626932519}
+
+
+read\-\_\-reg\-\_\-byte 
+
+Blocking read until 1 byte is read from a register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte value read from register 
+\end{DoxyReturn}
+\hypertarget{classedi2c_acd7b0631883fca709e2d65d184c29826}{\index{edi2c@{edi2c}!read\-\_\-reg\-\_\-bytes@{read\-\_\-reg\-\_\-bytes}}
+\index{read\-\_\-reg\-\_\-bytes@{read\-\_\-reg\-\_\-bytes}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-reg\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}void edi2c\-::read\-\_\-reg\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_acd7b0631883fca709e2d65d184c29826}
+
+
+read\-\_\-reg\-\_\-bytes 
+
+Blocking read until size bytes has been read. This is a convenience function which is the same as calling command\-\_\-read(reg, size); int cnt = 0; while (cnt != size) cnt += read(buffer+cnt, size-\/cnt);
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read bytes from \\
+\hline
+{\em buffer} & Buffer to store read in bytes -\/ bounds are not checked so make sure it is big enough \\
+\hline
+{\em size} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+\hypertarget{classedi2c_a0f5ed693ef1a4ecf95552d5fa459d839}{\index{edi2c@{edi2c}!read\-\_\-reg\-\_\-word@{read\-\_\-reg\-\_\-word}}
+\index{read\-\_\-reg\-\_\-word@{read\-\_\-reg\-\_\-word}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-reg\-\_\-word}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t edi2c\-::read\-\_\-reg\-\_\-word (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a0f5ed693ef1a4ecf95552d5fa459d839}
+
+
+read\-\_\-reg\-\_\-word 
+
+Blocking read until 1 word is read from a register
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+2 byte value read from register 
+\end{DoxyReturn}
+\hypertarget{classedi2c_a2b727b09d18b70cfd0466ce4d85a858b}{\index{edi2c@{edi2c}!read\-\_\-word@{read\-\_\-word}}
+\index{read\-\_\-word@{read\-\_\-word}!edi2c@{edi2c}}
+\subsubsection[{read\-\_\-word}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t edi2c\-::read\-\_\-word (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a2b727b09d18b70cfd0466ce4d85a858b}
+
+
+read\-\_\-word 
+
+Blocks until one word has been read or the maximum wait timeout has been reached.
+
+\begin{DoxyReturn}{Returns}
+16 bit word 
+\end{DoxyReturn}
+\hypertarget{classedi2c_af56980b466616331c3a953f6b5c034ed}{\index{edi2c@{edi2c}!set\-\_\-read\-\_\-delay@{set\-\_\-read\-\_\-delay}}
+\index{set\-\_\-read\-\_\-delay@{set\-\_\-read\-\_\-delay}!edi2c@{edi2c}}
+\subsubsection[{set\-\_\-read\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}void edi2c\-::set\-\_\-read\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{ms}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_af56980b466616331c3a953f6b5c034ed}
+
+
+set\-\_\-read\-\_\-delay 
+
+Set the thread read delay -\/ how many milliseconds to delay the thread after each read 
+\begin{DoxyParams}{Parameters}
+{\em ms} & Number of milliseconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classedi2c_a938ee09d908469548b31f6561d906528}{\index{edi2c@{edi2c}!set\-\_\-target\-\_\-address@{set\-\_\-target\-\_\-address}}
+\index{set\-\_\-target\-\_\-address@{set\-\_\-target\-\_\-address}!edi2c@{edi2c}}
+\subsubsection[{set\-\_\-target\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void edi2c\-::set\-\_\-target\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a938ee09d908469548b31f6561d906528}
+
+
+set\-\_\-target\-\_\-address 
+
+Set the target device address -\/ all reads and writes will be done using this address 
+\begin{DoxyParams}{Parameters}
+{\em addr} & usually 7 bit device address for the slave (can be 10 bit) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classedi2c_a2e9079f183b0f087b55398c55b38b97f}{\index{edi2c@{edi2c}!set\-\_\-write\-\_\-delay@{set\-\_\-write\-\_\-delay}}
+\index{set\-\_\-write\-\_\-delay@{set\-\_\-write\-\_\-delay}!edi2c@{edi2c}}
+\subsubsection[{set\-\_\-write\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}void edi2c\-::set\-\_\-write\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{ms}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a2e9079f183b0f087b55398c55b38b97f}
+Set the thread write delay -\/ how many milliseconds to delay the thread after each write 
+\begin{DoxyParams}{Parameters}
+{\em ms} & Number of milliseconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classedi2c_a6888361fe70d4c9110113e4a45912f7c}{\index{edi2c@{edi2c}!smbus\-\_\-enabled@{smbus\-\_\-enabled}}
+\index{smbus\-\_\-enabled@{smbus\-\_\-enabled}!edi2c@{edi2c}}
+\subsubsection[{smbus\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::smbus\-\_\-enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a6888361fe70d4c9110113e4a45912f7c}
+
+
+smbus\-\_\-enables 
+
+\begin{DoxyReturn}{Returns}
+Is smbus mode enabled? 
+\end{DoxyReturn}
+\hypertarget{classedi2c_ad0e06417e0b488df02b1864d316d72c1}{\index{edi2c@{edi2c}!start@{start}}
+\index{start@{start}!edi2c@{edi2c}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedi2c_ad0e06417e0b488df02b1864d316d72c1}
+
+
+start 
+
+Starts a new thread for communication with the device. It also opens the file descriptor using the bus number supplied in the constructor. By default this is bus 1. If a thread has already been started, or a file descriptor is already open, this function will fail. \begin{DoxyReturn}{Returns}
+true for success and false for fail -\/ check error code on fail 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classedthreaded__fd_ac8123803d831c671b9b62881697e69e0}{edthreaded\-\_\-fd}.
+
+\hypertarget{classedi2c_aba709407bd42c5dcee257726dff12526}{\index{edi2c@{edi2c}!target\-\_\-address@{target\-\_\-address}}
+\index{target\-\_\-address@{target\-\_\-address}!edi2c@{edi2c}}
+\subsubsection[{target\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t edi2c\-::target\-\_\-address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_aba709407bd42c5dcee257726dff12526}
+\hypertarget{classedi2c_a245ebdd9ac48c5671de79bebccf29e97}{\index{edi2c@{edi2c}!write\-\_\-byte@{write\-\_\-byte}}
+\index{write\-\_\-byte@{write\-\_\-byte}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::write\-\_\-byte (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{byte}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a245ebdd9ac48c5671de79bebccf29e97}
+\hypertarget{classedi2c_ac72e569257fb740b0431d8ce5fa5a3d5}{\index{edi2c@{edi2c}!write\-\_\-delay@{write\-\_\-delay}}
+\index{write\-\_\-delay@{write\-\_\-delay}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t edi2c\-::write\-\_\-delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_ac72e569257fb740b0431d8ce5fa5a3d5}
+
+
+write\-\_\-delay 
+
+\begin{DoxyReturn}{Returns}
+number of milliseconds to delay the thread after each write command. 
+\end{DoxyReturn}
+\hypertarget{classedi2c_ad54e95daa301895c7be525768ce0512a}{\index{edi2c@{edi2c}!write\-\_\-reg\-\_\-byte@{write\-\_\-reg\-\_\-byte}}
+\index{write\-\_\-reg\-\_\-byte@{write\-\_\-reg\-\_\-byte}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-reg\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::write\-\_\-reg\-\_\-byte (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{byte}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_ad54e95daa301895c7be525768ce0512a}
+\hypertarget{classedi2c_a19785c35d613e72285234d194a294a09}{\index{edi2c@{edi2c}!write\-\_\-reg\-\_\-bytes@{write\-\_\-reg\-\_\-bytes}}
+\index{write\-\_\-reg\-\_\-bytes@{write\-\_\-reg\-\_\-bytes}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-reg\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::write\-\_\-reg\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t $\ast$}]{bytes, }
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a19785c35d613e72285234d194a294a09}
+\hypertarget{classedi2c_a220239a9eb19a4e0cb760e81259a25a4}{\index{edi2c@{edi2c}!write\-\_\-reg\-\_\-word@{write\-\_\-reg\-\_\-word}}
+\index{write\-\_\-reg\-\_\-word@{write\-\_\-reg\-\_\-word}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-reg\-\_\-word}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::write\-\_\-reg\-\_\-word (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{reg, }
+\item[{int16\-\_\-t}]{word}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a220239a9eb19a4e0cb760e81259a25a4}
+\hypertarget{classedi2c_a31d8723f4c2678c2709fdff8e0b36f67}{\index{edi2c@{edi2c}!write\-\_\-word@{write\-\_\-word}}
+\index{write\-\_\-word@{write\-\_\-word}!edi2c@{edi2c}}
+\subsubsection[{write\-\_\-word}]{\setlength{\rightskip}{0pt plus 5cm}bool edi2c\-::write\-\_\-word (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{word}
+\end{DoxyParamCaption}
+)}}\label{classedi2c_a31d8723f4c2678c2709fdff8e0b36f67}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edi2c_8h}{edi2c.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edi2c_8cpp}{edi2c.\-cpp}\end{DoxyCompactItemize}

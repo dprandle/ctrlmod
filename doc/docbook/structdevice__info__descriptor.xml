@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structdevice__info__descriptor">
+<title>device_info_descriptor struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structdevice__info__descriptor_1a6475aa8a0c1ae086359990c5c128a8bd">device_info_descriptor</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structdevice__info__descriptor_1a52fb00aa7ddd64fb130622f1cae6f4e2">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structdevice__info__descriptor_1a6475aa8a0c1ae086359990c5c128a8bd">
+                <title>device_info_descriptor::device_info_descriptor ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdevice__info__descriptor_1a52fb00aa7ddd64fb130622f1cae6f4e2">
+                <title>virtual std::string device_info_descriptor::type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

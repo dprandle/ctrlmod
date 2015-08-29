@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedpid__controller_1_1output__range">
+<title>edpid_controller::output_range struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edpid__controller_8h">&lt;edpid_controller.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T min</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T max</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structedpid__controller_1_1output__range_1ab9763b895d26cf444c307979e9bab74d">output_range</link> (
+const T &amp; min_, const T &amp; max_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedpid__controller_1_1output__range_1ab9763b895d26cf444c307979e9bab74d">
+                <title>edpid_controller&lt; T &gt;::output_range::output_range (const T &amp;min_=0, const T &amp;max_=0)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

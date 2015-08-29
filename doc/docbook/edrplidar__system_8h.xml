@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edrplidar__system_8h">
+    <title>edrplidar_system.h File Reference</title>
+    <programlisting>#include &lt;edsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;edrplidar_packets.h&gt;</programlisting>
+    <programlisting>#include &lt;edcallback.h&gt;</programlisting>
+    <programlisting>#include &lt;mraa/uart.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage.h&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classedrplidar__system">edrplidar_system</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edrplidar__system_8h_1a06c4f51ce52fb49a30de39f04f2b17c5">XV_BAUD</link> 115200</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/edrplidar_system.h</para>
+    </simplesect>
+</section>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edcomm__system_8h">
+    <title>edcomm_system.h File Reference</title>
+    <programlisting>#include &lt;edglobal.h&gt;</programlisting>
+    <programlisting>#include &lt;edsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structCommand">Command</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classedcomm__system">edcomm_system</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edcomm__system_8h_1a64dd4834292846960f8ab21e3940bb64">SOCKET_BUFF_SIZE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edcomm__system_8h_1a0d1ec489be62a2310c9725ac6164abdb">COMMAND_BYTE_SIZE</link> 72</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/edcomm_system.h</para>
+    </simplesect>
+</section>

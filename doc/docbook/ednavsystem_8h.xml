@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ednavsystem_8h">
+    <title>ednavsystem.h File Reference</title>
+    <programlisting>#include &lt;edsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;nsmath.h&gt;</programlisting>
+    <programlisting>#include &lt;edpid_controller.h&gt;</programlisting>
+    <programlisting>#include &lt;edcallback.h&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classednav__system">ednav_system</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structinstruction__callback">instruction_callback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacemraa">mraa</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1ae444d6d92b052418cc04e74919e34b8c">ARDUINO_ADDRESS</link> 0x04</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a9a71c95c238660dd302fecbb30c56ff2">ALT_DIF_MIN</link> -100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1afa2f4daed6848d659b67ff69265a209d">ALT_DIF_MAX</link> 100</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a34a3318289c8406550219d402a687a34">LIDAR_DIST_DIFF_MIN</link> -5000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a18d6cf3e94a36a8b635d86689e3c111a">LIDAR_DIST_DIFF_MAX</link> 5000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1aabe35076c44671c711625cd15a5191d6">YAW_ANGLE_DIFF_MIN</link> -45</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1ad571479ea6d7c4330821f6d2cf86fd55">YAW_ANGLE_DIFF_MAX</link> 45</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a7b8365fa8a42356872d9647aabda1665">THROTTLE_MIN</link> -500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a150f0a256648d7b97768a47534f62a01">THROTTLE_MAX</link> 500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1ad5caf396f559126e411b8cd9d9ca125f">PITCH_MIN</link> -500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a6967aad3ff7fb77777abb6aa064c6d9c">PITCH_MAX</link> 500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1aa0dc2400afe66fbca27b20b77dd55c69">ROLL_MIN</link> -500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a4797f77f3061e9b3e3a727b19b34cef7">ROLL_MAX</link> 500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1adf66c4c3c57b98c93ae79012df83f23d">YAW_MIN</link> -500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1a4293798f6345765ea0ce2258c68e68a5">YAW_MAX</link> 500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="ednavsystem_8h_1ac4c50d2ec5229af74ea12911980e265a">G_CONST</link> 5000000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Navigation system header file. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Fri Jul 10 10:34:08 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/ednavsystem.h</para>
+    </simplesect>
+</section>

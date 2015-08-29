@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structnsquat">
+<title>nsquat struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="nsquat_8h">&lt;nsquat.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T data[4]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T x</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T y</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T z</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T w</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T b</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T c</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T d</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T a</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union nsquat::@36 @37</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsquat_1a95a3a372cf06d1b2a88543193a8f3668">nsquat</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; copy)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsquat_1a003ab193ffffff9992c6767272ba8ea8">nsquat</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsquat_1ae0a6a2812b38da7e4496275dc1b17480">nsquat</link> (
+const T &amp; pX, const T &amp; pY, const T &amp; pZ, const T &amp; pW)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a66431cd90e24922e76c551e4ecf3d644">conjugate</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a6aa0a1e7bc7bbdf707d4dd11f9a20014">from</link> (
+const <link linkend="structNSVec4">NSVec4</link>&lt; T &gt; &amp; axisAngle, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a8030b2163b53da98492a94b54ef91e6d">from</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; euler, typename <link linkend="structNSVec3">NSVec3</link>&lt; T &gt;::EulerOrder order, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1ae1f98c2170351e831ceb38402a786b6c">from</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; rotationMat3)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a0afab450c7c9c53219d02b808e5e32d4">from</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a9cf2a558c337517d636eea59fc88208c">from</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; vec, const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; toVec)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a46f99264a9460c1e53388338dd1f8726">invert</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structnsquat_1a31109b1efdc7d1fc4a7df803538b4acf">length</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structnsquat_1a139b842a9481dbcc653cee6d15643ebe">lengthSq</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1af23ab6c9ec2ed7772e8da3a4229c7226">normalize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="structnsquat_1acaf8e5c49377e88d8bb548b842e628db">right</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a29e34aabab642e19b6e5934d922af886">roundToZero</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a7647333dd8b755b378fd6d9b92c6ff74">set</link> (
+const T &amp; pX, const T &amp; pY, const T &amp; pZ, const T &amp; pW)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a9fd0037a8d206d423038ce7f0cf676d0">setIdentity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1aff272165e0866bcbeae706d523d6c96c">slerp</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; second, const T &amp; scalingFactor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="structnsquat_1ad3a425484af363fd1f3f624649ffa8f7">target</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="structnsquat_1a6abf9e2ecba557cbc92c069ae3080842">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="structnsquat_1aaaf256f452048d3507de00ed3ee2e042">up</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a03146d1b1bad376e72e87553c48d766d">operator+</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a6c06aa64f8ec42ce072ca6b1b6ff62d1">operator-</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1ad65c7cdc47a109d00019225276c5d6fd">operator*</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1ab0148cd9b0cb29f84805eafcf820813f">operator/</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a65d33a1eaa808931c2814e3c12d7d5f8">operator%</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="structnsquat_1af155deed127c8a16bba6f7a52a12b8aa">operator*</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a9231c3d0d4622389a441275b4d75c14d">operator*</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a52e455050c0278f627ce32e5876748de">operator/</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a008e3d3e51cbb27a2e6b572e34624da6">operator=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a19901df0ffb8ca500efc90cbfb42189a">operator++</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="structnsquat_1a2502835153719a3c52df34474c82841d">operator--</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a707aa5fcf1a0ddb612f17b4f00025892">operator++</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a6ca3fdeb707c963f42d6902aedc33b02">operator--</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a901c451b2f2566abfd513147e56c2a4e">operator+=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1aec2fb6faa39578f87046209070e541a6">operator-=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a9e45127c71a6380f3ddbe4e0545e828f">operator*=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1ac4e347acd4b804ce3369467f1ee91281">operator/=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a53432d27f6c26d343dcfc6f469d4b09f">operator%=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a0e36ccaab5069ad5a1d5cd4b3092bf4e">operator*=</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; <link linkend="structnsquat_1a8b17da74bf34e207af7a4c1e48698947">operator/=</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsquat_1ab868746accfba6a44b7e2dbad8b974ab">operator==</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsquat_1af025972f48140ebbfbb9a39326317243">operator!=</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsquat_1ad46b5d79ec488a5eb69ca38cc516e88e">operator==</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsquat_1a3033a3f339f296580eb4e43e7a61b6ae">operator!=</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const T &amp; <link linkend="structnsquat_1a0a083bc295c753469d93d0d64d366498">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T &amp; <link linkend="structnsquat_1ad06fdf71da90af526b2411fdd7cfbc2a">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structnsquat_1a95a3a372cf06d1b2a88543193a8f3668">
+                <title>nsquat&lt; T &gt;::nsquat (const nsquat&lt; T &gt; &amp;copy)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a003ab193ffffff9992c6767272ba8ea8">
+                <title>nsquat&lt; T &gt;::nsquat ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ae0a6a2812b38da7e4496275dc1b17480">
+                <title>nsquat&lt; T &gt;::nsquat (const T &amp;pX, const T &amp;pY, const T &amp;pZ, const T &amp;pW)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a66431cd90e24922e76c551e4ecf3d644">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::conjugate ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a6aa0a1e7bc7bbdf707d4dd11f9a20014">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::from (const NSVec4&lt; T &gt; &amp;axisAngle, bool pRads=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a8030b2163b53da98492a94b54ef91e6d">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::from (const NSVec3&lt; T &gt; &amp;euler, typename NSVec3&lt; T &gt;::EulerOrder order, bool pRads=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ae1f98c2170351e831ceb38402a786b6c">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::from (const nsmat3&lt; T &gt; &amp;rotationMat3)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a0afab450c7c9c53219d02b808e5e32d4">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::from (const nsmat4&lt; T &gt; &amp;transform)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a9cf2a558c337517d636eea59fc88208c">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::from (const NSVec3&lt; T &gt; &amp;vec, const NSVec3&lt; T &gt; &amp;toVec)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a46f99264a9460c1e53388338dd1f8726">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::invert ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a31109b1efdc7d1fc4a7df803538b4acf">
+                <title>T nsquat&lt; T &gt;::length () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a139b842a9481dbcc653cee6d15643ebe">
+                <title>T nsquat&lt; T &gt;::lengthSq () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1af23ab6c9ec2ed7772e8da3a4229c7226">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::normalize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1acaf8e5c49377e88d8bb548b842e628db">
+                <title>NSVec3&lt;T&gt; nsquat&lt; T &gt;::right () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a29e34aabab642e19b6e5934d922af886">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::roundToZero ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a7647333dd8b755b378fd6d9b92c6ff74">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::set (const T &amp;pX, const T &amp;pY, const T &amp;pZ, const T &amp;pW)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a9fd0037a8d206d423038ce7f0cf676d0">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::setIdentity ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1aff272165e0866bcbeae706d523d6c96c">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::slerp (const nsquat&lt; T &gt; &amp;second, const T &amp;scalingFactor)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ad3a425484af363fd1f3f624649ffa8f7">
+                <title>NSVec3&lt;T&gt; nsquat&lt; T &gt;::target () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a6abf9e2ecba557cbc92c069ae3080842">
+                <title>std::string nsquat&lt; T &gt;::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1aaaf256f452048d3507de00ed3ee2e042">
+                <title>NSVec3&lt;T&gt; nsquat&lt; T &gt;::up () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a03146d1b1bad376e72e87553c48d766d">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator+ (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a6c06aa64f8ec42ce072ca6b1b6ff62d1">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator- (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ad65c7cdc47a109d00019225276c5d6fd">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator* (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ab0148cd9b0cb29f84805eafcf820813f">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator/ (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a65d33a1eaa808931c2814e3c12d7d5f8">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator% (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1af155deed127c8a16bba6f7a52a12b8aa">
+                <title>NSVec3&lt;T&gt; nsquat&lt; T &gt;::operator* (const NSVec3&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a9231c3d0d4622389a441275b4d75c14d">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator* (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a52e455050c0278f627ce32e5876748de">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator/ (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a008e3d3e51cbb27a2e6b572e34624da6">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a19901df0ffb8ca500efc90cbfb42189a">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator++ (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a2502835153719a3c52df34474c82841d">
+                <title>nsquat&lt;T&gt; nsquat&lt; T &gt;::operator-- (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a707aa5fcf1a0ddb612f17b4f00025892">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator++ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a6ca3fdeb707c963f42d6902aedc33b02">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator-- ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a901c451b2f2566abfd513147e56c2a4e">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator+= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1aec2fb6faa39578f87046209070e541a6">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator-= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a9e45127c71a6380f3ddbe4e0545e828f">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator*= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ac4e347acd4b804ce3369467f1ee91281">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator/= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a53432d27f6c26d343dcfc6f469d4b09f">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator%= (const nsquat&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a0e36ccaab5069ad5a1d5cd4b3092bf4e">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator*= (const T &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a8b17da74bf34e207af7a4c1e48698947">
+                <title>nsquat&lt;T&gt;&amp; nsquat&lt; T &gt;::operator/= (const T &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ab868746accfba6a44b7e2dbad8b974ab">
+                <title>bool nsquat&lt; T &gt;::operator== (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1af025972f48140ebbfbb9a39326317243">
+                <title>bool nsquat&lt; T &gt;::operator!= (const nsquat&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ad46b5d79ec488a5eb69ca38cc516e88e">
+                <title>bool nsquat&lt; T &gt;::operator== (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a3033a3f339f296580eb4e43e7a61b6ae">
+                <title>bool nsquat&lt; T &gt;::operator!= (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1a0a083bc295c753469d93d0d64d366498">
+                <title>const T&amp; nsquat&lt; T &gt;::operator[] (const uint32_t &amp;pVal) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsquat_1ad06fdf71da90af526b2411fdd7cfbc2a">
+                <title>T&amp; nsquat&lt; T &gt;::operator[] (const uint32_t &amp;pVal)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

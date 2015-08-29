@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrequest__packet">
+<title>request_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t msB</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t lsB</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[2]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union request_packet::@28 @29</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structrequest__packet_1a0c8aac3f578beedf0546ca9ad7bdcf6b">request_packet</link> (
+uint8_t MSB, uint8_t LSB)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structrequest__packet_1a8807bb7660042e8b5d024e0b494d5165">~request_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrequest__packet_1a0c8aac3f578beedf0546ca9ad7bdcf6b">
+                <title>request_packet::request_packet (uint8_t MSB, uint8_t LSB)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrequest__packet_1a8807bb7660042e8b5d024e0b494d5165">
+                <title>virtual request_packet::~request_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

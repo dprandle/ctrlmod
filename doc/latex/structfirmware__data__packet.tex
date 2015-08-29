@@ -1,0 +1,154 @@
+\hypertarget{structfirmware__data__packet}{\section{firmware\-\_\-data\-\_\-packet Struct Reference}
+\label{structfirmware__data__packet}\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-packets.\-h$>$}
+
+Inheritance diagram for firmware\-\_\-data\-\_\-packet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structfirmware__data__packet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structfirmware__data__packet_a084123acea6482ea08949203f5ed9f40}{firmware\-\_\-data\-\_\-packet} ()
+\item 
+virtual std\-::string \hyperlink{structfirmware__data__packet_a1ff72c5345b4325fd955bb20c9860d89}{to\-String} ()
+\item 
+virtual std\-::string \hyperlink{structfirmware__data__packet_a84cd6f60b9d5ef46ab5c4695d6de3d48}{type} ()
+\item 
+virtual uint32\-\_\-t \hyperlink{structfirmware__data__packet_a3231148228aee555265b90ab30fea9ec}{size} ()
+\item 
+virtual uint8\-\_\-t \& \hyperlink{structfirmware__data__packet_a16d28be180847cb45fc4dbf0417756b9}{operator\mbox{[}$\,$\mbox{]}} (uint32\-\_\-t index)
+\item 
+virtual uint8\-\_\-t $\ast$ \hyperlink{structfirmware__data__packet_ab080f05c847592a2578ee307d5af31fc}{dataptr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{structfirmware__data__packet_a6b386640d9fa172bfa44c55d63add943}{Type} ()
+\item 
+static uint32\-\_\-t \hyperlink{structfirmware__data__packet_a91ec8c2d5f0f7f642027b0ed566417d0}{Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \hyperlink{structfirmware__data__packet_a47aec40c2fc17de6c7a60eba35776e7d}{line1} \mbox{[}18\mbox{]}\\
+\>\>uint8\_t \hyperlink{structfirmware__data__packet_ac9cd94ddddd471656eb5ec03914ffc1c}{line2} \mbox{[}29\mbox{]}\\
+\>\>uint8\_t \hyperlink{structfirmware__data__packet_a943cd8ef900bcfffba560cd718c2f844}{line3} \mbox{[}9\mbox{]}\\
+\>\} \\
+\>uint8\_t \hyperlink{structfirmware__data__packet_a224c1a6c9d1cf15546679bd74d793f2e}{data} \mbox{[}56\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structfirmware__data__packet_a084123acea6482ea08949203f5ed9f40}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}}
+\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{firmware\-\_\-data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}firmware\-\_\-data\-\_\-packet\-::firmware\-\_\-data\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structfirmware__data__packet_a084123acea6482ea08949203f5ed9f40}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structfirmware__data__packet_ab080f05c847592a2578ee307d5af31fc}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!dataptr@{dataptr}}
+\index{dataptr@{dataptr}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{dataptr}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t$\ast$ firmware\-\_\-data\-\_\-packet\-::dataptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structfirmware__data__packet_ab080f05c847592a2578ee307d5af31fc}
+
+
+Implements \hyperlink{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}{data\-\_\-packet}.
+
+\hypertarget{structfirmware__data__packet_a16d28be180847cb45fc4dbf0417756b9}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t\& firmware\-\_\-data\-\_\-packet\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structfirmware__data__packet_a16d28be180847cb45fc4dbf0417756b9}
+
+
+Implements \hyperlink{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}{data\-\_\-packet}.
+
+\hypertarget{structfirmware__data__packet_a3231148228aee555265b90ab30fea9ec}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!size@{size}}
+\index{size@{size}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t firmware\-\_\-data\-\_\-packet\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structfirmware__data__packet_a3231148228aee555265b90ab30fea9ec}
+
+
+Implements \hyperlink{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}{data\-\_\-packet}.
+
+\hypertarget{structfirmware__data__packet_a91ec8c2d5f0f7f642027b0ed566417d0}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!Size@{Size}}
+\index{Size@{Size}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t firmware\-\_\-data\-\_\-packet\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structfirmware__data__packet_a91ec8c2d5f0f7f642027b0ed566417d0}
+\hypertarget{structfirmware__data__packet_a1ff72c5345b4325fd955bb20c9860d89}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string firmware\-\_\-data\-\_\-packet\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{structfirmware__data__packet_a1ff72c5345b4325fd955bb20c9860d89}
+
+
+Implements \hyperlink{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}{data\-\_\-packet}.
+
+\hypertarget{structfirmware__data__packet_a84cd6f60b9d5ef46ab5c4695d6de3d48}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!type@{type}}
+\index{type@{type}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string firmware\-\_\-data\-\_\-packet\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structfirmware__data__packet_a84cd6f60b9d5ef46ab5c4695d6de3d48}
+
+
+Implements \hyperlink{structdata__packet_af0795581f2d57a8c14a88009da37aee1}{data\-\_\-packet}.
+
+\hypertarget{structfirmware__data__packet_a6b386640d9fa172bfa44c55d63add943}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!Type@{Type}}
+\index{Type@{Type}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string firmware\-\_\-data\-\_\-packet\-::\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structfirmware__data__packet_a6b386640d9fa172bfa44c55d63add943}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structfirmware__data__packet_a251e81785646ac043c47035095aaea9d}{\subsubsection[{"@25}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structfirmware__data__packet_a251e81785646ac043c47035095aaea9d}
+\hypertarget{structfirmware__data__packet_a224c1a6c9d1cf15546679bd74d793f2e}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!data@{data}}
+\index{data@{data}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t firmware\-\_\-data\-\_\-packet\-::data\mbox{[}56\mbox{]}}}\label{structfirmware__data__packet_a224c1a6c9d1cf15546679bd74d793f2e}
+\hypertarget{structfirmware__data__packet_a47aec40c2fc17de6c7a60eba35776e7d}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!line1@{line1}}
+\index{line1@{line1}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{line1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t firmware\-\_\-data\-\_\-packet\-::line1\mbox{[}18\mbox{]}}}\label{structfirmware__data__packet_a47aec40c2fc17de6c7a60eba35776e7d}
+\hypertarget{structfirmware__data__packet_ac9cd94ddddd471656eb5ec03914ffc1c}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!line2@{line2}}
+\index{line2@{line2}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{line2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t firmware\-\_\-data\-\_\-packet\-::line2\mbox{[}29\mbox{]}}}\label{structfirmware__data__packet_ac9cd94ddddd471656eb5ec03914ffc1c}
+\hypertarget{structfirmware__data__packet_a943cd8ef900bcfffba560cd718c2f844}{\index{firmware\-\_\-data\-\_\-packet@{firmware\-\_\-data\-\_\-packet}!line3@{line3}}
+\index{line3@{line3}!firmware_data_packet@{firmware\-\_\-data\-\_\-packet}}
+\subsubsection[{line3}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t firmware\-\_\-data\-\_\-packet\-::line3\mbox{[}9\mbox{]}}}\label{structfirmware__data__packet_a943cd8ef900bcfffba560cd718c2f844}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__packets_8h}{edrplidar\-\_\-packets.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edrplidar__packets_8cpp}{edrplidar\-\_\-packets.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structdevice__health__request">
+<title>device_health_request struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structdevice__health__request_1a6d59496ff8a8bc154801b0f93a419088">device_health_request</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structdevice__health__request_1a6d59496ff8a8bc154801b0f93a419088">
+                <title>device_health_request::device_health_request ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

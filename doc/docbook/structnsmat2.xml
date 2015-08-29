@@ -1,0 +1,627 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structnsmat2">
+<title>nsmat2 struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="nsmat2_8h">&lt;nsmat2.h&gt;</link></programlisting>
+</para>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>NSVec2&lt; T &gt; data[2]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsmat2_1aa6e97d0b8d3f9477cdd86de539a7e78f">nsmat2</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsmat2_1a1a8a3a4f367dcb4b2f881ecd312c6fab">nsmat2</link> (
+const T &amp; val)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsmat2_1a36ccd82983082044f1940c984751132c">nsmat2</link> (
+const <link linkend="structnsmat2">nsmat2</link> &amp; copy)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsmat2_1a2199129a77fab38c44061784314b6588">nsmat2</link> (
+const T &amp; a, const T &amp; b, const T &amp; c, const T &amp; d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structnsmat2_1aaae3f17fab7c1c846e9acc7ae6b1b5f0">nsmat2</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; row1, const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; row2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T * <link linkend="structnsmat2_1a0332188d2bbdc8366d4f8948e01e16a8">dataPtr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structnsmat2_1a5ff3e1c4748cbd07277433e6dc8687e5">determinant</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1ae337a477f8a4e897263dbc12324959e1">invert</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aae0411dfb6ddaa8925ef80341b5bb814">rotationFrom</link> (
+T angle, bool rads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a68458993a2b569fc666dcd93a72b8de0">roundToZero</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a6b22f844975d5791f55cc86deba38a3c">scalingFrom</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; scale)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1afc982fea7fd3878cebb85d59d2bdc216">scalingFrom</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; transform2d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a9ae5952c5907940fbdd63403dcf358c5">scalingFrom</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; transform2d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aa86bb6cd0b53b6dc46b40ca5d215eb79">set</link> (
+const T &amp; val)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aee14e7cd7ced35e54b10a95284dbd9cb">set</link> (
+const T &amp; a, const T &amp; b, const T &amp; c, const T &amp; d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1af3e4186bac54ad97bc2c8a05759eaa66">set</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; row1, const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; row2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1ab6ffe87963350f984a5584df85e0d263">setColumn</link> (
+const uint32_t &amp; i, const T &amp; x, const T &amp; y)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a05167982706fec64097cfbf707459c01">setColumn</link> (
+const uint32_t &amp; i, const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; col)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a87438a3320ff865b4faf068716ad386f">setIdentity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a2b19dca33fda0b2169340bac241728d0">transpose</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="structnsmat2_1a81b23631f6035cf4518d86e5325be761">toString</link> (
+bool newline)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a02ee2a07ff8683cf4c98608bbcddfa9b">operator*</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1aa225314cae5641252510c0e7e19ce924">operator/</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a7eda4e70be667cdb5c30c2105609406c">operator%</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structnsmat2_1a1e56e3c1c402abca39a1e3411408899d">operator*</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a54b2258a311cf81f688b3e5afe72bb4b">operator%</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1abe3d7fd18d03a937324d6bf770511889">operator/</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a4ff75c8b0f9d3f580dfca342b4ca2050">operator*</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1abd7368de50af93658383343a8576cb13">operator/</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a4dd54be680f84c4a4f819c97d4db843e">operator+</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a0425bee724e3e659b21cb1b2d5421200">operator-</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsmat2_1abc36f6d1ce194dad8dfa942638e22e27">operator==</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structnsmat2_1a22a0b2dda140c20b466e945195298f53">operator!=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aed2ddd231be80bcf5eeb493932e62c17">operator=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aa07dbaac9da3393bb6dd274197d70769">operator*=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1aa828e531e3c96f77597dede4d6af0f1f">operator%=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a1b1a6615bdf8f4346d87e1719277c4dd">operator/=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a6515cd7dc9c4028c14227e4fdcfb0f61">operator%=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a33086eefd67b1a128320a8c23b7b5b1d">operator/=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a1a136c4412213b6cce33a860003d076f">operator*=</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a3ee4b9a3eda0b45fd3153ab406afa3a6">operator/=</link> (
+const T &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a1af4ba266094ecf607ba4d21437b7408">operator++</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structnsmat2_1a8c242b293708ea02a022352a2ae1f361">operator--</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a7bce45f0fe89e994a5a296c7652b799d">operator++</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a5823185a034e93f461df7a45d107f2ac">operator--</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1acae588f2fc4a4d61a8d13dffe7d2a4a7">operator+=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a999d210b64ffcf61bb62ad8105684a0b">operator-=</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1ac1cd9357b9903b8a2c5314ac2e0c3226">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structnsmat2_1a578aba4ca0ef459f67a6af7db59a3462">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structnsmat2_1a23876c6602b91eaf0d044d7aca198570">operator()</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structnsmat2_1aa6e97d0b8d3f9477cdd86de539a7e78f">
+                <title>nsmat2&lt; T &gt;::nsmat2 ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a1a8a3a4f367dcb4b2f881ecd312c6fab">
+                <title>nsmat2&lt; T &gt;::nsmat2 (const T &amp;val)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a36ccd82983082044f1940c984751132c">
+                <title>nsmat2&lt; T &gt;::nsmat2 (const nsmat2 &amp;copy)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a2199129a77fab38c44061784314b6588">
+                <title>nsmat2&lt; T &gt;::nsmat2 (const T &amp;a, const T &amp;b, const T &amp;c, const T &amp;d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aaae3f17fab7c1c846e9acc7ae6b1b5f0">
+                <title>nsmat2&lt; T &gt;::nsmat2 (const NSVec2&lt; T &gt; &amp;row1, const NSVec2&lt; T &gt; &amp;row2)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a0332188d2bbdc8366d4f8948e01e16a8">
+                <title>T* nsmat2&lt; T &gt;::dataPtr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a5ff3e1c4748cbd07277433e6dc8687e5">
+                <title>T nsmat2&lt; T &gt;::determinant () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1ae337a477f8a4e897263dbc12324959e1">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::invert ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aae0411dfb6ddaa8925ef80341b5bb814">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::rotationFrom (T angle, bool rads=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a68458993a2b569fc666dcd93a72b8de0">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::roundToZero ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a6b22f844975d5791f55cc86deba38a3c">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::scalingFrom (const NSVec2&lt; T &gt; &amp;scale)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1afc982fea7fd3878cebb85d59d2bdc216">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::scalingFrom (const nsmat2&lt; T &gt; &amp;transform2d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a9ae5952c5907940fbdd63403dcf358c5">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::scalingFrom (const nsmat3&lt; T &gt; &amp;transform2d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aa86bb6cd0b53b6dc46b40ca5d215eb79">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::set (const T &amp;val)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aee14e7cd7ced35e54b10a95284dbd9cb">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::set (const T &amp;a, const T &amp;b, const T &amp;c, const T &amp;d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1af3e4186bac54ad97bc2c8a05759eaa66">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::set (const NSVec2&lt; T &gt; &amp;row1, const NSVec2&lt; T &gt; &amp;row2)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1ab6ffe87963350f984a5584df85e0d263">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::setColumn (const uint32_t &amp;i, const T &amp;x, const T &amp;y)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a05167982706fec64097cfbf707459c01">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::setColumn (const uint32_t &amp;i, const NSVec2&lt; T &gt; &amp;col)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a87438a3320ff865b4faf068716ad386f">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::setIdentity ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a2b19dca33fda0b2169340bac241728d0">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::transpose ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a81b23631f6035cf4518d86e5325be761">
+                <title>std::string nsmat2&lt; T &gt;::toString (bool newline=true) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a02ee2a07ff8683cf4c98608bbcddfa9b">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator* (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aa225314cae5641252510c0e7e19ce924">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator/ (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a7eda4e70be667cdb5c30c2105609406c">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator% (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a1e56e3c1c402abca39a1e3411408899d">
+                <title>NSVec2&lt;T&gt; nsmat2&lt; T &gt;::operator* (const NSVec2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a54b2258a311cf81f688b3e5afe72bb4b">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator% (const NSVec2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1abe3d7fd18d03a937324d6bf770511889">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator/ (const NSVec2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a4ff75c8b0f9d3f580dfca342b4ca2050">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator* (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1abd7368de50af93658383343a8576cb13">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator/ (const T &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a4dd54be680f84c4a4f819c97d4db843e">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator+ (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a0425bee724e3e659b21cb1b2d5421200">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator- (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1abc36f6d1ce194dad8dfa942638e22e27">
+                <title>bool nsmat2&lt; T &gt;::operator== (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a22a0b2dda140c20b466e945195298f53">
+                <title>bool nsmat2&lt; T &gt;::operator!= (const nsmat2&lt; T &gt; &amp;rhs) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aed2ddd231be80bcf5eeb493932e62c17">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aa07dbaac9da3393bb6dd274197d70769">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator*= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1aa828e531e3c96f77597dede4d6af0f1f">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator%= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a1b1a6615bdf8f4346d87e1719277c4dd">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator/= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a6515cd7dc9c4028c14227e4fdcfb0f61">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator%= (const NSVec2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a33086eefd67b1a128320a8c23b7b5b1d">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator/= (const NSVec2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a1a136c4412213b6cce33a860003d076f">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator*= (const T &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a3ee4b9a3eda0b45fd3153ab406afa3a6">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator/= (const T &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a1af4ba266094ecf607ba4d21437b7408">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator++ (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a8c242b293708ea02a022352a2ae1f361">
+                <title>nsmat2&lt;T&gt; nsmat2&lt; T &gt;::operator-- (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a7bce45f0fe89e994a5a296c7652b799d">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator++ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a5823185a034e93f461df7a45d107f2ac">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator-- ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1acae588f2fc4a4d61a8d13dffe7d2a4a7">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator+= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a999d210b64ffcf61bb62ad8105684a0b">
+                <title>nsmat2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator-= (const nsmat2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1ac1cd9357b9903b8a2c5314ac2e0c3226">
+                <title>const NSVec2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator[] (const uint32_t &amp;pVal) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a578aba4ca0ef459f67a6af7db59a3462">
+                <title>NSVec2&lt;T&gt;&amp; nsmat2&lt; T &gt;::operator[] (const uint32_t &amp;pVal)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structnsmat2_1a23876c6602b91eaf0d044d7aca198570">
+                <title>NSVec2&lt;T&gt; nsmat2&lt; T &gt;::operator() (const uint32_t &amp;pVal)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

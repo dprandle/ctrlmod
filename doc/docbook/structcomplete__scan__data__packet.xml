@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structcomplete__scan__data__packet">
+<title>complete_scan_data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>scan_data_packet data[360]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structcomplete__scan__data__packet_1a753b1906a3631b347472649120f748a4">complete_scan_data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structcomplete__scan__data__packet_1a35bfe3a588c176e844eea1c60453617e">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="structcomplete__scan__data__packet_1a144e017cea82952bda749de5692fdf6a">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structcomplete__scan__data__packet_1a2cc2871fdf24c03cd61f69acdec7cfb8">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structcomplete__scan__data__packet_1abcda1952cf162c478c0c0e1c77eaf34d">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structcomplete__scan__data__packet_1ad21ca3dc0a510662467edee56a02ae29">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structcomplete__scan__data__packet_1a1ecbf5f76b3b1f0b9938f8ab6ec7becf">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structcomplete__scan__data__packet_1a45c7db37ae369581a70a6b2427489b22">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structcomplete__scan__data__packet_1a753b1906a3631b347472649120f748a4">
+                <title>complete_scan_data_packet::complete_scan_data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1a35bfe3a588c176e844eea1c60453617e">
+                <title>std::string complete_scan_data_packet::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1a144e017cea82952bda749de5692fdf6a">
+                <title>std::string complete_scan_data_packet::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1a2cc2871fdf24c03cd61f69acdec7cfb8">
+                <title>virtual uint32_t complete_scan_data_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1abcda1952cf162c478c0c0e1c77eaf34d">
+                <title>virtual uint8_t&amp; complete_scan_data_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1ad21ca3dc0a510662467edee56a02ae29">
+                <title>virtual uint8_t* complete_scan_data_packet::dataptr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1a1ecbf5f76b3b1f0b9938f8ab6ec7becf">
+                <title>static std::string complete_scan_data_packet::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcomplete__scan__data__packet_1a45c7db37ae369581a70a6b2427489b22">
+                <title>static uint32_t complete_scan_data_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

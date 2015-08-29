@@ -1,0 +1,668 @@
+\hypertarget{structnsmat4}{\section{nsmat4$<$ T $>$ Struct Template Reference}
+\label{structnsmat4}\index{nsmat4$<$ T $>$@{nsmat4$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$nsmat4.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnsmat4_a31784e9f45b137baff02cfdcacc0cc9e}{nsmat4} ()
+\item 
+\hyperlink{structnsmat4_a8bd1d3bf6b33a0b0919609730b6cf0ef}{nsmat4} (const \hyperlink{structnsmat4}{nsmat4} \&copy)
+\item 
+\hyperlink{structnsmat4_a903374993b2a55725973af4d4013c11c}{nsmat4} (const T \&val)
+\item 
+\hyperlink{structnsmat4_ae9c42ba0407b64b9de4aca88768a6988}{nsmat4} (const T \&a, const T \&b, const T \&c, const T \&d, const T \&e, const T \&f, const T \&g, const T \&h, const T \&i, const T \&j, const T \&k, const T \&l, const T \&m, const T \&n, const T \&o, const T \&p)
+\item 
+\hyperlink{structnsmat4_a4e2399259ca24d34758b7ea361a0e810}{nsmat4} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row1, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row2, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row3, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row4)
+\item 
+\hyperlink{structnsmat4_a023dd44133399c21aa55296a21a3aefe}{nsmat4} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&\hyperlink{structnsmat4_ac112fb2077156ddeac42c213f67931a4}{basis})
+\item 
+\hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \hyperlink{structnsmat4_ac112fb2077156ddeac42c213f67931a4}{basis} () const 
+\item 
+T $\ast$ \hyperlink{structnsmat4_afe3ae42391cf1bd702bd48f44f19d095}{data\-Ptr} ()
+\item 
+T \hyperlink{structnsmat4_ae4e04d53d4607ac67f2372a7991b641c}{determinant} () const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_aff828e0c9da7cb1509b3d46984ed137a}{invert} ()
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a9a0bfd28799d6af327f6bb7fad32ce07}{ortho\-From} (const T \&left, const T \&\hyperlink{structnsmat4_a106a35a88a607861bc3af59bb59119a9}{right}, const T \&top, const T \&bottom, const T \&near, const T \&far)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_aaf997f5ed8a0ffecc4d1dd59c019117b}{perspective\-From} (const T \&fov\-Angle, const T \&aspect\-Ratio, const T \&z\-Near, const T \&z\-Far)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsmat4_a106a35a88a607861bc3af59bb59119a9}{right} () const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a08c2b17be9d635ee378928041dd9eb1d}{rotation\-From} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&axis\-Angle, bool rads=false)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_ad0b013ac37b01f65a8e275fb7961f629}{rotation\-From} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&\hyperlink{nsvec3_8h_ac03cece5b2ce21941bb4b4a02ea7e2b6}{euler}, typename \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$\-::Euler\-Order order, bool rads=false)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_aa1a9042893740a093b65a94ec98350cb}{rotation\-From} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&\hyperlink{nsquat_8h_af20bc5e18c379261a387ab197e9b971f}{orientation})
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a63fea40aee660df9d646db6aea883b93}{rotation\-From} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_af41da95328c4ee842e452bfff206070e}{rotation\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a20822a9b279e90403a5df0787ab7bca6}{rotation\-From} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec, const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&to\-Vec)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_ae1195b31c0ae0c8b4a973118b735ab66}{round\-To\-Zero} ()
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a7901f1210c5bebb26283b39465938817}{scaling\-From} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&scale)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a457fb11f39e444b606c5979b9eae99c5}{scaling\-From} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a44eb631abda0a85c3f230793eeafa2ff}{scaling\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a8a89b6c95ef9aede01a6ac868272cc69}{set} (const T \&val)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_abaef1829d6de2a0175688b41f72c7d13}{set} (const T \&a, const T \&b, const T \&c, const T \&d, const T \&e, const T \&f, const T \&g, const T \&h, const T \&i, const T \&j, const T \&k, const T \&l, const T \&m, const T \&n, const T \&o, const T \&p)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_adad98385fa534db92acfccbd5f5b34f9}{set} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row1, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row2, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row3, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&row4)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a7c5f43ad6bcff1b9d3958e94438931e5}{set} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&\hyperlink{structnsmat4_ac112fb2077156ddeac42c213f67931a4}{basis})
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a33f1e1fad0e42d77e7c1622a6183903e}{set\-Column} (const uint32\-\_\-t \&i, const T \&x, const T \&y, const T \&z, const T \&w)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a430bd56f6ce80a86866001d4df220eec}{set\-Column} (const uint32\-\_\-t \&i, const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&col)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_ad5ce2d95a6a5ce54d00e2837fb4c8578}{set\-Identity} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsmat4_a908bdf6e5053eebee849e3fec4dbc4f2}{target} () const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_abd921a0e902e0056ebfecde537016743}{translation\-From} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&pos)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a75161fbb63e1b32403331c88ba604c80}{translation\-From} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&posw)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a04a8693e5db8b2e038189af89855f7ae}{translation\-From} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a2fe21f0f54bbfc977bd3c6ca2dbaf0a9}{transpose} ()
+\item 
+std\-::string \hyperlink{structnsmat4_a452a0723649f236e1fa44cb152e7a744}{to\-String} (bool newline=true) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsmat4_a59f27ef8ea585de9a12f18727ba9cb34}{up} () const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_ab5673976a8d1f1933f256e75e3c069d4}{operator$\ast$} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a745faa59b32237850ac95e42af7db864}{operator/} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a36963ec00a3324958525d3dc4a5b5cb4}{operator\%} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \hyperlink{structnsmat4_a14066b1cab39d37873d2625dc8aa6f29}{operator$\ast$} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_ad4a57bd10b2b7add7981aed7d2a485f5}{operator\%} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a5d8d6d2051cfb385aac550a0a621e478}{operator/} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_ac62d646fdb8278ff595995aaa62d72df}{operator$\ast$} (const T \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a9ca0035522d1ae984f8fe5067e01300c}{operator/} (const T \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_ae66c9c7eaff824a951c255aa653781f2}{operator+} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a3ff51929b747889cd0fd26a2b906f033}{operator-\/} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structnsmat4_ab45158880de26e91dab9f6ff777c60fe}{operator==} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structnsmat4_aac003e75d4c1c6b15a3996508cbf04fc}{operator!=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a853c9c35d4ab26892c5328dd4d8423c9}{operator=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a6fdefdd98afc08e013e53bb05dbf62de}{operator$\ast$=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_aafe6f30856ca0e27e2978c9a75fd4d9e}{operator/=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_af0953298e638855c93c698858a3f4c2a}{operator\%=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a224d3cba671a0da2c8a195f03246116e}{operator\%=} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a4db8a8d627d3823293fa92511af4e673}{operator/=} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a95e928e2783139bf41bb1e6983ed4563}{operator$\ast$=} (const T \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_af64ec545814796b70bc724132f2f6bb5}{operator/=} (const T \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a5e1904ce0fbca1d905725ab167cbb340}{operator++} (int32\-\_\-t)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \hyperlink{structnsmat4_a984c5ad111fbc8d859656113e25875a9}{operator-\/-\/} (int32\-\_\-t)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a05f04778a87353a0fb6fb92f2308e69c}{operator++} ()
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a5f4409ca9df9bcc15be36fd0b681b464}{operator-\/-\/} ()
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a5a5f9e5986096b9b18474bffa8338066}{operator+=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \& \hyperlink{structnsmat4_a79ab690d8fcb8da7637d9e798e4ff762}{operator-\/=} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&rhs)
+\item 
+const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \& \hyperlink{structnsmat4_a4ffb31f855b10374cad6e465ea642b2b}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val) const 
+\item 
+\hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \& \hyperlink{structnsmat4_a11fd1951758b9e2734747060aa08b323}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val)
+\item 
+\hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \hyperlink{structnsmat4_ac54c9fd888409528c31c9493969cdf6c}{operator()} (const uint32\-\_\-t \&p\-Val) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structnsmat4_a31784e9f45b137baff02cfdcacc0cc9e}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a31784e9f45b137baff02cfdcacc0cc9e}
+\hypertarget{structnsmat4_a8bd1d3bf6b33a0b0919609730b6cf0ef}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a8bd1d3bf6b33a0b0919609730b6cf0ef}
+\hypertarget{structnsmat4_a903374993b2a55725973af4d4013c11c}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a903374993b2a55725973af4d4013c11c}
+\hypertarget{structnsmat4_ae9c42ba0407b64b9de4aca88768a6988}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a, }
+\item[{const T \&}]{b, }
+\item[{const T \&}]{c, }
+\item[{const T \&}]{d, }
+\item[{const T \&}]{e, }
+\item[{const T \&}]{f, }
+\item[{const T \&}]{g, }
+\item[{const T \&}]{h, }
+\item[{const T \&}]{i, }
+\item[{const T \&}]{j, }
+\item[{const T \&}]{k, }
+\item[{const T \&}]{l, }
+\item[{const T \&}]{m, }
+\item[{const T \&}]{n, }
+\item[{const T \&}]{o, }
+\item[{const T \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ae9c42ba0407b64b9de4aca88768a6988}
+\hypertarget{structnsmat4_a4e2399259ca24d34758b7ea361a0e810}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row1, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row2, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row3, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row4}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a4e2399259ca24d34758b7ea361a0e810}
+\hypertarget{structnsmat4_a023dd44133399c21aa55296a21a3aefe}{\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\index{nsmat4@{nsmat4}!nsmat4@{nsmat4}}
+\subsubsection[{nsmat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$ T $>$\-::{\bf nsmat4} (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{basis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a023dd44133399c21aa55296a21a3aefe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structnsmat4_ac112fb2077156ddeac42c213f67931a4}{\index{nsmat4@{nsmat4}!basis@{basis}}
+\index{basis@{basis}!nsmat4@{nsmat4}}
+\subsubsection[{basis}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat3}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::basis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ac112fb2077156ddeac42c213f67931a4}
+\hypertarget{structnsmat4_afe3ae42391cf1bd702bd48f44f19d095}{\index{nsmat4@{nsmat4}!data\-Ptr@{data\-Ptr}}
+\index{data\-Ptr@{data\-Ptr}!nsmat4@{nsmat4}}
+\subsubsection[{data\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf nsmat4}$<$ T $>$\-::data\-Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_afe3ae42391cf1bd702bd48f44f19d095}
+\hypertarget{structnsmat4_ae4e04d53d4607ac67f2372a7991b641c}{\index{nsmat4@{nsmat4}!determinant@{determinant}}
+\index{determinant@{determinant}!nsmat4@{nsmat4}}
+\subsubsection[{determinant}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsmat4}$<$ T $>$\-::determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ae4e04d53d4607ac67f2372a7991b641c}
+\hypertarget{structnsmat4_aff828e0c9da7cb1509b3d46984ed137a}{\index{nsmat4@{nsmat4}!invert@{invert}}
+\index{invert@{invert}!nsmat4@{nsmat4}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::invert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_aff828e0c9da7cb1509b3d46984ed137a}
+\hypertarget{structnsmat4_aac003e75d4c1c6b15a3996508cbf04fc}{\index{nsmat4@{nsmat4}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!nsmat4@{nsmat4}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsmat4}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_aac003e75d4c1c6b15a3996508cbf04fc}
+\hypertarget{structnsmat4_a36963ec00a3324958525d3dc4a5b5cb4}{\index{nsmat4@{nsmat4}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!nsmat4@{nsmat4}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a36963ec00a3324958525d3dc4a5b5cb4}
+\hypertarget{structnsmat4_ad4a57bd10b2b7add7981aed7d2a485f5}{\index{nsmat4@{nsmat4}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!nsmat4@{nsmat4}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ad4a57bd10b2b7add7981aed7d2a485f5}
+\hypertarget{structnsmat4_af0953298e638855c93c698858a3f4c2a}{\index{nsmat4@{nsmat4}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!nsmat4@{nsmat4}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_af0953298e638855c93c698858a3f4c2a}
+\hypertarget{structnsmat4_a224d3cba671a0da2c8a195f03246116e}{\index{nsmat4@{nsmat4}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!nsmat4@{nsmat4}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a224d3cba671a0da2c8a195f03246116e}
+\hypertarget{structnsmat4_ac54c9fd888409528c31c9493969cdf6c}{\index{nsmat4@{nsmat4}!operator()@{operator()}}
+\index{operator()@{operator()}!nsmat4@{nsmat4}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ac54c9fd888409528c31c9493969cdf6c}
+\hypertarget{structnsmat4_ab5673976a8d1f1933f256e75e3c069d4}{\index{nsmat4@{nsmat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsmat4@{nsmat4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ab5673976a8d1f1933f256e75e3c069d4}
+\hypertarget{structnsmat4_a14066b1cab39d37873d2625dc8aa6f29}{\index{nsmat4@{nsmat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsmat4@{nsmat4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a14066b1cab39d37873d2625dc8aa6f29}
+\hypertarget{structnsmat4_ac62d646fdb8278ff595995aaa62d72df}{\index{nsmat4@{nsmat4}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsmat4@{nsmat4}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ac62d646fdb8278ff595995aaa62d72df}
+\hypertarget{structnsmat4_a6fdefdd98afc08e013e53bb05dbf62de}{\index{nsmat4@{nsmat4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!nsmat4@{nsmat4}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a6fdefdd98afc08e013e53bb05dbf62de}
+\hypertarget{structnsmat4_a95e928e2783139bf41bb1e6983ed4563}{\index{nsmat4@{nsmat4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!nsmat4@{nsmat4}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a95e928e2783139bf41bb1e6983ed4563}
+\hypertarget{structnsmat4_ae66c9c7eaff824a951c255aa653781f2}{\index{nsmat4@{nsmat4}!operator+@{operator+}}
+\index{operator+@{operator+}!nsmat4@{nsmat4}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ae66c9c7eaff824a951c255aa653781f2}
+\hypertarget{structnsmat4_a5e1904ce0fbca1d905725ab167cbb340}{\index{nsmat4@{nsmat4}!operator++@{operator++}}
+\index{operator++@{operator++}!nsmat4@{nsmat4}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a5e1904ce0fbca1d905725ab167cbb340}
+\hypertarget{structnsmat4_a05f04778a87353a0fb6fb92f2308e69c}{\index{nsmat4@{nsmat4}!operator++@{operator++}}
+\index{operator++@{operator++}!nsmat4@{nsmat4}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a05f04778a87353a0fb6fb92f2308e69c}
+\hypertarget{structnsmat4_a5a5f9e5986096b9b18474bffa8338066}{\index{nsmat4@{nsmat4}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!nsmat4@{nsmat4}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a5a5f9e5986096b9b18474bffa8338066}
+\hypertarget{structnsmat4_a3ff51929b747889cd0fd26a2b906f033}{\index{nsmat4@{nsmat4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!nsmat4@{nsmat4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a3ff51929b747889cd0fd26a2b906f033}
+\hypertarget{structnsmat4_a984c5ad111fbc8d859656113e25875a9}{\index{nsmat4@{nsmat4}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!nsmat4@{nsmat4}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a984c5ad111fbc8d859656113e25875a9}
+\hypertarget{structnsmat4_a5f4409ca9df9bcc15be36fd0b681b464}{\index{nsmat4@{nsmat4}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!nsmat4@{nsmat4}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a5f4409ca9df9bcc15be36fd0b681b464}
+\hypertarget{structnsmat4_a79ab690d8fcb8da7637d9e798e4ff762}{\index{nsmat4@{nsmat4}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!nsmat4@{nsmat4}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a79ab690d8fcb8da7637d9e798e4ff762}
+\hypertarget{structnsmat4_a745faa59b32237850ac95e42af7db864}{\index{nsmat4@{nsmat4}!operator/@{operator/}}
+\index{operator/@{operator/}!nsmat4@{nsmat4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a745faa59b32237850ac95e42af7db864}
+\hypertarget{structnsmat4_a5d8d6d2051cfb385aac550a0a621e478}{\index{nsmat4@{nsmat4}!operator/@{operator/}}
+\index{operator/@{operator/}!nsmat4@{nsmat4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a5d8d6d2051cfb385aac550a0a621e478}
+\hypertarget{structnsmat4_a9ca0035522d1ae984f8fe5067e01300c}{\index{nsmat4@{nsmat4}!operator/@{operator/}}
+\index{operator/@{operator/}!nsmat4@{nsmat4}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a9ca0035522d1ae984f8fe5067e01300c}
+\hypertarget{structnsmat4_aafe6f30856ca0e27e2978c9a75fd4d9e}{\index{nsmat4@{nsmat4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!nsmat4@{nsmat4}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_aafe6f30856ca0e27e2978c9a75fd4d9e}
+\hypertarget{structnsmat4_a4db8a8d627d3823293fa92511af4e673}{\index{nsmat4@{nsmat4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!nsmat4@{nsmat4}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a4db8a8d627d3823293fa92511af4e673}
+\hypertarget{structnsmat4_af64ec545814796b70bc724132f2f6bb5}{\index{nsmat4@{nsmat4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!nsmat4@{nsmat4}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_af64ec545814796b70bc724132f2f6bb5}
+\hypertarget{structnsmat4_a853c9c35d4ab26892c5328dd4d8423c9}{\index{nsmat4@{nsmat4}!operator=@{operator=}}
+\index{operator=@{operator=}!nsmat4@{nsmat4}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a853c9c35d4ab26892c5328dd4d8423c9}
+\hypertarget{structnsmat4_ab45158880de26e91dab9f6ff777c60fe}{\index{nsmat4@{nsmat4}!operator==@{operator==}}
+\index{operator==@{operator==}!nsmat4@{nsmat4}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsmat4}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ab45158880de26e91dab9f6ff777c60fe}
+\hypertarget{structnsmat4_a4ffb31f855b10374cad6e465ea642b2b}{\index{nsmat4@{nsmat4}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!nsmat4@{nsmat4}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf N\-S\-Vec4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a4ffb31f855b10374cad6e465ea642b2b}
+\hypertarget{structnsmat4_a11fd1951758b9e2734747060aa08b323}{\index{nsmat4@{nsmat4}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!nsmat4@{nsmat4}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a11fd1951758b9e2734747060aa08b323}
+\hypertarget{structnsmat4_a9a0bfd28799d6af327f6bb7fad32ce07}{\index{nsmat4@{nsmat4}!ortho\-From@{ortho\-From}}
+\index{ortho\-From@{ortho\-From}!nsmat4@{nsmat4}}
+\subsubsection[{ortho\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::ortho\-From (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{left, }
+\item[{const T \&}]{right, }
+\item[{const T \&}]{top, }
+\item[{const T \&}]{bottom, }
+\item[{const T \&}]{near, }
+\item[{const T \&}]{far}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a9a0bfd28799d6af327f6bb7fad32ce07}
+\hypertarget{structnsmat4_aaf997f5ed8a0ffecc4d1dd59c019117b}{\index{nsmat4@{nsmat4}!perspective\-From@{perspective\-From}}
+\index{perspective\-From@{perspective\-From}!nsmat4@{nsmat4}}
+\subsubsection[{perspective\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::perspective\-From (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{fov\-Angle, }
+\item[{const T \&}]{aspect\-Ratio, }
+\item[{const T \&}]{z\-Near, }
+\item[{const T \&}]{z\-Far}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_aaf997f5ed8a0ffecc4d1dd59c019117b}
+\hypertarget{structnsmat4_a106a35a88a607861bc3af59bb59119a9}{\index{nsmat4@{nsmat4}!right@{right}}
+\index{right@{right}!nsmat4@{nsmat4}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a106a35a88a607861bc3af59bb59119a9}
+\hypertarget{structnsmat4_a08c2b17be9d635ee378928041dd9eb1d}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{axis\-Angle, }
+\item[{bool}]{rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a08c2b17be9d635ee378928041dd9eb1d}
+\hypertarget{structnsmat4_ad0b013ac37b01f65a8e275fb7961f629}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{euler, }
+\item[{typename {\bf N\-S\-Vec3}$<$ T $>$\-::Euler\-Order}]{order, }
+\item[{bool}]{rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ad0b013ac37b01f65a8e275fb7961f629}
+\hypertarget{structnsmat4_aa1a9042893740a093b65a94ec98350cb}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{orientation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_aa1a9042893740a093b65a94ec98350cb}
+\hypertarget{structnsmat4_a63fea40aee660df9d646db6aea883b93}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a63fea40aee660df9d646db6aea883b93}
+\hypertarget{structnsmat4_af41da95328c4ee842e452bfff206070e}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_af41da95328c4ee842e452bfff206070e}
+\hypertarget{structnsmat4_a20822a9b279e90403a5df0787ab7bca6}{\index{nsmat4@{nsmat4}!rotation\-From@{rotation\-From}}
+\index{rotation\-From@{rotation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{rotation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::rotation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec, }
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{to\-Vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a20822a9b279e90403a5df0787ab7bca6}
+\hypertarget{structnsmat4_ae1195b31c0ae0c8b4a973118b735ab66}{\index{nsmat4@{nsmat4}!round\-To\-Zero@{round\-To\-Zero}}
+\index{round\-To\-Zero@{round\-To\-Zero}!nsmat4@{nsmat4}}
+\subsubsection[{round\-To\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::round\-To\-Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ae1195b31c0ae0c8b4a973118b735ab66}
+\hypertarget{structnsmat4_a7901f1210c5bebb26283b39465938817}{\index{nsmat4@{nsmat4}!scaling\-From@{scaling\-From}}
+\index{scaling\-From@{scaling\-From}!nsmat4@{nsmat4}}
+\subsubsection[{scaling\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::scaling\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a7901f1210c5bebb26283b39465938817}
+\hypertarget{structnsmat4_a457fb11f39e444b606c5979b9eae99c5}{\index{nsmat4@{nsmat4}!scaling\-From@{scaling\-From}}
+\index{scaling\-From@{scaling\-From}!nsmat4@{nsmat4}}
+\subsubsection[{scaling\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::scaling\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a457fb11f39e444b606c5979b9eae99c5}
+\hypertarget{structnsmat4_a44eb631abda0a85c3f230793eeafa2ff}{\index{nsmat4@{nsmat4}!scaling\-From@{scaling\-From}}
+\index{scaling\-From@{scaling\-From}!nsmat4@{nsmat4}}
+\subsubsection[{scaling\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::scaling\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a44eb631abda0a85c3f230793eeafa2ff}
+\hypertarget{structnsmat4_a8a89b6c95ef9aede01a6ac868272cc69}{\index{nsmat4@{nsmat4}!set@{set}}
+\index{set@{set}!nsmat4@{nsmat4}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a8a89b6c95ef9aede01a6ac868272cc69}
+\hypertarget{structnsmat4_abaef1829d6de2a0175688b41f72c7d13}{\index{nsmat4@{nsmat4}!set@{set}}
+\index{set@{set}!nsmat4@{nsmat4}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a, }
+\item[{const T \&}]{b, }
+\item[{const T \&}]{c, }
+\item[{const T \&}]{d, }
+\item[{const T \&}]{e, }
+\item[{const T \&}]{f, }
+\item[{const T \&}]{g, }
+\item[{const T \&}]{h, }
+\item[{const T \&}]{i, }
+\item[{const T \&}]{j, }
+\item[{const T \&}]{k, }
+\item[{const T \&}]{l, }
+\item[{const T \&}]{m, }
+\item[{const T \&}]{n, }
+\item[{const T \&}]{o, }
+\item[{const T \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_abaef1829d6de2a0175688b41f72c7d13}
+\hypertarget{structnsmat4_adad98385fa534db92acfccbd5f5b34f9}{\index{nsmat4@{nsmat4}!set@{set}}
+\index{set@{set}!nsmat4@{nsmat4}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row1, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row2, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row3, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{row4}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_adad98385fa534db92acfccbd5f5b34f9}
+\hypertarget{structnsmat4_a7c5f43ad6bcff1b9d3958e94438931e5}{\index{nsmat4@{nsmat4}!set@{set}}
+\index{set@{set}!nsmat4@{nsmat4}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{basis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a7c5f43ad6bcff1b9d3958e94438931e5}
+\hypertarget{structnsmat4_a33f1e1fad0e42d77e7c1622a6183903e}{\index{nsmat4@{nsmat4}!set\-Column@{set\-Column}}
+\index{set\-Column@{set\-Column}!nsmat4@{nsmat4}}
+\subsubsection[{set\-Column}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set\-Column (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{i, }
+\item[{const T \&}]{x, }
+\item[{const T \&}]{y, }
+\item[{const T \&}]{z, }
+\item[{const T \&}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a33f1e1fad0e42d77e7c1622a6183903e}
+\hypertarget{structnsmat4_a430bd56f6ce80a86866001d4df220eec}{\index{nsmat4@{nsmat4}!set\-Column@{set\-Column}}
+\index{set\-Column@{set\-Column}!nsmat4@{nsmat4}}
+\subsubsection[{set\-Column}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set\-Column (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{i, }
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a430bd56f6ce80a86866001d4df220eec}
+\hypertarget{structnsmat4_ad5ce2d95a6a5ce54d00e2837fb4c8578}{\index{nsmat4@{nsmat4}!set\-Identity@{set\-Identity}}
+\index{set\-Identity@{set\-Identity}!nsmat4@{nsmat4}}
+\subsubsection[{set\-Identity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::set\-Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_ad5ce2d95a6a5ce54d00e2837fb4c8578}
+\hypertarget{structnsmat4_a908bdf6e5053eebee849e3fec4dbc4f2}{\index{nsmat4@{nsmat4}!target@{target}}
+\index{target@{target}!nsmat4@{nsmat4}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a908bdf6e5053eebee849e3fec4dbc4f2}
+\hypertarget{structnsmat4_a452a0723649f236e1fa44cb152e7a744}{\index{nsmat4@{nsmat4}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!nsmat4@{nsmat4}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\-::string {\bf nsmat4}$<$ T $>$\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{bool}]{newline = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a452a0723649f236e1fa44cb152e7a744}
+\hypertarget{structnsmat4_abd921a0e902e0056ebfecde537016743}{\index{nsmat4@{nsmat4}!translation\-From@{translation\-From}}
+\index{translation\-From@{translation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{translation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::translation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_abd921a0e902e0056ebfecde537016743}
+\hypertarget{structnsmat4_a75161fbb63e1b32403331c88ba604c80}{\index{nsmat4@{nsmat4}!translation\-From@{translation\-From}}
+\index{translation\-From@{translation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{translation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::translation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{posw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a75161fbb63e1b32403331c88ba604c80}
+\hypertarget{structnsmat4_a04a8693e5db8b2e038189af89855f7ae}{\index{nsmat4@{nsmat4}!translation\-From@{translation\-From}}
+\index{translation\-From@{translation\-From}!nsmat4@{nsmat4}}
+\subsubsection[{translation\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::translation\-From (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a04a8693e5db8b2e038189af89855f7ae}
+\hypertarget{structnsmat4_a2fe21f0f54bbfc977bd3c6ca2dbaf0a9}{\index{nsmat4@{nsmat4}!transpose@{transpose}}
+\index{transpose@{transpose}!nsmat4@{nsmat4}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsmat4}$<$T$>$\& {\bf nsmat4}$<$ T $>$\-::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a2fe21f0f54bbfc977bd3c6ca2dbaf0a9}
+\hypertarget{structnsmat4_a59f27ef8ea585de9a12f18727ba9cb34}{\index{nsmat4@{nsmat4}!up@{up}}
+\index{up@{up}!nsmat4@{nsmat4}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsmat4}$<$ T $>$\-::up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsmat4_a59f27ef8ea585de9a12f18727ba9cb34}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{nsmat4_8h}{nsmat4.\-h}\end{DoxyCompactItemize}

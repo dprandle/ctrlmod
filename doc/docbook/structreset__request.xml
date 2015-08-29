@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structreset__request">
+<title>reset_request struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structreset__request_1a41d5cf503ff5f1ea7c260c0cd160b253">reset_request</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structreset__request_1a41d5cf503ff5f1ea7c260c0cd160b253">
+                <title>reset_request::reset_request ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

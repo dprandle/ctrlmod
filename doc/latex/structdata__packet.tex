@@ -1,0 +1,110 @@
+\hypertarget{structdata__packet}{\section{data\-\_\-packet Struct Reference}
+\label{structdata__packet}\index{data\-\_\-packet@{data\-\_\-packet}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-packets.\-h$>$}
+
+Inheritance diagram for data\-\_\-packet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.251397cm]{structdata__packet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdata__packet_aeac45f0ad8cb14657bd37306170b2afd}{data\-\_\-packet} ()
+\item 
+virtual \hyperlink{structdata__packet_a63fd3fc8f94d6bd4fb3accfe612cfe3b}{$\sim$data\-\_\-packet} ()
+\item 
+virtual std\-::string \hyperlink{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}{to\-String} ()=0
+\item 
+virtual std\-::string \hyperlink{structdata__packet_af0795581f2d57a8c14a88009da37aee1}{type} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}{size} ()=0
+\item 
+virtual uint8\-\_\-t \& \hyperlink{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}{operator\mbox{[}$\,$\mbox{]}} (uint32\-\_\-t index)=0
+\item 
+virtual uint8\-\_\-t $\ast$ \hyperlink{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}{dataptr} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structdata__packet_aeac45f0ad8cb14657bd37306170b2afd}{\index{data\-\_\-packet@{data\-\_\-packet}!data\-\_\-packet@{data\-\_\-packet}}
+\index{data\-\_\-packet@{data\-\_\-packet}!data_packet@{data\-\_\-packet}}
+\subsubsection[{data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}data\-\_\-packet\-::data\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structdata__packet_aeac45f0ad8cb14657bd37306170b2afd}
+\hypertarget{structdata__packet_a63fd3fc8f94d6bd4fb3accfe612cfe3b}{\index{data\-\_\-packet@{data\-\_\-packet}!$\sim$data\-\_\-packet@{$\sim$data\-\_\-packet}}
+\index{$\sim$data\-\_\-packet@{$\sim$data\-\_\-packet}!data_packet@{data\-\_\-packet}}
+\subsubsection[{$\sim$data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}virtual data\-\_\-packet\-::$\sim$data\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structdata__packet_a63fd3fc8f94d6bd4fb3accfe612cfe3b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}{\index{data\-\_\-packet@{data\-\_\-packet}!dataptr@{dataptr}}
+\index{dataptr@{dataptr}!data_packet@{data\-\_\-packet}}
+\subsubsection[{dataptr}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t$\ast$ data\-\_\-packet\-::dataptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}
+
+
+Implemented in \hyperlink{structfirmware__data__packet_ab080f05c847592a2578ee307d5af31fc}{firmware\-\_\-data\-\_\-packet}, \hyperlink{structinfo__data__packet_a2b730e457ee372ad1d40d4bbc22928cc}{info\-\_\-data\-\_\-packet}, \hyperlink{structhealth__data__packet_a8378ecf34528f77f6d50937c3ad02c8d}{health\-\_\-data\-\_\-packet}, \hyperlink{structcomplete__scan__data__packet_ad21ca3dc0a510662467edee56a02ae29}{complete\-\_\-scan\-\_\-data\-\_\-packet}, and \hyperlink{structscan__data__packet_a376edae10eddfa50b3684e801a0a8f3a}{scan\-\_\-data\-\_\-packet}.
+
+\hypertarget{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}{\index{data\-\_\-packet@{data\-\_\-packet}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!data_packet@{data\-\_\-packet}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t\& data\-\_\-packet\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}
+
+
+Implemented in \hyperlink{structfirmware__data__packet_a16d28be180847cb45fc4dbf0417756b9}{firmware\-\_\-data\-\_\-packet}, \hyperlink{structinfo__data__packet_a5a78a794ee110ed9bb4a4bb97d57f9f3}{info\-\_\-data\-\_\-packet}, \hyperlink{structhealth__data__packet_aa96359c2b7100e17905e02c7ab68ca59}{health\-\_\-data\-\_\-packet}, \hyperlink{structcomplete__scan__data__packet_abcda1952cf162c478c0c0e1c77eaf34d}{complete\-\_\-scan\-\_\-data\-\_\-packet}, and \hyperlink{structscan__data__packet_ac8b9b314239dd2663a7d2b98e5cd1c1a}{scan\-\_\-data\-\_\-packet}.
+
+\hypertarget{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}{\index{data\-\_\-packet@{data\-\_\-packet}!size@{size}}
+\index{size@{size}!data_packet@{data\-\_\-packet}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t data\-\_\-packet\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}
+
+
+Implemented in \hyperlink{structfirmware__data__packet_a3231148228aee555265b90ab30fea9ec}{firmware\-\_\-data\-\_\-packet}, \hyperlink{structinfo__data__packet_a8852d00d040d27ba824dc333a8f66f44}{info\-\_\-data\-\_\-packet}, \hyperlink{structhealth__data__packet_a85329a68f718099b6cefcf65fab75077}{health\-\_\-data\-\_\-packet}, \hyperlink{structcomplete__scan__data__packet_a2cc2871fdf24c03cd61f69acdec7cfb8}{complete\-\_\-scan\-\_\-data\-\_\-packet}, and \hyperlink{structscan__data__packet_a2678e9313e25c529abba1c1ba5ff3cba}{scan\-\_\-data\-\_\-packet}.
+
+\hypertarget{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}{\index{data\-\_\-packet@{data\-\_\-packet}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!data_packet@{data\-\_\-packet}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string data\-\_\-packet\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}
+
+
+Implemented in \hyperlink{structfirmware__data__packet_a1ff72c5345b4325fd955bb20c9860d89}{firmware\-\_\-data\-\_\-packet}, \hyperlink{structinfo__data__packet_a8c8b12d30a12b931740eb9c4cdc84315}{info\-\_\-data\-\_\-packet}, \hyperlink{structhealth__data__packet_a89e96e87bdcf2ecc52260a9d98e37995}{health\-\_\-data\-\_\-packet}, \hyperlink{structcomplete__scan__data__packet_a35bfe3a588c176e844eea1c60453617e}{complete\-\_\-scan\-\_\-data\-\_\-packet}, and \hyperlink{structscan__data__packet_aa8d4b795a798f413149c93760de6577f}{scan\-\_\-data\-\_\-packet}.
+
+\hypertarget{structdata__packet_af0795581f2d57a8c14a88009da37aee1}{\index{data\-\_\-packet@{data\-\_\-packet}!type@{type}}
+\index{type@{type}!data_packet@{data\-\_\-packet}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string data\-\_\-packet\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structdata__packet_af0795581f2d57a8c14a88009da37aee1}
+
+
+Implemented in \hyperlink{structfirmware__data__packet_a84cd6f60b9d5ef46ab5c4695d6de3d48}{firmware\-\_\-data\-\_\-packet}, \hyperlink{structinfo__data__packet_a85dfeae92d487d55b6d57e95e0c2b662}{info\-\_\-data\-\_\-packet}, \hyperlink{structhealth__data__packet_abc386acf1fcf42086f1fc791d2718dff}{health\-\_\-data\-\_\-packet}, \hyperlink{structcomplete__scan__data__packet_a144e017cea82952bda749de5692fdf6a}{complete\-\_\-scan\-\_\-data\-\_\-packet}, and \hyperlink{structscan__data__packet_a8401263b8927ca5a67ca23c8797cc67e}{scan\-\_\-data\-\_\-packet}.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__packets_8h}{edrplidar\-\_\-packets.\-h}\end{DoxyCompactItemize}

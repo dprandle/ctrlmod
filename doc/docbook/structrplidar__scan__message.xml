@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrplidar__scan__message">
+<title>rplidar_scan_message struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>complete_scan_data_packet scan_data</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t millis_timestamp</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structrplidar__scan__message_1aa402778fbabf5375a2a9f229bdb609b6">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structrplidar__scan__message_1a9df9e3d712a557d2f4abc3c90c5907b7">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrplidar__scan__message_1aa402778fbabf5375a2a9f229bdb609b6">
+                <title>virtual std::string rplidar_scan_message::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__scan__message_1a9df9e3d712a557d2f4abc3c90c5907b7">
+                <title>static std::string rplidar_scan_message::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

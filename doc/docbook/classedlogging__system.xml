@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedlogging__system">
+<title>edlogging_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edlogging__system_8h">&lt;edlogging_system.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedlogging__system_1ad42113de3431c1655171133d9737a911">edlogging_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedlogging__system_1a0a8901c2649e1d0341fcfb9131e64a72">~edlogging_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedlogging__system_1a393094d06bb5d15155be58286f0a5185">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedlogging__system_1ad959e6d140397e22953b2b7d1738456a">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classedlogging__system_1aa1d63881863c61a89e80aa8187b8d19d">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedlogging__system_1ac9b9dd8d391244acdea02666a56f8440">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="classedlogging__system_1ad1262db654a7d7acee6b217a09588170">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classedlogging__system_1a5839237a03a9902f0c2311fc3b664f7b">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedlogging__system_1aeda20580405c30db0bafa1c1048ac2c0">log_device_info</link> (
+<link linkend="structinfo__data__packet">info_data_packet</link> * data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedlogging__system_1a079628af32e4e6261e85464da64777cf">log_device_health</link> (
+<link linkend="structhealth__data__packet">health_data_packet</link> * data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedlogging__system_1a3e93c2dbfc697806fcd2d891ab00b066">log_device_firware</link> (
+<link linkend="structfirmware__data__packet">firmware_data_packet</link> * data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedlogging__system_1afa3138fa4cf4ef2975331adc11d08ff2">log_scan</link> (
+<link linkend="structcomplete__scan__data__packet">complete_scan_data_packet</link> * scand)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedlogging__system_1ac99d481aab10e2f0d0d5bb866ef41581">log_nav_message</link> (
+<link linkend="structnav__message">nav_message</link> * nmsg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedlogging__system_1ad42113de3431c1655171133d9737a911">
+                <title>edlogging_system::edlogging_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1a0a8901c2649e1d0341fcfb9131e64a72">
+                <title>virtual edlogging_system::~edlogging_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1a393094d06bb5d15155be58286f0a5185">
+                <title>void edlogging_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1ad959e6d140397e22953b2b7d1738456a">
+                <title>void edlogging_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1aa1d63881863c61a89e80aa8187b8d19d">
+                <title>bool edlogging_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1ac9b9dd8d391244acdea02666a56f8440">
+                <title>void edlogging_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1ad1262db654a7d7acee6b217a09588170">
+                <title>virtual std::string edlogging_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1a5839237a03a9902f0c2311fc3b664f7b">
+                <title>static std::string edlogging_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1aeda20580405c30db0bafa1c1048ac2c0">
+                <title>void edlogging_system::log_device_info (info_data_packet *data)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1a079628af32e4e6261e85464da64777cf">
+                <title>void edlogging_system::log_device_health (health_data_packet *data)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1a3e93c2dbfc697806fcd2d891ab00b066">
+                <title>void edlogging_system::log_device_firware (firmware_data_packet *data)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1afa3138fa4cf4ef2975331adc11d08ff2">
+                <title>void edlogging_system::log_scan (complete_scan_data_packet *scand)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedlogging__system_1ac99d481aab10e2f0d0d5bb866ef41581">
+                <title>void edlogging_system::log_nav_message (nav_message *nmsg)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

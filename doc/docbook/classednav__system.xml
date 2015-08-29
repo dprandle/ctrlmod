@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classednav__system">
+<title>ednav_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="ednavsystem_8h">&lt;ednavsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_nav_timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edi2c * m_i2c</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edpid_controller&lt; vec4 &gt; m_nav_pid</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vec2 m_resultant_vec</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_angle_to_last_vec</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t m_scaled_throttle</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_pl_dist_to_center</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_G_mult</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_bias_threshold_dist</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vec2 m_bias_vec</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_threshold_dropout</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classednav__system_1ab9f404145bc9a1c21f221da04e73726a">ednav_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classednav__system_1a81d991d9380e3cd80f0c65e8ccf35f40">~ednav_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classednav__system_1a98bc9b1cecf79a6ca7145e34a0273ca2">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classednav__system_1aa41383e31657188e5386b45d4dd7e4cd">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classednav__system_1ae90088e1c3a01fdeb0fc051af71e6d6a">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classednav__system_1a3a32c9f0ee4c089ac2e0eff9dae9a879">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classednav__system_1ae99f310450a1ec9a2e106db05d90f96a">interval</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classednav__system_1a6648f9731b39a60fbdef7c254aa341ac">set_interval</link> (
+double ms)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="classednav__system_1a3d604cf5dcff8c1c7d8c492e213c1e3c">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classednav__system_1a28e8f447138e00c50320044c85ae9bce">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classednav__system_1a9559b6f20265afd286988cf48ec84850">_process_pulse_light</link> (
+<link linkend="structpulsed__light__message">pulsed_light_message</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classednav__system_1a79e91ffbd27eabf6a8d582f13b5c0ba9">_process_nav_message</link> (
+<link linkend="structnav__message">nav_message</link> * nmsg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classednav__system_1a5772cb03650f67c377ec2d03bc335c40">_process_scan</link> (
+<link linkend="structrplidar__scan__message">rplidar_scan_message</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classednav__system_1ab9f404145bc9a1c21f221da04e73726a">
+                <title>ednav_system::ednav_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a81d991d9380e3cd80f0c65e8ccf35f40">
+                <title>ednav_system::~ednav_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a98bc9b1cecf79a6ca7145e34a0273ca2">
+                <title>void ednav_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1aa41383e31657188e5386b45d4dd7e4cd">
+                <title>void ednav_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1ae90088e1c3a01fdeb0fc051af71e6d6a">
+                <title>bool ednav_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a3a32c9f0ee4c089ac2e0eff9dae9a879">
+                <title>void ednav_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1ae99f310450a1ec9a2e106db05d90f96a">
+                <title>double ednav_system::interval ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a6648f9731b39a60fbdef7c254aa341ac">
+                <title>void ednav_system::set_interval (double ms)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a3d604cf5dcff8c1c7d8c492e213c1e3c">
+                <title>virtual std::string ednav_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a28e8f447138e00c50320044c85ae9bce">
+                <title>static std::string ednav_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a9559b6f20265afd286988cf48ec84850">
+                <title>bool ednav_system::_process_pulse_light (pulsed_light_message *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a79e91ffbd27eabf6a8d582f13b5c0ba9">
+                <title>bool ednav_system::_process_nav_message (nav_message *nmsg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classednav__system_1a5772cb03650f67c377ec2d03bc335c40">
+                <title>bool ednav_system::_process_scan (rplidar_scan_message *msg)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedrplidar__system">
+<title>edrplidar_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__system_8h">&lt;edrplidar_system.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1f">ExchangeType</link>{<link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa869119dd4a3be62b03f4b5919bec0daf">Scan</link>, <link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fab6bc43008cfd5ed1d2e5ba305efde764">Info</link>, <link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa32c68bd753b7cd05dc13ba9d0fdeb90f">Health</link>, <link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa01fc0219e454b92ab9e8c842bfa57d4a">Reset</link>, <link linkend="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1faf502cb7101cd1947fdd6c13bcd3f132c">None</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>eduart * m_uart</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_wait_timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_timeout_timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_error_timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_rec_index</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_scan_index</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_rec_descript</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_rec_start_scan</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ExchangeType m_current_type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; descriptor_packet * &gt; m_desc_packets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; data_packet * &gt; m_data_packets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; scan_data_packet &gt; m_current_scan</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string firm_message</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedrplidar__system_1a3189e92f56cd720a53f0c53c65f3fb53">edrplidar_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedrplidar__system_1aab380eebadbfcd30ae16a4162ce17272">~edrplidar_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedrplidar__system_1aeac91046ef78f68cb9463ad216719def">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedrplidar__system_1ab8e9f26bd1f1a8501b36d6eaedd44ced">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1aa6d1766212432f586944027b0d5b0950">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedrplidar__system_1aeaa11dbbb634e7392629982a57868c62">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="classedrplidar__system_1ae777072e4712d7bed997032842f2dad0">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classedrplidar__system_1a8aae91a8f5522b8975617ad172c9f663">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1a4780aae99366654694ac97e57b94ddbe">startScan</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1aa4b0dcc8db62b695eaaa7f3f076d6958">forceScan</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1adb1b55f6f227dc7c1b8ea783be44aab5">stopScan</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1abb48bf173a5590649f069b7340cdb110">reset</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1a35ce6a26a2d1370d7529953cc875cad3">requestInfo</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1aac73b78f69b44c15fdc168a5ed8543ee">requestHealth</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedrplidar__system_1a0496890fada5433d08a036163d7903ed">_handle_byte</link> (
+uint8_t byte)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedrplidar__system_1ae4de55696dea750e65055b28f00d2313">_reset_state</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedrplidar__system_1a6ba9283956f343c03ea66aa17cec8f85">_check_packet_for_scan_start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1f">
+               <title>enum ExchangeType </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa869119dd4a3be62b03f4b5919bec0daf">
+                            <term>Scan</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fab6bc43008cfd5ed1d2e5ba305efde764">
+                            <term>Info</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa32c68bd753b7cd05dc13ba9d0fdeb90f">
+                            <term>Health</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1fa01fc0219e454b92ab9e8c842bfa57d4a">
+                            <term>Reset</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedrplidar__system_1ab0690f6ca603a858d69080303761cd1faf502cb7101cd1947fdd6c13bcd3f132c">
+                            <term>None</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 23 of file edrplidar_system.h
+                    <programlisting>
+{
+Scan, 
+Info, 
+Health, 
+Reset, 
+None, 
+}ExchangeType;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedrplidar__system_1a3189e92f56cd720a53f0c53c65f3fb53">
+                <title>edrplidar_system::edrplidar_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aab380eebadbfcd30ae16a4162ce17272">
+                <title>edrplidar_system::~edrplidar_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aeac91046ef78f68cb9463ad216719def">
+                <title>void edrplidar_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1ab8e9f26bd1f1a8501b36d6eaedd44ced">
+                <title>void edrplidar_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aa6d1766212432f586944027b0d5b0950">
+                <title>bool edrplidar_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aeaa11dbbb634e7392629982a57868c62">
+                <title>void edrplidar_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1ae777072e4712d7bed997032842f2dad0">
+                <title>std::string edrplidar_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1a8aae91a8f5522b8975617ad172c9f663">
+                <title>static std::string edrplidar_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1a4780aae99366654694ac97e57b94ddbe">
+                <title>bool edrplidar_system::startScan ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aa4b0dcc8db62b695eaaa7f3f076d6958">
+                <title>bool edrplidar_system::forceScan ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1adb1b55f6f227dc7c1b8ea783be44aab5">
+                <title>bool edrplidar_system::stopScan ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1abb48bf173a5590649f069b7340cdb110">
+                <title>bool edrplidar_system::reset ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1a35ce6a26a2d1370d7529953cc875cad3">
+                <title>bool edrplidar_system::requestInfo ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1aac73b78f69b44c15fdc168a5ed8543ee">
+                <title>bool edrplidar_system::requestHealth ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1a0496890fada5433d08a036163d7903ed">
+                <title>void edrplidar_system::_handle_byte (uint8_t byte)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1ae4de55696dea750e65055b28f00d2313">
+                <title>void edrplidar_system::_reset_state ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedrplidar__system_1a6ba9283956f343c03ea66aa17cec8f85">
+                <title>bool edrplidar_system::_check_packet_for_scan_start ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

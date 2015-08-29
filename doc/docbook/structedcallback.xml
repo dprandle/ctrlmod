@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedcallback">
+<title>edcallback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edcallback_8h">&lt;edcallback.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structedcallback_1a42cabca3099d69b2960d70bdf14c013c">~edcallback</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="structedcallback_1ab8003af2178e58a94f53370b1f48a313">exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedcallback_1a42cabca3099d69b2960d70bdf14c013c">
+                <title>virtual edcallback::~edcallback ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structedcallback_1ab8003af2178e58a94f53370b1f48a313">
+                <title>virtual void edcallback::exec ()=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

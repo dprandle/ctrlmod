@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedpl__system">
+<title>edpl_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edplsystem_8h">&lt;edplsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedpl__system_1_1pl__gpio">edpl_system::pl_gpio</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; uint32_t, <link linkend="structedpl__system_1_1pl__gpio">pl_gpio</link> * &gt;  <link linkend="classedpl__system_1ac6e43a24e97887c11e2e4d7c54294bc4">plmap</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>plmap m_pl_sensors</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * msgTimer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedpl__system_1a346231e6092910c7dfd6dd962ee25bc5">edpl_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedpl__system_1a94d6ed134e1abd43c4af6ae3d632f462">~edpl_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structedpl__system_1_1pl__gpio">pl_gpio</link> * <link linkend="classedpl__system_1ae42b9824a6d9626accbd234375f79c09">add_pl</link> (
+uint32_t mraa_pin, double c_offset, const <link linkend="nsmath_8h_1a14bb8a4a0fefc0be4fae32fc59a07362">vec3</link> &amp; pos_offset, const <link linkend="nsmath_8h_1aa07476c74d8e3787a771c94c92354496">quat</link> &amp; orient_offset)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structedpl__system_1_1pl__gpio">pl_gpio</link> * <link linkend="classedpl__system_1a4a4369822031f0f4523abc12125d92d1">get_pl</link> (
+uint32_t mraa_pin)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpl__system_1ab1e65466442581ce851bec4d4bd40459">rm_pl</link> (
+uint32_t mraa_pin)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedpl__system_1a9a32ffdff7b99e9ad1f6562f508cd12f">pl_pin_taken</link> (
+uint32_t mraa_pin)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpl__system_1a792001c061fe40e388d7c5aaf428f389">pl_set_pos</link> (
+uint32_t mraa_pin, const <link linkend="nsmath_8h_1a14bb8a4a0fefc0be4fae32fc59a07362">vec3</link> &amp; pos_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpl__system_1a8e7eef161b591dd20b5e23fd246ac3f4">pl_set_orientation</link> (
+uint32_t mraa_pin, const <link linkend="nsmath_8h_1aa07476c74d8e3787a771c94c92354496">quat</link> &amp; orient_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpl__system_1a54044ef9b7b84731ada0b6ec425225ea">pl_set_cal_offset</link> (
+uint32_t mraa_pin, double offset)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedpl__system_1a4d9fae9e10da9cae1f1e7a00e751c933">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedpl__system_1adb2b906b466251dc513fb9d669a19e99">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classedpl__system_1a4aae16b8695eec7c54ccfaecee9c535c">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedpl__system_1ae84af8dea7c53fe3219e7cde15ddd43a">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="classedpl__system_1ab758bc4300926af08e47e0c8b655d8fc">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classedpl__system_1a3b3de76e3cf9c7a34cfe17a7d65fbad4">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedpl__system_1ac6e43a24e97887c11e2e4d7c54294bc4">
+                <title>typedef std::map&lt;uint32_t, pl_gpio*&gt; edpl_system::plmap</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a346231e6092910c7dfd6dd962ee25bc5">
+                <title>edpl_system::edpl_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a94d6ed134e1abd43c4af6ae3d632f462">
+                <title>edpl_system::~edpl_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1ae42b9824a6d9626accbd234375f79c09">
+                <title>edpl_system::pl_gpio * edpl_system::add_pl (uint32_t mraa_pin, double c_offset=0.0, const vec3 &amp;pos_offset=vec3(), const quat &amp;orient_offset=quat())</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a4a4369822031f0f4523abc12125d92d1">
+                <title>edpl_system::pl_gpio * edpl_system::get_pl (uint32_t mraa_pin)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1ab1e65466442581ce851bec4d4bd40459">
+                <title>void edpl_system::rm_pl (uint32_t mraa_pin)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a9a32ffdff7b99e9ad1f6562f508cd12f">
+                <title>bool edpl_system::pl_pin_taken (uint32_t mraa_pin)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a792001c061fe40e388d7c5aaf428f389">
+                <title>void edpl_system::pl_set_pos (uint32_t mraa_pin, const vec3 &amp;pos_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a8e7eef161b591dd20b5e23fd246ac3f4">
+                <title>void edpl_system::pl_set_orientation (uint32_t mraa_pin, const quat &amp;orient_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a54044ef9b7b84731ada0b6ec425225ea">
+                <title>void edpl_system::pl_set_cal_offset (uint32_t mraa_pin, double offset)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a4d9fae9e10da9cae1f1e7a00e751c933">
+                <title>void edpl_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1adb2b906b466251dc513fb9d669a19e99">
+                <title>void edpl_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a4aae16b8695eec7c54ccfaecee9c535c">
+                <title>bool edpl_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1ae84af8dea7c53fe3219e7cde15ddd43a">
+                <title>void edpl_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1ab758bc4300926af08e47e0c8b655d8fc">
+                <title>std::string edpl_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpl__system_1a3b3de76e3cf9c7a34cfe17a7d65fbad4">
+                <title>static std::string edpl_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

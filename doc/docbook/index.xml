@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>edison ctrlmod</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespacemraa.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="structCommand.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structcommand__wait__callback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structcomplete__scan__data__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdata__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structeduart_1_1DataFormat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdescriptor__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdevice__health__descriptor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdevice__health__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdevice__info__descriptor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structdevice__info__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedcallback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedcomm__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedi2c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedimu__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedlogging__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedmctrl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedmessage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedmessage__dispatch.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classednav__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedpid__controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedpl__callback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedpl__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedrplidar__system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedsocket.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedsystem.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedthreaded__fd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classedtimer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedtimer__callback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classeduart.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedthreaded__fd_1_1Error.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structfirmware__data__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structforce__scan__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structhealth__data__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structinfo__data__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structinstruction__callback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnav__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnav__system__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structNSBoundingBox.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnsmat2.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnsmat3.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnsmat4.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structnsquat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structNSVec2.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structNSVec3.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structNSVec4.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedpid__controller_1_1output__range.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedpl__system_1_1pl__gpio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structpulsed__light__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrequest__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structreset__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__error__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__firmware__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__health__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__info__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structrplidar__scan__message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structscan__data__packet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structscan__descriptor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structstart__scan__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structstop__scan__request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structwait__ready__callback.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structedthreaded__fd_1_1WriteVal.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="edcallback_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edcomm__system_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edglobal_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edi2c_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edimu__system_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edlogging__system_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmctrl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmessage_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmessage__dispatch_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ednavsystem_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edpid__controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edplsystem_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edrplidar__packets_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edrplidar__system_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edsocket_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edsystem_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edthreaded__fd_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edtimer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="eduart_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edutility_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsmat2_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsmat3_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsmat4_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsmath_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsquat_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsvec2_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsvec3_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsvec4_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edcallback_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edcomm__system_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edi2c_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edimu__system_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edlogging__system_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmctrl_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmessage_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edmessage__dispatch_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ednavsystem_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edplsystem_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edrplidar__packets_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edrplidar__system_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edsocket_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edthreaded__fd_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edtimer_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="eduart_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="edutility_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="nsmath_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_d44c64559bbebec7f509842c48db8b23.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

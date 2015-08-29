@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedtimer__callback">
+<title>edtimer_callback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edcallback_8h">&lt;edcallback.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

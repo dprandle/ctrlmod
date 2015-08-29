@@ -1,0 +1,148 @@
+\hypertarget{edutility_8h}{\section{/home/dprandle/\-Documents/code/ctrlmod/include/edutility.h File Reference}
+\label{edutility_8h}\index{/home/dprandle/\-Documents/code/ctrlmod/include/edutility.\-h@{/home/dprandle/\-Documents/code/ctrlmod/include/edutility.\-h}}
+}
+{\ttfamily \#include $<$edglobal.\-h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{edutility_8h_afa93c148a6e310879cfc5cda6c627ef3}{hash\-\_\-id} (const std\-::string \&to\-\_\-hash)
+\item 
+bool \hyperlink{edutility_8h_a6c4558627ccdd5e0b155ccc9f7422d6f}{log\-\_\-message} (const std\-::string \&msg, const std\-::string \&fname=\char`\"{}status.\-log\char`\"{}, bool \hyperlink{edutility_8h_a836c32ccbd0aa9cbb0094c120c62e4d8}{timestamp}=true)
+\item 
+void \hyperlink{edutility_8h_a0a7091e51d354cee3b71b3b883590e84}{cprint} (const std\-::string \&str)
+\item 
+std\-::string \hyperlink{edutility_8h_a836c32ccbd0aa9cbb0094c120c62e4d8}{timestamp} ()
+\item 
+void \hyperlink{edutility_8h_a9277dedbdaa8ed78894c6bb8133d6793}{delay} (double ms)
+\item 
+std\-::string \hyperlink{edutility_8h_aa0e2d86c6b854e7b23af61b22b98fd5f}{to\-\_\-hex} (uint8\-\_\-t byte)
+\item 
+std\-::string \hyperlink{edutility_8h_aca1ee116d8e448c90389d9425c4e9615}{to\-\_\-hex} (int16\-\_\-t two\-\_\-bytes)
+\item 
+std\-::string \hyperlink{edutility_8h_ae0b03fb1468a25d30b19e98ca5e9e080}{to\-\_\-hex} (uint16\-\_\-t two\-\_\-bytes)
+\item 
+std\-::string \hyperlink{edutility_8h_a567ff20d29b9511a724e8d222e9179de}{to\-\_\-hex} (int32\-\_\-t four\-\_\-bytes)
+\item 
+std\-::string \hyperlink{edutility_8h_a3b6326de6f7c085df29023c28e6395fd}{to\-\_\-hex} (uint32\-\_\-t four\-\_\-bytes)
+\item 
+void \hyperlink{edutility_8h_a3223656bda66f73b0378600ff4d630dd}{zero\-\_\-buf} (uint8\-\_\-t $\ast$buf, uint32\-\_\-t size)
+\item 
+void \hyperlink{edutility_8h_ae35cd088166ac125a73211b755e06a5d}{copy\-\_\-buf} (const uint8\-\_\-t $\ast$src, uint8\-\_\-t $\ast$dest, uint32\-\_\-t size, uint32\-\_\-t src\-\_\-offset=0, uint32\-\_\-t dest\-\_\-offset=0)
+\begin{DoxyCompactList}\small\item\em Copy buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{edutility_8h_ae35cd088166ac125a73211b755e06a5d}{\index{edutility.\-h@{edutility.\-h}!copy\-\_\-buf@{copy\-\_\-buf}}
+\index{copy\-\_\-buf@{copy\-\_\-buf}!edutility.h@{edutility.\-h}}
+\subsubsection[{copy\-\_\-buf}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-buf (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t $\ast$}]{src, }
+\item[{uint8\-\_\-t $\ast$}]{dest, }
+\item[{uint32\-\_\-t}]{size, }
+\item[{uint32\-\_\-t}]{src\-\_\-offset = {\ttfamily 0}, }
+\item[{uint32\-\_\-t}]{dest\-\_\-offset = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_ae35cd088166ac125a73211b755e06a5d}
+
+
+Copy buffer. 
+
+Copy the source buffer to destination buffer with possible offsets in each buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The source buffer \\
+\hline
+{\em dest} & The destination buffer \\
+\hline
+{\em size} & Amount of items to copy \\
+\hline
+{\em src\-\_\-offset} & Offset in to the source buffer (defaults to 0) \\
+\hline
+{\em dest\-\_\-offset} & Offset in to the destination buffer (defaults to 0) \\
+\hline
+\end{DoxyParams}
+\hypertarget{edutility_8h_a0a7091e51d354cee3b71b3b883590e84}{\index{edutility.\-h@{edutility.\-h}!cprint@{cprint}}
+\index{cprint@{cprint}!edutility.h@{edutility.\-h}}
+\subsubsection[{cprint}]{\setlength{\rightskip}{0pt plus 5cm}void cprint (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a0a7091e51d354cee3b71b3b883590e84}
+\hypertarget{edutility_8h_a9277dedbdaa8ed78894c6bb8133d6793}{\index{edutility.\-h@{edutility.\-h}!delay@{delay}}
+\index{delay@{delay}!edutility.h@{edutility.\-h}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+\item[{double}]{ms}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a9277dedbdaa8ed78894c6bb8133d6793}
+\hypertarget{edutility_8h_afa93c148a6e310879cfc5cda6c627ef3}{\index{edutility.\-h@{edutility.\-h}!hash\-\_\-id@{hash\-\_\-id}}
+\index{hash\-\_\-id@{hash\-\_\-id}!edutility.h@{edutility.\-h}}
+\subsubsection[{hash\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t hash\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{to\-\_\-hash}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_afa93c148a6e310879cfc5cda6c627ef3}
+\hypertarget{edutility_8h_a6c4558627ccdd5e0b155ccc9f7422d6f}{\index{edutility.\-h@{edutility.\-h}!log\-\_\-message@{log\-\_\-message}}
+\index{log\-\_\-message@{log\-\_\-message}!edutility.h@{edutility.\-h}}
+\subsubsection[{log\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}bool log\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg, }
+\item[{const std\-::string \&}]{fname = {\ttfamily \char`\"{}status.log\char`\"{}}, }
+\item[{bool}]{timestamp = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a6c4558627ccdd5e0b155ccc9f7422d6f}
+\hypertarget{edutility_8h_a836c32ccbd0aa9cbb0094c120c62e4d8}{\index{edutility.\-h@{edutility.\-h}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!edutility.h@{edutility.\-h}}
+\subsubsection[{timestamp}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a836c32ccbd0aa9cbb0094c120c62e4d8}
+\hypertarget{edutility_8h_aa0e2d86c6b854e7b23af61b22b98fd5f}{\index{edutility.\-h@{edutility.\-h}!to\-\_\-hex@{to\-\_\-hex}}
+\index{to\-\_\-hex@{to\-\_\-hex}!edutility.h@{edutility.\-h}}
+\subsubsection[{to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{byte}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_aa0e2d86c6b854e7b23af61b22b98fd5f}
+\hypertarget{edutility_8h_aca1ee116d8e448c90389d9425c4e9615}{\index{edutility.\-h@{edutility.\-h}!to\-\_\-hex@{to\-\_\-hex}}
+\index{to\-\_\-hex@{to\-\_\-hex}!edutility.h@{edutility.\-h}}
+\subsubsection[{to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{int16\-\_\-t}]{two\-\_\-bytes}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_aca1ee116d8e448c90389d9425c4e9615}
+\hypertarget{edutility_8h_ae0b03fb1468a25d30b19e98ca5e9e080}{\index{edutility.\-h@{edutility.\-h}!to\-\_\-hex@{to\-\_\-hex}}
+\index{to\-\_\-hex@{to\-\_\-hex}!edutility.h@{edutility.\-h}}
+\subsubsection[{to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{two\-\_\-bytes}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_ae0b03fb1468a25d30b19e98ca5e9e080}
+\hypertarget{edutility_8h_a567ff20d29b9511a724e8d222e9179de}{\index{edutility.\-h@{edutility.\-h}!to\-\_\-hex@{to\-\_\-hex}}
+\index{to\-\_\-hex@{to\-\_\-hex}!edutility.h@{edutility.\-h}}
+\subsubsection[{to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{four\-\_\-bytes}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a567ff20d29b9511a724e8d222e9179de}
+\hypertarget{edutility_8h_a3b6326de6f7c085df29023c28e6395fd}{\index{edutility.\-h@{edutility.\-h}!to\-\_\-hex@{to\-\_\-hex}}
+\index{to\-\_\-hex@{to\-\_\-hex}!edutility.h@{edutility.\-h}}
+\subsubsection[{to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{four\-\_\-bytes}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a3b6326de6f7c085df29023c28e6395fd}
+\hypertarget{edutility_8h_a3223656bda66f73b0378600ff4d630dd}{\index{edutility.\-h@{edutility.\-h}!zero\-\_\-buf@{zero\-\_\-buf}}
+\index{zero\-\_\-buf@{zero\-\_\-buf}!edutility.h@{edutility.\-h}}
+\subsubsection[{zero\-\_\-buf}]{\setlength{\rightskip}{0pt plus 5cm}void zero\-\_\-buf (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buf, }
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{edutility_8h_a3223656bda66f73b0378600ff4d630dd}

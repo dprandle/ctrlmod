@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedpl__system_1_1pl__gpio">
+<title>edpl_system::pl_gpio struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edplsystem_8h">&lt;edplsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>mraa::Gpio * pin</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vec3 pos</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>quat orient</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double cal_offset</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool meas_ready</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double sum_dist</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t mraa_pin_num</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t meas_count</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structedpl__system_1_1pl__gpio_1ab3b3d183578afe5306c88e5aa617fbdf">pl_gpio</link> (
+uint32_t mraa_pin, double calibrate_offset, const <link linkend="nsmath_8h_1a14bb8a4a0fefc0be4fae32fc59a07362">vec3</link> &amp; poffset, const <link linkend="nsmath_8h_1aa07476c74d8e3787a771c94c92354496">quat</link> &amp; orient_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structedpl__system_1_1pl__gpio_1a1aab8e250342880162d913b58b0ca4a3">~pl_gpio</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="structedpl__system_1_1pl__gpio_1a090584cfce1edab68099f1a10e3cc63b">isr</link> (
+void * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedpl__system_1_1pl__gpio_1ab3b3d183578afe5306c88e5aa617fbdf">
+                <title>edpl_system::pl_gpio::pl_gpio (uint32_t mraa_pin, double calibrate_offset=0.0, const vec3 &amp;poffset=vec3(), const quat &amp;orient_=quat())</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structedpl__system_1_1pl__gpio_1a1aab8e250342880162d913b58b0ca4a3">
+                <title>edpl_system::pl_gpio::~pl_gpio ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structedpl__system_1_1pl__gpio_1a090584cfce1edab68099f1a10e3cc63b">
+                <title>void edpl_system::pl_gpio::isr (void *)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedsocket">
+<title>edsocket class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edsocket_8h">&lt;edsocket.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedsocket_1ac3ad6e1e73a61627ee30a35d5e3423d1">edsocket</link> (
+uint32_t socket_fd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedsocket_1abdf101da378e31165dfcddfd6e6c9177">~edsocket</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="classedsocket_1a37f457ddba496eac9290022b8bd31e0b">_raw_read</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="classedsocket_1a33f81750a282209d39cd3f01214d45e9">_raw_write</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedsocket_1ac3ad6e1e73a61627ee30a35d5e3423d1">
+                <title>edsocket::edsocket (uint32_t socket_fd)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsocket_1abdf101da378e31165dfcddfd6e6c9177">
+                <title>edsocket::~edsocket ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsocket_1a37f457ddba496eac9290022b8bd31e0b">
+                <title>int32_t edsocket::_raw_read (uint8_t *buffer, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsocket_1a33f81750a282209d39cd3f01214d45e9">
+                <title>int32_t edsocket::_raw_write (uint8_t *buffer, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

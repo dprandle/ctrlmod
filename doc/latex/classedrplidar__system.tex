@@ -1,0 +1,213 @@
+\hypertarget{classedrplidar__system}{\section{edrplidar\-\_\-system Class Reference}
+\label{classedrplidar__system}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-system.\-h$>$}
+
+Inheritance diagram for edrplidar\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedrplidar__system}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1f}{Exchange\-Type} \{ \\*
+\hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa869119dd4a3be62b03f4b5919bec0daf}{Scan}, 
+\hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fab6bc43008cfd5ed1d2e5ba305efde764}{Info}, 
+\hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa32c68bd753b7cd05dc13ba9d0fdeb90f}{Health}, 
+\hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa01fc0219e454b92ab9e8c842bfa57d4a}{Reset}, 
+\\*
+\hyperlink{classedrplidar__system_ab0690f6ca603a858d69080303761cd1faf502cb7101cd1947fdd6c13bcd3f132c}{None}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedrplidar__system_a3189e92f56cd720a53f0c53c65f3fb53}{edrplidar\-\_\-system} ()
+\item 
+\hyperlink{classedrplidar__system_aab380eebadbfcd30ae16a4162ce17272}{$\sim$edrplidar\-\_\-system} ()
+\item 
+void \hyperlink{classedrplidar__system_aeac91046ef78f68cb9463ad216719def}{init} ()
+\item 
+void \hyperlink{classedrplidar__system_ab8e9f26bd1f1a8501b36d6eaedd44ced}{release} ()
+\item 
+bool \hyperlink{classedrplidar__system_aa6d1766212432f586944027b0d5b0950}{process} (\hyperlink{structedmessage}{edmessage} $\ast$msg)
+\item 
+void \hyperlink{classedrplidar__system_aeaa11dbbb634e7392629982a57868c62}{update} ()
+\item 
+std\-::string \hyperlink{classedrplidar__system_ae777072e4712d7bed997032842f2dad0}{typestr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classedrplidar__system_a8aae91a8f5522b8975617ad172c9f663}{Type\-String} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classedrplidar__system_a4780aae99366654694ac97e57b94ddbe}{start\-Scan} ()
+\item 
+bool \hyperlink{classedrplidar__system_aa4b0dcc8db62b695eaaa7f3f076d6958}{force\-Scan} ()
+\item 
+bool \hyperlink{classedrplidar__system_adb1b55f6f227dc7c1b8ea783be44aab5}{stop\-Scan} ()
+\item 
+bool \hyperlink{classedrplidar__system_abb48bf173a5590649f069b7340cdb110}{reset} ()
+\item 
+bool \hyperlink{classedrplidar__system_a35ce6a26a2d1370d7529953cc875cad3}{request\-Info} ()
+\item 
+bool \hyperlink{classedrplidar__system_aac73b78f69b44c15fdc168a5ed8543ee}{request\-Health} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1f}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Exchange\-Type@{Exchange\-Type}}
+\index{Exchange\-Type@{Exchange\-Type}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{Exchange\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edrplidar\-\_\-system\-::\-Exchange\-Type}}}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Scan@{Scan}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Scan@{Scan}}\item[{\em 
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa869119dd4a3be62b03f4b5919bec0daf}{Scan}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa869119dd4a3be62b03f4b5919bec0daf}
+}]\index{Info@{Info}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Info@{Info}}\item[{\em 
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fab6bc43008cfd5ed1d2e5ba305efde764}{Info}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fab6bc43008cfd5ed1d2e5ba305efde764}
+}]\index{Health@{Health}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Health@{Health}}\item[{\em 
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa32c68bd753b7cd05dc13ba9d0fdeb90f}{Health}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa32c68bd753b7cd05dc13ba9d0fdeb90f}
+}]\index{Reset@{Reset}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Reset@{Reset}}\item[{\em 
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa01fc0219e454b92ab9e8c842bfa57d4a}{Reset}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1fa01fc0219e454b92ab9e8c842bfa57d4a}
+}]\index{None@{None}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!None@{None}}\item[{\em 
+\hypertarget{classedrplidar__system_ab0690f6ca603a858d69080303761cd1faf502cb7101cd1947fdd6c13bcd3f132c}{None}\label{classedrplidar__system_ab0690f6ca603a858d69080303761cd1faf502cb7101cd1947fdd6c13bcd3f132c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedrplidar__system_a3189e92f56cd720a53f0c53c65f3fb53}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!edrplidar\-\_\-system@{edrplidar\-\_\-system}}
+\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{edrplidar\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edrplidar\-\_\-system\-::edrplidar\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedrplidar__system_a3189e92f56cd720a53f0c53c65f3fb53}
+\hypertarget{classedrplidar__system_aab380eebadbfcd30ae16a4162ce17272}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!$\sim$edrplidar\-\_\-system@{$\sim$edrplidar\-\_\-system}}
+\index{$\sim$edrplidar\-\_\-system@{$\sim$edrplidar\-\_\-system}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{$\sim$edrplidar\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edrplidar\-\_\-system\-::$\sim$edrplidar\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedrplidar__system_aab380eebadbfcd30ae16a4162ce17272}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedrplidar__system_aa4b0dcc8db62b695eaaa7f3f076d6958}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!force\-Scan@{force\-Scan}}
+\index{force\-Scan@{force\-Scan}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{force\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::force\-Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_aa4b0dcc8db62b695eaaa7f3f076d6958}
+\hypertarget{classedrplidar__system_aeac91046ef78f68cb9463ad216719def}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!init@{init}}
+\index{init@{init}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void edrplidar\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedrplidar__system_aeac91046ef78f68cb9463ad216719def}
+
+
+Implements \hyperlink{classedsystem_a4c70e3568064941607fb220aea826a56}{edsystem}.
+
+\hypertarget{classedrplidar__system_aa6d1766212432f586944027b0d5b0950}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!process@{process}}
+\index{process@{process}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf edmessage} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedrplidar__system_aa6d1766212432f586944027b0d5b0950}
+
+
+Implements \hyperlink{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{edsystem}.
+
+\hypertarget{classedrplidar__system_ab8e9f26bd1f1a8501b36d6eaedd44ced}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!release@{release}}
+\index{release@{release}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void edrplidar\-\_\-system\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedrplidar__system_ab8e9f26bd1f1a8501b36d6eaedd44ced}
+
+
+Implements \hyperlink{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{edsystem}.
+
+\hypertarget{classedrplidar__system_aac73b78f69b44c15fdc168a5ed8543ee}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!request\-Health@{request\-Health}}
+\index{request\-Health@{request\-Health}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{request\-Health}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::request\-Health (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_aac73b78f69b44c15fdc168a5ed8543ee}
+\hypertarget{classedrplidar__system_a35ce6a26a2d1370d7529953cc875cad3}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!request\-Info@{request\-Info}}
+\index{request\-Info@{request\-Info}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{request\-Info}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::request\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_a35ce6a26a2d1370d7529953cc875cad3}
+\hypertarget{classedrplidar__system_abb48bf173a5590649f069b7340cdb110}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!reset@{reset}}
+\index{reset@{reset}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_abb48bf173a5590649f069b7340cdb110}
+\hypertarget{classedrplidar__system_a4780aae99366654694ac97e57b94ddbe}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!start\-Scan@{start\-Scan}}
+\index{start\-Scan@{start\-Scan}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{start\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::start\-Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_a4780aae99366654694ac97e57b94ddbe}
+\hypertarget{classedrplidar__system_adb1b55f6f227dc7c1b8ea783be44aab5}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!stop\-Scan@{stop\-Scan}}
+\index{stop\-Scan@{stop\-Scan}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{stop\-Scan}]{\setlength{\rightskip}{0pt plus 5cm}bool edrplidar\-\_\-system\-::stop\-Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedrplidar__system_adb1b55f6f227dc7c1b8ea783be44aab5}
+\hypertarget{classedrplidar__system_ae777072e4712d7bed997032842f2dad0}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!typestr@{typestr}}
+\index{typestr@{typestr}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{typestr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string edrplidar\-\_\-system\-::typestr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classedrplidar__system_ae777072e4712d7bed997032842f2dad0}
+
+
+Implements \hyperlink{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{edsystem}.
+
+\hypertarget{classedrplidar__system_a8aae91a8f5522b8975617ad172c9f663}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!Type\-String@{Type\-String}}
+\index{Type\-String@{Type\-String}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{Type\-String}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string edrplidar\-\_\-system\-::\-Type\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classedrplidar__system_a8aae91a8f5522b8975617ad172c9f663}
+\hypertarget{classedrplidar__system_aeaa11dbbb634e7392629982a57868c62}{\index{edrplidar\-\_\-system@{edrplidar\-\_\-system}!update@{update}}
+\index{update@{update}!edrplidar_system@{edrplidar\-\_\-system}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void edrplidar\-\_\-system\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedrplidar__system_aeaa11dbbb634e7392629982a57868c62}
+
+
+Implements \hyperlink{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{edsystem}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__system_8h}{edrplidar\-\_\-system.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edrplidar__system_8cpp}{edrplidar\-\_\-system.\-cpp}\end{DoxyCompactItemize}

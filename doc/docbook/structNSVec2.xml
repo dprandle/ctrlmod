@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structNSVec2">
+<title>NSVec2 struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="nsvec2_8h">&lt;nsvec2.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T data[2]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T x</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T y</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T w</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T h</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T s</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T t</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T u</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T v</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union NSVec2::@42 @43</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structNSVec2_1aba39f99d2f7f126f02512e813440e6fb">NSVec2</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pCopy)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structNSVec2_1a723d1616a053702d63341f752ac1cd16">NSVec2</link> (
+const T &amp; pInit)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structNSVec2_1a912fe4d0af0ab01f062e880d553da560">NSVec2</link> (
+const T &amp; pX, const T &amp; pY)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ad6375c930b5c0fa261ab6f28054e8772">abs</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1a845b9ef0c25e48729d7309d7303f0ff0">angle</link> (
+bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1add93ec4119c90a70bb51610110b6578b">angleTo</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pVec, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a233463b6f7491a9c528598b45e3cec9e">ceil</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ad51aa1f5ec4e65904cc4299d18005058">clamp</link> (
+const T &amp; pMin, const T &amp; pMax)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1aba94e99d202ba1dbc979794bd4529b8a">distanceTo</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pVec)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ab0df03d6df50d32884eece3ca5ce1664">floor</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ad09449f910b1f6eafcde676824f404da">fract</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1abb5871b6bd583ec63305eaeb307dc22e">length</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1a2051a5ed908c2a9e31da54882aadd07a">lengthSq</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ada858524157467c103e8a3a955e343f1">lerp</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; vec, const T2 &amp; scalingFactor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1a5d4653fc279e66b989e2160e2aebd25d">min</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a61fe535f93d85752637d99c1073cb232">minimize</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1a57fd7b8ac14ec79bc5ced6f6de3c5307">max</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a4c1d458d15fec5f0268865fc4020e41f">maximize</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a5a31bfa6e07ab97689eece4290e72a6e">normalize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a3d1d91c1c65aeffb93ba54784e44a21b">polar</link> (
+bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a3086e2c38c74b80b325fdc18254691c5">projectOn</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; vec)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a955b1873c709c04452ce7301b521e2d5">projectOnPlane</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; planeNormal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a0a6afa4e3d2c3fe6a1b60e3bb7e0f206">reflect</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; normal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a81915be34d888fd6b5581334d28627bd">rotate</link> (
+const T2 &amp; angle_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a4701680eaaacd9e85435655df4734021">round</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a45592c0ad2bd942ee4f5b1871424dcac">roundToZero</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1aca8c80585471e69dd3905c5a014ab699">scalingFrom</link> (
+const <link linkend="structnsmat2">nsmat2</link>&lt; T &gt; &amp; transform2d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a1f4ea1874faaa10c14ab8b5c0617ea1d">scalingFrom</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; transform2d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a6c8e0628862782510eeb996cc7734d06">set</link> (
+const T &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a57ca9e7d5d2001217de0993b70b6caf5">set</link> (
+const T &amp; pX, const T &amp; pY)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1af8026babdaef5b24945f3e45e10ce69d">setFromPolar</link> (
+const T &amp; pMag, T angle_, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a1b26ec6cef655c66c9c0faa1bb454831">setFromPolar</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pVec, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ab20a567f7413f65cf90e6b85b5348959">setLength</link> (
+const T &amp; len)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1adf3e56477642d9c7f9da4981c11759b6">translationFrom</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; transform2d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="structNSVec2_1aa7a2eeb1116a475bfca9d5720b03f5e0">toString</link> (
+bool pPolar)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1affc96246dd111f33fd5e03329501e786">operator+</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a42e9ae0c953ff8ce06f2c812262d3add">operator-</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="structNSVec2_1a47ab82793314ed9b1e13a78a327902af">operator*</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat2">nsmat2</link>&lt; T &gt; <link linkend="structNSVec2_1a21f9591c61c58e2b5d37c0d3e5b69302">operator^</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1abdc55cbf9c95c8c46a1213f9f4dd9164">operator%</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1acb0366c62152a3c1b5a6d7e018cad9d6">operator/</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a9584269d3067b9baf01d7500a1a641a6">operator*</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a93ce6359617f9a2d7fdd1d5ff3ae62cf">operator/</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a6399d750b8d9a373762e3dce8bfb943a">operator=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a4599911fe243c1e7e81e8ccdf97913d3">operator++</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1aa7833b46f6d1fb9feeb3f79c9e582431">operator--</link> (
+int32_t )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a80a6a43fa38869dfa89c9ed45d90c247">operator++</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ac529f71951fe42af4da77a198955e6f6">operator--</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1ab375c44939c79798866806dfa39da8b6">operator+=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1acc56f1bfbd2d25559628b4ae82d9eaea">operator-=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a5ee8590233b6aecbc7e8a580111e473b">operator%=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a1dbfa1a54bf1dd2016b88a0bb695adeb">operator/=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1a7a8ce8b0b89a1bd6fd21dcea7d619612">operator*=</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; <link linkend="structNSVec2_1af5536444e50c402496684797d9811b27">operator/=</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structNSVec2_1aec4324141ec29405ff1d469fb2da4794">operator==</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structNSVec2_1acfcdae727a2d93a158d147a1443573d6">operator!=</link> (
+const <link linkend="structNSVec2">NSVec2</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structNSVec2_1a18086834e0c531b054ad969895a2c693">operator==</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="structNSVec2_1a732834a39d145a0673cda7839e4073ce">operator!=</link> (
+const T &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const T &amp; <link linkend="structNSVec2_1a96b6db61b071cab6300ece3e6e0e9bee">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T &amp; <link linkend="structNSVec2_1a549510962888472f667c0da14f06990f">operator[]</link> (
+const uint32_t &amp; pVal)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a870ad0c9318fb00704a10da5a497f4b3">xx</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a73f7317bc10aa5c99f029500e476f0b7">yx</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1ad9060458e9089385dc06dd89ada0557d">yy</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1ae7d6947fb5d8cb5beea611f3ab37e915">ss</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a0fc62b7580d76e19f09f0d39bd168a15">ts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1ab441b9e025841ee9dd192643084a5394">tt</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a5d477996849201788ccbcf1084d5407d">uu</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a704f14fafc40168630df50eaec31e0fe">vu</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a29bd042b819fa7e0bebc42a2a3d052d9">vv</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a597f5f381a180f554f041c0def96bdcb">ww</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1afb2d2c8bf0d898b58a366ec718ee4d9d">hw</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec2">NSVec2</link>&lt; T &gt; <link linkend="structNSVec2_1a7b7525c03b309cd083e43d24b80a5467">hh</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structNSVec2_1aba39f99d2f7f126f02512e813440e6fb">
+                <title>NSVec2&lt; T &gt;::NSVec2 (const NSVec2&lt; T &gt; &amp;pCopy)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a723d1616a053702d63341f752ac1cd16">
+                <title>NSVec2&lt; T &gt;::NSVec2 (const T &amp;pInit=static_cast&lt; T &gt;(0))</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a912fe4d0af0ab01f062e880d553da560">
+                <title>NSVec2&lt; T &gt;::NSVec2 (const T &amp;pX, const T &amp;pY)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ad6375c930b5c0fa261ab6f28054e8772">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::abs ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a845b9ef0c25e48729d7309d7303f0ff0">
+                <title>T NSVec2&lt; T &gt;::angle (bool pRads=false) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1add93ec4119c90a70bb51610110b6578b">
+                <title>T NSVec2&lt; T &gt;::angleTo (const NSVec2&lt; T &gt; &amp;pVec, bool pRads=false) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a233463b6f7491a9c528598b45e3cec9e">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::ceil ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ad51aa1f5ec4e65904cc4299d18005058">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::clamp (const T &amp;pMin=static_cast&lt; T &gt;(0), const T &amp;pMax=static_cast&lt; T &gt;(1))</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1aba94e99d202ba1dbc979794bd4529b8a">
+                <title>T NSVec2&lt; T &gt;::distanceTo (const NSVec2&lt; T &gt; &amp;pVec) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ab0df03d6df50d32884eece3ca5ce1664">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::floor ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ad09449f910b1f6eafcde676824f404da">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::fract ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1abb5871b6bd583ec63305eaeb307dc22e">
+                <title>T NSVec2&lt; T &gt;::length () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a2051a5ed908c2a9e31da54882aadd07a">
+                <title>T NSVec2&lt; T &gt;::lengthSq () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ada858524157467c103e8a3a955e343f1">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::lerp (const NSVec2&lt; T &gt; &amp;vec, const T2 &amp;scalingFactor)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a5d4653fc279e66b989e2160e2aebd25d">
+                <title>T NSVec2&lt; T &gt;::min () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a61fe535f93d85752637d99c1073cb232">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::minimize (const NSVec2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a57fd7b8ac14ec79bc5ced6f6de3c5307">
+                <title>T NSVec2&lt; T &gt;::max () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a4c1d458d15fec5f0268865fc4020e41f">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::maximize (const NSVec2&lt; T &gt; &amp;rhs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a5a31bfa6e07ab97689eece4290e72a6e">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::normalize ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a3d1d91c1c65aeffb93ba54784e44a21b">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::polar (bool pRads=false) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a3086e2c38c74b80b325fdc18254691c5">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::projectOn (const NSVec2&lt; T &gt; &amp;vec)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a955b1873c709c04452ce7301b521e2d5">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::projectOnPlane (const NSVec2&lt; T &gt; &amp;planeNormal)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a0a6afa4e3d2c3fe6a1b60e3bb7e0f206">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::reflect (const NSVec2&lt; T &gt; &amp;normal)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a81915be34d888fd6b5581334d28627bd">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::rotate (const T2 &amp;angle_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a4701680eaaacd9e85435655df4734021">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::round ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a45592c0ad2bd942ee4f5b1871424dcac">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::roundToZero ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1aca8c80585471e69dd3905c5a014ab699">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::scalingFrom (const nsmat2&lt; T &gt; &amp;transform2d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a1f4ea1874faaa10c14ab8b5c0617ea1d">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::scalingFrom (const nsmat3&lt; T &gt; &amp;transform2d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a6c8e0628862782510eeb996cc7734d06">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::set (const T &amp;pVal)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a57ca9e7d5d2001217de0993b70b6caf5">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::set (const T &amp;pX, const T &amp;pY)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1af8026babdaef5b24945f3e45e10ce69d">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::setFromPolar (const T &amp;pMag, T angle_, bool pRads=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a1b26ec6cef655c66c9c0faa1bb454831">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::setFromPolar (const NSVec2&lt; T &gt; &amp;pVec, bool pRads=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ab20a567f7413f65cf90e6b85b5348959">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::setLength (const T &amp;len)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1adf3e56477642d9c7f9da4981c11759b6">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::translationFrom (const nsmat3&lt; T &gt; &amp;transform2d)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1aa7a2eeb1116a475bfca9d5720b03f5e0">
+                <title>std::string NSVec2&lt; T &gt;::toString (bool pPolar=false)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1affc96246dd111f33fd5e03329501e786">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator+ (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a42e9ae0c953ff8ce06f2c812262d3add">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator- (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a47ab82793314ed9b1e13a78a327902af">
+                <title>T NSVec2&lt; T &gt;::operator* (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a21f9591c61c58e2b5d37c0d3e5b69302">
+                <title>nsmat2&lt;T&gt; NSVec2&lt; T &gt;::operator^ (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1abdc55cbf9c95c8c46a1213f9f4dd9164">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator% (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1acb0366c62152a3c1b5a6d7e018cad9d6">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator/ (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a9584269d3067b9baf01d7500a1a641a6">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator* (const T &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a93ce6359617f9a2d7fdd1d5ff3ae62cf">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator/ (const T &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a6399d750b8d9a373762e3dce8bfb943a">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator= (const NSVec2&lt; T &gt; &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a4599911fe243c1e7e81e8ccdf97913d3">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator++ (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1aa7833b46f6d1fb9feeb3f79c9e582431">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::operator-- (int32_t)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a80a6a43fa38869dfa89c9ed45d90c247">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator++ ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ac529f71951fe42af4da77a198955e6f6">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator-- ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ab375c44939c79798866806dfa39da8b6">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator+= (const NSVec2&lt; T &gt; &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1acc56f1bfbd2d25559628b4ae82d9eaea">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator-= (const NSVec2&lt; T &gt; &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a5ee8590233b6aecbc7e8a580111e473b">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator%= (const NSVec2&lt; T &gt; &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a1dbfa1a54bf1dd2016b88a0bb695adeb">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator/= (const NSVec2&lt; T &gt; &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a7a8ce8b0b89a1bd6fd21dcea7d619612">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator*= (const T &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1af5536444e50c402496684797d9811b27">
+                <title>NSVec2&lt;T&gt;&amp; NSVec2&lt; T &gt;::operator/= (const T &amp;pRHS)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1aec4324141ec29405ff1d469fb2da4794">
+                <title>bool NSVec2&lt; T &gt;::operator== (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1acfcdae727a2d93a158d147a1443573d6">
+                <title>bool NSVec2&lt; T &gt;::operator!= (const NSVec2&lt; T &gt; &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a18086834e0c531b054ad969895a2c693">
+                <title>bool NSVec2&lt; T &gt;::operator== (const T &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a732834a39d145a0673cda7839e4073ce">
+                <title>bool NSVec2&lt; T &gt;::operator!= (const T &amp;pRHS) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a96b6db61b071cab6300ece3e6e0e9bee">
+                <title>const T&amp; NSVec2&lt; T &gt;::operator[] (const uint32_t &amp;pVal) const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a549510962888472f667c0da14f06990f">
+                <title>T&amp; NSVec2&lt; T &gt;::operator[] (const uint32_t &amp;pVal)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a870ad0c9318fb00704a10da5a497f4b3">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::xx () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a73f7317bc10aa5c99f029500e476f0b7">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::yx () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ad9060458e9089385dc06dd89ada0557d">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::yy () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ae7d6947fb5d8cb5beea611f3ab37e915">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::ss () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a0fc62b7580d76e19f09f0d39bd168a15">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::ts () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1ab441b9e025841ee9dd192643084a5394">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::tt () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a5d477996849201788ccbcf1084d5407d">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::uu () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a704f14fafc40168630df50eaec31e0fe">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::vu () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a29bd042b819fa7e0bebc42a2a3d052d9">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::vv () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a597f5f381a180f554f041c0def96bdcb">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::ww () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1afb2d2c8bf0d898b58a366ec718ee4d9d">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::hw () const </title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structNSVec2_1a7b7525c03b309cd083e43d24b80a5467">
+                <title>NSVec2&lt;T&gt; NSVec2&lt; T &gt;::hh () const </title> <emphasis></emphasis>
+                
+            </section>
+</section>

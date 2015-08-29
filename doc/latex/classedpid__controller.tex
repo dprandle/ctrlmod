@@ -1,0 +1,219 @@
+\hypertarget{classedpid__controller}{\section{edpid\-\_\-controller$<$ T $>$ Class Template Reference}
+\label{classedpid__controller}\index{edpid\-\_\-controller$<$ T $>$@{edpid\-\_\-controller$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$edpid\-\_\-controller.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structedpid__controller_1_1output__range}{output\-\_\-range}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedpid__controller_a6008f5babbd8bc9141e5abba929ef790}{edpid\-\_\-controller} ()
+\item 
+\hyperlink{classedpid__controller_a683ec5f02e55d19b7ec2675fe0190f71}{$\sim$edpid\-\_\-controller} ()
+\item 
+void \hyperlink{classedpid__controller_a3f0c19167813e4030edec7f42a0d0661}{enable\-\_\-complex\-\_\-derivitive} (bool enable)
+\item 
+void \hyperlink{classedpid__controller_aa04a42b0f58b8eb752a463cb56afab6f}{enable\-\_\-anti\-\_\-reset\-\_\-windup} (bool enable)
+\item 
+bool \hyperlink{classedpid__controller_a88f516cfe3bb8d3e95f2d5dfd923d646}{anti\-\_\-reset\-\_\-windup} ()
+\item 
+bool \hyperlink{classedpid__controller_a9946eac8a4f3181706d54ba8bd96026f}{complex\-\_\-derivitive} ()
+\item 
+const \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \& \hyperlink{classedpid__controller_a4a8906107d15d7a917444ee98c703f7d}{gain} ()
+\item 
+double \hyperlink{classedpid__controller_a2e7e231001cd92137021664c43d1cc0b}{offset} ()
+\item 
+const \hyperlink{structedpid__controller_1_1output__range}{output\-\_\-range} \& \hyperlink{classedpid__controller_a64befb22b629646521abb29d25c8f14e}{range} ()
+\item 
+double \hyperlink{classedpid__controller_adb51025b2e94dbd63aa1841e3712100a}{ramp\-\_\-limit} ()
+\item 
+void \hyperlink{classedpid__controller_a4ec73738276f6cc8fe6df6a82b602f57}{set\-\_\-gain} (const \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \&pid\-\_\-)
+\item 
+void \hyperlink{classedpid__controller_a3dbbe642abf4db2cec4c6489896e05bd}{set\-\_\-gain} (double P, double I, double D)
+\item 
+void \hyperlink{classedpid__controller_ae730045cd6f055530783cf959e97f391}{set\-\_\-gain\-\_\-\-P} (double P)
+\item 
+void \hyperlink{classedpid__controller_a633260c32c9c7ae2b3c253f56bce57e7}{set\-\_\-gain\-\_\-\-I} (double I)
+\item 
+void \hyperlink{classedpid__controller_ab591a923cf7398e5514b58cc4e348047}{set\-\_\-gain\-\_\-\-D} (double D)
+\item 
+void \hyperlink{classedpid__controller_ad568ede08f4e7f7e7ae6806e11fee3f3}{set\-\_\-offset} (double offset\-\_\-)
+\item 
+void \hyperlink{classedpid__controller_ad5c00d11bbf6a566a85f6db7ec53d13a}{set\-\_\-ramp\-\_\-limit} (double percent)
+\item 
+void \hyperlink{classedpid__controller_acd29b7081cbaf41da267e47cde944dcf}{set\-\_\-range} (const T \&\hyperlink{nsvec4_8h_a02ad6e0792741c9c15dd05d27bcb80e6}{min}, const T \&\hyperlink{nsvec4_8h_a4c6db3c946e82dd750cfb4494ddc4b47}{max})
+\item 
+void \hyperlink{classedpid__controller_a4a3b487d6e7df82254565fd8c336b58c}{set\-\_\-target} (const T \&target\-\_\-)
+\item 
+T \hyperlink{classedpid__controller_a9b5038f14a975a7e3ddc87d7e3bd9c77}{loop} (const T \&input, double dt)
+\item 
+const T \& \hyperlink{classedpid__controller_a5b23219adc085dd6cbc054acae30e5f2}{target} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedpid__controller_a6008f5babbd8bc9141e5abba929ef790}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!edpid\-\_\-controller@{edpid\-\_\-controller}}
+\index{edpid\-\_\-controller@{edpid\-\_\-controller}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{edpid\-\_\-controller}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf edpid\-\_\-controller}$<$ T $>$\-::{\bf edpid\-\_\-controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a6008f5babbd8bc9141e5abba929ef790}
+\hypertarget{classedpid__controller_a683ec5f02e55d19b7ec2675fe0190f71}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!$\sim$edpid\-\_\-controller@{$\sim$edpid\-\_\-controller}}
+\index{$\sim$edpid\-\_\-controller@{$\sim$edpid\-\_\-controller}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{$\sim$edpid\-\_\-controller}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf edpid\-\_\-controller}$<$ T $>$\-::$\sim${\bf edpid\-\_\-controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a683ec5f02e55d19b7ec2675fe0190f71}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedpid__controller_a88f516cfe3bb8d3e95f2d5dfd923d646}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!anti\-\_\-reset\-\_\-windup@{anti\-\_\-reset\-\_\-windup}}
+\index{anti\-\_\-reset\-\_\-windup@{anti\-\_\-reset\-\_\-windup}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{anti\-\_\-reset\-\_\-windup}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf edpid\-\_\-controller}$<$ T $>$\-::anti\-\_\-reset\-\_\-windup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a88f516cfe3bb8d3e95f2d5dfd923d646}
+\hypertarget{classedpid__controller_a9946eac8a4f3181706d54ba8bd96026f}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!complex\-\_\-derivitive@{complex\-\_\-derivitive}}
+\index{complex\-\_\-derivitive@{complex\-\_\-derivitive}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{complex\-\_\-derivitive}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf edpid\-\_\-controller}$<$ T $>$\-::complex\-\_\-derivitive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a9946eac8a4f3181706d54ba8bd96026f}
+\hypertarget{classedpid__controller_aa04a42b0f58b8eb752a463cb56afab6f}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!enable\-\_\-anti\-\_\-reset\-\_\-windup@{enable\-\_\-anti\-\_\-reset\-\_\-windup}}
+\index{enable\-\_\-anti\-\_\-reset\-\_\-windup@{enable\-\_\-anti\-\_\-reset\-\_\-windup}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{enable\-\_\-anti\-\_\-reset\-\_\-windup}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::enable\-\_\-anti\-\_\-reset\-\_\-windup (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_aa04a42b0f58b8eb752a463cb56afab6f}
+\hypertarget{classedpid__controller_a3f0c19167813e4030edec7f42a0d0661}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!enable\-\_\-complex\-\_\-derivitive@{enable\-\_\-complex\-\_\-derivitive}}
+\index{enable\-\_\-complex\-\_\-derivitive@{enable\-\_\-complex\-\_\-derivitive}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{enable\-\_\-complex\-\_\-derivitive}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::enable\-\_\-complex\-\_\-derivitive (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a3f0c19167813e4030edec7f42a0d0661}
+\hypertarget{classedpid__controller_a4a8906107d15d7a917444ee98c703f7d}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!gain@{gain}}
+\index{gain@{gain}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{gain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf vec3} \& {\bf edpid\-\_\-controller}$<$ T $>$\-::gain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a4a8906107d15d7a917444ee98c703f7d}
+\hypertarget{classedpid__controller_a9b5038f14a975a7e3ddc87d7e3bd9c77}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!loop@{loop}}
+\index{loop@{loop}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf edpid\-\_\-controller}$<$ T $>$\-::loop (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{input, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a9b5038f14a975a7e3ddc87d7e3bd9c77}
+\hypertarget{classedpid__controller_a2e7e231001cd92137021664c43d1cc0b}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!offset@{offset}}
+\index{offset@{offset}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ double {\bf edpid\-\_\-controller}$<$ T $>$\-::offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a2e7e231001cd92137021664c43d1cc0b}
+\hypertarget{classedpid__controller_adb51025b2e94dbd63aa1841e3712100a}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!ramp\-\_\-limit@{ramp\-\_\-limit}}
+\index{ramp\-\_\-limit@{ramp\-\_\-limit}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{ramp\-\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ double {\bf edpid\-\_\-controller}$<$ T $>$\-::ramp\-\_\-limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_adb51025b2e94dbd63aa1841e3712100a}
+\hypertarget{classedpid__controller_a64befb22b629646521abb29d25c8f14e}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!range@{range}}
+\index{range@{range}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf edpid\-\_\-controller}$<$ T $>$\-::{\bf output\-\_\-range} \& {\bf edpid\-\_\-controller}$<$ T $>$\-::range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a64befb22b629646521abb29d25c8f14e}
+\hypertarget{classedpid__controller_a4ec73738276f6cc8fe6df6a82b602f57}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-gain@{set\-\_\-gain}}
+\index{set\-\_\-gain@{set\-\_\-gain}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-gain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-gain (
+\begin{DoxyParamCaption}
+\item[{const {\bf vec3} \&}]{pid\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a4ec73738276f6cc8fe6df6a82b602f57}
+\hypertarget{classedpid__controller_a3dbbe642abf4db2cec4c6489896e05bd}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-gain@{set\-\_\-gain}}
+\index{set\-\_\-gain@{set\-\_\-gain}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-gain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-gain (
+\begin{DoxyParamCaption}
+\item[{double}]{P, }
+\item[{double}]{I, }
+\item[{double}]{D}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a3dbbe642abf4db2cec4c6489896e05bd}
+\hypertarget{classedpid__controller_ab591a923cf7398e5514b58cc4e348047}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-gain\-\_\-\-D@{set\-\_\-gain\-\_\-\-D}}
+\index{set\-\_\-gain\-\_\-\-D@{set\-\_\-gain\-\_\-\-D}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-gain\-\_\-\-D}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-gain\-\_\-\-D (
+\begin{DoxyParamCaption}
+\item[{double}]{D}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_ab591a923cf7398e5514b58cc4e348047}
+\hypertarget{classedpid__controller_a633260c32c9c7ae2b3c253f56bce57e7}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-gain\-\_\-\-I@{set\-\_\-gain\-\_\-\-I}}
+\index{set\-\_\-gain\-\_\-\-I@{set\-\_\-gain\-\_\-\-I}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-gain\-\_\-\-I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-gain\-\_\-\-I (
+\begin{DoxyParamCaption}
+\item[{double}]{I}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a633260c32c9c7ae2b3c253f56bce57e7}
+\hypertarget{classedpid__controller_ae730045cd6f055530783cf959e97f391}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-gain\-\_\-\-P@{set\-\_\-gain\-\_\-\-P}}
+\index{set\-\_\-gain\-\_\-\-P@{set\-\_\-gain\-\_\-\-P}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-gain\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-gain\-\_\-\-P (
+\begin{DoxyParamCaption}
+\item[{double}]{P}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_ae730045cd6f055530783cf959e97f391}
+\hypertarget{classedpid__controller_ad568ede08f4e7f7e7ae6806e11fee3f3}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-offset@{set\-\_\-offset}}
+\index{set\-\_\-offset@{set\-\_\-offset}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-offset (
+\begin{DoxyParamCaption}
+\item[{double}]{offset\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_ad568ede08f4e7f7e7ae6806e11fee3f3}
+\hypertarget{classedpid__controller_ad5c00d11bbf6a566a85f6db7ec53d13a}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-ramp\-\_\-limit@{set\-\_\-ramp\-\_\-limit}}
+\index{set\-\_\-ramp\-\_\-limit@{set\-\_\-ramp\-\_\-limit}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-ramp\-\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-ramp\-\_\-limit (
+\begin{DoxyParamCaption}
+\item[{double}]{percent}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_ad5c00d11bbf6a566a85f6db7ec53d13a}
+\hypertarget{classedpid__controller_acd29b7081cbaf41da267e47cde944dcf}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-range@{set\-\_\-range}}
+\index{set\-\_\-range@{set\-\_\-range}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{min, }
+\item[{const T \&}]{max}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_acd29b7081cbaf41da267e47cde944dcf}
+\hypertarget{classedpid__controller_a4a3b487d6e7df82254565fd8c336b58c}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!set\-\_\-target@{set\-\_\-target}}
+\index{set\-\_\-target@{set\-\_\-target}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{set\-\_\-target}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf edpid\-\_\-controller}$<$ T $>$\-::set\-\_\-target (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{target\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a4a3b487d6e7df82254565fd8c336b58c}
+\hypertarget{classedpid__controller_a5b23219adc085dd6cbc054acae30e5f2}{\index{edpid\-\_\-controller@{edpid\-\_\-controller}!target@{target}}
+\index{target@{target}!edpid_controller@{edpid\-\_\-controller}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T \& {\bf edpid\-\_\-controller}$<$ T $>$\-::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpid__controller_a5b23219adc085dd6cbc054acae30e5f2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edpid__controller_8h}{edpid\-\_\-controller.\-h}\end{DoxyCompactItemize}

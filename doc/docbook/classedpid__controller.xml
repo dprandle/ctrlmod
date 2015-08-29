@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedpid__controller">
+<title>edpid_controller class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edpid__controller_8h">&lt;edpid_controller.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedpid__controller_1_1output__range">edpid_controller::output_range</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vec3 m_gain</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_offset</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_complex_deriv</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_anti_reset_windup</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>output_range m_range</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T m_target</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T m_prev_error[3]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T m_integral_err</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_ramp_limit</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedpid__controller_1a6008f5babbd8bc9141e5abba929ef790">edpid_controller</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedpid__controller_1a683ec5f02e55d19b7ec2675fe0190f71">~edpid_controller</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1a3f0c19167813e4030edec7f42a0d0661">enable_complex_derivitive</link> (
+bool enable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1aa04a42b0f58b8eb752a463cb56afab6f">enable_anti_reset_windup</link> (
+bool enable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedpid__controller_1a88f516cfe3bb8d3e95f2d5dfd923d646">anti_reset_windup</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedpid__controller_1a9946eac8a4f3181706d54ba8bd96026f">complex_derivitive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="nsmath_8h_1a14bb8a4a0fefc0be4fae32fc59a07362">vec3</link> &amp; <link linkend="classedpid__controller_1a4a8906107d15d7a917444ee98c703f7d">gain</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classedpid__controller_1a2e7e231001cd92137021664c43d1cc0b">offset</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="structedpid__controller_1_1output__range">output_range</link> &amp; <link linkend="classedpid__controller_1a64befb22b629646521abb29d25c8f14e">range</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classedpid__controller_1adb51025b2e94dbd63aa1841e3712100a">ramp_limit</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1a4ec73738276f6cc8fe6df6a82b602f57">set_gain</link> (
+const <link linkend="nsmath_8h_1a14bb8a4a0fefc0be4fae32fc59a07362">vec3</link> &amp; pid_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1a3dbbe642abf4db2cec4c6489896e05bd">set_gain</link> (
+double P, double I, double D)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1ae730045cd6f055530783cf959e97f391">set_gain_P</link> (
+double P)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1a633260c32c9c7ae2b3c253f56bce57e7">set_gain_I</link> (
+double I)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1ab591a923cf7398e5514b58cc4e348047">set_gain_D</link> (
+double D)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1ad568ede08f4e7f7e7ae6806e11fee3f3">set_offset</link> (
+double offset_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1ad5c00d11bbf6a566a85f6db7ec53d13a">set_ramp_limit</link> (
+double percent)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1acd29b7081cbaf41da267e47cde944dcf">set_range</link> (
+const T &amp; min, const T &amp; max)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedpid__controller_1a4a3b487d6e7df82254565fd8c336b58c">set_target</link> (
+const T &amp; target_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="classedpid__controller_1a9b5038f14a975a7e3ddc87d7e3bd9c77">loop</link> (
+const T &amp; input, double dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const T &amp; <link linkend="classedpid__controller_1a5b23219adc085dd6cbc054acae30e5f2">target</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedpid__controller_1a6008f5babbd8bc9141e5abba929ef790">
+                <title>edpid_controller&lt; T &gt;::edpid_controller ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a683ec5f02e55d19b7ec2675fe0190f71">
+                <title>edpid_controller&lt; T &gt;::~edpid_controller ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a3f0c19167813e4030edec7f42a0d0661">
+                <title>void edpid_controller&lt; T &gt;::enable_complex_derivitive (bool enable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1aa04a42b0f58b8eb752a463cb56afab6f">
+                <title>void edpid_controller&lt; T &gt;::enable_anti_reset_windup (bool enable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a88f516cfe3bb8d3e95f2d5dfd923d646">
+                <title>bool edpid_controller&lt; T &gt;::anti_reset_windup ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a9946eac8a4f3181706d54ba8bd96026f">
+                <title>bool edpid_controller&lt; T &gt;::complex_derivitive ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a4a8906107d15d7a917444ee98c703f7d">
+                <title>const vec3 &amp; edpid_controller&lt; T &gt;::gain ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a2e7e231001cd92137021664c43d1cc0b">
+                <title>double edpid_controller&lt; T &gt;::offset ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a64befb22b629646521abb29d25c8f14e">
+                <title>const edpid_controller&lt; T &gt;::output_range &amp; edpid_controller&lt; T &gt;::range ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1adb51025b2e94dbd63aa1841e3712100a">
+                <title>double edpid_controller&lt; T &gt;::ramp_limit ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a4ec73738276f6cc8fe6df6a82b602f57">
+                <title>void edpid_controller&lt; T &gt;::set_gain (const vec3 &amp;pid_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a3dbbe642abf4db2cec4c6489896e05bd">
+                <title>void edpid_controller&lt; T &gt;::set_gain (double P, double I, double D)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1ae730045cd6f055530783cf959e97f391">
+                <title>void edpid_controller&lt; T &gt;::set_gain_P (double P)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a633260c32c9c7ae2b3c253f56bce57e7">
+                <title>void edpid_controller&lt; T &gt;::set_gain_I (double I)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1ab591a923cf7398e5514b58cc4e348047">
+                <title>void edpid_controller&lt; T &gt;::set_gain_D (double D)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1ad568ede08f4e7f7e7ae6806e11fee3f3">
+                <title>void edpid_controller&lt; T &gt;::set_offset (double offset_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1ad5c00d11bbf6a566a85f6db7ec53d13a">
+                <title>void edpid_controller&lt; T &gt;::set_ramp_limit (double percent)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1acd29b7081cbaf41da267e47cde944dcf">
+                <title>void edpid_controller&lt; T &gt;::set_range (const T &amp;min, const T &amp;max)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a4a3b487d6e7df82254565fd8c336b58c">
+                <title>void edpid_controller&lt; T &gt;::set_target (const T &amp;target_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a9b5038f14a975a7e3ddc87d7e3bd9c77">
+                <title>T edpid_controller&lt; T &gt;::loop (const T &amp;input, double dt)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedpid__controller_1a5b23219adc085dd6cbc054acae30e5f2">
+                <title>const T &amp; edpid_controller&lt; T &gt;::target ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

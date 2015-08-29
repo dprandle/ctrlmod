@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edplsystem_8cpp">
+    <title>edplsystem.cpp File Reference</title>
+    <programlisting>#include &lt;edplsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;mraa.hpp&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage.h&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Definitions for system. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Tue Jul 7 09:32:32 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edplsystem.cpp</para>
+    </simplesect>
+</section>

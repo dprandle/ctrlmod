@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edthreaded__fd_8h">
+    <title>edthreaded_fd.h File Reference</title>
+    <programlisting>#include &lt;edglobal.h&gt;</programlisting>
+    <programlisting>#include &lt;pthread.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;edcallback.h&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classedthreaded__fd">edthreaded_fd</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedthreaded__fd_1_1Error">edthreaded_fd::Error</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedthreaded__fd_1_1WriteVal">edthreaded_fd::WriteVal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structcommand__wait__callback">command_wait_callback</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edthreaded__fd_8h_1a342873b4069f62ee07236e149ab6471b">DEFAULT_FD_WRITE_BUFFER_SIZE</link> 5120</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edthreaded__fd_8h_1a645b973029e4897854f96c850e30eaa3">DEFAULT_FD_READ_BUFFER_SIZE</link> 5120</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edthreaded__fd_8h_1a23180b3704624449dba84bb69cbf00e9">FD_TMP_BUFFER_SIZE</link> 1024</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/edthreaded_fd.h</para>
+    </simplesect>
+</section>

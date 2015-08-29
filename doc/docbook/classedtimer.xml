@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedtimer">
+<title>edtimer class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edtimer_8h">&lt;edtimer.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09">cb_mode</link>{<link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09a6401fc860ee0413f08594b95216cbd93">no_shot</link>, <link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09a0d89310ad0b56d46e996c74eecaa4fa4">single_shot</link>, <link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09ab949e0f48e271fc30ddac9e033fa2f69">continous_shot</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::chrono::high_resolution_clock  <link linkend="classedtimer_1af0a91609010df0307ca44e565448f434">HighResClock</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HighResClock m_clk</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_running</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HighResClock::time_point m_start_time</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HighResClock::time_point m_previous_frame_time</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HighResClock::time_point m_last_cbexec_time</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_elapsed_ms</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_dt_ms</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_cumilitive_time_ms</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_cbdelay_ms</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer_callback * m_cb</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>cb_mode m_cmode</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedtimer_1af3afa47f363c1e707703ad10c4fc2829">edtimer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedtimer_1aa0dd7c212ac5a84387d19aef703aa444">~edtimer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1aca8d2329a885239a766ac05fb8be0e9e">start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1a03ef77e7fa8f3a78103911a57e7a853b">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structedtimer__callback">edtimer_callback</link> * <link linkend="classedtimer_1a47940c8f28c543ab714e2f8e2fcfb891">callback</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09">cb_mode</link> <link linkend="classedtimer_1ac17a1a5a49cea8d1bf1d651507f6fa80">callback_mode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classedtimer_1a5f624b575aca211c1eae1269803e925e">callback_delay</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1afe07b61f497a6f29eab5ac9e501b030c">cont</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1aa4f6c4cd295e52ec0ed21a4a9040c02b">stop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1aeb2c60b9e85b4566cc05523427218267">set_callback</link> (
+<link linkend="structedtimer__callback">edtimer_callback</link> * cb)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1a83f11a6711feb8d0c9896acffeba348b">set_callback_mode</link> (
+<link linkend="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09">cb_mode</link> mode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedtimer_1a01833c50e6c87aae1dd5b5bd002f4dd4">set_callback_delay</link> (
+double ms)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classedtimer_1a85b9765fd91c0000da27073676547646">dt</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedtimer_1afa251e84882c066b2335be2f45339bcf">running</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="classedtimer_1adabe667da00fa3dbf0ca25c16c83333e">elapsed</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>class edtimer </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class keeps track of time allowing you to start, stop, and continue the timer. It also has a &quot;dt&quot; functionality to allow you to see how much time has elapsed since the last update call. This could be useful for various things.</para>
+
+<para>You can also set up the timer to execute a callback every so often (every so many milliseconds) or you can set it to execute once after some delay. </para>
+                <para>Definition at line 21 of file edtimer.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>edtimer.h</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09">
+               <title>enum cb_mode </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09a6401fc860ee0413f08594b95216cbd93">
+                            <term>no_shot</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09a0d89310ad0b56d46e996c74eecaa4fa4">
+                            <term>single_shot</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedtimer_1adf4b2a0dcb914d94b59f8dd4a0ae4f09ab949e0f48e271fc30ddac9e033fa2f69">
+                            <term>continous_shot</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 24 of file edtimer.h
+                    <programlisting>
+{
+no_shot, 
+single_shot, 
+continous_shot, 
+}cb_mode;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedtimer_1af0a91609010df0307ca44e565448f434">
+                <title>typedef std::chrono::high_resolution_clock edtimer::HighResClock</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1af3afa47f363c1e707703ad10c4fc2829">
+                <title>edtimer::edtimer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1aa0dd7c212ac5a84387d19aef703aa444">
+                <title>edtimer::~edtimer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1aca8d2329a885239a766ac05fb8be0e9e">
+                <title>void edtimer::start ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a03ef77e7fa8f3a78103911a57e7a853b">
+                <title>void edtimer::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a47940c8f28c543ab714e2f8e2fcfb891">
+                <title>edtimer_callback * edtimer::callback ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1ac17a1a5a49cea8d1bf1d651507f6fa80">
+                <title>edtimer::cb_mode edtimer::callback_mode ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a5f624b575aca211c1eae1269803e925e">
+                <title>double edtimer::callback_delay ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1afe07b61f497a6f29eab5ac9e501b030c">
+                <title>void edtimer::cont ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1aa4f6c4cd295e52ec0ed21a4a9040c02b">
+                <title>void edtimer::stop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1aeb2c60b9e85b4566cc05523427218267">
+                <title>void edtimer::set_callback (edtimer_callback *cb)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a83f11a6711feb8d0c9896acffeba348b">
+                <title>void edtimer::set_callback_mode (cb_mode mode)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a01833c50e6c87aae1dd5b5bd002f4dd4">
+                <title>void edtimer::set_callback_delay (double ms)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1a85b9765fd91c0000da27073676547646">
+                <title>double edtimer::dt ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1afa251e84882c066b2335be2f45339bcf">
+                <title>bool edtimer::running ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedtimer_1adabe667da00fa3dbf0ca25c16c83333e">
+                <title>double edtimer::elapsed ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

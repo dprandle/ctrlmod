@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedmessage__dispatch">
+<title>edmessage_dispatch class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage__dispatch_8h">&lt;edmessage_dispatch.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; std::string, std::set&lt; <link linkend="classedsystem">edsystem</link> * &gt; &gt;  <link linkend="classedmessage__dispatch_1a6fca76f17817a3296ed712c8a2cc52d1">listener_map</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; <link linkend="classedsystem">edsystem</link> *, std::deque&lt; <link linkend="structedmessage">edmessage</link> * &gt; &gt;  <link linkend="classedmessage__dispatch_1a4e1b44916d32280f02e952e0e41774bc">listener_queue</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>listener_map m_listeners</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>listener_queue m_lmessages</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedmessage__dispatch_1a8eef1480309ce6b3439b649ed5e94fdc">edmessage_dispatch</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedmessage__dispatch_1ad00ef6c590f2d0aa56ce4ba0c42d8a20">~edmessage_dispatch</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmessage__dispatch_1a72e810fc8be900d420c5bc4e4e7ed0fb">register_listener</link> (
+<link linkend="classedsystem">edsystem</link> * sys)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmessage__dispatch_1af2e13b40c33728a19f189bc8dd222d3b">unregister_listener</link> (
+<link linkend="classedsystem">edsystem</link> * sys)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MessageType * <link linkend="classedmessage__dispatch_1ab0a4b47e7c90abea073511dc6d72e338">push</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>MessageType * <link linkend="classedmessage__dispatch_1acc783ed63b9f2dfe3ddb278d4e7518de">push_front</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structedmessage">edmessage</link> * <link linkend="classedmessage__dispatch_1a62ce8628df9d3bc4b62831514ce586b6">next</link> (
+<link linkend="classedsystem">edsystem</link> * sys)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmessage__dispatch_1a498a009d4903b42a080ad002021992c3">pop</link> (
+<link linkend="classedsystem">edsystem</link> * sys)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmessage__dispatch_1aae298910744e7f59cbf0d1e87b9d7fc2">process_all</link> (
+<link linkend="classedsystem">edsystem</link> * sys)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Class <link linkend="classedmessage__dispatch">edmessage_dispatch</link>. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A system can register its interest in certain message types, and any time a message of that type is created it will be added to that system&apos;s message queue. This queue is FIFO, and messages will not be deleted until they have been removed from every system&apos;s message queue.</para>
+
+<para>Systems can process all messages in their queue by calling process_all(system*) where system* is a pointer to whatever system messages should be processed for (likely &quot;this&quot; pointer). Messages are processed by calling the respective system&apos;s process function over and over until all messages in the system&apos;s message que are gone. If process returns false at any point, no more messages will be processed and process_all will return.</para>
+
+<para>You can also process one message at a time by calling next to get the oldest message, and pop to remove that message. </para>
+                <para>Definition at line 32 of file edmessage_dispatch.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>edmessage_dispatch.h</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="classedmessage__dispatch_1a6fca76f17817a3296ed712c8a2cc52d1">
+                <title>typedef std::map&lt; std::string, std::set&lt;edsystem*&gt; &gt; edmessage_dispatch::listener_map</title> <emphasis></emphasis>
+                
+<para>This maps message type names to sets of systems. Any system that registers with a message type will be added to the system set corresponding to that message type. </para>
+
+            </section>
+            <section xml:id="classedmessage__dispatch_1a4e1b44916d32280f02e952e0e41774bc">
+                <title>typedef std::map&lt;edsystem*, std::deque&lt;edmessage*&gt; &gt; edmessage_dispatch::listener_queue</title> <emphasis></emphasis>
+                
+<para>Listener queue holds a map of system pointers to deques of messages. This is FIFO setup - when a message is added to the queue it is appended to the back and when one is taken, it is taken from the front. This does not actually actually delete the message - the message is not deleted until it is no longer in any of the queues. A reference count is kept within the message itself. </para>
+
+            </section>
+            <section xml:id="classedmessage__dispatch_1a8eef1480309ce6b3439b649ed5e94fdc">
+                <title>edmessage_dispatch::edmessage_dispatch ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1ad00ef6c590f2d0aa56ce4ba0c42d8a20">
+                <title>edmessage_dispatch::~edmessage_dispatch ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1a72e810fc8be900d420c5bc4e4e7ed0fb">
+                <title>void edmessage_dispatch::register_listener (edsystem *sys)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1af2e13b40c33728a19f189bc8dd222d3b">
+                <title>void edmessage_dispatch::unregister_listener (edsystem *sys)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1ab0a4b47e7c90abea073511dc6d72e338">
+                <title>MessageType* edmessage_dispatch::push ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1acc783ed63b9f2dfe3ddb278d4e7518de">
+                <title>MessageType* edmessage_dispatch::push_front ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1a62ce8628df9d3bc4b62831514ce586b6">
+                <title>edmessage * edmessage_dispatch::next (edsystem *sys)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1a498a009d4903b42a080ad002021992c3">
+                <title>void edmessage_dispatch::pop (edsystem *sys)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmessage__dispatch_1aae298910744e7f59cbf0d1e87b9d7fc2">
+                <title>void edmessage_dispatch::process_all (edsystem *sys)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

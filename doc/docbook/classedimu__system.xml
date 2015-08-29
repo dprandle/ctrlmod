@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedimu__system">
+<title>edimu_system class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edimu__system_8h">&lt;edimu_system.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692">g_scale</link>{<link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692ae3ca8f1426d51135044acb876bbf8d62">G_SCALE_245DPS</link>, <link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692ac75709ac7d6a83a5c8fa75d61a550cdd">G_SCALE_500DPS</link>, <link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692aee32250020a13cdce09a11247d4dec46">G_SCALE_2000DPS</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707">a_scale</link>{<link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707aad79008dcf3400051f927a49d8ea079b">A_SCALE_2G</link>, <link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a266db1462a0f522e112882219edde397">A_SCALE_4G</link>, <link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a1b2236322d581b3b4ec808b5c754b95c">A_SCALE_6G</link>, <link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a9db696dbf82ab98ea5645e1277a1cb50">A_SCALE_8G</link>, <link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707ac36f1eb434af93d54110b82882463ae0">A_SCALE_16G</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3">m_scale</link>{<link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3a1e2b05cb9c5203ecf8de8f02274aa875">M_SCALE_2GS</link>, <link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3af5c9b84c56a16b30a438ce2cd0a80d60">M_SCALE_4GS</link>, <link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3ad7d18ad9a5cc8188c90ead4a1b3c9dc5">M_SCALE_8GS</link>, <link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3ab26ba594363c13a86809357673513d33">M_SCALE_12GS</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857">g_odr</link>{<link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a7d3f6e71791376f2d1b2d2c81807ebb3">G_ODR_95_BW_125</link>== 0x0, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a5d2fc14a0048ca8eab15315e03d0b7f6">G_ODR_95_BW_25</link>== 0x1, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a8c12ef2286ffa75355d5061da725c320">G_ODR_190_BW_125</link>== 0x4, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a986d076cfaa392fa58508b98a397a872">G_ODR_190_BW_25</link>== 0x5, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857ae0dee541e707db36687a7ad3fcb85acc">G_ODR_190_BW_50</link>== 0x6, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a66466db4312dadf3b3f38b0abf01b448">G_ODR_190_BW_70</link>== 0x7, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857afb3501066d4ab609261676771bb47852">G_ODR_380_BW_20</link>== 0x8, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a04d047c632a24ae7cd0e85575fd2a83b">G_ODR_380_BW_25</link>== 0x9, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a92acbaa3992716666e3d34a9127e11e3">G_ODR_380_BW_50</link>== 0xA, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a2fa626b536fce0640868fa5b32884ba1">G_ODR_380_BW_100</link>== 0xB, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a3604bd7462bdbe0bdb2c7c6ea3ed439a">G_ODR_760_BW_30</link>== 0xC, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a6eb0a12445b6fa37d4f889b1f2753dd4">G_ODR_760_BW_35</link>== 0xD, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857ab0c158480ed9b5a6755d2a33d7d6d6ed">G_ODR_760_BW_50</link>== 0xE, <link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857aee29786b1e5a4f06a9d3f83bc0a94f45">G_ODR_760_BW_100</link>== 0xF}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409">a_odr</link>{<link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a612669c7c2e709c2599c8f1205fc6789">A_POWER_DOWN</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a985e1725f4d2b592addd3ce39c6b9d67">A_ODR_3125</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a39562621cfa654b48c8fb1e7d6547ea1">A_ODR_625</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a3c446dbff5f9525174ec1babedd00130">A_ODR_125</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a1c556e092ac518da584bf7ae59d8169d">A_ODR_25</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409adaeb950e8705c779eefbde7c4a05a6d4">A_ODR_50</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409ac5c6a9f89b38b88c58d72f828a9489d7">A_ODR_100</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a8a602041d9319a516e9a70d7ebe464b4">A_ODR_200</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a2e581fcaddb09bada44ee82120dc720f">A_ODR_400</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409ac08490b692283f696f7725ca348037e6">A_ODR_800</link>, <link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a2505e8202c185b7a0fd9d3a2c84506e6">A_ODR_1600</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278">a_abw</link>{<link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278a673459ef7230a157b1c9133682e5ef38">A_ABW_773</link>, <link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278abebf3506c669b49e8bb0e9b336a11836">A_ABW_194</link>, <link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278ab3ac328f4e427ce2c7d9dc67243b4446">A_ABW_362</link>, <link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278af6a4898c64003bfa125ce107f06ba1fe">A_ABW_50</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7c">m_odr</link>{<link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7cafe1b71a13c2a85d99faa46ba295b0036">M_ODR_3125</link>, <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca5e23f8438b6c448bb3e857de0e6652fd">M_ODR_625</link>, <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7cadc5ab3742496b399082a63ca1b7be3b2">M_ODR_125</link>, <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca625f92a758b2591f1fa1bf7e00c8a492">M_ODR_25</link>, <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca0ea0e32be6c9cd0a7813aec7116d978b">M_ODR_50</link>, <link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7caa678e4ce37cb70e5b4d06e63dc4226a6">M_ODR_100</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edi2c * m_i2c</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>NSVec3&lt; int16_t &gt; m_gyro_raw</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>NSVec3&lt; int16_t &gt; m_accel_raw</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>NSVec3&lt; int16_t &gt; m_magno_raw</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int16_t m_temp</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>m_scale m_mag_scale</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>g_scale m_gyro_scale</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>a_scale m_accel_scale</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float m_gres</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float m_mres</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float m_ares</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fvec3 m_abias</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fvec3 m_gbias</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>m_odr m_mag_odr</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>g_odr m_gyro_odr</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>a_odr m_accel_odr</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>a_abw m_accel_abw</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedimu__system_1a4c17647ced26f28a162520da42f32d13">edimu_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedimu__system_1a382054be9280e8c43e4bc93a05a610c3">~edimu_system</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278">a_abw</link> <link linkend="classedimu__system_1adcec29ff9303db25800cf8026e0c6b37">accel_aa</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707">a_scale</link> <link linkend="classedimu__system_1a16ad8b9dbb9a889c2191de9774377882">accel_scale</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409">a_odr</link> <link linkend="classedimu__system_1a5e7fbd97fe33973ec60c1e180b19b797">accel_datarate</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a9ee88f6e0ae602d0037c2f7b0d43f3f8">calibrate</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692">g_scale</link> <link linkend="classedimu__system_1a4f625e2eecfc7a0bb14c7a6195c82771">gyro_scale</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857">g_odr</link> <link linkend="classedimu__system_1a2bbaffa196674d42427bc4da6ac8164e">gyro_datarate</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3">m_scale</link> <link linkend="classedimu__system_1ad21c665f25ae14f1da2d46e4274ba6ae">mag_scale</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7c">m_odr</link> <link linkend="classedimu__system_1addc80a5048d987161abd25187f0d449f">mag_datarate</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1af745d305e5ff1cfaba3134fd4ff2c342">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedimu__system_1abd6e59b943adbb48fa786f10f809070c">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a65927db96dc88e8752f0529d9faa6bc0">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1ad77a172b80472604b958abe1a7b037a0">set_accel_aa</link> (
+<link linkend="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278">a_abw</link> antialiasing)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a1bed4d35a4ddc0590694a805fffa7c9f">set_accel_scale</link> (
+<link linkend="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707">a_scale</link> scale)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1ab813efe0e33b7e6f70af8d6b390a0076">set_accel_datarate</link> (
+<link linkend="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409">a_odr</link> datarate)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1ac765ce7726af6fba582035f5a24ce91e">set_gyro_scale</link> (
+<link linkend="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692">g_scale</link> scale)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a5c188e537c342e56a10d70c8c1a4f9bc">set_gyro_datarate</link> (
+<link linkend="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857">g_odr</link> datarate)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a930fac9420df70417b040d554e29d8db">set_mag_scale</link> (
+<link linkend="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3">m_scale</link> scale)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1aa773e0db8441dc11bbb8399dede49a9c">set_mag_datarate</link> (
+<link linkend="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7c">m_odr</link> datarate)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a70926a3b36b53f54913fc47ee471fb9b">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="classedimu__system_1ae3124c577ae10d92f69438f28ce67969">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="classedimu__system_1a850c2b8420aef618edf9ec36f9436ed4">TypeString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a43007eea5d79a90a69858f8c2ae6862c">_update_gres</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a4f9fa63d3b12a9abe99870bc6ac81c30">_update_mres</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1a4c6432b16774f7e0be511f589596b28a">_update_ares</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedimu__system_1a20db20aec82a23be51cfe776e6475b0d">_init_mag</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedimu__system_1ae26eb1bcef9d314c7a8c957c8b898eb2">_init_accel</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedimu__system_1ab6f896d809e8f3fb7d0217cae57535f7">_init_gyro</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedimu__system_1abce9fe4a292a8bdf8dd2b17abb1512af">_createMessage</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> <link linkend="classedimu__system_1aa67c04e59a1c409c59de006f061f28eb">_calc_gyro</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> <link linkend="classedimu__system_1a208217be9b9b73895a26080ce656f5a0">_calc_mag</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="nsmath_8h_1acc70582cd75ef520905deb63211e4b52">fvec3</link> <link linkend="classedimu__system_1a568abf59144246caf3076736cdb8a6d4">_calc_accel</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692">
+               <title>enum g_scale </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692ae3ca8f1426d51135044acb876bbf8d62">
+                            <term>G_SCALE_245DPS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692ac75709ac7d6a83a5c8fa75d61a550cdd">
+                            <term>G_SCALE_500DPS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1ac676a08f02fdc00d8e8210985f03e692aee32250020a13cdce09a11247d4dec46">
+                            <term>G_SCALE_2000DPS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 108 of file edimu_system.h
+                    <programlisting>
+{
+G_SCALE_245DPS, 
+G_SCALE_500DPS, 
+G_SCALE_2000DPS, 
+}g_scale;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707">
+               <title>enum a_scale </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707aad79008dcf3400051f927a49d8ea079b">
+                            <term>A_SCALE_2G</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a266db1462a0f522e112882219edde397">
+                            <term>A_SCALE_4G</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a1b2236322d581b3b4ec808b5c754b95c">
+                            <term>A_SCALE_6G</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707a9db696dbf82ab98ea5645e1277a1cb50">
+                            <term>A_SCALE_8G</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a61602a34b68df60f8f10c1cd7af37707ac36f1eb434af93d54110b82882463ae0">
+                            <term>A_SCALE_16G</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 116 of file edimu_system.h
+                    <programlisting>
+{
+A_SCALE_2G, 
+A_SCALE_4G, 
+A_SCALE_6G, 
+A_SCALE_8G, 
+A_SCALE_16G, 
+}a_scale;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3">
+               <title>enum m_scale </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3a1e2b05cb9c5203ecf8de8f02274aa875">
+                            <term>M_SCALE_2GS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3af5c9b84c56a16b30a438ce2cd0a80d60">
+                            <term>M_SCALE_4GS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3ad7d18ad9a5cc8188c90ead4a1b3c9dc5">
+                            <term>M_SCALE_8GS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1ae7dbbcd66d0e16d693ac560884871da3ab26ba594363c13a86809357673513d33">
+                            <term>M_SCALE_12GS</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 126 of file edimu_system.h
+                    <programlisting>
+{
+M_SCALE_2GS, 
+M_SCALE_4GS, 
+M_SCALE_8GS, 
+M_SCALE_12GS, 
+}m_scale;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857">
+               <title>enum g_odr </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a7d3f6e71791376f2d1b2d2c81807ebb3">
+                            <term>G_ODR_95_BW_125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a5d2fc14a0048ca8eab15315e03d0b7f6">
+                            <term>G_ODR_95_BW_25</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a8c12ef2286ffa75355d5061da725c320">
+                            <term>G_ODR_190_BW_125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a986d076cfaa392fa58508b98a397a872">
+                            <term>G_ODR_190_BW_25</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857ae0dee541e707db36687a7ad3fcb85acc">
+                            <term>G_ODR_190_BW_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a66466db4312dadf3b3f38b0abf01b448">
+                            <term>G_ODR_190_BW_70</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857afb3501066d4ab609261676771bb47852">
+                            <term>G_ODR_380_BW_20</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a04d047c632a24ae7cd0e85575fd2a83b">
+                            <term>G_ODR_380_BW_25</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a92acbaa3992716666e3d34a9127e11e3">
+                            <term>G_ODR_380_BW_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a2fa626b536fce0640868fa5b32884ba1">
+                            <term>G_ODR_380_BW_100</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a3604bd7462bdbe0bdb2c7c6ea3ed439a">
+                            <term>G_ODR_760_BW_30</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857a6eb0a12445b6fa37d4f889b1f2753dd4">
+                            <term>G_ODR_760_BW_35</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857ab0c158480ed9b5a6755d2a33d7d6d6ed">
+                            <term>G_ODR_760_BW_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1aa3293bf451856110ad0b082b9ec0f857aee29786b1e5a4f06a9d3f83bc0a94f45">
+                            <term>G_ODR_760_BW_100</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 135 of file edimu_system.h
+                    <programlisting>
+{
+G_ODR_95_BW_125== 0x0, 
+G_ODR_95_BW_25== 0x1, 
+G_ODR_190_BW_125== 0x4, 
+G_ODR_190_BW_25== 0x5, 
+G_ODR_190_BW_50== 0x6, 
+G_ODR_190_BW_70== 0x7, 
+G_ODR_380_BW_20== 0x8, 
+G_ODR_380_BW_25== 0x9, 
+G_ODR_380_BW_50== 0xA, 
+G_ODR_380_BW_100== 0xB, 
+G_ODR_760_BW_30== 0xC, 
+G_ODR_760_BW_35== 0xD, 
+G_ODR_760_BW_50== 0xE, 
+G_ODR_760_BW_100== 0xF, 
+}g_odr;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409">
+               <title>enum a_odr </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a612669c7c2e709c2599c8f1205fc6789">
+                            <term>A_POWER_DOWN</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a985e1725f4d2b592addd3ce39c6b9d67">
+                            <term>A_ODR_3125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a39562621cfa654b48c8fb1e7d6547ea1">
+                            <term>A_ODR_625</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a3c446dbff5f9525174ec1babedd00130">
+                            <term>A_ODR_125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a1c556e092ac518da584bf7ae59d8169d">
+                            <term>A_ODR_25</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409adaeb950e8705c779eefbde7c4a05a6d4">
+                            <term>A_ODR_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409ac5c6a9f89b38b88c58d72f828a9489d7">
+                            <term>A_ODR_100</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a8a602041d9319a516e9a70d7ebe464b4">
+                            <term>A_ODR_200</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a2e581fcaddb09bada44ee82120dc720f">
+                            <term>A_ODR_400</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409ac08490b692283f696f7725ca348037e6">
+                            <term>A_ODR_800</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a4950d1ca91416ce2221f9f251a4ab409a2505e8202c185b7a0fd9d3a2c84506e6">
+                            <term>A_ODR_1600</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 154 of file edimu_system.h
+                    <programlisting>
+{
+A_POWER_DOWN, 
+A_ODR_3125, 
+A_ODR_625, 
+A_ODR_125, 
+A_ODR_25, 
+A_ODR_50, 
+A_ODR_100, 
+A_ODR_200, 
+A_ODR_400, 
+A_ODR_800, 
+A_ODR_1600, 
+}a_odr;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278">
+               <title>enum a_abw </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278a673459ef7230a157b1c9133682e5ef38">
+                            <term>A_ABW_773</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278abebf3506c669b49e8bb0e9b336a11836">
+                            <term>A_ABW_194</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278ab3ac328f4e427ce2c7d9dc67243b4446">
+                            <term>A_ABW_362</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a94b2ea4b980c77a0156baae05fafa278af6a4898c64003bfa125ce107f06ba1fe">
+                            <term>A_ABW_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 170 of file edimu_system.h
+                    <programlisting>
+{
+A_ABW_773, 
+A_ABW_194, 
+A_ABW_362, 
+A_ABW_50, 
+}a_abw;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7c">
+               <title>enum m_odr </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7cafe1b71a13c2a85d99faa46ba295b0036">
+                            <term>M_ODR_3125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca5e23f8438b6c448bb3e857de0e6652fd">
+                            <term>M_ODR_625</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7cadc5ab3742496b399082a63ca1b7be3b2">
+                            <term>M_ODR_125</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca625f92a758b2591f1fa1bf7e00c8a492">
+                            <term>M_ODR_25</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7ca0ea0e32be6c9cd0a7813aec7116d978b">
+                            <term>M_ODR_50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedimu__system_1a6912f3ae02645ead8e47b96ebf275b7caa678e4ce37cb70e5b4d06e63dc4226a6">
+                            <term>M_ODR_100</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 181 of file edimu_system.h
+                    <programlisting>
+{
+M_ODR_3125, 
+M_ODR_625, 
+M_ODR_125, 
+M_ODR_25, 
+M_ODR_50, 
+M_ODR_100, 
+}m_odr;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedimu__system_1a4c17647ced26f28a162520da42f32d13">
+                <title>edimu_system::edimu_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a382054be9280e8c43e4bc93a05a610c3">
+                <title>edimu_system::~edimu_system ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1adcec29ff9303db25800cf8026e0c6b37">
+                <title>edimu_system::a_abw edimu_system::accel_aa ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a16ad8b9dbb9a889c2191de9774377882">
+                <title>edimu_system::a_scale edimu_system::accel_scale ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a5e7fbd97fe33973ec60c1e180b19b797">
+                <title>edimu_system::a_odr edimu_system::accel_datarate ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a9ee88f6e0ae602d0037c2f7b0d43f3f8">
+                <title>void edimu_system::calibrate ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a4f625e2eecfc7a0bb14c7a6195c82771">
+                <title>edimu_system::g_scale edimu_system::gyro_scale ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a2bbaffa196674d42427bc4da6ac8164e">
+                <title>edimu_system::g_odr edimu_system::gyro_datarate ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ad21c665f25ae14f1da2d46e4274ba6ae">
+                <title>edimu_system::m_scale edimu_system::mag_scale ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1addc80a5048d987161abd25187f0d449f">
+                <title>edimu_system::m_odr edimu_system::mag_datarate ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1af745d305e5ff1cfaba3134fd4ff2c342">
+                <title>void edimu_system::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1abd6e59b943adbb48fa786f10f809070c">
+                <title>bool edimu_system::process (edmessage *msg)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a65927db96dc88e8752f0529d9faa6bc0">
+                <title>void edimu_system::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ad77a172b80472604b958abe1a7b037a0">
+                <title>void edimu_system::set_accel_aa (a_abw antialiasing)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a1bed4d35a4ddc0590694a805fffa7c9f">
+                <title>void edimu_system::set_accel_scale (a_scale scale)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ab813efe0e33b7e6f70af8d6b390a0076">
+                <title>void edimu_system::set_accel_datarate (a_odr datarate)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ac765ce7726af6fba582035f5a24ce91e">
+                <title>void edimu_system::set_gyro_scale (g_scale scale)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a5c188e537c342e56a10d70c8c1a4f9bc">
+                <title>void edimu_system::set_gyro_datarate (g_odr datarate)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a930fac9420df70417b040d554e29d8db">
+                <title>void edimu_system::set_mag_scale (m_scale scale)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1aa773e0db8441dc11bbb8399dede49a9c">
+                <title>void edimu_system::set_mag_datarate (m_odr datarate)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a70926a3b36b53f54913fc47ee471fb9b">
+                <title>void edimu_system::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ae3124c577ae10d92f69438f28ce67969">
+                <title>std::string edimu_system::typestr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a850c2b8420aef618edf9ec36f9436ed4">
+                <title>static std::string edimu_system::TypeString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a43007eea5d79a90a69858f8c2ae6862c">
+                <title>void edimu_system::_update_gres ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a4f9fa63d3b12a9abe99870bc6ac81c30">
+                <title>void edimu_system::_update_mres ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a4c6432b16774f7e0be511f589596b28a">
+                <title>void edimu_system::_update_ares ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a20db20aec82a23be51cfe776e6475b0d">
+                <title>bool edimu_system::_init_mag ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ae26eb1bcef9d314c7a8c957c8b898eb2">
+                <title>bool edimu_system::_init_accel ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1ab6f896d809e8f3fb7d0217cae57535f7">
+                <title>bool edimu_system::_init_gyro ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1abce9fe4a292a8bdf8dd2b17abb1512af">
+                <title>void edimu_system::_createMessage ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1aa67c04e59a1c409c59de006f061f28eb">
+                <title>fvec3 edimu_system::_calc_gyro ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a208217be9b9b73895a26080ce656f5a0">
+                <title>fvec3 edimu_system::_calc_mag ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedimu__system_1a568abf59144246caf3076736cdb8a6d4">
+                <title>fvec3 edimu_system::_calc_accel ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,161 @@
+\hypertarget{classedcomm__system}{\section{edcomm\-\_\-system Class Reference}
+\label{classedcomm__system}\index{edcomm\-\_\-system@{edcomm\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$edcomm\-\_\-system.\-h$>$}
+
+Inheritance diagram for edcomm\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedcomm__system}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedcomm__system_af0ff75511346286c460c8032f55b07ae}{edcomm\-\_\-system} ()
+\item 
+virtual \hyperlink{classedcomm__system_a15e21d845f4491cd2f8d82fb0924b580}{$\sim$edcomm\-\_\-system} ()
+\item 
+virtual void \hyperlink{classedcomm__system_a07f81f18aeca00b88928a8aec7b3129e}{init} ()
+\item 
+virtual void \hyperlink{classedcomm__system_ad9bdfd2845a3156f5d010e99f8fbed07}{release} ()
+\item 
+virtual bool \hyperlink{classedcomm__system_ad3b79f16dd77b5ae458cc360550e99cd}{process} (\hyperlink{structedmessage}{edmessage} $\ast$msg)
+\item 
+uint16\-\_\-t \hyperlink{classedcomm__system_ac7f39247c0f1ae2023adf9562dbc7c81}{port} ()
+\item 
+void \hyperlink{classedcomm__system_a36087648658a44860a8905d4b979c8fe}{set\-\_\-port} (uint16\-\_\-t port\-\_\-)
+\item 
+virtual void \hyperlink{classedcomm__system_adc9ffc8199070ad0d836a447005a4e1e}{update} ()
+\item 
+uint32\-\_\-t \hyperlink{classedcomm__system_ae9196f8b00b7e5d5a26075c4311b058c}{recv\-From\-Clients} (uint8\-\_\-t $\ast$data, uint32\-\_\-t max\-\_\-size)
+\item 
+void \hyperlink{classedcomm__system_a91aa83b31bc197b2f0ec1c5600f4ec9f}{send\-To\-Clients} (uint8\-\_\-t $\ast$data, uint32\-\_\-t size)
+\item 
+virtual std\-::string \hyperlink{classedcomm__system_a61e1243fba536c8263ba93367cd5a2a7}{typestr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classedcomm__system_a0e58236d155e30df3cc55de56023cdd5}{Type\-String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedcomm__system_af0ff75511346286c460c8032f55b07ae}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!edcomm\-\_\-system@{edcomm\-\_\-system}}
+\index{edcomm\-\_\-system@{edcomm\-\_\-system}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{edcomm\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edcomm\-\_\-system\-::edcomm\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedcomm__system_af0ff75511346286c460c8032f55b07ae}
+\hypertarget{classedcomm__system_a15e21d845f4491cd2f8d82fb0924b580}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!$\sim$edcomm\-\_\-system@{$\sim$edcomm\-\_\-system}}
+\index{$\sim$edcomm\-\_\-system@{$\sim$edcomm\-\_\-system}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{$\sim$edcomm\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edcomm\-\_\-system\-::$\sim$edcomm\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedcomm__system_a15e21d845f4491cd2f8d82fb0924b580}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedcomm__system_a07f81f18aeca00b88928a8aec7b3129e}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!init@{init}}
+\index{init@{init}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void edcomm\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedcomm__system_a07f81f18aeca00b88928a8aec7b3129e}
+
+
+Implements \hyperlink{classedsystem_a4c70e3568064941607fb220aea826a56}{edsystem}.
+
+\hypertarget{classedcomm__system_ac7f39247c0f1ae2023adf9562dbc7c81}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!port@{port}}
+\index{port@{port}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t edcomm\-\_\-system\-::port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedcomm__system_ac7f39247c0f1ae2023adf9562dbc7c81}
+\hypertarget{classedcomm__system_ad3b79f16dd77b5ae458cc360550e99cd}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!process@{process}}
+\index{process@{process}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}bool edcomm\-\_\-system\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf edmessage} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedcomm__system_ad3b79f16dd77b5ae458cc360550e99cd}
+
+
+Implements \hyperlink{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{edsystem}.
+
+\hypertarget{classedcomm__system_ae9196f8b00b7e5d5a26075c4311b058c}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!recv\-From\-Clients@{recv\-From\-Clients}}
+\index{recv\-From\-Clients@{recv\-From\-Clients}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{recv\-From\-Clients}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edcomm\-\_\-system\-::recv\-From\-Clients (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{data, }
+\item[{uint32\-\_\-t}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{classedcomm__system_ae9196f8b00b7e5d5a26075c4311b058c}
+\hypertarget{classedcomm__system_ad9bdfd2845a3156f5d010e99f8fbed07}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!release@{release}}
+\index{release@{release}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void edcomm\-\_\-system\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedcomm__system_ad9bdfd2845a3156f5d010e99f8fbed07}
+
+
+Implements \hyperlink{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{edsystem}.
+
+\hypertarget{classedcomm__system_a91aa83b31bc197b2f0ec1c5600f4ec9f}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!send\-To\-Clients@{send\-To\-Clients}}
+\index{send\-To\-Clients@{send\-To\-Clients}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{send\-To\-Clients}]{\setlength{\rightskip}{0pt plus 5cm}void edcomm\-\_\-system\-::send\-To\-Clients (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{data, }
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{classedcomm__system_a91aa83b31bc197b2f0ec1c5600f4ec9f}
+\hypertarget{classedcomm__system_a36087648658a44860a8905d4b979c8fe}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!set\-\_\-port@{set\-\_\-port}}
+\index{set\-\_\-port@{set\-\_\-port}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{set\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void edcomm\-\_\-system\-::set\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{port\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedcomm__system_a36087648658a44860a8905d4b979c8fe}
+\hypertarget{classedcomm__system_a61e1243fba536c8263ba93367cd5a2a7}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!typestr@{typestr}}
+\index{typestr@{typestr}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{typestr}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string edcomm\-\_\-system\-::typestr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classedcomm__system_a61e1243fba536c8263ba93367cd5a2a7}
+
+
+Implements \hyperlink{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{edsystem}.
+
+\hypertarget{classedcomm__system_a0e58236d155e30df3cc55de56023cdd5}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!Type\-String@{Type\-String}}
+\index{Type\-String@{Type\-String}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{Type\-String}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string edcomm\-\_\-system\-::\-Type\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classedcomm__system_a0e58236d155e30df3cc55de56023cdd5}
+\hypertarget{classedcomm__system_adc9ffc8199070ad0d836a447005a4e1e}{\index{edcomm\-\_\-system@{edcomm\-\_\-system}!update@{update}}
+\index{update@{update}!edcomm_system@{edcomm\-\_\-system}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void edcomm\-\_\-system\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedcomm__system_adc9ffc8199070ad0d836a447005a4e1e}
+
+
+Implements \hyperlink{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{edsystem}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edcomm__system_8h}{edcomm\-\_\-system.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edcomm__system_8cpp}{edcomm\-\_\-system.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structdevice__health__descriptor">
+<title>device_health_descriptor struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structdevice__health__descriptor_1a32127304d96ae4b44a59f6403d1f6ca0">device_health_descriptor</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structdevice__health__descriptor_1a54b8725863d9ca6c640a8eb5e557109f">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structdevice__health__descriptor_1a32127304d96ae4b44a59f6403d1f6ca0">
+                <title>device_health_descriptor::device_health_descriptor ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdevice__health__descriptor_1a54b8725863d9ca6c640a8eb5e557109f">
+                <title>virtual std::string device_health_descriptor::type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

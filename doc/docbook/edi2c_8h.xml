@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edi2c_8h">
+    <title>edi2c.h File Reference</title>
+    <programlisting>#include &lt;edthreaded_fd.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classedi2c">edi2c</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edi2c_8h_1a187ccab430c250b85bc7329beb4d2eb8">DEFAULT_READ_DELAY</link> 20</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="edi2c_8h_1a82815df34d076e01d8eb5c0c4df332da">DEFAULT_WRITE_DELAY</link> 20</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Declaration file for <link linkend="classedi2c">edi2c</link> class. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Thu Aug 27 17:39:59 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/edi2c.h</para>
+    </simplesect>
+</section>

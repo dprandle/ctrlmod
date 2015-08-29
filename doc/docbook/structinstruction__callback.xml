@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structinstruction__callback">
+<title>instruction_callback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="ednavsystem_8h">&lt;ednavsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ednav_system * m_nav_sys</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structinstruction__callback_1a718fc48b66cbe5b8acac6202e9ef5b2c">instruction_callback</link> (
+<link linkend="classednav__system">ednav_system</link> * system)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structinstruction__callback_1a74abfad8ac25461bb99e11fba10516c2">exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structinstruction__callback_1a718fc48b66cbe5b8acac6202e9ef5b2c">
+                <title>instruction_callback::instruction_callback (ednav_system *system)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinstruction__callback_1a74abfad8ac25461bb99e11fba10516c2">
+                <title>void instruction_callback::exec ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

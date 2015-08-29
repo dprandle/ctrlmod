@@ -1,0 +1,354 @@
+\hypertarget{classedthreaded__fd}{\section{edthreaded\-\_\-fd Class Reference}
+\label{classedthreaded__fd}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}
+}
+
+
+{\ttfamily \#include $<$edthreaded\-\_\-fd.\-h$>$}
+
+Inheritance diagram for edthreaded\-\_\-fd\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedthreaded__fd}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structedthreaded__fd_1_1Error}{Error}
+\item 
+struct \hyperlink{structedthreaded__fd_1_1WriteVal}{Write\-Val}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7}{Error\-Val} \{ \\*
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a29beb6d1cc1d22cc04de457e10c9ca35}{No\-Error}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7ae07e73e070b49478688e0d9f77b58b55}{Connection\-Closed}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a02dc57182bb3c610c739d52417ba5359}{Data\-Overwrite}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af16a08099723c4d84dc0c4799d1ff864}{Invalid\-Read}, 
+\\*
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a40d6cb36b60a22ded9e067b54c85a305}{Invalid\-Write}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af129b616b31507425750a425e7952fff}{Thread\-Creation}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a4abb816be001c2c4b8ff3a4092ab048d}{Open\-File\-Descriptor}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aa99856ec175ebaa60bd324b58aa2c3dc}{Configuration}, 
+\\*
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af195ec5ad8131af045485af5b04c4131}{Already\-Running}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aac2ebbfb6e21042eb50ca713a1b5e394}{F\-D\-Already\-Open}, 
+\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a2ef2a2f6fd755b520613dbaa22f26396}{Command\-No\-Response}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedthreaded__fd_aae0e03e726a962766ada1a053e426dfc}{edthreaded\-\_\-fd} (uint32\-\_\-t readbuf\-\_\-size=\hyperlink{edthreaded__fd_8h_a645b973029e4897854f96c850e30eaa3}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}, uint32\-\_\-t writebuf\-\_\-size=\hyperlink{edthreaded__fd_8h_a342873b4069f62ee07236e149ab6471b}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E})
+\item 
+virtual \hyperlink{classedthreaded__fd_a6f9a9d65186740a24d9bd3f164034e39}{$\sim$edthreaded\-\_\-fd} ()
+\item 
+virtual uint32\-\_\-t \hyperlink{classedthreaded__fd_a8f5b6c664a8fe5df737222e225f1fd19}{read} (uint8\-\_\-t $\ast$buffer, uint32\-\_\-t max\-\_\-size)
+\item 
+virtual uint32\-\_\-t \hyperlink{classedthreaded__fd_a69c6badd6cf1a9a635d670d2afec80d3}{write} (uint8\-\_\-t $\ast$buffer, uint32\-\_\-t size, int32\-\_\-t response\-\_\-size=0)
+\item 
+virtual \hyperlink{structedthreaded__fd_1_1Error}{Error} \hyperlink{classedthreaded__fd_a3708a6fecec91ca541a1c1c834bec7dd}{error} ()
+\item 
+bool \hyperlink{classedthreaded__fd_a55493d7c23181335e8412e2e7874795b}{running} ()
+\item 
+virtual bool \hyperlink{classedthreaded__fd_ac8123803d831c671b9b62881697e69e0}{start} ()
+\item 
+int32\-\_\-t \hyperlink{classedthreaded__fd_a4b4e4f3c1e8c0a4fd5389bcb8690ef08}{fd} ()
+\item 
+bool \hyperlink{classedthreaded__fd_aadead96bf63b16f95c48c7a863323b0e}{set\-\_\-fd} (int32\-\_\-t fd\-\_\-)
+\item 
+virtual void \hyperlink{classedthreaded__fd_a92a9a1f5b8df83c5697033822f1134b8}{stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int32\-\_\-t \hyperlink{classedthreaded__fd_a3ead513fc5aa5b33e18a6b7246091ee9}{\-\_\-raw\-\_\-read} (uint8\-\_\-t $\ast$buffer, uint32\-\_\-t max\-\_\-size)=0
+\item 
+virtual int32\-\_\-t \hyperlink{classedthreaded__fd_a0151298dfd0c91b95d27649031c5fa53}{\-\_\-raw\-\_\-write} (uint8\-\_\-t $\ast$buffer, uint32\-\_\-t max\-\_\-size)=0
+\item 
+virtual void \hyperlink{classedthreaded__fd_a251c391b913e2c151eb8840773f505c0}{\-\_\-do\-\_\-read} ()
+\item 
+virtual void \hyperlink{classedthreaded__fd_a0f6def6ed7b6147aad0f7007bcff83ee}{\-\_\-do\-\_\-write} ()
+\item 
+virtual void \hyperlink{classedthreaded__fd_a42c7b3bc22648ebbc71a1daeb1ac2535}{\-\_\-exec} ()
+\item 
+void \hyperlink{classedthreaded__fd_acf2f0e638887933b62229bf543c8733d}{\-\_\-set\-Error} (\hyperlink{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7}{Error\-Val} err\-\_\-val, int32\-\_\-t \-\_\-errno)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void $\ast$ \hyperlink{classedthreaded__fd_a7fbc6179a5ea6829529d01c94a659053}{thread\-\_\-exec} (void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\-\_\-t \hyperlink{classedthreaded__fd_aec9e15343d8764eae71949abfb72aae6}{m\-\_\-fd}
+\item 
+uint32\-\_\-t \hyperlink{classedthreaded__fd_a0b15523ca598761128ac79f7f4864d72}{m\-\_\-read\-\_\-rawindex}
+\item 
+uint32\-\_\-t \hyperlink{classedthreaded__fd_a4ada8ce6e55d793e5ac35fef6069cac2}{m\-\_\-read\-\_\-curindex}
+\item 
+uint32\-\_\-t \hyperlink{classedthreaded__fd_a5e31d54e745a41467270d2e8facef9f6}{m\-\_\-write\-\_\-rawindex}
+\item 
+uint32\-\_\-t \hyperlink{classedthreaded__fd_a318812ed9af58952dc87849634145e91}{m\-\_\-write\-\_\-curindex}
+\item 
+std\-::vector$<$ \hyperlink{structedthreaded__fd_1_1WriteVal}{Write\-Val} $>$ \hyperlink{classedthreaded__fd_aeaba4592ba02680a1d8653479f0d1d87}{m\-\_\-write\-\_\-buffer}
+\item 
+std\-::vector$<$ uint8\-\_\-t $>$ \hyperlink{classedthreaded__fd_ae1b93e783eee5006dd652cf75c117f28}{m\-\_\-read\-\_\-buffer}
+\item 
+\hyperlink{structedthreaded__fd_1_1Error}{Error} \hyperlink{classedthreaded__fd_a74eb86ee72a5dfa499e0529ac59955b0}{m\-\_\-err}
+\item 
+bool \hyperlink{classedthreaded__fd_a7ee685acbb7cb287455311b2dcd09bd4}{m\-\_\-running}
+\item 
+uint32\-\_\-t \hyperlink{classedthreaded__fd_a42482e8096aed090ead1f08f049a24e6}{m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count}
+\item 
+\hyperlink{classedtimer}{edtimer} $\ast$ \hyperlink{classedthreaded__fd_ae1244377b4ee3faf7f4cb9e21afadba6}{m\-\_\-wait\-\_\-timer}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{classedthreaded__fd_a8614fe087b0c94cc56be6b3cd71dbd66}{m\-\_\-send\-\_\-lock}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{classedthreaded__fd_a9c2f74e0cd623edc946b6bd74de87e24}{m\-\_\-recv\-\_\-lock}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{classedthreaded__fd_a407c7283668e38cefb828a3f4f4ec117}{m\-\_\-error\-\_\-lock}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{classedthreaded__fd_a44b98e3c701b2b71b7abee958b05c1d8}{m\-\_\-running\-\_\-lock}
+\item 
+pthread\-\_\-t \hyperlink{classedthreaded__fd_a96c9e8af500d47320c1396cc270cc41e}{m\-\_\-thread}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{classedthreaded__fd_a51b319f0e7d155dc96111998cbf641e2}{command\-\_\-wait\-\_\-callback}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Error\-Val@{Error\-Val}}
+\index{Error\-Val@{Error\-Val}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{Error\-Val}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edthreaded\-\_\-fd\-::\-Error\-Val}}}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{No\-Error@{No\-Error}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!No\-Error@{No\-Error}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a29beb6d1cc1d22cc04de457e10c9ca35}{No\-Error}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a29beb6d1cc1d22cc04de457e10c9ca35}
+}]\index{Connection\-Closed@{Connection\-Closed}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Connection\-Closed@{Connection\-Closed}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7ae07e73e070b49478688e0d9f77b58b55}{Connection\-Closed}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7ae07e73e070b49478688e0d9f77b58b55}
+}]\index{Data\-Overwrite@{Data\-Overwrite}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Data\-Overwrite@{Data\-Overwrite}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a02dc57182bb3c610c739d52417ba5359}{Data\-Overwrite}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a02dc57182bb3c610c739d52417ba5359}
+}]\index{Invalid\-Read@{Invalid\-Read}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Invalid\-Read@{Invalid\-Read}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af16a08099723c4d84dc0c4799d1ff864}{Invalid\-Read}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af16a08099723c4d84dc0c4799d1ff864}
+}]\index{Invalid\-Write@{Invalid\-Write}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Invalid\-Write@{Invalid\-Write}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a40d6cb36b60a22ded9e067b54c85a305}{Invalid\-Write}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a40d6cb36b60a22ded9e067b54c85a305}
+}]\index{Thread\-Creation@{Thread\-Creation}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Thread\-Creation@{Thread\-Creation}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af129b616b31507425750a425e7952fff}{Thread\-Creation}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af129b616b31507425750a425e7952fff}
+}]\index{Open\-File\-Descriptor@{Open\-File\-Descriptor}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Open\-File\-Descriptor@{Open\-File\-Descriptor}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a4abb816be001c2c4b8ff3a4092ab048d}{Open\-File\-Descriptor}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a4abb816be001c2c4b8ff3a4092ab048d}
+}]\index{Configuration@{Configuration}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Configuration@{Configuration}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aa99856ec175ebaa60bd324b58aa2c3dc}{Configuration}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aa99856ec175ebaa60bd324b58aa2c3dc}
+}]\index{Already\-Running@{Already\-Running}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Already\-Running@{Already\-Running}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af195ec5ad8131af045485af5b04c4131}{Already\-Running}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7af195ec5ad8131af045485af5b04c4131}
+}]\index{F\-D\-Already\-Open@{F\-D\-Already\-Open}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!F\-D\-Already\-Open@{F\-D\-Already\-Open}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aac2ebbfb6e21042eb50ca713a1b5e394}{F\-D\-Already\-Open}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7aac2ebbfb6e21042eb50ca713a1b5e394}
+}]\index{Command\-No\-Response@{Command\-No\-Response}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!Command\-No\-Response@{Command\-No\-Response}}\item[{\em 
+\hypertarget{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a2ef2a2f6fd755b520613dbaa22f26396}{Command\-No\-Response}\label{classedthreaded__fd_ab3562872429271887a15489b7a1a17d7a2ef2a2f6fd755b520613dbaa22f26396}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedthreaded__fd_aae0e03e726a962766ada1a053e426dfc}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!edthreaded\-\_\-fd@{edthreaded\-\_\-fd}}
+\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{edthreaded\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}edthreaded\-\_\-fd\-::edthreaded\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{readbuf\-\_\-size = {\ttfamily {\bf D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}, }
+\item[{uint32\-\_\-t}]{writebuf\-\_\-size = {\ttfamily {\bf D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}}
+\end{DoxyParamCaption}
+)}}\label{classedthreaded__fd_aae0e03e726a962766ada1a053e426dfc}
+\hypertarget{classedthreaded__fd_a6f9a9d65186740a24d9bd3f164034e39}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!$\sim$edthreaded\-\_\-fd@{$\sim$edthreaded\-\_\-fd}}
+\index{$\sim$edthreaded\-\_\-fd@{$\sim$edthreaded\-\_\-fd}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{$\sim$edthreaded\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}edthreaded\-\_\-fd\-::$\sim$edthreaded\-\_\-fd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_a6f9a9d65186740a24d9bd3f164034e39}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedthreaded__fd_a251c391b913e2c151eb8840773f505c0}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-do\-\_\-read@{\-\_\-do\-\_\-read}}
+\index{\-\_\-do\-\_\-read@{\-\_\-do\-\_\-read}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-do\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}void edthreaded\-\_\-fd\-::\-\_\-do\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classedthreaded__fd_a251c391b913e2c151eb8840773f505c0}
+\hypertarget{classedthreaded__fd_a0f6def6ed7b6147aad0f7007bcff83ee}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-do\-\_\-write@{\-\_\-do\-\_\-write}}
+\index{\-\_\-do\-\_\-write@{\-\_\-do\-\_\-write}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-do\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void edthreaded\-\_\-fd\-::\-\_\-do\-\_\-write (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classedthreaded__fd_a0f6def6ed7b6147aad0f7007bcff83ee}
+\hypertarget{classedthreaded__fd_a42c7b3bc22648ebbc71a1daeb1ac2535}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-exec@{\-\_\-exec}}
+\index{\-\_\-exec@{\-\_\-exec}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-exec}]{\setlength{\rightskip}{0pt plus 5cm}void edthreaded\-\_\-fd\-::\-\_\-exec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classedthreaded__fd_a42c7b3bc22648ebbc71a1daeb1ac2535}
+\hypertarget{classedthreaded__fd_a3ead513fc5aa5b33e18a6b7246091ee9}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-raw\-\_\-read@{\-\_\-raw\-\_\-read}}
+\index{\-\_\-raw\-\_\-read@{\-\_\-raw\-\_\-read}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-raw\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}virtual int32\-\_\-t edthreaded\-\_\-fd\-::\-\_\-raw\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classedthreaded__fd_a3ead513fc5aa5b33e18a6b7246091ee9}
+\hypertarget{classedthreaded__fd_a0151298dfd0c91b95d27649031c5fa53}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-raw\-\_\-write@{\-\_\-raw\-\_\-write}}
+\index{\-\_\-raw\-\_\-write@{\-\_\-raw\-\_\-write}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-raw\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}virtual int32\-\_\-t edthreaded\-\_\-fd\-::\-\_\-raw\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classedthreaded__fd_a0151298dfd0c91b95d27649031c5fa53}
+\hypertarget{classedthreaded__fd_acf2f0e638887933b62229bf543c8733d}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!\-\_\-set\-Error@{\-\_\-set\-Error}}
+\index{\-\_\-set\-Error@{\-\_\-set\-Error}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{\-\_\-set\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void edthreaded\-\_\-fd\-::\-\_\-set\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Val}}]{err\-\_\-val, }
+\item[{int32\-\_\-t}]{\-\_\-errno}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_acf2f0e638887933b62229bf543c8733d}
+\hypertarget{classedthreaded__fd_a3708a6fecec91ca541a1c1c834bec7dd}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!error@{error}}
+\index{error@{error}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edthreaded\-\_\-fd\-::\-Error} edthreaded\-\_\-fd\-::error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_a3708a6fecec91ca541a1c1c834bec7dd}
+\hypertarget{classedthreaded__fd_a4b4e4f3c1e8c0a4fd5389bcb8690ef08}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!fd@{fd}}
+\index{fd@{fd}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t edthreaded\-\_\-fd\-::fd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedthreaded__fd_a4b4e4f3c1e8c0a4fd5389bcb8690ef08}
+\hypertarget{classedthreaded__fd_a8f5b6c664a8fe5df737222e225f1fd19}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!read@{read}}
+\index{read@{read}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_a8f5b6c664a8fe5df737222e225f1fd19}
+\hypertarget{classedthreaded__fd_a55493d7c23181335e8412e2e7874795b}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!running@{running}}
+\index{running@{running}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{running}]{\setlength{\rightskip}{0pt plus 5cm}bool edthreaded\-\_\-fd\-::running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedthreaded__fd_a55493d7c23181335e8412e2e7874795b}
+\hypertarget{classedthreaded__fd_aadead96bf63b16f95c48c7a863323b0e}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!set\-\_\-fd@{set\-\_\-fd}}
+\index{set\-\_\-fd@{set\-\_\-fd}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{set\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}bool edthreaded\-\_\-fd\-::set\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{fd\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedthreaded__fd_aadead96bf63b16f95c48c7a863323b0e}
+\hypertarget{classedthreaded__fd_ac8123803d831c671b9b62881697e69e0}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!start@{start}}
+\index{start@{start}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool edthreaded\-\_\-fd\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_ac8123803d831c671b9b62881697e69e0}
+
+
+Reimplemented in \hyperlink{classedi2c_ad0e06417e0b488df02b1864d316d72c1}{edi2c}, and \hyperlink{classeduart_ae50ab2faddd54ed231380583b717ad5a}{eduart}.
+
+\hypertarget{classedthreaded__fd_a92a9a1f5b8df83c5697033822f1134b8}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!stop@{stop}}
+\index{stop@{stop}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void edthreaded\-\_\-fd\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_a92a9a1f5b8df83c5697033822f1134b8}
+\hypertarget{classedthreaded__fd_a7fbc6179a5ea6829529d01c94a659053}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!thread\-\_\-exec@{thread\-\_\-exec}}
+\index{thread\-\_\-exec@{thread\-\_\-exec}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{thread\-\_\-exec}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ edthreaded\-\_\-fd\-::thread\-\_\-exec (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{\-\_\-this}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classedthreaded__fd_a7fbc6179a5ea6829529d01c94a659053}
+\hypertarget{classedthreaded__fd_a69c6badd6cf1a9a635d670d2afec80d3}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!write@{write}}
+\index{write@{write}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{size, }
+\item[{int32\-\_\-t}]{response\-\_\-size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedthreaded__fd_a69c6badd6cf1a9a635d670d2afec80d3}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classedthreaded__fd_a51b319f0e7d155dc96111998cbf641e2}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!command\-\_\-wait\-\_\-callback@{command\-\_\-wait\-\_\-callback}}
+\index{command\-\_\-wait\-\_\-callback@{command\-\_\-wait\-\_\-callback}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{command\-\_\-wait\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}friend struct {\bf command\-\_\-wait\-\_\-callback}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classedthreaded__fd_a51b319f0e7d155dc96111998cbf641e2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classedthreaded__fd_a42482e8096aed090ead1f08f049a24e6}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count@{m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count}}
+\index{m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count@{m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-current\-\_\-wait\-\_\-for\-\_\-byte\-\_\-count\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a42482e8096aed090ead1f08f049a24e6}
+\hypertarget{classedthreaded__fd_a74eb86ee72a5dfa499e0529ac59955b0}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-err@{m\-\_\-err}}
+\index{m\-\_\-err@{m\-\_\-err}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-err}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error} edthreaded\-\_\-fd\-::m\-\_\-err\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a74eb86ee72a5dfa499e0529ac59955b0}
+\hypertarget{classedthreaded__fd_a407c7283668e38cefb828a3f4f4ec117}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-error\-\_\-lock@{m\-\_\-error\-\_\-lock}}
+\index{m\-\_\-error\-\_\-lock@{m\-\_\-error\-\_\-lock}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-error\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-error\-\_\-lock\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a407c7283668e38cefb828a3f4f4ec117}
+\hypertarget{classedthreaded__fd_aec9e15343d8764eae71949abfb72aae6}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-fd@{m\-\_\-fd}}
+\index{m\-\_\-fd@{m\-\_\-fd}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-fd\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_aec9e15343d8764eae71949abfb72aae6}
+\hypertarget{classedthreaded__fd_ae1b93e783eee5006dd652cf75c117f28}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-read\-\_\-buffer@{m\-\_\-read\-\_\-buffer}}
+\index{m\-\_\-read\-\_\-buffer@{m\-\_\-read\-\_\-buffer}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-read\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$uint8\-\_\-t$>$ edthreaded\-\_\-fd\-::m\-\_\-read\-\_\-buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_ae1b93e783eee5006dd652cf75c117f28}
+\hypertarget{classedthreaded__fd_a4ada8ce6e55d793e5ac35fef6069cac2}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-read\-\_\-curindex@{m\-\_\-read\-\_\-curindex}}
+\index{m\-\_\-read\-\_\-curindex@{m\-\_\-read\-\_\-curindex}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-read\-\_\-curindex}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-read\-\_\-curindex\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a4ada8ce6e55d793e5ac35fef6069cac2}
+\hypertarget{classedthreaded__fd_a0b15523ca598761128ac79f7f4864d72}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-read\-\_\-rawindex@{m\-\_\-read\-\_\-rawindex}}
+\index{m\-\_\-read\-\_\-rawindex@{m\-\_\-read\-\_\-rawindex}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-read\-\_\-rawindex}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-read\-\_\-rawindex\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a0b15523ca598761128ac79f7f4864d72}
+\hypertarget{classedthreaded__fd_a9c2f74e0cd623edc946b6bd74de87e24}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-recv\-\_\-lock@{m\-\_\-recv\-\_\-lock}}
+\index{m\-\_\-recv\-\_\-lock@{m\-\_\-recv\-\_\-lock}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-recv\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-recv\-\_\-lock\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a9c2f74e0cd623edc946b6bd74de87e24}
+\hypertarget{classedthreaded__fd_a7ee685acbb7cb287455311b2dcd09bd4}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-running@{m\-\_\-running}}
+\index{m\-\_\-running@{m\-\_\-running}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}bool edthreaded\-\_\-fd\-::m\-\_\-running\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a7ee685acbb7cb287455311b2dcd09bd4}
+\hypertarget{classedthreaded__fd_a44b98e3c701b2b71b7abee958b05c1d8}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-running\-\_\-lock@{m\-\_\-running\-\_\-lock}}
+\index{m\-\_\-running\-\_\-lock@{m\-\_\-running\-\_\-lock}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-running\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-running\-\_\-lock\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a44b98e3c701b2b71b7abee958b05c1d8}
+\hypertarget{classedthreaded__fd_a8614fe087b0c94cc56be6b3cd71dbd66}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-send\-\_\-lock@{m\-\_\-send\-\_\-lock}}
+\index{m\-\_\-send\-\_\-lock@{m\-\_\-send\-\_\-lock}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-send\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-send\-\_\-lock\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a8614fe087b0c94cc56be6b3cd71dbd66}
+\hypertarget{classedthreaded__fd_a96c9e8af500d47320c1396cc270cc41e}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-thread@{m\-\_\-thread}}
+\index{m\-\_\-thread@{m\-\_\-thread}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-thread\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a96c9e8af500d47320c1396cc270cc41e}
+\hypertarget{classedthreaded__fd_ae1244377b4ee3faf7f4cb9e21afadba6}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-wait\-\_\-timer@{m\-\_\-wait\-\_\-timer}}
+\index{m\-\_\-wait\-\_\-timer@{m\-\_\-wait\-\_\-timer}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-wait\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edtimer}$\ast$ edthreaded\-\_\-fd\-::m\-\_\-wait\-\_\-timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_ae1244377b4ee3faf7f4cb9e21afadba6}
+\hypertarget{classedthreaded__fd_aeaba4592ba02680a1d8653479f0d1d87}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-write\-\_\-buffer@{m\-\_\-write\-\_\-buffer}}
+\index{m\-\_\-write\-\_\-buffer@{m\-\_\-write\-\_\-buffer}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-write\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Write\-Val}$>$ edthreaded\-\_\-fd\-::m\-\_\-write\-\_\-buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_aeaba4592ba02680a1d8653479f0d1d87}
+\hypertarget{classedthreaded__fd_a318812ed9af58952dc87849634145e91}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-write\-\_\-curindex@{m\-\_\-write\-\_\-curindex}}
+\index{m\-\_\-write\-\_\-curindex@{m\-\_\-write\-\_\-curindex}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-write\-\_\-curindex}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-write\-\_\-curindex\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a318812ed9af58952dc87849634145e91}
+\hypertarget{classedthreaded__fd_a5e31d54e745a41467270d2e8facef9f6}{\index{edthreaded\-\_\-fd@{edthreaded\-\_\-fd}!m\-\_\-write\-\_\-rawindex@{m\-\_\-write\-\_\-rawindex}}
+\index{m\-\_\-write\-\_\-rawindex@{m\-\_\-write\-\_\-rawindex}!edthreaded_fd@{edthreaded\-\_\-fd}}
+\subsubsection[{m\-\_\-write\-\_\-rawindex}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edthreaded\-\_\-fd\-::m\-\_\-write\-\_\-rawindex\hspace{0.3cm}{\ttfamily [protected]}}}\label{classedthreaded__fd_a5e31d54e745a41467270d2e8facef9f6}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edthreaded__fd_8h}{edthreaded\-\_\-fd.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edthreaded__fd_8cpp}{edthreaded\-\_\-fd.\-cpp}\end{DoxyCompactItemize}

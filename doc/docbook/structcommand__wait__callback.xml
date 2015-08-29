@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structcommand__wait__callback">
+<title>command_wait_callback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edthreaded__fd_8h">&lt;edthreaded_fd.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edthreaded_fd * handle</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structcommand__wait__callback_1ad7cfd5e02bb8af294a245b120bb542c7">command_wait_callback</link> (
+<link linkend="classedthreaded__fd">edthreaded_fd</link> * _handle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structcommand__wait__callback_1ae5ab034230cd73f6203cee386ba1993c">exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structcommand__wait__callback_1ad7cfd5e02bb8af294a245b120bb542c7">
+                <title>command_wait_callback::command_wait_callback (edthreaded_fd *_handle)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structcommand__wait__callback_1ae5ab034230cd73f6203cee386ba1993c">
+                <title>void command_wait_callback::exec ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

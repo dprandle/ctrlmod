@@ -1,0 +1,110 @@
+\hypertarget{classedsystem}{\section{edsystem Class Reference}
+\label{classedsystem}\index{edsystem@{edsystem}}
+}
+
+
+{\ttfamily \#include $<$edsystem.\-h$>$}
+
+Inheritance diagram for edsystem\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.555556cm]{classedsystem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedsystem_af87c5a01f7cf70dcc788bbf1dbd8aeb1}{edsystem} ()
+\item 
+virtual \hyperlink{classedsystem_af3022d068ee9dda5b7da8438680e6437}{$\sim$edsystem} ()
+\item 
+virtual void \hyperlink{classedsystem_a4c70e3568064941607fb220aea826a56}{init} ()=0
+\item 
+virtual void \hyperlink{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{release} ()=0
+\item 
+virtual bool \hyperlink{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{process} (\hyperlink{structedmessage}{edmessage} $\ast$msg)=0
+\item 
+virtual void \hyperlink{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{update} ()=0
+\item 
+virtual std\-::string \hyperlink{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{typestr} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedsystem_af87c5a01f7cf70dcc788bbf1dbd8aeb1}{\index{edsystem@{edsystem}!edsystem@{edsystem}}
+\index{edsystem@{edsystem}!edsystem@{edsystem}}
+\subsubsection[{edsystem}]{\setlength{\rightskip}{0pt plus 5cm}edsystem\-::edsystem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classedsystem_af87c5a01f7cf70dcc788bbf1dbd8aeb1}
+\hypertarget{classedsystem_af3022d068ee9dda5b7da8438680e6437}{\index{edsystem@{edsystem}!$\sim$edsystem@{$\sim$edsystem}}
+\index{$\sim$edsystem@{$\sim$edsystem}!edsystem@{edsystem}}
+\subsubsection[{$\sim$edsystem}]{\setlength{\rightskip}{0pt plus 5cm}virtual edsystem\-::$\sim$edsystem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classedsystem_af3022d068ee9dda5b7da8438680e6437}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedsystem_a4c70e3568064941607fb220aea826a56}{\index{edsystem@{edsystem}!init@{init}}
+\index{init@{init}!edsystem@{edsystem}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void edsystem\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classedsystem_a4c70e3568064941607fb220aea826a56}
+
+
+Implemented in \hyperlink{classedimu__system_af745d305e5ff1cfaba3134fd4ff2c342}{edimu\-\_\-system}, \hyperlink{classedpl__system_a4d9fae9e10da9cae1f1e7a00e751c933}{edpl\-\_\-system}, \hyperlink{classednav__system_a98bc9b1cecf79a6ca7145e34a0273ca2}{ednav\-\_\-system}, \hyperlink{classedcomm__system_a07f81f18aeca00b88928a8aec7b3129e}{edcomm\-\_\-system}, \hyperlink{classedrplidar__system_aeac91046ef78f68cb9463ad216719def}{edrplidar\-\_\-system}, and \hyperlink{classedlogging__system_a393094d06bb5d15155be58286f0a5185}{edlogging\-\_\-system}.
+
+\hypertarget{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{\index{edsystem@{edsystem}!process@{process}}
+\index{process@{process}!edsystem@{edsystem}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool edsystem\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf edmessage} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}
+
+
+Implemented in \hyperlink{classedimu__system_abd6e59b943adbb48fa786f10f809070c}{edimu\-\_\-system}, \hyperlink{classedpl__system_a4aae16b8695eec7c54ccfaecee9c535c}{edpl\-\_\-system}, \hyperlink{classednav__system_ae90088e1c3a01fdeb0fc051af71e6d6a}{ednav\-\_\-system}, \hyperlink{classedcomm__system_ad3b79f16dd77b5ae458cc360550e99cd}{edcomm\-\_\-system}, \hyperlink{classedrplidar__system_aa6d1766212432f586944027b0d5b0950}{edrplidar\-\_\-system}, and \hyperlink{classedlogging__system_aa1d63881863c61a89e80aa8187b8d19d}{edlogging\-\_\-system}.
+
+\hypertarget{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{\index{edsystem@{edsystem}!release@{release}}
+\index{release@{release}!edsystem@{edsystem}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void edsystem\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}
+
+
+Implemented in \hyperlink{classedimu__system_a65927db96dc88e8752f0529d9faa6bc0}{edimu\-\_\-system}, \hyperlink{classedpl__system_adb2b906b466251dc513fb9d669a19e99}{edpl\-\_\-system}, \hyperlink{classednav__system_aa41383e31657188e5386b45d4dd7e4cd}{ednav\-\_\-system}, \hyperlink{classedcomm__system_ad9bdfd2845a3156f5d010e99f8fbed07}{edcomm\-\_\-system}, \hyperlink{classedrplidar__system_ab8e9f26bd1f1a8501b36d6eaedd44ced}{edrplidar\-\_\-system}, and \hyperlink{classedlogging__system_ad959e6d140397e22953b2b7d1738456a}{edlogging\-\_\-system}.
+
+\hypertarget{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{\index{edsystem@{edsystem}!typestr@{typestr}}
+\index{typestr@{typestr}!edsystem@{edsystem}}
+\subsubsection[{typestr}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string edsystem\-::typestr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classedsystem_a19dc65111f9a38259fcafba3a32a646d}
+
+
+Implemented in \hyperlink{classedimu__system_ae3124c577ae10d92f69438f28ce67969}{edimu\-\_\-system}, \hyperlink{classedpl__system_ab758bc4300926af08e47e0c8b655d8fc}{edpl\-\_\-system}, \hyperlink{classedcomm__system_a61e1243fba536c8263ba93367cd5a2a7}{edcomm\-\_\-system}, \hyperlink{classednav__system_a3d604cf5dcff8c1c7d8c492e213c1e3c}{ednav\-\_\-system}, \hyperlink{classedrplidar__system_ae777072e4712d7bed997032842f2dad0}{edrplidar\-\_\-system}, and \hyperlink{classedlogging__system_ad1262db654a7d7acee6b217a09588170}{edlogging\-\_\-system}.
+
+\hypertarget{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{\index{edsystem@{edsystem}!update@{update}}
+\index{update@{update}!edsystem@{edsystem}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void edsystem\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}
+
+
+Implemented in \hyperlink{classedimu__system_a70926a3b36b53f54913fc47ee471fb9b}{edimu\-\_\-system}, \hyperlink{classedpl__system_ae84af8dea7c53fe3219e7cde15ddd43a}{edpl\-\_\-system}, \hyperlink{classednav__system_a3a32c9f0ee4c089ac2e0eff9dae9a879}{ednav\-\_\-system}, \hyperlink{classedcomm__system_adc9ffc8199070ad0d836a447005a4e1e}{edcomm\-\_\-system}, \hyperlink{classedrplidar__system_aeaa11dbbb634e7392629982a57868c62}{edrplidar\-\_\-system}, and \hyperlink{classedlogging__system_ac9b9dd8d391244acdea02666a56f8440}{edlogging\-\_\-system}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edsystem_8h}{edsystem.\-h}\end{DoxyCompactItemize}

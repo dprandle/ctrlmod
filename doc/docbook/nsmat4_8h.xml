@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="nsmat4_8h">
+    <title>nsmat4.h File Reference</title>
+    <programlisting>#include &quot;nsmat3.h&quot;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structnsmat4">nsmat4</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a7197a47f20f1c0f917276103bceae9e2">operator*</link> (
+const int32_t &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a13a2ee958cf1ef3be2c5c3c294b44a17">operator*</link> (
+const float &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ababf9dbdad669323126024d5f47f0ecf">operator*</link> (
+const double &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a0fa70f7eb4e56a987c3ceb3b7d7ec09a">operator/</link> (
+const int32_t &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1adb454ee0d2919d3ea3c262608ad3b806">operator/</link> (
+const float &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ac7fb7c5ff986d9cae438aad32aaa5eb7">operator/</link> (
+const double &amp; pLHS, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="nsmat4_8h_1a4f76180168faea61acd6b490143ec621">operator*</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; lhs, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structNSVec3">NSVec3</link>&lt; T &gt; <link linkend="nsmat4_8h_1a11d1241f22a907d1b48c04dfde028f21">operator/</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; lhs, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1afabd044522b79e418d74138dcff445f8">operator%</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; lhs, const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; rhs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="nsmat4_8h_1a11e390a5a70385b94dafe1d34f068d73">determinant</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; mat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a700ed02bf96050f1e1d2a29a3a317046">inverse</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; mat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a0eb51a89e26939140fda36538436c0c6">ortho</link> (
+const T &amp; left, const T &amp; right, const T &amp; top, const T &amp; bottom, const T &amp; near, const T &amp; far)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ae63d8edf57c722ddd3a1bc2d73d8fab3">perspective</link> (
+const T &amp; fovAngle, const T &amp; aspectRatio, const T &amp; zNear, const T &amp; zFar)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a42c6b8ee398187e00f1de6dded3f9521">rotation_mat4</link> (
+const <link linkend="structNSVec4">NSVec4</link>&lt; T &gt; &amp; axisAngle, bool rads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a2f739517841486c09206ec3bfee84b40">rotation_mat4</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; euler, typename <link linkend="structNSVec3">NSVec3</link>&lt; T &gt;::EulerOrder order, bool rads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a81a58b6e81c97121c97e12ce212bb8da">rotation_mat4</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; orientation)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1aa75686ed08d1b947eda6b8b9fb8eb5f9">rotation_mat4</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; vec, const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; toVec)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a0e26624eeb0887996fa59107beecffe9">rotation_mat4</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1aa400a3ff7e0f17d801550016ca0f4bce">scaling_mat4</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; scale)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ace97f3a097c5fa04acf802ed6f7e5f41">scaling_mat4</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a91790f5fd9d4249ff798bf3ab6f1cdd1">scaling_mat4</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ade42d37f4a0701deee66db1bd0081985">transpose</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; mat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a5d18dc13495430269f7832f0046e17fd">translation_mat4</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; pos)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1aabadefadac38505919c05467d292131d">translation_mat4</link> (
+const <link linkend="structNSVec4">NSVec4</link>&lt; T &gt; &amp; posw)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1a4277712758922eb28db41afa58ed26bb">translation_mat4</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="nsmat4_8h_1a95937898c0189df6f4d056a7cec44cb6">pup</link> (
+PUPer &amp; p, <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; m4)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsmat4">nsmat4</link>&lt; T &gt; <link linkend="nsmat4_8h_1ac90bbc2e43b523578fc12cf2ff27f1dd">rotationMat4</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="nsmat4_8h_1ad4fa02cb0d9c0d43a63b5c9c88fc7e41">pup</link> (
+PUPer &amp; p, <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; m4, const std::string &amp; varName)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/nsmat4.h</para>
+    </simplesect>
+</section>

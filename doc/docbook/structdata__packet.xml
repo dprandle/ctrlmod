@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structdata__packet">
+<title>data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structdata__packet_1aeac45f0ad8cb14657bd37306170b2afd">data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structdata__packet_1a63fd3fc8f94d6bd4fb3accfe612cfe3b">~data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structdata__packet_1ad7ce179caef76c895bfc778862bc15ac">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structdata__packet_1af0795581f2d57a8c14a88009da37aee1">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structdata__packet_1ab5c9259a79cde0dc60d75135fe8464f6">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structdata__packet_1a8f0d95d4a7a7089b45cef14e45b0c21b">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structdata__packet_1ac53dcca572fc7cf7d71ae21d5c785365">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structdata__packet_1aeac45f0ad8cb14657bd37306170b2afd">
+                <title>data_packet::data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1a63fd3fc8f94d6bd4fb3accfe612cfe3b">
+                <title>virtual data_packet::~data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1ad7ce179caef76c895bfc778862bc15ac">
+                <title>virtual std::string data_packet::toString ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1af0795581f2d57a8c14a88009da37aee1">
+                <title>virtual std::string data_packet::type ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1ab5c9259a79cde0dc60d75135fe8464f6">
+                <title>virtual uint32_t data_packet::size ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1a8f0d95d4a7a7089b45cef14e45b0c21b">
+                <title>virtual uint8_t&amp; data_packet::operator[] (uint32_t index)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdata__packet_1ac53dcca572fc7cf7d71ae21d5c785365">
+                <title>virtual uint8_t* data_packet::dataptr ()=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

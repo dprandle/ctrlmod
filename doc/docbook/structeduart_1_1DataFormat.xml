@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structeduart_1_1DataFormat">
+<title>eduart::DataFormat struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="eduart_8h">&lt;eduart.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataBits db</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Parity p</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StopBits sb</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structeduart_1_1DataFormat_1a25d5d11b4a91ae142838d6d88b96a5b3">DataFormat</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structeduart_1_1DataFormat_1a25d5d11b4a91ae142838d6d88b96a5b3">
+                <title>eduart::DataFormat::DataFormat ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

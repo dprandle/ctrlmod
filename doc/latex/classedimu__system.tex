@@ -1,0 +1,514 @@
+\hypertarget{classedimu__system}{\section{edimu\-\_\-system Class Reference}
+\label{classedimu__system}\index{edimu\-\_\-system@{edimu\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$edimu\-\_\-system.\-h$>$}
+
+Inheritance diagram for edimu\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedimu__system}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692}{g\-\_\-scale} \{ \hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ae3ca8f1426d51135044acb876bbf8d62}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S}, 
+\hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ac75709ac7d6a83a5c8fa75d61a550cdd}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S}, 
+\hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692aee32250020a13cdce09a11247d4dec46}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S}
+ \}
+\begin{DoxyCompactList}\small\item\em possible ranges of the gyroscope \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707}{a\-\_\-scale} \{ \\*
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707aad79008dcf3400051f927a49d8ea079b}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G}, 
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a266db1462a0f522e112882219edde397}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G}, 
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a1b2236322d581b3b4ec808b5c754b95c}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G}, 
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a9db696dbf82ab98ea5645e1277a1cb50}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G}, 
+\\*
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707ac36f1eb434af93d54110b82882463ae0}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible F\-S\-R's of the accelerometer. \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3}{m\-\_\-scale} \{ \hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3a1e2b05cb9c5203ecf8de8f02274aa875}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S}, 
+\hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3af5c9b84c56a16b30a438ce2cd0a80d60}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S}, 
+\hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ad7d18ad9a5cc8188c90ead4a1b3c9dc5}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S}, 
+\hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ab26ba594363c13a86809357673513d33}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible F\-S\-R's of the magnetometer. \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857}{g\-\_\-odr} \{ \\*
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a7d3f6e71791376f2d1b2d2c81807ebb3}{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125} = 0x0, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a5d2fc14a0048ca8eab15315e03d0b7f6}{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25} = 0x1, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a8c12ef2286ffa75355d5061da725c320}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125} = 0x4, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a986d076cfaa392fa58508b98a397a872}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25} = 0x5, 
+\\*
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ae0dee541e707db36687a7ad3fcb85acc}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50} = 0x6, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a66466db4312dadf3b3f38b0abf01b448}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70} = 0x7, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857afb3501066d4ab609261676771bb47852}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20} = 0x8, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a04d047c632a24ae7cd0e85575fd2a83b}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25} = 0x9, 
+\\*
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a92acbaa3992716666e3d34a9127e11e3}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50} = 0x\-A, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a2fa626b536fce0640868fa5b32884ba1}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100} = 0x\-B, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a3604bd7462bdbe0bdb2c7c6ea3ed439a}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30} = 0x\-C, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a6eb0a12445b6fa37d4f889b1f2753dd4}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35} = 0x\-D, 
+\\*
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ab0c158480ed9b5a6755d2a33d7d6d6ed}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50} = 0x\-E, 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857aee29786b1e5a4f06a9d3f83bc0a94f45}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100} = 0x\-F
+ \}
+\begin{DoxyCompactList}\small\item\em Possible data rate/bandwidth combos of the gyro. \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409}{a\-\_\-odr} \{ \\*
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a612669c7c2e709c2599c8f1205fc6789}{A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a985e1725f4d2b592addd3ce39c6b9d67}{A\-\_\-\-O\-D\-R\-\_\-3125}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a39562621cfa654b48c8fb1e7d6547ea1}{A\-\_\-\-O\-D\-R\-\_\-625}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a3c446dbff5f9525174ec1babedd00130}{A\-\_\-\-O\-D\-R\-\_\-125}, 
+\\*
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a1c556e092ac518da584bf7ae59d8169d}{A\-\_\-\-O\-D\-R\-\_\-25}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409adaeb950e8705c779eefbde7c4a05a6d4}{A\-\_\-\-O\-D\-R\-\_\-50}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac5c6a9f89b38b88c58d72f828a9489d7}{A\-\_\-\-O\-D\-R\-\_\-100}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a8a602041d9319a516e9a70d7ebe464b4}{A\-\_\-\-O\-D\-R\-\_\-200}, 
+\\*
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2e581fcaddb09bada44ee82120dc720f}{A\-\_\-\-O\-D\-R\-\_\-400}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac08490b692283f696f7725ca348037e6}{A\-\_\-\-O\-D\-R\-\_\-800}, 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2505e8202c185b7a0fd9d3a2c84506e6}{A\-\_\-\-O\-D\-R\-\_\-1600}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible output data rates of the accelerometer. \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278}{a\-\_\-abw} \{ \hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278a673459ef7230a157b1c9133682e5ef38}{A\-\_\-\-A\-B\-W\-\_\-773}, 
+\hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278abebf3506c669b49e8bb0e9b336a11836}{A\-\_\-\-A\-B\-W\-\_\-194}, 
+\hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278ab3ac328f4e427ce2c7d9dc67243b4446}{A\-\_\-\-A\-B\-W\-\_\-362}, 
+\hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278af6a4898c64003bfa125ce107f06ba1fe}{A\-\_\-\-A\-B\-W\-\_\-50}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible anti-\/aliasing filter rates of the accelerometer. \end{DoxyCompactList}\item 
+enum \hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7c}{m\-\_\-odr} \{ \\*
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cafe1b71a13c2a85d99faa46ba295b0036}{M\-\_\-\-O\-D\-R\-\_\-3125}, 
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca5e23f8438b6c448bb3e857de0e6652fd}{M\-\_\-\-O\-D\-R\-\_\-625}, 
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cadc5ab3742496b399082a63ca1b7be3b2}{M\-\_\-\-O\-D\-R\-\_\-125}, 
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca625f92a758b2591f1fa1bf7e00c8a492}{M\-\_\-\-O\-D\-R\-\_\-25}, 
+\\*
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca0ea0e32be6c9cd0a7813aec7116d978b}{M\-\_\-\-O\-D\-R\-\_\-50}, 
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7caa678e4ce37cb70e5b4d06e63dc4226a6}{M\-\_\-\-O\-D\-R\-\_\-100}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible output data rates of the magnetometer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedimu__system_a4c17647ced26f28a162520da42f32d13}{edimu\-\_\-system} ()
+\item 
+\hyperlink{classedimu__system_a382054be9280e8c43e4bc93a05a610c3}{$\sim$edimu\-\_\-system} ()
+\item 
+\hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278}{a\-\_\-abw} \hyperlink{classedimu__system_adcec29ff9303db25800cf8026e0c6b37}{accel\-\_\-aa} ()
+\item 
+\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707}{a\-\_\-scale} \hyperlink{classedimu__system_a16ad8b9dbb9a889c2191de9774377882}{accel\-\_\-scale} ()
+\item 
+\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409}{a\-\_\-odr} \hyperlink{classedimu__system_a5e7fbd97fe33973ec60c1e180b19b797}{accel\-\_\-datarate} ()
+\item 
+void \hyperlink{classedimu__system_a9ee88f6e0ae602d0037c2f7b0d43f3f8}{calibrate} ()
+\item 
+\hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692}{g\-\_\-scale} \hyperlink{classedimu__system_a4f625e2eecfc7a0bb14c7a6195c82771}{gyro\-\_\-scale} ()
+\item 
+\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857}{g\-\_\-odr} \hyperlink{classedimu__system_a2bbaffa196674d42427bc4da6ac8164e}{gyro\-\_\-datarate} ()
+\item 
+\hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3}{m\-\_\-scale} \hyperlink{classedimu__system_ad21c665f25ae14f1da2d46e4274ba6ae}{mag\-\_\-scale} ()
+\item 
+\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7c}{m\-\_\-odr} \hyperlink{classedimu__system_addc80a5048d987161abd25187f0d449f}{mag\-\_\-datarate} ()
+\item 
+void \hyperlink{classedimu__system_af745d305e5ff1cfaba3134fd4ff2c342}{init} ()
+\item 
+bool \hyperlink{classedimu__system_abd6e59b943adbb48fa786f10f809070c}{process} (\hyperlink{structedmessage}{edmessage} $\ast$msg)
+\item 
+void \hyperlink{classedimu__system_a65927db96dc88e8752f0529d9faa6bc0}{release} ()
+\item 
+void \hyperlink{classedimu__system_ad77a172b80472604b958abe1a7b037a0}{set\-\_\-accel\-\_\-aa} (\hyperlink{classedimu__system_a94b2ea4b980c77a0156baae05fafa278}{a\-\_\-abw} antialiasing)
+\item 
+void \hyperlink{classedimu__system_a1bed4d35a4ddc0590694a805fffa7c9f}{set\-\_\-accel\-\_\-scale} (\hyperlink{classedimu__system_a61602a34b68df60f8f10c1cd7af37707}{a\-\_\-scale} scale)
+\item 
+void \hyperlink{classedimu__system_ab813efe0e33b7e6f70af8d6b390a0076}{set\-\_\-accel\-\_\-datarate} (\hyperlink{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409}{a\-\_\-odr} datarate)
+\item 
+void \hyperlink{classedimu__system_ac765ce7726af6fba582035f5a24ce91e}{set\-\_\-gyro\-\_\-scale} (\hyperlink{classedimu__system_ac676a08f02fdc00d8e8210985f03e692}{g\-\_\-scale} scale)
+\item 
+void \hyperlink{classedimu__system_a5c188e537c342e56a10d70c8c1a4f9bc}{set\-\_\-gyro\-\_\-datarate} (\hyperlink{classedimu__system_aa3293bf451856110ad0b082b9ec0f857}{g\-\_\-odr} datarate)
+\item 
+void \hyperlink{classedimu__system_a930fac9420df70417b040d554e29d8db}{set\-\_\-mag\-\_\-scale} (\hyperlink{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3}{m\-\_\-scale} scale)
+\item 
+void \hyperlink{classedimu__system_aa773e0db8441dc11bbb8399dede49a9c}{set\-\_\-mag\-\_\-datarate} (\hyperlink{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7c}{m\-\_\-odr} datarate)
+\item 
+void \hyperlink{classedimu__system_a70926a3b36b53f54913fc47ee471fb9b}{update} ()
+\item 
+std\-::string \hyperlink{classedimu__system_ae3124c577ae10d92f69438f28ce67969}{typestr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classedimu__system_a850c2b8420aef618edf9ec36f9436ed4}{Type\-String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classedimu__system_a94b2ea4b980c77a0156baae05fafa278}{\index{edimu\-\_\-system@{edimu\-\_\-system}!a\-\_\-abw@{a\-\_\-abw}}
+\index{a\-\_\-abw@{a\-\_\-abw}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{a\-\_\-abw}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::a\-\_\-abw}}}\label{classedimu__system_a94b2ea4b980c77a0156baae05fafa278}
+
+
+Possible anti-\/aliasing filter rates of the accelerometer. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-\_\-\-A\-B\-W\-\_\-773@{A\-\_\-\-A\-B\-W\-\_\-773}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-A\-B\-W\-\_\-773@{A\-\_\-\-A\-B\-W\-\_\-773}}\item[{\em 
+\hypertarget{classedimu__system_a94b2ea4b980c77a0156baae05fafa278a673459ef7230a157b1c9133682e5ef38}{A\-\_\-\-A\-B\-W\-\_\-773}\label{classedimu__system_a94b2ea4b980c77a0156baae05fafa278a673459ef7230a157b1c9133682e5ef38}
+}]773 Hz (0x0) \index{A\-\_\-\-A\-B\-W\-\_\-194@{A\-\_\-\-A\-B\-W\-\_\-194}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-A\-B\-W\-\_\-194@{A\-\_\-\-A\-B\-W\-\_\-194}}\item[{\em 
+\hypertarget{classedimu__system_a94b2ea4b980c77a0156baae05fafa278abebf3506c669b49e8bb0e9b336a11836}{A\-\_\-\-A\-B\-W\-\_\-194}\label{classedimu__system_a94b2ea4b980c77a0156baae05fafa278abebf3506c669b49e8bb0e9b336a11836}
+}]194 Hz (0x1) \index{A\-\_\-\-A\-B\-W\-\_\-362@{A\-\_\-\-A\-B\-W\-\_\-362}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-A\-B\-W\-\_\-362@{A\-\_\-\-A\-B\-W\-\_\-362}}\item[{\em 
+\hypertarget{classedimu__system_a94b2ea4b980c77a0156baae05fafa278ab3ac328f4e427ce2c7d9dc67243b4446}{A\-\_\-\-A\-B\-W\-\_\-362}\label{classedimu__system_a94b2ea4b980c77a0156baae05fafa278ab3ac328f4e427ce2c7d9dc67243b4446}
+}]362 Hz (0x2) \index{A\-\_\-\-A\-B\-W\-\_\-50@{A\-\_\-\-A\-B\-W\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-A\-B\-W\-\_\-50@{A\-\_\-\-A\-B\-W\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_a94b2ea4b980c77a0156baae05fafa278af6a4898c64003bfa125ce107f06ba1fe}{A\-\_\-\-A\-B\-W\-\_\-50}\label{classedimu__system_a94b2ea4b980c77a0156baae05fafa278af6a4898c64003bfa125ce107f06ba1fe}
+}]50 Hz (0x3) \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409}{\index{edimu\-\_\-system@{edimu\-\_\-system}!a\-\_\-odr@{a\-\_\-odr}}
+\index{a\-\_\-odr@{a\-\_\-odr}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{a\-\_\-odr}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::a\-\_\-odr}}}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409}
+
+
+Possible output data rates of the accelerometer. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N@{A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N@{A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a612669c7c2e709c2599c8f1205fc6789}{A\-\_\-\-P\-O\-W\-E\-R\-\_\-\-D\-O\-W\-N}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a612669c7c2e709c2599c8f1205fc6789}
+}]Power-\/down mode (0x0) \index{A\-\_\-\-O\-D\-R\-\_\-3125@{A\-\_\-\-O\-D\-R\-\_\-3125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-3125@{A\-\_\-\-O\-D\-R\-\_\-3125}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a985e1725f4d2b592addd3ce39c6b9d67}{A\-\_\-\-O\-D\-R\-\_\-3125}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a985e1725f4d2b592addd3ce39c6b9d67}
+}]3.\-125 Hz (0x1) \index{A\-\_\-\-O\-D\-R\-\_\-625@{A\-\_\-\-O\-D\-R\-\_\-625}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-625@{A\-\_\-\-O\-D\-R\-\_\-625}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a39562621cfa654b48c8fb1e7d6547ea1}{A\-\_\-\-O\-D\-R\-\_\-625}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a39562621cfa654b48c8fb1e7d6547ea1}
+}]6.\-25 Hz (0x2) \index{A\-\_\-\-O\-D\-R\-\_\-125@{A\-\_\-\-O\-D\-R\-\_\-125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-125@{A\-\_\-\-O\-D\-R\-\_\-125}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a3c446dbff5f9525174ec1babedd00130}{A\-\_\-\-O\-D\-R\-\_\-125}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a3c446dbff5f9525174ec1babedd00130}
+}]12.\-5 Hz (0x3) \index{A\-\_\-\-O\-D\-R\-\_\-25@{A\-\_\-\-O\-D\-R\-\_\-25}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-25@{A\-\_\-\-O\-D\-R\-\_\-25}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a1c556e092ac518da584bf7ae59d8169d}{A\-\_\-\-O\-D\-R\-\_\-25}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a1c556e092ac518da584bf7ae59d8169d}
+}]25 Hz (0x4) \index{A\-\_\-\-O\-D\-R\-\_\-50@{A\-\_\-\-O\-D\-R\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-50@{A\-\_\-\-O\-D\-R\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409adaeb950e8705c779eefbde7c4a05a6d4}{A\-\_\-\-O\-D\-R\-\_\-50}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409adaeb950e8705c779eefbde7c4a05a6d4}
+}]50 Hz (0x5) \index{A\-\_\-\-O\-D\-R\-\_\-100@{A\-\_\-\-O\-D\-R\-\_\-100}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-100@{A\-\_\-\-O\-D\-R\-\_\-100}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac5c6a9f89b38b88c58d72f828a9489d7}{A\-\_\-\-O\-D\-R\-\_\-100}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac5c6a9f89b38b88c58d72f828a9489d7}
+}]100 Hz (0x6) \index{A\-\_\-\-O\-D\-R\-\_\-200@{A\-\_\-\-O\-D\-R\-\_\-200}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-200@{A\-\_\-\-O\-D\-R\-\_\-200}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a8a602041d9319a516e9a70d7ebe464b4}{A\-\_\-\-O\-D\-R\-\_\-200}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a8a602041d9319a516e9a70d7ebe464b4}
+}]200 Hz (0x7) \index{A\-\_\-\-O\-D\-R\-\_\-400@{A\-\_\-\-O\-D\-R\-\_\-400}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-400@{A\-\_\-\-O\-D\-R\-\_\-400}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2e581fcaddb09bada44ee82120dc720f}{A\-\_\-\-O\-D\-R\-\_\-400}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2e581fcaddb09bada44ee82120dc720f}
+}]400 Hz (0x8) \index{A\-\_\-\-O\-D\-R\-\_\-800@{A\-\_\-\-O\-D\-R\-\_\-800}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-800@{A\-\_\-\-O\-D\-R\-\_\-800}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac08490b692283f696f7725ca348037e6}{A\-\_\-\-O\-D\-R\-\_\-800}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409ac08490b692283f696f7725ca348037e6}
+}]800 Hz (9) \index{A\-\_\-\-O\-D\-R\-\_\-1600@{A\-\_\-\-O\-D\-R\-\_\-1600}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-O\-D\-R\-\_\-1600@{A\-\_\-\-O\-D\-R\-\_\-1600}}\item[{\em 
+\hypertarget{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2505e8202c185b7a0fd9d3a2c84506e6}{A\-\_\-\-O\-D\-R\-\_\-1600}\label{classedimu__system_a4950d1ca91416ce2221f9f251a4ab409a2505e8202c185b7a0fd9d3a2c84506e6}
+}]1600 Hz (0x\-A) \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707}{\index{edimu\-\_\-system@{edimu\-\_\-system}!a\-\_\-scale@{a\-\_\-scale}}
+\index{a\-\_\-scale@{a\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{a\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::a\-\_\-scale}}}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707}
+
+
+Possible F\-S\-R's of the accelerometer. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G}}\item[{\em 
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707aad79008dcf3400051f927a49d8ea079b}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707aad79008dcf3400051f927a49d8ea079b}
+}]2g \index{A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G}}\item[{\em 
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a266db1462a0f522e112882219edde397}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a266db1462a0f522e112882219edde397}
+}]4g \index{A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G}}\item[{\em 
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a1b2236322d581b3b4ec808b5c754b95c}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-6\-G}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a1b2236322d581b3b4ec808b5c754b95c}
+}]6g \index{A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G}}\item[{\em 
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a9db696dbf82ab98ea5645e1277a1cb50}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707a9db696dbf82ab98ea5645e1277a1cb50}
+}]8g \index{A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G@{A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G}}\item[{\em 
+\hypertarget{classedimu__system_a61602a34b68df60f8f10c1cd7af37707ac36f1eb434af93d54110b82882463ae0}{A\-\_\-\-S\-C\-A\-L\-E\-\_\-16\-G}\label{classedimu__system_a61602a34b68df60f8f10c1cd7af37707ac36f1eb434af93d54110b82882463ae0}
+}]16g \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857}{\index{edimu\-\_\-system@{edimu\-\_\-system}!g\-\_\-odr@{g\-\_\-odr}}
+\index{g\-\_\-odr@{g\-\_\-odr}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{g\-\_\-odr}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::g\-\_\-odr}}}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857}
+
+
+Possible data rate/bandwidth combos of the gyro. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125@{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125@{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a7d3f6e71791376f2d1b2d2c81807ebb3}{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-125}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a7d3f6e71791376f2d1b2d2c81807ebb3}
+}]95 12.\-5 \index{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a5d2fc14a0048ca8eab15315e03d0b7f6}{G\-\_\-\-O\-D\-R\-\_\-95\-\_\-\-B\-W\-\_\-25}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a5d2fc14a0048ca8eab15315e03d0b7f6}
+}]95 25 \index{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a8c12ef2286ffa75355d5061da725c320}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-125}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a8c12ef2286ffa75355d5061da725c320}
+}]190 12.\-5 \index{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a986d076cfaa392fa58508b98a397a872}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-25}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a986d076cfaa392fa58508b98a397a872}
+}]190 25 \index{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ae0dee541e707db36687a7ad3fcb85acc}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-50}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ae0dee541e707db36687a7ad3fcb85acc}
+}]190 50 \index{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70@{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a66466db4312dadf3b3f38b0abf01b448}{G\-\_\-\-O\-D\-R\-\_\-190\-\_\-\-B\-W\-\_\-70}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a66466db4312dadf3b3f38b0abf01b448}
+}]190 70 \index{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857afb3501066d4ab609261676771bb47852}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-20}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857afb3501066d4ab609261676771bb47852}
+}]380 20 \index{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a04d047c632a24ae7cd0e85575fd2a83b}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-25}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a04d047c632a24ae7cd0e85575fd2a83b}
+}]380 25 \index{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a92acbaa3992716666e3d34a9127e11e3}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-50}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a92acbaa3992716666e3d34a9127e11e3}
+}]380 50 \index{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100@{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a2fa626b536fce0640868fa5b32884ba1}{G\-\_\-\-O\-D\-R\-\_\-380\-\_\-\-B\-W\-\_\-100}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a2fa626b536fce0640868fa5b32884ba1}
+}]380 100 \index{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a3604bd7462bdbe0bdb2c7c6ea3ed439a}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-30}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a3604bd7462bdbe0bdb2c7c6ea3ed439a}
+}]760 30 \index{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a6eb0a12445b6fa37d4f889b1f2753dd4}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-35}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857a6eb0a12445b6fa37d4f889b1f2753dd4}
+}]760 35 \index{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ab0c158480ed9b5a6755d2a33d7d6d6ed}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-50}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857ab0c158480ed9b5a6755d2a33d7d6d6ed}
+}]760 50 \index{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100@{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100}}\item[{\em 
+\hypertarget{classedimu__system_aa3293bf451856110ad0b082b9ec0f857aee29786b1e5a4f06a9d3f83bc0a94f45}{G\-\_\-\-O\-D\-R\-\_\-760\-\_\-\-B\-W\-\_\-100}\label{classedimu__system_aa3293bf451856110ad0b082b9ec0f857aee29786b1e5a4f06a9d3f83bc0a94f45}
+}]760 100 \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_ac676a08f02fdc00d8e8210985f03e692}{\index{edimu\-\_\-system@{edimu\-\_\-system}!g\-\_\-scale@{g\-\_\-scale}}
+\index{g\-\_\-scale@{g\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{g\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::g\-\_\-scale}}}\label{classedimu__system_ac676a08f02fdc00d8e8210985f03e692}
+
+
+possible ranges of the gyroscope 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S}}\item[{\em 
+\hypertarget{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ae3ca8f1426d51135044acb876bbf8d62}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-245\-D\-P\-S}\label{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ae3ca8f1426d51135044acb876bbf8d62}
+}]245 degrees per second \index{G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S}}\item[{\em 
+\hypertarget{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ac75709ac7d6a83a5c8fa75d61a550cdd}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-500\-D\-P\-S}\label{classedimu__system_ac676a08f02fdc00d8e8210985f03e692ac75709ac7d6a83a5c8fa75d61a550cdd}
+}]500 dps \index{G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S@{G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S}}\item[{\em 
+\hypertarget{classedimu__system_ac676a08f02fdc00d8e8210985f03e692aee32250020a13cdce09a11247d4dec46}{G\-\_\-\-S\-C\-A\-L\-E\-\_\-2000\-D\-P\-S}\label{classedimu__system_ac676a08f02fdc00d8e8210985f03e692aee32250020a13cdce09a11247d4dec46}
+}]2000 dps \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7c}{\index{edimu\-\_\-system@{edimu\-\_\-system}!m\-\_\-odr@{m\-\_\-odr}}
+\index{m\-\_\-odr@{m\-\_\-odr}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{m\-\_\-odr}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::m\-\_\-odr}}}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7c}
+
+
+Possible output data rates of the magnetometer. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-\_\-\-O\-D\-R\-\_\-3125@{M\-\_\-\-O\-D\-R\-\_\-3125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-3125@{M\-\_\-\-O\-D\-R\-\_\-3125}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cafe1b71a13c2a85d99faa46ba295b0036}{M\-\_\-\-O\-D\-R\-\_\-3125}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cafe1b71a13c2a85d99faa46ba295b0036}
+}]3.\-125 Hz (0x00) \index{M\-\_\-\-O\-D\-R\-\_\-625@{M\-\_\-\-O\-D\-R\-\_\-625}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-625@{M\-\_\-\-O\-D\-R\-\_\-625}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca5e23f8438b6c448bb3e857de0e6652fd}{M\-\_\-\-O\-D\-R\-\_\-625}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca5e23f8438b6c448bb3e857de0e6652fd}
+}]6.\-25 Hz (0x01) \index{M\-\_\-\-O\-D\-R\-\_\-125@{M\-\_\-\-O\-D\-R\-\_\-125}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-125@{M\-\_\-\-O\-D\-R\-\_\-125}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cadc5ab3742496b399082a63ca1b7be3b2}{M\-\_\-\-O\-D\-R\-\_\-125}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7cadc5ab3742496b399082a63ca1b7be3b2}
+}]12.\-5 Hz (0x02) \index{M\-\_\-\-O\-D\-R\-\_\-25@{M\-\_\-\-O\-D\-R\-\_\-25}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-25@{M\-\_\-\-O\-D\-R\-\_\-25}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca625f92a758b2591f1fa1bf7e00c8a492}{M\-\_\-\-O\-D\-R\-\_\-25}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca625f92a758b2591f1fa1bf7e00c8a492}
+}]25 Hz (0x03) \index{M\-\_\-\-O\-D\-R\-\_\-50@{M\-\_\-\-O\-D\-R\-\_\-50}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-50@{M\-\_\-\-O\-D\-R\-\_\-50}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca0ea0e32be6c9cd0a7813aec7116d978b}{M\-\_\-\-O\-D\-R\-\_\-50}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7ca0ea0e32be6c9cd0a7813aec7116d978b}
+}]50 (0x04) \index{M\-\_\-\-O\-D\-R\-\_\-100@{M\-\_\-\-O\-D\-R\-\_\-100}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-O\-D\-R\-\_\-100@{M\-\_\-\-O\-D\-R\-\_\-100}}\item[{\em 
+\hypertarget{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7caa678e4ce37cb70e5b4d06e63dc4226a6}{M\-\_\-\-O\-D\-R\-\_\-100}\label{classedimu__system_a6912f3ae02645ead8e47b96ebf275b7caa678e4ce37cb70e5b4d06e63dc4226a6}
+}]100 Hz (0x05) \end{description}
+\end{Desc}
+\hypertarget{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3}{\index{edimu\-\_\-system@{edimu\-\_\-system}!m\-\_\-scale@{m\-\_\-scale}}
+\index{m\-\_\-scale@{m\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{m\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf edimu\-\_\-system\-::m\-\_\-scale}}}\label{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3}
+
+
+Possible F\-S\-R's of the magnetometer. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S}}\item[{\em 
+\hypertarget{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3a1e2b05cb9c5203ecf8de8f02274aa875}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-2\-G\-S}\label{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3a1e2b05cb9c5203ecf8de8f02274aa875}
+}]2\-Gs \index{M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S}}\item[{\em 
+\hypertarget{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3af5c9b84c56a16b30a438ce2cd0a80d60}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-4\-G\-S}\label{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3af5c9b84c56a16b30a438ce2cd0a80d60}
+}]4\-Gs \index{M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S}}\item[{\em 
+\hypertarget{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ad7d18ad9a5cc8188c90ead4a1b3c9dc5}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-8\-G\-S}\label{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ad7d18ad9a5cc8188c90ead4a1b3c9dc5}
+}]8\-Gs \index{M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S}!edimu\-\_\-system@{edimu\-\_\-system}}\index{edimu\-\_\-system@{edimu\-\_\-system}!M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S@{M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S}}\item[{\em 
+\hypertarget{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ab26ba594363c13a86809357673513d33}{M\-\_\-\-S\-C\-A\-L\-E\-\_\-12\-G\-S}\label{classedimu__system_ae7dbbcd66d0e16d693ac560884871da3ab26ba594363c13a86809357673513d33}
+}]12\-Gs \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedimu__system_a4c17647ced26f28a162520da42f32d13}{\index{edimu\-\_\-system@{edimu\-\_\-system}!edimu\-\_\-system@{edimu\-\_\-system}}
+\index{edimu\-\_\-system@{edimu\-\_\-system}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{edimu\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edimu\-\_\-system\-::edimu\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a4c17647ced26f28a162520da42f32d13}
+\hypertarget{classedimu__system_a382054be9280e8c43e4bc93a05a610c3}{\index{edimu\-\_\-system@{edimu\-\_\-system}!$\sim$edimu\-\_\-system@{$\sim$edimu\-\_\-system}}
+\index{$\sim$edimu\-\_\-system@{$\sim$edimu\-\_\-system}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{$\sim$edimu\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edimu\-\_\-system\-::$\sim$edimu\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a382054be9280e8c43e4bc93a05a610c3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedimu__system_adcec29ff9303db25800cf8026e0c6b37}{\index{edimu\-\_\-system@{edimu\-\_\-system}!accel\-\_\-aa@{accel\-\_\-aa}}
+\index{accel\-\_\-aa@{accel\-\_\-aa}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{accel\-\_\-aa}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::a\-\_\-abw} edimu\-\_\-system\-::accel\-\_\-aa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_adcec29ff9303db25800cf8026e0c6b37}
+\hypertarget{classedimu__system_a5e7fbd97fe33973ec60c1e180b19b797}{\index{edimu\-\_\-system@{edimu\-\_\-system}!accel\-\_\-datarate@{accel\-\_\-datarate}}
+\index{accel\-\_\-datarate@{accel\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{accel\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::a\-\_\-odr} edimu\-\_\-system\-::accel\-\_\-datarate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a5e7fbd97fe33973ec60c1e180b19b797}
+\hypertarget{classedimu__system_a16ad8b9dbb9a889c2191de9774377882}{\index{edimu\-\_\-system@{edimu\-\_\-system}!accel\-\_\-scale@{accel\-\_\-scale}}
+\index{accel\-\_\-scale@{accel\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{accel\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::a\-\_\-scale} edimu\-\_\-system\-::accel\-\_\-scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a16ad8b9dbb9a889c2191de9774377882}
+\hypertarget{classedimu__system_a9ee88f6e0ae602d0037c2f7b0d43f3f8}{\index{edimu\-\_\-system@{edimu\-\_\-system}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::calibrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a9ee88f6e0ae602d0037c2f7b0d43f3f8}
+\hypertarget{classedimu__system_a2bbaffa196674d42427bc4da6ac8164e}{\index{edimu\-\_\-system@{edimu\-\_\-system}!gyro\-\_\-datarate@{gyro\-\_\-datarate}}
+\index{gyro\-\_\-datarate@{gyro\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{gyro\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::g\-\_\-odr} edimu\-\_\-system\-::gyro\-\_\-datarate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a2bbaffa196674d42427bc4da6ac8164e}
+\hypertarget{classedimu__system_a4f625e2eecfc7a0bb14c7a6195c82771}{\index{edimu\-\_\-system@{edimu\-\_\-system}!gyro\-\_\-scale@{gyro\-\_\-scale}}
+\index{gyro\-\_\-scale@{gyro\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{gyro\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::g\-\_\-scale} edimu\-\_\-system\-::gyro\-\_\-scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a4f625e2eecfc7a0bb14c7a6195c82771}
+\hypertarget{classedimu__system_af745d305e5ff1cfaba3134fd4ff2c342}{\index{edimu\-\_\-system@{edimu\-\_\-system}!init@{init}}
+\index{init@{init}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedimu__system_af745d305e5ff1cfaba3134fd4ff2c342}
+
+
+Implements \hyperlink{classedsystem_a4c70e3568064941607fb220aea826a56}{edsystem}.
+
+\hypertarget{classedimu__system_addc80a5048d987161abd25187f0d449f}{\index{edimu\-\_\-system@{edimu\-\_\-system}!mag\-\_\-datarate@{mag\-\_\-datarate}}
+\index{mag\-\_\-datarate@{mag\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{mag\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::m\-\_\-odr} edimu\-\_\-system\-::mag\-\_\-datarate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_addc80a5048d987161abd25187f0d449f}
+\hypertarget{classedimu__system_ad21c665f25ae14f1da2d46e4274ba6ae}{\index{edimu\-\_\-system@{edimu\-\_\-system}!mag\-\_\-scale@{mag\-\_\-scale}}
+\index{mag\-\_\-scale@{mag\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{mag\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edimu\-\_\-system\-::m\-\_\-scale} edimu\-\_\-system\-::mag\-\_\-scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_ad21c665f25ae14f1da2d46e4274ba6ae}
+\hypertarget{classedimu__system_abd6e59b943adbb48fa786f10f809070c}{\index{edimu\-\_\-system@{edimu\-\_\-system}!process@{process}}
+\index{process@{process}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}bool edimu\-\_\-system\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf edmessage} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedimu__system_abd6e59b943adbb48fa786f10f809070c}
+
+
+Implements \hyperlink{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{edsystem}.
+
+\hypertarget{classedimu__system_a65927db96dc88e8752f0529d9faa6bc0}{\index{edimu\-\_\-system@{edimu\-\_\-system}!release@{release}}
+\index{release@{release}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedimu__system_a65927db96dc88e8752f0529d9faa6bc0}
+
+
+Implements \hyperlink{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{edsystem}.
+
+\hypertarget{classedimu__system_ad77a172b80472604b958abe1a7b037a0}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-accel\-\_\-aa@{set\-\_\-accel\-\_\-aa}}
+\index{set\-\_\-accel\-\_\-aa@{set\-\_\-accel\-\_\-aa}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-accel\-\_\-aa}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-accel\-\_\-aa (
+\begin{DoxyParamCaption}
+\item[{{\bf a\-\_\-abw}}]{antialiasing}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_ad77a172b80472604b958abe1a7b037a0}
+\hypertarget{classedimu__system_ab813efe0e33b7e6f70af8d6b390a0076}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-accel\-\_\-datarate@{set\-\_\-accel\-\_\-datarate}}
+\index{set\-\_\-accel\-\_\-datarate@{set\-\_\-accel\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-accel\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-accel\-\_\-datarate (
+\begin{DoxyParamCaption}
+\item[{{\bf a\-\_\-odr}}]{datarate}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_ab813efe0e33b7e6f70af8d6b390a0076}
+\hypertarget{classedimu__system_a1bed4d35a4ddc0590694a805fffa7c9f}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-accel\-\_\-scale@{set\-\_\-accel\-\_\-scale}}
+\index{set\-\_\-accel\-\_\-scale@{set\-\_\-accel\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-accel\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-accel\-\_\-scale (
+\begin{DoxyParamCaption}
+\item[{{\bf a\-\_\-scale}}]{scale}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a1bed4d35a4ddc0590694a805fffa7c9f}
+\hypertarget{classedimu__system_a5c188e537c342e56a10d70c8c1a4f9bc}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-gyro\-\_\-datarate@{set\-\_\-gyro\-\_\-datarate}}
+\index{set\-\_\-gyro\-\_\-datarate@{set\-\_\-gyro\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-gyro\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-gyro\-\_\-datarate (
+\begin{DoxyParamCaption}
+\item[{{\bf g\-\_\-odr}}]{datarate}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a5c188e537c342e56a10d70c8c1a4f9bc}
+\hypertarget{classedimu__system_ac765ce7726af6fba582035f5a24ce91e}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-gyro\-\_\-scale@{set\-\_\-gyro\-\_\-scale}}
+\index{set\-\_\-gyro\-\_\-scale@{set\-\_\-gyro\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-gyro\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-gyro\-\_\-scale (
+\begin{DoxyParamCaption}
+\item[{{\bf g\-\_\-scale}}]{scale}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_ac765ce7726af6fba582035f5a24ce91e}
+\hypertarget{classedimu__system_aa773e0db8441dc11bbb8399dede49a9c}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-mag\-\_\-datarate@{set\-\_\-mag\-\_\-datarate}}
+\index{set\-\_\-mag\-\_\-datarate@{set\-\_\-mag\-\_\-datarate}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-mag\-\_\-datarate}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-mag\-\_\-datarate (
+\begin{DoxyParamCaption}
+\item[{{\bf m\-\_\-odr}}]{datarate}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_aa773e0db8441dc11bbb8399dede49a9c}
+\hypertarget{classedimu__system_a930fac9420df70417b040d554e29d8db}{\index{edimu\-\_\-system@{edimu\-\_\-system}!set\-\_\-mag\-\_\-scale@{set\-\_\-mag\-\_\-scale}}
+\index{set\-\_\-mag\-\_\-scale@{set\-\_\-mag\-\_\-scale}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{set\-\_\-mag\-\_\-scale}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::set\-\_\-mag\-\_\-scale (
+\begin{DoxyParamCaption}
+\item[{{\bf m\-\_\-scale}}]{scale}
+\end{DoxyParamCaption}
+)}}\label{classedimu__system_a930fac9420df70417b040d554e29d8db}
+\hypertarget{classedimu__system_ae3124c577ae10d92f69438f28ce67969}{\index{edimu\-\_\-system@{edimu\-\_\-system}!typestr@{typestr}}
+\index{typestr@{typestr}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{typestr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string edimu\-\_\-system\-::typestr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classedimu__system_ae3124c577ae10d92f69438f28ce67969}
+
+
+Implements \hyperlink{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{edsystem}.
+
+\hypertarget{classedimu__system_a850c2b8420aef618edf9ec36f9436ed4}{\index{edimu\-\_\-system@{edimu\-\_\-system}!Type\-String@{Type\-String}}
+\index{Type\-String@{Type\-String}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{Type\-String}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string edimu\-\_\-system\-::\-Type\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classedimu__system_a850c2b8420aef618edf9ec36f9436ed4}
+\hypertarget{classedimu__system_a70926a3b36b53f54913fc47ee471fb9b}{\index{edimu\-\_\-system@{edimu\-\_\-system}!update@{update}}
+\index{update@{update}!edimu_system@{edimu\-\_\-system}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void edimu\-\_\-system\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedimu__system_a70926a3b36b53f54913fc47ee471fb9b}
+
+
+Implements \hyperlink{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{edsystem}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edimu__system_8h}{edimu\-\_\-system.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edimu__system_8cpp}{edimu\-\_\-system.\-cpp}\end{DoxyCompactItemize}

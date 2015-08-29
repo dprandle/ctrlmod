@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structwait__ready__callback">
+<title>wait_ready_callback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edcallback_8h">&lt;edcallback.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="structwait__ready__callback_1a305d57ffdd8bc5d3682dfa4a83431708">exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structwait__ready__callback_1a305d57ffdd8bc5d3682dfa4a83431708">
+                <title>void wait_ready_callback::exec ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

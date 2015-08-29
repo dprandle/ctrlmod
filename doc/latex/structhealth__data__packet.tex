@@ -1,0 +1,154 @@
+\hypertarget{structhealth__data__packet}{\section{health\-\_\-data\-\_\-packet Struct Reference}
+\label{structhealth__data__packet}\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-packets.\-h$>$}
+
+Inheritance diagram for health\-\_\-data\-\_\-packet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structhealth__data__packet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structhealth__data__packet_a7cfb581955c8d81fc4b7a6aa98479553}{health\-\_\-data\-\_\-packet} ()
+\item 
+virtual std\-::string \hyperlink{structhealth__data__packet_a89e96e87bdcf2ecc52260a9d98e37995}{to\-String} ()
+\item 
+virtual std\-::string \hyperlink{structhealth__data__packet_abc386acf1fcf42086f1fc791d2718dff}{type} ()
+\item 
+virtual uint32\-\_\-t \hyperlink{structhealth__data__packet_a85329a68f718099b6cefcf65fab75077}{size} ()
+\item 
+virtual uint8\-\_\-t \& \hyperlink{structhealth__data__packet_aa96359c2b7100e17905e02c7ab68ca59}{operator\mbox{[}$\,$\mbox{]}} (uint32\-\_\-t index)
+\item 
+virtual uint8\-\_\-t $\ast$ \hyperlink{structhealth__data__packet_a8378ecf34528f77f6d50937c3ad02c8d}{dataptr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{structhealth__data__packet_ab1066c5d4c3353c6d5175acef3b4fc9a}{Type} ()
+\item 
+static uint32\-\_\-t \hyperlink{structhealth__data__packet_a453e09780784287394585eedd99585f0}{Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \hyperlink{structhealth__data__packet_a866832727429756e4f03fcad5cf2e240}{status}\\
+\>\>uint8\_t \hyperlink{structhealth__data__packet_a4bb1d8b54ac0d82856dfa030cd981f90}{error\_code7to0}\\
+\>\>uint8\_t \hyperlink{structhealth__data__packet_a08f52ad70296c41370889f5f74f68908}{error\_code15to8}\\
+\>\} \\
+\>uint8\_t \hyperlink{structhealth__data__packet_a4039ceb368923f09e7d8e1cc7ada5760}{data} \mbox{[}3\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structhealth__data__packet_a7cfb581955c8d81fc4b7a6aa98479553}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}}
+\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{health\-\_\-data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}health\-\_\-data\-\_\-packet\-::health\-\_\-data\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structhealth__data__packet_a7cfb581955c8d81fc4b7a6aa98479553}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structhealth__data__packet_a8378ecf34528f77f6d50937c3ad02c8d}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!dataptr@{dataptr}}
+\index{dataptr@{dataptr}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{dataptr}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t$\ast$ health\-\_\-data\-\_\-packet\-::dataptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structhealth__data__packet_a8378ecf34528f77f6d50937c3ad02c8d}
+
+
+Implements \hyperlink{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}{data\-\_\-packet}.
+
+\hypertarget{structhealth__data__packet_aa96359c2b7100e17905e02c7ab68ca59}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t\& health\-\_\-data\-\_\-packet\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structhealth__data__packet_aa96359c2b7100e17905e02c7ab68ca59}
+
+
+Implements \hyperlink{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}{data\-\_\-packet}.
+
+\hypertarget{structhealth__data__packet_a85329a68f718099b6cefcf65fab75077}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!size@{size}}
+\index{size@{size}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t health\-\_\-data\-\_\-packet\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structhealth__data__packet_a85329a68f718099b6cefcf65fab75077}
+
+
+Implements \hyperlink{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}{data\-\_\-packet}.
+
+\hypertarget{structhealth__data__packet_a453e09780784287394585eedd99585f0}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!Size@{Size}}
+\index{Size@{Size}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t health\-\_\-data\-\_\-packet\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structhealth__data__packet_a453e09780784287394585eedd99585f0}
+\hypertarget{structhealth__data__packet_a89e96e87bdcf2ecc52260a9d98e37995}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string health\-\_\-data\-\_\-packet\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{structhealth__data__packet_a89e96e87bdcf2ecc52260a9d98e37995}
+
+
+Implements \hyperlink{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}{data\-\_\-packet}.
+
+\hypertarget{structhealth__data__packet_abc386acf1fcf42086f1fc791d2718dff}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!type@{type}}
+\index{type@{type}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string health\-\_\-data\-\_\-packet\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structhealth__data__packet_abc386acf1fcf42086f1fc791d2718dff}
+
+
+Implements \hyperlink{structdata__packet_af0795581f2d57a8c14a88009da37aee1}{data\-\_\-packet}.
+
+\hypertarget{structhealth__data__packet_ab1066c5d4c3353c6d5175acef3b4fc9a}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!Type@{Type}}
+\index{Type@{Type}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string health\-\_\-data\-\_\-packet\-::\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structhealth__data__packet_ab1066c5d4c3353c6d5175acef3b4fc9a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structhealth__data__packet_a41edefdf6f0636add1f38358092aa86a}{\subsubsection[{"@17}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structhealth__data__packet_a41edefdf6f0636add1f38358092aa86a}
+\hypertarget{structhealth__data__packet_a4039ceb368923f09e7d8e1cc7ada5760}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!data@{data}}
+\index{data@{data}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t health\-\_\-data\-\_\-packet\-::data\mbox{[}3\mbox{]}}}\label{structhealth__data__packet_a4039ceb368923f09e7d8e1cc7ada5760}
+\hypertarget{structhealth__data__packet_a08f52ad70296c41370889f5f74f68908}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!error\-\_\-code15to8@{error\-\_\-code15to8}}
+\index{error\-\_\-code15to8@{error\-\_\-code15to8}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{error\-\_\-code15to8}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t health\-\_\-data\-\_\-packet\-::error\-\_\-code15to8}}\label{structhealth__data__packet_a08f52ad70296c41370889f5f74f68908}
+\hypertarget{structhealth__data__packet_a4bb1d8b54ac0d82856dfa030cd981f90}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!error\-\_\-code7to0@{error\-\_\-code7to0}}
+\index{error\-\_\-code7to0@{error\-\_\-code7to0}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{error\-\_\-code7to0}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t health\-\_\-data\-\_\-packet\-::error\-\_\-code7to0}}\label{structhealth__data__packet_a4bb1d8b54ac0d82856dfa030cd981f90}
+\hypertarget{structhealth__data__packet_a866832727429756e4f03fcad5cf2e240}{\index{health\-\_\-data\-\_\-packet@{health\-\_\-data\-\_\-packet}!status@{status}}
+\index{status@{status}!health_data_packet@{health\-\_\-data\-\_\-packet}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t health\-\_\-data\-\_\-packet\-::status}}\label{structhealth__data__packet_a866832727429756e4f03fcad5cf2e240}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__packets_8h}{edrplidar\-\_\-packets.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edrplidar__packets_8cpp}{edrplidar\-\_\-packets.\-cpp}\end{DoxyCompactItemize}

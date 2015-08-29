@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedsystem">
+<title>edsystem class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edsystem_8h">&lt;edsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedsystem_1af87c5a01f7cf70dcc788bbf1dbd8aeb1">edsystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedsystem_1af3022d068ee9dda5b7da8438680e6437">~edsystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedsystem_1a4c70e3568064941607fb220aea826a56">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedsystem_1af40ac185ca4a8efd6777fdb4c65880ea">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classedsystem_1a9d7a0547c702af1572ed8a1f5434fa0a">process</link> (
+<link linkend="structedmessage">edmessage</link> * msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedsystem_1afd5308dc71350fe4e239cac5fb1bdbe9">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="classedsystem_1a19dc65111f9a38259fcafba3a32a646d">typestr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedsystem_1af87c5a01f7cf70dcc788bbf1dbd8aeb1">
+                <title>edsystem::edsystem ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1af3022d068ee9dda5b7da8438680e6437">
+                <title>virtual edsystem::~edsystem ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1a4c70e3568064941607fb220aea826a56">
+                <title>virtual void edsystem::init ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1af40ac185ca4a8efd6777fdb4c65880ea">
+                <title>virtual void edsystem::release ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1a9d7a0547c702af1572ed8a1f5434fa0a">
+                <title>virtual bool edsystem::process (edmessage *msg)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1afd5308dc71350fe4e239cac5fb1bdbe9">
+                <title>virtual void edsystem::update ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedsystem_1a19dc65111f9a38259fcafba3a32a646d">
+                <title>virtual std::string edsystem::typestr ()=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrplidar__request">
+<title>rplidar_request struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75">req_type</link>{<link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75aec752da288a10cb540712a9910785b3d">HealthReq</link>, <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75abc412c174f6810a858521f3bd5f136c9">InfoReq</link>, <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a9d7bdb72d07a35486c428690f36d1922">StartScan</link>, <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a8ee556fc213c3b12c7f2f938e8eb9a45">ForceScan</link>, <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a490bbda14afdffd8124e436f67897405">StopScan</link>, <link linkend="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a8bb842fd26be4238785e41946562c5ff">Reset</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>req_type r_type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structrplidar__request_1af5765bf9fe3d05e9642a255f3b9edfdc">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structrplidar__request_1a9b610deef1856be76f6a5b2a43275859">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75">
+               <title>enum req_type </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75aec752da288a10cb540712a9910785b3d">
+                            <term>HealthReq</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75abc412c174f6810a858521f3bd5f136c9">
+                            <term>InfoReq</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a9d7bdb72d07a35486c428690f36d1922">
+                            <term>StartScan</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a8ee556fc213c3b12c7f2f938e8eb9a45">
+                            <term>ForceScan</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a490bbda14afdffd8124e436f67897405">
+                            <term>StopScan</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="structrplidar__request_1a7a2aceb50d6779e0d0ca188d18542c75a8bb842fd26be4238785e41946562c5ff">
+                            <term>Reset</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 62 of file edmessage.h
+                    <programlisting>
+{
+HealthReq, 
+InfoReq, 
+StartScan, 
+ForceScan, 
+StopScan, 
+Reset, 
+}req_type;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="structrplidar__request_1af5765bf9fe3d05e9642a255f3b9edfdc">
+                <title>virtual std::string rplidar_request::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__request_1a9b610deef1856be76f6a5b2a43275859">
+                <title>static std::string rplidar_request::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

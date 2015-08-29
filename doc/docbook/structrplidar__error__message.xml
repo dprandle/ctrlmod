@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrplidar__error__message">
+<title>rplidar_error_message struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t message[100]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structrplidar__error__message_1af4f1902c3778e4289eac7a4ab20cdc12">rplidar_error_message</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structrplidar__error__message_1a3041dd23bfc9e0b5612bd7ce75849ea1">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structrplidar__error__message_1aca98493f4795168785997efbb1008fae">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrplidar__error__message_1af4f1902c3778e4289eac7a4ab20cdc12">
+                <title>rplidar_error_message::rplidar_error_message ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__error__message_1a3041dd23bfc9e0b5612bd7ce75849ea1">
+                <title>virtual std::string rplidar_error_message::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__error__message_1aca98493f4795168785997efbb1008fae">
+                <title>static std::string rplidar_error_message::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

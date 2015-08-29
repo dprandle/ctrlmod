@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edimu__system_8cpp">
+    <title>edimu_system.cpp File Reference</title>
+    <programlisting>#include &lt;edimu_system.h&gt;</programlisting>
+    <programlisting>#include &lt;edi2c.h&gt;</programlisting>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edimu_system.cpp</para>
+    </simplesect>
+</section>

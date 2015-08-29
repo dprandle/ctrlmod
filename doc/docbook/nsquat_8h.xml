@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="nsquat_8h">
+    <title>nsquat.h File Reference</title>
+    <programlisting>#include &quot;nsvec4.h&quot;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structnsquat">nsquat</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a195d83bfab21b5a4eef404e8e4b3f6d0">operator*</link> (
+const int32_t &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a9a451ce86507d44d586d918ff24bf0ba">operator*</link> (
+const float &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a46c50476f4f770224a358998d444efae">operator*</link> (
+const double &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a8e10e450a41696d1d3f58f8df58f8493">operator/</link> (
+const int32_t &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1af763c81a6d7a450bddaec8616e391ac3">operator/</link> (
+const float &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a35eb9b65e8a959185b55b7218e1e7186">operator/</link> (
+const double &amp; pLHS, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRHS)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a991efc255b3de03ebddf9c5581279a60">orientation</link> (
+const <link linkend="structnsmat3">nsmat3</link>&lt; T &gt; &amp; rotationMat3)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1afdb0550869f4e4f111146597c62de645">orientation</link> (
+const <link linkend="structNSVec4">NSVec4</link>&lt; T &gt; &amp; axisAngle, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a4a04a91b7caf67cb6ba56a214a9426ab">orientation</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; euler, typename <link linkend="structNSVec3">NSVec3</link>&lt; T &gt;::EulerOrder order, bool pRads)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a2280490b64e6be6e8447033aba21d9ed">orientation</link> (
+const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; vec, const <link linkend="structNSVec3">NSVec3</link>&lt; T &gt; &amp; toVec)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1af20bc5e18c379261a387ab197e9b971f">orientation</link> (
+const <link linkend="structnsmat4">nsmat4</link>&lt; T &gt; &amp; transform)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a6d8801fb3964899dea824104c148fbd5">conjugate</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; quat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="nsquat_8h_1a8c4af51c5fbdb61cdd19c6eb8208a12e">dot</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pLeft, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; pRight)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a3cb55c46708912fbbcf14a54df53ff61">inverse</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; quat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a3466192f28b4f2bbe0ec2599ce97a846">normalize</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; quat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structnsquat">nsquat</link>&lt; T &gt; <link linkend="nsquat_8h_1a47c3fd3ca323c67743c5d504d3d637be">slerp</link> (
+const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; lhs, const <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; rhs, const T &amp; scalingFactor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="nsquat_8h_1aa8e1d2c32f3b59fa93ad0642657791ff">pup</link> (
+PUPer &amp; p, <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; q4)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="nsquat_8h_1a067cf1237d548c17a25208ce656779f6">pup</link> (
+PUPer &amp; p, <link linkend="structnsquat">nsquat</link>&lt; T &gt; &amp; q4, const std::string &amp; varName)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/include/nsquat.h</para>
+    </simplesect>
+</section>

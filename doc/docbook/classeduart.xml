@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classeduart">
+<title>eduart class Reference</title>
+<para>
+    <programlisting>#include <link linkend="eduart_8h">&lt;eduart.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structeduart_1_1DataFormat">eduart::DataFormat</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classeduart_1a3eb9c53aa8b561a7c0de832314e4910c">SerialPort</link>{<link linkend="classeduart_1a3eb9c53aa8b561a7c0de832314e4910ca188b16da42dd309eacf50b0338c78bdc">Uart1</link>, <link linkend="classeduart_1a3eb9c53aa8b561a7c0de832314e4910ca146f31399447a2ac2daf7c9be9e1cdb3">Uart2</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250e">BaudRate</link>{<link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea57ad9b11664ed59b685647eead7bb59a">b50</link>==B50, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea91ba949ec01ee23fc279f2cbb1547e47">b75</link>==B75, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eac0538bdac27d5119166e538f036f51cf">b110</link>==B110, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea40493817b15546f82e648eac9f230d55">b134</link>==B134, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eaa0d8bb58ac41d34a2921ca577c9e1dae">b150</link>==B150, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea347b36c0426c0cfc1bba4599f0d266c5">b200</link>==B200, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea07aed09b807d667a7edd3ada40a64f31">b300</link>==B300, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eaaaac84616144bef1e0996e666a02c082">b600</link>==B600, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eaf1d5c1b466879ebc8b27e17291736704">b1200</link>==B1200, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea7234ba43384703cfb1457498765a21a6">b1800</link>==B1800, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ead814cc23c1ddf49585fd31d265a6ce18">b2400</link>==B2400, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea88cd90e4c82ea7eaebec6ea8da75d166">b4800</link>==B4800, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea428bf6af3d0fd1ba316aee1f7110ba03">b9600</link>==B9600, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea5d53c2a6ce0485cad2ae1fba04ef4c28">b19200</link>==B19200, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eaf4a4e8cf41f6d617c882c20b7d0fcb0d">b38400</link>==B38400, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea527aabd82f8b9089f49e03f12ee4b1bb">b57600</link>==B57600, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea9b92eb53c2358b7349f0b0333e115712">b115200</link>==B115200, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eae8b28fbe6713439ef27be4349bf1ccc2">b230400</link>==B230400, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea52021156eb974c70be0e2625dbed7a47">b460800</link>==B460800, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eaafe74cb93252ca06e505203cac08fb00">b500000</link>==B500000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea3348c0952da2487e59954c6a9c953c5a">b576000</link>==B576000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea7e63bfe70bb19c1ccd1e0a45f2accf18">b921600</link>==B921600, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250eac5ecc01babafe93a6d81725add97ece6">b1000000</link>==B1000000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea774240855bae7872e7080c74766341b2">b1152000</link>==B1152000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea31f007d3700b2935d22fc81154bd4b8f">b1500000</link>==B1500000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea1062e3622afd6e2cfeee2df82430063a">b2000000</link>==B2000000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea4d6c5194a4986c98bc672c43f85eb234">b2500000</link>==B2500000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea17f9fb50ec221d64721e6d2bb85bf237">b3000000</link>==B3000000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ead2c79beb6a3dbf5bd56b83558d1950aa">b3500000</link>==B3500000, <link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250ea11902480c12e575e5cab69d5d9c79065">b4000000</link>==B4000000}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classeduart_1ab706a92a2abdd39b748492f26d89fa75">Parity</link>{<link linkend="classeduart_1ab706a92a2abdd39b748492f26d89fa75a61946e40eb83169f78e5460d4875cb7d">None</link>== 0, <link linkend="classeduart_1ab706a92a2abdd39b748492f26d89fa75af51fbf3ac29786606dfa6c3896c66b77">Odd</link>== (PARENB | PARODD), <link linkend="classeduart_1ab706a92a2abdd39b748492f26d89fa75a51c432d034dc90467584b31553a85653">Even</link>== (PARENB)}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4fa">StopBits</link>{<link linkend="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4faa068e1e4c3dacb4bd82e4574b3d2c04f2">One</link>== 0, <link linkend="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4faa33352b7dd8d579fb45d2bf6dd3e4f4b7">Two</link>== CSTOPB}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2">DataBits</link>{<link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2ae5d8646efef641958f91dc4d3eaa040b">d5</link>==CS5, <link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2aa375f36213ea175578bfea35e0b90c33">d6</link>==CS6, <link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2a1653637ef298b2d80ec91f713c7f49f9">d7</link>==CS7, <link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2ae277e6824ef79278ff4bebae765f2ce0">d8</link>==CS8}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataFormat m_df</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>BaudRate m_baud</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string m_devpath</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classeduart_1a95a97e53a2ba1ae4bb72b39b474e8de6">eduart</link> (
+<link linkend="classeduart_1a3eb9c53aa8b561a7c0de832314e4910c">SerialPort</link> uart_num)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classeduart_1adc0cc6a48ebaaaa297aff0c073aa8474">~eduart</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const std::string &amp; <link linkend="classeduart_1ae409534073cbe8469ce8e6aed502730a">device_path</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1aef4703307a8f07bf31ec06050e5e4596">set_baud</link> (
+<link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250e">BaudRate</link> baud)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classeduart_1af5d40999cc13e078f9d349a08ffe250e">BaudRate</link> <link linkend="classeduart_1a5243e3f72554fe7463989e245e91e172">baud</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classeduart_1ae50ab2faddd54ed231380583b717ad5a">start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1ab57fd0de8fa9f541f6b925cbe53e13ba">set_format</link> (
+<link linkend="classeduart_1a5211d2ecc2f21296eafe114ca999abb2">DataBits</link> db, <link linkend="classeduart_1ab706a92a2abdd39b748492f26d89fa75">Parity</link> p, <link linkend="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4fa">StopBits</link> sb)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1a9b5869ad89fc0c6fc14ab24485f441ed">set_format</link> (
+const <link linkend="structeduart_1_1DataFormat">DataFormat</link> &amp; data_format)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="structeduart_1_1DataFormat">DataFormat</link> &amp; <link linkend="classeduart_1a5b40ea037124171636fc44f327b7bd66">format</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="classeduart_1ac676e86e35f3754e1fc03d9bf97ac1e9">_raw_read</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="classeduart_1a797e970d9dccf806b946771613cd3708">_raw_write</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1a52616ce91029c883c411b66b344d9428">_detach_console</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1afa905c14cded4680506631f5beb1fe24">_reattach_console</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classeduart_1a6ffcc73b2c1a7fe3fbec793c81d43bb6">_set_attribs</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classeduart_1a3eb9c53aa8b561a7c0de832314e4910c">
+               <title>enum SerialPort </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classeduart_1a3eb9c53aa8b561a7c0de832314e4910ca188b16da42dd309eacf50b0338c78bdc">
+                            <term>Uart1</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1a3eb9c53aa8b561a7c0de832314e4910ca146f31399447a2ac2daf7c9be9e1cdb3">
+                            <term>Uart2</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 13 of file eduart.h
+                    <programlisting>
+{
+Uart1, 
+Uart2, 
+}SerialPort;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250e">
+               <title>enum BaudRate </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea57ad9b11664ed59b685647eead7bb59a">
+                            <term>b50</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea91ba949ec01ee23fc279f2cbb1547e47">
+                            <term>b75</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eac0538bdac27d5119166e538f036f51cf">
+                            <term>b110</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea40493817b15546f82e648eac9f230d55">
+                            <term>b134</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eaa0d8bb58ac41d34a2921ca577c9e1dae">
+                            <term>b150</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea347b36c0426c0cfc1bba4599f0d266c5">
+                            <term>b200</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea07aed09b807d667a7edd3ada40a64f31">
+                            <term>b300</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eaaaac84616144bef1e0996e666a02c082">
+                            <term>b600</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eaf1d5c1b466879ebc8b27e17291736704">
+                            <term>b1200</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea7234ba43384703cfb1457498765a21a6">
+                            <term>b1800</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ead814cc23c1ddf49585fd31d265a6ce18">
+                            <term>b2400</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea88cd90e4c82ea7eaebec6ea8da75d166">
+                            <term>b4800</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea428bf6af3d0fd1ba316aee1f7110ba03">
+                            <term>b9600</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea5d53c2a6ce0485cad2ae1fba04ef4c28">
+                            <term>b19200</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eaf4a4e8cf41f6d617c882c20b7d0fcb0d">
+                            <term>b38400</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea527aabd82f8b9089f49e03f12ee4b1bb">
+                            <term>b57600</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea9b92eb53c2358b7349f0b0333e115712">
+                            <term>b115200</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eae8b28fbe6713439ef27be4349bf1ccc2">
+                            <term>b230400</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea52021156eb974c70be0e2625dbed7a47">
+                            <term>b460800</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eaafe74cb93252ca06e505203cac08fb00">
+                            <term>b500000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea3348c0952da2487e59954c6a9c953c5a">
+                            <term>b576000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea7e63bfe70bb19c1ccd1e0a45f2accf18">
+                            <term>b921600</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250eac5ecc01babafe93a6d81725add97ece6">
+                            <term>b1000000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea774240855bae7872e7080c74766341b2">
+                            <term>b1152000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea31f007d3700b2935d22fc81154bd4b8f">
+                            <term>b1500000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea1062e3622afd6e2cfeee2df82430063a">
+                            <term>b2000000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea4d6c5194a4986c98bc672c43f85eb234">
+                            <term>b2500000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea17f9fb50ec221d64721e6d2bb85bf237">
+                            <term>b3000000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ead2c79beb6a3dbf5bd56b83558d1950aa">
+                            <term>b3500000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1af5d40999cc13e078f9d349a08ffe250ea11902480c12e575e5cab69d5d9c79065">
+                            <term>b4000000</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 19 of file eduart.h
+                    <programlisting>
+{
+b50==B50, 
+b75==B75, 
+b110==B110, 
+b134==B134, 
+b150==B150, 
+b200==B200, 
+b300==B300, 
+b600==B600, 
+b1200==B1200, 
+b1800==B1800, 
+b2400==B2400, 
+b4800==B4800, 
+b9600==B9600, 
+b19200==B19200, 
+b38400==B38400, 
+b57600==B57600, 
+b115200==B115200, 
+b230400==B230400, 
+b460800==B460800, 
+b500000==B500000, 
+b576000==B576000, 
+b921600==B921600, 
+b1000000==B1000000, 
+b1152000==B1152000, 
+b1500000==B1500000, 
+b2000000==B2000000, 
+b2500000==B2500000, 
+b3000000==B3000000, 
+b3500000==B3500000, 
+b4000000==B4000000, 
+}BaudRate;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classeduart_1ab706a92a2abdd39b748492f26d89fa75">
+               <title>enum Parity </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classeduart_1ab706a92a2abdd39b748492f26d89fa75a61946e40eb83169f78e5460d4875cb7d">
+                            <term>None</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1ab706a92a2abdd39b748492f26d89fa75af51fbf3ac29786606dfa6c3896c66b77">
+                            <term>Odd</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1ab706a92a2abdd39b748492f26d89fa75a51c432d034dc90467584b31553a85653">
+                            <term>Even</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 53 of file eduart.h
+                    <programlisting>
+{
+None== 0, 
+Odd== (PARENB | PARODD), 
+Even== (PARENB), 
+}Parity;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4fa">
+               <title>enum StopBits </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4faa068e1e4c3dacb4bd82e4574b3d2c04f2">
+                            <term>One</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1a81d64a65349ee87e6bff9e99c1a2a4faa33352b7dd8d579fb45d2bf6dd3e4f4b7">
+                            <term>Two</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 60 of file eduart.h
+                    <programlisting>
+{
+One== 0, 
+Two== CSTOPB, 
+}StopBits;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classeduart_1a5211d2ecc2f21296eafe114ca999abb2">
+               <title>enum DataBits </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classeduart_1a5211d2ecc2f21296eafe114ca999abb2ae5d8646efef641958f91dc4d3eaa040b">
+                            <term>d5</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1a5211d2ecc2f21296eafe114ca999abb2aa375f36213ea175578bfea35e0b90c33">
+                            <term>d6</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1a5211d2ecc2f21296eafe114ca999abb2a1653637ef298b2d80ec91f713c7f49f9">
+                            <term>d7</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classeduart_1a5211d2ecc2f21296eafe114ca999abb2ae277e6824ef79278ff4bebae765f2ce0">
+                            <term>d8</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 66 of file eduart.h
+                    <programlisting>
+{
+d5==CS5, 
+d6==CS6, 
+d7==CS7, 
+d8==CS8, 
+}DataBits;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classeduart_1a95a97e53a2ba1ae4bb72b39b474e8de6">
+                <title>eduart::eduart (SerialPort uart_num)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1adc0cc6a48ebaaaa297aff0c073aa8474">
+                <title>eduart::~eduart ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1ae409534073cbe8469ce8e6aed502730a">
+                <title>const std::string &amp; eduart::device_path ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1aef4703307a8f07bf31ec06050e5e4596">
+                <title>void eduart::set_baud (BaudRate baud)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a5243e3f72554fe7463989e245e91e172">
+                <title>eduart::BaudRate eduart::baud ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1ae50ab2faddd54ed231380583b717ad5a">
+                <title>bool eduart::start ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1ab57fd0de8fa9f541f6b925cbe53e13ba">
+                <title>void eduart::set_format (DataBits db, Parity p, StopBits sb)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a9b5869ad89fc0c6fc14ab24485f441ed">
+                <title>void eduart::set_format (const DataFormat &amp;data_format)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a5b40ea037124171636fc44f327b7bd66">
+                <title>const eduart::DataFormat &amp; eduart::format ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1ac676e86e35f3754e1fc03d9bf97ac1e9">
+                <title>int32_t eduart::_raw_read (uint8_t *buffer, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a797e970d9dccf806b946771613cd3708">
+                <title>int32_t eduart::_raw_write (uint8_t *buffer, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a52616ce91029c883c411b66b344d9428">
+                <title>void eduart::_detach_console ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1afa905c14cded4680506631f5beb1fe24">
+                <title>void eduart::_reattach_console ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classeduart_1a6ffcc73b2c1a7fe3fbec793c81d43bb6">
+                <title>void eduart::_set_attribs ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

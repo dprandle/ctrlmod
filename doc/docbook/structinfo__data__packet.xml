@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structinfo__data__packet">
+<title>info_data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t model</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t firmware_minor</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t firmware_major</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t hardware</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t serialnumber[16]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[20]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union info_data_packet::@20 @21</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structinfo__data__packet_1afb9145aa395f640ad423624ea72730f5">info_data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structinfo__data__packet_1a8c8b12d30a12b931740eb9c4cdc84315">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structinfo__data__packet_1a85dfeae92d487d55b6d57e95e0c2b662">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structinfo__data__packet_1a8852d00d040d27ba824dc333a8f66f44">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structinfo__data__packet_1a5a78a794ee110ed9bb4a4bb97d57f9f3">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structinfo__data__packet_1a2b730e457ee372ad1d40d4bbc22928cc">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structinfo__data__packet_1ad2f7f5bdfe8084400875436242fe9838">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structinfo__data__packet_1a1dc781165e90e09e29fab25f6b9cfeb1">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structinfo__data__packet_1afb9145aa395f640ad423624ea72730f5">
+                <title>info_data_packet::info_data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a8c8b12d30a12b931740eb9c4cdc84315">
+                <title>std::string info_data_packet::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a85dfeae92d487d55b6d57e95e0c2b662">
+                <title>virtual std::string info_data_packet::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a8852d00d040d27ba824dc333a8f66f44">
+                <title>virtual uint32_t info_data_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a5a78a794ee110ed9bb4a4bb97d57f9f3">
+                <title>virtual uint8_t&amp; info_data_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a2b730e457ee372ad1d40d4bbc22928cc">
+                <title>virtual uint8_t* info_data_packet::dataptr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1ad2f7f5bdfe8084400875436242fe9838">
+                <title>static std::string info_data_packet::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structinfo__data__packet_1a1dc781165e90e09e29fab25f6b9cfeb1">
+                <title>static uint32_t info_data_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

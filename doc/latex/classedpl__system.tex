@@ -1,0 +1,209 @@
+\hypertarget{classedpl__system}{\section{edpl\-\_\-system Class Reference}
+\label{classedpl__system}\index{edpl\-\_\-system@{edpl\-\_\-system}}
+}
+
+
+{\ttfamily \#include $<$edplsystem.\-h$>$}
+
+Inheritance diagram for edpl\-\_\-system\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classedpl__system}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structedpl__system_1_1pl__gpio}{pl\-\_\-gpio}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ uint32\-\_\-t, \\*
+\hyperlink{structedpl__system_1_1pl__gpio}{pl\-\_\-gpio} $\ast$ $>$ \hyperlink{classedpl__system_ac6e43a24e97887c11e2e4d7c54294bc4}{plmap}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classedpl__system_a346231e6092910c7dfd6dd962ee25bc5}{edpl\-\_\-system} ()
+\item 
+virtual \hyperlink{classedpl__system_a94d6ed134e1abd43c4af6ae3d632f462}{$\sim$edpl\-\_\-system} ()
+\item 
+\hyperlink{structedpl__system_1_1pl__gpio}{pl\-\_\-gpio} $\ast$ \hyperlink{classedpl__system_ae42b9824a6d9626accbd234375f79c09}{add\-\_\-pl} (uint32\-\_\-t mraa\-\_\-pin, double c\-\_\-offset=0.\-0, const \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \&pos\-\_\-offset=\hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3}(), const \hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat} \&orient\-\_\-offset=\hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat}())
+\item 
+\hyperlink{structedpl__system_1_1pl__gpio}{pl\-\_\-gpio} $\ast$ \hyperlink{classedpl__system_a4a4369822031f0f4523abc12125d92d1}{get\-\_\-pl} (uint32\-\_\-t mraa\-\_\-pin)
+\item 
+void \hyperlink{classedpl__system_ab1e65466442581ce851bec4d4bd40459}{rm\-\_\-pl} (uint32\-\_\-t mraa\-\_\-pin)
+\item 
+bool \hyperlink{classedpl__system_a9a32ffdff7b99e9ad1f6562f508cd12f}{pl\-\_\-pin\-\_\-taken} (uint32\-\_\-t mraa\-\_\-pin)
+\item 
+void \hyperlink{classedpl__system_a792001c061fe40e388d7c5aaf428f389}{pl\-\_\-set\-\_\-pos} (uint32\-\_\-t mraa\-\_\-pin, const \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \&pos\-\_\-)
+\item 
+void \hyperlink{classedpl__system_a8e7eef161b591dd20b5e23fd246ac3f4}{pl\-\_\-set\-\_\-orientation} (uint32\-\_\-t mraa\-\_\-pin, const \hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat} \&orient\-\_\-)
+\item 
+void \hyperlink{classedpl__system_a54044ef9b7b84731ada0b6ec425225ea}{pl\-\_\-set\-\_\-cal\-\_\-offset} (uint32\-\_\-t mraa\-\_\-pin, double offset)
+\item 
+virtual void \hyperlink{classedpl__system_a4d9fae9e10da9cae1f1e7a00e751c933}{init} ()
+\item 
+virtual void \hyperlink{classedpl__system_adb2b906b466251dc513fb9d669a19e99}{release} ()
+\item 
+virtual bool \hyperlink{classedpl__system_a4aae16b8695eec7c54ccfaecee9c535c}{process} (\hyperlink{structedmessage}{edmessage} $\ast$msg)
+\item 
+virtual void \hyperlink{classedpl__system_ae84af8dea7c53fe3219e7cde15ddd43a}{update} ()
+\item 
+virtual std\-::string \hyperlink{classedpl__system_ab758bc4300926af08e47e0c8b655d8fc}{typestr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classedpl__system_a3b3de76e3cf9c7a34cfe17a7d65fbad4}{Type\-String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classedpl__system_ac6e43a24e97887c11e2e4d7c54294bc4}{\index{edpl\-\_\-system@{edpl\-\_\-system}!plmap@{plmap}}
+\index{plmap@{plmap}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{plmap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$uint32\-\_\-t, {\bf pl\-\_\-gpio}$\ast$$>$ {\bf edpl\-\_\-system\-::plmap}}}\label{classedpl__system_ac6e43a24e97887c11e2e4d7c54294bc4}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classedpl__system_a346231e6092910c7dfd6dd962ee25bc5}{\index{edpl\-\_\-system@{edpl\-\_\-system}!edpl\-\_\-system@{edpl\-\_\-system}}
+\index{edpl\-\_\-system@{edpl\-\_\-system}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{edpl\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edpl\-\_\-system\-::edpl\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a346231e6092910c7dfd6dd962ee25bc5}
+\hypertarget{classedpl__system_a94d6ed134e1abd43c4af6ae3d632f462}{\index{edpl\-\_\-system@{edpl\-\_\-system}!$\sim$edpl\-\_\-system@{$\sim$edpl\-\_\-system}}
+\index{$\sim$edpl\-\_\-system@{$\sim$edpl\-\_\-system}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{$\sim$edpl\-\_\-system}]{\setlength{\rightskip}{0pt plus 5cm}edpl\-\_\-system\-::$\sim$edpl\-\_\-system (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_a94d6ed134e1abd43c4af6ae3d632f462}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classedpl__system_ae42b9824a6d9626accbd234375f79c09}{\index{edpl\-\_\-system@{edpl\-\_\-system}!add\-\_\-pl@{add\-\_\-pl}}
+\index{add\-\_\-pl@{add\-\_\-pl}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{add\-\_\-pl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edpl\-\_\-system\-::pl\-\_\-gpio} $\ast$ edpl\-\_\-system\-::add\-\_\-pl (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin, }
+\item[{double}]{c\-\_\-offset = {\ttfamily 0.0}, }
+\item[{const {\bf vec3} \&}]{pos\-\_\-offset = {\ttfamily {\bf vec3}()}, }
+\item[{const {\bf quat} \&}]{orient\-\_\-offset = {\ttfamily {\bf quat}()}}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_ae42b9824a6d9626accbd234375f79c09}
+\hypertarget{classedpl__system_a4a4369822031f0f4523abc12125d92d1}{\index{edpl\-\_\-system@{edpl\-\_\-system}!get\-\_\-pl@{get\-\_\-pl}}
+\index{get\-\_\-pl@{get\-\_\-pl}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{get\-\_\-pl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edpl\-\_\-system\-::pl\-\_\-gpio} $\ast$ edpl\-\_\-system\-::get\-\_\-pl (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a4a4369822031f0f4523abc12125d92d1}
+\hypertarget{classedpl__system_a4d9fae9e10da9cae1f1e7a00e751c933}{\index{edpl\-\_\-system@{edpl\-\_\-system}!init@{init}}
+\index{init@{init}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_a4d9fae9e10da9cae1f1e7a00e751c933}
+
+
+Implements \hyperlink{classedsystem_a4c70e3568064941607fb220aea826a56}{edsystem}.
+
+\hypertarget{classedpl__system_a9a32ffdff7b99e9ad1f6562f508cd12f}{\index{edpl\-\_\-system@{edpl\-\_\-system}!pl\-\_\-pin\-\_\-taken@{pl\-\_\-pin\-\_\-taken}}
+\index{pl\-\_\-pin\-\_\-taken@{pl\-\_\-pin\-\_\-taken}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{pl\-\_\-pin\-\_\-taken}]{\setlength{\rightskip}{0pt plus 5cm}bool edpl\-\_\-system\-::pl\-\_\-pin\-\_\-taken (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a9a32ffdff7b99e9ad1f6562f508cd12f}
+\hypertarget{classedpl__system_a54044ef9b7b84731ada0b6ec425225ea}{\index{edpl\-\_\-system@{edpl\-\_\-system}!pl\-\_\-set\-\_\-cal\-\_\-offset@{pl\-\_\-set\-\_\-cal\-\_\-offset}}
+\index{pl\-\_\-set\-\_\-cal\-\_\-offset@{pl\-\_\-set\-\_\-cal\-\_\-offset}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{pl\-\_\-set\-\_\-cal\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::pl\-\_\-set\-\_\-cal\-\_\-offset (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin, }
+\item[{double}]{offset}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a54044ef9b7b84731ada0b6ec425225ea}
+\hypertarget{classedpl__system_a8e7eef161b591dd20b5e23fd246ac3f4}{\index{edpl\-\_\-system@{edpl\-\_\-system}!pl\-\_\-set\-\_\-orientation@{pl\-\_\-set\-\_\-orientation}}
+\index{pl\-\_\-set\-\_\-orientation@{pl\-\_\-set\-\_\-orientation}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{pl\-\_\-set\-\_\-orientation}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::pl\-\_\-set\-\_\-orientation (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin, }
+\item[{const {\bf quat} \&}]{orient\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a8e7eef161b591dd20b5e23fd246ac3f4}
+\hypertarget{classedpl__system_a792001c061fe40e388d7c5aaf428f389}{\index{edpl\-\_\-system@{edpl\-\_\-system}!pl\-\_\-set\-\_\-pos@{pl\-\_\-set\-\_\-pos}}
+\index{pl\-\_\-set\-\_\-pos@{pl\-\_\-set\-\_\-pos}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{pl\-\_\-set\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::pl\-\_\-set\-\_\-pos (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin, }
+\item[{const {\bf vec3} \&}]{pos\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_a792001c061fe40e388d7c5aaf428f389}
+\hypertarget{classedpl__system_a4aae16b8695eec7c54ccfaecee9c535c}{\index{edpl\-\_\-system@{edpl\-\_\-system}!process@{process}}
+\index{process@{process}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}bool edpl\-\_\-system\-::process (
+\begin{DoxyParamCaption}
+\item[{{\bf edmessage} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_a4aae16b8695eec7c54ccfaecee9c535c}
+
+
+Implements \hyperlink{classedsystem_a9d7a0547c702af1572ed8a1f5434fa0a}{edsystem}.
+
+\hypertarget{classedpl__system_adb2b906b466251dc513fb9d669a19e99}{\index{edpl\-\_\-system@{edpl\-\_\-system}!release@{release}}
+\index{release@{release}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_adb2b906b466251dc513fb9d669a19e99}
+
+
+Implements \hyperlink{classedsystem_af40ac185ca4a8efd6777fdb4c65880ea}{edsystem}.
+
+\hypertarget{classedpl__system_ab1e65466442581ce851bec4d4bd40459}{\index{edpl\-\_\-system@{edpl\-\_\-system}!rm\-\_\-pl@{rm\-\_\-pl}}
+\index{rm\-\_\-pl@{rm\-\_\-pl}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{rm\-\_\-pl}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::rm\-\_\-pl (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin}
+\end{DoxyParamCaption}
+)}}\label{classedpl__system_ab1e65466442581ce851bec4d4bd40459}
+\hypertarget{classedpl__system_ab758bc4300926af08e47e0c8b655d8fc}{\index{edpl\-\_\-system@{edpl\-\_\-system}!typestr@{typestr}}
+\index{typestr@{typestr}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{typestr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string edpl\-\_\-system\-::typestr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_ab758bc4300926af08e47e0c8b655d8fc}
+
+
+Implements \hyperlink{classedsystem_a19dc65111f9a38259fcafba3a32a646d}{edsystem}.
+
+\hypertarget{classedpl__system_a3b3de76e3cf9c7a34cfe17a7d65fbad4}{\index{edpl\-\_\-system@{edpl\-\_\-system}!Type\-String@{Type\-String}}
+\index{Type\-String@{Type\-String}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{Type\-String}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string edpl\-\_\-system\-::\-Type\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classedpl__system_a3b3de76e3cf9c7a34cfe17a7d65fbad4}
+\hypertarget{classedpl__system_ae84af8dea7c53fe3219e7cde15ddd43a}{\index{edpl\-\_\-system@{edpl\-\_\-system}!update@{update}}
+\index{update@{update}!edpl_system@{edpl\-\_\-system}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classedpl__system_ae84af8dea7c53fe3219e7cde15ddd43a}
+
+
+Implements \hyperlink{classedsystem_afd5308dc71350fe4e239cac5fb1bdbe9}{edsystem}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edplsystem_8h}{edplsystem.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edplsystem_8cpp}{edplsystem.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,162 @@
+\hypertarget{structscan__data__packet}{\section{scan\-\_\-data\-\_\-packet Struct Reference}
+\label{structscan__data__packet}\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}}
+}
+
+
+{\ttfamily \#include $<$edrplidar\-\_\-packets.\-h$>$}
+
+Inheritance diagram for scan\-\_\-data\-\_\-packet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structscan__data__packet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structscan__data__packet_a991911b1c806c6b288baa4b7b95d8e1d}{scan\-\_\-data\-\_\-packet} ()
+\item 
+virtual std\-::string \hyperlink{structscan__data__packet_aa8d4b795a798f413149c93760de6577f}{to\-String} ()
+\item 
+std\-::string \hyperlink{structscan__data__packet_a8401263b8927ca5a67ca23c8797cc67e}{type} ()
+\item 
+virtual uint32\-\_\-t \hyperlink{structscan__data__packet_a2678e9313e25c529abba1c1ba5ff3cba}{size} ()
+\item 
+virtual uint8\-\_\-t \& \hyperlink{structscan__data__packet_ac8b9b314239dd2663a7d2b98e5cd1c1a}{operator\mbox{[}$\,$\mbox{]}} (uint32\-\_\-t index)
+\item 
+virtual uint8\-\_\-t $\ast$ \hyperlink{structscan__data__packet_a376edae10eddfa50b3684e801a0a8f3a}{dataptr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{structscan__data__packet_add0b207133c083ddbea5a2d7c094baba}{Type} ()
+\item 
+static uint32\-\_\-t \hyperlink{structscan__data__packet_a383d91432a45ada918769e2737b9593e}{Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \hyperlink{structscan__data__packet_af592db980953da3509611b9d5176cd8e}{qual\_s\_sn}\\
+\>\>uint8\_t \hyperlink{structscan__data__packet_afa912fe10cbd68a6b8a60df2a1faa3ba}{angle6to0\_C}\\
+\>\>uint8\_t \hyperlink{structscan__data__packet_a614148a4a3e77048b6dd004e6e37c858}{angle14to7}\\
+\>\>uint8\_t \hyperlink{structscan__data__packet_a1622768a34e474d4ea482bd8ad27849f}{distance7to0}\\
+\>\>uint8\_t \hyperlink{structscan__data__packet_ae144f4bb4a3022fdfdb513959f0fd668}{distance15to8}\\
+\>\} \\
+\>uint8\_t \hyperlink{structscan__data__packet_ab2de61ce3719327366ee913c9a6b58fc}{data} \mbox{[}5\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structscan__data__packet_a991911b1c806c6b288baa4b7b95d8e1d}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}}
+\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{scan\-\_\-data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}scan\-\_\-data\-\_\-packet\-::scan\-\_\-data\-\_\-packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structscan__data__packet_a991911b1c806c6b288baa4b7b95d8e1d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structscan__data__packet_a376edae10eddfa50b3684e801a0a8f3a}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!dataptr@{dataptr}}
+\index{dataptr@{dataptr}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{dataptr}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t$\ast$ scan\-\_\-data\-\_\-packet\-::dataptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structscan__data__packet_a376edae10eddfa50b3684e801a0a8f3a}
+
+
+Implements \hyperlink{structdata__packet_ac53dcca572fc7cf7d71ae21d5c785365}{data\-\_\-packet}.
+
+\hypertarget{structscan__data__packet_ac8b9b314239dd2663a7d2b98e5cd1c1a}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t\& scan\-\_\-data\-\_\-packet\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structscan__data__packet_ac8b9b314239dd2663a7d2b98e5cd1c1a}
+
+
+Implements \hyperlink{structdata__packet_a8f0d95d4a7a7089b45cef14e45b0c21b}{data\-\_\-packet}.
+
+\hypertarget{structscan__data__packet_a2678e9313e25c529abba1c1ba5ff3cba}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!size@{size}}
+\index{size@{size}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t scan\-\_\-data\-\_\-packet\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structscan__data__packet_a2678e9313e25c529abba1c1ba5ff3cba}
+
+
+Implements \hyperlink{structdata__packet_ab5c9259a79cde0dc60d75135fe8464f6}{data\-\_\-packet}.
+
+\hypertarget{structscan__data__packet_a383d91432a45ada918769e2737b9593e}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!Size@{Size}}
+\index{Size@{Size}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}static uint32\-\_\-t scan\-\_\-data\-\_\-packet\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structscan__data__packet_a383d91432a45ada918769e2737b9593e}
+\hypertarget{structscan__data__packet_aa8d4b795a798f413149c93760de6577f}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string scan\-\_\-data\-\_\-packet\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{structscan__data__packet_aa8d4b795a798f413149c93760de6577f}
+
+
+Implements \hyperlink{structdata__packet_ad7ce179caef76c895bfc778862bc15ac}{data\-\_\-packet}.
+
+\hypertarget{structscan__data__packet_a8401263b8927ca5a67ca23c8797cc67e}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!type@{type}}
+\index{type@{type}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string scan\-\_\-data\-\_\-packet\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structscan__data__packet_a8401263b8927ca5a67ca23c8797cc67e}
+
+
+Implements \hyperlink{structdata__packet_af0795581f2d57a8c14a88009da37aee1}{data\-\_\-packet}.
+
+\hypertarget{structscan__data__packet_add0b207133c083ddbea5a2d7c094baba}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!Type@{Type}}
+\index{Type@{Type}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string scan\-\_\-data\-\_\-packet\-::\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structscan__data__packet_add0b207133c083ddbea5a2d7c094baba}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structscan__data__packet_a4f10bb28fada5dc58732724f356e68d2}{\subsubsection[{"@13}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structscan__data__packet_a4f10bb28fada5dc58732724f356e68d2}
+\hypertarget{structscan__data__packet_a614148a4a3e77048b6dd004e6e37c858}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!angle14to7@{angle14to7}}
+\index{angle14to7@{angle14to7}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{angle14to7}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::angle14to7}}\label{structscan__data__packet_a614148a4a3e77048b6dd004e6e37c858}
+\hypertarget{structscan__data__packet_afa912fe10cbd68a6b8a60df2a1faa3ba}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!angle6to0\-\_\-\-C@{angle6to0\-\_\-\-C}}
+\index{angle6to0\-\_\-\-C@{angle6to0\-\_\-\-C}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{angle6to0\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::angle6to0\-\_\-\-C}}\label{structscan__data__packet_afa912fe10cbd68a6b8a60df2a1faa3ba}
+\hypertarget{structscan__data__packet_ab2de61ce3719327366ee913c9a6b58fc}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!data@{data}}
+\index{data@{data}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::data\mbox{[}5\mbox{]}}}\label{structscan__data__packet_ab2de61ce3719327366ee913c9a6b58fc}
+\hypertarget{structscan__data__packet_ae144f4bb4a3022fdfdb513959f0fd668}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!distance15to8@{distance15to8}}
+\index{distance15to8@{distance15to8}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{distance15to8}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::distance15to8}}\label{structscan__data__packet_ae144f4bb4a3022fdfdb513959f0fd668}
+\hypertarget{structscan__data__packet_a1622768a34e474d4ea482bd8ad27849f}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!distance7to0@{distance7to0}}
+\index{distance7to0@{distance7to0}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{distance7to0}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::distance7to0}}\label{structscan__data__packet_a1622768a34e474d4ea482bd8ad27849f}
+\hypertarget{structscan__data__packet_af592db980953da3509611b9d5176cd8e}{\index{scan\-\_\-data\-\_\-packet@{scan\-\_\-data\-\_\-packet}!qual\-\_\-s\-\_\-sn@{qual\-\_\-s\-\_\-sn}}
+\index{qual\-\_\-s\-\_\-sn@{qual\-\_\-s\-\_\-sn}!scan_data_packet@{scan\-\_\-data\-\_\-packet}}
+\subsubsection[{qual\-\_\-s\-\_\-sn}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t scan\-\_\-data\-\_\-packet\-::qual\-\_\-s\-\_\-sn}}\label{structscan__data__packet_af592db980953da3509611b9d5176cd8e}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edrplidar__packets_8h}{edrplidar\-\_\-packets.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edrplidar__packets_8cpp}{edrplidar\-\_\-packets.\-cpp}\end{DoxyCompactItemize}

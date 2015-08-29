@@ -1,0 +1,508 @@
+\hypertarget{structnsquat}{\section{nsquat$<$ T $>$ Struct Template Reference}
+\label{structnsquat}\index{nsquat$<$ T $>$@{nsquat$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$nsquat.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnsquat_a95a3a372cf06d1b2a88543193a8f3668}{nsquat} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&copy)
+\item 
+\hyperlink{structnsquat_a003ab193ffffff9992c6767272ba8ea8}{nsquat} ()
+\item 
+\hyperlink{structnsquat_ae0a6a2812b38da7e4496275dc1b17480}{nsquat} (const T \&p\-X, const T \&p\-Y, const T \&p\-Z, const T \&p\-W)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a66431cd90e24922e76c551e4ecf3d644}{conjugate} ()
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a6aa0a1e7bc7bbdf707d4dd11f9a20014}{from} (const \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ T $>$ \&axis\-Angle, bool p\-Rads=false)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a8030b2163b53da98492a94b54ef91e6d}{from} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&\hyperlink{nsvec3_8h_ac03cece5b2ce21941bb4b4a02ea7e2b6}{euler}, typename \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$\-::Euler\-Order order, bool p\-Rads=false)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_ae1f98c2170351e831ceb38402a786b6c}{from} (const \hyperlink{structnsmat3}{nsmat3}$<$ T $>$ \&\hyperlink{nsmat3_8h_ad4de391de75c02e722b41b139734200b}{rotation\-Mat3})
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a0afab450c7c9c53219d02b808e5e32d4}{from} (const \hyperlink{structnsmat4}{nsmat4}$<$ T $>$ \&transform)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a9cf2a558c337517d636eea59fc88208c}{from} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&vec, const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&to\-Vec)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a46f99264a9460c1e53388338dd1f8726}{invert} ()
+\item 
+T \hyperlink{structnsquat_a31109b1efdc7d1fc4a7df803538b4acf}{length} () const 
+\item 
+T \hyperlink{structnsquat_a139b842a9481dbcc653cee6d15643ebe}{length\-Sq} () const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_af23ab6c9ec2ed7772e8da3a4229c7226}{normalize} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsquat_acaf8e5c49377e88d8bb548b842e628db}{right} () const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a29e34aabab642e19b6e5934d922af886}{round\-To\-Zero} ()
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a7647333dd8b755b378fd6d9b92c6ff74}{set} (const T \&p\-X, const T \&p\-Y, const T \&p\-Z, const T \&p\-W)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a9fd0037a8d206d423038ce7f0cf676d0}{set\-Identity} ()
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_aff272165e0866bcbeae706d523d6c96c}{slerp} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&second, const T \&scaling\-Factor)
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsquat_ad3a425484af363fd1f3f624649ffa8f7}{target} () const 
+\item 
+std\-::string \hyperlink{structnsquat_a6abf9e2ecba557cbc92c069ae3080842}{to\-String} ()
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsquat_aaaf256f452048d3507de00ed3ee2e042}{up} () const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a03146d1b1bad376e72e87553c48d766d}{operator+} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a6c06aa64f8ec42ce072ca6b1b6ff62d1}{operator-\/} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_ad65c7cdc47a109d00019225276c5d6fd}{operator$\ast$} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_ab0148cd9b0cb29f84805eafcf820813f}{operator/} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a65d33a1eaa808931c2814e3c12d7d5f8}{operator\%} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \hyperlink{structnsquat_af155deed127c8a16bba6f7a52a12b8aa}{operator$\ast$} (const \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a9231c3d0d4622389a441275b4d75c14d}{operator$\ast$} (const T \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a52e455050c0278f627ce32e5876748de}{operator/} (const T \&rhs) const 
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a008e3d3e51cbb27a2e6b572e34624da6}{operator=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a19901df0ffb8ca500efc90cbfb42189a}{operator++} (int32\-\_\-t)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \hyperlink{structnsquat_a2502835153719a3c52df34474c82841d}{operator-\/-\/} (int32\-\_\-t)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a707aa5fcf1a0ddb612f17b4f00025892}{operator++} ()
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a6ca3fdeb707c963f42d6902aedc33b02}{operator-\/-\/} ()
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a901c451b2f2566abfd513147e56c2a4e}{operator+=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_aec2fb6faa39578f87046209070e541a6}{operator-\/=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a9e45127c71a6380f3ddbe4e0545e828f}{operator$\ast$=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_ac4e347acd4b804ce3369467f1ee91281}{operator/=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a53432d27f6c26d343dcfc6f469d4b09f}{operator\%=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a0e36ccaab5069ad5a1d5cd4b3092bf4e}{operator$\ast$=} (const T \&rhs)
+\item 
+\hyperlink{structnsquat}{nsquat}$<$ T $>$ \& \hyperlink{structnsquat_a8b17da74bf34e207af7a4c1e48698947}{operator/=} (const T \&rhs)
+\item 
+bool \hyperlink{structnsquat_ab868746accfba6a44b7e2dbad8b974ab}{operator==} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structnsquat_af025972f48140ebbfbb9a39326317243}{operator!=} (const \hyperlink{structnsquat}{nsquat}$<$ T $>$ \&rhs) const 
+\item 
+bool \hyperlink{structnsquat_ad46b5d79ec488a5eb69ca38cc516e88e}{operator==} (const T \&rhs) const 
+\item 
+bool \hyperlink{structnsquat_a3033a3f339f296580eb4e43e7a61b6ae}{operator!=} (const T \&rhs) const 
+\item 
+const T \& \hyperlink{structnsquat_a0a083bc295c753469d93d0d64d366498}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val) const 
+\item 
+T \& \hyperlink{structnsquat_ad06fdf71da90af526b2411fdd7cfbc2a}{operator\mbox{[}$\,$\mbox{]}} (const uint32\-\_\-t \&p\-Val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>T \hyperlink{structnsquat_aede6e2743bebf9facaa1289538980efe}{data} \mbox{[}4\mbox{]}\\
+\>struct \{\\
+\>\>T \hyperlink{structnsquat_a22527181ec1041c4866c5ad812a0e59c}{x}\\
+\>\>T \hyperlink{structnsquat_aed9d3b4a36de643a497fd4f89ef84559}{y}\\
+\>\>T \hyperlink{structnsquat_afc11747164dc0238006ee47af5163ef9}{z}\\
+\>\>T \hyperlink{structnsquat_ac7e146c7e356e924c2ceed6067c9b7f8}{w}\\
+\>\} \\
+\>struct \{\\
+\>\>T \hyperlink{structnsquat_a33ec55370f81953af8d55ffafc9e91e6}{b}\\
+\>\>T \hyperlink{structnsquat_a5909aaaeec6a21544eecd0791d0ddee9}{c}\\
+\>\>T \hyperlink{structnsquat_a482eada816825eb42f642fb3e9fb2f09}{d}\\
+\>\>T \hyperlink{structnsquat_a404f51cefb4501a39c360df47c46c8ce}{a}\\
+\>\} \\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structnsquat_a95a3a372cf06d1b2a88543193a8f3668}{\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\subsubsection[{nsquat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$ T $>$\-::{\bf nsquat} (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a95a3a372cf06d1b2a88543193a8f3668}
+\hypertarget{structnsquat_a003ab193ffffff9992c6767272ba8ea8}{\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\subsubsection[{nsquat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$ T $>$\-::{\bf nsquat} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a003ab193ffffff9992c6767272ba8ea8}
+\hypertarget{structnsquat_ae0a6a2812b38da7e4496275dc1b17480}{\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\index{nsquat@{nsquat}!nsquat@{nsquat}}
+\subsubsection[{nsquat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$ T $>$\-::{\bf nsquat} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{p\-X, }
+\item[{const T \&}]{p\-Y, }
+\item[{const T \&}]{p\-Z, }
+\item[{const T \&}]{p\-W}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ae0a6a2812b38da7e4496275dc1b17480}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structnsquat_a66431cd90e24922e76c551e4ecf3d644}{\index{nsquat@{nsquat}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!nsquat@{nsquat}}
+\subsubsection[{conjugate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::conjugate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a66431cd90e24922e76c551e4ecf3d644}
+\hypertarget{structnsquat_a6aa0a1e7bc7bbdf707d4dd11f9a20014}{\index{nsquat@{nsquat}!from@{from}}
+\index{from@{from}!nsquat@{nsquat}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec4}$<$ T $>$ \&}]{axis\-Angle, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a6aa0a1e7bc7bbdf707d4dd11f9a20014}
+\hypertarget{structnsquat_a8030b2163b53da98492a94b54ef91e6d}{\index{nsquat@{nsquat}!from@{from}}
+\index{from@{from}!nsquat@{nsquat}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{euler, }
+\item[{typename {\bf N\-S\-Vec3}$<$ T $>$\-::Euler\-Order}]{order, }
+\item[{bool}]{p\-Rads = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a8030b2163b53da98492a94b54ef91e6d}
+\hypertarget{structnsquat_ae1f98c2170351e831ceb38402a786b6c}{\index{nsquat@{nsquat}!from@{from}}
+\index{from@{from}!nsquat@{nsquat}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat3}$<$ T $>$ \&}]{rotation\-Mat3}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ae1f98c2170351e831ceb38402a786b6c}
+\hypertarget{structnsquat_a0afab450c7c9c53219d02b808e5e32d4}{\index{nsquat@{nsquat}!from@{from}}
+\index{from@{from}!nsquat@{nsquat}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsmat4}$<$ T $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a0afab450c7c9c53219d02b808e5e32d4}
+\hypertarget{structnsquat_a9cf2a558c337517d636eea59fc88208c}{\index{nsquat@{nsquat}!from@{from}}
+\index{from@{from}!nsquat@{nsquat}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::from (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{vec, }
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{to\-Vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a9cf2a558c337517d636eea59fc88208c}
+\hypertarget{structnsquat_a46f99264a9460c1e53388338dd1f8726}{\index{nsquat@{nsquat}!invert@{invert}}
+\index{invert@{invert}!nsquat@{nsquat}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::invert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a46f99264a9460c1e53388338dd1f8726}
+\hypertarget{structnsquat_a31109b1efdc7d1fc4a7df803538b4acf}{\index{nsquat@{nsquat}!length@{length}}
+\index{length@{length}!nsquat@{nsquat}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a31109b1efdc7d1fc4a7df803538b4acf}
+\hypertarget{structnsquat_a139b842a9481dbcc653cee6d15643ebe}{\index{nsquat@{nsquat}!length\-Sq@{length\-Sq}}
+\index{length\-Sq@{length\-Sq}!nsquat@{nsquat}}
+\subsubsection[{length\-Sq}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::length\-Sq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a139b842a9481dbcc653cee6d15643ebe}
+\hypertarget{structnsquat_af23ab6c9ec2ed7772e8da3a4229c7226}{\index{nsquat@{nsquat}!normalize@{normalize}}
+\index{normalize@{normalize}!nsquat@{nsquat}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_af23ab6c9ec2ed7772e8da3a4229c7226}
+\hypertarget{structnsquat_af025972f48140ebbfbb9a39326317243}{\index{nsquat@{nsquat}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!nsquat@{nsquat}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsquat}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_af025972f48140ebbfbb9a39326317243}
+\hypertarget{structnsquat_a3033a3f339f296580eb4e43e7a61b6ae}{\index{nsquat@{nsquat}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!nsquat@{nsquat}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsquat}$<$ T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a3033a3f339f296580eb4e43e7a61b6ae}
+\hypertarget{structnsquat_a65d33a1eaa808931c2814e3c12d7d5f8}{\index{nsquat@{nsquat}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!nsquat@{nsquat}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a65d33a1eaa808931c2814e3c12d7d5f8}
+\hypertarget{structnsquat_a53432d27f6c26d343dcfc6f469d4b09f}{\index{nsquat@{nsquat}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!nsquat@{nsquat}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a53432d27f6c26d343dcfc6f469d4b09f}
+\hypertarget{structnsquat_ad65c7cdc47a109d00019225276c5d6fd}{\index{nsquat@{nsquat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsquat@{nsquat}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ad65c7cdc47a109d00019225276c5d6fd}
+\hypertarget{structnsquat_af155deed127c8a16bba6f7a52a12b8aa}{\index{nsquat@{nsquat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsquat@{nsquat}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf N\-S\-Vec3}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_af155deed127c8a16bba6f7a52a12b8aa}
+\hypertarget{structnsquat_a9231c3d0d4622389a441275b4d75c14d}{\index{nsquat@{nsquat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsquat@{nsquat}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a9231c3d0d4622389a441275b4d75c14d}
+\hypertarget{structnsquat_a9e45127c71a6380f3ddbe4e0545e828f}{\index{nsquat@{nsquat}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!nsquat@{nsquat}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a9e45127c71a6380f3ddbe4e0545e828f}
+\hypertarget{structnsquat_a0e36ccaab5069ad5a1d5cd4b3092bf4e}{\index{nsquat@{nsquat}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!nsquat@{nsquat}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a0e36ccaab5069ad5a1d5cd4b3092bf4e}
+\hypertarget{structnsquat_a03146d1b1bad376e72e87553c48d766d}{\index{nsquat@{nsquat}!operator+@{operator+}}
+\index{operator+@{operator+}!nsquat@{nsquat}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a03146d1b1bad376e72e87553c48d766d}
+\hypertarget{structnsquat_a19901df0ffb8ca500efc90cbfb42189a}{\index{nsquat@{nsquat}!operator++@{operator++}}
+\index{operator++@{operator++}!nsquat@{nsquat}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a19901df0ffb8ca500efc90cbfb42189a}
+\hypertarget{structnsquat_a707aa5fcf1a0ddb612f17b4f00025892}{\index{nsquat@{nsquat}!operator++@{operator++}}
+\index{operator++@{operator++}!nsquat@{nsquat}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a707aa5fcf1a0ddb612f17b4f00025892}
+\hypertarget{structnsquat_a901c451b2f2566abfd513147e56c2a4e}{\index{nsquat@{nsquat}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!nsquat@{nsquat}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a901c451b2f2566abfd513147e56c2a4e}
+\hypertarget{structnsquat_a6c06aa64f8ec42ce072ca6b1b6ff62d1}{\index{nsquat@{nsquat}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!nsquat@{nsquat}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a6c06aa64f8ec42ce072ca6b1b6ff62d1}
+\hypertarget{structnsquat_a2502835153719a3c52df34474c82841d}{\index{nsquat@{nsquat}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!nsquat@{nsquat}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a2502835153719a3c52df34474c82841d}
+\hypertarget{structnsquat_a6ca3fdeb707c963f42d6902aedc33b02}{\index{nsquat@{nsquat}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!nsquat@{nsquat}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a6ca3fdeb707c963f42d6902aedc33b02}
+\hypertarget{structnsquat_aec2fb6faa39578f87046209070e541a6}{\index{nsquat@{nsquat}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!nsquat@{nsquat}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_aec2fb6faa39578f87046209070e541a6}
+\hypertarget{structnsquat_ab0148cd9b0cb29f84805eafcf820813f}{\index{nsquat@{nsquat}!operator/@{operator/}}
+\index{operator/@{operator/}!nsquat@{nsquat}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ab0148cd9b0cb29f84805eafcf820813f}
+\hypertarget{structnsquat_a52e455050c0278f627ce32e5876748de}{\index{nsquat@{nsquat}!operator/@{operator/}}
+\index{operator/@{operator/}!nsquat@{nsquat}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$ {\bf nsquat}$<$ T $>$\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a52e455050c0278f627ce32e5876748de}
+\hypertarget{structnsquat_ac4e347acd4b804ce3369467f1ee91281}{\index{nsquat@{nsquat}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!nsquat@{nsquat}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ac4e347acd4b804ce3369467f1ee91281}
+\hypertarget{structnsquat_a8b17da74bf34e207af7a4c1e48698947}{\index{nsquat@{nsquat}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!nsquat@{nsquat}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a8b17da74bf34e207af7a4c1e48698947}
+\hypertarget{structnsquat_a008e3d3e51cbb27a2e6b572e34624da6}{\index{nsquat@{nsquat}!operator=@{operator=}}
+\index{operator=@{operator=}!nsquat@{nsquat}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a008e3d3e51cbb27a2e6b572e34624da6}
+\hypertarget{structnsquat_ab868746accfba6a44b7e2dbad8b974ab}{\index{nsquat@{nsquat}!operator==@{operator==}}
+\index{operator==@{operator==}!nsquat@{nsquat}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsquat}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ab868746accfba6a44b7e2dbad8b974ab}
+\hypertarget{structnsquat_ad46b5d79ec488a5eb69ca38cc516e88e}{\index{nsquat@{nsquat}!operator==@{operator==}}
+\index{operator==@{operator==}!nsquat@{nsquat}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf nsquat}$<$ T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ad46b5d79ec488a5eb69ca38cc516e88e}
+\hypertarget{structnsquat_a0a083bc295c753469d93d0d64d366498}{\index{nsquat@{nsquat}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!nsquat@{nsquat}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf nsquat}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a0a083bc295c753469d93d0d64d366498}
+\hypertarget{structnsquat_ad06fdf71da90af526b2411fdd7cfbc2a}{\index{nsquat@{nsquat}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!nsquat@{nsquat}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf nsquat}$<$ T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{p\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ad06fdf71da90af526b2411fdd7cfbc2a}
+\hypertarget{structnsquat_acaf8e5c49377e88d8bb548b842e628db}{\index{nsquat@{nsquat}!right@{right}}
+\index{right@{right}!nsquat@{nsquat}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsquat}$<$ T $>$\-::right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_acaf8e5c49377e88d8bb548b842e628db}
+\hypertarget{structnsquat_a29e34aabab642e19b6e5934d922af886}{\index{nsquat@{nsquat}!round\-To\-Zero@{round\-To\-Zero}}
+\index{round\-To\-Zero@{round\-To\-Zero}!nsquat@{nsquat}}
+\subsubsection[{round\-To\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::round\-To\-Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a29e34aabab642e19b6e5934d922af886}
+\hypertarget{structnsquat_a7647333dd8b755b378fd6d9b92c6ff74}{\index{nsquat@{nsquat}!set@{set}}
+\index{set@{set}!nsquat@{nsquat}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::set (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{p\-X, }
+\item[{const T \&}]{p\-Y, }
+\item[{const T \&}]{p\-Z, }
+\item[{const T \&}]{p\-W}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a7647333dd8b755b378fd6d9b92c6ff74}
+\hypertarget{structnsquat_a9fd0037a8d206d423038ce7f0cf676d0}{\index{nsquat@{nsquat}!set\-Identity@{set\-Identity}}
+\index{set\-Identity@{set\-Identity}!nsquat@{nsquat}}
+\subsubsection[{set\-Identity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::set\-Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a9fd0037a8d206d423038ce7f0cf676d0}
+\hypertarget{structnsquat_aff272165e0866bcbeae706d523d6c96c}{\index{nsquat@{nsquat}!slerp@{slerp}}
+\index{slerp@{slerp}!nsquat@{nsquat}}
+\subsubsection[{slerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf nsquat}$<$T$>$\& {\bf nsquat}$<$ T $>$\-::slerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf nsquat}$<$ T $>$ \&}]{second, }
+\item[{const T \&}]{scaling\-Factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_aff272165e0866bcbeae706d523d6c96c}
+\hypertarget{structnsquat_ad3a425484af363fd1f3f624649ffa8f7}{\index{nsquat@{nsquat}!target@{target}}
+\index{target@{target}!nsquat@{nsquat}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsquat}$<$ T $>$\-::target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_ad3a425484af363fd1f3f624649ffa8f7}
+\hypertarget{structnsquat_a6abf9e2ecba557cbc92c069ae3080842}{\index{nsquat@{nsquat}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!nsquat@{nsquat}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\-::string {\bf nsquat}$<$ T $>$\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_a6abf9e2ecba557cbc92c069ae3080842}
+\hypertarget{structnsquat_aaaf256f452048d3507de00ed3ee2e042}{\index{nsquat@{nsquat}!up@{up}}
+\index{up@{up}!nsquat@{nsquat}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf N\-S\-Vec3}$<$T$>$ {\bf nsquat}$<$ T $>$\-::up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structnsquat_aaaf256f452048d3507de00ed3ee2e042}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structnsquat_a784b6276cf1a7a13f82e92f1e314f924}{\subsubsection[{"@37}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structnsquat_a784b6276cf1a7a13f82e92f1e314f924}
+\hypertarget{structnsquat_a404f51cefb4501a39c360df47c46c8ce}{\index{nsquat@{nsquat}!a@{a}}
+\index{a@{a}!nsquat@{nsquat}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::a}}\label{structnsquat_a404f51cefb4501a39c360df47c46c8ce}
+\hypertarget{structnsquat_a33ec55370f81953af8d55ffafc9e91e6}{\index{nsquat@{nsquat}!b@{b}}
+\index{b@{b}!nsquat@{nsquat}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::b}}\label{structnsquat_a33ec55370f81953af8d55ffafc9e91e6}
+\hypertarget{structnsquat_a5909aaaeec6a21544eecd0791d0ddee9}{\index{nsquat@{nsquat}!c@{c}}
+\index{c@{c}!nsquat@{nsquat}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::c}}\label{structnsquat_a5909aaaeec6a21544eecd0791d0ddee9}
+\hypertarget{structnsquat_a482eada816825eb42f642fb3e9fb2f09}{\index{nsquat@{nsquat}!d@{d}}
+\index{d@{d}!nsquat@{nsquat}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::d}}\label{structnsquat_a482eada816825eb42f642fb3e9fb2f09}
+\hypertarget{structnsquat_aede6e2743bebf9facaa1289538980efe}{\index{nsquat@{nsquat}!data@{data}}
+\index{data@{data}!nsquat@{nsquat}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::data\mbox{[}4\mbox{]}}}\label{structnsquat_aede6e2743bebf9facaa1289538980efe}
+\hypertarget{structnsquat_ac7e146c7e356e924c2ceed6067c9b7f8}{\index{nsquat@{nsquat}!w@{w}}
+\index{w@{w}!nsquat@{nsquat}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::w}}\label{structnsquat_ac7e146c7e356e924c2ceed6067c9b7f8}
+\hypertarget{structnsquat_a22527181ec1041c4866c5ad812a0e59c}{\index{nsquat@{nsquat}!x@{x}}
+\index{x@{x}!nsquat@{nsquat}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::x}}\label{structnsquat_a22527181ec1041c4866c5ad812a0e59c}
+\hypertarget{structnsquat_aed9d3b4a36de643a497fd4f89ef84559}{\index{nsquat@{nsquat}!y@{y}}
+\index{y@{y}!nsquat@{nsquat}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::y}}\label{structnsquat_aed9d3b4a36de643a497fd4f89ef84559}
+\hypertarget{structnsquat_afc11747164dc0238006ee47af5163ef9}{\index{nsquat@{nsquat}!z@{z}}
+\index{z@{z}!nsquat@{nsquat}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf nsquat}$<$ T $>$\-::z}}\label{structnsquat_afc11747164dc0238006ee47af5163ef9}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{nsquat_8h}{nsquat.\-h}\end{DoxyCompactItemize}

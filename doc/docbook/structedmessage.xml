@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedmessage">
+<title>edmessage struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t ref_count</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structedmessage_1a4096acc3351b6fca939675b9c53fe288">~edmessage</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structedmessage_1ac888cf8e570a4aa9bea30a4c4fcdcc30">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedmessage_1a4096acc3351b6fca939675b9c53fe288">
+                <title>virtual edmessage::~edmessage ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structedmessage_1ac888cf8e570a4aa9bea30a4c4fcdcc30">
+                <title>virtual std::string edmessage::type ()=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

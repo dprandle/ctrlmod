@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedpl__callback">
+<title>edpl_callback struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edplsystem_8h">&lt;edplsystem.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edpl_system::pl_gpio * pl_ceil</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edpl_system::pl_gpio * pl_floor</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structedpl__callback_1ad921d4f126d38a6e2e7769a507c75caf">edpl_callback</link> (
+<link linkend="structedpl__system_1_1pl__gpio">edpl_system::pl_gpio</link> * ceil, <link linkend="structedpl__system_1_1pl__gpio">edpl_system::pl_gpio</link> * floor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="structedpl__callback_1a23c8aacf97d5a080af1f7d84439122c8">exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedpl__callback_1ad921d4f126d38a6e2e7769a507c75caf">
+                <title>edpl_callback::edpl_callback (edpl_system::pl_gpio *ceil, edpl_system::pl_gpio *floor)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structedpl__callback_1a23c8aacf97d5a080af1f7d84439122c8">
+                <title>void edpl_callback::exec ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structdescriptor__packet">
+<title>descriptor_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t s1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t s2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t drlen0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t drlen1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t drlen2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t drlen3_smode</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t datatype</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[7]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union descriptor_packet::@32 @33</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structdescriptor__packet_1acb50c5d7e23d6b85a2310672d9f17e95">descriptor_packet</link> (
+uint8_t drlen0_, uint8_t drlen1_, uint8_t drlen2_, uint8_t drlen3_smode_, uint8_t datatype_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structdescriptor__packet_1acd7f79e7aefbdf4f6b0638ab75df6d46">~descriptor_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structdescriptor__packet_1ad08369aae987f91544cee5e8f2267f2f">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t <link linkend="structdescriptor__packet_1a3b14c4024796ba8b45f582b0bd7d1f50">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t &amp; <link linkend="structdescriptor__packet_1a92b50972015f1bb1b4a99d0f0910c3e3">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structdescriptor__packet_1ab197e4207edc6c708dca8d0b0bbfc098">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structdescriptor__packet_1acb50c5d7e23d6b85a2310672d9f17e95">
+                <title>descriptor_packet::descriptor_packet (uint8_t drlen0_=0x00, uint8_t drlen1_=0x00, uint8_t drlen2_=0x00, uint8_t drlen3_smode_=0x00, uint8_t datatype_=0x00)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdescriptor__packet_1acd7f79e7aefbdf4f6b0638ab75df6d46">
+                <title>virtual descriptor_packet::~descriptor_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdescriptor__packet_1ad08369aae987f91544cee5e8f2267f2f">
+                <title>virtual std::string descriptor_packet::type ()=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdescriptor__packet_1a3b14c4024796ba8b45f582b0bd7d1f50">
+                <title>uint32_t descriptor_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdescriptor__packet_1a92b50972015f1bb1b4a99d0f0910c3e3">
+                <title>uint8_t&amp; descriptor_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structdescriptor__packet_1ab197e4207edc6c708dca8d0b0bbfc098">
+                <title>static uint32_t descriptor_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

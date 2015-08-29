@@ -1,0 +1,106 @@
+\hypertarget{structedpl__system_1_1pl__gpio}{\section{edpl\-\_\-system\-:\-:pl\-\_\-gpio Struct Reference}
+\label{structedpl__system_1_1pl__gpio}\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+}
+
+
+{\ttfamily \#include $<$edplsystem.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structedpl__system_1_1pl__gpio_ab3b3d183578afe5306c88e5aa617fbdf}{pl\-\_\-gpio} (uint32\-\_\-t mraa\-\_\-pin, double calibrate\-\_\-offset=0.\-0, const \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \&poffset=\hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3}(), const \hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat} \&orient\-\_\-=\hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat}())
+\item 
+\hyperlink{structedpl__system_1_1pl__gpio_a1aab8e250342880162d913b58b0ca4a3}{$\sim$pl\-\_\-gpio} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{structedpl__system_1_1pl__gpio_a090584cfce1edab68099f1a10e3cc63b}{isr} (void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+mraa\-::\-Gpio $\ast$ \hyperlink{structedpl__system_1_1pl__gpio_a234539725c2d45835f0debcac9fa36d5}{pin}
+\item 
+\hyperlink{classedtimer}{edtimer} $\ast$ \hyperlink{structedpl__system_1_1pl__gpio_a7508563924e13b4776f2c659987f8bbe}{timer}
+\item 
+\hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3} \hyperlink{structedpl__system_1_1pl__gpio_ae594b7de5246feec7d01bd07f495ea80}{pos}
+\item 
+\hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat} \hyperlink{structedpl__system_1_1pl__gpio_a90e813786d78ee35fdb83d1a7102ede1}{orient}
+\item 
+double \hyperlink{structedpl__system_1_1pl__gpio_aec767567a7e6cd84047a2d05713caaac}{cal\-\_\-offset}
+\item 
+bool \hyperlink{structedpl__system_1_1pl__gpio_a6bdbec576fb7ee451b43c578510ccedc}{meas\-\_\-ready}
+\item 
+double \hyperlink{structedpl__system_1_1pl__gpio_aeabebbe081b66877ac1c18040ffec58c}{sum\-\_\-dist}
+\item 
+uint32\-\_\-t \hyperlink{structedpl__system_1_1pl__gpio_a6303dfb8b2c4d06206ad3b4ef25237b2}{mraa\-\_\-pin\-\_\-num}
+\item 
+uint32\-\_\-t \hyperlink{structedpl__system_1_1pl__gpio_a592c378d6b5e33b8743279c94e292d47}{meas\-\_\-count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structedpl__system_1_1pl__gpio_ab3b3d183578afe5306c88e5aa617fbdf}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!pl\-\_\-gpio@{pl\-\_\-gpio}}
+\index{pl\-\_\-gpio@{pl\-\_\-gpio}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{pl\-\_\-gpio}]{\setlength{\rightskip}{0pt plus 5cm}edpl\-\_\-system\-::pl\-\_\-gpio\-::pl\-\_\-gpio (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{mraa\-\_\-pin, }
+\item[{double}]{calibrate\-\_\-offset = {\ttfamily 0.0}, }
+\item[{const {\bf vec3} \&}]{poffset = {\ttfamily {\bf vec3}()}, }
+\item[{const {\bf quat} \&}]{orient\-\_\- = {\ttfamily {\bf quat}()}}
+\end{DoxyParamCaption}
+)}}\label{structedpl__system_1_1pl__gpio_ab3b3d183578afe5306c88e5aa617fbdf}
+\hypertarget{structedpl__system_1_1pl__gpio_a1aab8e250342880162d913b58b0ca4a3}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!$\sim$pl\-\_\-gpio@{$\sim$pl\-\_\-gpio}}
+\index{$\sim$pl\-\_\-gpio@{$\sim$pl\-\_\-gpio}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{$\sim$pl\-\_\-gpio}]{\setlength{\rightskip}{0pt plus 5cm}edpl\-\_\-system\-::pl\-\_\-gpio\-::$\sim$pl\-\_\-gpio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structedpl__system_1_1pl__gpio_a1aab8e250342880162d913b58b0ca4a3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structedpl__system_1_1pl__gpio_a090584cfce1edab68099f1a10e3cc63b}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!isr@{isr}}
+\index{isr@{isr}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{isr}]{\setlength{\rightskip}{0pt plus 5cm}void edpl\-\_\-system\-::pl\-\_\-gpio\-::isr (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{pl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structedpl__system_1_1pl__gpio_a090584cfce1edab68099f1a10e3cc63b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structedpl__system_1_1pl__gpio_aec767567a7e6cd84047a2d05713caaac}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!cal\-\_\-offset@{cal\-\_\-offset}}
+\index{cal\-\_\-offset@{cal\-\_\-offset}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{cal\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}double edpl\-\_\-system\-::pl\-\_\-gpio\-::cal\-\_\-offset}}\label{structedpl__system_1_1pl__gpio_aec767567a7e6cd84047a2d05713caaac}
+\hypertarget{structedpl__system_1_1pl__gpio_a592c378d6b5e33b8743279c94e292d47}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!meas\-\_\-count@{meas\-\_\-count}}
+\index{meas\-\_\-count@{meas\-\_\-count}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{meas\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edpl\-\_\-system\-::pl\-\_\-gpio\-::meas\-\_\-count}}\label{structedpl__system_1_1pl__gpio_a592c378d6b5e33b8743279c94e292d47}
+\hypertarget{structedpl__system_1_1pl__gpio_a6bdbec576fb7ee451b43c578510ccedc}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!meas\-\_\-ready@{meas\-\_\-ready}}
+\index{meas\-\_\-ready@{meas\-\_\-ready}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{meas\-\_\-ready}]{\setlength{\rightskip}{0pt plus 5cm}bool edpl\-\_\-system\-::pl\-\_\-gpio\-::meas\-\_\-ready}}\label{structedpl__system_1_1pl__gpio_a6bdbec576fb7ee451b43c578510ccedc}
+\hypertarget{structedpl__system_1_1pl__gpio_a6303dfb8b2c4d06206ad3b4ef25237b2}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!mraa\-\_\-pin\-\_\-num@{mraa\-\_\-pin\-\_\-num}}
+\index{mraa\-\_\-pin\-\_\-num@{mraa\-\_\-pin\-\_\-num}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{mraa\-\_\-pin\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t edpl\-\_\-system\-::pl\-\_\-gpio\-::mraa\-\_\-pin\-\_\-num}}\label{structedpl__system_1_1pl__gpio_a6303dfb8b2c4d06206ad3b4ef25237b2}
+\hypertarget{structedpl__system_1_1pl__gpio_a90e813786d78ee35fdb83d1a7102ede1}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!orient@{orient}}
+\index{orient@{orient}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{orient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf quat} edpl\-\_\-system\-::pl\-\_\-gpio\-::orient}}\label{structedpl__system_1_1pl__gpio_a90e813786d78ee35fdb83d1a7102ede1}
+\hypertarget{structedpl__system_1_1pl__gpio_a234539725c2d45835f0debcac9fa36d5}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!pin@{pin}}
+\index{pin@{pin}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{pin}]{\setlength{\rightskip}{0pt plus 5cm}mraa\-::\-Gpio$\ast$ edpl\-\_\-system\-::pl\-\_\-gpio\-::pin}}\label{structedpl__system_1_1pl__gpio_a234539725c2d45835f0debcac9fa36d5}
+\hypertarget{structedpl__system_1_1pl__gpio_ae594b7de5246feec7d01bd07f495ea80}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!pos@{pos}}
+\index{pos@{pos}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3} edpl\-\_\-system\-::pl\-\_\-gpio\-::pos}}\label{structedpl__system_1_1pl__gpio_ae594b7de5246feec7d01bd07f495ea80}
+\hypertarget{structedpl__system_1_1pl__gpio_aeabebbe081b66877ac1c18040ffec58c}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!sum\-\_\-dist@{sum\-\_\-dist}}
+\index{sum\-\_\-dist@{sum\-\_\-dist}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{sum\-\_\-dist}]{\setlength{\rightskip}{0pt plus 5cm}double edpl\-\_\-system\-::pl\-\_\-gpio\-::sum\-\_\-dist}}\label{structedpl__system_1_1pl__gpio_aeabebbe081b66877ac1c18040ffec58c}
+\hypertarget{structedpl__system_1_1pl__gpio_a7508563924e13b4776f2c659987f8bbe}{\index{edpl\-\_\-system\-::pl\-\_\-gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}!timer@{timer}}
+\index{timer@{timer}!edpl_system::pl_gpio@{edpl\-\_\-system\-::pl\-\_\-gpio}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf edtimer}$\ast$ edpl\-\_\-system\-::pl\-\_\-gpio\-::timer}}\label{structedpl__system_1_1pl__gpio_a7508563924e13b4776f2c659987f8bbe}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{edplsystem_8h}{edplsystem.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{edplsystem_8cpp}{edplsystem.\-cpp}\end{DoxyCompactItemize}

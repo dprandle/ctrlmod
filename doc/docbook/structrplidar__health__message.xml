@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrplidar__health__message">
+<title>rplidar_health_message struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>health_data_packet device_health</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structrplidar__health__message_1aa886bee47423f541669914e883b838ee">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structrplidar__health__message_1ac69cee0b7a99e25d03b67ad7eecd8b49">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrplidar__health__message_1aa886bee47423f541669914e883b838ee">
+                <title>virtual std::string rplidar_health_message::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__health__message_1ac69cee0b7a99e25d03b67ad7eecd8b49">
+                <title>static std::string rplidar_health_message::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

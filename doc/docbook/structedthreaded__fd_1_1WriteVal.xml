@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structedthreaded__fd_1_1WriteVal">
+<title>edthreaded_fd::WriteVal struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edthreaded__fd_8h">&lt;edthreaded_fd.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t byte</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t response_size</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structedthreaded__fd_1_1WriteVal_1a2e44699eec697ffa373f6633a0d85f92">WriteVal</link> (
+uint8_t byte_, int32_t response_size_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structedthreaded__fd_1_1WriteVal_1a2e44699eec697ffa373f6633a0d85f92">
+                <title>edthreaded_fd::WriteVal::WriteVal (uint8_t byte_=0x00, int32_t response_size_=0)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

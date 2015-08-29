@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structscan__data__packet">
+<title>scan_data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t qual_s_sn</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t angle6to0_C</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t angle14to7</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t distance7to0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t distance15to8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[5]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union scan_data_packet::@12 @13</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structscan__data__packet_1a991911b1c806c6b288baa4b7b95d8e1d">scan_data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structscan__data__packet_1aa8d4b795a798f413149c93760de6577f">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="structscan__data__packet_1a8401263b8927ca5a67ca23c8797cc67e">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structscan__data__packet_1a2678e9313e25c529abba1c1ba5ff3cba">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structscan__data__packet_1ac8b9b314239dd2663a7d2b98e5cd1c1a">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structscan__data__packet_1a376edae10eddfa50b3684e801a0a8f3a">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structscan__data__packet_1add0b207133c083ddbea5a2d7c094baba">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structscan__data__packet_1a383d91432a45ada918769e2737b9593e">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structscan__data__packet_1a991911b1c806c6b288baa4b7b95d8e1d">
+                <title>scan_data_packet::scan_data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1aa8d4b795a798f413149c93760de6577f">
+                <title>std::string scan_data_packet::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1a8401263b8927ca5a67ca23c8797cc67e">
+                <title>std::string scan_data_packet::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1a2678e9313e25c529abba1c1ba5ff3cba">
+                <title>virtual uint32_t scan_data_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1ac8b9b314239dd2663a7d2b98e5cd1c1a">
+                <title>virtual uint8_t&amp; scan_data_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1a376edae10eddfa50b3684e801a0a8f3a">
+                <title>virtual uint8_t* scan_data_packet::dataptr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1add0b207133c083ddbea5a2d7c094baba">
+                <title>static std::string scan_data_packet::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structscan__data__packet_1a383d91432a45ada918769e2737b9593e">
+                <title>static uint32_t scan_data_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

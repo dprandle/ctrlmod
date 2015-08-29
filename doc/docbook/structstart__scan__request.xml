@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structstart__scan__request">
+<title>start_scan_request struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structstart__scan__request_1a5ab81d664805c9fb5b09e77e07f17b27">start_scan_request</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structstart__scan__request_1a5ab81d664805c9fb5b09e77e07f17b27">
+                <title>start_scan_request::start_scan_request ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ednavsystem_8cpp">
+    <title>ednavsystem.cpp File Reference</title>
+    <programlisting>#include &lt;edutility.h&gt;</programlisting>
+    <programlisting>#include &lt;ednavsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage.h&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;edi2c.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Definition file for navigation system. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Daniel &lt;dprandle-CZ-17&gt; </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>Fri Jul 10 10:44:40 2015 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/ednavsystem.cpp</para>
+    </simplesect>
+</section>

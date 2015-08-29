@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structrplidar__firmware__message">
+<title>rplidar_firmware_message struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmessage_8h">&lt;edmessage.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>firmware_data_packet device_firmware</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structrplidar__firmware__message_1a6985ec56070c19af62cf4b95dbeb78f8">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structrplidar__firmware__message_1a2ef1ac448780fdccaee555703b82d83e">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structrplidar__firmware__message_1a6985ec56070c19af62cf4b95dbeb78f8">
+                <title>virtual std::string rplidar_firmware_message::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structrplidar__firmware__message_1a2ef1ac448780fdccaee555703b82d83e">
+                <title>static std::string rplidar_firmware_message::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

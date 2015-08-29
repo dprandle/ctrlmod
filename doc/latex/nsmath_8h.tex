@@ -1,0 +1,374 @@
+\hypertarget{nsmath_8h}{\section{/home/dprandle/\-Documents/code/ctrlmod/include/nsmath.h File Reference}
+\label{nsmath_8h}\index{/home/dprandle/\-Documents/code/ctrlmod/include/nsmath.\-h@{/home/dprandle/\-Documents/code/ctrlmod/include/nsmath.\-h}}
+}
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$edglobal.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}nsmat4.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNSBoundingBox}{N\-S\-Bounding\-Box}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacestd}{std}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{nsmath_8h_a598a3330b3c21701223ee0ca14316eca}{P\-I}~3.\-14159265359f
+\item 
+\#define \hyperlink{nsmath_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}{E\-P\-S}~0.\-0001f
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_aea4d0e7b1c678d19676dff8b6de0b95a}{cvec2}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_aa1db667f522ec245a99e5de9a1cf4e30}{ivec2}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a59dec527da419f17782406a892d0ed78}{ucvec2}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_a261f8002236b5c5d4319d1d86c75ee71}{uivec2}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ float $>$ \hyperlink{nsmath_8h_a85afdf4c4e7b6e8fe45b8c3e5da7a141}{fvec2}
+\item 
+typedef \hyperlink{structNSVec2}{N\-S\-Vec2}$<$ double $>$ \hyperlink{nsmath_8h_ac5a07faf541e87fb0b7dbb6475cb9afb}{vec2}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a428472a00084071757c0106162c1e921}{cvec3}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_ad0d6bfbc1fcd1c8269ae8b3f05e9d335}{ivec3}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a405c4b3aeb67530d233cc9d6d1c53f5a}{ucvec3}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_a1d90e57f4fb95f8cd290472aa4d75251}{uivec3}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ float $>$ \hyperlink{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{fvec3}
+\item 
+typedef \hyperlink{structNSVec3}{N\-S\-Vec3}$<$ double $>$ \hyperlink{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{vec3}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_ab1ae4838f5fe638f4f6253d5b995e77f}{cvec4}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_a55767256a7765ca9d575cc874470d4b2}{ivec4}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a6996a23d831e3df3ed1784fd8b90fee9}{ucvec4}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_a3ea1cf330ba026c7e8385d996d12c53a}{uivec4}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ float $>$ \hyperlink{nsmath_8h_ac50703073fe6e8800538a814f125f80e}{fvec4}
+\item 
+typedef \hyperlink{structNSVec4}{N\-S\-Vec4}$<$ double $>$ \hyperlink{nsmath_8h_a49627398f016d24fad1ed0e52965462d}{vec4}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_ac993d9c8ff0270d083ac17c2d3cc18e8}{cquat}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_ad569804aad0da687fee4d12a71fe1df4}{iquat}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a8670c0b12b7f7fc0b56862c1f8bbb9e9}{ucquat}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_ac9ffa36ec6074f743327c81fd9ba5e0c}{uiquat}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ float $>$ \hyperlink{nsmath_8h_a3e69220904c62f708ad78c6238b33dc5}{fquat}
+\item 
+typedef \hyperlink{structnsquat}{nsquat}$<$ double $>$ \hyperlink{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{quat}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_acb5dfaf0319129af7a2cce5e52cc29e1}{cmat2}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_abe2d6409e54c106c9088595ccb5f12ff}{imat2}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a949477151ab24efec6757d2cc7410ada}{ucmat2}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_ab319a3f0475443f008e9c300834e0af2}{uimat2}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ float $>$ \hyperlink{nsmath_8h_aa73d00895baa9af036334d5097da793b}{fmat2}
+\item 
+typedef \hyperlink{structnsmat2}{nsmat2}$<$ double $>$ \hyperlink{nsmath_8h_a5df5b30fdecd52e18f20de911e9cb247}{mat2}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_aaf80760d9a5b2a3ca17ed2ae09ad1433}{cmat3}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_abe1c07f4a972e669de9b1cefa105c7a6}{imat3}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_ab49c72e3d1eb98edede5eb3a11dc774c}{ucmat3}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_a773842eecbbd422e439dabd6682b49ee}{uimat3}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ float $>$ \hyperlink{nsmath_8h_a037a8c2788fd0e2c140932c514de3767}{fmat3}
+\item 
+typedef \hyperlink{structnsmat3}{nsmat3}$<$ double $>$ \hyperlink{nsmath_8h_aab2657920b83a95ee5a827605c4384af}{mat3}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a30f413d137c520fec310e3c606f0eaa2}{cmat4}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ uint8\-\_\-t $>$ \hyperlink{nsmath_8h_a4f282f225edadcb8949c157a71bd482c}{ucmat4}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ int32\-\_\-t $>$ \hyperlink{nsmath_8h_aee95c2c46cd99f8d285cf4d2963be4d3}{imat4}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ uint32\-\_\-t $>$ \hyperlink{nsmath_8h_a28bae19a7088fa1e97f27bc3d7c648b9}{uimat4}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ float $>$ \hyperlink{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{fmat4}
+\item 
+typedef \hyperlink{structnsmat4}{nsmat4}$<$ double $>$ \hyperlink{nsmath_8h_ad67d2a1eea6bfbda28dec01badf7e9e7}{mat4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{namespacestd_a1c622c85ae173c9b57a1a02b6e77510f}{std\-::round} (const T \&n)
+\item 
+float \hyperlink{nsmath_8h_ac0037ad634637c44e8176c770334f107}{clampf} (float p\-Val, const float \&p\-Min, const float \&p\-Max)
+\item 
+double \hyperlink{nsmath_8h_a9cbea82539a20531ec7f32bab366f5d0}{clamp} (double p\-Val, const double \&p\-Min, const double \&p\-Max)
+\item 
+float \hyperlink{nsmath_8h_ad427fb54fe66168958cc3158e8709564}{fractf} (const float \&num)
+\item 
+double \hyperlink{nsmath_8h_a65f775743c6ef3ad0c9a000ccfb7c7f1}{fract} (const double \&num)
+\item 
+float \hyperlink{nsmath_8h_aa38ffe68436ae4ea5a11c9133885c7b4}{lerp} (int32\-\_\-t low, int32\-\_\-t high, int32\-\_\-t middle)
+\item 
+float \hyperlink{nsmath_8h_ac775571e8c509d2b8587986890f25468}{lerp} (uint32\-\_\-t low, uint32\-\_\-t high, uint32\-\_\-t middle)
+\item 
+float \hyperlink{nsmath_8h_a64fd8d2ea96abdd5b3d6907989004389}{lerp} (float low, float high, float middle)
+\item 
+double \hyperlink{nsmath_8h_a1fa5e1bca75ab08f05566ee710d8154d}{lerp} (double low, double high, double middle)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{nsmath_8h_a494ec62dc8d01506d732fa7edbb8c29a}{degrees} (const T \&val)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{nsmath_8h_a66fb936f03404bbb73c54a41a50fce0a}{radians} (const T \&val)
+\item 
+float \hyperlink{nsmath_8h_a1b6f05b060cf999a3cecd7a00d31db87}{random\-\_\-float} (float p\-High=1.\-0f, float p\-Low=0.\-0f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{nsmath_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}{\index{nsmath.\-h@{nsmath.\-h}!E\-P\-S@{E\-P\-S}}
+\index{E\-P\-S@{E\-P\-S}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{E\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-S~0.\-0001f}}\label{nsmath_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}
+\hypertarget{nsmath_8h_a598a3330b3c21701223ee0ca14316eca}{\index{nsmath.\-h@{nsmath.\-h}!P\-I@{P\-I}}
+\index{P\-I@{P\-I}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I~3.\-14159265359f}}\label{nsmath_8h_a598a3330b3c21701223ee0ca14316eca}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{nsmath_8h_acb5dfaf0319129af7a2cce5e52cc29e1}{\index{nsmath.\-h@{nsmath.\-h}!cmat2@{cmat2}}
+\index{cmat2@{cmat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cmat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$uint8\-\_\-t$>$ {\bf cmat2}}}\label{nsmath_8h_acb5dfaf0319129af7a2cce5e52cc29e1}
+\hypertarget{nsmath_8h_aaf80760d9a5b2a3ca17ed2ae09ad1433}{\index{nsmath.\-h@{nsmath.\-h}!cmat3@{cmat3}}
+\index{cmat3@{cmat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cmat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$uint8\-\_\-t$>$ {\bf cmat3}}}\label{nsmath_8h_aaf80760d9a5b2a3ca17ed2ae09ad1433}
+\hypertarget{nsmath_8h_a30f413d137c520fec310e3c606f0eaa2}{\index{nsmath.\-h@{nsmath.\-h}!cmat4@{cmat4}}
+\index{cmat4@{cmat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cmat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$uint8\-\_\-t$>$ {\bf cmat4}}}\label{nsmath_8h_a30f413d137c520fec310e3c606f0eaa2}
+\hypertarget{nsmath_8h_ac993d9c8ff0270d083ac17c2d3cc18e8}{\index{nsmath.\-h@{nsmath.\-h}!cquat@{cquat}}
+\index{cquat@{cquat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cquat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$uint8\-\_\-t$>$ {\bf cquat}}}\label{nsmath_8h_ac993d9c8ff0270d083ac17c2d3cc18e8}
+\hypertarget{nsmath_8h_aea4d0e7b1c678d19676dff8b6de0b95a}{\index{nsmath.\-h@{nsmath.\-h}!cvec2@{cvec2}}
+\index{cvec2@{cvec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cvec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$uint8\-\_\-t$>$ {\bf cvec2}}}\label{nsmath_8h_aea4d0e7b1c678d19676dff8b6de0b95a}
+\hypertarget{nsmath_8h_a428472a00084071757c0106162c1e921}{\index{nsmath.\-h@{nsmath.\-h}!cvec3@{cvec3}}
+\index{cvec3@{cvec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cvec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$uint8\-\_\-t$>$ {\bf cvec3}}}\label{nsmath_8h_a428472a00084071757c0106162c1e921}
+\hypertarget{nsmath_8h_ab1ae4838f5fe638f4f6253d5b995e77f}{\index{nsmath.\-h@{nsmath.\-h}!cvec4@{cvec4}}
+\index{cvec4@{cvec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{cvec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$uint8\-\_\-t$>$ {\bf cvec4}}}\label{nsmath_8h_ab1ae4838f5fe638f4f6253d5b995e77f}
+\hypertarget{nsmath_8h_aa73d00895baa9af036334d5097da793b}{\index{nsmath.\-h@{nsmath.\-h}!fmat2@{fmat2}}
+\index{fmat2@{fmat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fmat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$float$>$ {\bf fmat2}}}\label{nsmath_8h_aa73d00895baa9af036334d5097da793b}
+\hypertarget{nsmath_8h_a037a8c2788fd0e2c140932c514de3767}{\index{nsmath.\-h@{nsmath.\-h}!fmat3@{fmat3}}
+\index{fmat3@{fmat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fmat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$float$>$ {\bf fmat3}}}\label{nsmath_8h_a037a8c2788fd0e2c140932c514de3767}
+\hypertarget{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}{\index{nsmath.\-h@{nsmath.\-h}!fmat4@{fmat4}}
+\index{fmat4@{fmat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fmat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$float$>$ {\bf fmat4}}}\label{nsmath_8h_ae867bb2ea15fd3e2c452911a1c929538}
+\hypertarget{nsmath_8h_a3e69220904c62f708ad78c6238b33dc5}{\index{nsmath.\-h@{nsmath.\-h}!fquat@{fquat}}
+\index{fquat@{fquat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fquat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$float$>$ {\bf fquat}}}\label{nsmath_8h_a3e69220904c62f708ad78c6238b33dc5}
+\hypertarget{nsmath_8h_a85afdf4c4e7b6e8fe45b8c3e5da7a141}{\index{nsmath.\-h@{nsmath.\-h}!fvec2@{fvec2}}
+\index{fvec2@{fvec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fvec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$float$>$ {\bf fvec2}}}\label{nsmath_8h_a85afdf4c4e7b6e8fe45b8c3e5da7a141}
+\hypertarget{nsmath_8h_acc70582cd75ef520905deb63211e4b52}{\index{nsmath.\-h@{nsmath.\-h}!fvec3@{fvec3}}
+\index{fvec3@{fvec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fvec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$float$>$ {\bf fvec3}}}\label{nsmath_8h_acc70582cd75ef520905deb63211e4b52}
+\hypertarget{nsmath_8h_ac50703073fe6e8800538a814f125f80e}{\index{nsmath.\-h@{nsmath.\-h}!fvec4@{fvec4}}
+\index{fvec4@{fvec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fvec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$float$>$ {\bf fvec4}}}\label{nsmath_8h_ac50703073fe6e8800538a814f125f80e}
+\hypertarget{nsmath_8h_abe2d6409e54c106c9088595ccb5f12ff}{\index{nsmath.\-h@{nsmath.\-h}!imat2@{imat2}}
+\index{imat2@{imat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{imat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$int32\-\_\-t$>$ {\bf imat2}}}\label{nsmath_8h_abe2d6409e54c106c9088595ccb5f12ff}
+\hypertarget{nsmath_8h_abe1c07f4a972e669de9b1cefa105c7a6}{\index{nsmath.\-h@{nsmath.\-h}!imat3@{imat3}}
+\index{imat3@{imat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{imat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$int32\-\_\-t$>$ {\bf imat3}}}\label{nsmath_8h_abe1c07f4a972e669de9b1cefa105c7a6}
+\hypertarget{nsmath_8h_aee95c2c46cd99f8d285cf4d2963be4d3}{\index{nsmath.\-h@{nsmath.\-h}!imat4@{imat4}}
+\index{imat4@{imat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{imat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$int32\-\_\-t$>$ {\bf imat4}}}\label{nsmath_8h_aee95c2c46cd99f8d285cf4d2963be4d3}
+\hypertarget{nsmath_8h_ad569804aad0da687fee4d12a71fe1df4}{\index{nsmath.\-h@{nsmath.\-h}!iquat@{iquat}}
+\index{iquat@{iquat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{iquat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$int32\-\_\-t$>$ {\bf iquat}}}\label{nsmath_8h_ad569804aad0da687fee4d12a71fe1df4}
+\hypertarget{nsmath_8h_aa1db667f522ec245a99e5de9a1cf4e30}{\index{nsmath.\-h@{nsmath.\-h}!ivec2@{ivec2}}
+\index{ivec2@{ivec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ivec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$int32\-\_\-t$>$ {\bf ivec2}}}\label{nsmath_8h_aa1db667f522ec245a99e5de9a1cf4e30}
+\hypertarget{nsmath_8h_ad0d6bfbc1fcd1c8269ae8b3f05e9d335}{\index{nsmath.\-h@{nsmath.\-h}!ivec3@{ivec3}}
+\index{ivec3@{ivec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ivec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$int32\-\_\-t$>$ {\bf ivec3}}}\label{nsmath_8h_ad0d6bfbc1fcd1c8269ae8b3f05e9d335}
+\hypertarget{nsmath_8h_a55767256a7765ca9d575cc874470d4b2}{\index{nsmath.\-h@{nsmath.\-h}!ivec4@{ivec4}}
+\index{ivec4@{ivec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ivec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$int32\-\_\-t$>$ {\bf ivec4}}}\label{nsmath_8h_a55767256a7765ca9d575cc874470d4b2}
+\hypertarget{nsmath_8h_a5df5b30fdecd52e18f20de911e9cb247}{\index{nsmath.\-h@{nsmath.\-h}!mat2@{mat2}}
+\index{mat2@{mat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{mat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$double$>$ {\bf mat2}}}\label{nsmath_8h_a5df5b30fdecd52e18f20de911e9cb247}
+\hypertarget{nsmath_8h_aab2657920b83a95ee5a827605c4384af}{\index{nsmath.\-h@{nsmath.\-h}!mat3@{mat3}}
+\index{mat3@{mat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{mat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$double$>$ {\bf mat3}}}\label{nsmath_8h_aab2657920b83a95ee5a827605c4384af}
+\hypertarget{nsmath_8h_ad67d2a1eea6bfbda28dec01badf7e9e7}{\index{nsmath.\-h@{nsmath.\-h}!mat4@{mat4}}
+\index{mat4@{mat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{mat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$double$>$ {\bf mat4}}}\label{nsmath_8h_ad67d2a1eea6bfbda28dec01badf7e9e7}
+\hypertarget{nsmath_8h_aa07476c74d8e3787a771c94c92354496}{\index{nsmath.\-h@{nsmath.\-h}!quat@{quat}}
+\index{quat@{quat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{quat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$double$>$ {\bf quat}}}\label{nsmath_8h_aa07476c74d8e3787a771c94c92354496}
+\hypertarget{nsmath_8h_a949477151ab24efec6757d2cc7410ada}{\index{nsmath.\-h@{nsmath.\-h}!ucmat2@{ucmat2}}
+\index{ucmat2@{ucmat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucmat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$uint8\-\_\-t$>$ {\bf ucmat2}}}\label{nsmath_8h_a949477151ab24efec6757d2cc7410ada}
+\hypertarget{nsmath_8h_ab49c72e3d1eb98edede5eb3a11dc774c}{\index{nsmath.\-h@{nsmath.\-h}!ucmat3@{ucmat3}}
+\index{ucmat3@{ucmat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucmat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$uint8\-\_\-t$>$ {\bf ucmat3}}}\label{nsmath_8h_ab49c72e3d1eb98edede5eb3a11dc774c}
+\hypertarget{nsmath_8h_a4f282f225edadcb8949c157a71bd482c}{\index{nsmath.\-h@{nsmath.\-h}!ucmat4@{ucmat4}}
+\index{ucmat4@{ucmat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucmat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$uint8\-\_\-t$>$ {\bf ucmat4}}}\label{nsmath_8h_a4f282f225edadcb8949c157a71bd482c}
+\hypertarget{nsmath_8h_a8670c0b12b7f7fc0b56862c1f8bbb9e9}{\index{nsmath.\-h@{nsmath.\-h}!ucquat@{ucquat}}
+\index{ucquat@{ucquat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucquat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$uint8\-\_\-t$>$ {\bf ucquat}}}\label{nsmath_8h_a8670c0b12b7f7fc0b56862c1f8bbb9e9}
+\hypertarget{nsmath_8h_a59dec527da419f17782406a892d0ed78}{\index{nsmath.\-h@{nsmath.\-h}!ucvec2@{ucvec2}}
+\index{ucvec2@{ucvec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucvec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$uint8\-\_\-t$>$ {\bf ucvec2}}}\label{nsmath_8h_a59dec527da419f17782406a892d0ed78}
+\hypertarget{nsmath_8h_a405c4b3aeb67530d233cc9d6d1c53f5a}{\index{nsmath.\-h@{nsmath.\-h}!ucvec3@{ucvec3}}
+\index{ucvec3@{ucvec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucvec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$uint8\-\_\-t$>$ {\bf ucvec3}}}\label{nsmath_8h_a405c4b3aeb67530d233cc9d6d1c53f5a}
+\hypertarget{nsmath_8h_a6996a23d831e3df3ed1784fd8b90fee9}{\index{nsmath.\-h@{nsmath.\-h}!ucvec4@{ucvec4}}
+\index{ucvec4@{ucvec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{ucvec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$uint8\-\_\-t$>$ {\bf ucvec4}}}\label{nsmath_8h_a6996a23d831e3df3ed1784fd8b90fee9}
+\hypertarget{nsmath_8h_ab319a3f0475443f008e9c300834e0af2}{\index{nsmath.\-h@{nsmath.\-h}!uimat2@{uimat2}}
+\index{uimat2@{uimat2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uimat2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat2}$<$uint32\-\_\-t$>$ {\bf uimat2}}}\label{nsmath_8h_ab319a3f0475443f008e9c300834e0af2}
+\hypertarget{nsmath_8h_a773842eecbbd422e439dabd6682b49ee}{\index{nsmath.\-h@{nsmath.\-h}!uimat3@{uimat3}}
+\index{uimat3@{uimat3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uimat3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat3}$<$uint32\-\_\-t$>$ {\bf uimat3}}}\label{nsmath_8h_a773842eecbbd422e439dabd6682b49ee}
+\hypertarget{nsmath_8h_a28bae19a7088fa1e97f27bc3d7c648b9}{\index{nsmath.\-h@{nsmath.\-h}!uimat4@{uimat4}}
+\index{uimat4@{uimat4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uimat4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsmat4}$<$uint32\-\_\-t$>$ {\bf uimat4}}}\label{nsmath_8h_a28bae19a7088fa1e97f27bc3d7c648b9}
+\hypertarget{nsmath_8h_ac9ffa36ec6074f743327c81fd9ba5e0c}{\index{nsmath.\-h@{nsmath.\-h}!uiquat@{uiquat}}
+\index{uiquat@{uiquat}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uiquat}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf nsquat}$<$uint32\-\_\-t$>$ {\bf uiquat}}}\label{nsmath_8h_ac9ffa36ec6074f743327c81fd9ba5e0c}
+\hypertarget{nsmath_8h_a261f8002236b5c5d4319d1d86c75ee71}{\index{nsmath.\-h@{nsmath.\-h}!uivec2@{uivec2}}
+\index{uivec2@{uivec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uivec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$uint32\-\_\-t$>$ {\bf uivec2}}}\label{nsmath_8h_a261f8002236b5c5d4319d1d86c75ee71}
+\hypertarget{nsmath_8h_a1d90e57f4fb95f8cd290472aa4d75251}{\index{nsmath.\-h@{nsmath.\-h}!uivec3@{uivec3}}
+\index{uivec3@{uivec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uivec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$uint32\-\_\-t$>$ {\bf uivec3}}}\label{nsmath_8h_a1d90e57f4fb95f8cd290472aa4d75251}
+\hypertarget{nsmath_8h_a3ea1cf330ba026c7e8385d996d12c53a}{\index{nsmath.\-h@{nsmath.\-h}!uivec4@{uivec4}}
+\index{uivec4@{uivec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{uivec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$uint32\-\_\-t$>$ {\bf uivec4}}}\label{nsmath_8h_a3ea1cf330ba026c7e8385d996d12c53a}
+\hypertarget{nsmath_8h_ac5a07faf541e87fb0b7dbb6475cb9afb}{\index{nsmath.\-h@{nsmath.\-h}!vec2@{vec2}}
+\index{vec2@{vec2}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{vec2}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec2}$<$double$>$ {\bf vec2}}}\label{nsmath_8h_ac5a07faf541e87fb0b7dbb6475cb9afb}
+\hypertarget{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}{\index{nsmath.\-h@{nsmath.\-h}!vec3@{vec3}}
+\index{vec3@{vec3}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{vec3}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec3}$<$double$>$ {\bf vec3}}}\label{nsmath_8h_a14bb8a4a0fefc0be4fae32fc59a07362}
+\hypertarget{nsmath_8h_a49627398f016d24fad1ed0e52965462d}{\index{nsmath.\-h@{nsmath.\-h}!vec4@{vec4}}
+\index{vec4@{vec4}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{vec4}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf N\-S\-Vec4}$<$double$>$ {\bf vec4}}}\label{nsmath_8h_a49627398f016d24fad1ed0e52965462d}
+
+
+\subsection{Function Documentation}
+\hypertarget{nsmath_8h_a9cbea82539a20531ec7f32bab366f5d0}{\index{nsmath.\-h@{nsmath.\-h}!clamp@{clamp}}
+\index{clamp@{clamp}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}double clamp (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-Val, }
+\item[{const double \&}]{p\-Min, }
+\item[{const double \&}]{p\-Max}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a9cbea82539a20531ec7f32bab366f5d0}
+\hypertarget{nsmath_8h_ac0037ad634637c44e8176c770334f107}{\index{nsmath.\-h@{nsmath.\-h}!clampf@{clampf}}
+\index{clampf@{clampf}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{clampf}]{\setlength{\rightskip}{0pt plus 5cm}float clampf (
+\begin{DoxyParamCaption}
+\item[{float}]{p\-Val, }
+\item[{const float \&}]{p\-Min, }
+\item[{const float \&}]{p\-Max}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_ac0037ad634637c44e8176c770334f107}
+\hypertarget{nsmath_8h_a494ec62dc8d01506d732fa7edbb8c29a}{\index{nsmath.\-h@{nsmath.\-h}!degrees@{degrees}}
+\index{degrees@{degrees}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a494ec62dc8d01506d732fa7edbb8c29a}
+\hypertarget{nsmath_8h_a65f775743c6ef3ad0c9a000ccfb7c7f1}{\index{nsmath.\-h@{nsmath.\-h}!fract@{fract}}
+\index{fract@{fract}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fract}]{\setlength{\rightskip}{0pt plus 5cm}double fract (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{num}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a65f775743c6ef3ad0c9a000ccfb7c7f1}
+\hypertarget{nsmath_8h_ad427fb54fe66168958cc3158e8709564}{\index{nsmath.\-h@{nsmath.\-h}!fractf@{fractf}}
+\index{fractf@{fractf}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{fractf}]{\setlength{\rightskip}{0pt plus 5cm}float fractf (
+\begin{DoxyParamCaption}
+\item[{const float \&}]{num}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_ad427fb54fe66168958cc3158e8709564}
+\hypertarget{nsmath_8h_aa38ffe68436ae4ea5a11c9133885c7b4}{\index{nsmath.\-h@{nsmath.\-h}!lerp@{lerp}}
+\index{lerp@{lerp}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}float lerp (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{low, }
+\item[{int32\-\_\-t}]{high, }
+\item[{int32\-\_\-t}]{middle}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_aa38ffe68436ae4ea5a11c9133885c7b4}
+\hypertarget{nsmath_8h_ac775571e8c509d2b8587986890f25468}{\index{nsmath.\-h@{nsmath.\-h}!lerp@{lerp}}
+\index{lerp@{lerp}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}float lerp (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{low, }
+\item[{uint32\-\_\-t}]{high, }
+\item[{uint32\-\_\-t}]{middle}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_ac775571e8c509d2b8587986890f25468}
+\hypertarget{nsmath_8h_a64fd8d2ea96abdd5b3d6907989004389}{\index{nsmath.\-h@{nsmath.\-h}!lerp@{lerp}}
+\index{lerp@{lerp}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}float lerp (
+\begin{DoxyParamCaption}
+\item[{float}]{low, }
+\item[{float}]{high, }
+\item[{float}]{middle}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a64fd8d2ea96abdd5b3d6907989004389}
+\hypertarget{nsmath_8h_a1fa5e1bca75ab08f05566ee710d8154d}{\index{nsmath.\-h@{nsmath.\-h}!lerp@{lerp}}
+\index{lerp@{lerp}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}double lerp (
+\begin{DoxyParamCaption}
+\item[{double}]{low, }
+\item[{double}]{high, }
+\item[{double}]{middle}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a1fa5e1bca75ab08f05566ee710d8154d}
+\hypertarget{nsmath_8h_a66fb936f03404bbb73c54a41a50fce0a}{\index{nsmath.\-h@{nsmath.\-h}!radians@{radians}}
+\index{radians@{radians}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{radians}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T radians (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a66fb936f03404bbb73c54a41a50fce0a}
+\hypertarget{nsmath_8h_a1b6f05b060cf999a3cecd7a00d31db87}{\index{nsmath.\-h@{nsmath.\-h}!random\-\_\-float@{random\-\_\-float}}
+\index{random\-\_\-float@{random\-\_\-float}!nsmath.h@{nsmath.\-h}}
+\subsubsection[{random\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}float random\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{float}]{p\-High = {\ttfamily 1.0f}, }
+\item[{float}]{p\-Low = {\ttfamily 0.0f}}
+\end{DoxyParamCaption}
+)}}\label{nsmath_8h_a1b6f05b060cf999a3cecd7a00d31db87}

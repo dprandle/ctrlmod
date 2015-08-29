@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8cpp">
+    <title>main.cpp File Reference</title>
+    <programlisting>#include &lt;edrplidar_system.h&gt;</programlisting>
+    <programlisting>#include &lt;edmctrl.h&gt;</programlisting>
+    <programlisting>#include &lt;edplsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;signal.h&gt;</programlisting>
+    <programlisting>#include &lt;ednavsystem.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage_dispatch.h&gt;</programlisting>
+    <programlisting>#include &lt;edlogging_system.h&gt;</programlisting>
+    <programlisting>#include &lt;edmessage.h&gt;</programlisting>
+    <programlisting>#include &lt;edtimer.h&gt;</programlisting>
+    <programlisting>#include &lt;edcallback.h&gt;</programlisting>
+    <programlisting>#include &lt;edcomm_system.h&gt;</programlisting>
+    <programlisting>#include &lt;edimu_system.h&gt;</programlisting>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="main_8cpp_1a882ee4be6b4807a382ee6f7a73a3ca6b">handle_ctrlc</link> (
+int32_t sig)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="main_8cpp_1abbc50c23c5192bfa8579c0c06a87fcd9">main</link> (
+int32_t argc, char * argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/main.cpp</para>
+    </simplesect>
+</section>

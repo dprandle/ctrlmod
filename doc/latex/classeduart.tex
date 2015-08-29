@@ -1,0 +1,308 @@
+\hypertarget{classeduart}{\section{eduart Class Reference}
+\label{classeduart}\index{eduart@{eduart}}
+}
+
+
+{\ttfamily \#include $<$eduart.\-h$>$}
+
+Inheritance diagram for eduart\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classeduart}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeduart_1_1DataFormat}{Data\-Format}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classeduart_a3eb9c53aa8b561a7c0de832314e4910c}{Serial\-Port} \{ \hyperlink{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca188b16da42dd309eacf50b0338c78bdc}{Uart1}, 
+\hyperlink{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca146f31399447a2ac2daf7c9be9e1cdb3}{Uart2}
+ \}
+\item 
+enum \hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250e}{Baud\-Rate} \{ \\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea57ad9b11664ed59b685647eead7bb59a}{b50} =B50, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea91ba949ec01ee23fc279f2cbb1547e47}{b75} =B75, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eac0538bdac27d5119166e538f036f51cf}{b110} =B110, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea40493817b15546f82e648eac9f230d55}{b134} =B134, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eaa0d8bb58ac41d34a2921ca577c9e1dae}{b150} =B150, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea347b36c0426c0cfc1bba4599f0d266c5}{b200} =B200, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea07aed09b807d667a7edd3ada40a64f31}{b300} =B300, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eaaaac84616144bef1e0996e666a02c082}{b600} =B600, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eaf1d5c1b466879ebc8b27e17291736704}{b1200} =B1200, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea7234ba43384703cfb1457498765a21a6}{b1800} =B1800, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ead814cc23c1ddf49585fd31d265a6ce18}{b2400} =B2400, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea88cd90e4c82ea7eaebec6ea8da75d166}{b4800} =B4800, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea428bf6af3d0fd1ba316aee1f7110ba03}{b9600} =B9600, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea5d53c2a6ce0485cad2ae1fba04ef4c28}{b19200} =B19200, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eaf4a4e8cf41f6d617c882c20b7d0fcb0d}{b38400} =B38400, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea527aabd82f8b9089f49e03f12ee4b1bb}{b57600} =B57600, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea9b92eb53c2358b7349f0b0333e115712}{b115200} =B115200, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eae8b28fbe6713439ef27be4349bf1ccc2}{b230400} =B230400, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea52021156eb974c70be0e2625dbed7a47}{b460800} =B460800, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eaafe74cb93252ca06e505203cac08fb00}{b500000} =B500000, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea3348c0952da2487e59954c6a9c953c5a}{b576000} =B576000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea7e63bfe70bb19c1ccd1e0a45f2accf18}{b921600} =B921600, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250eac5ecc01babafe93a6d81725add97ece6}{b1000000} =B1000000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea774240855bae7872e7080c74766341b2}{b1152000} =B1152000, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea31f007d3700b2935d22fc81154bd4b8f}{b1500000} =B1500000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea1062e3622afd6e2cfeee2df82430063a}{b2000000} =B2000000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea4d6c5194a4986c98bc672c43f85eb234}{b2500000} =B2500000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea17f9fb50ec221d64721e6d2bb85bf237}{b3000000} =B3000000, 
+\\*
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ead2c79beb6a3dbf5bd56b83558d1950aa}{b3500000} =B3500000, 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250ea11902480c12e575e5cab69d5d9c79065}{b4000000} =B4000000
+ \}
+\item 
+enum \hyperlink{classeduart_ab706a92a2abdd39b748492f26d89fa75}{Parity} \{ \hyperlink{classeduart_ab706a92a2abdd39b748492f26d89fa75a61946e40eb83169f78e5460d4875cb7d}{None} = 0, 
+\hyperlink{classeduart_ab706a92a2abdd39b748492f26d89fa75af51fbf3ac29786606dfa6c3896c66b77}{Odd} = (P\-A\-R\-E\-N\-B $\vert$ P\-A\-R\-O\-D\-D), 
+\hyperlink{classeduart_ab706a92a2abdd39b748492f26d89fa75a51c432d034dc90467584b31553a85653}{Even} = (P\-A\-R\-E\-N\-B)
+ \}
+\item 
+enum \hyperlink{classeduart_a81d64a65349ee87e6bff9e99c1a2a4fa}{Stop\-Bits} \{ \hyperlink{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa068e1e4c3dacb4bd82e4574b3d2c04f2}{One} = 0, 
+\hyperlink{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa33352b7dd8d579fb45d2bf6dd3e4f4b7}{Two} = C\-S\-T\-O\-P\-B
+ \}
+\item 
+enum \hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2}{Data\-Bits} \{ \hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae5d8646efef641958f91dc4d3eaa040b}{d5} =C\-S5, 
+\hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2aa375f36213ea175578bfea35e0b90c33}{d6} =C\-S6, 
+\hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2a1653637ef298b2d80ec91f713c7f49f9}{d7} =C\-S7, 
+\hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae277e6824ef79278ff4bebae765f2ce0}{d8} =C\-S8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classeduart_a95a97e53a2ba1ae4bb72b39b474e8de6}{eduart} (\hyperlink{classeduart_a3eb9c53aa8b561a7c0de832314e4910c}{Serial\-Port} uart\-\_\-num)
+\item 
+\hyperlink{classeduart_adc0cc6a48ebaaaa297aff0c073aa8474}{$\sim$eduart} ()
+\item 
+const std\-::string \& \hyperlink{classeduart_ae409534073cbe8469ce8e6aed502730a}{device\-\_\-path} ()
+\item 
+void \hyperlink{classeduart_aef4703307a8f07bf31ec06050e5e4596}{set\-\_\-baud} (\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250e}{Baud\-Rate} \hyperlink{classeduart_a5243e3f72554fe7463989e245e91e172}{baud})
+\item 
+\hyperlink{classeduart_af5d40999cc13e078f9d349a08ffe250e}{Baud\-Rate} \hyperlink{classeduart_a5243e3f72554fe7463989e245e91e172}{baud} ()
+\item 
+bool \hyperlink{classeduart_ae50ab2faddd54ed231380583b717ad5a}{start} ()
+\item 
+void \hyperlink{classeduart_ab57fd0de8fa9f541f6b925cbe53e13ba}{set\-\_\-format} (\hyperlink{classeduart_a5211d2ecc2f21296eafe114ca999abb2}{Data\-Bits} db, \hyperlink{classeduart_ab706a92a2abdd39b748492f26d89fa75}{Parity} p, \hyperlink{classeduart_a81d64a65349ee87e6bff9e99c1a2a4fa}{Stop\-Bits} sb)
+\item 
+void \hyperlink{classeduart_a9b5869ad89fc0c6fc14ab24485f441ed}{set\-\_\-format} (const \hyperlink{structeduart_1_1DataFormat}{Data\-Format} \&data\-\_\-format)
+\item 
+const \hyperlink{structeduart_1_1DataFormat}{Data\-Format} \& \hyperlink{classeduart_a5b40ea037124171636fc44f327b7bd66}{format} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250e}{\index{eduart@{eduart}!Baud\-Rate@{Baud\-Rate}}
+\index{Baud\-Rate@{Baud\-Rate}!eduart@{eduart}}
+\subsubsection[{Baud\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf eduart\-::\-Baud\-Rate}}}\label{classeduart_af5d40999cc13e078f9d349a08ffe250e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{b50@{b50}!eduart@{eduart}}\index{eduart@{eduart}!b50@{b50}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea57ad9b11664ed59b685647eead7bb59a}{b50}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea57ad9b11664ed59b685647eead7bb59a}
+}]\index{b75@{b75}!eduart@{eduart}}\index{eduart@{eduart}!b75@{b75}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea91ba949ec01ee23fc279f2cbb1547e47}{b75}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea91ba949ec01ee23fc279f2cbb1547e47}
+}]\index{b110@{b110}!eduart@{eduart}}\index{eduart@{eduart}!b110@{b110}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eac0538bdac27d5119166e538f036f51cf}{b110}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eac0538bdac27d5119166e538f036f51cf}
+}]\index{b134@{b134}!eduart@{eduart}}\index{eduart@{eduart}!b134@{b134}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea40493817b15546f82e648eac9f230d55}{b134}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea40493817b15546f82e648eac9f230d55}
+}]\index{b150@{b150}!eduart@{eduart}}\index{eduart@{eduart}!b150@{b150}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eaa0d8bb58ac41d34a2921ca577c9e1dae}{b150}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eaa0d8bb58ac41d34a2921ca577c9e1dae}
+}]\index{b200@{b200}!eduart@{eduart}}\index{eduart@{eduart}!b200@{b200}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea347b36c0426c0cfc1bba4599f0d266c5}{b200}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea347b36c0426c0cfc1bba4599f0d266c5}
+}]\index{b300@{b300}!eduart@{eduart}}\index{eduart@{eduart}!b300@{b300}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea07aed09b807d667a7edd3ada40a64f31}{b300}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea07aed09b807d667a7edd3ada40a64f31}
+}]\index{b600@{b600}!eduart@{eduart}}\index{eduart@{eduart}!b600@{b600}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eaaaac84616144bef1e0996e666a02c082}{b600}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eaaaac84616144bef1e0996e666a02c082}
+}]\index{b1200@{b1200}!eduart@{eduart}}\index{eduart@{eduart}!b1200@{b1200}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eaf1d5c1b466879ebc8b27e17291736704}{b1200}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eaf1d5c1b466879ebc8b27e17291736704}
+}]\index{b1800@{b1800}!eduart@{eduart}}\index{eduart@{eduart}!b1800@{b1800}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea7234ba43384703cfb1457498765a21a6}{b1800}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea7234ba43384703cfb1457498765a21a6}
+}]\index{b2400@{b2400}!eduart@{eduart}}\index{eduart@{eduart}!b2400@{b2400}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ead814cc23c1ddf49585fd31d265a6ce18}{b2400}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ead814cc23c1ddf49585fd31d265a6ce18}
+}]\index{b4800@{b4800}!eduart@{eduart}}\index{eduart@{eduart}!b4800@{b4800}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea88cd90e4c82ea7eaebec6ea8da75d166}{b4800}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea88cd90e4c82ea7eaebec6ea8da75d166}
+}]\index{b9600@{b9600}!eduart@{eduart}}\index{eduart@{eduart}!b9600@{b9600}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea428bf6af3d0fd1ba316aee1f7110ba03}{b9600}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea428bf6af3d0fd1ba316aee1f7110ba03}
+}]\index{b19200@{b19200}!eduart@{eduart}}\index{eduart@{eduart}!b19200@{b19200}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea5d53c2a6ce0485cad2ae1fba04ef4c28}{b19200}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea5d53c2a6ce0485cad2ae1fba04ef4c28}
+}]\index{b38400@{b38400}!eduart@{eduart}}\index{eduart@{eduart}!b38400@{b38400}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eaf4a4e8cf41f6d617c882c20b7d0fcb0d}{b38400}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eaf4a4e8cf41f6d617c882c20b7d0fcb0d}
+}]\index{b57600@{b57600}!eduart@{eduart}}\index{eduart@{eduart}!b57600@{b57600}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea527aabd82f8b9089f49e03f12ee4b1bb}{b57600}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea527aabd82f8b9089f49e03f12ee4b1bb}
+}]\index{b115200@{b115200}!eduart@{eduart}}\index{eduart@{eduart}!b115200@{b115200}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea9b92eb53c2358b7349f0b0333e115712}{b115200}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea9b92eb53c2358b7349f0b0333e115712}
+}]\index{b230400@{b230400}!eduart@{eduart}}\index{eduart@{eduart}!b230400@{b230400}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eae8b28fbe6713439ef27be4349bf1ccc2}{b230400}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eae8b28fbe6713439ef27be4349bf1ccc2}
+}]\index{b460800@{b460800}!eduart@{eduart}}\index{eduart@{eduart}!b460800@{b460800}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea52021156eb974c70be0e2625dbed7a47}{b460800}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea52021156eb974c70be0e2625dbed7a47}
+}]\index{b500000@{b500000}!eduart@{eduart}}\index{eduart@{eduart}!b500000@{b500000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eaafe74cb93252ca06e505203cac08fb00}{b500000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eaafe74cb93252ca06e505203cac08fb00}
+}]\index{b576000@{b576000}!eduart@{eduart}}\index{eduart@{eduart}!b576000@{b576000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea3348c0952da2487e59954c6a9c953c5a}{b576000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea3348c0952da2487e59954c6a9c953c5a}
+}]\index{b921600@{b921600}!eduart@{eduart}}\index{eduart@{eduart}!b921600@{b921600}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea7e63bfe70bb19c1ccd1e0a45f2accf18}{b921600}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea7e63bfe70bb19c1ccd1e0a45f2accf18}
+}]\index{b1000000@{b1000000}!eduart@{eduart}}\index{eduart@{eduart}!b1000000@{b1000000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250eac5ecc01babafe93a6d81725add97ece6}{b1000000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250eac5ecc01babafe93a6d81725add97ece6}
+}]\index{b1152000@{b1152000}!eduart@{eduart}}\index{eduart@{eduart}!b1152000@{b1152000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea774240855bae7872e7080c74766341b2}{b1152000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea774240855bae7872e7080c74766341b2}
+}]\index{b1500000@{b1500000}!eduart@{eduart}}\index{eduart@{eduart}!b1500000@{b1500000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea31f007d3700b2935d22fc81154bd4b8f}{b1500000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea31f007d3700b2935d22fc81154bd4b8f}
+}]\index{b2000000@{b2000000}!eduart@{eduart}}\index{eduart@{eduart}!b2000000@{b2000000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea1062e3622afd6e2cfeee2df82430063a}{b2000000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea1062e3622afd6e2cfeee2df82430063a}
+}]\index{b2500000@{b2500000}!eduart@{eduart}}\index{eduart@{eduart}!b2500000@{b2500000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea4d6c5194a4986c98bc672c43f85eb234}{b2500000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea4d6c5194a4986c98bc672c43f85eb234}
+}]\index{b3000000@{b3000000}!eduart@{eduart}}\index{eduart@{eduart}!b3000000@{b3000000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea17f9fb50ec221d64721e6d2bb85bf237}{b3000000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea17f9fb50ec221d64721e6d2bb85bf237}
+}]\index{b3500000@{b3500000}!eduart@{eduart}}\index{eduart@{eduart}!b3500000@{b3500000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ead2c79beb6a3dbf5bd56b83558d1950aa}{b3500000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ead2c79beb6a3dbf5bd56b83558d1950aa}
+}]\index{b4000000@{b4000000}!eduart@{eduart}}\index{eduart@{eduart}!b4000000@{b4000000}}\item[{\em 
+\hypertarget{classeduart_af5d40999cc13e078f9d349a08ffe250ea11902480c12e575e5cab69d5d9c79065}{b4000000}\label{classeduart_af5d40999cc13e078f9d349a08ffe250ea11902480c12e575e5cab69d5d9c79065}
+}]\end{description}
+\end{Desc}
+\hypertarget{classeduart_a5211d2ecc2f21296eafe114ca999abb2}{\index{eduart@{eduart}!Data\-Bits@{Data\-Bits}}
+\index{Data\-Bits@{Data\-Bits}!eduart@{eduart}}
+\subsubsection[{Data\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf eduart\-::\-Data\-Bits}}}\label{classeduart_a5211d2ecc2f21296eafe114ca999abb2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{d5@{d5}!eduart@{eduart}}\index{eduart@{eduart}!d5@{d5}}\item[{\em 
+\hypertarget{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae5d8646efef641958f91dc4d3eaa040b}{d5}\label{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae5d8646efef641958f91dc4d3eaa040b}
+}]\index{d6@{d6}!eduart@{eduart}}\index{eduart@{eduart}!d6@{d6}}\item[{\em 
+\hypertarget{classeduart_a5211d2ecc2f21296eafe114ca999abb2aa375f36213ea175578bfea35e0b90c33}{d6}\label{classeduart_a5211d2ecc2f21296eafe114ca999abb2aa375f36213ea175578bfea35e0b90c33}
+}]\index{d7@{d7}!eduart@{eduart}}\index{eduart@{eduart}!d7@{d7}}\item[{\em 
+\hypertarget{classeduart_a5211d2ecc2f21296eafe114ca999abb2a1653637ef298b2d80ec91f713c7f49f9}{d7}\label{classeduart_a5211d2ecc2f21296eafe114ca999abb2a1653637ef298b2d80ec91f713c7f49f9}
+}]\index{d8@{d8}!eduart@{eduart}}\index{eduart@{eduart}!d8@{d8}}\item[{\em 
+\hypertarget{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae277e6824ef79278ff4bebae765f2ce0}{d8}\label{classeduart_a5211d2ecc2f21296eafe114ca999abb2ae277e6824ef79278ff4bebae765f2ce0}
+}]\end{description}
+\end{Desc}
+\hypertarget{classeduart_ab706a92a2abdd39b748492f26d89fa75}{\index{eduart@{eduart}!Parity@{Parity}}
+\index{Parity@{Parity}!eduart@{eduart}}
+\subsubsection[{Parity}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf eduart\-::\-Parity}}}\label{classeduart_ab706a92a2abdd39b748492f26d89fa75}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!eduart@{eduart}}\index{eduart@{eduart}!None@{None}}\item[{\em 
+\hypertarget{classeduart_ab706a92a2abdd39b748492f26d89fa75a61946e40eb83169f78e5460d4875cb7d}{None}\label{classeduart_ab706a92a2abdd39b748492f26d89fa75a61946e40eb83169f78e5460d4875cb7d}
+}]\index{Odd@{Odd}!eduart@{eduart}}\index{eduart@{eduart}!Odd@{Odd}}\item[{\em 
+\hypertarget{classeduart_ab706a92a2abdd39b748492f26d89fa75af51fbf3ac29786606dfa6c3896c66b77}{Odd}\label{classeduart_ab706a92a2abdd39b748492f26d89fa75af51fbf3ac29786606dfa6c3896c66b77}
+}]\index{Even@{Even}!eduart@{eduart}}\index{eduart@{eduart}!Even@{Even}}\item[{\em 
+\hypertarget{classeduart_ab706a92a2abdd39b748492f26d89fa75a51c432d034dc90467584b31553a85653}{Even}\label{classeduart_ab706a92a2abdd39b748492f26d89fa75a51c432d034dc90467584b31553a85653}
+}]\end{description}
+\end{Desc}
+\hypertarget{classeduart_a3eb9c53aa8b561a7c0de832314e4910c}{\index{eduart@{eduart}!Serial\-Port@{Serial\-Port}}
+\index{Serial\-Port@{Serial\-Port}!eduart@{eduart}}
+\subsubsection[{Serial\-Port}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf eduart\-::\-Serial\-Port}}}\label{classeduart_a3eb9c53aa8b561a7c0de832314e4910c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Uart1@{Uart1}!eduart@{eduart}}\index{eduart@{eduart}!Uart1@{Uart1}}\item[{\em 
+\hypertarget{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca188b16da42dd309eacf50b0338c78bdc}{Uart1}\label{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca188b16da42dd309eacf50b0338c78bdc}
+}]\index{Uart2@{Uart2}!eduart@{eduart}}\index{eduart@{eduart}!Uart2@{Uart2}}\item[{\em 
+\hypertarget{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca146f31399447a2ac2daf7c9be9e1cdb3}{Uart2}\label{classeduart_a3eb9c53aa8b561a7c0de832314e4910ca146f31399447a2ac2daf7c9be9e1cdb3}
+}]\end{description}
+\end{Desc}
+\hypertarget{classeduart_a81d64a65349ee87e6bff9e99c1a2a4fa}{\index{eduart@{eduart}!Stop\-Bits@{Stop\-Bits}}
+\index{Stop\-Bits@{Stop\-Bits}!eduart@{eduart}}
+\subsubsection[{Stop\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf eduart\-::\-Stop\-Bits}}}\label{classeduart_a81d64a65349ee87e6bff9e99c1a2a4fa}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{One@{One}!eduart@{eduart}}\index{eduart@{eduart}!One@{One}}\item[{\em 
+\hypertarget{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa068e1e4c3dacb4bd82e4574b3d2c04f2}{One}\label{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa068e1e4c3dacb4bd82e4574b3d2c04f2}
+}]\index{Two@{Two}!eduart@{eduart}}\index{eduart@{eduart}!Two@{Two}}\item[{\em 
+\hypertarget{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa33352b7dd8d579fb45d2bf6dd3e4f4b7}{Two}\label{classeduart_a81d64a65349ee87e6bff9e99c1a2a4faa33352b7dd8d579fb45d2bf6dd3e4f4b7}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classeduart_a95a97e53a2ba1ae4bb72b39b474e8de6}{\index{eduart@{eduart}!eduart@{eduart}}
+\index{eduart@{eduart}!eduart@{eduart}}
+\subsubsection[{eduart}]{\setlength{\rightskip}{0pt plus 5cm}eduart\-::eduart (
+\begin{DoxyParamCaption}
+\item[{{\bf Serial\-Port}}]{uart\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{classeduart_a95a97e53a2ba1ae4bb72b39b474e8de6}
+\hypertarget{classeduart_adc0cc6a48ebaaaa297aff0c073aa8474}{\index{eduart@{eduart}!$\sim$eduart@{$\sim$eduart}}
+\index{$\sim$eduart@{$\sim$eduart}!eduart@{eduart}}
+\subsubsection[{$\sim$eduart}]{\setlength{\rightskip}{0pt plus 5cm}eduart\-::$\sim$eduart (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classeduart_adc0cc6a48ebaaaa297aff0c073aa8474}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classeduart_a5243e3f72554fe7463989e245e91e172}{\index{eduart@{eduart}!baud@{baud}}
+\index{baud@{baud}!eduart@{eduart}}
+\subsubsection[{baud}]{\setlength{\rightskip}{0pt plus 5cm}{\bf eduart\-::\-Baud\-Rate} eduart\-::baud (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classeduart_a5243e3f72554fe7463989e245e91e172}
+\hypertarget{classeduart_ae409534073cbe8469ce8e6aed502730a}{\index{eduart@{eduart}!device\-\_\-path@{device\-\_\-path}}
+\index{device\-\_\-path@{device\-\_\-path}!eduart@{eduart}}
+\subsubsection[{device\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& eduart\-::device\-\_\-path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classeduart_ae409534073cbe8469ce8e6aed502730a}
+\hypertarget{classeduart_a5b40ea037124171636fc44f327b7bd66}{\index{eduart@{eduart}!format@{format}}
+\index{format@{format}!eduart@{eduart}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf eduart\-::\-Data\-Format} \& eduart\-::format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classeduart_a5b40ea037124171636fc44f327b7bd66}
+\hypertarget{classeduart_aef4703307a8f07bf31ec06050e5e4596}{\index{eduart@{eduart}!set\-\_\-baud@{set\-\_\-baud}}
+\index{set\-\_\-baud@{set\-\_\-baud}!eduart@{eduart}}
+\subsubsection[{set\-\_\-baud}]{\setlength{\rightskip}{0pt plus 5cm}void eduart\-::set\-\_\-baud (
+\begin{DoxyParamCaption}
+\item[{{\bf Baud\-Rate}}]{baud}
+\end{DoxyParamCaption}
+)}}\label{classeduart_aef4703307a8f07bf31ec06050e5e4596}
+\hypertarget{classeduart_ab57fd0de8fa9f541f6b925cbe53e13ba}{\index{eduart@{eduart}!set\-\_\-format@{set\-\_\-format}}
+\index{set\-\_\-format@{set\-\_\-format}!eduart@{eduart}}
+\subsubsection[{set\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}void eduart\-::set\-\_\-format (
+\begin{DoxyParamCaption}
+\item[{{\bf Data\-Bits}}]{db, }
+\item[{{\bf Parity}}]{p, }
+\item[{{\bf Stop\-Bits}}]{sb}
+\end{DoxyParamCaption}
+)}}\label{classeduart_ab57fd0de8fa9f541f6b925cbe53e13ba}
+\hypertarget{classeduart_a9b5869ad89fc0c6fc14ab24485f441ed}{\index{eduart@{eduart}!set\-\_\-format@{set\-\_\-format}}
+\index{set\-\_\-format@{set\-\_\-format}!eduart@{eduart}}
+\subsubsection[{set\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}void eduart\-::set\-\_\-format (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data\-Format} \&}]{data\-\_\-format}
+\end{DoxyParamCaption}
+)}}\label{classeduart_a9b5869ad89fc0c6fc14ab24485f441ed}
+\hypertarget{classeduart_ae50ab2faddd54ed231380583b717ad5a}{\index{eduart@{eduart}!start@{start}}
+\index{start@{start}!eduart@{eduart}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool eduart\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classeduart_ae50ab2faddd54ed231380583b717ad5a}
+
+
+Reimplemented from \hyperlink{classedthreaded__fd_ac8123803d831c671b9b62881697e69e0}{edthreaded\-\_\-fd}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/dprandle/\-Documents/code/ctrlmod/include/\hyperlink{eduart_8h}{eduart.\-h}\item 
+/home/dprandle/\-Documents/code/ctrlmod/src/\hyperlink{eduart_8cpp}{eduart.\-cpp}\end{DoxyCompactItemize}

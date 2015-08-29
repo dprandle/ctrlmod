@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedthreaded__fd">
+<title>edthreaded_fd class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edthreaded__fd_8h">&lt;edthreaded_fd.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedthreaded__fd_1_1Error">edthreaded_fd::Error</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structedthreaded__fd_1_1WriteVal">edthreaded_fd::WriteVal</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7">ErrorVal</link>{<link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a29beb6d1cc1d22cc04de457e10c9ca35">NoError</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7ae07e73e070b49478688e0d9f77b58b55">ConnectionClosed</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a02dc57182bb3c610c739d52417ba5359">DataOverwrite</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af16a08099723c4d84dc0c4799d1ff864">InvalidRead</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a40d6cb36b60a22ded9e067b54c85a305">InvalidWrite</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af129b616b31507425750a425e7952fff">ThreadCreation</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a4abb816be001c2c4b8ff3a4092ab048d">OpenFileDescriptor</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7aa99856ec175ebaa60bd324b58aa2c3dc">Configuration</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af195ec5ad8131af045485af5b04c4131">AlreadyRunning</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7aac2ebbfb6e21042eb50ca713a1b5e394">FDAlreadyOpen</link>, <link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a2ef2a2f6fd755b520613dbaa22f26396">CommandNoResponse</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t m_fd</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_read_rawindex</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_read_curindex</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_write_rawindex</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_write_curindex</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; WriteVal &gt; m_write_buffer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; uint8_t &gt; m_read_buffer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Error m_err</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_running</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32_t m_current_wait_for_byte_count</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_wait_timer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pthread_mutex_t m_send_lock</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pthread_mutex_t m_recv_lock</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pthread_mutex_t m_error_lock</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pthread_mutex_t m_running_lock</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>pthread_t m_thread</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedthreaded__fd_1aae0e03e726a962766ada1a053e426dfc">edthreaded_fd</link> (
+uint32_t readbuf_size, uint32_t writebuf_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedthreaded__fd_1a6f9a9d65186740a24d9bd3f164034e39">~edthreaded_fd</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="classedthreaded__fd_1a8f5b6c664a8fe5df737222e225f1fd19">read</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="classedthreaded__fd_1a69c6badd6cf1a9a635d670d2afec80d3">write</link> (
+uint8_t * buffer, uint32_t size, int32_t response_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="structedthreaded__fd_1_1Error">Error</link> <link linkend="classedthreaded__fd_1a3708a6fecec91ca541a1c1c834bec7dd">error</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedthreaded__fd_1a55493d7c23181335e8412e2e7874795b">running</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="classedthreaded__fd_1ac8123803d831c671b9b62881697e69e0">start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int32_t <link linkend="classedthreaded__fd_1a4b4e4f3c1e8c0a4fd5389bcb8690ef08">fd</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedthreaded__fd_1aadead96bf63b16f95c48c7a863323b0e">set_fd</link> (
+int32_t fd_)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedthreaded__fd_1a92a9a1f5b8df83c5697033822f1134b8">stop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int32_t <link linkend="classedthreaded__fd_1a3ead513fc5aa5b33e18a6b7246091ee9">_raw_read</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int32_t <link linkend="classedthreaded__fd_1a0151298dfd0c91b95d27649031c5fa53">_raw_write</link> (
+uint8_t * buffer, uint32_t max_size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedthreaded__fd_1a251c391b913e2c151eb8840773f505c0">_do_read</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedthreaded__fd_1a0f6def6ed7b6147aad0f7007bcff83ee">_do_write</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classedthreaded__fd_1a42c7b3bc22648ebbc71a1daeb1ac2535">_exec</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedthreaded__fd_1acf2f0e638887933b62229bf543c8733d">_setError</link> (
+<link linkend="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7">ErrorVal</link> err_val, int32_t _errno)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void * <link linkend="classedthreaded__fd_1a7fbc6179a5ea6829529d01c94a659053">thread_exec</link> (
+void * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7">
+               <title>enum ErrorVal </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a29beb6d1cc1d22cc04de457e10c9ca35">
+                            <term>NoError</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7ae07e73e070b49478688e0d9f77b58b55">
+                            <term>ConnectionClosed</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a02dc57182bb3c610c739d52417ba5359">
+                            <term>DataOverwrite</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af16a08099723c4d84dc0c4799d1ff864">
+                            <term>InvalidRead</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a40d6cb36b60a22ded9e067b54c85a305">
+                            <term>InvalidWrite</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af129b616b31507425750a425e7952fff">
+                            <term>ThreadCreation</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a4abb816be001c2c4b8ff3a4092ab048d">
+                            <term>OpenFileDescriptor</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7aa99856ec175ebaa60bd324b58aa2c3dc">
+                            <term>Configuration</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7af195ec5ad8131af045485af5b04c4131">
+                            <term>AlreadyRunning</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7aac2ebbfb6e21042eb50ca713a1b5e394">
+                            <term>FDAlreadyOpen</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="classedthreaded__fd_1ab3562872429271887a15489b7a1a17d7a2ef2a2f6fd755b520613dbaa22f26396">
+                            <term>CommandNoResponse</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 20 of file edthreaded_fd.h
+                    <programlisting>
+{
+NoError, 
+ConnectionClosed, 
+DataOverwrite, 
+InvalidRead, 
+InvalidWrite, 
+ThreadCreation, 
+OpenFileDescriptor, 
+Configuration, 
+AlreadyRunning, 
+FDAlreadyOpen, 
+CommandNoResponse, 
+}ErrorVal;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="classedthreaded__fd_1aae0e03e726a962766ada1a053e426dfc">
+                <title>edthreaded_fd::edthreaded_fd (uint32_t readbuf_size=DEFAULT_FD_READ_BUFFER_SIZE, uint32_t writebuf_size=DEFAULT_FD_WRITE_BUFFER_SIZE)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a6f9a9d65186740a24d9bd3f164034e39">
+                <title>edthreaded_fd::~edthreaded_fd ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a8f5b6c664a8fe5df737222e225f1fd19">
+                <title>uint32_t edthreaded_fd::read (uint8_t *buffer, uint32_t max_size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a69c6badd6cf1a9a635d670d2afec80d3">
+                <title>uint32_t edthreaded_fd::write (uint8_t *buffer, uint32_t size, int32_t response_size=0)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a3708a6fecec91ca541a1c1c834bec7dd">
+                <title>edthreaded_fd::Error edthreaded_fd::error ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a55493d7c23181335e8412e2e7874795b">
+                <title>bool edthreaded_fd::running ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1ac8123803d831c671b9b62881697e69e0">
+                <title>bool edthreaded_fd::start ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a4b4e4f3c1e8c0a4fd5389bcb8690ef08">
+                <title>int32_t edthreaded_fd::fd ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1aadead96bf63b16f95c48c7a863323b0e">
+                <title>bool edthreaded_fd::set_fd (int32_t fd_)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a92a9a1f5b8df83c5697033822f1134b8">
+                <title>void edthreaded_fd::stop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a3ead513fc5aa5b33e18a6b7246091ee9">
+                <title>virtual int32_t edthreaded_fd::_raw_read (uint8_t *buffer, uint32_t max_size)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a0151298dfd0c91b95d27649031c5fa53">
+                <title>virtual int32_t edthreaded_fd::_raw_write (uint8_t *buffer, uint32_t max_size)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a251c391b913e2c151eb8840773f505c0">
+                <title>void edthreaded_fd::_do_read ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a0f6def6ed7b6147aad0f7007bcff83ee">
+                <title>void edthreaded_fd::_do_write ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a42c7b3bc22648ebbc71a1daeb1ac2535">
+                <title>void edthreaded_fd::_exec ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1acf2f0e638887933b62229bf543c8733d">
+                <title>void edthreaded_fd::_setError (ErrorVal err_val, int32_t _errno)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedthreaded__fd_1a7fbc6179a5ea6829529d01c94a659053">
+                <title>void * edthreaded_fd::thread_exec (void *)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

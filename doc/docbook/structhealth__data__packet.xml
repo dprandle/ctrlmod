@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structhealth__data__packet">
+<title>health_data_packet struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="edrplidar__packets_8h">&lt;edrplidar_packets.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+        </simplesect>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t status</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t error_code7to0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t error_code15to8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8_t data[3]</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>union health_data_packet::@16 @17</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="structhealth__data__packet_1a7cfb581955c8d81fc4b7a6aa98479553">health_data_packet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structhealth__data__packet_1a89e96e87bdcf2ecc52260a9d98e37995">toString</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual std::string <link linkend="structhealth__data__packet_1abc386acf1fcf42086f1fc791d2718dff">type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint32_t <link linkend="structhealth__data__packet_1a85329a68f718099b6cefcf65fab75077">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t &amp; <link linkend="structhealth__data__packet_1aa96359c2b7100e17905e02c7ab68ca59">operator[]</link> (
+uint32_t index)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual uint8_t * <link linkend="structhealth__data__packet_1a8378ecf34528f77f6d50937c3ad02c8d">dataptr</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static std::string <link linkend="structhealth__data__packet_1ab1066c5d4c3353c6d5175acef3b4fc9a">Type</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static uint32_t <link linkend="structhealth__data__packet_1a453e09780784287394585eedd99585f0">Size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="structhealth__data__packet_1a7cfb581955c8d81fc4b7a6aa98479553">
+                <title>health_data_packet::health_data_packet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1a89e96e87bdcf2ecc52260a9d98e37995">
+                <title>std::string health_data_packet::toString ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1abc386acf1fcf42086f1fc791d2718dff">
+                <title>virtual std::string health_data_packet::type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1a85329a68f718099b6cefcf65fab75077">
+                <title>virtual uint32_t health_data_packet::size ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1aa96359c2b7100e17905e02c7ab68ca59">
+                <title>virtual uint8_t&amp; health_data_packet::operator[] (uint32_t index)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1a8378ecf34528f77f6d50937c3ad02c8d">
+                <title>virtual uint8_t* health_data_packet::dataptr ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1ab1066c5d4c3353c6d5175acef3b4fc9a">
+                <title>static std::string health_data_packet::Type ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="structhealth__data__packet_1a453e09780784287394585eedd99585f0">
+                <title>static uint32_t health_data_packet::Size ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

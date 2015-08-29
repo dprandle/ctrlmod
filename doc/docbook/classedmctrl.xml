@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classedmctrl">
+<title>edmctrl class Reference</title>
+<para>
+    <programlisting>#include <link linkend="edmctrl_8h">&lt;edmctrl.h&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool m_running</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sysmap m_systems</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edtimer * m_systimer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>edmessage_dispatch * m_msghandler</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classedmctrl_1a4b7377b0608a92535a951caff22dbf51">edmctrl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="classedmctrl_1a4b76af2c6a4a327dae683582f73f89bf">~edmctrl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T * <link linkend="classedmctrl_1acf2444928f98bbd396f65022ab60e6d6">add_sys</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classedmctrl_1a0dd1befe6818fcbd97419b947ffcd154">running</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1a6b507d894977d67d598b4930521f27fa">init</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1ad82a90b7c2c08479118607febfcadd87">release</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedmessage__dispatch">edmessage_dispatch</link> * <link linkend="classedmctrl_1a96e74e3995d187b3023fdf4ef9b2dc88">message_dispatch</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1aeed744e39caf7ab6fdc1004c8cf69a8d">start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1a36276dab82db9d425268e277dcf5fcb3">stop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedtimer">edtimer</link> * <link linkend="classedmctrl_1aa77d5e27f2665fb1c09c29cd057ec09c">sys_timer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1ad9e0ab19fd2b723aedd558b0af130d6a">update</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1a3050d02e3f473fb5638aa5c3e77a7d88">rm_sys</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classedmctrl_1adb9621c87a43535ea084912387e894b8">rm_sys</link> (
+const std::string &amp; sysname)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T * <link linkend="classedmctrl_1a0be60e649d1981d69099c023bc579bf3">sys</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classedsystem">edsystem</link> * <link linkend="classedmctrl_1a0f434a10847a095073f0897f839e428c">sys</link> (
+const std::string &amp; sysname)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="classedmctrl">edmctrl</link> &amp; <link linkend="classedmctrl_1a5977247f3379a9e39709a07303ffef90">inst</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="classedmctrl_1a27c76a331f287950479999ab2b112906">quit</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classedmctrl_1a4b7377b0608a92535a951caff22dbf51">
+                <title>edmctrl::edmctrl ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a4b76af2c6a4a327dae683582f73f89bf">
+                <title>edmctrl::~edmctrl ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1acf2444928f98bbd396f65022ab60e6d6">
+                <title>T* edmctrl::add_sys ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a0dd1befe6818fcbd97419b947ffcd154">
+                <title>bool edmctrl::running ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a6b507d894977d67d598b4930521f27fa">
+                <title>void edmctrl::init ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1ad82a90b7c2c08479118607febfcadd87">
+                <title>void edmctrl::release ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a96e74e3995d187b3023fdf4ef9b2dc88">
+                <title>edmessage_dispatch * edmctrl::message_dispatch ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1aeed744e39caf7ab6fdc1004c8cf69a8d">
+                <title>void edmctrl::start ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a36276dab82db9d425268e277dcf5fcb3">
+                <title>void edmctrl::stop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1aa77d5e27f2665fb1c09c29cd057ec09c">
+                <title>edtimer * edmctrl::sys_timer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1ad9e0ab19fd2b723aedd558b0af130d6a">
+                <title>void edmctrl::update ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a3050d02e3f473fb5638aa5c3e77a7d88">
+                <title>void edmctrl::rm_sys ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1adb9621c87a43535ea084912387e894b8">
+                <title>void edmctrl::rm_sys (const std::string &amp;sysname)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a0be60e649d1981d69099c023bc579bf3">
+                <title>T* edmctrl::sys ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a0f434a10847a095073f0897f839e428c">
+                <title>edsystem * edmctrl::sys (const std::string &amp;sysname)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a5977247f3379a9e39709a07303ffef90">
+                <title>edmctrl &amp; edmctrl::inst ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classedmctrl_1a27c76a331f287950479999ab2b112906">
+                <title>void edmctrl::quit (void)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

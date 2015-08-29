@@ -1,0 +1,4550 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.19)  27 AUG 2015 18:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**refman
+(./refman.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks14
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks19
+\minrowclearance=\skip48
+)
+\rownum=\count93
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xtab/xtab.sty
+Package: xtab 2011/07/31 v2.3f Extended supertabular package
+\c@tracingst=\count94
+\PWSTcapht=\dimen107
+\ST@wd=\dimen108
+\ST@rightskip=\skip49
+\ST@leftskip=\skip50
+\ST@parfillskip=\skip51
+\c@PWSTtable=\count95
+\PWSTlastpage=\count96
+\PWSTpenultimate=\count97
+\PWSTcurpage=\count98
+\PWSTtempc=\count99
+\PWSTlines=\count100
+\PWST@lastht=\dimen109
+\PWST@generalht=\dimen110
+\PWST@ht=\dimen111
+\ST@pageleft=\dimen112
+\ST@headht=\dimen113
+\ST@tailht=\dimen114
+\ST@pagesofar=\dimen115
+\ST@pboxht=\dimen116
+\ST@lineht=\dimen117
+\ST@stretchht=\dimen118
+\ST@prevht=\dimen119
+\ST@toadd=\dimen120
+\ST@dimen=\dimen121
+\ST@pbox=\box28
+)
+\xrefbox=\box29
+\xreflength=\skip52
+\tmplength=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count101
+\mult@box=\box30
+\multicol@leftmargin=\dimen124
+\c@unbalance=\count102
+\c@collectmore=\count103
+\doublecol@number=\count104
+\multicoltolerance=\count105
+\multicolpretolerance=\count106
+\full@width=\dimen125
+\page@free=\dimen126
+\premulticols=\dimen127
+\postmulticols=\dimen128
+\multicolsep=\skip54
+\multicolbaselineskip=\skip55
+\partial@page=\box31
+\last@line=\box32
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count107
+\c@finalcolumnbadness=\count108
+\last@try=\dimen129
+\multicolovershoot=\dimen130
+\multicolundershoot=\dimen131
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\multicol@sort@counter=\count109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen132
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks23
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count110
+\Gm@cntv=\count111
+\c@Gm@tempcnt=\count112
+\Gm@bindingoffset=\dimen133
+\Gm@wd@mp=\dimen134
+\Gm@odd@mp=\dimen135
+\Gm@even@mp=\dimen136
+\Gm@layoutwidth=\dimen137
+\Gm@layoutheight=\dimen138
+\Gm@layouthoffset=\dimen139
+\Gm@layoutvoffset=\dimen140
+\Gm@dimlist=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip56
+\f@ncyO@elh=\skip57
+\f@ncyO@erh=\skip58
+\f@ncyO@olh=\skip59
+\f@ncyO@orh=\skip60
+\f@ncyO@elf=\skip61
+\f@ncyO@erf=\skip62
+\f@ncyO@olf=\skip63
+\f@ncyO@orf=\skip64
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip65
+\bibsep=\skip66
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count113
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforechapskip=\skip73
+\cftchapindent=\skip74
+\cftchapnumwidth=\skip75
+\cftbeforesecskip=\skip76
+\cftsecindent=\skip77
+\cftsecnumwidth=\skip78
+\cftbeforesubsecskip=\skip79
+\cftsubsecindent=\skip80
+\cftsubsecnumwidth=\skip81
+\cftbeforesubsubsecskip=\skip82
+\cftsubsubsecindent=\skip83
+\cftsubsubsecnumwidth=\skip84
+\cftbeforeparaskip=\skip85
+\cftparaindent=\skip86
+\cftparanumwidth=\skip87
+\cftbeforesubparaskip=\skip88
+\cftsubparaindent=\skip89
+\cftsubparanumwidth=\skip90
+\cftbeforeloftitleskip=\skip91
+\cftafterloftitleskip=\skip92
+\cftbeforefigskip=\skip93
+\cftfigindent=\skip94
+\cftfignumwidth=\skip95
+\c@lofdepth=\count114
+\c@lotdepth=\count115
+\cftbeforelottitleskip=\skip96
+\cftafterlottitleskip=\skip97
+\cftbeforetabskip=\skip98
+\cfttabindent=\skip99
+\cfttabnumwidth=\skip100
+)
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen141
+\Hy@linkcounter=\count116
+\Hy@pagecounter=\count117
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count118
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing ON on input line 4461.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2012/07/25 v1.38 Bibliographical back referencing
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+\c@Hy@tempcnt=\count119
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen142
+\Fld@menulength=\count120
+\Field@Width=\dimen143
+\Fld@charsize=\dimen144
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing ON on input line 6308.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count121
+\c@Item=\count122
+\c@Hfootnote=\count123
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
+\Hy@SectionHShift=\skip101
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 101.
+Package hyperref Info: Option `unicode' set `true' on input line 101.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+No file refman.aux.
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 111.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 111.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen145
+\scratchbox=\box56
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen146
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\big@size=\dimen147
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box57
+Package backref Info: ** backref set up for natbib ** on input line 111.
+Package hyperref Info: Link coloring ON on input line 111.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count132
+)
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
+\@outlinefile=\write4
+\openout4 = `refman.out'.
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 114.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 119.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 121.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 123.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 127.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 127.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 22.39185pt on input line 127.
+\tf@toc=\write5
+\openout5 = `refman.toc'.
+
+ [3
+
+] [4
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 130.
+
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 133.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 133.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 133.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 18.66588pt on input line 133.
+(./namespaces.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 3.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 3.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 3.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 3.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 3.
+
+
+LaTeX Warning: Reference `namespacemraa' on page 1 undefined on input line 3.
+
+
+LaTeX Warning: Reference `namespacestd' on page 1 undefined on input line 4.
+
+) [1
+
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 135.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 135.
+ [2
+
+]
+Chapter 2.
+(./hierarchy.tex
+
+LaTeX Warning: Reference `structCommand' on page 3 undefined on input line 3.
+
+
+LaTeX Warning: Reference `structdata__packet' on page 3 undefined on input line
+ 4.
+
+
+LaTeX Warning: Reference `structcomplete__scan__data__packet' on page 3 undefin
+ed on input line 6.
+
+
+LaTeX Warning: Reference `structfirmware__data__packet' on page 3 undefined on 
+input line 7.
+
+
+LaTeX Warning: Reference `structhealth__data__packet' on page 3 undefined on in
+put line 8.
+
+
+LaTeX Warning: Reference `structinfo__data__packet' on page 3 undefined on inpu
+t line 9.
+
+
+LaTeX Warning: Reference `structscan__data__packet' on page 3 undefined on inpu
+t line 10.
+
+
+LaTeX Warning: Reference `structeduart_1_1DataFormat' on page 3 undefined on in
+put line 12.
+
+
+LaTeX Warning: Reference `structdescriptor__packet' on page 3 undefined on inpu
+t line 13.
+
+
+LaTeX Warning: Reference `structdevice__health__descriptor' on page 3 undefined
+ on input line 15.
+
+
+LaTeX Warning: Reference `structdevice__info__descriptor' on page 3 undefined o
+n input line 16.
+
+
+LaTeX Warning: Reference `structscan__descriptor' on page 3 undefined on input 
+line 17.
+
+
+LaTeX Warning: Reference `structedcallback' on page 3 undefined on input line 1
+9.
+
+
+LaTeX Warning: Reference `structedtimer__callback' on page 3 undefined on input
+ line 21.
+
+
+LaTeX Warning: Reference `structedpl__callback' on page 3 undefined on input li
+ne 23.
+
+
+LaTeX Warning: Reference `structinstruction__callback' on page 3 undefined on i
+nput line 24.
+
+
+LaTeX Warning: Reference `structwait__ready__callback' on page 3 undefined on i
+nput line 25.
+
+
+LaTeX Warning: Reference `structcommand__wait__callback' on page 3 undefined on
+ input line 27.
+
+
+LaTeX Warning: Reference `classedmctrl' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Reference `structedmessage' on page 3 undefined on input line 32
+.
+
+
+LaTeX Warning: Reference `structnav__message' on page 3 undefined on input line
+ 34.
+
+
+LaTeX Warning: Reference `structnav__system__request' on page 3 undefined on in
+put line 35.
+
+
+LaTeX Warning: Reference `structpulsed__light__message' on page 3 undefined on 
+input line 36.
+
+
+LaTeX Warning: Reference `structrplidar__error__message' on page 3 undefined on
+ input line 37.
+
+
+LaTeX Warning: Reference `structrplidar__firmware__message' on page 3 undefined
+ on input line 38.
+
+
+LaTeX Warning: Reference `structrplidar__health__message' on page 3 undefined o
+n input line 39.
+
+
+LaTeX Warning: Reference `structrplidar__info__message' on page 3 undefined on 
+input line 40.
+
+
+LaTeX Warning: Reference `structrplidar__request' on page 3 undefined on input 
+line 41.
+
+
+LaTeX Warning: Reference `structrplidar__scan__message' on page 3 undefined on 
+input line 42.
+
+
+LaTeX Warning: Reference `classedmessage__dispatch' on page 3 undefined on inpu
+t line 44.
+
+
+LaTeX Warning: Reference `classedpid__controller' on page 3 undefined on input 
+line 45.
+
+
+LaTeX Warning: Reference `classedpid__controller' on page 3 undefined on input 
+line 46.
+
+
+LaTeX Warning: Reference `classedsystem' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Reference `classedcomm__system' on page 3 undefined on input lin
+e 49.
+
+
+LaTeX Warning: Reference `classedimu__system' on page 3 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `classedlogging__system' on page 3 undefined on input 
+line 51.
+
+
+LaTeX Warning: Reference `classednav__system' on page 3 undefined on input line
+ 52.
+
+
+LaTeX Warning: Reference `classedpl__system' on page 3 undefined on input line 
+53.
+
+[3]
+
+LaTeX Warning: Reference `classedrplidar__system' on page 4 undefined on input 
+line 54.
+
+
+LaTeX Warning: Reference `classedthreaded__fd' on page 4 undefined on input lin
+e 56.
+
+
+LaTeX Warning: Reference `classedi2c' on page 4 undefined on input line 58.
+
+
+LaTeX Warning: Reference `classedsocket' on page 4 undefined on input line 59.
+
+
+LaTeX Warning: Reference `classeduart' on page 4 undefined on input line 60.
+
+
+LaTeX Warning: Reference `classedtimer' on page 4 undefined on input line 62.
+
+
+LaTeX Warning: Reference `structedthreaded__fd_1_1Error' on page 4 undefined on
+ input line 63.
+
+
+LaTeX Warning: Reference `structNSBoundingBox' on page 4 undefined on input lin
+e 64.
+
+
+LaTeX Warning: Reference `structnsmat2' on page 4 undefined on input line 65.
+
+
+LaTeX Warning: Reference `structnsmat3' on page 4 undefined on input line 66.
+
+
+LaTeX Warning: Reference `structnsmat4' on page 4 undefined on input line 67.
+
+
+LaTeX Warning: Reference `structnsquat' on page 4 undefined on input line 68.
+
+
+LaTeX Warning: Reference `structnsquat' on page 4 undefined on input line 69.
+
+
+LaTeX Warning: Reference `structNSVec2' on page 4 undefined on input line 70.
+
+
+LaTeX Warning: Reference `structNSVec2' on page 4 undefined on input line 71.
+
+
+LaTeX Warning: Reference `structNSVec3' on page 4 undefined on input line 72.
+
+
+LaTeX Warning: Reference `structNSVec3' on page 4 undefined on input line 73.
+
+
+LaTeX Warning: Reference `structNSVec3' on page 4 undefined on input line 74.
+
+
+LaTeX Warning: Reference `structNSVec3' on page 4 undefined on input line 75.
+
+
+LaTeX Warning: Reference `structNSVec4' on page 4 undefined on input line 76.
+
+
+LaTeX Warning: Reference `structedpid__controller_1_1output__range' on page 4 u
+ndefined on input line 77.
+
+
+LaTeX Warning: Reference `structedpl__system_1_1pl__gpio' on page 4 undefined o
+n input line 78.
+
+
+LaTeX Warning: Reference `structrequest__packet' on page 4 undefined on input l
+ine 79.
+
+
+LaTeX Warning: Reference `structdevice__health__request' on page 4 undefined on
+ input line 81.
+
+
+LaTeX Warning: Reference `structdevice__info__request' on page 4 undefined on i
+nput line 82.
+
+
+LaTeX Warning: Reference `structforce__scan__request' on page 4 undefined on in
+put line 83.
+
+
+LaTeX Warning: Reference `structreset__request' on page 4 undefined on input li
+ne 84.
+
+
+LaTeX Warning: Reference `structstart__scan__request' on page 4 undefined on in
+put line 85.
+
+
+LaTeX Warning: Reference `structstop__scan__request' on page 4 undefined on inp
+ut line 86.
+
+
+LaTeX Warning: Reference `structedthreaded__fd_1_1WriteVal' on page 4 undefined
+ on input line 88.
+
+) [4]
+Chapter 3.
+(./annotated.tex
+
+LaTeX Warning: Reference `structCommand' on page 5 undefined on input line 3.
+
+
+LaTeX Warning: Reference `structcommand__wait__callback' on page 5 undefined on
+ input line 4.
+
+
+LaTeX Warning: Reference `structcomplete__scan__data__packet' on page 5 undefin
+ed on input line 5.
+
+
+LaTeX Warning: Reference `structdata__packet' on page 5 undefined on input line
+ 6.
+
+
+LaTeX Warning: Reference `structeduart_1_1DataFormat' on page 5 undefined on in
+put line 7.
+
+
+LaTeX Warning: Reference `structdescriptor__packet' on page 5 undefined on inpu
+t line 8.
+
+
+LaTeX Warning: Reference `structdevice__health__descriptor' on page 5 undefined
+ on input line 9.
+
+
+LaTeX Warning: Reference `structdevice__health__request' on page 5 undefined on
+ input line 10.
+
+
+LaTeX Warning: Reference `structdevice__info__descriptor' on page 5 undefined o
+n input line 11.
+
+
+LaTeX Warning: Reference `structdevice__info__request' on page 5 undefined on i
+nput line 12.
+
+
+LaTeX Warning: Reference `structedcallback' on page 5 undefined on input line 1
+3.
+
+
+LaTeX Warning: Reference `classedcomm__system' on page 5 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Reference `classedi2c' on page 5 undefined on input line 15.
+
+
+LaTeX Warning: Reference `classedimu__system' on page 5 undefined on input line
+ 16.
+
+
+LaTeX Warning: Reference `classedlogging__system' on page 5 undefined on input 
+line 17.
+
+
+LaTeX Warning: Reference `classedmctrl' on page 5 undefined on input line 18.
+
+
+LaTeX Warning: Reference `structedmessage' on page 5 undefined on input line 19
+.
+
+
+LaTeX Warning: Reference `classedmessage__dispatch' on page 5 undefined on inpu
+t line 20.
+
+
+LaTeX Warning: Reference `classednav__system' on page 5 undefined on input line
+ 21.
+
+
+LaTeX Warning: Reference `classedpid__controller' on page 5 undefined on input 
+line 22.
+
+
+LaTeX Warning: Reference `structedpl__callback' on page 5 undefined on input li
+ne 23.
+
+
+LaTeX Warning: Reference `classedpl__system' on page 5 undefined on input line 
+24.
+
+
+LaTeX Warning: Reference `classedrplidar__system' on page 5 undefined on input 
+line 25.
+
+
+LaTeX Warning: Reference `classedsocket' on page 5 undefined on input line 26.
+
+
+LaTeX Warning: Reference `classedsystem' on page 5 undefined on input line 27.
+
+
+LaTeX Warning: Reference `classedthreaded__fd' on page 5 undefined on input lin
+e 28.
+
+
+LaTeX Warning: Reference `classedtimer' on page 5 undefined on input line 29.
+
+
+LaTeX Warning: Reference `structedtimer__callback' on page 5 undefined on input
+ line 30.
+
+
+LaTeX Warning: Reference `classeduart' on page 5 undefined on input line 31.
+
+
+LaTeX Warning: Reference `structedthreaded__fd_1_1Error' on page 5 undefined on
+ input line 32.
+
+
+LaTeX Warning: Reference `structfirmware__data__packet' on page 5 undefined on 
+input line 33.
+
+
+LaTeX Warning: Reference `structforce__scan__request' on page 5 undefined on in
+put line 34.
+
+
+LaTeX Warning: Reference `structhealth__data__packet' on page 5 undefined on in
+put line 35.
+
+
+LaTeX Warning: Reference `structinfo__data__packet' on page 5 undefined on inpu
+t line 36.
+
+
+LaTeX Warning: Reference `structinstruction__callback' on page 5 undefined on i
+nput line 37.
+
+
+LaTeX Warning: Reference `structnav__message' on page 5 undefined on input line
+ 38.
+
+[5
+
+]
+
+LaTeX Warning: Reference `structnav__system__request' on page 6 undefined on in
+put line 39.
+
+
+LaTeX Warning: Reference `structNSBoundingBox' on page 6 undefined on input lin
+e 40.
+
+
+LaTeX Warning: Reference `structnsmat2' on page 6 undefined on input line 41.
+
+
+LaTeX Warning: Reference `structnsmat3' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Reference `structnsmat4' on page 6 undefined on input line 43.
+
+
+LaTeX Warning: Reference `structnsquat' on page 6 undefined on input line 44.
+
+
+LaTeX Warning: Reference `structNSVec2' on page 6 undefined on input line 45.
+
+
+LaTeX Warning: Reference `structNSVec3' on page 6 undefined on input line 46.
+
+
+LaTeX Warning: Reference `structNSVec4' on page 6 undefined on input line 47.
+
+
+LaTeX Warning: Reference `structedpid__controller_1_1output__range' on page 6 u
+ndefined on input line 48.
+
+
+LaTeX Warning: Reference `structedpl__system_1_1pl__gpio' on page 6 undefined o
+n input line 49.
+
+
+LaTeX Warning: Reference `structpulsed__light__message' on page 6 undefined on 
+input line 50.
+
+
+LaTeX Warning: Reference `structrequest__packet' on page 6 undefined on input l
+ine 51.
+
+
+LaTeX Warning: Reference `structreset__request' on page 6 undefined on input li
+ne 52.
+
+
+LaTeX Warning: Reference `structrplidar__error__message' on page 6 undefined on
+ input line 53.
+
+
+LaTeX Warning: Reference `structrplidar__firmware__message' on page 6 undefined
+ on input line 54.
+
+
+LaTeX Warning: Reference `structrplidar__health__message' on page 6 undefined o
+n input line 55.
+
+
+LaTeX Warning: Reference `structrplidar__info__message' on page 6 undefined on 
+input line 56.
+
+
+LaTeX Warning: Reference `structrplidar__request' on page 6 undefined on input 
+line 57.
+
+
+LaTeX Warning: Reference `structrplidar__scan__message' on page 6 undefined on 
+input line 58.
+
+
+LaTeX Warning: Reference `structscan__data__packet' on page 6 undefined on inpu
+t line 59.
+
+
+LaTeX Warning: Reference `structscan__descriptor' on page 6 undefined on input 
+line 60.
+
+
+LaTeX Warning: Reference `structstart__scan__request' on page 6 undefined on in
+put line 61.
+
+
+LaTeX Warning: Reference `structstop__scan__request' on page 6 undefined on inp
+ut line 62.
+
+
+LaTeX Warning: Reference `structwait__ready__callback' on page 6 undefined on i
+nput line 63.
+
+
+LaTeX Warning: Reference `structedthreaded__fd_1_1WriteVal' on page 6 undefined
+ on input line 64.
+
+) [6]
+Chapter 4.
+(./files.tex
+
+LaTeX Warning: Reference `edcallback_8h' on page 7 undefined on input line 3.
+
+
+LaTeX Warning: Reference `edcomm__system_8h' on page 7 undefined on input line 
+4.
+
+
+LaTeX Warning: Reference `edglobal_8h' on page 7 undefined on input line 5.
+
+
+LaTeX Warning: Reference `edi2c_8h' on page 7 undefined on input line 6.
+
+
+LaTeX Warning: Reference `edimu__system_8h' on page 7 undefined on input line 7
+.
+
+
+LaTeX Warning: Reference `edlogging__system_8h' on page 7 undefined on input li
+ne 8.
+
+
+LaTeX Warning: Reference `edmctrl_8h' on page 7 undefined on input line 9.
+
+
+LaTeX Warning: Reference `edmessage_8h' on page 7 undefined on input line 10.
+
+
+LaTeX Warning: Reference `edmessage__dispatch_8h' on page 7 undefined on input 
+line 11.
+
+
+LaTeX Warning: Reference `ednavsystem_8h' on page 7 undefined on input line 12.
+
+
+
+LaTeX Warning: Reference `edpid__controller_8h' on page 7 undefined on input li
+ne 13.
+
+
+LaTeX Warning: Reference `edplsystem_8h' on page 7 undefined on input line 14.
+
+
+LaTeX Warning: Reference `edrplidar__packets_8h' on page 7 undefined on input l
+ine 15.
+
+
+LaTeX Warning: Reference `edrplidar__system_8h' on page 7 undefined on input li
+ne 16.
+
+
+LaTeX Warning: Reference `edsocket_8h' on page 7 undefined on input line 17.
+
+
+LaTeX Warning: Reference `edsystem_8h' on page 7 undefined on input line 18.
+
+
+LaTeX Warning: Reference `edthreaded__fd_8h' on page 7 undefined on input line 
+19.
+
+
+LaTeX Warning: Reference `edtimer_8h' on page 7 undefined on input line 20.
+
+
+LaTeX Warning: Reference `eduart_8h' on page 7 undefined on input line 21.
+
+
+LaTeX Warning: Reference `edutility_8h' on page 7 undefined on input line 22.
+
+
+LaTeX Warning: Reference `nsmat2_8h' on page 7 undefined on input line 23.
+
+
+LaTeX Warning: Reference `nsmat3_8h' on page 7 undefined on input line 24.
+
+
+LaTeX Warning: Reference `nsmat4_8h' on page 7 undefined on input line 25.
+
+
+LaTeX Warning: Reference `nsmath_8h' on page 7 undefined on input line 26.
+
+
+LaTeX Warning: Reference `nsquat_8h' on page 7 undefined on input line 27.
+
+
+LaTeX Warning: Reference `nsvec2_8h' on page 7 undefined on input line 28.
+
+
+LaTeX Warning: Reference `nsvec3_8h' on page 7 undefined on input line 29.
+
+
+LaTeX Warning: Reference `nsvec4_8h' on page 7 undefined on input line 30.
+
+
+LaTeX Warning: Reference `edcallback_8cpp' on page 7 undefined on input line 31
+.
+
+
+LaTeX Warning: Reference `edcomm__system_8cpp' on page 7 undefined on input lin
+e 32.
+
+
+LaTeX Warning: Reference `edi2c_8cpp' on page 7 undefined on input line 33.
+
+
+LaTeX Warning: Reference `edimu__system_8cpp' on page 7 undefined on input line
+ 34.
+
+
+LaTeX Warning: Reference `edlogging__system_8cpp' on page 7 undefined on input 
+line 35.
+
+
+LaTeX Warning: Reference `edmctrl_8cpp' on page 7 undefined on input line 36.
+
+[7
+
+]
+
+LaTeX Warning: Reference `edmessage_8cpp' on page 8 undefined on input line 37.
+
+
+
+LaTeX Warning: Reference `edmessage__dispatch_8cpp' on page 8 undefined on inpu
+t line 38.
+
+
+LaTeX Warning: Reference `ednavsystem_8cpp' on page 8 undefined on input line 3
+9.
+
+
+LaTeX Warning: Reference `edplsystem_8cpp' on page 8 undefined on input line 40
+.
+
+
+LaTeX Warning: Reference `edrplidar__packets_8cpp' on page 8 undefined on input
+ line 41.
+
+
+LaTeX Warning: Reference `edrplidar__system_8cpp' on page 8 undefined on input 
+line 42.
+
+
+LaTeX Warning: Reference `edsocket_8cpp' on page 8 undefined on input line 43.
+
+
+LaTeX Warning: Reference `edthreaded__fd_8cpp' on page 8 undefined on input lin
+e 44.
+
+
+LaTeX Warning: Reference `edtimer_8cpp' on page 8 undefined on input line 45.
+
+
+LaTeX Warning: Reference `eduart_8cpp' on page 8 undefined on input line 46.
+
+
+LaTeX Warning: Reference `edutility_8cpp' on page 8 undefined on input line 47.
+
+
+
+LaTeX Warning: Reference `main_8cpp' on page 8 undefined on input line 48.
+
+
+LaTeX Warning: Reference `nsmath_8cpp' on page 8 undefined on input line 49.
+
+) [8]
+Chapter 5.
+(./namespacemraa.tex) (./namespacestd.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 4.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 10.79993pt on input line 4.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 8.99994pt on input line 18.
+) [9
+
+] [10
+
+]
+Chapter 6.
+(./structCommand.tex
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+[11]) (./structcommand__wait__callback.tex
+Package epstopdf Info: Source file: <structcommand__wait__callback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4056 bytes
+(epstopdf)             Output file: <structcommand__wait__callback-eps-converte
+d-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structcommand__wait__callb
+ack-eps-converted-to.pdf structcommand__wait__callback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structcommand__wait__callback-eps-converted-to.pd
+f structcommand__wait__callback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structcommand__wait__callback-eps-converte
+d-to.pdf>.
+
+
+! Package pdftex.def Error: File `structcommand__wait__callback-eps-converted-t
+o.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...4.000000cm]{structcommand__wait__callback}
+                                                  
+? 
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 35.
+
+[12]) (./structcomplete__scan__data__packet.tex
+Package epstopdf Info: Source file: <structcomplete__scan__data__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3814 bytes
+(epstopdf)             Output file: <structcomplete__scan__data__packet-eps-con
+verted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structcomplete__scan__data
+__packet-eps-converted-to.pdf structcomplete__scan__data__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structcomplete__scan__data__packet-eps-converted-
+to.pdf structcomplete__scan__data__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structcomplete__scan__data__packet-eps-con
+verted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structcomplete__scan__data__packet-eps-conver
+ted-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...000cm]{structcomplete__scan__data__packet}
+                                                  
+? 
+[13]) (./structdata__packet.tex
+Package epstopdf Info: Source file: <structdata__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4236 bytes
+(epstopdf)             Output file: <structdata__packet-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdata__packet-eps-con
+verted-to.pdf structdata__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdata__packet-eps-converted-to.pdf structdat
+a__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdata__packet-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structdata__packet-eps-converted-to.pdf' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ics[height=1.251397cm]{structdata__packet}
+                                                  
+? 
+[14]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 47.
+
+) (./structeduart_1_1DataFormat.tex [15]) (./structdescriptor__packet.tex
+Package epstopdf Info: Source file: <structdescriptor__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4057 bytes
+(epstopdf)             Output file: <structdescriptor__packet-eps-converted-to.
+pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdescriptor__packet-e
+ps-converted-to.pdf structdescriptor__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdescriptor__packet-eps-converted-to.pdf str
+uctdescriptor__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdescriptor__packet-eps-converted-to.
+pdf>.
+
+
+! Package pdftex.def Error: File `structdescriptor__packet-eps-converted-to.pdf
+' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ight=2.000000cm]{structdescriptor__packet}
+                                                  
+? 
+[16]
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
+(Font)              using `T1/pcr/bc/n' instead on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+) (./structdevice__health__descriptor.tex
+Package epstopdf Info: Source file: <structdevice__health__descriptor.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3824 bytes
+(epstopdf)             Output file: <structdevice__health__descriptor-eps-conve
+rted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdevice__health__desc
+riptor-eps-converted-to.pdf structdevice__health__descriptor.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdevice__health__descriptor-eps-converted-to
+.pdf structdevice__health__descriptor.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdevice__health__descriptor-eps-conve
+rted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structdevice__health__descriptor-eps-converte
+d-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...00000cm]{structdevice__health__descriptor}
+                                                  
+? 
+[17]) (./structdevice__health__request.tex
+Package epstopdf Info: Source file: <structdevice__health__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3812 bytes
+(epstopdf)             Output file: <structdevice__health__request-eps-converte
+d-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdevice__health__requ
+est-eps-converted-to.pdf structdevice__health__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdevice__health__request-eps-converted-to.pd
+f structdevice__health__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdevice__health__request-eps-converte
+d-to.pdf>.
+
+
+! Package pdftex.def Error: File `structdevice__health__request-eps-converted-t
+o.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...2.000000cm]{structdevice__health__request}
+                                                  
+? 
+) (./structdevice__info__descriptor.tex [18]
+Package epstopdf Info: Source file: <structdevice__info__descriptor.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3820 bytes
+(epstopdf)             Output file: <structdevice__info__descriptor-eps-convert
+ed-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdevice__info__descri
+ptor-eps-converted-to.pdf structdevice__info__descriptor.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdevice__info__descriptor-eps-converted-to.p
+df structdevice__info__descriptor.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdevice__info__descriptor-eps-convert
+ed-to.pdf>.
+
+
+! Package pdftex.def Error: File `structdevice__info__descriptor-eps-converted-
+to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ....000000cm]{structdevice__info__descriptor}
+                                                  
+? 
+) (./structdevice__info__request.tex
+Package epstopdf Info: Source file: <structdevice__info__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3808 bytes
+(epstopdf)             Output file: <structdevice__info__request-eps-converted-
+to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structdevice__info__reques
+t-eps-converted-to.pdf structdevice__info__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structdevice__info__request-eps-converted-to.pdf 
+structdevice__info__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structdevice__info__request-eps-converted-
+to.pdf>.
+
+
+! Package pdftex.def Error: File `structdevice__info__request-eps-converted-to.
+pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...t=2.000000cm]{structdevice__info__request}
+                                                  
+? 
+[19]) (./structedcallback.tex
+Package epstopdf Info: Source file: <structedcallback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4282 bytes
+(epstopdf)             Output file: <structedcallback-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structedcallback-eps-conve
+rted-to.pdf structedcallback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structedcallback-eps-converted-to.pdf structedcal
+lback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structedcallback-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structedcallback-eps-converted-to.pdf' not fo
+und.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...phics[height=4.000000cm]{structedcallback}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 30.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 30.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 30.
+
+) (./classedcomm__system.tex
+Package epstopdf Info: Source file: <classedcomm__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3784 bytes
+(epstopdf)             Output file: <classedcomm__system-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedcomm__system-eps-co
+nverted-to.pdf classedcomm__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedcomm__system-eps-converted-to.pdf classedc
+omm__system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedcomm__system-eps-converted-to.pdf>.
+
+
+
+! Package pdftex.def Error: File `classedcomm__system-eps-converted-to.pdf' not
+ found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...cs[height=2.000000cm]{classedcomm__system}
+                                                  
+? 
+[20]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 60.
+
+[21]) (./classedi2c.tex
+Package epstopdf Info: Source file: <classedi2c.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3778 bytes
+(epstopdf)             Output file: <classedi2c-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedi2c-eps-converted-t
+o.pdf classedi2c.eps>
+(epstopdf)             \includegraphics on input line 16.
+runsystem(repstopdf --outfile=classedi2c-eps-converted-to.pdf classedi2c.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedi2c-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classedi2c-eps-converted-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...udegraphics[height=2.000000cm]{classedi2c}
+                                                  
+? 
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 27.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 27.
+[22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 108.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 108.
+
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+[23]
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 182
+[][][]
+ []
+
+[24]
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 243
+[][][]
+ []
+
+[25]
+Underfull \hbox (badness 10000) detected at line 301
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 315
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 347
+[][][]
+ []
+
+) (./classedimu__system.tex
+Package epstopdf Info: Source file: <classedimu__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3782 bytes
+(epstopdf)             Output file: <classedimu__system-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedimu__system-eps-con
+verted-to.pdf classedimu__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedimu__system-eps-converted-to.pdf classedim
+u__system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedimu__system-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classedimu__system-eps-converted-to.pdf' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ics[height=2.000000cm]{classedimu__system}
+                                                  
+? 
+[26] [27]
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 8.99994pt on input line 156.
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+[28]
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 286
+[][][]
+ []
+
+[29]
+Underfull \hbox (badness 10000) detected at line 310
+[][][]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 338.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 338.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 338.
+
+[30]) (./classedlogging__system.tex
+Package epstopdf Info: Source file: <classedlogging__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3790 bytes
+(epstopdf)             Output file: <classedlogging__system-eps-converted-to.pd
+f>
+(epstopdf)             Command: <repstopdf --outfile=classedlogging__system-eps
+-converted-to.pdf classedlogging__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedlogging__system-eps-converted-to.pdf class
+edlogging__system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedlogging__system-eps-converted-to.pd
+f>.
+
+
+! Package pdftex.def Error: File `classedlogging__system-eps-converted-to.pdf' 
+not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...height=2.000000cm]{classedlogging__system}
+                                                  
+? 
+[31]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+) (./classedmctrl.tex [32]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+[33]) (./structedmessage.tex
+Package epstopdf Info: Source file: <structedmessage.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4657 bytes
+(epstopdf)             Output file: <structedmessage-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structedmessage-eps-conver
+ted-to.pdf structedmessage.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structedmessage-eps-converted-to.pdf structedmess
+age.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structedmessage-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structedmessage-eps-converted-to.pdf' not fou
+nd.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...phics[height=10.000000cm]{structedmessage}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 35.
+
+
+Underfull \hbox (badness 4341) in paragraph at lines 48--49
+\T1/phv/m/n/10 Implemented in [][]rplidar-_-firmware-_-message[][], [][]rplidar
+-_-health-_-message[][], [][]rplidar-_-info-_-message[][], [][]rplidar-_-error-
+_-
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 48--49
+\T1/phv/m/n/10 message[][], [][]rplidar-_-scan-_-message[][], [][]nav-_-system-
+_-request[][], [][]rplidar-_-request[][], [][]nav-_-message[][], and [][]pulsed
+-_-light-_-
+ []
+
+[34]) (./classedmessage__dispatch.tex [35]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+) (./classednav__system.tex
+Package epstopdf Info: Source file: <classednav__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3782 bytes
+(epstopdf)             Output file: <classednav__system-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classednav__system-eps-con
+verted-to.pdf classednav__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classednav__system-eps-converted-to.pdf classedna
+v__system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classednav__system-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classednav__system-eps-converted-to.pdf' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ics[height=2.000000cm]{classednav__system}
+                                                  
+? 
+[36]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+[37]) (./classedpid__controller.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[38]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 74.
+
+) (./structedpl__callback.tex
+Package epstopdf Info: Source file: <structedpl__callback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3911 bytes
+(epstopdf)             Output file: <structedpl__callback-eps-converted-to.pdf>
+
+(epstopdf)             Command: <repstopdf --outfile=structedpl__callback-eps-c
+onverted-to.pdf structedpl__callback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structedpl__callback-eps-converted-to.pdf structe
+dpl__callback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structedpl__callback-eps-converted-to.pdf>
+.
+
+
+! Package pdftex.def Error: File `structedpl__callback-eps-converted-to.pdf' no
+t found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...s[height=3.000000cm]{structedpl__callback}
+                                                  
+? 
+[39]) (./classedpl__system.tex
+Package epstopdf Info: Source file: <classedpl__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3780 bytes
+(epstopdf)             Output file: <classedpl__system-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedpl__system-eps-conv
+erted-to.pdf classedpl__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedpl__system-eps-converted-to.pdf classedpl_
+_system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedpl__system-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classedpl__system-eps-converted-to.pdf' not f
+ound.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...hics[height=2.000000cm]{classedpl__system}
+                                                  
+? 
+[40]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+[41]) (./classedrplidar__system.tex
+Package epstopdf Info: Source file: <classedrplidar__system.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3790 bytes
+(epstopdf)             Output file: <classedrplidar__system-eps-converted-to.pd
+f>
+(epstopdf)             Command: <repstopdf --outfile=classedrplidar__system-eps
+-converted-to.pdf classedrplidar__system.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedrplidar__system-eps-converted-to.pdf class
+edrplidar__system.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedrplidar__system-eps-converted-to.pd
+f>.
+
+
+! Package pdftex.def Error: File `classedrplidar__system-eps-converted-to.pdf' 
+not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...height=2.000000cm]{classedrplidar__system}
+                                                  
+? 
+[42]
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 100.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 100.
+
+[43]) (./classedsocket.tex
+Package epstopdf Info: Source file: <classedsocket.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3784 bytes
+(epstopdf)             Output file: <classedsocket-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedsocket-eps-converte
+d-to.pdf classedsocket.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedsocket-eps-converted-to.pdf classedsocket.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedsocket-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classedsocket-eps-converted-to.pdf' not found
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...graphics[height=2.000000cm]{classedsocket}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+[44]) (./classedsystem.tex
+Package epstopdf Info: Source file: <classedsystem.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4260 bytes
+(epstopdf)             Output file: <classedsystem-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedsystem-eps-converte
+d-to.pdf classedsystem.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedsystem-eps-converted-to.pdf classedsystem.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedsystem-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classedsystem-eps-converted-to.pdf' not found
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...graphics[height=1.555556cm]{classedsystem}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 47.
+
+[45]) (./classedthreaded__fd.tex
+Package epstopdf Info: Source file: <classedthreaded__fd.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3966 bytes
+(epstopdf)             Output file: <classedthreaded__fd-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classedthreaded__fd-eps-co
+nverted-to.pdf classedthreaded__fd.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classedthreaded__fd-eps-converted-to.pdf classedt
+hreaded__fd.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classedthreaded__fd-eps-converted-to.pdf>.
+
+
+
+! Package pdftex.def Error: File `classedthreaded__fd-eps-converted-to.pdf' not
+ found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...cs[height=2.000000cm]{classedthreaded__fd}
+                                                  
+? 
+[46]
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+[47]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 173.
+
+[48]) (./classedtimer.tex [49]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+[50]) (./structedtimer__callback.tex
+Package epstopdf Info: Source file: <structedtimer__callback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4282 bytes
+(epstopdf)             Output file: <structedtimer__callback-eps-converted-to.p
+df>
+(epstopdf)             Command: <repstopdf --outfile=structedtimer__callback-ep
+s-converted-to.pdf structedtimer__callback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structedtimer__callback-eps-converted-to.pdf stru
+ctedtimer__callback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structedtimer__callback-eps-converted-to.p
+df>.
+
+
+! Package pdftex.def Error: File `structedtimer__callback-eps-converted-to.pdf'
+ not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...eight=4.000000cm]{structedtimer__callback}
+                                                  
+? 
+) (./classeduart.tex
+Package epstopdf Info: Source file: <classeduart.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3780 bytes
+(epstopdf)             Output file: <classeduart-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=classeduart-eps-converted-
+to.pdf classeduart.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=classeduart-eps-converted-to.pdf classeduart.eps)
+...executed safely (allowed).
+
+Package epstopdf Info: Result file: <classeduart-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `classeduart-eps-converted-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...degraphics[height=2.000000cm]{classeduart}
+                                                  
+? 
+[51]
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 208
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 220
+[][][]
+ []
+
+[53]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 244.
+
+) (./structedthreaded__fd_1_1Error.tex [54])
+(./structfirmware__data__packet.tex
+Package epstopdf Info: Source file: <structfirmware__data__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3804 bytes
+(epstopdf)             Output file: <structfirmware__data__packet-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structfirmware__data__pack
+et-eps-converted-to.pdf structfirmware__data__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structfirmware__data__packet-eps-converted-to.pdf
+ structfirmware__data__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structfirmware__data__packet-eps-converted
+-to.pdf>.
+
+
+! Package pdftex.def Error: File `structfirmware__data__packet-eps-converted-to
+.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...=2.000000cm]{structfirmware__data__packet}
+                                                  
+? 
+[55]) (./structforce__scan__request.tex
+Package epstopdf Info: Source file: <structforce__scan__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3806 bytes
+(epstopdf)             Output file: <structforce__scan__request-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structforce__scan__request
+-eps-converted-to.pdf structforce__scan__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structforce__scan__request-eps-converted-to.pdf s
+tructforce__scan__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structforce__scan__request-eps-converted-t
+o.pdf>.
+
+
+! Package pdftex.def Error: File `structforce__scan__request-eps-converted-to.p
+df' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ht=2.000000cm]{structforce__scan__request}
+                                                  
+? 
+[56]) (./structhealth__data__packet.tex
+Package epstopdf Info: Source file: <structhealth__data__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3800 bytes
+(epstopdf)             Output file: <structhealth__data__packet-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structhealth__data__packet
+-eps-converted-to.pdf structhealth__data__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structhealth__data__packet-eps-converted-to.pdf s
+tructhealth__data__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structhealth__data__packet-eps-converted-t
+o.pdf>.
+
+
+! Package pdftex.def Error: File `structhealth__data__packet-eps-converted-to.p
+df' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ht=2.000000cm]{structhealth__data__packet}
+                                                  
+? 
+[57]) (./structinfo__data__packet.tex
+Package epstopdf Info: Source file: <structinfo__data__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3796 bytes
+(epstopdf)             Output file: <structinfo__data__packet-eps-converted-to.
+pdf>
+(epstopdf)             Command: <repstopdf --outfile=structinfo__data__packet-e
+ps-converted-to.pdf structinfo__data__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structinfo__data__packet-eps-converted-to.pdf str
+uctinfo__data__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structinfo__data__packet-eps-converted-to.
+pdf>.
+
+
+! Package pdftex.def Error: File `structinfo__data__packet-eps-converted-to.pdf
+' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ight=2.000000cm]{structinfo__data__packet}
+                                                  
+? 
+[58] [59]) (./structinstruction__callback.tex
+Package epstopdf Info: Source file: <structinstruction__callback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3925 bytes
+(epstopdf)             Output file: <structinstruction__callback-eps-converted-
+to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structinstruction__callbac
+k-eps-converted-to.pdf structinstruction__callback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structinstruction__callback-eps-converted-to.pdf 
+structinstruction__callback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structinstruction__callback-eps-converted-
+to.pdf>.
+
+
+! Package pdftex.def Error: File `structinstruction__callback-eps-converted-to.
+pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...t=3.000000cm]{structinstruction__callback}
+                                                  
+? 
+[60]) (./structnav__message.tex
+Package epstopdf Info: Source file: <structnav__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3782 bytes
+(epstopdf)             Output file: <structnav__message-eps-converted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structnav__message-eps-con
+verted-to.pdf structnav__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structnav__message-eps-converted-to.pdf structnav
+__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structnav__message-eps-converted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structnav__message-eps-converted-to.pdf' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ics[height=2.000000cm]{structnav__message}
+                                                  
+? 
+[61]) (./structnav__system__request.tex
+Package epstopdf Info: Source file: <structnav__system__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3796 bytes
+(epstopdf)             Output file: <structnav__system__request-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structnav__system__request
+-eps-converted-to.pdf structnav__system__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structnav__system__request-eps-converted-to.pdf s
+tructnav__system__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structnav__system__request-eps-converted-t
+o.pdf>.
+
+
+! Package pdftex.def Error: File `structnav__system__request-eps-converted-to.p
+df' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ht=2.000000cm]{structnav__system__request}
+                                                  
+? 
+[62]) (./structNSBoundingBox.tex [63]
+Underfull \hbox (badness 10000) detected at line 61
+[][][]
+ []
+
+[64]) (./structnsmat2.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[65] [66]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 232.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 239.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 239.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 239.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 253.
+
+[67] [68]) (./structnsmat3.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[69] [70]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 283.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 283.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 283.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 304.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 304.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 304.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 311.
+
+[71] [72]) (./structnsmat4.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[73] [74]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 292.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 292.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 292.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 313.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 313.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 313.
+
+[75] [76]) (./structnsquat.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[77] [78] [79]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 265.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 265.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 265.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 272.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 272.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 272.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 279.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 279.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 279.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 286.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 286.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 286.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 293.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+[80]) (./structNSVec2.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[81] [82] [83]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 372.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 379.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 379.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 379.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 386.
+
+[84]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\wedge' on input line 512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 512.
+
+[85]) (./structNSVec3.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[86] [87] [88] [89]
+Underfull \hbox (badness 10000) detected at line 412
+[][][]
+ []
+
+[90]
+Underfull \hbox (badness 10000) detected at line 426
+[][][]
+ []
+
+[91] [92]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 866.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 866.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 866.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 873.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 873.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 873.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 880.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 880.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 880.
+
+[93]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1006.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1006.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\wedge' on input line 1006.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1006.
+
+[94] [95] [96] [97]) (./structNSVec4.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110]
+[111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
+[123] [124] [125] [126] [127]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 4196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4203.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 4203.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4203.
+
+[128]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 4210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4301.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4301.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4308.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4308.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4336.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4336.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 4364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\wedge' on input line 4364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4364.
+
+[129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
+[141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152]
+[153] [154] [155] [156]) (./structedpid__controller_1_1output__range.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+[157]) (./structedpl__system_1_1pl__gpio.tex [158]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 60.
+
+) (./structpulsed__light__message.tex
+Package epstopdf Info: Source file: <structpulsed__light__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3800 bytes
+(epstopdf)             Output file: <structpulsed__light__message-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structpulsed__light__messa
+ge-eps-converted-to.pdf structpulsed__light__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structpulsed__light__message-eps-converted-to.pdf
+ structpulsed__light__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structpulsed__light__message-eps-converted
+-to.pdf>.
+
+
+! Package pdftex.def Error: File `structpulsed__light__message-eps-converted-to
+.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...=2.000000cm]{structpulsed__light__message}
+                                                  
+? 
+[159] [160]) (./structrequest__packet.tex
+Package epstopdf Info: Source file: <structrequest__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4325 bytes
+(epstopdf)             Output file: <structrequest__packet-eps-converted-to.pdf
+>
+(epstopdf)             Command: <repstopdf --outfile=structrequest__packet-eps-
+converted-to.pdf structrequest__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrequest__packet-eps-converted-to.pdf struct
+request__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrequest__packet-eps-converted-to.pdf
+>.
+
+
+! Package pdftex.def Error: File `structrequest__packet-eps-converted-to.pdf' n
+ot found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...[height=1.269841cm]{structrequest__packet}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 52.
+
+) (./structreset__request.tex [161]
+Package epstopdf Info: Source file: <structreset__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3796 bytes
+(epstopdf)             Output file: <structreset__request-eps-converted-to.pdf>
+
+(epstopdf)             Command: <repstopdf --outfile=structreset__request-eps-c
+onverted-to.pdf structreset__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structreset__request-eps-converted-to.pdf structr
+eset__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structreset__request-eps-converted-to.pdf>
+.
+
+
+! Package pdftex.def Error: File `structreset__request-eps-converted-to.pdf' no
+t found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...s[height=2.000000cm]{structreset__request}
+                                                  
+? 
+) (./structrplidar__error__message.tex
+Package epstopdf Info: Source file: <structrplidar__error__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3802 bytes
+(epstopdf)             Output file: <structrplidar__error__message-eps-converte
+d-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__error__mess
+age-eps-converted-to.pdf structrplidar__error__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__error__message-eps-converted-to.pd
+f structrplidar__error__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__error__message-eps-converte
+d-to.pdf>.
+
+
+! Package pdftex.def Error: File `structrplidar__error__message-eps-converted-t
+o.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...2.000000cm]{structrplidar__error__message}
+                                                  
+? 
+[162]) (./structrplidar__firmware__message.tex
+Package epstopdf Info: Source file: <structrplidar__firmware__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3808 bytes
+(epstopdf)             Output file: <structrplidar__firmware__message-eps-conve
+rted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__firmware__m
+essage-eps-converted-to.pdf structrplidar__firmware__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__firmware__message-eps-converted-to
+.pdf structrplidar__firmware__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__firmware__message-eps-conve
+rted-to.pdf>.
+
+
+! Package pdftex.def Error: File `structrplidar__firmware__message-eps-converte
+d-to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...00000cm]{structrplidar__firmware__message}
+                                                  
+? 
+[163]) (./structrplidar__health__message.tex
+Package epstopdf Info: Source file: <structrplidar__health__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3804 bytes
+(epstopdf)             Output file: <structrplidar__health__message-eps-convert
+ed-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__health__mes
+sage-eps-converted-to.pdf structrplidar__health__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__health__message-eps-converted-to.p
+df structrplidar__health__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__health__message-eps-convert
+ed-to.pdf>.
+
+
+! Package pdftex.def Error: File `structrplidar__health__message-eps-converted-
+to.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ....000000cm]{structrplidar__health__message}
+                                                  
+? 
+) (./structrplidar__info__message.tex [164]
+Package epstopdf Info: Source file: <structrplidar__info__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3800 bytes
+(epstopdf)             Output file: <structrplidar__info__message-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__info__messa
+ge-eps-converted-to.pdf structrplidar__info__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__info__message-eps-converted-to.pdf
+ structrplidar__info__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__info__message-eps-converted
+-to.pdf>.
+
+
+! Package pdftex.def Error: File `structrplidar__info__message-eps-converted-to
+.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...=2.000000cm]{structrplidar__info__message}
+                                                  
+? 
+) (./structrplidar__request.tex
+Package epstopdf Info: Source file: <structrplidar__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3790 bytes
+(epstopdf)             Output file: <structrplidar__request-eps-converted-to.pd
+f>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__request-eps
+-converted-to.pdf structrplidar__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__request-eps-converted-to.pdf struc
+trplidar__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__request-eps-converted-to.pd
+f>.
+
+
+! Package pdftex.def Error: File `structrplidar__request-eps-converted-to.pdf' 
+not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...height=2.000000cm]{structrplidar__request}
+                                                  
+? 
+[165]
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+) (./structrplidar__scan__message.tex
+Package epstopdf Info: Source file: <structrplidar__scan__message.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3800 bytes
+(epstopdf)             Output file: <structrplidar__scan__message-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structrplidar__scan__messa
+ge-eps-converted-to.pdf structrplidar__scan__message.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structrplidar__scan__message-eps-converted-to.pdf
+ structrplidar__scan__message.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structrplidar__scan__message-eps-converted
+-to.pdf>.
+
+
+! Package pdftex.def Error: File `structrplidar__scan__message-eps-converted-to
+.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...=2.000000cm]{structrplidar__scan__message}
+                                                  
+? 
+[166]) (./structscan__data__packet.tex
+Package epstopdf Info: Source file: <structscan__data__packet.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3796 bytes
+(epstopdf)             Output file: <structscan__data__packet-eps-converted-to.
+pdf>
+(epstopdf)             Command: <repstopdf --outfile=structscan__data__packet-e
+ps-converted-to.pdf structscan__data__packet.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structscan__data__packet-eps-converted-to.pdf str
+uctscan__data__packet.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structscan__data__packet-eps-converted-to.
+pdf>.
+
+
+! Package pdftex.def Error: File `structscan__data__packet-eps-converted-to.pdf
+' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ight=2.000000cm]{structscan__data__packet}
+                                                  
+? 
+[167] [168]) (./structscan__descriptor.tex
+Package epstopdf Info: Source file: <structscan__descriptor.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3806 bytes
+(epstopdf)             Output file: <structscan__descriptor-eps-converted-to.pd
+f>
+(epstopdf)             Command: <repstopdf --outfile=structscan__descriptor-eps
+-converted-to.pdf structscan__descriptor.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structscan__descriptor-eps-converted-to.pdf struc
+tscan__descriptor.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structscan__descriptor-eps-converted-to.pd
+f>.
+
+
+! Package pdftex.def Error: File `structscan__descriptor-eps-converted-to.pdf' 
+not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...height=2.000000cm]{structscan__descriptor}
+                                                  
+? 
+[169]) (./structstart__scan__request.tex
+Package epstopdf Info: Source file: <structstart__scan__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3806 bytes
+(epstopdf)             Output file: <structstart__scan__request-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structstart__scan__request
+-eps-converted-to.pdf structstart__scan__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structstart__scan__request-eps-converted-to.pdf s
+tructstart__scan__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structstart__scan__request-eps-converted-t
+o.pdf>.
+
+
+! Package pdftex.def Error: File `structstart__scan__request-eps-converted-to.p
+df' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ht=2.000000cm]{structstart__scan__request}
+                                                  
+? 
+) (./structstop__scan__request.tex
+Package epstopdf Info: Source file: <structstop__scan__request.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 3804 bytes
+(epstopdf)             Output file: <structstop__scan__request-eps-converted-to
+.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structstop__scan__request-
+eps-converted-to.pdf structstop__scan__request.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structstop__scan__request-eps-converted-to.pdf st
+ructstop__scan__request.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structstop__scan__request-eps-converted-to
+.pdf>.
+
+
+! Package pdftex.def Error: File `structstop__scan__request-eps-converted-to.pd
+f' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ght=2.000000cm]{structstop__scan__request}
+                                                  
+? 
+[170]) (./structwait__ready__callback.tex
+Package epstopdf Info: Source file: <structwait__ready__callback.eps>
+(epstopdf)                    date: 2015-08-27 18:47:19
+(epstopdf)                    size: 4056 bytes
+(epstopdf)             Output file: <structwait__ready__callback-eps-converted-
+to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=structwait__ready__callbac
+k-eps-converted-to.pdf structwait__ready__callback.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(repstopdf --outfile=structwait__ready__callback-eps-converted-to.pdf 
+structwait__ready__callback.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <structwait__ready__callback-eps-converted-
+to.pdf>.
+
+
+! Package pdftex.def Error: File `structwait__ready__callback-eps-converted-to.
+pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...t=4.000000cm]{structwait__ready__callback}
+                                                  
+? 
+) (./structedthreaded__fd_1_1WriteVal.tex [171]) [172]
+Chapter 7.
+(./edcallback_8h.tex) (./edcomm__system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+) (./edglobal_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[173
+
+]) (./edi2c_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+) (./edimu__system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[174] [175] [176] [177] [178]) (./edlogging__system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[]\T1/phv/bc/n/14.4 /home/dprandle/-Documents/code/ctrlmod/include/edlogging-_-
+system.h File Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+) (./edmctrl_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+[179]
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+) (./edmessage_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+[180]) (./edmessage__dispatch_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+) (./ednavsystem_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+[181]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+[182]) (./edpid__controller_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+) (./edplsystem_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
+
+ []
+
+[183]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+) (./edrplidar__packets_8h.tex
+Underfull \hbox (badness 6510) in paragraph at lines 3--3
+[]\T1/phv/bc/n/14.4 /home/dprandle/-Documents/code/ctrlmod/include/edrplidar-_-
+packets.h File Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+) (./edrplidar__system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[]\T1/phv/bc/n/14.4 /home/dprandle/-Documents/code/ctrlmod/include/edrplidar-_-
+system.h File Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+[184]) (./edsocket_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+) (./edsystem_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+) (./edthreaded__fd_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+[185]) (./edtimer_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+) (./eduart_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+) (./edutility_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+
+ []
+
+[186]) (./nsmat2_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[187] [188]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 85.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 85.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 85.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 93.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 109.
+
+) (./nsmat3_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[189] [190]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 123.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 123.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 123.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 131.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 131.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 131.
+
+[191]) (./nsmat4_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[192]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 117.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 117.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 117.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 125.
+
+[193]) (./nsmath_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
+
+ []
+
+[194] [195] [196] [197]) (./nsquat_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[198]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 88.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 104.
+
+) (./nsvec2_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[199] [200]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 183.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 191.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 191.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 191.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 199.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 199.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 199.
+
+[201]) (./nsvec3_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[202] [203]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 235.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 235.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 235.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 243.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 243.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 243.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 251.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 251.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 251.
+
+[204]) (./nsvec4_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+[205] [206]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 217.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 217.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 217.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ast' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+) (./edcallback_8cpp.tex) (./edcomm__system_8cpp.tex) (./edi2c_8cpp.tex)
+(./edimu__system_8cpp.tex [207]) (./edlogging__system_8cpp.tex)
+(./edmctrl_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--18
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+) (./edmessage_8cpp.tex) (./edmessage__dispatch_8cpp.tex [208])
+(./ednavsystem_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--16
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 19
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+) (./edplsystem_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--18
+
+ []
+
+[209]
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+) (./edrplidar__packets_8cpp.tex) (./edrplidar__system_8cpp.tex)
+(./edsocket_8cpp.tex) (./edthreaded__fd_8cpp.tex) (./edtimer_8cpp.tex [210])
+(./eduart_8cpp.tex) (./edutility_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
+
+ []
+
+[211]) (./main_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--17
+
+ []
+
+[212]) (./nsmath_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+) [213] [214]
+No file refman.ind.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+(./refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+
+
+Package rerunfilecheck Warning: File `refman.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `refman.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  25AB543F17F39A057B12F1AAC0E97B77;342711.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
+ ) 
+Here is how much of TeX's memory you used:
+ 20968 strings out of 495028
+ 502006 string characters out of 6181497
+ 278410 words of memory out of 5000000
+ 17863 multiletter control sequences out of 15000+600000
+ 91113 words of font info for 127 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 48i,13n,43p,1012b,2741s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (218 pages, 782411 bytes).
+PDF statistics:
+ 13226 PDF objects out of 15390 (max. 8388607)
+ 12868 compressed objects within 129 object streams
+ 5871 named destinations out of 6186 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

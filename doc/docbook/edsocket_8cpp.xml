@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edsocket_8cpp">
+    <title>edsocket.cpp File Reference</title>
+    <programlisting>#include &lt;edsocket.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;sys/socket.h&gt;</programlisting>
+    <programlisting>#include &lt;errno.h&gt;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/dprandle/Documents/code/ctrlmod/src/edsocket.cpp</para>
+    </simplesect>
+</section>
