@@ -1,8 +1,3 @@
-<a href="https://scan.coverity.com/projects/dprandle-ctrlmod">
-  <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/9136/badge.svg"/>
-</a>
-
 * Edison Control Module
 
 The edison control module is a program that runs on the edison and integrates the rplidar scanner, pulsed light lasers, and LSM9DS0 together to create a navigation control scheme. Eventually this system will be capable of full SLAM but for now the focus is obstacle avoidance. All data is sent to any listening sockets over an available wifi network.
