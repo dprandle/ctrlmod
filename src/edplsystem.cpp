@@ -11,13 +11,14 @@
 
 #include <edplsystem.h>
 #include <edutility.h>
-#include <mraa.hpp>
 #include <iostream>
 #include <edtimer.h>
 #include <vector>
 #include <edmessage_dispatch.h>
 #include <edmessage.h>
 #include <edmctrl.h>
+#include <edgpio.h>
+#include <string.h>
 
 edpl_system::edpl_system():
 	edsystem(),
@@ -43,7 +44,7 @@ void edpl_system::init()
         {
             std::ostringstream ss;
             ss << "Error initializing GPIO pin " << gpio_pins[i];
-            log_message(ss.str());
+            cprint(ss.str());
         }
     }
 	msgTimer->set_callback(new edpl_callback(get_pl(GPIO_14), get_pl(GPIO_15)));
@@ -52,66 +53,79 @@ void edpl_system::init()
 	msgTimer->start();
 }
 
-edpl_system::pl_gpio * edpl_system::add_pl(uint32_t mraa_pin,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
+pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos_offset, const quat & orient_offset)
 {
-	if (pl_pin_taken(mraa_pin))
+	if (pl_pin_taken(pin_num))
 	{
 		std::ostringstream oss;
-		oss << "Cannot initialize pin " << mraa_pin << " as its already initialized";
-		log_message(oss.str());
+		oss << "Cannot initialize pin " << pin_num << " as its already initialized";
+		cprint(oss.str());
 		return NULL;
 	}
 
-	pl_gpio * pl = new pl_gpio(mraa_pin, c_offset, pos_offset, orient_offset);
+	pl_gpio * pl = new pl_gpio(pin_num, c_offset, pos_offset, orient_offset);
 	if (pl->pin == NULL)
 	{
 		std::ostringstream oss;
-		oss << "Unable to initialize mraa pin " << mraa_pin;
-		log_message(oss.str());
+		oss << "Unable to initialize mraa pin " << pin_num;
+		cprint(oss.str());
 		delete pl;
 		return NULL;
 	}
 
-	mraa_result_t res = pl->pin->dir(mraa::DIR_IN);
-	if (res != MRAA_SUCCESS)
+	int res = pl->pin->set_direction(gpio_dir_in);
+	if (res == -1)
 	{
-		mraa::printError(res);
+		std::ostringstream ss;
+		gpio_error_state state = pl->pin->get_and_clear_error();
+		ss << "Error initializing pin " << pin_num << "\nErrno: " << strerror(state.errno_code) << "\nGPIO Error: " << edgpio::error_string(state.gp_code);
+		cprint(ss.str());
 		delete pl;
-		return NULL;
+		return nullptr;
 	}
-	pl->pin->isr(mraa::EDGE_BOTH,edpl_system::pl_gpio::isr, pl);
-	pl->mraa_pin_num = mraa_pin;
-	m_pl_sensors[mraa_pin] = pl;
+
+	res = pl->pin->set_isr(gpio_edge_both, pl_gpio::isr, pl);
+	if (res == -1)
+	{
+		std::ostringstream ss;
+		gpio_error_state state = pl->pin->get_and_clear_error();
+		ss << "Error setting pin " << pin_num << " isr\nErrno: " << strerror(state.errno_code) << "\nGPIO Error: " << edgpio::error_string(state.gp_code);
+		cprint(ss.str());
+		delete pl;
+		return nullptr;
+	}
+
+	m_pl_sensors[pin_num] = pl;
 	std::ostringstream ss;
-	ss << "Successfully initialized pin " << mraa_pin;
-	log_message(ss.str());
+	ss << "Successfully initialized pin " << pin_num;
+	cprint(ss.str());
 	return pl;
 }
 
-edpl_system::pl_gpio * edpl_system::get_pl(uint32_t mraa_pin)
+pl_gpio * edpl_system::get_pl(uint32_t pin_num)
 {
-	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	plmap::iterator fiter = m_pl_sensors.find(pin_num);
 	if (fiter != m_pl_sensors.end())
 		return fiter->second;
 	return NULL;
 }
 
-void edpl_system::pl_set_cal_offset(uint32_t mraa_pin, double offset)
+void edpl_system::pl_set_cal_offset(uint32_t pin_num, double offset)
 {
-	pl_gpio * pl = get_pl(mraa_pin);
+	pl_gpio * pl = get_pl(pin_num);
 	if (pl !=NULL)
 		pl->cal_offset = offset;
 }
 
-bool edpl_system::pl_pin_taken(uint32_t mraa_pin)
+bool edpl_system::pl_pin_taken(uint32_t pin_num)
 {
-	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	plmap::iterator fiter = m_pl_sensors.find(pin_num);
 	return (fiter != m_pl_sensors.end());	
 }
 
-void edpl_system::rm_pl(uint32_t mraa_pin)
+void edpl_system::rm_pl(uint32_t pin_num)
 {
-	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	plmap::iterator fiter = m_pl_sensors.find(pin_num);
 	if (fiter != m_pl_sensors.end())
 	{
 		delete fiter->second;
@@ -119,16 +133,16 @@ void edpl_system::rm_pl(uint32_t mraa_pin)
 	}
 }
 
-void edpl_system::pl_set_pos(uint32_t mraa_pin, const vec3 & pos_)
+void edpl_system::pl_set_pos(uint32_t pin_num, const vec3 & pos_)
 {
-	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	plmap::iterator fiter = m_pl_sensors.find(pin_num);
 	if (fiter != m_pl_sensors.end())
 		fiter->second->pos = pos_;
 }
 
-void edpl_system::pl_set_orientation(uint32_t mraa_pin, const quat & orient_)
+void edpl_system::pl_set_orientation(uint32_t pin_num, const quat & orient_)
 {
-	plmap::iterator fiter = m_pl_sensors.find(mraa_pin);
+	plmap::iterator fiter = m_pl_sensors.find(pin_num);
 	if (fiter != m_pl_sensors.end())
 		fiter->second->orient = orient_;
 }
@@ -155,6 +169,7 @@ void edpl_system::update()
 	plmap::iterator iter = m_pl_sensors.begin();
 	while (iter != m_pl_sensors.end())
 	{
+		iter->second->pin->update();
 		if (iter->second->meas_ready)
 		{
 			double meas = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
@@ -175,29 +190,27 @@ std::string edpl_system::typestr()
 }
 
 
-edpl_system::pl_gpio::pl_gpio(uint32_t mraa_pin,double calibrate_offset, const vec3 & poffset, const quat & orient_):
-	pin(new mraa::Gpio(mraa_pin)),
+pl_gpio::pl_gpio(uint32_t pin_num_,double calibrate_offset, const vec3 & poffset, const quat & orient_):
+	pin(new edgpio(pin_num_)),
 	timer(new edtimer()),
 	pos(poffset),
 	orient(orient_),
     cal_offset(calibrate_offset),
 	meas_ready(false),
 	sum_dist(0.0),
-	mraa_pin_num(0),
 	meas_count(0)
 {}
 
-edpl_system::pl_gpio::~pl_gpio()
+pl_gpio::~pl_gpio()
 {
 	delete pin;
 	delete timer;
 }
 
-
-void edpl_system::pl_gpio::isr(void * pl)
+void pl_gpio::isr(void * pl)
 {
-	edpl_system::pl_gpio * pl_cast = static_cast<edpl_system::pl_gpio*>(pl);
-	if (pl_cast->pin->read() != 0)
+	pl_gpio * pl_cast = static_cast<pl_gpio*>(pl);
+	if (pl_cast->pin->read_pin() != 0)
 	{
 		pl_cast->timer->start();
 	}
@@ -222,8 +235,8 @@ void edpl_callback::exec()
 	pl_ceil->meas_count = 0;
 	pl_floor->sum_dist = 0;
 	pl_floor->meas_count = 0;
-	msg->mraa_pin1 = pl_ceil->mraa_pin_num;
-	msg->mraa_pin2 = pl_floor->mraa_pin_num;
+	msg->mraa_pin1 = pl_ceil->pin->pin_num();
+	msg->mraa_pin2 = pl_floor->pin->pin_num();
 	copy_buf((uint8_t*)pl_ceil->pos.data, (uint8_t*)msg->pos1, 4);
 	copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
 	copy_buf((uint8_t*)pl_ceil->orient.data, (uint8_t*)msg->orientation1, 4);

@@ -4,11 +4,11 @@
 #include <edrplidar_system.h>
 #include <edutility.h>
 #include <edmctrl.h>
-#include <mraa/uart.hpp>
+//#include <mraa/uart.hpp>
 #include <edtimer.h>
 #include <unistd.h>
 #include <termios.h>
-#include <mraa/mraa_internal_types.h>
+//#include <mraa/mraa_internal_types.h>
 
 edrplidar_system::edrplidar_system():
     m_uart(new eduart(eduart::Uart1)),
@@ -59,7 +59,7 @@ void edrplidar_system::init()
     m_uart->set_baud(eduart::b115200);
 
 	if (!m_uart->start())
-		std::cout << "Error starting uart" << std::endl;
+		cprint("Error starting uart");
 	
     m_wait_timer->set_callback(new wait_ready_callback());
     m_wait_timer->set_callback_mode(edtimer::single_shot);
@@ -81,7 +81,7 @@ void edrplidar_system::update()
 
     if (m_timeout_timer->running() && m_timeout_timer->elapsed() > 4000)
     {
-        std::cout << "Timeout for last request sending reset request" << std::endl;
+        cprint("Timeout for last request sending reset request");
         reset();
         return;
     }
@@ -134,7 +134,7 @@ bool edrplidar_system::startScan()
     if (m_current_type != None)
         return false;
 
-    std::cout << "Start scan command issued" << std::endl;	
+    cprint("Start scan command issued");
     // set descriptor to scan response
     m_current_type = Scan;
 
@@ -152,7 +152,7 @@ bool edrplidar_system::forceScan()
     if (m_current_type != None)
         return false;
 
-    std::cout << "Force scan command issued" << std::endl;
+    cprint("Force scan command issued");
     // set descriptor to scan response
     m_current_type = Scan;
 
@@ -167,7 +167,7 @@ bool edrplidar_system::forceScan()
 
 bool edrplidar_system::stopScan()
 {
-    std::cout << "Stop scan command issued" << std::endl;
+    cprint("Stop scan command issued");
     _reset_state();
     m_wait_timer->set_callback_delay(50.0);
     m_wait_timer->start();
@@ -178,7 +178,7 @@ bool edrplidar_system::stopScan()
 
 bool edrplidar_system::reset()
 {
-    std::cout << "Reset command issued" << std::endl;
+    cprint("Reset command issued");
     _reset_state();
     m_timeout_timer->stop();
     reset_request rr;
@@ -196,7 +196,7 @@ bool edrplidar_system::requestInfo()
     if (m_current_type != None)
         return true;
 
-    std::cout << "Request device information command issued" << std::endl;
+    cprint("Request device information command issued");
     // set descriptor to info response
     m_current_type = Info;
     m_wait_timer->set_callback_delay(1.0);
@@ -213,7 +213,7 @@ bool edrplidar_system::requestHealth()
     if (m_current_type != None)
         return true;
 
-    std::cout << "Request device health command issued" << std::endl;
+    cprint("Request device health command issued");
     // set descriptor to info response
     m_current_type = Health;
     m_wait_timer->set_callback_delay(1.0);

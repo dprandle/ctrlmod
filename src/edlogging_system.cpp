@@ -39,7 +39,7 @@ bool edlogging_system::process(edmessage * msg)
 	}
     else if ( (emsg = dynamic_cast<rplidar_error_message*>(msg)) )
 	{
-		std::cout << "Received error message!" << std::endl;
+		cprint("Received error message!");
 		return true;
 	}
     else if ( (hmsg = dynamic_cast<rplidar_health_message*>(msg)) )
@@ -59,13 +59,14 @@ bool edlogging_system::process(edmessage * msg)
 	}
 	else
 	{
-		std::cout << "ERROR!!!!!" << std::endl;
+		cprint("ERROR!!!!!");
 		return false;
 	}
 }
 
 void edlogging_system::update()
 {
+	cprint_flush();
 }
 
 void edlogging_system::log_device_info(info_data_packet * data)

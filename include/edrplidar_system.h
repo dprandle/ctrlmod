@@ -6,7 +6,7 @@
 #include <edutility.h>
 #include <edrplidar_packets.h>
 #include <edcallback.h>
-#include <mraa/uart.h>
+//#include <mraa/uart.h>
 #include <edmessage.h>
 
 #define XV_BAUD 115200

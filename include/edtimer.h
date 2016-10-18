@@ -1,10 +1,8 @@
 #ifndef EDTIMER_H
 #define EDTIMER_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/time.h>
-#include <chrono>
+#include <time.h>
+#include <inttypes.h>
 
 struct edtimer_callback;
 
@@ -40,8 +38,6 @@ class edtimer
 
 	double callback_delay();
 
-	void cont();
-
 	void stop();
 
 	void set_callback(edtimer_callback * cb);
@@ -56,21 +52,17 @@ class edtimer
 
 	double elapsed();
 
+	double elapsed_since_callback();
+
   private:
-	typedef std::chrono::high_resolution_clock HighResClock;
-
-	HighResClock m_clk;
 	bool m_running;
-	
-	HighResClock::time_point m_start_time;
-	HighResClock::time_point m_previous_frame_time;
-	HighResClock::time_point m_last_cbexec_time;
 
-	double m_elapsed_ms;
-	double m_dt_ms;
-	double m_cumilitive_time_ms;
-	double m_cbdelay_ms;
+	timespec m_start;
+	timespec m_prev;
+	timespec m_cur;
+	timespec m_last_cb;
 
+	double m_cb_delay;
 	edtimer_callback * m_cb;
 	cb_mode m_cmode;
 };

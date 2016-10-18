@@ -5,5 +5,6 @@
 #include <stdint.h>
 
 #define CONSOLE_OUT
+#define CONSOLE_OUT_LOG "console"
 
 #endif

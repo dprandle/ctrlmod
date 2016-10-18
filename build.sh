@@ -1,8 +1,6 @@
 #! /bin/bash 
-
 CONFIG=debug
 CONFIG_CMAKE=Debug
-PLATFORM=x86
 BUILD_ALL=NO
 
 cd ~/Documents/code/ctrlmod
@@ -10,12 +8,12 @@ cd ~/Documents/code/ctrlmod
 
 build()
 {
-    mkdir -p build/$PLATFORM/$CONFIG
-    cd build/$PLATFORM/$CONFIG
-    cmake -DCMAKE_BUILD_TYPE=$CONFIG_CMAKE -DPLATFORM=$PLATFORM -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../../..
+    mkdir -p build/$CONFIG
+    cd build/$CONFIG
+    cmake -DCMAKE_BUILD_TYPE=$CONFIG_CMAKE -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../..
     make -j8
-    mv compile_commands.json ../../
-    cd ../..
+    mv compile_commands.json ../
+    cd ..
     rc -J
     cd ..
 }
@@ -28,12 +26,8 @@ do
     elif [ "$var" = "-r" ]; then
 	CONFIG=release
 	CONFIG_CMAKE=Release
-    elif [ "$var" = "-x32" ]; then
-	PLATFORM=x86
-    elif [ "$var" = "-x64" ]; then
-	PLATFORM=x64
     elif [ "$var" = "-c" ]; then
-	rm -r build/$PLATFORM/$CONFIG
+	rm -r build/$CONFIG
     elif [ "$var" = "-call" ]; then
 	rm -r build
     elif [ "$var" = "-all" ]; then
@@ -46,13 +40,8 @@ if [ "$BUILD_ALL" = NO ]; then
 else
     CONFIG=debug
     CONFIG_CMAKE=Debug
-    PLATFORM=x86
-    build
-    PLATFORM=x64
     build
     CONFIG=release
     CONFIG_CMAKE=Release
-    build
-    PLATFORM=x86
     build
 fi

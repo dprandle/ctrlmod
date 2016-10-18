@@ -12,57 +12,46 @@
 #ifndef EDPLSYSTEM_H
 #define EDPLSYSTEM_H
 
-#define GPIO_14 36
-#define GPIO_15 48
-#define GPIO_48 33
-#define GPIO_49 47
-
 #include <edglobal.h>
 #include <edsystem.h>
-#include <mraa/gpio.hpp>
 #include <edcallback.h>
 #include <nsmath.h>
 #include <map>
 
-/*
-  Assign mraa pin num
-  Set up callback timer
-  Update callback timer
- */
+class edgpio;
+
+struct pl_gpio
+{
+pl_gpio(uint32_t pin_num_,double calibrate_offset=0.0, const vec3 & poffset=vec3(), const quat & orient_=quat());
+~pl_gpio();
+		
+edgpio * pin;
+edtimer * timer;
+vec3 pos;
+quat orient;
+double cal_offset;
+bool meas_ready;
+double sum_dist;
+uint32_t meas_count;
+static void isr(void *);
+};
 
 class edpl_system : public edsystem
 {
   public:
 	
-	struct pl_gpio
-	{
-		pl_gpio(uint32_t mraa_pin,double calibrate_offset=0.0, const vec3 & poffset=vec3(), const quat & orient_=quat());
-		~pl_gpio();
-		
-		mraa::Gpio * pin;
-		edtimer * timer;
-		vec3 pos;
-		quat orient;
-		double cal_offset;
-		bool meas_ready;
-		double sum_dist;
-		uint32_t mraa_pin_num;
-		uint32_t meas_count;
-		static void isr(void *);
-	};
-
 	typedef std::map<uint32_t, pl_gpio*> plmap;
 	
     edpl_system();
     virtual ~edpl_system();
 
-	pl_gpio * add_pl(uint32_t mraa_pin,double c_offset=0.0, const vec3 & pos_offset=vec3(), const quat & orient_offset=quat());
-	pl_gpio * get_pl(uint32_t mraa_pin);
-	void rm_pl(uint32_t mraa_pin);
-	bool pl_pin_taken(uint32_t mraa_pin);
-	void pl_set_pos(uint32_t mraa_pin, const vec3 & pos_);
-	void pl_set_orientation(uint32_t mraa_pin, const quat & orient_);
-	void pl_set_cal_offset(uint32_t mraa_pin, double offset);
+	pl_gpio * add_pl(uint32_t pin_num_,double c_offset=0.0, const vec3 & pos_offset=vec3(), const quat & orient_offset=quat());
+	pl_gpio * get_pl(uint32_t pin_num_);
+	void rm_pl(uint32_t pin_num_);
+	bool pl_pin_taken(uint32_t pin_num_);
+	void pl_set_pos(uint32_t pin_num_, const vec3 & pos_);
+	void pl_set_orientation(uint32_t pin_num_, const quat & orient_);
+	void pl_set_cal_offset(uint32_t pin_num_, double offset);
 	
     virtual void init();
 	virtual void release();
@@ -80,14 +69,14 @@ class edpl_system : public edsystem
 
 struct edpl_callback : public edtimer_callback
 {
-	edpl_callback(edpl_system::pl_gpio * ceil, edpl_system::pl_gpio * floor):
+	edpl_callback(pl_gpio * ceil, pl_gpio * floor):
 		pl_ceil(ceil),
 		pl_floor(floor)
 	{}
 	
 	void exec();
-	edpl_system::pl_gpio * pl_ceil;
-	edpl_system::pl_gpio * pl_floor;
+	pl_gpio * pl_ceil;
+	pl_gpio * pl_floor;
 };
 
 #endif

@@ -10,11 +10,10 @@
 #include <edglobal.h>
 #include <edtimer.h>
 
-// Allow timestamp to be mutlithreaded
-static pthread_mutex_t timestamp_lock = PTHREAD_MUTEX_INITIALIZER;
-
 // Allow safe multithreaded use of cout
-static pthread_mutex_t cout_lock = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t ss_lock = PTHREAD_MUTEX_INITIALIZER;
+
+static std::string locked_str;
 
 void delay(double ms)
 {
@@ -26,9 +25,26 @@ void delay(double ms)
 
 void cprint(const std::string & str)
 {
-    pthread_mutex_lock(&cout_lock);
-	std::cout << str << std::endl;
-    pthread_mutex_unlock(&cout_lock);
+    pthread_mutex_lock(&ss_lock);
+	locked_str += str + "\n";
+    pthread_mutex_unlock(&ss_lock);
+}
+
+void cprint_flush()
+{
+	std::string local_str;
+    pthread_mutex_lock(&ss_lock);
+	local_str = locked_str;
+	locked_str.clear();
+    pthread_mutex_unlock(&ss_lock);
+
+	if (!local_str.empty())
+	{
+#ifdef CONSOLE_OUT
+		std::cout << local_str << std::endl;
+#endif
+		log_message_no_console(local_str, CONSOLE_OUT_LOG, false);
+	}
 }
 
 uint32_t hash_id(const std::string & strng)
@@ -42,6 +58,20 @@ uint32_t hash_id(const std::string & strng)
 	return hash;
 }
 
+bool log_message_no_console(const std::string & msg, const std::string & fname, bool tmstmp)
+{
+    std::ofstream fout(fname.c_str(), std::ios_base::app);
+    if (!fout.is_open())
+		return false;
+	
+	if (tmstmp)
+		fout << timestamp();
+
+    fout << msg << "\n";
+    fout.close();
+	return true;
+}
+
 bool log_message(const std::string & msg, const std::string & fname, bool tmstmp)
 {
     std::ofstream fout(fname.c_str(), std::ios_base::app);
@@ -51,20 +81,16 @@ bool log_message(const std::string & msg, const std::string & fname, bool tmstmp
 	if (tmstmp)
 		fout << timestamp();
 
-    fout << msg << "\n\n";
-#ifdef CONSOLE_OUT
-	cprint(msg);
-#endif
+    fout << msg << "\n";
     fout.close();
+	cprint(msg);
 	return true;
 }
 
 std::string timestamp()
 {
-    pthread_mutex_lock(&timestamp_lock);
     time_t ltime = std::time(NULL); /* calendar time */
     std::string ret(std::asctime(std::localtime(&ltime)));
-    pthread_mutex_unlock(&timestamp_lock);
     return ret;
 }
 

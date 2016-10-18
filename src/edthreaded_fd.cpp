@@ -17,10 +17,10 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_current_wait_for_byte_count(0),
 	m_wait_timer(new edtimer())
 {
-	pthread_mutex_init(&m_send_lock, NULL);
-	pthread_mutex_init(&m_recv_lock, NULL);
-	pthread_mutex_init(&m_error_lock, NULL);
-	pthread_mutex_init(&m_running_lock, NULL);
+	pthread_mutex_init(&m_send_lock, nullptr);
+	pthread_mutex_init(&m_recv_lock, nullptr);
+	pthread_mutex_init(&m_error_lock, nullptr);
+	pthread_mutex_init(&m_running_lock, nullptr);
 	m_read_buffer.resize(readbuf_, 0);
 	m_write_buffer.resize(writebuf_);
 	
@@ -33,7 +33,7 @@ edthreaded_fd::~edthreaded_fd()
 {
 	if (running())
 		stop();
-	pthread_join(m_thread, NULL);
+	pthread_join(m_thread, nullptr);
 	pthread_mutex_destroy(&m_send_lock);
 	pthread_mutex_destroy(&m_recv_lock);
 	pthread_mutex_destroy(&m_error_lock);
@@ -125,7 +125,7 @@ bool edthreaded_fd::start()
 
 	// Thread not running - no need for mutex anymore
 	m_running = true;
-	if (pthread_create(&m_thread, NULL, edthreaded_fd::thread_exec, (void*)this) != 0)
+	if (pthread_create(&m_thread, nullptr, edthreaded_fd::thread_exec, (void*)this) != 0)
 	{
 		_setError(ThreadCreation, errno);
 		m_running = false;
@@ -258,12 +258,12 @@ void edthreaded_fd::_exec()
 		running = m_running;
 		pthread_mutex_unlock(&m_running_lock);
     }
-    pthread_exit(NULL);
+    pthread_exit(nullptr);
 }
 
 void * edthreaded_fd::thread_exec(void * _this)
 {
 	static_cast<edthreaded_fd*>(_this)->_exec();
-	return NULL;
+	return nullptr;
 }
 
