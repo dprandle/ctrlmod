@@ -59,7 +59,7 @@ bool edi2c::start()
 {
 	if (m_fd != -1)
 	{
-		_setError(FDAlreadyOpen, 0);
+        _setError(OpenFileDescriptor, 0);
 		return false;
 	}
 	
@@ -79,7 +79,7 @@ bool edi2c::start()
 
 uint8_t edi2c::read_byte()
 {
-	uint8_t ret;
+    uint8_t ret = 0;
 	uint32_t cnt = 0;
 	while (cnt != 1)
 	{
@@ -87,7 +87,7 @@ uint8_t edi2c::read_byte()
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-			log_message("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
+            cprint("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}
@@ -96,7 +96,7 @@ uint8_t edi2c::read_byte()
 
 uint16_t edi2c::read_word()
 {
-	uint16_t ret;
+    uint16_t ret = 0;
 	uint32_t cnt = 0;
 	while (cnt != 2)
 	{
@@ -104,7 +104,7 @@ uint16_t edi2c::read_word()
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-			log_message("edi2c::readWord error with retrieving byte: Error num " + std::to_string(err.err_val));
+            cprint("edi2c::readWord error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}
@@ -122,7 +122,7 @@ void edi2c::read_reg_bytes(uint8_t reg, uint8_t * buffer, uint32_t size)
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-			log_message("edi2c::readRegByte error with retrieving byte: Error num " + std::to_string(err.err_val));
+            cprint("edi2c::readRegByte error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}

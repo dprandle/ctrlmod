@@ -33,7 +33,7 @@ double cal_offset;
 bool meas_ready;
 double sum_dist;
 uint32_t meas_count;
-static void isr(void *);
+static void isr(void *, int);
 };
 
 class edpl_system : public edsystem

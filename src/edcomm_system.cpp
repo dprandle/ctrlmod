@@ -40,17 +40,25 @@ void edcomm_system::init()
 
     m_server_fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);//
 	if (m_server_fd < 0)
-        cprint("Could not create server");
+    {
+        cprint("edcomm_system::init Could not create server");
+        int err = errno;
+        cprint("Error: " + std::string(strerror(err)));
+    }
 
     server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_family = AF_INET;
     server.sin_port = htons(m_port);
 
-	if (bind(m_server_fd, (struct sockaddr *) &server, sizeof(server)) < 0) 
-        cprint("Could not bind server");
+    if (bind(m_server_fd, (struct sockaddr *) &server, sizeof(server)) < 0)
+    {
+        cprint("edcomm_system::init Could not bind server");
+        int err = errno;
+        cprint("Error: " + std::string(strerror(err)));
+    }
 
 	listen(m_server_fd, 5);
-    cprint("Listening on port " + std::to_string(m_port));
+    cprint("edcomm_system::init Listening on port " + std::to_string(m_port));
 }
 
 uint16_t edcomm_system::port()
@@ -118,8 +126,6 @@ bool edcomm_system::process(edmessage * msg)
 		hashid = hash_id(pulsed_light_message::Type());
 		sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
 		sendToClients(plmsg->data, plmsg->size());
-        //cprint("Pulsed light pin " + std::to_string(plmsg->mraa_pin1) + ": " + std::to_string(plmsg->distance1 * 0.0328084));
-        //cprint("Pulsed light pin " + std::to_string(plmsg->mraa_pin2) + ": " + std::to_string(plmsg->distance2 * 0.0328084));
         return true;
     }
     else if ( (navmsg = dynamic_cast<nav_message*>(msg)))
@@ -159,14 +165,17 @@ void edcomm_system::update()
     if (sockfd != -1)
     {
         edsocket * new_client = new edsocket(sockfd);
-        new_client->start();
+        if (!new_client->start())
+        {
+            cprint("edcomm_system::update Received connection but could not start socket - should see deletion next");
+        }
         m_clients.push_back(new_client);
-        cprint("Recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)) + ":" + std::to_string(ntohs(client_addr.sin_port)));
+        cprint("edcomm_system::update Server recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)) + ":" + std::to_string(ntohs(client_addr.sin_port)));
+
     }
 
     // Check for closed connections and remove them if there are any
     _clean_closed_connections();
-
 
     static uint8_t buf[256];
     int32_t cnt = recvFromClients(buf, 256);

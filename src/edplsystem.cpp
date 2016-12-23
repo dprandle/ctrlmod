@@ -34,7 +34,7 @@ edpl_system::~edpl_system()
 void edpl_system::init()
 {
 	std::vector<uint32_t> gpio_pins;
-	gpio_pins.push_back(GPIO_14);
+    gpio_pins.push_back(GPIO_14);
 	gpio_pins.push_back(GPIO_15);
 
 	for (uint32_t i = 0; i < gpio_pins.size(); ++i)
@@ -48,7 +48,7 @@ void edpl_system::init()
         }
     }
 	msgTimer->set_callback(new edpl_callback(get_pl(GPIO_14), get_pl(GPIO_15)));
-    msgTimer->set_callback_delay(100);
+    msgTimer->set_callback_delay(0.2);
 	msgTimer->set_callback_mode(edtimer::continous_shot);
 	msgTimer->start();
 }
@@ -84,7 +84,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 		return nullptr;
 	}
 
-	res = pl->pin->set_isr(gpio_edge_both, pl_gpio::isr, pl);
+    res = pl->pin->set_isr(gpio_edge_both, pl_gpio::isr, pl);
 	if (res == -1)
 	{
 		std::ostringstream ss;
@@ -166,22 +166,12 @@ bool edpl_system::process(edmessage * msg)
 void edpl_system::update()
 {
 	msgTimer->update();
-	plmap::iterator iter = m_pl_sensors.begin();
-	while (iter != m_pl_sensors.end())
-	{
-		iter->second->pin->update();
-		if (iter->second->meas_ready)
-		{
-			double meas = iter->second->timer->elapsed() / 0.010 + iter->second->cal_offset;
-            if (meas > 0 && meas < 5000)
-			{
-				iter->second->sum_dist += meas;
-				++iter->second->meas_count;
-			}
-			iter->second->meas_ready = false;
-		}
-		++iter;
-	}
+    plmap::iterator iter = m_pl_sensors.begin();
+    while (iter != m_pl_sensors.end())
+    {
+        iter->second->pin->update();
+        ++iter;
+    }
 }
 
 std::string edpl_system::typestr()
@@ -207,21 +197,23 @@ pl_gpio::~pl_gpio()
 	delete timer;
 }
 
-void pl_gpio::isr(void * pl)
+void pl_gpio::isr(void * pl, int pin_edge)
 {
-	pl_gpio * pl_cast = static_cast<pl_gpio*>(pl);
-	if (pl_cast->pin->read_pin() != 0)
-	{
-		pl_cast->timer->start();
-	}
-	else
-	{
-		if (pl_cast->timer->running())
-		{
-			pl_cast->timer->stop();
-			pl_cast->meas_ready = true;
-		}
-	}
+    pl_gpio * pl_cast = static_cast<pl_gpio*>(pl);
+    if (pin_edge)
+    {
+        pl_cast->timer->start();
+    }
+    else
+    {
+        pl_cast->timer->stop();
+        double meas = pl_cast->timer->elapsed() * 100000.0 + pl_cast->cal_offset;
+        if (meas > 0 && meas < 5000)
+        {
+            pl_cast->sum_dist += meas;
+            ++pl_cast->meas_count;
+        }
+    }
 }
 
 void edpl_callback::exec()
@@ -241,4 +233,7 @@ void edpl_callback::exec()
 	copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
 	copy_buf((uint8_t*)pl_ceil->orient.data, (uint8_t*)msg->orientation1, 4);
 	copy_buf((uint8_t*)pl_floor->orient.data, (uint8_t*)msg->orientation2, 4);
+    cprint("Sending distance measurement...");
+    cprint("Distance 1: " + std::to_string(msg->distance1*0.0328084) + " ft");
+    cprint("Distance 2: " + std::to_string(msg->distance2*0.0328084) + " ft");
 }

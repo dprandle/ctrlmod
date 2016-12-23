@@ -7,7 +7,7 @@ class edsocket : public edthreaded_fd
 {
   public:
 
-	edsocket(uint32_t socket_fd);
+    edsocket(int32_t socket_fd);
 	
 	~edsocket();
 

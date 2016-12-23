@@ -23,7 +23,7 @@ void edimu_system::init()
 
 	if (!m_i2c->start())
 	{
-		log_message("edimu_system::init Error initializing i2c");
+        cprint("edimu_system::init Error initializing i2c");
 		return;
 	}
 
@@ -34,22 +34,22 @@ void edimu_system::init()
 	uint8_t xmTest = m_i2c->read_reg_byte(WHO_AM_I_XM);
 	
 	if (!_init_gyro())
-		log_message("edimu_system::init Coult not initialize gyroscope");
+        cprint("edimu_system::init Coult not initialize gyroscope");
 	set_gyro_datarate(m_gyro_odr);
 	set_gyro_scale(m_gyro_scale);
 	
 	if (!_init_accel())
-		log_message("edimu_system::init Coult not initialize accelerometer");
+        cprint("edimu_system::init Coult not initialize accelerometer");
 	set_accel_datarate(m_accel_odr);
 	set_accel_scale(m_accel_scale);
 	
 	if (!_init_mag())
-		log_message("edimu_system::init Coult not initialize magnometer");
+        cprint("edimu_system::init Coult not initialize magnometer");
 	set_mag_datarate(m_mag_odr);
 	set_mag_scale(m_mag_scale);
 	
 	if((xmTest != WHO_AM_I_XM) || (gTest != WHO_AM_I_G))
-		log_message("edimu_system::init IMU did not return correct who am i bytes");
+        cprint("edimu_system::init IMU did not return correct who am i bytes");
 }
 
 void edimu_system::release()
@@ -76,7 +76,7 @@ void edimu_system::calibrate()
 {
 	if (!m_i2c->running())
 	{
-		log_message("edimu_system::calibrate Can not run calibration because i2c thread not active");
+        cprint("edimu_system::calibrate Can not run calibration because i2c thread not active");
 		return;
 	}
 	
@@ -370,7 +370,7 @@ bool edimu_system::_init_gyro()
 
 void edimu_system::_createMessage()
 {
-	log_message("Received gyro reading: " + _calc_gyro().toString());
+    cprint("Received gyro reading: " + _calc_gyro().toString());
 }
 
 

@@ -65,7 +65,7 @@ void edrplidar_system::init()
     m_wait_timer->set_callback_mode(edtimer::single_shot);
     m_error_timer->set_callback(new wait_ready_callback());
     m_error_timer->set_callback_mode(edtimer::single_shot);
-    m_error_timer->set_callback_delay(5000);
+    m_error_timer->set_callback_delay(5);
 }
 
 void edrplidar_system::release()
@@ -79,7 +79,7 @@ void edrplidar_system::update()
     m_wait_timer->update();
     m_error_timer->update();
 
-    if (m_timeout_timer->running() && m_timeout_timer->elapsed() > 4000)
+    if (m_timeout_timer->running() && m_timeout_timer->elapsed() > 10)
     {
         cprint("Timeout for last request sending reset request");
         reset();
@@ -88,7 +88,7 @@ void edrplidar_system::update()
 
     if (m_current_type == Reset && !m_error_timer->running())
     {
-        log_message("Could not detect firmware packet.. resetting state");
+        cprint("Could not detect firmware packet.. resetting state");
         _reset_state();
     }
 
@@ -248,7 +248,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
 
         if (m_rec_index == m_desc_packets[m_current_type]->size())
         {
-            log_message("Descriptor packet received for " + m_desc_packets[m_current_type]->type());
+            cprint("Descriptor packet received for " + m_desc_packets[m_current_type]->type());
             m_rec_index = 0;
             m_rec_descript = true;
             m_rec_start_scan = false;
@@ -357,7 +357,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
             }
             case (None):
             {
-                log_message("Shouldnt be here AGRAG!");
+                cprint("Shouldnt be here AGRAG!");
                 return;
             }
             }

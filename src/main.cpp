@@ -44,6 +44,9 @@ int32_t main(int32_t argc, char * argv[])
 	edm.start();
     edm.init();
 
+    rplidar_request * req = edm.message_dispatch()->push<rplidar_request>();
+    req->r_type = rplidar_request::Reset;
+
     while (edm.running())
 		edm.update();
 	

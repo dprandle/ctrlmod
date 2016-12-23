@@ -13,6 +13,7 @@
 #include <edmessage.h>
 #include <edtimer.h>
 #include <edi2c.h>
+#include <string.h>
 
 ednav_system::ednav_system():
 	m_nav_timer(new edtimer()),
@@ -38,9 +39,16 @@ void ednav_system::init()
 	m_i2c = new edi2c();
 	m_i2c->set_target_address(ARDUINO_ADDRESS);
 	if (!m_i2c->start())
-	 	log_message("ednav_system::init - Could not start i2c");
+    {
+        cprint("ednav_system::init - Could not start i2c");
+        edthreaded_fd::Error err = m_i2c->error();
+        cprint("Error from errno: " + std::string(strerror(err._errno)));
+        cprint("Error code: " + std::to_string(err.err_val));
+    }
 	else
-		log_message("ednav_system::init - Successfully initialized i2c");
+    {
+        cprint("ednav_system::init - Successfully initialized i2c");
+    }
 
 	
 	m_nav_pid.set_gain(vec3(1.0,0.0,0.0));	

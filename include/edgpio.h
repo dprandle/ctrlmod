@@ -17,6 +17,8 @@
 #include <atomic>
 #include <string>
 
+#define FILE_BUF_SZ 40
+
 enum gpio_dir {
 	gpio_dir_out,
 	gpio_dir_in,
@@ -73,7 +75,7 @@ class edgpio
 	int set_direction(gpio_dir dir);
 	int direction();
 
-	int set_isr(gpio_isr_edge edge, void (*func)(void *), void * param);
+    int set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param);
 
 	int read_pin();
 
@@ -92,12 +94,13 @@ class edgpio
 	static void * _thread_exec(void * param);
 	void _exec();
 	
-	void (*m_fnc)(void *);
+    void (*m_fnc)(void *, int);
 	void * m_fnc_param;
-	int m_pin;
+    std::atomic_int m_pin;
 	gpio_error_state m_err;
 	std::atomic_flag m_run_isr;
 	std::atomic_flag m_thread_running;
+    std::atomic_flag m_isr_edge;
 	pthread_t m_isr_thread;
 	
 };

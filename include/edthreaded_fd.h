@@ -5,6 +5,8 @@
 #include <pthread.h>
 #include <vector>
 #include <edcallback.h>
+#include <string>
+#include <atomic>
 
 #define DEFAULT_FD_WRITE_BUFFER_SIZE 5120
 #define DEFAULT_FD_READ_BUFFER_SIZE 5120
@@ -28,7 +30,6 @@ class edthreaded_fd
 		OpenFileDescriptor,
 		Configuration,
 		AlreadyRunning,
-		FDAlreadyOpen,
 		CommandNoResponse
 	};
 
@@ -50,7 +51,7 @@ class edthreaded_fd
 			response_size(response_size_)
 		{}
 		uint8_t byte;
-		uint32_t response_size;
+        int32_t response_size;
 	};
 	
 	edthreaded_fd(
@@ -74,6 +75,8 @@ class edthreaded_fd
 	bool set_fd(int32_t fd_);
 	
 	virtual void stop();
+
+    static std::string error_string(const Error & err);
 	
   protected:
 
@@ -90,7 +93,7 @@ class edthreaded_fd
 
 	static void * thread_exec(void *);
 	
-	int32_t m_fd;
+    std::atomic_int_fast32_t m_fd;
 	uint32_t m_read_rawindex;
 	uint32_t m_read_curindex;
 	uint32_t m_write_rawindex;
@@ -100,7 +103,6 @@ class edthreaded_fd
 	std::vector<uint8_t> m_read_buffer;
 
 	Error m_err;
-	bool m_running;
 
 	uint32_t m_current_wait_for_byte_count;
 	edtimer * m_wait_timer;
@@ -108,7 +110,8 @@ class edthreaded_fd
 	pthread_mutex_t m_send_lock;
 	pthread_mutex_t m_recv_lock;
 	pthread_mutex_t m_error_lock;
-	pthread_mutex_t m_running_lock;
+
+    std::atomic_flag m_thread_running;
 	
 	pthread_t m_thread;
 };

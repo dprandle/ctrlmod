@@ -71,28 +71,28 @@ void edlogging_system::update()
 
 void edlogging_system::log_device_info(info_data_packet * data)
 {
-    log_message("\n" + data->toString());
+    cprint("\n" + data->toString());
 }
 
 void edlogging_system::log_device_health(health_data_packet * data)
 {
-    log_message("\n" + data->toString());
+    cprint("\n" + data->toString());
 }
 
 void edlogging_system::log_device_firware(firmware_data_packet * data)
 {
-    log_message("\n" + data->toString());
+    cprint("\n" + data->toString());
 }
 
 void edlogging_system::log_scan(complete_scan_data_packet * data)
 {
-	//log_message(data->toString());
+    //cprint(data->toString());
 }
 
 void edlogging_system::log_nav_message(nav_message * nmsg)
 {
-	// log_message("\nPitch: " + std::to_string(nmsg->pitch));
-	// log_message("\nRoll: " + std::to_string(nmsg->roll));
-	// log_message("\nYaw: " + std::to_string(nmsg->yaw));
-	// log_message("\nThrottle: " + std::to_string(nmsg->throttle));
+    // cprint("\nPitch: " + std::to_string(nmsg->pitch));
+    // cprint("\nRoll: " + std::to_string(nmsg->roll));
+    // cprint("\nYaw: " + std::to_string(nmsg->yaw));
+    // cprint("\nThrottle: " + std::to_string(nmsg->throttle));
 }

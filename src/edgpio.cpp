@@ -18,8 +18,9 @@ edgpio::edgpio(int pin):
 	m_thread_running(),
 	m_isr_thread()
 {
-  char buffer[20];
-  int n = sprintf (buffer, "%d", m_pin);
+  char buffer[8];
+  int pind = m_pin;
+  int n = sprintf (buffer, "%d", pind);
   int fd = open("/sys/class/gpio/export", O_WRONLY);	  
   if (fd == -1)
   {
@@ -37,8 +38,9 @@ edgpio::edgpio(int pin):
 
 edgpio::~edgpio()
 {
-  char buffer[20];
-  int n = sprintf (buffer, "%d", m_pin);
+  char buffer[8];
+  int pin = m_pin;
+  int n = sprintf (buffer, "%d", pin);
   int fd = open("/sys/class/gpio/unexport", O_WRONLY);
   if (fd == -1)
   {
@@ -75,9 +77,9 @@ gpio_error_state edgpio::get_and_clear_error()
 	
 int edgpio::set_direction(gpio_dir dir)
 {
-	char buf[20];
-	char wr_buf[5];
-	sprintf(buf, "/sys/class/gpio/gpio%d/direction", m_pin);
+    char buf[FILE_BUF_SZ];
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/direction", pin);
 	int fd = open(buf, O_WRONLY);
 	if (fd == -1)
 	{
@@ -116,9 +118,10 @@ int edgpio::set_direction(gpio_dir dir)
 
 int edgpio::direction()
 {
-	char buf[20];
+    char buf[FILE_BUF_SZ];
 	char r_buf[5];
-	sprintf(buf, "/sys/class/gpio/gpio%d/direction", m_pin);
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/direction", pin);
 	int fd = open(buf, O_RDONLY);
 	if (fd == -1)
 	{
@@ -142,7 +145,7 @@ int edgpio::direction()
 	return -1;
 }
 
-int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *), void * param)
+int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param)
 {
 	// Close the isr thread if needed - no matter what after this the thread should be dead
 	if (m_thread_running.test_and_set())
@@ -168,9 +171,9 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *), void * param)
 	if (func == nullptr) // no isr if func is null
 		edge = gpio_edge_none;
 	
-	char buf[20];
-	char wr_buf[5];
-	sprintf(buf, "/sys/class/gpio/gpio%d/edge", m_pin);
+    char buf[FILE_BUF_SZ];
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/edge", pin);
 	int fd = open(buf, O_WRONLY);
 	if (fd == -1)
 	{
@@ -181,6 +184,8 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *), void * param)
 	else
 	{
 		int tmp = 0;
+        m_fnc = func;
+        m_fnc_param = param;
 		switch (edge)
 		{
 		  case(gpio_edge_none): // basically disable isr and don't start the thread!
@@ -192,8 +197,6 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *), void * param)
 				  close(fd);
 				  return -1;
 			  }
-			  m_fnc = func;
-			  m_fnc_param = param;
 			  close(fd);
 			  return 0;
 		  case (gpio_edge_both):
@@ -225,9 +228,8 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *), void * param)
 			m_err.gp_code |= gpio_thread_start_error;
 			return -1;
 		}
+        m_thread_running.test_and_set();
 	}
-	m_fnc = func;
-	m_fnc_param = param;
 	return 0;
 }
 
@@ -235,7 +237,13 @@ void edgpio::update()
 {
 	bool cur_val = m_run_isr.test_and_set();
 	if (cur_val)
-		m_fnc(m_fnc_param);
+    {
+        bool edge_val = m_isr_edge.test_and_set();
+        if (!edge_val)
+            m_isr_edge.clear();
+        int edge = int(edge_val);
+        m_fnc(m_fnc_param, edge);
+    }
 	m_run_isr.clear();
 }
 
@@ -247,16 +255,18 @@ int edgpio::pin_num()
 void * edgpio::_thread_exec(void * param)
 {
 	edgpio * _this = static_cast<edgpio*>(param);
-	_this->m_thread_running.test_and_set();
+    int pin = _this->m_pin;
+    cprint("edgpio::_thread_exec Starting gpio thread on pin " + std::to_string(pin));
 	_this->_exec();
 	return nullptr;
 }
 
 int edgpio::read_pin()
 {
-	char buf[20];
+    char buf[FILE_BUF_SZ];
 	char r_val;
-	sprintf(buf, "/sys/class/gpio/gpio%d/value", m_pin);
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/value", pin);
 	int fd = open(buf, O_RDONLY);
 	if (fd == -1)
 	{
@@ -283,9 +293,10 @@ int edgpio::write_pin(int val)
 	if (direction() == gpio_dir_in)
 		return 0;
 	
-	char buf[20];
+    char buf[FILE_BUF_SZ];
 	char w_val = char('0' + val);
-	sprintf(buf, "/sys/class/gpio/gpio%d/value", m_pin);
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/value", pin);
 	int fd = open(buf, O_WRONLY);
 	if (fd == -1)
 	{
@@ -310,48 +321,46 @@ int edgpio::write_pin(int val)
 
 void edgpio::_exec()
 {
-	char buf[20];
-	char buf2[64];
-	char r_val;
-	sprintf(buf, "/sys/class/gpio/gpio%d/value", m_pin);
-	pollfd polldes;
-	polldes.fd = open(buf, O_RDONLY);
+    char buf[FILE_BUF_SZ];
+    char r_val;
+    int pin = m_pin;
+    sprintf(buf, "/sys/class/gpio/gpio%d/value", pin);
+    pollfd polldes;
+    polldes.fd = open(buf, O_RDONLY);
     polldes.events = POLLPRI | POLLERR;
-	edtimer tm;
-	edtimer tm2;
 
-	if (polldes.fd == -1)
+    if (polldes.fd == -1)
     {
-		m_thread_running.clear();
+        int err = errno;
+        cprint("Error: " + std::to_string(err));
         cprint("edgpio::_exec Error starting thread as fd is invalid");
+        m_thread_running.clear();
     }
-	
-	tm.start();
-	tm2.start();
-	while (m_thread_running.test_and_set())
-	{
-		int ret = poll(&polldes, 1, -1);
-		if (ret == 1 && (polldes.revents & POLLPRI))
-		{
-			m_run_isr.test_and_set();
-			int n = read(polldes.fd, &r_val, 1);
-			if (n == 1 && r_val - '0' == 0)
-			{
-				cprint("High pulse elapsed time : " + std::to_string(tm.elapsed() * 1000) + " ms");
-				cprint("Distance: " + std::to_string(tm.elapsed() * 1000 * 3.28084) + " feet");
-				tm.start();
-			}
-			lseek(polldes.fd, 0, SEEK_SET);
-			tm.start();
-		}
-		if (ret == -1)
-		{
-			cprint("edgpio::_exec - Error in reading pin fd");
-		}
-		cprint("Total elapsed time: " + std::to_string(tm2.elapsed()));
-		tm.update();
-		tm2.update();
-	}
+
+    edtimer tm;
+    tm.start();
+    while (m_thread_running.test_and_set())
+    {
+        if (poll(&polldes, 1, -1) == 1 && polldes.revents & POLLPRI)
+        {
+            tm.update();
+            lseek(polldes.fd, 0, SEEK_SET);
+            read(polldes.fd, &r_val, 1);
+            lseek(polldes.fd, 0, SEEK_SET);
+            int edge = r_val - '0';
+
+            if (edge)
+                m_isr_edge.test_and_set();
+            else
+                m_isr_edge.clear();
+
+            m_run_isr.test_and_set();
+            tm.start();
+        }
+    }
+    close(polldes.fd);
+    cprint("edgpio::_exec Ending gpio thread on pin " + std::to_string(pin));
+    pthread_exit(nullptr);
 }
 
 std::string edgpio::error_string(int gp_err)

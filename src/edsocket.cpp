@@ -3,7 +3,7 @@
 #include <sys/socket.h>
 #include <errno.h>
 
-edsocket::edsocket(uint32_t socket_fd):
+edsocket::edsocket(int32_t socket_fd):
 	edthreaded_fd()
 {
 	set_fd(socket_fd);

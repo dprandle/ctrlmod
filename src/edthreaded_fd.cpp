@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <edtimer.h>
 #include <edcallback.h>
+#include <string.h>
 
 edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_fd(-1),
@@ -13,14 +14,13 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_read_curindex(0),
 	m_write_rawindex(0),
 	m_write_curindex(0),
-	m_running(false),
 	m_current_wait_for_byte_count(0),
 	m_wait_timer(new edtimer())
 {
+    m_thread_running.clear();
 	pthread_mutex_init(&m_send_lock, nullptr);
 	pthread_mutex_init(&m_recv_lock, nullptr);
 	pthread_mutex_init(&m_error_lock, nullptr);
-	pthread_mutex_init(&m_running_lock, nullptr);
 	m_read_buffer.resize(readbuf_, 0);
 	m_write_buffer.resize(writebuf_);
 	
@@ -32,12 +32,13 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 edthreaded_fd::~edthreaded_fd()
 {
 	if (running())
+    {
 		stop();
-	pthread_join(m_thread, nullptr);
+        pthread_join(m_thread, nullptr);
+    }
 	pthread_mutex_destroy(&m_send_lock);
 	pthread_mutex_destroy(&m_recv_lock);
 	pthread_mutex_destroy(&m_error_lock);
-	pthread_mutex_destroy(&m_running_lock);
 	delete m_wait_timer;
 	close(m_fd);
 }
@@ -83,10 +84,10 @@ uint32_t edthreaded_fd::write(uint8_t * buffer, uint32_t size, int32_t response_
 
 bool edthreaded_fd::running()
 {
-	pthread_mutex_lock(&m_running_lock);
-	bool ret = m_running;
-	pthread_mutex_unlock(&m_running_lock);	
-	return ret;
+    bool ret = m_thread_running.test_and_set();
+    if (!ret)
+        m_thread_running.clear();
+    return ret;
 }
 
 int32_t edthreaded_fd::fd()
@@ -115,24 +116,19 @@ void edthreaded_fd::_setError(ErrorVal err_val, int32_t _errno)
 bool edthreaded_fd::start()
 {
 	// lock mutex in case thread is already running
-	pthread_mutex_lock(&m_running_lock);
-	if (m_running)
-	{
+    if (running())
+    {
 		_setError(AlreadyRunning, 0);
 		return false;
 	}
-	pthread_mutex_unlock(&m_running_lock);
 
-	// Thread not running - no need for mutex anymore
-	m_running = true;
 	if (pthread_create(&m_thread, nullptr, edthreaded_fd::thread_exec, (void*)this) != 0)
 	{
 		_setError(ThreadCreation, errno);
-		m_running = false;
 		return false;
 	}
+    m_thread_running.test_and_set();
 	return true;
-	// thread created
 }
 
 bool edthreaded_fd::set_fd(int32_t fd_)
@@ -150,9 +146,7 @@ bool edthreaded_fd::set_fd(int32_t fd_)
 
 void edthreaded_fd::stop()
 {
-	pthread_mutex_lock(&m_running_lock);
-	m_running = false;
-	pthread_mutex_unlock(&m_running_lock);	
+    m_thread_running.clear();
 }
 
 
@@ -183,7 +177,7 @@ void edthreaded_fd::_do_read()
 			if (m_current_wait_for_byte_count == 0 && m_wait_timer->running())
 			{
 				m_wait_timer->stop();
-				cprint("Received all bytes for command - elapsed time: " + std::to_string(m_wait_timer->elapsed()) + " ms");
+                cprint("Received all bytes for command - elapsed time: " + std::to_string(m_wait_timer->elapsed() * 1000.0) + " ms");
 			}
 		}
 		
@@ -245,25 +239,64 @@ void edthreaded_fd::_do_write()
 
 void edthreaded_fd::_exec()
 {
-	bool running = true;
-    while (running)
+    while (m_thread_running.test_and_set())
     {
-		m_wait_timer->update();
+        m_wait_timer->update();
 
-		if (!m_wait_timer->running())
-			_do_write();
-		_do_read();
-
-		pthread_mutex_lock(&m_running_lock);
-		running = m_running;
-		pthread_mutex_unlock(&m_running_lock);
+        if (!m_wait_timer->running())
+            _do_write();
+        _do_read();
     }
+    cprint("edthreaded_fd::_exec Ending thread...");
     pthread_exit(nullptr);
 }
 
 void * edthreaded_fd::thread_exec(void * _this)
 {
-	static_cast<edthreaded_fd*>(_this)->_exec();
-	return nullptr;
+    cprint("edthreaded_fd::thread_exec Starting thread...");
+    edthreaded_fd * thfd = static_cast<edthreaded_fd*>(_this);
+    thfd->_exec();
+    return nullptr;
+}
+
+std::string error_string(const edthreaded_fd::Error & err)
+{
+    std::string ret;
+    ret += "File descriptor error: " + std::string(strerror(err._errno));
+    ret += "\nThread error: ";
+    switch (err.err_val)
+    {
+    case(edthreaded_fd::NoError):
+        ret+="No error found";
+        break;
+    case(edthreaded_fd::ConnectionClosed):
+        ret+="Connection was closed";
+        break;
+    case(edthreaded_fd::DataOverwrite):
+        ret+="Data was overwritten";
+        break;
+    case(edthreaded_fd::InvalidRead):
+        ret+="Invalid read";
+        break;
+    case(edthreaded_fd::InvalidWrite):
+        ret+="Invalid write";
+        break;
+    case(edthreaded_fd::ThreadCreation):
+        ret+="Problem with thread creation";
+        break;
+    case(edthreaded_fd::OpenFileDescriptor):
+        ret+="File descriptor already open";
+        break;
+    case(edthreaded_fd::Configuration):
+        ret+="Error with configuration";
+        break;
+    case(edthreaded_fd::AlreadyRunning):
+        ret+="Thread already running";
+        break;
+    case(edthreaded_fd::CommandNoResponse):
+        ret+="No response to command";
+        break;
+    }
+    return ret;
 }
 
