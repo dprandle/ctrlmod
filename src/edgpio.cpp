@@ -12,11 +12,12 @@
 edgpio::edgpio(int pin):
 	m_fnc(nullptr),
 	m_fnc_param(nullptr),
-	m_pin(pin),
 	m_err(),
-	m_run_isr(),
+    m_pin(pin),
+    m_measure_cnt(),
 	m_thread_running(),
-	m_isr_thread()
+    m_isr_thread(),
+    m_prev_edge(0)
 {
   char buffer[8];
   int pind = m_pin;
@@ -32,8 +33,6 @@ edgpio::edgpio(int pin):
 	  write(fd, buffer, n);
 	  close(fd);
   }
-  m_thread_running.clear();
-  m_run_isr.clear();
 }
 
 edgpio::~edgpio()
@@ -221,22 +220,23 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param)
 	// start thread if isr is not null and set the edge mode to create interrupt
 	if (func != nullptr)
 	{
+        m_thread_running.test_and_set();
 		m_err.errno_code = pthread_create(&m_isr_thread, nullptr, edgpio::_thread_exec, (void*)this);
 		if (m_err.errno_code)
 		{
 			// error occured
 			m_err.gp_code |= gpio_thread_start_error;
+            m_thread_running.clear();
 			return -1;
 		}
-        m_thread_running.test_and_set();
 	}
 	return 0;
 }
 
 void edgpio::update()
 {
-	bool cur_val = m_run_isr.test_and_set();
-	if (cur_val)
+    bool cur_val = m_measure_cnt.test_and_set();
+    if (cur_val)
     {
         bool edge_val = m_isr_edge.test_and_set();
         if (!edge_val)
@@ -244,7 +244,7 @@ void edgpio::update()
         int edge = int(edge_val);
         m_fnc(m_fnc_param, edge);
     }
-	m_run_isr.clear();
+    m_measure_cnt.clear();
 }
 
 int edgpio::pin_num()
@@ -354,13 +354,12 @@ void edgpio::_exec()
             else
                 m_isr_edge.clear();
 
-            m_run_isr.test_and_set();
+            m_measure_cnt.test_and_set();
             tm.start();
         }
     }
     close(polldes.fd);
     cprint("edgpio::_exec Ending gpio thread on pin " + std::to_string(pin));
-    pthread_exit(nullptr);
 }
 
 std::string edgpio::error_string(int gp_err)

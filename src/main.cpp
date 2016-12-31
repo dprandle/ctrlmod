@@ -12,15 +12,10 @@
 #include <edcomm_system.h>
 #include <edimu_system.h>
 
-void handle_ctrlc(int32_t sig)
-{
-	edmctrl::quit();
-	exit(1);
-}
 
 int32_t main(int32_t argc, char * argv[])
 {
-	int32_t port = 0;
+    int32_t port = 0;
 	for (int32_t i = 0; i < argc; ++i)
 	{
 		std::string curarg(argv[i]);
@@ -28,24 +23,22 @@ int32_t main(int32_t argc, char * argv[])
 			port = std::stoi(curarg.substr(6));
 	}
 	
-	struct sigaction sigIntHandler;
-	sigIntHandler.sa_handler = handle_ctrlc;
-	sigemptyset(&sigIntHandler.sa_mask);
-	sigIntHandler.sa_flags = 0;
-	sigaction(SIGINT, &sigIntHandler, NULL);
 	
     edm.add_sys<edrplidar_system>();
     edm.add_sys<edpl_system>();
     edm.add_sys<ednav_system>();
     edm.add_sys<edlogging_system>();
-	edm.add_sys<edcomm_system>()->set_port(port);
-	//edm.add_sys<edimu_system>();
+    edm.add_sys<edcomm_system>()->set_port(port);
+    //edm.add_sys<edimu_system>();
 	
 	edm.start();
     edm.init();
 
     rplidar_request * req = edm.message_dispatch()->push<rplidar_request>();
-    req->r_type = rplidar_request::Reset;
+    req->r_type = rplidar_request::HealthReq;
+
+    //req = edm.message_dispatch()->push<rplidar_request>();
+    //req->r_type = rplidar_request::StartScan;
 
     while (edm.running())
 		edm.update();

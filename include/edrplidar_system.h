@@ -10,6 +10,8 @@
 #include <edmessage.h>
 
 #define XV_BAUD 115200
+#define DEFAULT_WAIT_CB 0.001
+#define DEFAULT_TIMEOUT 5
 
 
 class edtimer;

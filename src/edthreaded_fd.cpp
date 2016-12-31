@@ -17,7 +17,6 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	m_current_wait_for_byte_count(0),
 	m_wait_timer(new edtimer())
 {
-    m_thread_running.clear();
 	pthread_mutex_init(&m_send_lock, nullptr);
 	pthread_mutex_init(&m_recv_lock, nullptr);
 	pthread_mutex_init(&m_error_lock, nullptr);
@@ -122,12 +121,14 @@ bool edthreaded_fd::start()
 		return false;
 	}
 
+    // Make sure to set before creating the thread!!
+    m_thread_running.test_and_set();
 	if (pthread_create(&m_thread, nullptr, edthreaded_fd::thread_exec, (void*)this) != 0)
 	{
 		_setError(ThreadCreation, errno);
+        m_thread_running.clear();
 		return false;
 	}
-    m_thread_running.test_and_set();
 	return true;
 }
 
@@ -151,10 +152,8 @@ void edthreaded_fd::stop()
 
 
 void edthreaded_fd::_do_read()
-{
-	static uint8_t buf[FD_TMP_BUFFER_SIZE];
-	
-	int32_t cnt = _raw_read(buf, FD_TMP_BUFFER_SIZE);
+{	
+    int32_t cnt = _raw_read(m_tmp_read_buf, FD_TMP_BUFFER_SIZE);
 	if (cnt < 0)
 	{
 		int32_t err_no = errno;
@@ -167,18 +166,14 @@ void edthreaded_fd::_do_read()
 	pthread_mutex_lock(&m_recv_lock);
 	for (int32_t i = 0; i < cnt; ++i)
 	{
-		m_read_buffer[m_read_rawindex] = buf[i];
+        m_read_buffer[m_read_rawindex] = m_tmp_read_buf[i];
 		++m_read_rawindex;
 
 		if (m_current_wait_for_byte_count > 0)
 		{
 			--m_current_wait_for_byte_count;
-			cprint("Received 1 byte: " + std::to_string(m_current_wait_for_byte_count) + " remaining");
 			if (m_current_wait_for_byte_count == 0 && m_wait_timer->running())
-			{
 				m_wait_timer->stop();
-                cprint("Received all bytes for command - elapsed time: " + std::to_string(m_wait_timer->elapsed() * 1000.0) + " ms");
-			}
 		}
 		
 		if (m_read_rawindex == m_read_buffer.size())
@@ -196,7 +191,6 @@ void edthreaded_fd::_do_read()
 
 void edthreaded_fd::_do_write()
 {
-		static uint8_t buf[FD_TMP_BUFFER_SIZE];		
         int32_t tosend = 0;
         int32_t retval = 0;
         int32_t sent = 0;
@@ -205,8 +199,9 @@ void edthreaded_fd::_do_write()
 		while (m_write_rawindex != m_write_curindex)
 		{
 			WriteVal wv = m_write_buffer[m_write_rawindex];
-			buf[tosend] = wv.byte;
+            m_tmp_write_buf[tosend] = wv.byte;
 			m_current_wait_for_byte_count = wv.response_size;
+
 			++m_write_rawindex;
             ++tosend;
 
@@ -215,7 +210,6 @@ void edthreaded_fd::_do_write()
 
 			if (m_current_wait_for_byte_count > 0)
 			{
-				cprint("Command found: waiting for " + std::to_string(m_current_wait_for_byte_count) + " bytes");
 				m_wait_timer->start();
 				break;
 			}
@@ -227,7 +221,7 @@ void edthreaded_fd::_do_write()
 
         while (sent != tosend)
         {
-            retval = _raw_write(buf+sent, tosend-sent);
+            retval = _raw_write(m_tmp_write_buf+sent, tosend-sent);
             if (retval == -1)
             {
                 _setError(InvalidWrite, errno);
@@ -248,7 +242,7 @@ void edthreaded_fd::_exec()
         _do_read();
     }
     cprint("edthreaded_fd::_exec Ending thread...");
-    pthread_exit(nullptr);
+    //pthread_exit(nullptr);
 }
 
 void * edthreaded_fd::thread_exec(void * _this)

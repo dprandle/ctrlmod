@@ -11,7 +11,7 @@
 #define DEFAULT_FD_WRITE_BUFFER_SIZE 5120
 #define DEFAULT_FD_READ_BUFFER_SIZE 5120
 #define FD_TMP_BUFFER_SIZE 1024
-#define COMMAND_WAIT_DELAY 1000
+#define COMMAND_WAIT_DELAY 1
 
 class edtimer;
 
@@ -111,7 +111,11 @@ class edthreaded_fd
 	pthread_mutex_t m_recv_lock;
 	pthread_mutex_t m_error_lock;
 
-    std::atomic_flag m_thread_running;
+
+    uint8_t m_tmp_read_buf[FD_TMP_BUFFER_SIZE];
+    uint8_t m_tmp_write_buf[FD_TMP_BUFFER_SIZE];
+
+    std::atomic_flag m_thread_running = ATOMIC_FLAG_INIT;
 	
 	pthread_t m_thread;
 };

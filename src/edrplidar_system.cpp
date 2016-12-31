@@ -74,30 +74,36 @@ void edrplidar_system::release()
 
 void edrplidar_system::update()
 {
+    if (!m_uart->running())
+        cprint("UART not running!!");
     static uint8_t readBuf[256];
     m_timeout_timer->update();
     m_wait_timer->update();
     m_error_timer->update();
 
-    if (m_timeout_timer->running() && m_timeout_timer->elapsed() > 10)
+    if (m_timeout_timer->running() && m_timeout_timer->elapsed() > DEFAULT_TIMEOUT)
     {
         cprint("Timeout for last request sending reset request");
-        reset();
+       // reset();
         return;
     }
 
     if (m_current_type == Reset && !m_error_timer->running())
     {
         cprint("Could not detect firmware packet.. resetting state");
-        _reset_state();
+        //_reset_state();
     }
 
     int32_t size = m_uart->read(readBuf, 256);
+    if (size != 0)
+        cprint("Got packet of " + std::to_string(size) + " bytes");
     if (size > 0)
     {		
         m_timeout_timer->stop();
         for (int32_t i = 0; i < size; ++i)
+        {
             _handle_byte(readBuf[i]);
+        }
     }
 }
 
@@ -106,9 +112,10 @@ bool edrplidar_system::process(edmessage * msg)
     if (m_wait_timer->running())
         return false;
 
-    rplidar_request * rmsg = dynamic_cast<rplidar_request*>(msg);
-    if (rmsg != NULL)
+    if (msg->type() == "rplidar_request")
     {
+        rplidar_request * rmsg = static_cast<rplidar_request*>(msg);
+
         switch (rmsg->r_type)
         {
         case (rplidar_request::StartScan):
@@ -124,26 +131,29 @@ bool edrplidar_system::process(edmessage * msg)
         case (rplidar_request::HealthReq):
             return requestHealth();
         }
+
     }
-    return false;
+    return true;
 }
 
 
 bool edrplidar_system::startScan()
 {
     if (m_current_type != None)
-        return false;
+       return false;
 
     cprint("Start scan command issued");
     // set descriptor to scan response
     m_current_type = Scan;
 
-    m_wait_timer->set_callback_delay(1.0);
+    m_wait_timer->set_callback_delay(DEFAULT_WAIT_CB);
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
     start_scan_request sr;
-	m_uart->write(sr.data,2, scan_descriptor::Size());
+    int sz = static_cast<int>(scan_descriptor::Size());
+
+    m_uart->write(sr.data, 2, sz);
     return true;
 }
 
@@ -156,12 +166,13 @@ bool edrplidar_system::forceScan()
     // set descriptor to scan response
     m_current_type = Scan;
 
-    m_wait_timer->set_callback_delay(1.0);
+    m_wait_timer->set_callback_delay(DEFAULT_WAIT_CB);
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
 	force_scan_request sr;
-	m_uart->write(sr.data, 2, scan_descriptor::Size());
+    int sz = static_cast<int>(scan_descriptor::Size());
+    m_uart->write(sr.data, 2, sz);
     return true;
 }
 
@@ -169,7 +180,7 @@ bool edrplidar_system::stopScan()
 {
     cprint("Stop scan command issued");
     _reset_state();
-    m_wait_timer->set_callback_delay(50.0);
+    m_wait_timer->set_callback_delay(5*DEFAULT_WAIT_CB);
     m_wait_timer->start();
     stop_scan_request sr;
 	m_uart->write(sr.data,2);
@@ -182,11 +193,12 @@ bool edrplidar_system::reset()
     _reset_state();
     m_timeout_timer->stop();
     reset_request rr;
-    m_wait_timer->set_callback_delay(20.0);
+    m_wait_timer->set_callback_delay(2*DEFAULT_WAIT_CB);
     m_wait_timer->start();
     m_current_type = Reset;
     m_rec_descript = true; // No descriptor for reset
-	m_uart->write(rr.data, 2, firmware_data_packet::Size());
+    int sz = static_cast<int>(firmware_data_packet::Size());
+    m_uart->write(rr.data, 2, sz);
     m_error_timer->start();
     return true;
 }
@@ -199,12 +211,13 @@ bool edrplidar_system::requestInfo()
     cprint("Request device information command issued");
     // set descriptor to info response
     m_current_type = Info;
-    m_wait_timer->set_callback_delay(1.0);
+    m_wait_timer->set_callback_delay(2*DEFAULT_WAIT_CB);
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
     device_info_request sr;
-	m_uart->write(sr.data,2, device_info_descriptor::Size() + info_data_packet::Size());
+    int sz = static_cast<int>(device_info_descriptor::Size() + info_data_packet::Size());
+    m_uart->write(sr.data,2, sz);
     return true;
 }
 
@@ -216,17 +229,18 @@ bool edrplidar_system::requestHealth()
     cprint("Request device health command issued");
     // set descriptor to info response
     m_current_type = Health;
-    m_wait_timer->set_callback_delay(1.0);
+    m_wait_timer->set_callback_delay(2*DEFAULT_WAIT_CB);
     m_wait_timer->start();
     m_timeout_timer->start();
     m_error_timer->start();
     device_health_request sr;
-	m_uart->write(sr.data,2, device_health_descriptor::Size() + health_data_packet::Size());
+    int sz = static_cast<int>(device_health_descriptor::Size() + health_data_packet::Size());
+    m_uart->write(sr.data,2, sz);
     return true;
 }
 
 void edrplidar_system::_handle_byte(uint8_t byte)
-{	
+{
     if (m_current_type == None)
         return;
 
@@ -329,7 +343,7 @@ void edrplidar_system::_handle_byte(uint8_t byte)
                         rplidar_scan_message * msg = edm.message_dispatch()->push<rplidar_scan_message>();
                         if (msg != NULL)
                         {
-                            msg->millis_timestamp = edm.sys_timer()->elapsed();
+                            msg->millis_timestamp = static_cast<uint32_t>(edm.sys_timer()->elapsed() * 1000);
                             for(uint32_t i = 0; i < 360; ++i)
                             {
                                 copy_buf(m_current_scan[i].data,

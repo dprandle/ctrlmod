@@ -17,7 +17,7 @@
 
 ednav_system::ednav_system():
 	m_nav_timer(new edtimer()),
-	m_i2c(NULL),
+    m_i2c(nullptr),
 	m_G_mult(1.0),
 	m_bias_threshold_dist(0.0),
 	m_threshold_dropout(false)
@@ -36,16 +36,16 @@ void ednav_system::init()
 	mh->register_listener<nav_system_request>(this);
 	mh->register_listener<nav_message>(this);
 
-	m_i2c = new edi2c();
-	m_i2c->set_target_address(ARDUINO_ADDRESS);
-	if (!m_i2c->start())
+    m_i2c = new edi2c();
+    m_i2c->set_target_address(ARDUINO_ADDRESS);
+    if (!m_i2c->start())
     {
         cprint("ednav_system::init - Could not start i2c");
         edthreaded_fd::Error err = m_i2c->error();
         cprint("Error from errno: " + std::string(strerror(err._errno)));
         cprint("Error code: " + std::to_string(err.err_val));
     }
-	else
+    else
     {
         cprint("ednav_system::init - Successfully initialized i2c");
     }
@@ -58,32 +58,34 @@ void ednav_system::init()
 	
 	// Set up timer for 20 Hz transmission
 	m_nav_timer->set_callback_mode(edtimer::continous_shot);
-	m_nav_timer->set_callback_delay(50.0); // 50 ms = 20 Hz
+    m_nav_timer->set_callback_delay(0.050); // 50 ms = 20 Hz
 	m_nav_timer->set_callback(new instruction_callback(this));
 	m_nav_timer->start();
 }
 
 void ednav_system::release()
 {
-	delete m_i2c;
-	m_i2c = NULL;
+    delete m_i2c;
+    m_i2c = NULL;
 }
 
 bool ednav_system::process(edmessage * msg)
 {
-	rplidar_scan_message * rmsg = dynamic_cast<rplidar_scan_message*>(msg);
-	pulsed_light_message * pmsg = dynamic_cast<pulsed_light_message*>(msg);
-	nav_system_request * navmsg = dynamic_cast<nav_system_request*>(msg);
-	nav_message * nmsg = dynamic_cast<nav_message*>(msg);
-
-	if (pmsg != NULL)
+    if (msg->type() == "pulsed_light_message")
+    {
+        pulsed_light_message * pmsg = static_cast<pulsed_light_message*>(msg);
 		return _process_pulse_light(pmsg);
+    }
 
-	if (rmsg != NULL)
+    if (msg->type() == "lplidar_scan_message")
+    {
+        rplidar_scan_message * rmsg = static_cast<rplidar_scan_message*>(msg);
 		return _process_scan(rmsg);
+    }
 
-	if (navmsg != NULL)
+    if (msg->type() == "nav_system_request")
 	{
+        nav_system_request * navmsg = static_cast<nav_system_request*>(msg);
 		m_nav_pid.set_gain(navmsg->pid);
 		m_nav_pid.set_ramp_limit(navmsg->ramp_limit);
 		m_nav_pid.enable_anti_reset_windup(navmsg->anti_reset_winding);
@@ -94,8 +96,11 @@ bool ednav_system::process(edmessage * msg)
 		m_threshold_dropout = navmsg->threshold_dropout;
 	}
 
-	if (nmsg != NULL)
+    if (msg->type() == "nav_message")
+    {
+        nav_message * nmsg = static_cast<nav_message*>(msg);
 		return _process_nav_message(nmsg);
+    }
 	
     return true;
 }
@@ -165,31 +170,31 @@ bool ednav_system::_process_scan(rplidar_scan_message * msg)
 
 bool ednav_system::_process_nav_message(nav_message * nmsg)
 {
-	m_i2c->write_word(nmsg->pitch);
-	m_i2c->write_word(nmsg->roll);
-	m_i2c->write_word(nmsg->yaw);
-	m_i2c->write_word(nmsg->throttle);
+    m_i2c->write_word(nmsg->pitch);
+    m_i2c->write_word(nmsg->roll);
+    m_i2c->write_word(nmsg->yaw);
+    m_i2c->write_word(nmsg->throttle);
 	return true;
 }
 
 void instruction_callback::exec()
 {
-	double dt = m_nav_sys->m_nav_timer->callback_delay() / 1000.0;
+    double dt = m_nav_sys->m_nav_timer->callback_delay() / 1000.0;
 
-	vec4 current_input(m_nav_sys->m_resultant_vec, m_nav_sys->m_angle_to_last_vec, m_nav_sys->m_pl_dist_to_center);
+    vec4 current_input(m_nav_sys->m_resultant_vec, m_nav_sys->m_angle_to_last_vec, m_nav_sys->m_pl_dist_to_center);
 	
-	vec4 delta = m_nav_sys->m_nav_pid.loop(current_input, dt);
+    vec4 delta = m_nav_sys->m_nav_pid.loop(current_input, dt);
 	
-	nav_message * nmsg = edm.message_dispatch()->push<nav_message>();
-	if (nmsg != NULL)
-	{
-		nmsg->pitch = int16_t(delta.x * (PITCH_MAX - PITCH_MIN) / (LIDAR_DIST_DIFF_MAX - LIDAR_DIST_DIFF_MIN));
-		nmsg->roll = int16_t(delta.y * (ROLL_MAX - ROLL_MIN) / (LIDAR_DIST_DIFF_MAX - LIDAR_DIST_DIFF_MIN));
-		nmsg->yaw = int16_t(delta.z * (YAW_MAX - YAW_MIN) / (YAW_ANGLE_DIFF_MAX - YAW_ANGLE_DIFF_MIN));		
-		nmsg->throttle = int16_t(delta.w * (THROTTLE_MAX - THROTTLE_MIN) / (ALT_DIF_MAX - ALT_DIF_MIN));
-		nmsg->rvec_raw[0] = m_nav_sys->m_resultant_vec.y;
-		nmsg->rvec_raw[1] = m_nav_sys->m_resultant_vec.x;
-		nmsg->rvec_corrected[0] = delta.y;
-		nmsg->rvec_corrected[1] = delta.x;
-	}
+    nav_message * nmsg = edm.message_dispatch()->push<nav_message>();
+    if (nmsg != NULL)
+    {
+        nmsg->pitch = int16_t(delta.x * (PITCH_MAX - PITCH_MIN) / (LIDAR_DIST_DIFF_MAX - LIDAR_DIST_DIFF_MIN));
+        nmsg->roll = int16_t(delta.y * (ROLL_MAX - ROLL_MIN) / (LIDAR_DIST_DIFF_MAX - LIDAR_DIST_DIFF_MIN));
+        nmsg->yaw = int16_t(delta.z * (YAW_MAX - YAW_MIN) / (YAW_ANGLE_DIFF_MAX - YAW_ANGLE_DIFF_MIN));
+        nmsg->throttle = int16_t(delta.w * (THROTTLE_MAX - THROTTLE_MIN) / (ALT_DIF_MAX - ALT_DIF_MIN));
+        nmsg->rvec_raw[0] = m_nav_sys->m_resultant_vec.y;
+        nmsg->rvec_raw[1] = m_nav_sys->m_resultant_vec.x;
+        nmsg->rvec_corrected[0] = delta.y;
+        nmsg->rvec_corrected[1] = delta.x;
+    }
 }

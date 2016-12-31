@@ -155,7 +155,7 @@ struct stop_scan_request : public request_packet
 
 struct start_scan_request : public request_packet
 {
-    start_scan_request():request_packet(0xA5,0x21){}
+    start_scan_request():request_packet(0xA5,0x20){}
 };
 
 struct force_scan_request : public request_packet

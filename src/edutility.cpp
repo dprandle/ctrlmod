@@ -19,7 +19,7 @@ void delay(double ms)
 {
 	edtimer t;
 	t.start();
-	while (t.elapsed() < ms)
+    while ((t.elapsed() * 1000.0) < ms)
 		t.update();
 }
 
@@ -139,3 +139,13 @@ void copy_buf(const uint8_t * src, uint8_t * dest, uint32_t size, uint32_t src_o
 	for (uint32_t i = 0; i < size; ++i)
 		dest_with_offset[i] = src_with_offset[i];
 }
+
+void copy_buf(const int8_t * src, int8_t * dest, uint32_t size, uint32_t src_offset, uint32_t dest_offset)
+{
+    const int8_t * src_with_offset = src + src_offset;
+    int8_t * dest_with_offset = dest + dest_offset;
+    for (uint32_t i = 0; i < size; ++i)
+        dest_with_offset[i] = src_with_offset[i];
+}
+
+

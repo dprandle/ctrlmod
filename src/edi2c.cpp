@@ -215,35 +215,35 @@ uint16_t edi2c::write_delay()
 
 int32_t edi2c::_raw_read(uint8_t * buffer, uint32_t size)
 {
-	bool use_smbus = smbus_enabled();
-	if (m_current_wait_for_byte_count > 0)
-	{
-		if (use_smbus)
-		{
+    bool use_smbus = smbus_enabled();
+    if (m_current_wait_for_byte_count > 0)
+    {
+        if (use_smbus)
+        {
 			
-		}
-		else
-		{
-			uint32_t cnt = ::read(m_fd, buffer, size);
-			delay(write_delay());
-			return cnt;
-		}
-	}
+        }
+        else
+        {
+            uint32_t cnt = ::read(m_fd, buffer, size);
+            delay(write_delay());
+            return cnt;
+        }
+    }
     return 0;
 }
 
 int32_t edi2c::_raw_write(uint8_t * buffer, uint32_t size)
 {
-	bool use_smbus = smbus_enabled();
-	if (use_smbus)
-	{
+    bool use_smbus = smbus_enabled();
+    if (use_smbus)
+    {
 		
-	}
-	else
-	{
-		uint32_t cnt = ::write(m_fd, buffer, size);
-		delay(read_delay());
-		return cnt;
-	}
-	return 0;
+    }
+    else
+    {
+        uint32_t cnt = ::write(m_fd, buffer, size);
+        delay(read_delay());
+        return cnt;
+    }
+    return 0;
 }

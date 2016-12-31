@@ -35,8 +35,8 @@ void edcomm_system::init()
     edm.message_dispatch()->register_listener<rplidar_info_message>(this);
     edm.message_dispatch()->register_listener<rplidar_firmware_message>(this);
     edm.message_dispatch()->register_listener<rplidar_scan_message>(this);
-	edm.message_dispatch()->register_listener<pulsed_light_message>(this);
-	edm.message_dispatch()->register_listener<nav_message>(this);
+    edm.message_dispatch()->register_listener<pulsed_light_message>(this);
+    edm.message_dispatch()->register_listener<nav_message>(this);
 
     m_server_fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);//
 	if (m_server_fd < 0)
@@ -45,6 +45,9 @@ void edcomm_system::init()
         int err = errno;
         cprint("Error: " + std::string(strerror(err)));
     }
+
+    int optval = 1;
+    setsockopt(m_server_fd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(int));
 
     server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_family = AF_INET;
@@ -83,53 +86,51 @@ void edcomm_system::release()
 
 bool edcomm_system::process(edmessage * msg)
 {
-    rplidar_info_message * imsg = NULL;
-    rplidar_error_message * emsg = NULL;
-    rplidar_health_message * hmsg = NULL;
-    rplidar_firmware_message * fmsg = NULL;
-    rplidar_scan_message * smsg = NULL;
-	pulsed_light_message * plmsg = NULL;
-	nav_message * navmsg = NULL;
     uint32_t hashid;
     data_packet * dp = NULL;
 
-    if ( (smsg = dynamic_cast<rplidar_scan_message*>(msg)) )
+    if ( (msg->type() == "lplidar_scan_message") )
     {
-		// special case - sending variable amount of data for each scan so handle that
-		// in other function
+        rplidar_scan_message * smsg = static_cast<rplidar_scan_message*>(msg);
         hashid = hash_id(complete_scan_data_packet::Type());
         sendToClients((uint8_t*)&hashid, sizeof(uint32_t)); // send the hash id first though
-		_sendScan(smsg);
-		return true;
+        _sendScan(smsg);
+        return true;
     }
-    else if ( (imsg = dynamic_cast<rplidar_info_message*>(msg)) )
+    else if (msg->type() == "rplidar_info_message")
     {
+        rplidar_info_message * imsg = static_cast<rplidar_info_message*>(msg);
         hashid = hash_id(info_data_packet::Type());
         dp = &imsg->device_info;
     }
-    else if ( (emsg = dynamic_cast<rplidar_error_message*>(msg)) )
+    else if (msg->type() == "rplidar_error_message")
     {
-        //hashid = hash_id(emsg->device_info.type());
+        // do nothing
+        return true;
     }
-    else if ( (hmsg = dynamic_cast<rplidar_health_message*>(msg)) )
+    else if (msg->type() == "rplidar_health_message")
     {
+        rplidar_health_message * hmsg = static_cast<rplidar_health_message*>(msg);
         hashid = hash_id(health_data_packet::Type());
         dp = &hmsg->device_health;
     }
-    else if ( (fmsg = dynamic_cast<rplidar_firmware_message*>(msg)) )
+    else if (msg->type() == "rplidar_firmware_message")
     {
+        rplidar_firmware_message * fmsg = static_cast<rplidar_firmware_message*>(msg);
         hashid = hash_id(firmware_data_packet::Type());
         dp = &fmsg->device_firmware;
     }
-    else if ( (plmsg = dynamic_cast<pulsed_light_message*>(msg)))
-	{
-		hashid = hash_id(pulsed_light_message::Type());
-		sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
-		sendToClients(plmsg->data, plmsg->size());
+    else if (msg->type() == "pulsed_light_message")
+    {
+        pulsed_light_message * plmsg = static_cast<pulsed_light_message*>(msg);
+        hashid = hash_id(pulsed_light_message::Type());
+        sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
+        sendToClients(plmsg->data, plmsg->size());
         return true;
     }
-    else if ( (navmsg = dynamic_cast<nav_message*>(msg)))
+    else if (msg->type() == "nav_message")
     {
+        nav_message * navmsg = static_cast<nav_message*>(msg);
         hashid = hash_id(nav_message::Type());
         sendToClients((uint8_t*)&hashid, sizeof(uint32_t));
         sendToClients(navmsg->data, navmsg->size());

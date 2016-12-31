@@ -13,6 +13,8 @@
 #define GPIO_48 48
 #define GPIO_49 49
 
+#define MAX_DISTANCE_MEASUREMENTS 128
+
 #include <pthread.h>
 #include <atomic>
 #include <string>
@@ -65,6 +67,13 @@ struct gpio_error_state
 	int errno_code;
 };
 
+struct pwm_measurement
+{
+    int edge;
+    gpio_isr_edge edge_mode;
+    double seconds;
+};
+
 class edgpio
 {
   public:
@@ -75,7 +84,7 @@ class edgpio
 	int set_direction(gpio_dir dir);
 	int direction();
 
-    int set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param);
+    int set_isr(gpio_isr_edge edge, void (*func)(void *, pwm_measurement), void * param);
 
 	int read_pin();
 
@@ -96,12 +105,18 @@ class edgpio
 	
     void (*m_fnc)(void *, int);
 	void * m_fnc_param;
-    std::atomic_int m_pin;
 	gpio_error_state m_err;
-	std::atomic_flag m_run_isr;
-	std::atomic_flag m_thread_running;
-    std::atomic_flag m_isr_edge;
+
+    std::atomic_int m_pin;
+    std::atomic_flag m_thread_running = ATOMIC_FLAG_INIT;
 	pthread_t m_isr_thread;
+
+    // only used within separate thread...
+    int m_prev_edge;
+    int m_cur_edge;
+
+    pthread_mutex_t distance_meas_lock;
+    double m_distance_measurements[MAX_DISTANCE_MEASUREMENTS];
 	
 };
 

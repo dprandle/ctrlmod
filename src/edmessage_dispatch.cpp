@@ -46,6 +46,8 @@ void edmessage_dispatch::pop(edsystem * sys)
 		fiter->second.pop_front();
 		--msg->ref_count;
 		if (msg->ref_count == 0)
+        {
 			delete msg;
+        }
 	}
 }

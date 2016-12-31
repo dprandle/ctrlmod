@@ -33,11 +33,6 @@
 #include <nsmath.h>
 #include <edpid_controller.h>
 
-namespace mraa
-{
-struct I2c;
-}
-
 struct edmessage;
 struct pulsed_light_message;
 struct rplidar_scan_message;

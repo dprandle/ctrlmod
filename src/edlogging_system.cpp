@@ -20,40 +20,39 @@ void edlogging_system::release()
 
 bool edlogging_system::process(edmessage * msg)
 {
-	rplidar_info_message * imsg;
-	rplidar_error_message * emsg;
-	rplidar_health_message * hmsg;
-	rplidar_firmware_message * fmsg;
-	rplidar_scan_message * smsg;
-	nav_message * nmsg;
-	
-    if ( (smsg = dynamic_cast<rplidar_scan_message*>(msg)) )
+    if (msg->type() == "lplidar_scan_message")
 	{
+        rplidar_scan_message * smsg = static_cast<rplidar_scan_message*>(msg);
         log_scan(&smsg->scan_data);
 		return true;
 	}
-    else if ( (imsg = dynamic_cast<rplidar_info_message*>(msg)) )
+    else if (msg->type() == "rplidar_info_message")
 	{
+        rplidar_info_message * imsg = static_cast<rplidar_info_message*>(msg);
 		log_device_info(&imsg->device_info);
 		return true;
 	}
-    else if ( (emsg = dynamic_cast<rplidar_error_message*>(msg)) )
+    else if (msg->type() == "rplidar_error_message")
 	{
+        rplidar_error_message * emsg = static_cast<rplidar_error_message*>(msg);
 		cprint("Received error message!");
 		return true;
 	}
-    else if ( (hmsg = dynamic_cast<rplidar_health_message*>(msg)) )
+    else if (msg->type() == "rplidar_health_message")
 	{
+        rplidar_health_message * hmsg = static_cast<rplidar_health_message*>(msg);
 		log_device_health(&hmsg->device_health);
 		return true;		
 	}
-    else if ( (fmsg = dynamic_cast<rplidar_firmware_message*>(msg)) )
+    else if (msg->type() == "rplidar_firmware_message")
 	{
+        rplidar_firmware_message * fmsg = static_cast<rplidar_firmware_message*>(msg);
 		log_device_firware(&fmsg->device_firmware);
 		return true;		
 	}
-    else if ( (nmsg = dynamic_cast<nav_message*>(msg)) )
+    else if (msg->type() == "nav_message")
 	{
+        nav_message * nmsg = static_cast<nav_message*>(msg);
 		log_nav_message(nmsg);
 		return true;		
 	}

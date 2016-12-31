@@ -208,6 +208,7 @@ void pl_gpio::isr(void * pl, int pin_edge)
     {
         pl_cast->timer->stop();
         double meas = pl_cast->timer->elapsed() * 100000.0 + pl_cast->cal_offset;
+        cprint("measured: " + std::to_string(meas));
         if (meas > 0 && meas < 5000)
         {
             pl_cast->sum_dist += meas;
@@ -219,9 +220,11 @@ void pl_gpio::isr(void * pl, int pin_edge)
 void edpl_callback::exec()
 {
 	pulsed_light_message * msg = edm.message_dispatch()->push<pulsed_light_message>();
-	if (pl_ceil->meas_count > 0)
+    if (msg == nullptr)
+        return;
+    if (pl_ceil->meas_count > 0)
 		msg->distance1 = pl_ceil->sum_dist/pl_ceil->meas_count;
-	if (pl_floor->meas_count > 0)
+    if (pl_floor->meas_count > 0)
 		msg->distance2 = pl_floor->sum_dist/pl_floor->meas_count;
 	pl_ceil->sum_dist = 0;
 	pl_ceil->meas_count = 0;
@@ -233,7 +236,6 @@ void edpl_callback::exec()
 	copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
 	copy_buf((uint8_t*)pl_ceil->orient.data, (uint8_t*)msg->orientation1, 4);
 	copy_buf((uint8_t*)pl_floor->orient.data, (uint8_t*)msg->orientation2, 4);
-    cprint("Sending distance measurement...");
-    cprint("Distance 1: " + std::to_string(msg->distance1*0.0328084) + " ft");
-    cprint("Distance 2: " + std::to_string(msg->distance2*0.0328084) + " ft");
+    //cprint("Floor " + std::to_string(msg->distance2));
+    //cprint("Cieling " + std::to_string(msg->distance1));
 }
