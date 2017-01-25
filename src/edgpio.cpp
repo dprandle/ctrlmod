@@ -14,56 +14,60 @@ edgpio::edgpio(int pin):
 	m_fnc_param(nullptr),
 	m_err(),
     m_pin(pin),
-    m_measure_cnt(),
 	m_thread_running(),
     m_isr_thread(),
-    m_prev_edge(0)
+    m_prev_edge(0),
+    m_cur_edge(0),
+    m_cur_meas_index(0)
 {
-  char buffer[8];
-  int pind = m_pin;
-  int n = sprintf (buffer, "%d", pind);
-  int fd = open("/sys/class/gpio/export", O_WRONLY);	  
-  if (fd == -1)
-  {
-	  m_err.errno_code = errno;
-	  m_err.gp_code |= gpio_export_error;
-  }
-  else
-  {
-	  write(fd, buffer, n);
-	  close(fd);
-  }
+    pthread_mutex_init(&distance_meas_lock, nullptr);
+    char buffer[8];
+    int pind = m_pin;
+    int n = sprintf (buffer, "%d", pind);
+    int fd = open("/sys/class/gpio/export", O_WRONLY);
+    if (fd == -1)
+    {
+        m_err.errno_code = errno;
+        m_err.gp_code |= gpio_export_error;
+    }
+    else
+    {
+        write(fd, buffer, n);
+        close(fd);
+    }
 }
 
 edgpio::~edgpio()
 {
-  char buffer[8];
-  int pin = m_pin;
-  int n = sprintf (buffer, "%d", pin);
-  int fd = open("/sys/class/gpio/unexport", O_WRONLY);
-  if (fd == -1)
-  {
-	  m_err.errno_code = errno;
-	  m_err.gp_code |= gpio_unexport_error;
-  }
-  else
-  {
-	  write(fd, buffer, n);
-	  close(fd);
-  }
+    pthread_mutex_destroy(&distance_meas_lock);
 
-  // Close the isr thread if needed
-  if (m_thread_running.test_and_set())
-  {
-	  m_thread_running.clear();
-	  m_err.errno_code = pthread_join(m_isr_thread, nullptr);
-	  if (m_err.errno_code)
-	  {
-		  // error joining - set error code and return
-		  m_err.gp_code |= gpio_thread_join_error;
-	  }
-	  
-  }
+    // Close the isr thread if needed
+    if (m_thread_running.test_and_set())
+    {
+        m_thread_running.clear();
+        m_err.errno_code = pthread_join(m_isr_thread, nullptr);
+        if (m_err.errno_code)
+        {
+            // error joining - set error code and return
+            m_err.gp_code |= gpio_thread_join_error;
+        }
+
+    }
+
+    char buffer[8];
+    int pin = m_pin;
+    int n = sprintf (buffer, "%d", pin);
+    int fd = open("/sys/class/gpio/unexport", O_WRONLY);
+    if (fd == -1)
+    {
+        m_err.errno_code = errno;
+        m_err.gp_code |= gpio_unexport_error;
+    }
+    else
+    {
+        write(fd, buffer, n);
+        close(fd);
+    }
 }
 
 gpio_error_state edgpio::get_and_clear_error()
@@ -144,7 +148,7 @@ int edgpio::direction()
 	return -1;
 }
 
-int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param)
+int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, pwm_measurement), void * param)
 {
 	// Close the isr thread if needed - no matter what after this the thread should be dead
 	if (m_thread_running.test_and_set())
@@ -198,13 +202,13 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param)
 			  }
 			  close(fd);
 			  return 0;
-		  case (gpio_edge_both):
+          case (gpio_edge_both): // trigger isr for both edges
 			  tmp = write(fd, "both", 4);
 			  break;
-		  case (gpio_edge_rising):
+          case (gpio_edge_rising): // trigger isr for rising edges only
 			  tmp = write(fd, "rising", 6);
 			  break;
-		  case (gpio_edge_falling):
+          case (gpio_edge_falling): // trigger isr for falling edges only
 			  tmp = write(fd, "falling", 7);
 			  break;
 		}
@@ -235,16 +239,23 @@ int edgpio::set_isr(gpio_isr_edge edge, void (*func)(void *, int), void * param)
 
 void edgpio::update()
 {
-    bool cur_val = m_measure_cnt.test_and_set();
-    if (cur_val)
+    int count = 0;
+    pthread_mutex_lock(&distance_meas_lock);
+    while (m_cur_meas_index > 0)
     {
-        bool edge_val = m_isr_edge.test_and_set();
-        if (!edge_val)
-            m_isr_edge.clear();
-        int edge = int(edge_val);
-        m_fnc(m_fnc_param, edge);
+        m_tmp_measurements[count] = m_pwm_measurements[m_cur_meas_index-1];
+        --m_cur_meas_index;
+        ++count;
     }
-    m_measure_cnt.clear();
+    pthread_mutex_unlock(&distance_meas_lock);
+
+    for (int i = 0; i < count; ++i)
+    {
+        if (m_fnc != nullptr)
+            m_fnc(m_fnc_param, m_tmp_measurements[i]);
+        else
+            log_message("edgpio::update - No isr found - make sure one has been assigned");
+    }
 }
 
 int edgpio::pin_num()
@@ -256,7 +267,7 @@ void * edgpio::_thread_exec(void * param)
 {
 	edgpio * _this = static_cast<edgpio*>(param);
     int pin = _this->m_pin;
-    cprint("edgpio::_thread_exec Starting gpio thread on pin " + std::to_string(pin));
+    log_message("edgpio::_thread_exec Starting gpio thread on pin " + std::to_string(pin));
 	_this->_exec();
 	return nullptr;
 }
@@ -332,34 +343,50 @@ void edgpio::_exec()
     if (polldes.fd == -1)
     {
         int err = errno;
-        cprint("Error: " + std::to_string(err));
-        cprint("edgpio::_exec Error starting thread as fd is invalid");
+        log_message("Error: " + std::to_string(err));
+        log_message("edgpio::_exec Error starting thread as fd is invalid");
         m_thread_running.clear();
     }
 
     edtimer tm;
     tm.start();
+    double prev_time[2] = {};
+    double cur_time[2] = {};
     while (m_thread_running.test_and_set())
     {
         if (poll(&polldes, 1, -1) == 1 && polldes.revents & POLLPRI)
         {
-            tm.update();
+            // Stop the pwm timer
+            tm.stop();
+
+            // Get the current value of pwm stuff
             lseek(polldes.fd, 0, SEEK_SET);
             read(polldes.fd, &r_val, 1);
-            lseek(polldes.fd, 0, SEEK_SET);
-            int edge = r_val - '0';
+            //lseek(polldes.fd, 0, SEEK_SET);
+            m_prev_edge = m_cur_edge;
+            m_cur_edge = r_val - '0';
 
-            if (edge)
-                m_isr_edge.test_and_set();
-            else
-                m_isr_edge.clear();
+            cur_time[m_cur_edge] = tm.elapsed() * 100000;
 
-            m_measure_cnt.test_and_set();
+            if (cur_time[m_cur_edge] <= prev_time[m_cur_edge] + 5.0 && cur_time[m_cur_edge] >= prev_time[m_cur_edge] - 5.0)
+            {
+                // Lock the pwm_measurements mutex and save a measurement for reading from the other thread
+                pthread_mutex_lock(&distance_meas_lock);
+                pwm_measurement & cur_m = m_pwm_measurements[m_cur_meas_index];
+                cur_m.cur_edge = m_cur_edge;
+                cur_m.prev_edge = m_prev_edge;
+                cur_m.seconds = tm.elapsed();
+                ++m_cur_meas_index;
+                pthread_mutex_unlock(&distance_meas_lock);
+            }
+            prev_time[m_cur_edge] = cur_time[m_cur_edge];
+
+            // Start the pwm timer again
             tm.start();
         }
     }
     close(polldes.fd);
-    cprint("edgpio::_exec Ending gpio thread on pin " + std::to_string(pin));
+    log_message("edgpio::_exec Ending gpio thread on pin " + std::to_string(pin));
 }
 
 std::string edgpio::error_string(int gp_err)

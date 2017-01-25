@@ -5,6 +5,6 @@
 #include <stdint.h>
 
 #define CONSOLE_OUT
-#define CONSOLE_OUT_LOG "console"
+#define CONSOLE_OUT_LOG "ctrlmod_console.log"
 
 #endif

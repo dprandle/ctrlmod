@@ -13,7 +13,7 @@
 #define GPIO_48 48
 #define GPIO_49 49
 
-#define MAX_DISTANCE_MEASUREMENTS 128
+#define MAX_PWM_MEASUREMENTS 128
 
 #include <pthread.h>
 #include <atomic>
@@ -69,9 +69,9 @@ struct gpio_error_state
 
 struct pwm_measurement
 {
-    int edge;
-    gpio_isr_edge edge_mode;
-    double seconds;
+    int8_t cur_edge; // This will be 0 for rising and 1 for falling - useful mainly for when the edge mode is both
+    int8_t prev_edge; // What period are we measuring - falling to falling, rising to rising, or both
+    double seconds; // the time from the last edge to this one
 };
 
 class edgpio
@@ -103,7 +103,7 @@ class edgpio
 	static void * _thread_exec(void * param);
 	void _exec();
 	
-    void (*m_fnc)(void *, int);
+    void (*m_fnc)(void *, pwm_measurement);
 	void * m_fnc_param;
 	gpio_error_state m_err;
 
@@ -111,12 +111,15 @@ class edgpio
     std::atomic_flag m_thread_running = ATOMIC_FLAG_INIT;
 	pthread_t m_isr_thread;
 
-    // only used within separate thread...
-    int m_prev_edge;
-    int m_cur_edge;
+    // only used within separate thread... no mutex necessary
+    int8_t m_prev_edge;
+    int8_t m_cur_edge;
+
+    pwm_measurement m_tmp_measurements[MAX_PWM_MEASUREMENTS];
 
     pthread_mutex_t distance_meas_lock;
-    double m_distance_measurements[MAX_DISTANCE_MEASUREMENTS];
+    uint32_t m_cur_meas_index;
+    pwm_measurement m_pwm_measurements[MAX_PWM_MEASUREMENTS];
 	
 };
 

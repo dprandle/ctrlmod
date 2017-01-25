@@ -30,16 +30,16 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	
 edthreaded_fd::~edthreaded_fd()
 {
-	if (running())
+    if (running())
     {
-		stop();
+        stop();
         pthread_join(m_thread, nullptr);
     }
-	pthread_mutex_destroy(&m_send_lock);
-	pthread_mutex_destroy(&m_recv_lock);
-	pthread_mutex_destroy(&m_error_lock);
-	delete m_wait_timer;
-	close(m_fd);
+    pthread_mutex_destroy(&m_send_lock);
+    pthread_mutex_destroy(&m_recv_lock);
+    pthread_mutex_destroy(&m_error_lock);
+    delete m_wait_timer;
+    close(m_fd);
 }
 
 uint32_t edthreaded_fd::read(uint8_t * buffer, uint32_t max_size)
@@ -241,13 +241,12 @@ void edthreaded_fd::_exec()
             _do_write();
         _do_read();
     }
-    cprint("edthreaded_fd::_exec Ending thread...");
-    //pthread_exit(nullptr);
+    log_message("edthreaded_fd::_exec Ending thread...");
 }
 
 void * edthreaded_fd::thread_exec(void * _this)
 {
-    cprint("edthreaded_fd::thread_exec Starting thread...");
+    log_message("edthreaded_fd::thread_exec Starting thread...");
     edthreaded_fd * thfd = static_cast<edthreaded_fd*>(_this);
     thfd->_exec();
     return nullptr;

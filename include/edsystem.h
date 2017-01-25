@@ -12,13 +12,13 @@ class edsystem
 
 	virtual ~edsystem() {}
 
-    virtual void init() = 0;
+    virtual void init() {}
 
-	virtual void release() = 0;
+    virtual void release() {}
 
-	virtual bool process(edmessage * msg)=0;
+    virtual bool process(edmessage * msg) = 0;
 
-    virtual void update() = 0;
+    virtual void update() {}
 
     virtual std::string typestr() = 0;
 };

@@ -65,13 +65,11 @@ bool edmctrl::running()
 
 void edmctrl::release()
 {
-	log_message("Releasing edison control engine");
+    //log_message("Releasing edison control engine");
 	sysmap::iterator sysiter = m_systems.begin();
     while (sysiter != m_systems.end())
     {
-		std::ostringstream ss;
-		ss << "Releasing system " << sysiter->first;
-		log_message(ss.str());
+        log_message("Releasing system " + sysiter->first);
 		sysiter->second->release();
         ++sysiter;
     }
@@ -128,9 +126,9 @@ void edmctrl::stop()
 {
 	
 	m_systimer->stop();
-	std::ostringstream oss;
-	oss << "Stopping edison control engine\nExecution time: " << m_systimer->elapsed() << " ms";
-	log_message(oss.str());
+    //std::ostringstream oss;
+    //oss << "Stopping edison control engine\nExecution time: " << m_systimer->elapsed() << " ms";
+    //log_message(oss.str());
 	m_running = false;
 }
 

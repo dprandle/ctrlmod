@@ -10,7 +10,7 @@
 
 uint32_t hash_id(const std::string & to_hash);
 
-bool log_message(const std::string & msg, const std::string & fname="status.log", bool timestamp=true);
+bool log_message(const std::string & msg, const std::string & fname="ctrlmod_status.log", bool timestamp=true);
 
 bool log_message_no_console(const std::string & msg, const std::string & fname, bool tmstmp);
 

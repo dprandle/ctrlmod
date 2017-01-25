@@ -58,7 +58,7 @@ class edthreaded_fd
 		uint32_t readbuf_size = DEFAULT_FD_READ_BUFFER_SIZE,
 		uint32_t writebuf_size = DEFAULT_FD_WRITE_BUFFER_SIZE);
 	
-	virtual ~edthreaded_fd();
+    virtual ~edthreaded_fd();
 
     virtual uint32_t read(uint8_t * buffer, uint32_t max_size);
 
@@ -74,7 +74,7 @@ class edthreaded_fd
 
 	bool set_fd(int32_t fd_);
 	
-	virtual void stop();
+    void stop();
 
     static std::string error_string(const Error & err);
 	

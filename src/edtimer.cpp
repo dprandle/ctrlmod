@@ -79,7 +79,7 @@ void edtimer::update()
 	{
 		m_last_cb = m_cur;
 		if (m_cb == nullptr)
-			cprint("No callback set for timer yet callback mode is enabled");
+			log_message("No callback set for timer yet callback mode is enabled");
 		else
 			m_cb->exec(); // This must come after - stop calls update()
 	}

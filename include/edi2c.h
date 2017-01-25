@@ -29,7 +29,7 @@ class edi2c : public edthreaded_fd
   public:
 
 	edi2c(uint32_t adapterNum = 1);
-	~edi2c();
+    ~edi2c();
 
 	//! command_read
 /*!

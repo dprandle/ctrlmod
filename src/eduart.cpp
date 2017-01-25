@@ -30,7 +30,7 @@ bool eduart::start()
 	set_fd(open(m_devpath.c_str(), O_RDWR | O_NOCTTY | O_SYNC));
 	if (m_fd < 0)
 	{
-        cprint("Error opening " + m_devpath);
+        log_message("Error opening " + m_devpath);
 		return false;
 	}
     _set_attribs();
@@ -89,9 +89,9 @@ void eduart::_set_attribs()
 	if (tcgetattr(m_fd, &tty) != 0)
 	{
 		if (errno == EBADF)
-            cprint("_set_attribs: Error getting termios - m_fd is not valid file descriptor");
+            log_message("_set_attribs: Error getting termios - m_fd is not valid file descriptor");
 		else if (errno == ENOTTY)
-            cprint("_set_attribs: Error getting termios - the file associated with fildes is not a terminal");
+            log_message("_set_attribs: Error getting termios - the file associated with fildes is not a terminal");
 		return;
 	}
 	
@@ -111,7 +111,7 @@ void eduart::_set_attribs()
 
 
 	if (tcsetattr(m_fd, TCSANOW, &tty) != 0)
-        cprint("_set_attribs: Error - could not set tty");
+        log_message("_set_attribs: Error - could not set tty");
 }
 
 

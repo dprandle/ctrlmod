@@ -35,7 +35,7 @@ bool edlogging_system::process(edmessage * msg)
     else if (msg->type() == "rplidar_error_message")
 	{
         rplidar_error_message * emsg = static_cast<rplidar_error_message*>(msg);
-		cprint("Received error message!");
+		log_message("Received error message!");
 		return true;
 	}
     else if (msg->type() == "rplidar_health_message")
@@ -58,40 +58,40 @@ bool edlogging_system::process(edmessage * msg)
 	}
 	else
 	{
-		cprint("ERROR!!!!!");
+		log_message("ERROR!!!!!");
 		return false;
 	}
 }
 
 void edlogging_system::update()
 {
-	cprint_flush();
+    cprint_flush();
 }
 
 void edlogging_system::log_device_info(info_data_packet * data)
 {
-    cprint("\n" + data->toString());
+    log_message("\n" + data->toString());
 }
 
 void edlogging_system::log_device_health(health_data_packet * data)
 {
-    cprint("\n" + data->toString());
+    log_message("\n" + data->toString());
 }
 
 void edlogging_system::log_device_firware(firmware_data_packet * data)
 {
-    cprint("\n" + data->toString());
+    log_message("\n" + data->toString());
 }
 
 void edlogging_system::log_scan(complete_scan_data_packet * data)
 {
-    //cprint(data->toString());
+    //log_message(data->toString());
 }
 
 void edlogging_system::log_nav_message(nav_message * nmsg)
 {
-    // cprint("\nPitch: " + std::to_string(nmsg->pitch));
-    // cprint("\nRoll: " + std::to_string(nmsg->roll));
-    // cprint("\nYaw: " + std::to_string(nmsg->yaw));
-    // cprint("\nThrottle: " + std::to_string(nmsg->throttle));
+    // log_message("\nPitch: " + std::to_string(nmsg->pitch));
+    // log_message("\nRoll: " + std::to_string(nmsg->roll));
+    // log_message("\nYaw: " + std::to_string(nmsg->yaw));
+    // log_message("\nThrottle: " + std::to_string(nmsg->throttle));
 }

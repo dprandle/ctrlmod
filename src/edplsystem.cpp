@@ -35,20 +35,20 @@ void edpl_system::init()
 {
 	std::vector<uint32_t> gpio_pins;
     gpio_pins.push_back(GPIO_14);
-	gpio_pins.push_back(GPIO_15);
+    gpio_pins.push_back(GPIO_15);
 
 	for (uint32_t i = 0; i < gpio_pins.size(); ++i)
     {
-		pl_gpio * pnt = add_pl(gpio_pins[i],-30);
+        pl_gpio * pnt = add_pl(gpio_pins[i],-30);
         if (pnt == NULL)
         {
             std::ostringstream ss;
             ss << "Error initializing GPIO pin " << gpio_pins[i];
-            cprint(ss.str());
+            log_message(ss.str());
         }
     }
 	msgTimer->set_callback(new edpl_callback(get_pl(GPIO_14), get_pl(GPIO_15)));
-    msgTimer->set_callback_delay(0.2);
+    msgTimer->set_callback_delay(0.5);
 	msgTimer->set_callback_mode(edtimer::continous_shot);
 	msgTimer->start();
 }
@@ -59,7 +59,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 	{
 		std::ostringstream oss;
 		oss << "Cannot initialize pin " << pin_num << " as its already initialized";
-		cprint(oss.str());
+		log_message(oss.str());
 		return NULL;
 	}
 
@@ -68,7 +68,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 	{
 		std::ostringstream oss;
 		oss << "Unable to initialize mraa pin " << pin_num;
-		cprint(oss.str());
+		log_message(oss.str());
 		delete pl;
 		return NULL;
 	}
@@ -79,7 +79,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 		std::ostringstream ss;
 		gpio_error_state state = pl->pin->get_and_clear_error();
 		ss << "Error initializing pin " << pin_num << "\nErrno: " << strerror(state.errno_code) << "\nGPIO Error: " << edgpio::error_string(state.gp_code);
-		cprint(ss.str());
+		log_message(ss.str());
 		delete pl;
 		return nullptr;
 	}
@@ -90,7 +90,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 		std::ostringstream ss;
 		gpio_error_state state = pl->pin->get_and_clear_error();
 		ss << "Error setting pin " << pin_num << " isr\nErrno: " << strerror(state.errno_code) << "\nGPIO Error: " << edgpio::error_string(state.gp_code);
-		cprint(ss.str());
+		log_message(ss.str());
 		delete pl;
 		return nullptr;
 	}
@@ -98,7 +98,7 @@ pl_gpio * edpl_system::add_pl(uint32_t pin_num,double c_offset, const vec3 & pos
 	m_pl_sensors[pin_num] = pl;
 	std::ostringstream ss;
 	ss << "Successfully initialized pin " << pin_num;
-	cprint(ss.str());
+	log_message(ss.str());
 	return pl;
 }
 
@@ -149,13 +149,13 @@ void edpl_system::pl_set_orientation(uint32_t pin_num, const quat & orient_)
 
 void edpl_system::release()
 {
-	plmap::iterator fiter = m_pl_sensors.begin();
-	while (fiter != m_pl_sensors.end())
-	{
-		delete fiter->second;
-		++fiter;
-	}
-	m_pl_sensors.clear();
+    plmap::iterator fiter = m_pl_sensors.begin();
+    while (fiter != m_pl_sensors.end())
+    {
+        delete fiter->second;
+        ++fiter;
+    }
+    m_pl_sensors.clear();
 }
 
 bool edpl_system::process(edmessage * msg)
@@ -197,19 +197,13 @@ pl_gpio::~pl_gpio()
 	delete timer;
 }
 
-void pl_gpio::isr(void * pl, int pin_edge)
+void pl_gpio::isr(void * pl, pwm_measurement m)
 {
     pl_gpio * pl_cast = static_cast<pl_gpio*>(pl);
-    if (pin_edge)
+    if (!m.cur_edge) // only want to react on the falling edge - since edge mode set to both the duration will be since the last rising edge ie the amount of time the pulse has been high
     {
-        pl_cast->timer->start();
-    }
-    else
-    {
-        pl_cast->timer->stop();
-        double meas = pl_cast->timer->elapsed() * 100000.0 + pl_cast->cal_offset;
-        cprint("measured: " + std::to_string(meas));
-        if (meas > 0 && meas < 5000)
+        double meas = m.seconds * 100000.0 + pl_cast->cal_offset; // in cm
+        if (meas > 10 && meas < 4000)
         {
             pl_cast->sum_dist += meas;
             ++pl_cast->meas_count;
@@ -223,19 +217,17 @@ void edpl_callback::exec()
     if (msg == nullptr)
         return;
     if (pl_ceil->meas_count > 0)
-		msg->distance1 = pl_ceil->sum_dist/pl_ceil->meas_count;
+        msg->distance1 = pl_ceil->sum_dist/double(pl_ceil->meas_count);
     if (pl_floor->meas_count > 0)
-		msg->distance2 = pl_floor->sum_dist/pl_floor->meas_count;
+        msg->distance2 = pl_floor->sum_dist/double(pl_floor->meas_count);
 	pl_ceil->sum_dist = 0;
 	pl_ceil->meas_count = 0;
-	pl_floor->sum_dist = 0;
-	pl_floor->meas_count = 0;
+    pl_floor->sum_dist = 0;
+    pl_floor->meas_count = 0;
 	msg->mraa_pin1 = pl_ceil->pin->pin_num();
-	msg->mraa_pin2 = pl_floor->pin->pin_num();
+    msg->mraa_pin2 = pl_floor->pin->pin_num();
 	copy_buf((uint8_t*)pl_ceil->pos.data, (uint8_t*)msg->pos1, 4);
-	copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
+    copy_buf((uint8_t*)pl_floor->pos.data, (uint8_t*)msg->pos2, 4);
 	copy_buf((uint8_t*)pl_ceil->orient.data, (uint8_t*)msg->orientation1, 4);
-	copy_buf((uint8_t*)pl_floor->orient.data, (uint8_t*)msg->orientation2, 4);
-    //cprint("Floor " + std::to_string(msg->distance2));
-    //cprint("Cieling " + std::to_string(msg->distance1));
+    copy_buf((uint8_t*)pl_floor->orient.data, (uint8_t*)msg->orientation2, 4);
 }

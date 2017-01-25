@@ -19,6 +19,7 @@
 #include <map>
 
 class edgpio;
+struct pwm_measurement;
 
 struct pl_gpio
 {
@@ -33,7 +34,7 @@ double cal_offset;
 bool meas_ready;
 double sum_dist;
 uint32_t meas_count;
-static void isr(void *, int);
+static void isr(void *, pwm_measurement);
 };
 
 class edpl_system : public edsystem

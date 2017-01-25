@@ -41,9 +41,9 @@ void edcomm_system::init()
     m_server_fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);//
 	if (m_server_fd < 0)
     {
-        cprint("edcomm_system::init Could not create server");
+        log_message("edcomm_system::init Could not create server");
         int err = errno;
-        cprint("Error: " + std::string(strerror(err)));
+        log_message("Error: " + std::string(strerror(err)));
     }
 
     int optval = 1;
@@ -55,13 +55,13 @@ void edcomm_system::init()
 
     if (bind(m_server_fd, (struct sockaddr *) &server, sizeof(server)) < 0)
     {
-        cprint("edcomm_system::init Could not bind server");
+        log_message("edcomm_system::init Could not bind server");
         int err = errno;
-        cprint("Error: " + std::string(strerror(err)));
+        log_message("Error: " + std::string(strerror(err)));
     }
 
 	listen(m_server_fd, 5);
-    cprint("edcomm_system::init Listening on port " + std::to_string(m_port));
+    log_message("edcomm_system::init Listening on port " + std::to_string(m_port));
 }
 
 uint16_t edcomm_system::port()
@@ -76,12 +76,12 @@ void edcomm_system::set_port(uint16_t port_)
 
 void edcomm_system::release()
 {
-	while (m_clients.begin() != m_clients.end())
-	{
-		delete m_clients.back();
-		m_clients.pop_back();
-	}
-	close(m_server_fd);
+    while (m_clients.begin() != m_clients.end())
+    {
+        delete m_clients.back();
+        m_clients.pop_back();
+    }
+    close(m_server_fd);
 }
 
 bool edcomm_system::process(edmessage * msg)
@@ -168,10 +168,10 @@ void edcomm_system::update()
         edsocket * new_client = new edsocket(sockfd);
         if (!new_client->start())
         {
-            cprint("edcomm_system::update Received connection but could not start socket - should see deletion next");
+            log_message("edcomm_system::update Received connection but could not start socket - should see deletion next");
         }
         m_clients.push_back(new_client);
-        cprint("edcomm_system::update Server recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)) + ":" + std::to_string(ntohs(client_addr.sin_port)));
+        log_message("edcomm_system::update Server recieved connection from " + std::string(inet_ntoa(client_addr.sin_addr)) + ":" + std::to_string(ntohs(client_addr.sin_port)));
 
     }
 
@@ -202,22 +202,22 @@ void edcomm_system::_clean_closed_connections()
             switch(er.err_val)
             {
               case(edthreaded_fd::ConnectionClosed):
-                  cprint("Connection closed with " + client_ip);
+                  log_message("Connection closed with " + client_ip);
                   break;
               case (edthreaded_fd::DataOverwrite):
-                  cprint("Socket internal buffer overwritten with new data before previous data was sent" + client_ip + "\nError: " + errno_message);
+                  log_message("Socket internal buffer overwritten with new data before previous data was sent" + client_ip + "\nError: " + errno_message);
                   break;
               case (edthreaded_fd::InvalidRead):
-                  cprint("Socket invalid read from " + client_ip + "\nError: " + errno_message);
+                  log_message("Socket invalid read from " + client_ip + "\nError: " + errno_message);
                   break;
               case (edthreaded_fd::InvalidWrite):
-                  cprint("Socket invalid write to " + client_ip + "\nError: " + errno_message);
+                  log_message("Socket invalid write to " + client_ip + "\nError: " + errno_message);
                   break;
               case (edthreaded_fd::ThreadCreation):
-                  cprint("Error in thread creation for connection with " + client_ip);
+                  log_message("Error in thread creation for connection with " + client_ip);
                   break;
               default:
-                  cprint("No internal error but socket thread not running with " + client_ip);
+                  log_message("No internal error but socket thread not running with " + client_ip);
                   break;
             }
             delete (*iter);
@@ -248,7 +248,7 @@ void edcomm_system::_do_command()
     if (m_cur_cmd.hash_id == rphash)
     {
         rplidar_request::req_type rt = static_cast<rplidar_request::req_type>(m_cur_cmd.cmd_data);
-        cprint("Sending rplidar request type: " + std::to_string(rt));
+        log_message("Sending rplidar request type: " + std::to_string(rt));
         rplidar_request * req = edm.message_dispatch()->push<rplidar_request>();
         if (req != NULL)
             req->r_type = rt;

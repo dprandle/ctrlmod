@@ -17,8 +17,8 @@ edi2c::edi2c(uint32_t adapterNum):
 
 edi2c::~edi2c()
 {
-	pthread_mutex_destroy(&m_smbus_lock);
-	pthread_mutex_destroy(&m_rw_delay_lock);
+    pthread_mutex_destroy(&m_smbus_lock);
+    pthread_mutex_destroy(&m_rw_delay_lock);
 }
 
 void edi2c::set_target_address(int32_t addr)
@@ -87,7 +87,7 @@ uint8_t edi2c::read_byte()
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-            cprint("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
+            log_message("edi2c::readByte error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}
@@ -104,7 +104,7 @@ uint16_t edi2c::read_word()
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-            cprint("edi2c::readWord error with retrieving byte: Error num " + std::to_string(err.err_val));
+            log_message("edi2c::readWord error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}
@@ -122,7 +122,7 @@ void edi2c::read_reg_bytes(uint8_t reg, uint8_t * buffer, uint32_t size)
 		Error err = error();
 		if (err.err_val != NoError)
 		{
-            cprint("edi2c::readRegByte error with retrieving byte: Error num " + std::to_string(err.err_val));
+            log_message("edi2c::readRegByte error with retrieving byte: Error num " + std::to_string(err.err_val));
 			break;
 		}
 	}

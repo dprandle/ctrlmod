@@ -26,6 +26,7 @@ ednav_system::ednav_system():
 ednav_system::~ednav_system()
 {
 	delete m_nav_timer;
+    //delete m_i2c;
 }
 
 void ednav_system::init()
@@ -40,14 +41,14 @@ void ednav_system::init()
     m_i2c->set_target_address(ARDUINO_ADDRESS);
     if (!m_i2c->start())
     {
-        cprint("ednav_system::init - Could not start i2c");
+        log_message("ednav_system::init - Could not start i2c");
         edthreaded_fd::Error err = m_i2c->error();
-        cprint("Error from errno: " + std::string(strerror(err._errno)));
-        cprint("Error code: " + std::to_string(err.err_val));
+        log_message("Error from errno: " + std::string(strerror(err._errno)));
+        log_message("Error code: " + std::to_string(err.err_val));
     }
     else
     {
-        cprint("ednav_system::init - Successfully initialized i2c");
+        log_message("ednav_system::init - Successfully initialized i2c");
     }
 
 	
@@ -65,8 +66,8 @@ void ednav_system::init()
 
 void ednav_system::release()
 {
-    delete m_i2c;
-    m_i2c = NULL;
+    //delete m_i2c;
+    //m_i2c = nullptr;
 }
 
 bool ednav_system::process(edmessage * msg)

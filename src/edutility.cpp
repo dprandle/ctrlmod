@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <edglobal.h>
 #include <edtimer.h>
+#include <edmctrl.h>
 
 // Allow safe multithreaded use of cout
 static pthread_mutex_t ss_lock = PTHREAD_MUTEX_INITIALIZER;
@@ -65,7 +66,7 @@ bool log_message_no_console(const std::string & msg, const std::string & fname, 
 		return false;
 	
 	if (tmstmp)
-		fout << timestamp();
+        fout << std::fixed << std::setprecision(6) << edm.sys_timer()->elapsed() << " ";
 
     fout << msg << "\n";
     fout.close();
@@ -79,11 +80,11 @@ bool log_message(const std::string & msg, const std::string & fname, bool tmstmp
 		return false;
 	
 	if (tmstmp)
-		fout << timestamp();
+        fout << std::fixed << std::setprecision(6) << edm.sys_timer()->elapsed() << " ";
 
     fout << msg << "\n";
     fout.close();
-	cprint(msg);
+    cprint(msg);
 	return true;
 }
 
