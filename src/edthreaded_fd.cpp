@@ -30,11 +30,11 @@ edthreaded_fd::edthreaded_fd(uint32_t readbuf_, uint32_t writebuf_):
 	
 edthreaded_fd::~edthreaded_fd()
 {
-    if (running())
-    {
+    //if (running())
+    //{
         stop();
         pthread_join(m_thread, nullptr);
-    }
+    //}
     pthread_mutex_destroy(&m_send_lock);
     pthread_mutex_destroy(&m_recv_lock);
     pthread_mutex_destroy(&m_error_lock);

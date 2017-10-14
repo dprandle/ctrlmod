@@ -66,8 +66,8 @@ void ednav_system::init()
 
 void ednav_system::release()
 {
-    //delete m_i2c;
-    //m_i2c = nullptr;
+    delete m_i2c;
+    m_i2c = nullptr;
 }
 
 bool ednav_system::process(edmessage * msg)

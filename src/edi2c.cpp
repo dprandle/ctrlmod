@@ -17,6 +17,7 @@ edi2c::edi2c(uint32_t adapterNum):
 
 edi2c::~edi2c()
 {
+    cprint("destroying i2c");
     pthread_mutex_destroy(&m_smbus_lock);
     pthread_mutex_destroy(&m_rw_delay_lock);
 }
@@ -225,7 +226,7 @@ int32_t edi2c::_raw_read(uint8_t * buffer, uint32_t size)
         else
         {
             uint32_t cnt = ::read(m_fd, buffer, size);
-            delay(write_delay());
+            delay(read_delay());
             return cnt;
         }
     }
@@ -242,7 +243,7 @@ int32_t edi2c::_raw_write(uint8_t * buffer, uint32_t size)
     else
     {
         uint32_t cnt = ::write(m_fd, buffer, size);
-        delay(read_delay());
+        delay(write_delay());
         return cnt;
     }
     return 0;

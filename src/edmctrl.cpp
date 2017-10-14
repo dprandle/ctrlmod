@@ -126,9 +126,9 @@ void edmctrl::stop()
 {
 	
 	m_systimer->stop();
-    //std::ostringstream oss;
-    //oss << "Stopping edison control engine\nExecution time: " << m_systimer->elapsed() << " ms";
-    //log_message(oss.str());
+    std::ostringstream oss;
+    oss << "Stopping edison control engine\nExecution time: " << m_systimer->elapsed() << " ms";
+    log_message(oss.str());
 	m_running = false;
 }
 
